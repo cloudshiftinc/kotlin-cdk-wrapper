@@ -22,6 +22,7 @@ import kotlin.Unit
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.route53.*;
  * GeoLocation geoLocation;
+ * HealthCheck healthCheck;
  * HostedZone hostedZone;
  * RecordSetOptions recordSetOptions = RecordSetOptions.builder()
  * .zone(hostedZone)
@@ -29,6 +30,7 @@ import kotlin.Unit
  * .comment("comment")
  * .deleteExisting(false)
  * .geoLocation(geoLocation)
+ * .healthCheck(healthCheck)
  * .multiValueAnswer(false)
  * .recordName("recordName")
  * .region("region")
@@ -68,6 +70,16 @@ public interface RecordSetOptions {
    * The geographical origin for this record to return DNS records based on the user's location.
    */
   public fun geoLocation(): GeoLocation? = unwrap(this).getGeoLocation()?.let(GeoLocation::wrap)
+
+  /**
+   * The health check to associate with the record set.
+   *
+   * Route53 will return this record set in response to DNS queries only if the health check is
+   * passing.
+   *
+   * Default: - No health check configured
+   */
+  public fun healthCheck(): IHealthCheck? = unwrap(this).getHealthCheck()?.let(IHealthCheck::wrap)
 
   /**
    * Whether to return multiple values, such as IP addresses for your web servers, in response to
@@ -181,6 +193,13 @@ public interface RecordSetOptions {
     public fun geoLocation(geoLocation: GeoLocation)
 
     /**
+     * @param healthCheck The health check to associate with the record set.
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     */
+    public fun healthCheck(healthCheck: IHealthCheck)
+
+    /**
      * @param setIdentifier A string used to distinguish between different records with the same
      * combination of DNS name and type.
      * It can only be set when either weight or geoLocation is defined.
@@ -277,6 +296,15 @@ public interface RecordSetOptions {
      */
     override fun geoLocation(geoLocation: GeoLocation) {
       cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
+    }
+
+    /**
+     * @param healthCheck The health check to associate with the record set.
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     */
+    override fun healthCheck(healthCheck: IHealthCheck) {
+      cdkBuilder.healthCheck(healthCheck.let(IHealthCheck.Companion::unwrap))
     }
 
     /**
@@ -392,6 +420,17 @@ public interface RecordSetOptions {
      * The geographical origin for this record to return DNS records based on the user's location.
      */
     override fun geoLocation(): GeoLocation? = unwrap(this).getGeoLocation()?.let(GeoLocation::wrap)
+
+    /**
+     * The health check to associate with the record set.
+     *
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     *
+     * Default: - No health check configured
+     */
+    override fun healthCheck(): IHealthCheck? =
+        unwrap(this).getHealthCheck()?.let(IHealthCheck::wrap)
 
     /**
      * Whether to return multiple values, such as IP addresses for your web servers, in response to

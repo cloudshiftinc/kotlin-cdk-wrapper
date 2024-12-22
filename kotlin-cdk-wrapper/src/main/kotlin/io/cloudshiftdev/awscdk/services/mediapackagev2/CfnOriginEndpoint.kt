@@ -43,6 +43,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .drmSignaling("drmSignaling")
  * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .clipStartTime("clipStartTime")
  * .end("end")
  * .manifestFilter("manifestFilter")
  * .start("start")
@@ -71,6 +72,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .childManifestName("childManifestName")
  * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .clipStartTime("clipStartTime")
  * .end("end")
  * .manifestFilter("manifestFilter")
  * .start("start")
@@ -80,6 +82,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .programDateTimeIntervalSeconds(123)
  * .scteHls(ScteHlsProperty.builder()
  * .adMarkerHls("adMarkerHls")
+ * .build())
+ * .startTag(StartTagProperty.builder()
+ * .timeOffset(123)
+ * // the properties below are optional
+ * .precise(false)
  * .build())
  * .url("url")
  * .build()))
@@ -88,6 +95,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .childManifestName("childManifestName")
  * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .clipStartTime("clipStartTime")
  * .end("end")
  * .manifestFilter("manifestFilter")
  * .start("start")
@@ -97,6 +105,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .programDateTimeIntervalSeconds(123)
  * .scteHls(ScteHlsProperty.builder()
  * .adMarkerHls("adMarkerHls")
+ * .build())
+ * .startTag(StartTagProperty.builder()
+ * .timeOffset(123)
+ * // the properties below are optional
+ * .precise(false)
  * .build())
  * .url("url")
  * .build()))
@@ -270,20 +283,20 @@ public open class CfnOriginEndpoint(
   }
 
   /**
-   * The failover settings for the endpoint.</p>.
+   * The failover settings for the endpoint.
    */
   public open fun forceEndpointErrorConfiguration(): Any? =
       unwrap(this).getForceEndpointErrorConfiguration()
 
   /**
-   * The failover settings for the endpoint.</p>.
+   * The failover settings for the endpoint.
    */
   public open fun forceEndpointErrorConfiguration(`value`: IResolvable) {
     unwrap(this).setForceEndpointErrorConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The failover settings for the endpoint.</p>.
+   * The failover settings for the endpoint.
    */
   public open
       fun forceEndpointErrorConfiguration(`value`: ForceEndpointErrorConfigurationProperty) {
@@ -291,7 +304,7 @@ public open class CfnOriginEndpoint(
   }
 
   /**
-   * The failover settings for the endpoint.</p>.
+   * The failover settings for the endpoint.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("31efe0d6dc69efb78649f668db1822360bf376011260ada8302631686204eeee")
@@ -490,27 +503,27 @@ public open class CfnOriginEndpoint(
     public fun description(description: String)
 
     /**
-     * The failover settings for the endpoint.</p>.
+     * The failover settings for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint. 
      */
     public fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: IResolvable)
 
     /**
-     * The failover settings for the endpoint.</p>.
+     * The failover settings for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint. 
      */
     public
         fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: ForceEndpointErrorConfigurationProperty)
 
     /**
-     * The failover settings for the endpoint.</p>.
+     * The failover settings for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("947eff8aee5de70bb9564e9bc4a915d63ba9ee4b0b2819652b4b9065b300679d")
@@ -710,20 +723,20 @@ public open class CfnOriginEndpoint(
     }
 
     /**
-     * The failover settings for the endpoint.</p>.
+     * The failover settings for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint. 
      */
     override fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: IResolvable) {
       cdkBuilder.forceEndpointErrorConfiguration(forceEndpointErrorConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The failover settings for the endpoint.</p>.
+     * The failover settings for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint. 
      */
     override
         fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: ForceEndpointErrorConfigurationProperty) {
@@ -731,10 +744,10 @@ public open class CfnOriginEndpoint(
     }
 
     /**
-     * The failover settings for the endpoint.</p>.
+     * The failover settings for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>. 
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("947eff8aee5de70bb9564e9bc4a915d63ba9ee4b0b2819652b4b9065b300679d")
@@ -917,6 +930,7 @@ public open class CfnOriginEndpoint(
    * // the properties below are optional
    * .drmSignaling("drmSignaling")
    * .filterConfiguration(FilterConfigurationProperty.builder()
+   * .clipStartTime("clipStartTime")
    * .end("end")
    * .manifestFilter("manifestFilter")
    * .start("start")
@@ -1600,6 +1614,32 @@ public open class CfnOriginEndpoint(
      * The SPEKE Version 2.0 preset video associated with the encryption contract configuration of
      * the origin endpoint.
      *
+     * A collection of video encryption presets.
+     *
+     * Value description:
+     *
+     * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+     * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
+     * content key for all HD and higher resolutions video tracks.
+     * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
+     * key for HD video tracks and one content key for all UHD video tracks.
+     * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
+     * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
+     * UHD2 video tracks.
+     * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
+     * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
+     * video tracks and one content key for all UHD2 video tracks.
+     * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
+     * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
+     * video tracks.
+     * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+     * content key for HD2 video tracks and one content key for all UHD video tracks.
+     * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+     * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content key
+     * for all UHD2 video tracks.
+     * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+     * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20video)
      */
     public fun presetSpeke20Video(): String
@@ -1627,6 +1667,31 @@ public open class CfnOriginEndpoint(
       /**
        * @param presetSpeke20Video The SPEKE Version 2.0 preset video associated with the encryption
        * contract configuration of the origin endpoint. 
+       * A collection of video encryption presets.
+       *
+       * Value description:
+       *
+       * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+       * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
+       * content key for all HD and higher resolutions video tracks.
+       * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
+       * UHD2 video tracks.
+       * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
+       * video tracks and one content key for all UHD2 video tracks.
+       * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
+       * video tracks.
+       * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
+       * key for all UHD2 video tracks.
+       * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
        */
       public fun presetSpeke20Video(presetSpeke20Video: String)
     }
@@ -1657,6 +1722,31 @@ public open class CfnOriginEndpoint(
       /**
        * @param presetSpeke20Video The SPEKE Version 2.0 preset video associated with the encryption
        * contract configuration of the origin endpoint. 
+       * A collection of video encryption presets.
+       *
+       * Value description:
+       *
+       * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+       * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
+       * content key for all HD and higher resolutions video tracks.
+       * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
+       * UHD2 video tracks.
+       * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
+       * video tracks and one content key for all UHD2 video tracks.
+       * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
+       * video tracks.
+       * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
+       * key for all UHD2 video tracks.
+       * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
        */
       override fun presetSpeke20Video(presetSpeke20Video: String) {
         cdkBuilder.presetSpeke20Video(presetSpeke20Video)
@@ -1692,6 +1782,32 @@ public open class CfnOriginEndpoint(
       /**
        * The SPEKE Version 2.0 preset video associated with the encryption contract configuration of
        * the origin endpoint.
+       *
+       * A collection of video encryption presets.
+       *
+       * Value description:
+       *
+       * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
+       * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one
+       * content key for all HD and higher resolutions video tracks.
+       * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD video tracks, one content key for all UHD1 video tracks and one content key for all
+       * UHD2 video tracks.
+       * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1
+       * video tracks and one content key for all UHD2 video tracks.
+       * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content
+       * key for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD
+       * video tracks.
+       * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks and one content key for all UHD video tracks.
+       * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one
+       * content key for HD2 video tracks, one content key for all UHD1 video tracks and one content
+       * key for all UHD2 video tracks.
+       * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
+       * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-encryptioncontractconfiguration.html#cfn-mediapackagev2-originendpoint-encryptioncontractconfiguration-presetspeke20video)
        */
@@ -1828,31 +1944,7 @@ public open class CfnOriginEndpoint(
   }
 
   /**
-   * A collection of video encryption presets.
-   *
-   * Value description:
-   *
-   * * `PRESET-VIDEO-1` - Use one content key to encrypt all of the video tracks in your stream.
-   * * `PRESET-VIDEO-2` - Use one content key to encrypt all of the SD video tracks and one content
-   * key for all HD and higher resolutions video tracks.
-   * * `PRESET-VIDEO-3` - Use one content key to encrypt all of the SD video tracks, one content key
-   * for HD video tracks and one content key for all UHD video tracks.
-   * * `PRESET-VIDEO-4` - Use one content key to encrypt all of the SD video tracks, one content key
-   * for HD video tracks, one content key for all UHD1 video tracks and one content key for all UHD2
-   * video tracks.
-   * * `PRESET-VIDEO-5` - Use one content key to encrypt all of the SD video tracks, one content key
-   * for HD1 video tracks, one content key for HD2 video tracks, one content key for all UHD1 video
-   * tracks and one content key for all UHD2 video tracks.
-   * * `PRESET-VIDEO-6` - Use one content key to encrypt all of the SD video tracks, one content key
-   * for HD1 video tracks, one content key for HD2 video tracks and one content key for all UHD video
-   * tracks.
-   * * `PRESET-VIDEO-7` - Use one content key to encrypt all of the SD+HD1 video tracks, one content
-   * key for HD2 video tracks and one content key for all UHD video tracks.
-   * * `PRESET-VIDEO-8` - Use one content key to encrypt all of the SD+HD1 video tracks, one content
-   * key for HD2 video tracks, one content key for all UHD1 video tracks and one content key for all
-   * UHD2 video tracks.
-   * * `SHARED` - Use the same content key for all of the video and audio tracks in your stream.
-   * * `UNENCRYPTED` - Don't encrypt any of the video tracks in your stream.
+   * The parameters for encrypting content.
    *
    * Example:
    *
@@ -2112,6 +2204,7 @@ public open class CfnOriginEndpoint(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
    * FilterConfigurationProperty filterConfigurationProperty = FilterConfigurationProperty.builder()
+   * .clipStartTime("clipStartTime")
    * .end("end")
    * .manifestFilter("manifestFilter")
    * .start("start")
@@ -2122,6 +2215,16 @@ public open class CfnOriginEndpoint(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html)
    */
   public interface FilterConfigurationProperty {
+    /**
+     * Optionally specify the clip start time for all of your manifest egress requests.
+     *
+     * When you include clip start time, note that you cannot use clip start time query parameters
+     * for this manifest's endpoint URL.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-clipstarttime)
+     */
+    public fun clipStartTime(): String? = unwrap(this).getClipStartTime()
+
     /**
      * Optionally specify the end time for all of your manifest egress requests.
      *
@@ -2168,6 +2271,14 @@ public open class CfnOriginEndpoint(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param clipStartTime Optionally specify the clip start time for all of your manifest egress
+       * requests.
+       * When you include clip start time, note that you cannot use clip start time query parameters
+       * for this manifest's endpoint URL.
+       */
+      public fun clipStartTime(clipStartTime: String)
+
+      /**
        * @param end Optionally specify the end time for all of your manifest egress requests.
        * When you include end time, note that you cannot use end time query parameters for this
        * manifest's endpoint URL.
@@ -2203,6 +2314,16 @@ public open class CfnOriginEndpoint(
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty.builder()
+
+      /**
+       * @param clipStartTime Optionally specify the clip start time for all of your manifest egress
+       * requests.
+       * When you include clip start time, note that you cannot use clip start time query parameters
+       * for this manifest's endpoint URL.
+       */
+      override fun clipStartTime(clipStartTime: String) {
+        cdkBuilder.clipStartTime(clipStartTime)
+      }
 
       /**
        * @param end Optionally specify the end time for all of your manifest egress requests.
@@ -2251,6 +2372,16 @@ public open class CfnOriginEndpoint(
       cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.FilterConfigurationProperty,
     ) : CdkObject(cdkObject),
         FilterConfigurationProperty {
+      /**
+       * Optionally specify the clip start time for all of your manifest egress requests.
+       *
+       * When you include clip start time, note that you cannot use clip start time query parameters
+       * for this manifest's endpoint URL.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-filterconfiguration.html#cfn-mediapackagev2-originendpoint-filterconfiguration-clipstarttime)
+       */
+      override fun clipStartTime(): String? = unwrap(this).getClipStartTime()
+
       /**
        * Optionally specify the end time for all of your manifest egress requests.
        *
@@ -2311,7 +2442,7 @@ public open class CfnOriginEndpoint(
   }
 
   /**
-   * The failover settings for the endpoint.</p>.
+   * The failover settings for the endpoint.
    *
    * Example:
    *
@@ -2329,23 +2460,14 @@ public open class CfnOriginEndpoint(
    */
   public interface ForceEndpointErrorConfigurationProperty {
     /**
-     * The failover settings for the endpoint.
+     * The failover conditions for the endpoint. The options are:.
      *
-     * The options are:</p>
-     *
-     * * 
-     *
-     * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
-     *
-     * * 
-     *
-     * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
-     *
-     * * 
-     *
-     * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the current
-     * key period.</p>
-     *
+     * * `STALE_MANIFEST` - The manifest stalled and there are no new segments or parts.
+     * * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.
+     * * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+     * current key period.
+     * * `SLATE_INPUT` - The segments which contain slate content are considered to be missing
+     * content.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-forceendpointerrorconfiguration.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration-endpointerrorconditions)
      */
@@ -2358,40 +2480,24 @@ public open class CfnOriginEndpoint(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param endpointErrorConditions The failover settings for the endpoint.
-       * The options are:</p>
-       *
-       * * 
-       *
-       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
-       *
-       * * 
-       *
-       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
-       *
-       * * 
-       *
-       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
-       * current key period.</p>
+       * @param endpointErrorConditions The failover conditions for the endpoint. The options are:.
+       * * `STALE_MANIFEST` - The manifest stalled and there are no new segments or parts.
+       * * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.
+       * * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.
+       * * `SLATE_INPUT` - The segments which contain slate content are considered to be missing
+       * content.
        */
       public fun endpointErrorConditions(endpointErrorConditions: List<String>)
 
       /**
-       * @param endpointErrorConditions The failover settings for the endpoint.
-       * The options are:</p>
-       *
-       * * 
-       *
-       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
-       *
-       * * 
-       *
-       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
-       *
-       * * 
-       *
-       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
-       * current key period.</p>
+       * @param endpointErrorConditions The failover conditions for the endpoint. The options are:.
+       * * `STALE_MANIFEST` - The manifest stalled and there are no new segments or parts.
+       * * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.
+       * * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.
+       * * `SLATE_INPUT` - The segments which contain slate content are considered to be missing
+       * content.
        */
       public fun endpointErrorConditions(vararg endpointErrorConditions: String)
     }
@@ -2403,42 +2509,26 @@ public open class CfnOriginEndpoint(
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty.builder()
 
       /**
-       * @param endpointErrorConditions The failover settings for the endpoint.
-       * The options are:</p>
-       *
-       * * 
-       *
-       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
-       *
-       * * 
-       *
-       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
-       *
-       * * 
-       *
-       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
-       * current key period.</p>
+       * @param endpointErrorConditions The failover conditions for the endpoint. The options are:.
+       * * `STALE_MANIFEST` - The manifest stalled and there are no new segments or parts.
+       * * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.
+       * * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.
+       * * `SLATE_INPUT` - The segments which contain slate content are considered to be missing
+       * content.
        */
       override fun endpointErrorConditions(endpointErrorConditions: List<String>) {
         cdkBuilder.endpointErrorConditions(endpointErrorConditions)
       }
 
       /**
-       * @param endpointErrorConditions The failover settings for the endpoint.
-       * The options are:</p>
-       *
-       * * 
-       *
-       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
-       *
-       * * 
-       *
-       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
-       *
-       * * 
-       *
-       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
-       * current key period.</p>
+       * @param endpointErrorConditions The failover conditions for the endpoint. The options are:.
+       * * `STALE_MANIFEST` - The manifest stalled and there are no new segments or parts.
+       * * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.
+       * * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.
+       * * `SLATE_INPUT` - The segments which contain slate content are considered to be missing
+       * content.
        */
       override fun endpointErrorConditions(vararg endpointErrorConditions: String): Unit =
           endpointErrorConditions(endpointErrorConditions.toList())
@@ -2453,23 +2543,14 @@ public open class CfnOriginEndpoint(
     ) : CdkObject(cdkObject),
         ForceEndpointErrorConfigurationProperty {
       /**
-       * The failover settings for the endpoint.
+       * The failover conditions for the endpoint. The options are:.
        *
-       * The options are:</p>
-       *
-       * * 
-       *
-       * `STALE_MANIFEST` - The manifest stalled and there a no new segments or parts.</p>
-       *
-       * * 
-       *
-       * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.</p>
-       *
-       * * 
-       *
-       * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
-       * current key period.</p>
-       *
+       * * `STALE_MANIFEST` - The manifest stalled and there are no new segments or parts.
+       * * `INCOMPLETE_MANIFEST` - There is a gap in the manifest.
+       * * `MISSING_DRM_KEY` - Key rotation is enabled but we're unable to fetch the key for the
+       * current key period.
+       * * `SLATE_INPUT` - The segments which contain slate content are considered to be missing
+       * content.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-forceendpointerrorconfiguration.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration-endpointerrorconditions)
        */
@@ -2511,6 +2592,7 @@ public open class CfnOriginEndpoint(
    * // the properties below are optional
    * .childManifestName("childManifestName")
    * .filterConfiguration(FilterConfigurationProperty.builder()
+   * .clipStartTime("clipStartTime")
    * .end("end")
    * .manifestFilter("manifestFilter")
    * .start("start")
@@ -2520,6 +2602,11 @@ public open class CfnOriginEndpoint(
    * .programDateTimeIntervalSeconds(123)
    * .scteHls(ScteHlsProperty.builder()
    * .adMarkerHls("adMarkerHls")
+   * .build())
+   * .startTag(StartTagProperty.builder()
+   * .timeOffset(123)
+   * // the properties below are optional
+   * .precise(false)
    * .build())
    * .url("url")
    * .build();
@@ -2574,6 +2661,17 @@ public open class CfnOriginEndpoint(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-sctehls)
      */
     public fun scteHls(): Any? = unwrap(this).getScteHls()
+
+    /**
+     * To insert an EXT-X-START tag in your HLS playlist, specify a StartTag configuration object
+     * with a valid TimeOffset.
+     *
+     * When you do, you can also optionally specify whether to include a PRECISE value in the
+     * EXT-X-START tag.</p>
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-starttag)
+     */
+    public fun startTag(): Any? = unwrap(this).getStartTag()
 
     /**
      * The URL of the HLS manifest configuration.
@@ -2657,6 +2755,32 @@ public open class CfnOriginEndpoint(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8c2552766ba01398d4ac04c908b00e89fb7ee64b4c6f9a85ed57ecc63df313fc")
       public fun scteHls(scteHls: ScteHlsProperty.Builder.() -> Unit)
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      public fun startTag(startTag: IResolvable)
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      public fun startTag(startTag: StartTagProperty)
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("43eb43fd53dacd3efac7f4eb52f4186ee8e5cee2e144ff4d0ec91ad13725d23f")
+      public fun startTag(startTag: StartTagProperty.Builder.() -> Unit)
 
       /**
        * @param url The URL of the HLS manifest configuration.
@@ -2760,6 +2884,37 @@ public open class CfnOriginEndpoint(
           scteHls(ScteHlsProperty(scteHls))
 
       /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      override fun startTag(startTag: IResolvable) {
+        cdkBuilder.startTag(startTag.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      override fun startTag(startTag: StartTagProperty) {
+        cdkBuilder.startTag(startTag.let(StartTagProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("43eb43fd53dacd3efac7f4eb52f4186ee8e5cee2e144ff4d0ec91ad13725d23f")
+      override fun startTag(startTag: StartTagProperty.Builder.() -> Unit): Unit =
+          startTag(StartTagProperty(startTag))
+
+      /**
        * @param url The URL of the HLS manifest configuration.
        */
       override fun url(url: String) {
@@ -2823,6 +2978,17 @@ public open class CfnOriginEndpoint(
       override fun scteHls(): Any? = unwrap(this).getScteHls()
 
       /**
+       * To insert an EXT-X-START tag in your HLS playlist, specify a StartTag configuration object
+       * with a valid TimeOffset.
+       *
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-starttag)
+       */
+      override fun startTag(): Any? = unwrap(this).getStartTag()
+
+      /**
        * The URL of the HLS manifest configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-hlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-hlsmanifestconfiguration-url)
@@ -2863,6 +3029,7 @@ public open class CfnOriginEndpoint(
    * // the properties below are optional
    * .childManifestName("childManifestName")
    * .filterConfiguration(FilterConfigurationProperty.builder()
+   * .clipStartTime("clipStartTime")
    * .end("end")
    * .manifestFilter("manifestFilter")
    * .start("start")
@@ -2872,6 +3039,11 @@ public open class CfnOriginEndpoint(
    * .programDateTimeIntervalSeconds(123)
    * .scteHls(ScteHlsProperty.builder()
    * .adMarkerHls("adMarkerHls")
+   * .build())
+   * .startTag(StartTagProperty.builder()
+   * .timeOffset(123)
+   * // the properties below are optional
+   * .precise(false)
    * .build())
    * .url("url")
    * .build();
@@ -2924,8 +3096,7 @@ public open class CfnOriginEndpoint(
      *
      * If you don't enter an interval, `EXT-X-PROGRAM-DATE-TIME` tags aren't included in the
      * manifest. The tags sync the stream to the wall clock so that viewers can seek to a specific time
-     * in the playback timeline on the player. `ID3Timed` metadata messages generate every 5 seconds
-     * whenever MediaPackage ingests the content.
+     * in the playback timeline on the player.
      *
      * Irrespective of this parameter, if any `ID3Timed` metadata is in the HLS input, MediaPackage
      * passes through that metadata to the HLS output.
@@ -2942,6 +3113,17 @@ public open class CfnOriginEndpoint(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-sctehls)
      */
     public fun scteHls(): Any? = unwrap(this).getScteHls()
+
+    /**
+     * To insert an EXT-X-START tag in your HLS playlist, specify a StartTag configuration object
+     * with a valid TimeOffset.
+     *
+     * When you do, you can also optionally specify whether to include a PRECISE value in the
+     * EXT-X-START tag.</p>
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-starttag)
+     */
+    public fun startTag(): Any? = unwrap(this).getStartTag()
 
     /**
      * The URL of the low-latency HLS (LL-HLS) manifest configuration of the origin endpoint.
@@ -3008,8 +3190,7 @@ public open class CfnOriginEndpoint(
        * manifest at the interval that you specify.
        * If you don't enter an interval, `EXT-X-PROGRAM-DATE-TIME` tags aren't included in the
        * manifest. The tags sync the stream to the wall clock so that viewers can seek to a specific
-       * time in the playback timeline on the player. `ID3Timed` metadata messages generate every 5
-       * seconds whenever MediaPackage ingests the content.
+       * time in the playback timeline on the player.
        *
        * Irrespective of this parameter, if any `ID3Timed` metadata is in the HLS input,
        * MediaPackage passes through that metadata to the HLS output.
@@ -3035,6 +3216,32 @@ public open class CfnOriginEndpoint(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("687f873b6a36ecb424fbd5ad87d30682ab0a19e26a068ecafd0eab5823883846")
       public fun scteHls(scteHls: ScteHlsProperty.Builder.() -> Unit)
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      public fun startTag(startTag: IResolvable)
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      public fun startTag(startTag: StartTagProperty)
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cd9c6291a1a8674dd45c02619fb284e3b031a041d42ea827b7637e2042ce8612")
+      public fun startTag(startTag: StartTagProperty.Builder.() -> Unit)
 
       /**
        * @param url The URL of the low-latency HLS (LL-HLS) manifest configuration of the origin
@@ -3113,8 +3320,7 @@ public open class CfnOriginEndpoint(
        * manifest at the interval that you specify.
        * If you don't enter an interval, `EXT-X-PROGRAM-DATE-TIME` tags aren't included in the
        * manifest. The tags sync the stream to the wall clock so that viewers can seek to a specific
-       * time in the playback timeline on the player. `ID3Timed` metadata messages generate every 5
-       * seconds whenever MediaPackage ingests the content.
+       * time in the playback timeline on the player.
        *
        * Irrespective of this parameter, if any `ID3Timed` metadata is in the HLS input,
        * MediaPackage passes through that metadata to the HLS output.
@@ -3147,6 +3353,37 @@ public open class CfnOriginEndpoint(
       @JvmName("687f873b6a36ecb424fbd5ad87d30682ab0a19e26a068ecafd0eab5823883846")
       override fun scteHls(scteHls: ScteHlsProperty.Builder.() -> Unit): Unit =
           scteHls(ScteHlsProperty(scteHls))
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      override fun startTag(startTag: IResolvable) {
+        cdkBuilder.startTag(startTag.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      override fun startTag(startTag: StartTagProperty) {
+        cdkBuilder.startTag(startTag.let(StartTagProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param startTag To insert an EXT-X-START tag in your HLS playlist, specify a StartTag
+       * configuration object with a valid TimeOffset.
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cd9c6291a1a8674dd45c02619fb284e3b031a041d42ea827b7637e2042ce8612")
+      override fun startTag(startTag: StartTagProperty.Builder.() -> Unit): Unit =
+          startTag(StartTagProperty(startTag))
 
       /**
        * @param url The URL of the low-latency HLS (LL-HLS) manifest configuration of the origin
@@ -3209,8 +3446,7 @@ public open class CfnOriginEndpoint(
        *
        * If you don't enter an interval, `EXT-X-PROGRAM-DATE-TIME` tags aren't included in the
        * manifest. The tags sync the stream to the wall clock so that viewers can seek to a specific
-       * time in the playback timeline on the player. `ID3Timed` metadata messages generate every 5
-       * seconds whenever MediaPackage ingests the content.
+       * time in the playback timeline on the player.
        *
        * Irrespective of this parameter, if any `ID3Timed` metadata is in the HLS input,
        * MediaPackage passes through that metadata to the HLS output.
@@ -3227,6 +3463,17 @@ public open class CfnOriginEndpoint(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-sctehls)
        */
       override fun scteHls(): Any? = unwrap(this).getScteHls()
+
+      /**
+       * To insert an EXT-X-START tag in your HLS playlist, specify a StartTag configuration object
+       * with a valid TimeOffset.
+       *
+       * When you do, you can also optionally specify whether to include a PRECISE value in the
+       * EXT-X-START tag.</p>
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration.html#cfn-mediapackagev2-originendpoint-lowlatencyhlsmanifestconfiguration-starttag)
+       */
+      override fun startTag(): Any? = unwrap(this).getStartTag()
 
       /**
        * The URL of the low-latency HLS (LL-HLS) manifest configuration of the origin endpoint.
@@ -4199,6 +4446,159 @@ public open class CfnOriginEndpoint(
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.SpekeKeyProviderProperty
+    }
+  }
+
+  /**
+   * To insert an EXT-X-START tag in your HLS playlist, specify a StartTag configuration object with
+   * a valid TimeOffset.
+   *
+   * When you do, you can also optionally specify whether to include a PRECISE value in the
+   * EXT-X-START tag.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.mediapackagev2.*;
+   * StartTagProperty startTagProperty = StartTagProperty.builder()
+   * .timeOffset(123)
+   * // the properties below are optional
+   * .precise(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-starttag.html)
+   */
+  public interface StartTagProperty {
+    /**
+     * Specify the value for PRECISE within your EXT-X-START tag.
+     *
+     * Leave blank, or choose false, to use the default value NO. Choose yes to use the value YES.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-starttag.html#cfn-mediapackagev2-originendpoint-starttag-precise)
+     */
+    public fun precise(): Any? = unwrap(this).getPrecise()
+
+    /**
+     * Specify the value for TIME-OFFSET within your EXT-X-START tag.
+     *
+     * Enter a signed floating point value which, if positive, must be less than the configured
+     * manifest duration minus three times the configured segment target duration. If negative, the
+     * absolute value must be larger than three times the configured segment target duration, and the
+     * absolute value must be smaller than the configured manifest duration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-starttag.html#cfn-mediapackagev2-originendpoint-starttag-timeoffset)
+     */
+    public fun timeOffset(): Number
+
+    /**
+     * A builder for [StartTagProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param precise Specify the value for PRECISE within your EXT-X-START tag.
+       * Leave blank, or choose false, to use the default value NO. Choose yes to use the value YES.
+       */
+      public fun precise(precise: Boolean)
+
+      /**
+       * @param precise Specify the value for PRECISE within your EXT-X-START tag.
+       * Leave blank, or choose false, to use the default value NO. Choose yes to use the value YES.
+       */
+      public fun precise(precise: IResolvable)
+
+      /**
+       * @param timeOffset Specify the value for TIME-OFFSET within your EXT-X-START tag. 
+       * Enter a signed floating point value which, if positive, must be less than the configured
+       * manifest duration minus three times the configured segment target duration. If negative, the
+       * absolute value must be larger than three times the configured segment target duration, and the
+       * absolute value must be smaller than the configured manifest duration.
+       */
+      public fun timeOffset(timeOffset: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.StartTagProperty.Builder
+          =
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.StartTagProperty.builder()
+
+      /**
+       * @param precise Specify the value for PRECISE within your EXT-X-START tag.
+       * Leave blank, or choose false, to use the default value NO. Choose yes to use the value YES.
+       */
+      override fun precise(precise: Boolean) {
+        cdkBuilder.precise(precise)
+      }
+
+      /**
+       * @param precise Specify the value for PRECISE within your EXT-X-START tag.
+       * Leave blank, or choose false, to use the default value NO. Choose yes to use the value YES.
+       */
+      override fun precise(precise: IResolvable) {
+        cdkBuilder.precise(precise.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param timeOffset Specify the value for TIME-OFFSET within your EXT-X-START tag. 
+       * Enter a signed floating point value which, if positive, must be less than the configured
+       * manifest duration minus three times the configured segment target duration. If negative, the
+       * absolute value must be larger than three times the configured segment target duration, and the
+       * absolute value must be smaller than the configured manifest duration.
+       */
+      override fun timeOffset(timeOffset: Number) {
+        cdkBuilder.timeOffset(timeOffset)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.StartTagProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.StartTagProperty,
+    ) : CdkObject(cdkObject),
+        StartTagProperty {
+      /**
+       * Specify the value for PRECISE within your EXT-X-START tag.
+       *
+       * Leave blank, or choose false, to use the default value NO. Choose yes to use the value YES.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-starttag.html#cfn-mediapackagev2-originendpoint-starttag-precise)
+       */
+      override fun precise(): Any? = unwrap(this).getPrecise()
+
+      /**
+       * Specify the value for TIME-OFFSET within your EXT-X-START tag.
+       *
+       * Enter a signed floating point value which, if positive, must be less than the configured
+       * manifest duration minus three times the configured segment target duration. If negative, the
+       * absolute value must be larger than three times the configured segment target duration, and the
+       * absolute value must be smaller than the configured manifest duration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediapackagev2-originendpoint-starttag.html#cfn-mediapackagev2-originendpoint-starttag-timeoffset)
+       */
+      override fun timeOffset(): Number = unwrap(this).getTimeOffset()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StartTagProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.StartTagProperty):
+          StartTagProperty = CdkObjectWrappers.wrap(cdkObject) as? StartTagProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StartTagProperty):
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.StartTagProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.mediapackagev2.CfnOriginEndpoint.StartTagProperty
     }
   }
 }

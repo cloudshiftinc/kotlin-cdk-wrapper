@@ -22,6 +22,7 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.ses.*;
  * CfnConfigurationSetProps cfnConfigurationSetProps = CfnConfigurationSetProps.builder()
  * .deliveryOptions(DeliveryOptionsProperty.builder()
+ * .maxDeliverySeconds(123)
  * .sendingPoolName("sendingPoolName")
  * .tlsPolicy("tlsPolicy")
  * .build())

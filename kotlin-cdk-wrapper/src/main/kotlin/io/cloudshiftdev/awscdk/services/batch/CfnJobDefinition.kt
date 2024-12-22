@@ -3737,7 +3737,8 @@ public open class CfnJobDefinition(
      * An object that contains the properties for the Amazon ECS task definition of a job.
      *
      *
-     * This object is currently limited to one element.
+     * This object is currently limited to one task element. However, the task element can run up to
+     * 10 containers.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecsproperties.html#cfn-batch-jobdefinition-ecsproperties-taskproperties)
@@ -3753,7 +3754,8 @@ public open class CfnJobDefinition(
        * @param taskProperties An object that contains the properties for the Amazon ECS task
        * definition of a job. 
        *
-       * This object is currently limited to one element.
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
        */
       public fun taskProperties(taskProperties: IResolvable)
 
@@ -3761,7 +3763,8 @@ public open class CfnJobDefinition(
        * @param taskProperties An object that contains the properties for the Amazon ECS task
        * definition of a job. 
        *
-       * This object is currently limited to one element.
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
        */
       public fun taskProperties(taskProperties: List<Any>)
 
@@ -3769,7 +3772,8 @@ public open class CfnJobDefinition(
        * @param taskProperties An object that contains the properties for the Amazon ECS task
        * definition of a job. 
        *
-       * This object is currently limited to one element.
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
        */
       public fun taskProperties(vararg taskProperties: Any)
     }
@@ -3783,7 +3787,8 @@ public open class CfnJobDefinition(
        * @param taskProperties An object that contains the properties for the Amazon ECS task
        * definition of a job. 
        *
-       * This object is currently limited to one element.
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
        */
       override fun taskProperties(taskProperties: IResolvable) {
         cdkBuilder.taskProperties(taskProperties.let(IResolvable.Companion::unwrap))
@@ -3793,7 +3798,8 @@ public open class CfnJobDefinition(
        * @param taskProperties An object that contains the properties for the Amazon ECS task
        * definition of a job. 
        *
-       * This object is currently limited to one element.
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
        */
       override fun taskProperties(taskProperties: List<Any>) {
         cdkBuilder.taskProperties(taskProperties.map{CdkObjectWrappers.unwrap(it)})
@@ -3803,7 +3809,8 @@ public open class CfnJobDefinition(
        * @param taskProperties An object that contains the properties for the Amazon ECS task
        * definition of a job. 
        *
-       * This object is currently limited to one element.
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
        */
       override fun taskProperties(vararg taskProperties: Any): Unit =
           taskProperties(taskProperties.toList())
@@ -3821,7 +3828,8 @@ public open class CfnJobDefinition(
        * An object that contains the properties for the Amazon ECS task definition of a job.
        *
        *
-       * This object is currently limited to one element.
+       * This object is currently limited to one task element. However, the task element can run up
+       * to 10 containers.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-ecsproperties.html#cfn-batch-jobdefinition-ecsproperties-taskproperties)
@@ -10202,6 +10210,10 @@ public open class CfnJobDefinition(
     /**
      * The properties of the container that's used on the Amazon EKS pod.
      *
+     *
+     * This object is limited to 10 elements.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-containers)
      */
     public fun containers(): Any? = unwrap(this).getContainers()
@@ -10252,7 +10264,7 @@ public open class CfnJobDefinition(
      * in the *Kubernetes documentation* .
      *
      *
-     * This object is limited to 10 elements
+     * This object is limited to 10 elements.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-initcontainers)
@@ -10311,16 +10323,22 @@ public open class CfnJobDefinition(
     public interface Builder {
       /**
        * @param containers The properties of the container that's used on the Amazon EKS pod.
+       *
+       * This object is limited to 10 elements.
        */
       public fun containers(containers: IResolvable)
 
       /**
        * @param containers The properties of the container that's used on the Amazon EKS pod.
+       *
+       * This object is limited to 10 elements.
        */
       public fun containers(containers: List<Any>)
 
       /**
        * @param containers The properties of the container that's used on the Amazon EKS pod.
+       *
+       * This object is limited to 10 elements.
        */
       public fun containers(vararg containers: Any)
 
@@ -10385,7 +10403,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        *
        *
-       * This object is limited to 10 elements
+       * This object is limited to 10 elements.
        */
       public fun initContainers(initContainers: IResolvable)
 
@@ -10398,7 +10416,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        *
        *
-       * This object is limited to 10 elements
+       * This object is limited to 10 elements.
        */
       public fun initContainers(initContainers: List<Any>)
 
@@ -10411,7 +10429,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        *
        *
-       * This object is limited to 10 elements
+       * This object is limited to 10 elements.
        */
       public fun initContainers(vararg initContainers: Any)
 
@@ -10494,6 +10512,8 @@ public open class CfnJobDefinition(
 
       /**
        * @param containers The properties of the container that's used on the Amazon EKS pod.
+       *
+       * This object is limited to 10 elements.
        */
       override fun containers(containers: IResolvable) {
         cdkBuilder.containers(containers.let(IResolvable.Companion::unwrap))
@@ -10501,6 +10521,8 @@ public open class CfnJobDefinition(
 
       /**
        * @param containers The properties of the container that's used on the Amazon EKS pod.
+       *
+       * This object is limited to 10 elements.
        */
       override fun containers(containers: List<Any>) {
         cdkBuilder.containers(containers.map{CdkObjectWrappers.unwrap(it)})
@@ -10508,6 +10530,8 @@ public open class CfnJobDefinition(
 
       /**
        * @param containers The properties of the container that's used on the Amazon EKS pod.
+       *
+       * This object is limited to 10 elements.
        */
       override fun containers(vararg containers: Any): Unit = containers(containers.toList())
 
@@ -10583,7 +10607,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        *
        *
-       * This object is limited to 10 elements
+       * This object is limited to 10 elements.
        */
       override fun initContainers(initContainers: IResolvable) {
         cdkBuilder.initContainers(initContainers.let(IResolvable.Companion::unwrap))
@@ -10598,7 +10622,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        *
        *
-       * This object is limited to 10 elements
+       * This object is limited to 10 elements.
        */
       override fun initContainers(initContainers: List<Any>) {
         cdkBuilder.initContainers(initContainers.map{CdkObjectWrappers.unwrap(it)})
@@ -10613,7 +10637,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        *
        *
-       * This object is limited to 10 elements
+       * This object is limited to 10 elements.
        */
       override fun initContainers(vararg initContainers: Any): Unit =
           initContainers(initContainers.toList())
@@ -10716,6 +10740,10 @@ public open class CfnJobDefinition(
       /**
        * The properties of the container that's used on the Amazon EKS pod.
        *
+       *
+       * This object is limited to 10 elements.
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-containers)
        */
       override fun containers(): Any? = unwrap(this).getContainers()
@@ -10766,7 +10794,7 @@ public open class CfnJobDefinition(
        * in the *Kubernetes documentation* .
        *
        *
-       * This object is limited to 10 elements
+       * This object is limited to 10 elements.
        *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-jobdefinition-podproperties.html#cfn-batch-jobdefinition-podproperties-initcontainers)

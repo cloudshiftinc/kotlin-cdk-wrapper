@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
+import io.cloudshiftdev.awscdk.services.lambda.MetricsConfig
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import kotlin.Any
 import kotlin.Boolean
@@ -15,6 +16,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.awscdk.services.dynamodb.ITable as CloudshiftdevAwscdkServicesDynamodbITable
 import software.amazon.awscdk.services.dynamodb.ITable as AmazonAwscdkServicesDynamodbITable
 
@@ -36,7 +38,9 @@ import software.amazon.awscdk.services.dynamodb.ITable as AmazonAwscdkServicesDy
  * .build();
  * fn.addEventSource(DynamoEventSource.Builder.create(table)
  * .startingPosition(StartingPosition.LATEST)
- * .filters(List.of(FilterCriteria.filter(Map.of("eventName", FilterRule.isEqual("INSERT")))))
+ * .metricsConfig(MetricsConfig.builder()
+ * .metrics(List.of(MetricType.EVENT_COUNT))
+ * .build())
  * .build());
  * ```
  */
@@ -181,6 +185,30 @@ public open class DynamoEventSource(
     public fun maxRecordAge(maxRecordAge: Duration)
 
     /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     *
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source. 
+     */
+    public fun metricsConfig(metricsConfig: MetricsConfig)
+
+    /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     *
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1751a272286abd1772757a3781ba7ea1c6910b9561ad6d7cdd801b8f980a9b09")
+    public fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit)
+
+    /**
      * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      *
      * Default: - discarded records are ignored
@@ -202,6 +230,35 @@ public open class DynamoEventSource(
      * @param parallelizationFactor The number of batches to process from each shard concurrently. 
      */
     public fun parallelizationFactor(parallelizationFactor: Number)
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     *
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source. 
+     */
+    public fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig)
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     *
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("03008dd8319ad107826b8ab0aa8c82d6762b6af93395f41490fc684c67f36f43")
+    public
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit)
 
     /**
      * Allow functions to return partially successful responses for a batch of records.
@@ -372,6 +429,33 @@ public open class DynamoEventSource(
     }
 
     /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     *
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source. 
+     */
+    override fun metricsConfig(metricsConfig: MetricsConfig) {
+      cdkBuilder.metricsConfig(metricsConfig.let(MetricsConfig.Companion::unwrap))
+    }
+
+    /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     *
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("1751a272286abd1772757a3781ba7ea1c6910b9561ad6d7cdd801b8f980a9b09")
+    override fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit): Unit =
+        metricsConfig(MetricsConfig(metricsConfig))
+
+    /**
      * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      *
      * Default: - discarded records are ignored
@@ -397,6 +481,38 @@ public open class DynamoEventSource(
     override fun parallelizationFactor(parallelizationFactor: Number) {
       cdkBuilder.parallelizationFactor(parallelizationFactor)
     }
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     *
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source. 
+     */
+    override fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig) {
+      cdkBuilder.provisionedPollerConfig(provisionedPollerConfig.let(ProvisionedPollerConfig.Companion::unwrap))
+    }
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     *
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("03008dd8319ad107826b8ab0aa8c82d6762b6af93395f41490fc684c67f36f43")
+    override
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit):
+        Unit = provisionedPollerConfig(ProvisionedPollerConfig(provisionedPollerConfig))
 
     /**
      * Allow functions to return partially successful responses for a batch of records.

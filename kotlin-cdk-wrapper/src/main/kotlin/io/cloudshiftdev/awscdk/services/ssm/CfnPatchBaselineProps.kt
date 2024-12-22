@@ -136,6 +136,11 @@ public interface CfnPatchBaselineProps {
   /**
    * A set of global filters used to include patches in the baseline.
    *
+   *
+   * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+   * can't be configured from the Patch Manager console, and its value isn't displayed in the console.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-globalfilters)
    */
   public fun globalFilters(): Any? = unwrap(this).getGlobalFilters()
@@ -303,16 +308,28 @@ public interface CfnPatchBaselineProps {
 
     /**
      * @param globalFilters A set of global filters used to include patches in the baseline.
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
      */
     public fun globalFilters(globalFilters: IResolvable)
 
     /**
      * @param globalFilters A set of global filters used to include patches in the baseline.
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
      */
     public fun globalFilters(globalFilters: CfnPatchBaseline.PatchFilterGroupProperty)
 
     /**
      * @param globalFilters A set of global filters used to include patches in the baseline.
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b37d58e32cb06b692b938425f01ef08937d78805546fde156897b324eb21f50d")
@@ -517,6 +534,10 @@ public interface CfnPatchBaselineProps {
 
     /**
      * @param globalFilters A set of global filters used to include patches in the baseline.
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
      */
     override fun globalFilters(globalFilters: IResolvable) {
       cdkBuilder.globalFilters(globalFilters.let(IResolvable.Companion::unwrap))
@@ -524,6 +545,10 @@ public interface CfnPatchBaselineProps {
 
     /**
      * @param globalFilters A set of global filters used to include patches in the baseline.
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
      */
     override fun globalFilters(globalFilters: CfnPatchBaseline.PatchFilterGroupProperty) {
       cdkBuilder.globalFilters(globalFilters.let(CfnPatchBaseline.PatchFilterGroupProperty.Companion::unwrap))
@@ -531,6 +556,10 @@ public interface CfnPatchBaselineProps {
 
     /**
      * @param globalFilters A set of global filters used to include patches in the baseline.
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b37d58e32cb06b692b938425f01ef08937d78805546fde156897b324eb21f50d")
@@ -725,6 +754,12 @@ public interface CfnPatchBaselineProps {
 
     /**
      * A set of global filters used to include patches in the baseline.
+     *
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-globalfilters)
      */

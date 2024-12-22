@@ -13,8 +13,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Attaches a resource-based permission policy to a CloudTrail channel that is used for an
- * integration with an event source outside of AWS .
+ * Attaches a resource-based permission policy to a CloudTrail event data store, dashboard, or
+ * channel.
  *
  * For more information about resource-based policies, see [CloudTrail resource-based policy
  * examples](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/security_iam_resource-based-policy-examples.html)
@@ -66,12 +66,14 @@ public open class CfnResourcePolicy(
   }
 
   /**
-   * The Amazon Resource Name (ARN) of the CloudTrail channel attached to the resource-based policy.
+   * The Amazon Resource Name (ARN) of the CloudTrail event data store, dashboard, or channel
+   * attached to the resource-based policy.
    */
   public open fun resourceArn(): String = unwrap(this).getResourceArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the CloudTrail channel attached to the resource-based policy.
+   * The Amazon Resource Name (ARN) of the CloudTrail event data store, dashboard, or channel
+   * attached to the resource-based policy.
    */
   public open fun resourceArn(`value`: String) {
     unwrap(this).setResourceArn(`value`)
@@ -95,27 +97,29 @@ public open class CfnResourcePolicy(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The Amazon Resource Name (ARN) of the CloudTrail channel attached to the resource-based
-     * policy.
+     * The Amazon Resource Name (ARN) of the CloudTrail event data store, dashboard, or channel
+     * attached to the resource-based policy.
      *
-     * The following is the format of a resource ARN:
-     * `arn:aws:cloudtrail:us-east-2:123456789012:channel/MyChannel` .
+     * Example event data store ARN format:
+     * `arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE`
+     *
+     * Example dashboard ARN format:
+     * `arn:aws:cloudtrail:us-east-1:123456789012:dashboard/exampleDash`
+     *
+     * Example channel ARN format: `arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-resourcepolicy.html#cfn-cloudtrail-resourcepolicy-resourcearn)
-     * @param resourceArn The Amazon Resource Name (ARN) of the CloudTrail channel attached to the
-     * resource-based policy. 
+     * @param resourceArn The Amazon Resource Name (ARN) of the CloudTrail event data store,
+     * dashboard, or channel attached to the resource-based policy. 
      */
     public fun resourceArn(resourceArn: String)
 
     /**
      * A JSON-formatted string for an AWS resource-based policy.
      *
-     * The following are requirements for the resource policy:
-     *
-     * * Contains only one action: cloudtrail-data:PutAuditEvents
-     * * Contains at least one statement. The policy can have a maximum of 20 statements.
-     * * Each statement contains at least one principal. A statement can have a maximum of 50
-     * principals.
+     * For example resource-based policies, see [CloudTrail resource-based policy
+     * examples](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/security_iam_resource-based-policy-examples.html)
+     * in the *CloudTrail User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-resourcepolicy.html#cfn-cloudtrail-resourcepolicy-resourcepolicy)
      * @param resourcePolicy A JSON-formatted string for an AWS resource-based policy. 
@@ -131,15 +135,20 @@ public open class CfnResourcePolicy(
         software.amazon.awscdk.services.cloudtrail.CfnResourcePolicy.Builder.create(scope, id)
 
     /**
-     * The Amazon Resource Name (ARN) of the CloudTrail channel attached to the resource-based
-     * policy.
+     * The Amazon Resource Name (ARN) of the CloudTrail event data store, dashboard, or channel
+     * attached to the resource-based policy.
      *
-     * The following is the format of a resource ARN:
-     * `arn:aws:cloudtrail:us-east-2:123456789012:channel/MyChannel` .
+     * Example event data store ARN format:
+     * `arn:aws:cloudtrail:us-east-2:123456789012:eventdatastore/EXAMPLE-f852-4e8f-8bd1-bcf6cEXAMPLE`
+     *
+     * Example dashboard ARN format:
+     * `arn:aws:cloudtrail:us-east-1:123456789012:dashboard/exampleDash`
+     *
+     * Example channel ARN format: `arn:aws:cloudtrail:us-east-2:123456789012:channel/01234567890`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-resourcepolicy.html#cfn-cloudtrail-resourcepolicy-resourcearn)
-     * @param resourceArn The Amazon Resource Name (ARN) of the CloudTrail channel attached to the
-     * resource-based policy. 
+     * @param resourceArn The Amazon Resource Name (ARN) of the CloudTrail event data store,
+     * dashboard, or channel attached to the resource-based policy. 
      */
     override fun resourceArn(resourceArn: String) {
       cdkBuilder.resourceArn(resourceArn)
@@ -148,12 +157,9 @@ public open class CfnResourcePolicy(
     /**
      * A JSON-formatted string for an AWS resource-based policy.
      *
-     * The following are requirements for the resource policy:
-     *
-     * * Contains only one action: cloudtrail-data:PutAuditEvents
-     * * Contains at least one statement. The policy can have a maximum of 20 statements.
-     * * Each statement contains at least one principal. A statement can have a maximum of 50
-     * principals.
+     * For example resource-based policies, see [CloudTrail resource-based policy
+     * examples](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/security_iam_resource-based-policy-examples.html)
+     * in the *CloudTrail User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-resourcepolicy.html#cfn-cloudtrail-resourcepolicy-resourcepolicy)
      * @param resourcePolicy A JSON-formatted string for an AWS resource-based policy. 

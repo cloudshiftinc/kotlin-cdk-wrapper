@@ -86,6 +86,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * using critical metrics such as latency and availability. You can also set SLOs against any
  * CloudWatch metric or math expression that produces a time series.
  *
+ *
+ * You can't create an SLO for a service operation that was discovered by Application Signals until
+ * after that operation has reported standard metrics to Application Signals.
+ *
+ *
  * You cannot change from a period-based SLO to a request-based SLO, or change from a request-based
  * SLO to a period-based SLO.
  *
@@ -103,6 +108,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "MyCfnServiceLevelObjective")
  * .name("name")
  * // the properties below are optional
+ * .burnRateConfigurations(List.of(BurnRateConfigurationProperty.builder()
+ * .lookBackWindowMinutes(123)
+ * .build()))
  * .description("description")
  * .goal(GoalProperty.builder()
  * .attainmentGoal(123)
@@ -279,6 +287,35 @@ public open class CfnServiceLevelObjective(
   public open fun attrLastUpdatedTime(): Number = unwrap(this).getAttrLastUpdatedTime()
 
   /**
+   * Each object in this array defines the length of the look-back window used to calculate one burn
+   * rate metric for this SLO.
+   */
+  public open fun burnRateConfigurations(): Any? = unwrap(this).getBurnRateConfigurations()
+
+  /**
+   * Each object in this array defines the length of the look-back window used to calculate one burn
+   * rate metric for this SLO.
+   */
+  public open fun burnRateConfigurations(`value`: IResolvable) {
+    unwrap(this).setBurnRateConfigurations(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Each object in this array defines the length of the look-back window used to calculate one burn
+   * rate metric for this SLO.
+   */
+  public open fun burnRateConfigurations(`value`: List<Any>) {
+    unwrap(this).setBurnRateConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * Each object in this array defines the length of the look-back window used to calculate one burn
+   * rate metric for this SLO.
+   */
+  public open fun burnRateConfigurations(vararg `value`: Any): Unit =
+      burnRateConfigurations(`value`.toList())
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun cdkTagManager(): TagManager =
@@ -427,6 +464,45 @@ public open class CfnServiceLevelObjective(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Each object in this array defines the length of the look-back window used to calculate one
+     * burn rate metric for this SLO.
+     *
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-burnrateconfigurations)
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO. 
+     */
+    public fun burnRateConfigurations(burnRateConfigurations: IResolvable)
+
+    /**
+     * Each object in this array defines the length of the look-back window used to calculate one
+     * burn rate metric for this SLO.
+     *
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-burnrateconfigurations)
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO. 
+     */
+    public fun burnRateConfigurations(burnRateConfigurations: List<Any>)
+
+    /**
+     * Each object in this array defines the length of the look-back window used to calculate one
+     * burn rate metric for this SLO.
+     *
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-burnrateconfigurations)
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO. 
+     */
+    public fun burnRateConfigurations(vararg burnRateConfigurations: Any)
+
     /**
      * An optional description for this SLO.
      *
@@ -580,6 +656,50 @@ public open class CfnServiceLevelObjective(
         software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.Builder =
         software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.Builder.create(scope,
         id)
+
+    /**
+     * Each object in this array defines the length of the look-back window used to calculate one
+     * burn rate metric for this SLO.
+     *
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-burnrateconfigurations)
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO. 
+     */
+    override fun burnRateConfigurations(burnRateConfigurations: IResolvable) {
+      cdkBuilder.burnRateConfigurations(burnRateConfigurations.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Each object in this array defines the length of the look-back window used to calculate one
+     * burn rate metric for this SLO.
+     *
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-burnrateconfigurations)
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO. 
+     */
+    override fun burnRateConfigurations(burnRateConfigurations: List<Any>) {
+      cdkBuilder.burnRateConfigurations(burnRateConfigurations.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * Each object in this array defines the length of the look-back window used to calculate one
+     * burn rate metric for this SLO.
+     *
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-burnrateconfigurations)
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO. 
+     */
+    override fun burnRateConfigurations(vararg burnRateConfigurations: Any): Unit =
+        burnRateConfigurations(burnRateConfigurations.toList())
 
     /**
      * An optional description for this SLO.
@@ -769,6 +889,104 @@ public open class CfnServiceLevelObjective(
         software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective =
         wrapped.cdkObject as
         software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective
+  }
+
+  /**
+   * This object defines the length of the look-back window used to calculate one burn rate metric
+   * for this SLO.
+   *
+   * The burn rate measures how fast the service is consuming the error budget, relative to the
+   * attainment goal of the SLO. A burn rate of exactly 1 indicates that the SLO goal will be met
+   * exactly.
+   *
+   * For example, if you specify 60 as the number of minutes in the look-back window, the burn rate
+   * is calculated as the following:
+   *
+   * *burn rate = error rate over the look-back window / (100% - attainment goal percentage)*
+   *
+   * For more information about burn rates, see [Calculate burn
+   * rates](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-ServiceLevelObjectives.html#CloudWatch-ServiceLevelObjectives-burn)
+   * .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.applicationsignals.*;
+   * BurnRateConfigurationProperty burnRateConfigurationProperty =
+   * BurnRateConfigurationProperty.builder()
+   * .lookBackWindowMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-burnrateconfiguration.html)
+   */
+  public interface BurnRateConfigurationProperty {
+    /**
+     * The number of minutes to use as the look-back window.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-burnrateconfiguration.html#cfn-applicationsignals-servicelevelobjective-burnrateconfiguration-lookbackwindowminutes)
+     */
+    public fun lookBackWindowMinutes(): Number
+
+    /**
+     * A builder for [BurnRateConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param lookBackWindowMinutes The number of minutes to use as the look-back window. 
+       */
+      public fun lookBackWindowMinutes(lookBackWindowMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.BurnRateConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.BurnRateConfigurationProperty.builder()
+
+      /**
+       * @param lookBackWindowMinutes The number of minutes to use as the look-back window. 
+       */
+      override fun lookBackWindowMinutes(lookBackWindowMinutes: Number) {
+        cdkBuilder.lookBackWindowMinutes(lookBackWindowMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.BurnRateConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.BurnRateConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        BurnRateConfigurationProperty {
+      /**
+       * The number of minutes to use as the look-back window.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-applicationsignals-servicelevelobjective-burnrateconfiguration.html#cfn-applicationsignals-servicelevelobjective-burnrateconfiguration-lookbackwindowminutes)
+       */
+      override fun lookBackWindowMinutes(): Number = unwrap(this).getLookBackWindowMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BurnRateConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.BurnRateConfigurationProperty):
+          BurnRateConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BurnRateConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BurnRateConfigurationProperty):
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.BurnRateConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjective.BurnRateConfigurationProperty
+    }
   }
 
   /**

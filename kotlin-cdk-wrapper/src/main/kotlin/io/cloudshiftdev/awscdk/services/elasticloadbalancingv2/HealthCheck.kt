@@ -52,7 +52,7 @@ public interface HealthCheck {
    * You can specify values between 0 and 99. You can specify multiple values
    * (for example, "0,1") or a range of values (for example, "0-5").
    *
-   * Default: - 12
+   * Default: 12
    */
   public fun healthyGrpcCodes(): String? = unwrap(this).getHealthyGrpcCodes()
 
@@ -71,7 +71,7 @@ public interface HealthCheck {
    *
    * For Application Load Balancers, the default is 5. For Network Load Balancers, the default is 3.
    *
-   * Default: 5 for ALBs, 3 for NLBs
+   * Default: - 5 for ALBs, 3 for NLBs
    */
   public fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
 
@@ -80,7 +80,7 @@ public interface HealthCheck {
    *
    * Must be 5 to 300 seconds
    *
-   * Default: 10 seconds if protocol is `GENEVE`, 35 seconds if target type is `lambda`, else 30
+   * Default: - 10 seconds if protocol is `GENEVE`, 35 seconds if target type is `lambda`, else 30
    * seconds
    */
   public fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
@@ -106,7 +106,7 @@ public interface HealthCheck {
    * TCP, TLS, UDP, or TCP_UDP.
    * The TLS, UDP, and TCP_UDP protocols are not supported for health checks.
    *
-   * Default: HTTP for ALBs, TCP for NLBs
+   * Default: - HTTP for ALBs, TCP for NLBs
    */
   public fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
 
@@ -116,7 +116,7 @@ public interface HealthCheck {
    *
    * Must be 2 to 120 seconds.
    *
-   * Default: 6 seconds if the protocol is HTTP, 5 seconds if protocol is `GENEVE`, 30 seconds if
+   * Default: - 6 seconds if the protocol is HTTP, 5 seconds if protocol is `GENEVE`, 30 seconds if
    * target type is `lambda`, 10 seconds for TCP, TLS, or HTTPS
    */
   public fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
@@ -125,7 +125,7 @@ public interface HealthCheck {
    * The number of consecutive health check failures required before considering a target unhealthy.
    *
    * For Application Load Balancers, the default is 2. For Network Load
-   * Balancers, this value must be the same as the healthy threshold count.
+   * Balancers, the range is between 2-10 and can be set accordingly.
    *
    * Default: 2
    */
@@ -207,7 +207,7 @@ public interface HealthCheck {
      * @param unhealthyThresholdCount The number of consecutive health check failures required
      * before considering a target unhealthy.
      * For Application Load Balancers, the default is 2. For Network Load
-     * Balancers, this value must be the same as the healthy threshold count.
+     * Balancers, the range is between 2-10 and can be set accordingly.
      */
     public fun unhealthyThresholdCount(unhealthyThresholdCount: Number)
   }
@@ -306,7 +306,7 @@ public interface HealthCheck {
      * @param unhealthyThresholdCount The number of consecutive health check failures required
      * before considering a target unhealthy.
      * For Application Load Balancers, the default is 2. For Network Load
-     * Balancers, this value must be the same as the healthy threshold count.
+     * Balancers, the range is between 2-10 and can be set accordingly.
      */
     override fun unhealthyThresholdCount(unhealthyThresholdCount: Number) {
       cdkBuilder.unhealthyThresholdCount(unhealthyThresholdCount)
@@ -337,7 +337,7 @@ public interface HealthCheck {
      * You can specify values between 0 and 99. You can specify multiple values
      * (for example, "0,1") or a range of values (for example, "0-5").
      *
-     * Default: - 12
+     * Default: 12
      */
     override fun healthyGrpcCodes(): String? = unwrap(this).getHealthyGrpcCodes()
 
@@ -357,7 +357,7 @@ public interface HealthCheck {
      * For Application Load Balancers, the default is 5. For Network Load Balancers, the default is
      * 3.
      *
-     * Default: 5 for ALBs, 3 for NLBs
+     * Default: - 5 for ALBs, 3 for NLBs
      */
     override fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
 
@@ -366,7 +366,7 @@ public interface HealthCheck {
      *
      * Must be 5 to 300 seconds
      *
-     * Default: 10 seconds if protocol is `GENEVE`, 35 seconds if target type is `lambda`, else 30
+     * Default: - 10 seconds if protocol is `GENEVE`, 35 seconds if target type is `lambda`, else 30
      * seconds
      */
     override fun interval(): Duration? = unwrap(this).getInterval()?.let(Duration::wrap)
@@ -392,7 +392,7 @@ public interface HealthCheck {
      * TCP, TLS, UDP, or TCP_UDP.
      * The TLS, UDP, and TCP_UDP protocols are not supported for health checks.
      *
-     * Default: HTTP for ALBs, TCP for NLBs
+     * Default: - HTTP for ALBs, TCP for NLBs
      */
     override fun protocol(): Protocol? = unwrap(this).getProtocol()?.let(Protocol::wrap)
 
@@ -402,8 +402,8 @@ public interface HealthCheck {
      *
      * Must be 2 to 120 seconds.
      *
-     * Default: 6 seconds if the protocol is HTTP, 5 seconds if protocol is `GENEVE`, 30 seconds if
-     * target type is `lambda`, 10 seconds for TCP, TLS, or HTTPS
+     * Default: - 6 seconds if the protocol is HTTP, 5 seconds if protocol is `GENEVE`, 30 seconds
+     * if target type is `lambda`, 10 seconds for TCP, TLS, or HTTPS
      */
     override fun timeout(): Duration? = unwrap(this).getTimeout()?.let(Duration::wrap)
 
@@ -412,7 +412,7 @@ public interface HealthCheck {
      * unhealthy.
      *
      * For Application Load Balancers, the default is 2. For Network Load
-     * Balancers, this value must be the same as the healthy threshold count.
+     * Balancers, the range is between 2-10 and can be set accordingly.
      *
      * Default: 2
      */

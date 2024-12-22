@@ -1739,13 +1739,18 @@ public open class CfnAutomationRule(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -1783,13 +1788,18 @@ public open class CfnAutomationRule(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -1821,13 +1831,18 @@ public open class CfnAutomationRule(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -1849,13 +1864,18 @@ public open class CfnAutomationRule(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -2026,13 +2046,18 @@ public open class CfnAutomationRule(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * Array Members: Minimum number of 1 item. Maximum number of 20 items.
      *
@@ -2238,7 +2263,8 @@ public open class CfnAutomationRule(
        * @param createdAt A timestamp that indicates when this finding record was created.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2246,6 +2272,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2255,7 +2285,8 @@ public open class CfnAutomationRule(
        * @param createdAt A timestamp that indicates when this finding record was created.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2263,6 +2294,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2272,7 +2307,8 @@ public open class CfnAutomationRule(
        * @param createdAt A timestamp that indicates when this finding record was created.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2280,6 +2316,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2347,7 +2387,8 @@ public open class CfnAutomationRule(
        * captured by a finding was first observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2355,6 +2396,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2365,7 +2410,8 @@ public open class CfnAutomationRule(
        * captured by a finding was first observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2373,6 +2419,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2383,7 +2433,8 @@ public open class CfnAutomationRule(
        * captured by a finding was first observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2391,6 +2442,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2440,7 +2495,8 @@ public open class CfnAutomationRule(
        * by a finding was most recently observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2448,6 +2504,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2458,7 +2518,8 @@ public open class CfnAutomationRule(
        * by a finding was most recently observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2466,6 +2527,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2476,7 +2541,8 @@ public open class CfnAutomationRule(
        * by a finding was most recently observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2484,6 +2550,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2511,7 +2581,8 @@ public open class CfnAutomationRule(
        * @param noteUpdatedAt The timestamp of when the note was updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2519,6 +2590,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2528,7 +2603,8 @@ public open class CfnAutomationRule(
        * @param noteUpdatedAt The timestamp of when the note was updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2536,6 +2612,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2545,7 +2625,8 @@ public open class CfnAutomationRule(
        * @param noteUpdatedAt The timestamp of when the note was updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2553,6 +2634,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2908,7 +2993,8 @@ public open class CfnAutomationRule(
        * updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2916,6 +3002,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2926,7 +3016,8 @@ public open class CfnAutomationRule(
        * updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2934,6 +3025,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -2944,7 +3039,8 @@ public open class CfnAutomationRule(
        * updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2952,6 +3048,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3218,7 +3318,8 @@ public open class CfnAutomationRule(
        * @param createdAt A timestamp that indicates when this finding record was created.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3226,6 +3327,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3237,7 +3342,8 @@ public open class CfnAutomationRule(
        * @param createdAt A timestamp that indicates when this finding record was created.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3245,6 +3351,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3256,7 +3366,8 @@ public open class CfnAutomationRule(
        * @param createdAt A timestamp that indicates when this finding record was created.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3264,6 +3375,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3339,7 +3454,8 @@ public open class CfnAutomationRule(
        * captured by a finding was first observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3347,6 +3463,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3359,7 +3479,8 @@ public open class CfnAutomationRule(
        * captured by a finding was first observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3367,6 +3488,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3379,7 +3504,8 @@ public open class CfnAutomationRule(
        * captured by a finding was first observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3387,6 +3513,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3445,7 +3575,8 @@ public open class CfnAutomationRule(
        * by a finding was most recently observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3453,6 +3584,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3465,7 +3600,8 @@ public open class CfnAutomationRule(
        * by a finding was most recently observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3473,6 +3609,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3485,7 +3625,8 @@ public open class CfnAutomationRule(
        * by a finding was most recently observed by the security findings product.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3493,6 +3634,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3525,7 +3670,8 @@ public open class CfnAutomationRule(
        * @param noteUpdatedAt The timestamp of when the note was updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3533,6 +3679,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3544,7 +3694,8 @@ public open class CfnAutomationRule(
        * @param noteUpdatedAt The timestamp of when the note was updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3552,6 +3703,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -3563,7 +3718,8 @@ public open class CfnAutomationRule(
        * @param noteUpdatedAt The timestamp of when the note was updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3571,6 +3727,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -4000,7 +4160,8 @@ public open class CfnAutomationRule(
        * updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4008,6 +4169,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -4020,7 +4185,8 @@ public open class CfnAutomationRule(
        * updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4028,6 +4194,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -4040,7 +4210,8 @@ public open class CfnAutomationRule(
        * updated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4048,6 +4219,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        */
@@ -4215,7 +4390,8 @@ public open class CfnAutomationRule(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4223,6 +4399,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4261,7 +4441,8 @@ public open class CfnAutomationRule(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4269,6 +4450,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4300,7 +4485,8 @@ public open class CfnAutomationRule(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4308,6 +4494,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4329,7 +4519,8 @@ public open class CfnAutomationRule(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4337,6 +4528,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4507,7 +4702,8 @@ public open class CfnAutomationRule(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4515,6 +4711,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * Array Members: Minimum number of 1 item. Maximum number of 20 items.
        *
@@ -4603,13 +4803,18 @@ public open class CfnAutomationRule(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-datefilter.html#cfn-securityhub-automationrule-datefilter-end)
      */
@@ -4620,13 +4825,18 @@ public open class CfnAutomationRule(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-datefilter.html#cfn-securityhub-automationrule-datefilter-start)
      */
@@ -4658,7 +4868,8 @@ public open class CfnAutomationRule(
        * @param end A timestamp that provides the end date for the date filter.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4666,6 +4877,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun end(end: String)
 
@@ -4673,7 +4888,8 @@ public open class CfnAutomationRule(
        * @param start A timestamp that provides the start date for the date filter.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4681,6 +4897,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun start(start: String)
     }
@@ -4716,7 +4936,8 @@ public open class CfnAutomationRule(
        * @param end A timestamp that provides the end date for the date filter.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4724,6 +4945,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun end(end: String) {
         cdkBuilder.end(end)
@@ -4733,7 +4958,8 @@ public open class CfnAutomationRule(
        * @param start A timestamp that provides the start date for the date filter.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4741,6 +4967,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun start(start: String) {
         cdkBuilder.start(start)
@@ -4767,7 +4997,8 @@ public open class CfnAutomationRule(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4775,6 +5006,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-datefilter.html#cfn-securityhub-automationrule-datefilter-end)
        */
@@ -4785,7 +5020,8 @@ public open class CfnAutomationRule(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4793,6 +5029,10 @@ public open class CfnAutomationRule(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-datefilter.html#cfn-securityhub-automationrule-datefilter-start)
        */
@@ -5672,7 +5912,7 @@ public open class CfnAutomationRule(
      * The normalized severity for the finding. This attribute is to be deprecated in favor of
      * `Label` .
      *
-     * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
+     * If you provide `Normalized` and don't provide `Label` , `Label` is set automatically as
      * follows.
      *
      * * 0 - `INFORMATIONAL`
@@ -5711,7 +5951,7 @@ public open class CfnAutomationRule(
       /**
        * @param normalized The normalized severity for the finding. This attribute is to be
        * deprecated in favor of `Label` .
-       * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
+       * If you provide `Normalized` and don't provide `Label` , `Label` is set automatically as
        * follows.
        *
        * * 0 - `INFORMATIONAL`
@@ -5750,7 +5990,7 @@ public open class CfnAutomationRule(
       /**
        * @param normalized The normalized severity for the finding. This attribute is to be
        * deprecated in favor of `Label` .
-       * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
+       * If you provide `Normalized` and don't provide `Label` , `Label` is set automatically as
        * follows.
        *
        * * 0 - `INFORMATIONAL`
@@ -5797,7 +6037,7 @@ public open class CfnAutomationRule(
        * The normalized severity for the finding. This attribute is to be deprecated in favor of
        * `Label` .
        *
-       * If you provide `Normalized` and do not provide `Label` , `Label` is set automatically as
+       * If you provide `Normalized` and don't provide `Label` , `Label` is set automatically as
        * follows.
        *
        * * 0 - `INFORMATIONAL`
@@ -6243,8 +6483,8 @@ public open class CfnAutomationRule(
      * when the initial reviewer is not the resource owner, and needs intervention from the resource
      * owner.
      * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
-     * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
-     * is needed. The finding is no longer updated.
+     * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action is
+     * needed. The finding is no longer updated.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-workflowupdate.html#cfn-securityhub-automationrule-workflowupdate-status)
      */
@@ -6275,7 +6515,7 @@ public open class CfnAutomationRule(
        * Used when the initial reviewer is not the resource owner, and needs intervention from the
        * resource owner.
        * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed. The finding is no longer updated.
        */
       public fun status(status: String)
@@ -6307,7 +6547,7 @@ public open class CfnAutomationRule(
        * Used when the initial reviewer is not the resource owner, and needs intervention from the
        * resource owner.
        * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed. The finding is no longer updated.
        */
       override fun status(status: String) {
@@ -6344,7 +6584,7 @@ public open class CfnAutomationRule(
        * Used when the initial reviewer is not the resource owner, and needs intervention from the
        * resource owner.
        * * `RESOLVED` - The finding was reviewed and remediated and is now considered resolved.
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed. The finding is no longer updated.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-automationrule-workflowupdate.html#cfn-securityhub-automationrule-workflowupdate-status)

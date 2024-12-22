@@ -8,6 +8,7 @@ public enum class KeyUsage(
   ENCRYPT_DECRYPT(software.amazon.awscdk.services.kms.KeyUsage.ENCRYPT_DECRYPT),
   SIGN_VERIFY(software.amazon.awscdk.services.kms.KeyUsage.SIGN_VERIFY),
   GENERATE_VERIFY_MAC(software.amazon.awscdk.services.kms.KeyUsage.GENERATE_VERIFY_MAC),
+  KEY_AGREEMENT(software.amazon.awscdk.services.kms.KeyUsage.KEY_AGREEMENT),
   ;
 
   public companion object {
@@ -17,6 +18,7 @@ public enum class KeyUsage(
       software.amazon.awscdk.services.kms.KeyUsage.SIGN_VERIFY -> KeyUsage.SIGN_VERIFY
       software.amazon.awscdk.services.kms.KeyUsage.GENERATE_VERIFY_MAC ->
           KeyUsage.GENERATE_VERIFY_MAC
+      software.amazon.awscdk.services.kms.KeyUsage.KEY_AGREEMENT -> KeyUsage.KEY_AGREEMENT
     }
 
     internal fun unwrap(wrapped: KeyUsage): software.amazon.awscdk.services.kms.KeyUsage =

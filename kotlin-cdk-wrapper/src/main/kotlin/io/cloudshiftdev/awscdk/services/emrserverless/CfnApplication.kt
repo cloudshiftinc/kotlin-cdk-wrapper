@@ -1384,7 +1384,7 @@ public open class CfnApplication(
   }
 
   /**
-   * Configuration for Auto Start of Application.
+   * The configuration for an application to automatically start on job submission.
    *
    * Example:
    *
@@ -1402,9 +1402,7 @@ public open class CfnApplication(
    */
   public interface AutoStartConfigurationProperty {
     /**
-     * If set to true, the Application will automatically start.
-     *
-     * Defaults to true.
+     * Enables the application to automatically start on job submission.
      *
      * Default: - true
      *
@@ -1418,14 +1416,12 @@ public open class CfnApplication(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled If set to true, the Application will automatically start.
-       * Defaults to true.
+       * @param enabled Enables the application to automatically start on job submission.
        */
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled If set to true, the Application will automatically start.
-       * Defaults to true.
+       * @param enabled Enables the application to automatically start on job submission.
        */
       public fun enabled(enabled: IResolvable)
     }
@@ -1437,16 +1433,14 @@ public open class CfnApplication(
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStartConfigurationProperty.builder()
 
       /**
-       * @param enabled If set to true, the Application will automatically start.
-       * Defaults to true.
+       * @param enabled Enables the application to automatically start on job submission.
        */
       override fun enabled(enabled: Boolean) {
         cdkBuilder.enabled(enabled)
       }
 
       /**
-       * @param enabled If set to true, the Application will automatically start.
-       * Defaults to true.
+       * @param enabled Enables the application to automatically start on job submission.
        */
       override fun enabled(enabled: IResolvable) {
         cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
@@ -1462,9 +1456,7 @@ public open class CfnApplication(
     ) : CdkObject(cdkObject),
         AutoStartConfigurationProperty {
       /**
-       * If set to true, the Application will automatically start.
-       *
-       * Defaults to true.
+       * Enables the application to automatically start on job submission.
        *
        * Default: - true
        *
@@ -1492,7 +1484,8 @@ public open class CfnApplication(
   }
 
   /**
-   * Configuration for Auto Stop of Application.
+   * The configuration for an application to automatically stop after a certain amount of time being
+   * idle.
    *
    * Example:
    *
@@ -1511,7 +1504,7 @@ public open class CfnApplication(
    */
   public interface AutoStopConfigurationProperty {
     /**
-     * If set to true, the Application will automatically stop after being idle.
+     * Enables the application to automatically stop after a certain amount of time being idle.
      *
      * Defaults to true.
      *
@@ -1522,7 +1515,7 @@ public open class CfnApplication(
     public fun enabled(): Any? = unwrap(this).getEnabled()
 
     /**
-     * The amount of time [in minutes] to wait before auto stopping the Application when idle.
+     * The amount of idle time in minutes after which your application will automatically stop.
      *
      * Defaults to 15 minutes.
      *
@@ -1536,20 +1529,22 @@ public open class CfnApplication(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled If set to true, the Application will automatically stop after being idle.
+       * @param enabled Enables the application to automatically stop after a certain amount of time
+       * being idle.
        * Defaults to true.
        */
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled If set to true, the Application will automatically stop after being idle.
+       * @param enabled Enables the application to automatically stop after a certain amount of time
+       * being idle.
        * Defaults to true.
        */
       public fun enabled(enabled: IResolvable)
 
       /**
-       * @param idleTimeoutMinutes The amount of time [in minutes] to wait before auto stopping the
-       * Application when idle.
+       * @param idleTimeoutMinutes The amount of idle time in minutes after which your application
+       * will automatically stop.
        * Defaults to 15 minutes.
        */
       public fun idleTimeoutMinutes(idleTimeoutMinutes: Number)
@@ -1562,7 +1557,8 @@ public open class CfnApplication(
           software.amazon.awscdk.services.emrserverless.CfnApplication.AutoStopConfigurationProperty.builder()
 
       /**
-       * @param enabled If set to true, the Application will automatically stop after being idle.
+       * @param enabled Enables the application to automatically stop after a certain amount of time
+       * being idle.
        * Defaults to true.
        */
       override fun enabled(enabled: Boolean) {
@@ -1570,7 +1566,8 @@ public open class CfnApplication(
       }
 
       /**
-       * @param enabled If set to true, the Application will automatically stop after being idle.
+       * @param enabled Enables the application to automatically stop after a certain amount of time
+       * being idle.
        * Defaults to true.
        */
       override fun enabled(enabled: IResolvable) {
@@ -1578,8 +1575,8 @@ public open class CfnApplication(
       }
 
       /**
-       * @param idleTimeoutMinutes The amount of time [in minutes] to wait before auto stopping the
-       * Application when idle.
+       * @param idleTimeoutMinutes The amount of idle time in minutes after which your application
+       * will automatically stop.
        * Defaults to 15 minutes.
        */
       override fun idleTimeoutMinutes(idleTimeoutMinutes: Number) {
@@ -1596,7 +1593,7 @@ public open class CfnApplication(
     ) : CdkObject(cdkObject),
         AutoStopConfigurationProperty {
       /**
-       * If set to true, the Application will automatically stop after being idle.
+       * Enables the application to automatically stop after a certain amount of time being idle.
        *
        * Defaults to true.
        *
@@ -1607,7 +1604,7 @@ public open class CfnApplication(
       override fun enabled(): Any? = unwrap(this).getEnabled()
 
       /**
-       * The amount of time [in minutes] to wait before auto stopping the Application when idle.
+       * The amount of idle time in minutes after which your application will automatically stop.
        *
        * Defaults to 15 minutes.
        *
@@ -1877,7 +1874,11 @@ public open class CfnApplication(
   }
 
   /**
-   * Configuration for a JobRun.
+   * A configuration specification to be used when provisioning an application.
+   *
+   * A configuration consists of a classification, properties, and optional nested configurations. A
+   * classification refers to an application-specific configuration file. Properties are the settings
+   * you want to change in that file.
    *
    * Example:
    *
@@ -1899,16 +1900,22 @@ public open class CfnApplication(
    */
   public interface ConfigurationObjectProperty {
     /**
+     * The classification within a configuration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-configurationobject.html#cfn-emrserverless-application-configurationobject-classification)
      */
     public fun classification(): String
 
     /**
+     * A list of additional configurations to apply within a configuration object.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-configurationobject.html#cfn-emrserverless-application-configurationobject-configurations)
      */
     public fun configurations(): Any? = unwrap(this).getConfigurations()
 
     /**
+     * A set of properties specified within a configuration classification.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-configurationobject.html#cfn-emrserverless-application-configurationobject-properties)
      */
     public fun properties(): Any? = unwrap(this).getProperties()
@@ -1919,32 +1926,35 @@ public open class CfnApplication(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param classification the value to be set. 
+       * @param classification The classification within a configuration. 
        */
       public fun classification(classification: String)
 
       /**
-       * @param configurations the value to be set.
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
        */
       public fun configurations(configurations: IResolvable)
 
       /**
-       * @param configurations the value to be set.
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
        */
       public fun configurations(configurations: List<Any>)
 
       /**
-       * @param configurations the value to be set.
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
        */
       public fun configurations(vararg configurations: Any)
 
       /**
-       * @param properties the value to be set.
+       * @param properties A set of properties specified within a configuration classification.
        */
       public fun properties(properties: IResolvable)
 
       /**
-       * @param properties the value to be set.
+       * @param properties A set of properties specified within a configuration classification.
        */
       public fun properties(properties: Map<String, String>)
     }
@@ -1956,41 +1966,44 @@ public open class CfnApplication(
           software.amazon.awscdk.services.emrserverless.CfnApplication.ConfigurationObjectProperty.builder()
 
       /**
-       * @param classification the value to be set. 
+       * @param classification The classification within a configuration. 
        */
       override fun classification(classification: String) {
         cdkBuilder.classification(classification)
       }
 
       /**
-       * @param configurations the value to be set.
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
        */
       override fun configurations(configurations: IResolvable) {
         cdkBuilder.configurations(configurations.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param configurations the value to be set.
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
        */
       override fun configurations(configurations: List<Any>) {
         cdkBuilder.configurations(configurations.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param configurations the value to be set.
+       * @param configurations A list of additional configurations to apply within a configuration
+       * object.
        */
       override fun configurations(vararg configurations: Any): Unit =
           configurations(configurations.toList())
 
       /**
-       * @param properties the value to be set.
+       * @param properties A set of properties specified within a configuration classification.
        */
       override fun properties(properties: IResolvable) {
         cdkBuilder.properties(properties.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param properties the value to be set.
+       * @param properties A set of properties specified within a configuration classification.
        */
       override fun properties(properties: Map<String, String>) {
         cdkBuilder.properties(properties)
@@ -2006,16 +2019,22 @@ public open class CfnApplication(
     ) : CdkObject(cdkObject),
         ConfigurationObjectProperty {
       /**
+       * The classification within a configuration.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-configurationobject.html#cfn-emrserverless-application-configurationobject-classification)
        */
       override fun classification(): String = unwrap(this).getClassification()
 
       /**
+       * A list of additional configurations to apply within a configuration object.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-configurationobject.html#cfn-emrserverless-application-configurationobject-configurations)
        */
       override fun configurations(): Any? = unwrap(this).getConfigurations()
 
       /**
+       * A set of properties specified within a configuration classification.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-configurationobject.html#cfn-emrserverless-application-configurationobject-properties)
        */
       override fun properties(): Any? = unwrap(this).getProperties()
@@ -2977,7 +2996,7 @@ public open class CfnApplication(
   }
 
   /**
-   * The configuration setting for monitoring.
+   * The configuration setting for monitoring logs.
    *
    * Example:
    *
@@ -3503,6 +3522,12 @@ public open class CfnApplication(
   }
 
   /**
+   * The configuration of a worker.
+   *
+   * For more information, see [Supported worker
+   * configurations](https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/app-behavior.html#worker-configs)
+   * .
+   *
    * Example:
    *
    * ```
@@ -3522,36 +3547,33 @@ public open class CfnApplication(
    */
   public interface WorkerConfigurationProperty {
     /**
-     * Per worker CPU resource.
+     * The CPU requirements of the worker configuration.
      *
-     * vCPU is the only supported unit and specifying vCPU is optional.
+     * Each worker can have 1, 2, 4, 8, or 16 vCPUs.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-cpu)
      */
     public fun cpu(): String
 
     /**
-     * Per worker Disk resource.
-     *
-     * GB is the only supported unit and specifying GB is optional
+     * The disk requirements of the worker configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disk)
      */
     public fun disk(): String? = unwrap(this).getDisk()
 
     /**
-     * Per worker DiskType resource.
+     * The disk type for every worker instance of the work type.
      *
-     * Shuffle optimized and Standard are only supported types and specifying diskType is optional
+     * Shuffle optimized disks have higher performance characteristics and are better for shuffle
+     * heavy workloads. Default is `STANDARD` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disktype)
      */
     public fun diskType(): String? = unwrap(this).getDiskType()
 
     /**
-     * Per worker memory resource.
-     *
-     * GB is the only supported unit and specifying GB is optional.
+     * The memory requirements of the worker configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-memory)
      */
@@ -3563,26 +3585,25 @@ public open class CfnApplication(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param cpu Per worker CPU resource. 
-       * vCPU is the only supported unit and specifying vCPU is optional.
+       * @param cpu The CPU requirements of the worker configuration. 
+       * Each worker can have 1, 2, 4, 8, or 16 vCPUs.
        */
       public fun cpu(cpu: String)
 
       /**
-       * @param disk Per worker Disk resource.
-       * GB is the only supported unit and specifying GB is optional
+       * @param disk The disk requirements of the worker configuration.
        */
       public fun disk(disk: String)
 
       /**
-       * @param diskType Per worker DiskType resource.
-       * Shuffle optimized and Standard are only supported types and specifying diskType is optional
+       * @param diskType The disk type for every worker instance of the work type.
+       * Shuffle optimized disks have higher performance characteristics and are better for shuffle
+       * heavy workloads. Default is `STANDARD` .
        */
       public fun diskType(diskType: String)
 
       /**
-       * @param memory Per worker memory resource. 
-       * GB is the only supported unit and specifying GB is optional.
+       * @param memory The memory requirements of the worker configuration. 
        */
       public fun memory(memory: String)
     }
@@ -3594,32 +3615,31 @@ public open class CfnApplication(
           software.amazon.awscdk.services.emrserverless.CfnApplication.WorkerConfigurationProperty.builder()
 
       /**
-       * @param cpu Per worker CPU resource. 
-       * vCPU is the only supported unit and specifying vCPU is optional.
+       * @param cpu The CPU requirements of the worker configuration. 
+       * Each worker can have 1, 2, 4, 8, or 16 vCPUs.
        */
       override fun cpu(cpu: String) {
         cdkBuilder.cpu(cpu)
       }
 
       /**
-       * @param disk Per worker Disk resource.
-       * GB is the only supported unit and specifying GB is optional
+       * @param disk The disk requirements of the worker configuration.
        */
       override fun disk(disk: String) {
         cdkBuilder.disk(disk)
       }
 
       /**
-       * @param diskType Per worker DiskType resource.
-       * Shuffle optimized and Standard are only supported types and specifying diskType is optional
+       * @param diskType The disk type for every worker instance of the work type.
+       * Shuffle optimized disks have higher performance characteristics and are better for shuffle
+       * heavy workloads. Default is `STANDARD` .
        */
       override fun diskType(diskType: String) {
         cdkBuilder.diskType(diskType)
       }
 
       /**
-       * @param memory Per worker memory resource. 
-       * GB is the only supported unit and specifying GB is optional.
+       * @param memory The memory requirements of the worker configuration. 
        */
       override fun memory(memory: String) {
         cdkBuilder.memory(memory)
@@ -3635,36 +3655,33 @@ public open class CfnApplication(
     ) : CdkObject(cdkObject),
         WorkerConfigurationProperty {
       /**
-       * Per worker CPU resource.
+       * The CPU requirements of the worker configuration.
        *
-       * vCPU is the only supported unit and specifying vCPU is optional.
+       * Each worker can have 1, 2, 4, 8, or 16 vCPUs.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-cpu)
        */
       override fun cpu(): String = unwrap(this).getCpu()
 
       /**
-       * Per worker Disk resource.
-       *
-       * GB is the only supported unit and specifying GB is optional
+       * The disk requirements of the worker configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disk)
        */
       override fun disk(): String? = unwrap(this).getDisk()
 
       /**
-       * Per worker DiskType resource.
+       * The disk type for every worker instance of the work type.
        *
-       * Shuffle optimized and Standard are only supported types and specifying diskType is optional
+       * Shuffle optimized disks have higher performance characteristics and are better for shuffle
+       * heavy workloads. Default is `STANDARD` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-disktype)
        */
       override fun diskType(): String? = unwrap(this).getDiskType()
 
       /**
-       * Per worker memory resource.
-       *
-       * GB is the only supported unit and specifying GB is optional.
+       * The memory requirements of the worker configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emrserverless-application-workerconfiguration.html#cfn-emrserverless-application-workerconfiguration-memory)
        */

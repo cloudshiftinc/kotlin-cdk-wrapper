@@ -4,7 +4,9 @@ package io.cloudshiftdev.awscdk
 
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.constructs.IConstruct
+import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Aspects can be applied to CDK tree scopes and can operate on the tree before synthesis.
@@ -46,15 +48,46 @@ public open class Aspects(
    * Adds an aspect to apply this scope before synthesis.
    *
    * @param aspect The aspect to add. 
+   * @param options Options to apply on this aspect.
    */
   public open fun add(aspect: IAspect) {
     unwrap(this).add(aspect.let(IAspect.Companion::unwrap))
   }
 
   /**
+   * Adds an aspect to apply this scope before synthesis.
+   *
+   * @param aspect The aspect to add. 
+   * @param options Options to apply on this aspect.
+   */
+  public open fun add(aspect: IAspect, options: AspectOptions) {
+    unwrap(this).add(aspect.let(IAspect.Companion::unwrap),
+        options.let(AspectOptions.Companion::unwrap))
+  }
+
+  /**
+   * Adds an aspect to apply this scope before synthesis.
+   *
+   * @param aspect The aspect to add. 
+   * @param options Options to apply on this aspect.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("7c7a94e73bcbb8adc2d333796757f5f75d97fe4d1944117a1a9d747d5d4c417b")
+  public open fun add(aspect: IAspect, options: AspectOptions.Builder.() -> Unit): Unit =
+      add(aspect, AspectOptions(options))
+
+  /**
    * The list of aspects which were directly applied on this scope.
    */
   public open fun all(): List<IAspect> = unwrap(this).getAll().map(IAspect::wrap)
+
+  /**
+   * The list of aspects with priority which were directly applied on this scope.
+   *
+   * Also returns inherited Aspects of this node.
+   */
+  public open fun applied(): List<AspectApplication> =
+      unwrap(this).getApplied().map(AspectApplication::wrap)
 
   public companion object {
     public fun of(scope: IConstruct): Aspects =

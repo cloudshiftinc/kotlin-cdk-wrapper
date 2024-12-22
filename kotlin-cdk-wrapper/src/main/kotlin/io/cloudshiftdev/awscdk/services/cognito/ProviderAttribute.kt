@@ -51,6 +51,9 @@ public open class ProviderAttribute(
     public val APPLE_EMAIL: ProviderAttribute =
         ProviderAttribute.wrap(software.amazon.awscdk.services.cognito.ProviderAttribute.APPLE_EMAIL)
 
+    public val APPLE_EMAIL_VERIFIED: ProviderAttribute =
+        ProviderAttribute.wrap(software.amazon.awscdk.services.cognito.ProviderAttribute.APPLE_EMAIL_VERIFIED)
+
     public val APPLE_FIRST_NAME: ProviderAttribute =
         ProviderAttribute.wrap(software.amazon.awscdk.services.cognito.ProviderAttribute.APPLE_FIRST_NAME)
 
@@ -92,6 +95,9 @@ public open class ProviderAttribute(
 
     public val GOOGLE_EMAIL: ProviderAttribute =
         ProviderAttribute.wrap(software.amazon.awscdk.services.cognito.ProviderAttribute.GOOGLE_EMAIL)
+
+    public val GOOGLE_EMAIL_VERIFIED: ProviderAttribute =
+        ProviderAttribute.wrap(software.amazon.awscdk.services.cognito.ProviderAttribute.GOOGLE_EMAIL_VERIFIED)
 
     public val GOOGLE_FAMILY_NAME: ProviderAttribute =
         ProviderAttribute.wrap(software.amazon.awscdk.services.cognito.ProviderAttribute.GOOGLE_FAMILY_NAME)

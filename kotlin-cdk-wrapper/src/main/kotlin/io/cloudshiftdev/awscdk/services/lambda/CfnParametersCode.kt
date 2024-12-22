@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.lambda
 
 import io.cloudshiftdev.awscdk.CfnParameter
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.s3.Location
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Any
@@ -230,6 +231,16 @@ public open class CfnParametersCode(
      * Bucket where the Lambda code will be located at. 
      */
     public fun objectKeyParam(objectKeyParam: CfnParameter)
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     *
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code. 
+     */
+    public fun sourceKmsKey(sourceKmsKey: IKey)
   }
 
   private class BuilderImpl : Builder {
@@ -264,6 +275,18 @@ public open class CfnParametersCode(
      */
     override fun objectKeyParam(objectKeyParam: CfnParameter) {
       cdkBuilder.objectKeyParam(objectKeyParam.let(CfnParameter.Companion::unwrap))
+    }
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     *
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code. 
+     */
+    override fun sourceKmsKey(sourceKmsKey: IKey) {
+      cdkBuilder.sourceKmsKey(sourceKmsKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.CfnParametersCode =

@@ -18,13 +18,20 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
+ * / **
+ * * JSON state input:
+ * *  {
+ * *    "bucketName": "my-bucket",
+ * *    "prefix": "item"
+ * *  }
+ * *&#47;
  * DistributedMap distributedMap = DistributedMap.Builder.create(this, "DistributedMap")
- * .mapExecutionType(StateMachineType.EXPRESS)
+ * .itemReader(S3ObjectsItemReader.Builder.create()
+ * .bucketNamePath(JsonPath.stringAt("$.bucketName"))
+ * .prefix(JsonPath.stringAt("$.prefix"))
+ * .build())
  * .build();
- * distributedMap.itemProcessor(new Pass(this, "Pass"), ProcessorConfig.builder()
- * .mode(ProcessorMode.DISTRIBUTED)
- * .executionType(ProcessorType.STANDARD)
- * .build());
+ * distributedMap.itemProcessor(new Pass(this, "Pass"));
  * ```
  */
 public interface DistributedMapProps : MapBaseProps {

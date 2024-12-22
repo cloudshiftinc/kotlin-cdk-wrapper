@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -17,6 +18,7 @@ import kotlin.collections.List
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
  * ListenerCertificate listenerCertificate;
  * NetworkListenerAction networkListenerAction;
@@ -32,6 +34,7 @@ import kotlin.collections.List
  * .defaultTargetGroups(List.of(networkTargetGroup))
  * .protocol(Protocol.HTTP)
  * .sslPolicy(SslPolicy.RECOMMENDED_TLS)
+ * .tcpIdleTimeout(Duration.minutes(30))
  * .build();
  * ```
  */
@@ -117,6 +120,11 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
      * @param sslPolicy SSL Policy.
      */
     public fun sslPolicy(sslPolicy: SslPolicy)
+
+    /**
+     * @param tcpIdleTimeout The load balancer TCP idle timeout.
+     */
+    public fun tcpIdleTimeout(tcpIdleTimeout: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -214,6 +222,13 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
       cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
+    /**
+     * @param tcpIdleTimeout The load balancer TCP idle timeout.
+     */
+    override fun tcpIdleTimeout(tcpIdleTimeout: Duration) {
+      cdkBuilder.tcpIdleTimeout(tcpIdleTimeout.let(Duration.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListenerProps
         = cdkBuilder.build()
   }
@@ -297,6 +312,13 @@ public interface NetworkListenerProps : BaseNetworkListenerProps {
      * Default: - Current predefined security policy.
      */
     override fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
+
+    /**
+     * The load balancer TCP idle timeout.
+     *
+     * Default: Duration.seconds(350)
+     */
+    override fun tcpIdleTimeout(): Duration? = unwrap(this).getTcpIdleTimeout()?.let(Duration::wrap)
   }
 
   public companion object {

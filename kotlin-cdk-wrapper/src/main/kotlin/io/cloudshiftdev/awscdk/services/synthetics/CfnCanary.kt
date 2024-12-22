@@ -78,6 +78,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .deleteLambdaResourcesOnCanaryDeletion(false)
  * .failureRetentionPeriod(123)
+ * .provisionedResourceCleanup("provisionedResourceCleanup")
+ * .resourcesToReplicateTags(List.of("resourcesToReplicateTags"))
  * .runConfig(RunConfigProperty.builder()
  * .activeTracing(false)
  * .environmentVariables(Map.of(
@@ -291,6 +293,43 @@ public open class CfnCanary(
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
+
+  /**
+   * Specifies whether to also delete the Lambda functions and layers used by this canary when the
+   * canary is deleted.
+   */
+  public open fun provisionedResourceCleanup(): String? =
+      unwrap(this).getProvisionedResourceCleanup()
+
+  /**
+   * Specifies whether to also delete the Lambda functions and layers used by this canary when the
+   * canary is deleted.
+   */
+  public open fun provisionedResourceCleanup(`value`: String) {
+    unwrap(this).setProvisionedResourceCleanup(`value`)
+  }
+
+  /**
+   * To have the tags that you apply to this canary also be applied to the Lambda function that the
+   * canary uses, specify this property with the value `lambda-function` .
+   */
+  public open fun resourcesToReplicateTags(): List<String> =
+      unwrap(this).getResourcesToReplicateTags() ?: emptyList()
+
+  /**
+   * To have the tags that you apply to this canary also be applied to the Lambda function that the
+   * canary uses, specify this property with the value `lambda-function` .
+   */
+  public open fun resourcesToReplicateTags(`value`: List<String>) {
+    unwrap(this).setResourcesToReplicateTags(`value`)
+  }
+
+  /**
+   * To have the tags that you apply to this canary also be applied to the Lambda function that the
+   * canary uses, specify this property with the value `lambda-function` .
+   */
+  public open fun resourcesToReplicateTags(vararg `value`: String): Unit =
+      resourcesToReplicateTags(`value`.toList())
 
   /**
    * A structure that contains input information for a canary run.
@@ -645,6 +684,54 @@ public open class CfnCanary(
      * @param name The name for this canary. 
      */
     public fun name(name: String)
+
+    /**
+     * Specifies whether to also delete the Lambda functions and layers used by this canary when the
+     * canary is deleted.
+     *
+     * If it is `AUTOMATIC` , the Lambda functions and layers will be deleted when the canary is
+     * deleted.
+     *
+     * If the value of this parameter is `OFF` , then the value of the `DeleteLambda` parameter of
+     * the
+     * [DeleteCanary](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DeleteCanary.html)
+     * operation determines whether the Lambda functions and layers will be deleted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-provisionedresourcecleanup)
+     * @param provisionedResourceCleanup Specifies whether to also delete the Lambda functions and
+     * layers used by this canary when the canary is deleted. 
+     */
+    public fun provisionedResourceCleanup(provisionedResourceCleanup: String)
+
+    /**
+     * To have the tags that you apply to this canary also be applied to the Lambda function that
+     * the canary uses, specify this property with the value `lambda-function` .
+     *
+     * If you do this, CloudWatch Synthetics will keep the tags of the canary and the Lambda
+     * function synchronized. Any future changes you make to the canary's tags will also be applied to
+     * the function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-resourcestoreplicatetags)
+     * @param resourcesToReplicateTags To have the tags that you apply to this canary also be
+     * applied to the Lambda function that the canary uses, specify this property with the value
+     * `lambda-function` . 
+     */
+    public fun resourcesToReplicateTags(resourcesToReplicateTags: List<String>)
+
+    /**
+     * To have the tags that you apply to this canary also be applied to the Lambda function that
+     * the canary uses, specify this property with the value `lambda-function` .
+     *
+     * If you do this, CloudWatch Synthetics will keep the tags of the canary and the Lambda
+     * function synchronized. Any future changes you make to the canary's tags will also be applied to
+     * the function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-resourcestoreplicatetags)
+     * @param resourcesToReplicateTags To have the tags that you apply to this canary also be
+     * applied to the Lambda function that the canary uses, specify this property with the value
+     * `lambda-function` . 
+     */
+    public fun resourcesToReplicateTags(vararg resourcesToReplicateTags: String)
 
     /**
      * A structure that contains input information for a canary run.
@@ -1046,6 +1133,59 @@ public open class CfnCanary(
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * Specifies whether to also delete the Lambda functions and layers used by this canary when the
+     * canary is deleted.
+     *
+     * If it is `AUTOMATIC` , the Lambda functions and layers will be deleted when the canary is
+     * deleted.
+     *
+     * If the value of this parameter is `OFF` , then the value of the `DeleteLambda` parameter of
+     * the
+     * [DeleteCanary](https://docs.aws.amazon.com/AmazonSynthetics/latest/APIReference/API_DeleteCanary.html)
+     * operation determines whether the Lambda functions and layers will be deleted.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-provisionedresourcecleanup)
+     * @param provisionedResourceCleanup Specifies whether to also delete the Lambda functions and
+     * layers used by this canary when the canary is deleted. 
+     */
+    override fun provisionedResourceCleanup(provisionedResourceCleanup: String) {
+      cdkBuilder.provisionedResourceCleanup(provisionedResourceCleanup)
+    }
+
+    /**
+     * To have the tags that you apply to this canary also be applied to the Lambda function that
+     * the canary uses, specify this property with the value `lambda-function` .
+     *
+     * If you do this, CloudWatch Synthetics will keep the tags of the canary and the Lambda
+     * function synchronized. Any future changes you make to the canary's tags will also be applied to
+     * the function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-resourcestoreplicatetags)
+     * @param resourcesToReplicateTags To have the tags that you apply to this canary also be
+     * applied to the Lambda function that the canary uses, specify this property with the value
+     * `lambda-function` . 
+     */
+    override fun resourcesToReplicateTags(resourcesToReplicateTags: List<String>) {
+      cdkBuilder.resourcesToReplicateTags(resourcesToReplicateTags)
+    }
+
+    /**
+     * To have the tags that you apply to this canary also be applied to the Lambda function that
+     * the canary uses, specify this property with the value `lambda-function` .
+     *
+     * If you do this, CloudWatch Synthetics will keep the tags of the canary and the Lambda
+     * function synchronized. Any future changes you make to the canary's tags will also be applied to
+     * the function.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-synthetics-canary.html#cfn-synthetics-canary-resourcestoreplicatetags)
+     * @param resourcesToReplicateTags To have the tags that you apply to this canary also be
+     * applied to the Lambda function that the canary uses, specify this property with the value
+     * `lambda-function` . 
+     */
+    override fun resourcesToReplicateTags(vararg resourcesToReplicateTags: String): Unit =
+        resourcesToReplicateTags(resourcesToReplicateTags.toList())
 
     /**
      * A structure that contains input information for a canary run.

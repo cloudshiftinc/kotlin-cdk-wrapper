@@ -15,7 +15,7 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * IBucket bucket = Bucket.fromBucketName(this, "existingBucket", "bucket-name");
+ * IBucket bucket = Bucket.fromBucketName(this, "existingBucket", "amzn-s3-demo-bucket");
  * // No policy statement will be added to the resource
  * AddToResourcePolicyResult result = bucket.addToResourcePolicy(
  * PolicyStatement.Builder.create()

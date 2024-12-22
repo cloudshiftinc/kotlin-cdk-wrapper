@@ -104,6 +104,15 @@ public interface LustreConfiguration {
   public fun deploymentType(): LustreDeploymentType
 
   /**
+   * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage
+   * devices.
+   *
+   * Default: - no drive cache
+   */
+  public fun driveCacheType(): DriveCacheType? =
+      unwrap(this).getDriveCacheType()?.let(DriveCacheType::wrap)
+
+  /**
    * The path in Amazon S3 where the root of your Amazon FSx file system is exported.
    *
    * The path must use the same
@@ -142,12 +151,18 @@ public interface LustreConfiguration {
   public fun importedFileChunkSizeMiB(): Number? = unwrap(this).getImportedFileChunkSizeMiB()
 
   /**
-   * Required for the PERSISTENT_1 deployment type, describes the amount of read and write
-   * throughput for each 1 tebibyte of storage, in MB/s/TiB.
+   * Provisions the amount of read and write throughput for each 1 tebibyte (TiB) of file system
+   * storage capacity, in MB/s/TiB.
    *
-   * Valid values are 50, 100, 200.
+   * Required with PERSISTENT_1 and PERSISTENT_2 deployment types.
    *
-   * Default: - no default, conditionally required for PERSISTENT_1 deployment type
+   * Valid values:
+   *
+   * * For PERSISTENT_1 SSD storage: 50, 100, 200 MB/s/TiB.
+   * * For PERSISTENT_1 HDD storage: 12, 40 MB/s/TiB.
+   * * For PERSISTENT_2 SSD storage: 125, 250, 500, 1000 MB/s/TiB.
+   *
+   * Default: - no default, conditionally required for PERSISTENT_1 and PERSISTENT_2 deployment type
    */
   public fun perUnitStorageThroughput(): Number? = unwrap(this).getPerUnitStorageThroughput()
 
@@ -230,6 +245,12 @@ public interface LustreConfiguration {
     public fun deploymentType(deploymentType: LustreDeploymentType)
 
     /**
+     * @param driveCacheType The type of drive cache used by PERSISTENT_1 file systems that are
+     * provisioned with HDD storage devices.
+     */
+    public fun driveCacheType(driveCacheType: DriveCacheType)
+
+    /**
      * @param exportPath The path in Amazon S3 where the root of your Amazon FSx file system is
      * exported.
      * The path must use the same
@@ -261,9 +282,15 @@ public interface LustreConfiguration {
     public fun importedFileChunkSizeMiB(importedFileChunkSizeMiB: Number)
 
     /**
-     * @param perUnitStorageThroughput Required for the PERSISTENT_1 deployment type, describes the
-     * amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB.
-     * Valid values are 50, 100, 200.
+     * @param perUnitStorageThroughput Provisions the amount of read and write throughput for each 1
+     * tebibyte (TiB) of file system storage capacity, in MB/s/TiB.
+     * Required with PERSISTENT_1 and PERSISTENT_2 deployment types.
+     *
+     * Valid values:
+     *
+     * * For PERSISTENT_1 SSD storage: 50, 100, 200 MB/s/TiB.
+     * * For PERSISTENT_1 HDD storage: 12, 40 MB/s/TiB.
+     * * For PERSISTENT_2 SSD storage: 125, 250, 500, 1000 MB/s/TiB.
      */
     public fun perUnitStorageThroughput(perUnitStorageThroughput: Number)
 
@@ -368,6 +395,14 @@ public interface LustreConfiguration {
     }
 
     /**
+     * @param driveCacheType The type of drive cache used by PERSISTENT_1 file systems that are
+     * provisioned with HDD storage devices.
+     */
+    override fun driveCacheType(driveCacheType: DriveCacheType) {
+      cdkBuilder.driveCacheType(driveCacheType.let(DriveCacheType.Companion::unwrap))
+    }
+
+    /**
      * @param exportPath The path in Amazon S3 where the root of your Amazon FSx file system is
      * exported.
      * The path must use the same
@@ -405,9 +440,15 @@ public interface LustreConfiguration {
     }
 
     /**
-     * @param perUnitStorageThroughput Required for the PERSISTENT_1 deployment type, describes the
-     * amount of read and write throughput for each 1 tebibyte of storage, in MB/s/TiB.
-     * Valid values are 50, 100, 200.
+     * @param perUnitStorageThroughput Provisions the amount of read and write throughput for each 1
+     * tebibyte (TiB) of file system storage capacity, in MB/s/TiB.
+     * Required with PERSISTENT_1 and PERSISTENT_2 deployment types.
+     *
+     * Valid values:
+     *
+     * * For PERSISTENT_1 SSD storage: 50, 100, 200 MB/s/TiB.
+     * * For PERSISTENT_1 HDD storage: 12, 40 MB/s/TiB.
+     * * For PERSISTENT_2 SSD storage: 125, 250, 500, 1000 MB/s/TiB.
      */
     override fun perUnitStorageThroughput(perUnitStorageThroughput: Number) {
       cdkBuilder.perUnitStorageThroughput(perUnitStorageThroughput)
@@ -512,6 +553,15 @@ public interface LustreConfiguration {
         unwrap(this).getDeploymentType().let(LustreDeploymentType::wrap)
 
     /**
+     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD
+     * storage devices.
+     *
+     * Default: - no drive cache
+     */
+    override fun driveCacheType(): DriveCacheType? =
+        unwrap(this).getDriveCacheType()?.let(DriveCacheType::wrap)
+
+    /**
      * The path in Amazon S3 where the root of your Amazon FSx file system is exported.
      *
      * The path must use the same
@@ -550,12 +600,19 @@ public interface LustreConfiguration {
     override fun importedFileChunkSizeMiB(): Number? = unwrap(this).getImportedFileChunkSizeMiB()
 
     /**
-     * Required for the PERSISTENT_1 deployment type, describes the amount of read and write
-     * throughput for each 1 tebibyte of storage, in MB/s/TiB.
+     * Provisions the amount of read and write throughput for each 1 tebibyte (TiB) of file system
+     * storage capacity, in MB/s/TiB.
      *
-     * Valid values are 50, 100, 200.
+     * Required with PERSISTENT_1 and PERSISTENT_2 deployment types.
      *
-     * Default: - no default, conditionally required for PERSISTENT_1 deployment type
+     * Valid values:
+     *
+     * * For PERSISTENT_1 SSD storage: 50, 100, 200 MB/s/TiB.
+     * * For PERSISTENT_1 HDD storage: 12, 40 MB/s/TiB.
+     * * For PERSISTENT_2 SSD storage: 125, 250, 500, 1000 MB/s/TiB.
+     *
+     * Default: - no default, conditionally required for PERSISTENT_1 and PERSISTENT_2 deployment
+     * type
      */
     override fun perUnitStorageThroughput(): Number? = unwrap(this).getPerUnitStorageThroughput()
 

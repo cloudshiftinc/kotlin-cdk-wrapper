@@ -407,20 +407,20 @@ public open class TableV2(
     public fun tableName(tableName: String)
 
     /**
-     * Tags to be applied to the table or replica table.
+     * Tags to be applied to the primary table (default replica table).
      *
      * Default: - no tags
      *
-     * @param tags Tags to be applied to the table or replica table. 
+     * @param tags Tags to be applied to the primary table (default replica table). 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * Tags to be applied to the table or replica table.
+     * Tags to be applied to the primary table (default replica table).
      *
      * Default: - no tags
      *
-     * @param tags Tags to be applied to the table or replica table. 
+     * @param tags Tags to be applied to the primary table (default replica table). 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -432,6 +432,26 @@ public open class TableV2(
      * @param timeToLiveAttribute The name of the TTL attribute. 
      */
     public fun timeToLiveAttribute(timeToLiveAttribute: String)
+
+    /**
+     * The warm throughput configuration for the table.
+     *
+     * Default: - no warm throughput is configured
+     *
+     * @param warmThroughput The warm throughput configuration for the table. 
+     */
+    public fun warmThroughput(warmThroughput: WarmThroughput)
+
+    /**
+     * The warm throughput configuration for the table.
+     *
+     * Default: - no warm throughput is configured
+     *
+     * @param warmThroughput The warm throughput configuration for the table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("98de27e6f6636a3964f9f9bac2584036aa443191e3134c3f7774da133c66eed5")
+    public fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -700,22 +720,22 @@ public open class TableV2(
     }
 
     /**
-     * Tags to be applied to the table or replica table.
+     * Tags to be applied to the primary table (default replica table).
      *
      * Default: - no tags
      *
-     * @param tags Tags to be applied to the table or replica table. 
+     * @param tags Tags to be applied to the primary table (default replica table). 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * Tags to be applied to the table or replica table.
+     * Tags to be applied to the primary table (default replica table).
      *
      * Default: - no tags
      *
-     * @param tags Tags to be applied to the table or replica table. 
+     * @param tags Tags to be applied to the primary table (default replica table). 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -729,6 +749,29 @@ public open class TableV2(
     override fun timeToLiveAttribute(timeToLiveAttribute: String) {
       cdkBuilder.timeToLiveAttribute(timeToLiveAttribute)
     }
+
+    /**
+     * The warm throughput configuration for the table.
+     *
+     * Default: - no warm throughput is configured
+     *
+     * @param warmThroughput The warm throughput configuration for the table. 
+     */
+    override fun warmThroughput(warmThroughput: WarmThroughput) {
+      cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughput.Companion::unwrap))
+    }
+
+    /**
+     * The warm throughput configuration for the table.
+     *
+     * Default: - no warm throughput is configured
+     *
+     * @param warmThroughput The warm throughput configuration for the table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("98de27e6f6636a3964f9f9bac2584036aa443191e3134c3f7774da133c66eed5")
+    override fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit): Unit =
+        warmThroughput(WarmThroughput(warmThroughput))
 
     public fun build(): software.amazon.awscdk.services.dynamodb.TableV2 = cdkBuilder.build()
   }

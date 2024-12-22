@@ -43,6 +43,8 @@ public interface CfnGroupProps {
    * this attribute. This value is specified at the time the group is created and stored as an
    * attribute of the group object in the identity store.
    *
+   * Prefix search supports a maximum of 1,000 characters for the string.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-displayname)
    */
   public fun displayName(): String
@@ -70,6 +72,8 @@ public interface CfnGroupProps {
      * symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in
      * this attribute. This value is specified at the time the group is created and stored as an
      * attribute of the group object in the identity store.
+     *
+     * Prefix search supports a maximum of 1,000 characters for the string.
      */
     public fun displayName(displayName: String)
 
@@ -96,6 +100,8 @@ public interface CfnGroupProps {
      * symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in
      * this attribute. This value is specified at the time the group is created and stored as an
      * attribute of the group object in the identity store.
+     *
+     * Prefix search supports a maximum of 1,000 characters for the string.
      */
     override fun displayName(displayName: String) {
       cdkBuilder.displayName(displayName)
@@ -130,6 +136,8 @@ public interface CfnGroupProps {
      * symbols, numbers, punctuation, tab, new line, carriage return, space, and nonbreaking space in
      * this attribute. This value is specified at the time the group is created and stored as an
      * attribute of the group object in the identity store.
+     *
+     * Prefix search supports a maximum of 1,000 characters for the string.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-identitystore-group.html#cfn-identitystore-group-displayname)
      */

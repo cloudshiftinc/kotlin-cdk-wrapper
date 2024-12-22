@@ -72,9 +72,9 @@ import kotlin.collections.List
  */
 public interface CfnCacheClusterProps {
   /**
-   * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want
-   * to opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
-   * versions.
+   * If you are running Valkey 7.2 or later, or Redis OSS engine version 6.0 or later, set this
+   * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This parameter
+   * is disabled for previous versions.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-autominorversionupgrade)
    */
@@ -164,13 +164,13 @@ public interface CfnCacheClusterProps {
    * , `cache.r3.8xlarge`
    *
    * For region availability, see [Supported Node Types by
-   * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
+   * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
    *
    * *Additional node type info*
    *
    * * All current generation instance types are created in Amazon VPC by default.
-   * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
-   * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+   * * Valkey and Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+   * * Valkey and Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
    * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
    * OSS version 2.8.22 and later.
    *
@@ -233,7 +233,7 @@ public interface CfnCacheClusterProps {
   /**
    * The name of the cache engine to be used for this cluster.
    *
-   * Valid values for this parameter are: `memcached` | `redis`
+   * Valid values for this parameter are: `memcached` | valkey | `redis`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-engine)
    */
@@ -245,7 +245,7 @@ public interface CfnCacheClusterProps {
    * To view the supported cache engine versions, use the DescribeCacheEngineVersions operation.
    *
    * *Important:* You can upgrade to a newer engine version (see [Selecting a Cache Engine and
-   * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)
+   * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SelectEngine.html#VersionManagement)
    * ), but you cannot downgrade to an earlier engine version. If you want to use an earlier engine
    * version, you must delete the existing cluster or replication group and create it anew with the
    * earlier engine version.
@@ -257,9 +257,9 @@ public interface CfnCacheClusterProps {
   /**
    * The network type you choose when modifying a cluster, either `ipv4` | `ipv6` .
    *
-   * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-   * version 1.6.6 on all instances built on the [Nitro system](https://docs.aws.amazon.com/ec2/nitro/)
-   * .
+   * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to 7.1
+   * and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
+   * system](https://docs.aws.amazon.com/ec2/nitro/) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-ipdiscovery)
    */
@@ -275,9 +275,9 @@ public interface CfnCacheClusterProps {
   /**
    * Must be either `ipv4` | `ipv6` | `dual_stack` .
    *
-   * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-   * version 1.6.6 on all instances built on the [Nitro system](https://docs.aws.amazon.com/ec2/nitro/)
-   * .
+   * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to 7.1
+   * and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
+   * system](https://docs.aws.amazon.com/ec2/nitro/) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-networktype)
    */
@@ -376,7 +376,7 @@ public interface CfnCacheClusterProps {
 
   /**
    * A single-element string list containing an Amazon Resource Name (ARN) that uniquely identifies
-   * a Redis OSS RDB snapshot file stored in Amazon S3.
+   * a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
    *
    * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in the
    * ARN cannot contain any commas.
@@ -392,7 +392,8 @@ public interface CfnCacheClusterProps {
   public fun snapshotArns(): List<String> = unwrap(this).getSnapshotArns() ?: emptyList()
 
   /**
-   * The name of a Redis OSS snapshot from which to restore data into the new node group (shard).
+   * The name of a Valkey or Redis OSS snapshot from which to restore data into the new node group
+   * (shard).
    *
    * The snapshot status changes to `restoring` while the new node group (shard) is being created.
    *
@@ -468,16 +469,16 @@ public interface CfnCacheClusterProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions.
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS engine
+     * version 6.0 or later, set this parameter to yes if you want to opt-in to the next minor version
+     * upgrade campaign. This parameter is disabled for previous versions.
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
     /**
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions.
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS engine
+     * version 6.0 or later, set this parameter to yes if you want to opt-in to the next minor version
+     * upgrade campaign. This parameter is disabled for previous versions.
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
@@ -562,13 +563,13 @@ public interface CfnCacheClusterProps {
      * `cache.r3.4xlarge` , `cache.r3.8xlarge`
      *
      * For region availability, see [Supported Node Types by
-     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
+     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
      *
      * *Additional node type info*
      *
      * * All current generation instance types are created in Amazon VPC by default.
-     * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
-     * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+     * * Valkey and Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+     * * Valkey and Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
      * OSS version 2.8.22 and later.
      */
@@ -622,7 +623,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param engine The name of the cache engine to be used for this cluster. 
-     * Valid values for this parameter are: `memcached` | `redis`
+     * Valid values for this parameter are: `memcached` | valkey | `redis`
      */
     public fun engine(engine: String)
 
@@ -631,7 +632,7 @@ public interface CfnCacheClusterProps {
      * To view the supported cache engine versions, use the DescribeCacheEngineVersions operation.
      *
      * *Important:* You can upgrade to a newer engine version (see [Selecting a Cache Engine and
-     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)
+     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SelectEngine.html#VersionManagement)
      * ), but you cannot downgrade to an earlier engine version. If you want to use an earlier engine
      * version, you must delete the existing cluster or replication group and create it anew with the
      * earlier engine version.
@@ -641,8 +642,8 @@ public interface CfnCacheClusterProps {
     /**
      * @param ipDiscovery The network type you choose when modifying a cluster, either `ipv4` |
      * `ipv6` .
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      */
     public fun ipDiscovery(ipDiscovery: String)
@@ -664,8 +665,8 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param networkType Must be either `ipv4` | `ipv6` | `dual_stack` .
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      */
     public fun networkType(networkType: String)
@@ -766,7 +767,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3.
+     * that uniquely identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
      *
@@ -780,7 +781,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3.
+     * that uniquely identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
      *
@@ -793,8 +794,8 @@ public interface CfnCacheClusterProps {
     public fun snapshotArns(vararg snapshotArns: String)
 
     /**
-     * @param snapshotName The name of a Redis OSS snapshot from which to restore data into the new
-     * node group (shard).
+     * @param snapshotName The name of a Valkey or Redis OSS snapshot from which to restore data
+     * into the new node group (shard).
      * The snapshot status changes to `restoring` while the new node group (shard) is being created.
      *
      *
@@ -869,18 +870,18 @@ public interface CfnCacheClusterProps {
         = software.amazon.awscdk.services.elasticache.CfnCacheClusterProps.builder()
 
     /**
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions.
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS engine
+     * version 6.0 or later, set this parameter to yes if you want to opt-in to the next minor version
+     * upgrade campaign. This parameter is disabled for previous versions.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
     /**
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions.
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS engine
+     * version 6.0 or later, set this parameter to yes if you want to opt-in to the next minor version
+     * upgrade campaign. This parameter is disabled for previous versions.
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
@@ -969,13 +970,13 @@ public interface CfnCacheClusterProps {
      * `cache.r3.4xlarge` , `cache.r3.8xlarge`
      *
      * For region availability, see [Supported Node Types by
-     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
+     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
      *
      * *Additional node type info*
      *
      * * All current generation instance types are created in Amazon VPC by default.
-     * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
-     * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+     * * Valkey and Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+     * * Valkey and Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
      * OSS version 2.8.22 and later.
      */
@@ -1040,7 +1041,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param engine The name of the cache engine to be used for this cluster. 
-     * Valid values for this parameter are: `memcached` | `redis`
+     * Valid values for this parameter are: `memcached` | valkey | `redis`
      */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)
@@ -1051,7 +1052,7 @@ public interface CfnCacheClusterProps {
      * To view the supported cache engine versions, use the DescribeCacheEngineVersions operation.
      *
      * *Important:* You can upgrade to a newer engine version (see [Selecting a Cache Engine and
-     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)
+     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SelectEngine.html#VersionManagement)
      * ), but you cannot downgrade to an earlier engine version. If you want to use an earlier engine
      * version, you must delete the existing cluster or replication group and create it anew with the
      * earlier engine version.
@@ -1063,8 +1064,8 @@ public interface CfnCacheClusterProps {
     /**
      * @param ipDiscovery The network type you choose when modifying a cluster, either `ipv4` |
      * `ipv6` .
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      */
     override fun ipDiscovery(ipDiscovery: String) {
@@ -1093,8 +1094,8 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param networkType Must be either `ipv4` | `ipv6` | `dual_stack` .
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      */
     override fun networkType(networkType: String) {
@@ -1210,7 +1211,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3.
+     * that uniquely identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
      *
@@ -1226,7 +1227,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3.
+     * that uniquely identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
      *
@@ -1240,8 +1241,8 @@ public interface CfnCacheClusterProps {
         snapshotArns(snapshotArns.toList())
 
     /**
-     * @param snapshotName The name of a Redis OSS snapshot from which to restore data into the new
-     * node group (shard).
+     * @param snapshotName The name of a Valkey or Redis OSS snapshot from which to restore data
+     * into the new node group (shard).
      * The snapshot status changes to `restoring` while the new node group (shard) is being created.
      *
      *
@@ -1334,9 +1335,9 @@ public interface CfnCacheClusterProps {
   ) : CdkObject(cdkObject),
       CfnCacheClusterProps {
     /**
-     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
-     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
-     * previous versions.
+     * If you are running Valkey 7.2 or later, or Redis OSS engine version 6.0 or later, set this
+     * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
+     * parameter is disabled for previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-autominorversionupgrade)
      */
@@ -1427,13 +1428,13 @@ public interface CfnCacheClusterProps {
      * `cache.r3.4xlarge` , `cache.r3.8xlarge`
      *
      * For region availability, see [Supported Node Types by
-     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
+     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
      *
      * *Additional node type info*
      *
      * * All current generation instance types are created in Amazon VPC by default.
-     * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
-     * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+     * * Valkey and Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+     * * Valkey and Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
      * OSS version 2.8.22 and later.
      *
@@ -1496,7 +1497,7 @@ public interface CfnCacheClusterProps {
     /**
      * The name of the cache engine to be used for this cluster.
      *
-     * Valid values for this parameter are: `memcached` | `redis`
+     * Valid values for this parameter are: `memcached` | valkey | `redis`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-engine)
      */
@@ -1508,7 +1509,7 @@ public interface CfnCacheClusterProps {
      * To view the supported cache engine versions, use the DescribeCacheEngineVersions operation.
      *
      * *Important:* You can upgrade to a newer engine version (see [Selecting a Cache Engine and
-     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)
+     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SelectEngine.html#VersionManagement)
      * ), but you cannot downgrade to an earlier engine version. If you want to use an earlier engine
      * version, you must delete the existing cluster or replication group and create it anew with the
      * earlier engine version.
@@ -1520,8 +1521,8 @@ public interface CfnCacheClusterProps {
     /**
      * The network type you choose when modifying a cluster, either `ipv4` | `ipv6` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-ipdiscovery)
@@ -1538,8 +1539,8 @@ public interface CfnCacheClusterProps {
     /**
      * Must be either `ipv4` | `ipv6` | `dual_stack` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-networktype)
@@ -1640,7 +1641,7 @@ public interface CfnCacheClusterProps {
 
     /**
      * A single-element string list containing an Amazon Resource Name (ARN) that uniquely
-     * identifies a Redis OSS RDB snapshot file stored in Amazon S3.
+     * identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
      *
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
@@ -1656,7 +1657,8 @@ public interface CfnCacheClusterProps {
     override fun snapshotArns(): List<String> = unwrap(this).getSnapshotArns() ?: emptyList()
 
     /**
-     * The name of a Redis OSS snapshot from which to restore data into the new node group (shard).
+     * The name of a Valkey or Redis OSS snapshot from which to restore data into the new node group
+     * (shard).
      *
      * The snapshot status changes to `restoring` while the new node group (shard) is being created.
      *

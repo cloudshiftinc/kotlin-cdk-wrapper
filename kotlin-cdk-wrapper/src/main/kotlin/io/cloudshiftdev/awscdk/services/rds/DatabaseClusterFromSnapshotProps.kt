@@ -40,6 +40,14 @@ import kotlin.jvm.JvmName
  */
 public interface DatabaseClusterFromSnapshotProps {
   /**
+   * Specifies whether minor engine upgrades are applied automatically to the DB cluster during the
+   * maintenance window.
+   *
+   * Default: true
+   */
+  public fun autoMinorVersionUpgrade(): Boolean? = unwrap(this).getAutoMinorVersionUpgrade()
+
+  /**
    * The number of seconds to set a cluster's target backtrack window to.
    *
    * This feature is only supported by the Aurora MySQL database engine and
@@ -97,6 +105,16 @@ public interface DatabaseClusterFromSnapshotProps {
    * Default: - A name is automatically generated.
    */
   public fun clusterIdentifier(): String? = unwrap(this).getClusterIdentifier()
+
+  /**
+   * Specifies the scalability mode of the Aurora DB cluster.
+   *
+   * Set LIMITLESS if you want to use a limitless database; otherwise, set it to STANDARD.
+   *
+   * Default: ClusterScailabilityType.STANDARD
+   */
+  public fun clusterScailabilityType(): ClusterScailabilityType? =
+      unwrap(this).getClusterScailabilityType()?.let(ClusterScailabilityType::wrap)
 
   /**
    * Whether to copy tags to the snapshot when a snapshot is created.
@@ -165,11 +183,47 @@ public interface DatabaseClusterFromSnapshotProps {
   public fun domainRole(): IRole? = unwrap(this).getDomainRole()?.let(IRole::wrap)
 
   /**
+   * Whether to enable enhanced monitoring at the cluster level.
+   *
+   * If set to true, `monitoringInterval` and `monitoringRole` are applied to not the instances, but
+   * the cluster.
+   * `monitoringInterval` is required to be set if `enableClusterLevelEnhancedMonitoring` is set to
+   * true.
+   *
+   * Default: - When the `monitoringInterval` is set, enhanced monitoring is enabled for each
+   * instance.
+   */
+  public fun enableClusterLevelEnhancedMonitoring(): Boolean? =
+      unwrap(this).getEnableClusterLevelEnhancedMonitoring()
+
+  /**
    * Whether to enable the Data API for the cluster.
    *
    * Default: - false
    */
   public fun enableDataApi(): Boolean? = unwrap(this).getEnableDataApi()
+
+  /**
+   * Whether read replicas can forward write operations to the writer DB instance in the DB cluster.
+   *
+   * This setting can only be enabled for Aurora MySQL 3.04 or higher, and for Aurora PostgreSQL
+   * 16.4
+   * or higher (for version 16), 15.8 or higher (for version 15), and 14.13 or higher (for version
+   * 14).
+   *
+   * Default: false
+   *
+   * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-postgresql-write-forwarding.html)
+   */
+  public fun enableLocalWriteForwarding(): Boolean? = unwrap(this).getEnableLocalWriteForwarding()
+
+  /**
+   * Whether to enable Performance Insights for the DB cluster.
+   *
+   * Default: - false, unless `performanceInsightRetention` or `performanceInsightEncryptionKey` is
+   * set.
+   */
+  public fun enablePerformanceInsights(): Boolean? = unwrap(this).getEnablePerformanceInsights()
 
   /**
    * What kind of database to start.
@@ -224,16 +278,21 @@ public interface DatabaseClusterFromSnapshotProps {
   public fun instances(): Number? = unwrap(this).getInstances()
 
   /**
-   * The interval, in seconds, between points when Amazon RDS collects enhanced monitoring metrics
-   * for the DB instances.
+   * The interval between points when Amazon RDS collects enhanced monitoring metrics.
    *
-   * Default: no enhanced monitoring
+   * If you enable `enableClusterLevelEnhancedMonitoring`, this property is applied to the cluster,
+   * otherwise it is applied to the instances.
+   *
+   * Default: - no enhanced monitoring
    */
   public fun monitoringInterval(): Duration? =
       unwrap(this).getMonitoringInterval()?.let(Duration::wrap)
 
   /**
-   * Role that will be used to manage DB instances monitoring.
+   * Role that will be used to manage DB monitoring.
+   *
+   * If you enable `enableClusterLevelEnhancedMonitoring`, this property is applied to the cluster,
+   * otherwise it is applied to the instances.
    *
    * Default: - A role is automatically created for you
    */
@@ -263,6 +322,22 @@ public interface DatabaseClusterFromSnapshotProps {
    * Default: - None
    */
   public fun parameters(): Map<String, String> = unwrap(this).getParameters() ?: emptyMap()
+
+  /**
+   * The AWS KMS key for encryption of Performance Insights data.
+   *
+   * Default: - default master key
+   */
+  public fun performanceInsightEncryptionKey(): IKey? =
+      unwrap(this).getPerformanceInsightEncryptionKey()?.let(IKey::wrap)
+
+  /**
+   * The amount of time, in days, to retain Performance Insights data.
+   *
+   * Default: 7
+   */
+  public fun performanceInsightRetention(): PerformanceInsightRetention? =
+      unwrap(this).getPerformanceInsightRetention()?.let(PerformanceInsightRetention::wrap)
 
   /**
    * What port to listen on.
@@ -367,7 +442,7 @@ public interface DatabaseClusterFromSnapshotProps {
   /**
    * Security group.
    *
-   * Default: a new security group is created.
+   * Default: - a new security group is created.
    */
   public fun securityGroups(): List<ISecurityGroup> =
       unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
@@ -377,7 +452,7 @@ public interface DatabaseClusterFromSnapshotProps {
    * cluster.
    *
    * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on.
-   * The largest value that you can use is 128 (256GB).
+   * The largest value that you can use is 256.
    *
    * The maximum capacity must be higher than 0.5 ACUs.
    *
@@ -392,11 +467,16 @@ public interface DatabaseClusterFromSnapshotProps {
    * cluster.
    *
    * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on.
-   * The smallest value that you can use is 0.5.
+   * The smallest value that you can use is 0.
+   *
+   * For Aurora versions that support the Aurora Serverless v2 auto-pause feature, the smallest
+   * value that you can use is 0.
+   * For versions that don't support Aurora Serverless v2 auto-pause, the smallest value that you
+   * can use is 0.5.
    *
    * Default: 0.5
    *
-   * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
+   * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.min_capacity_considerations)
    */
   public fun serverlessV2MinCapacity(): Number? = unwrap(this).getServerlessV2MinCapacity()
 
@@ -468,7 +548,7 @@ public interface DatabaseClusterFromSnapshotProps {
   /**
    * The instance to use for the cluster writer.
    *
-   * Default: required if instanceProps is not provided
+   * Default: - required if instanceProps is not provided
    */
   public fun writer(): IClusterInstance? = unwrap(this).getWriter()?.let(IClusterInstance::wrap)
 
@@ -477,6 +557,12 @@ public interface DatabaseClusterFromSnapshotProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param autoMinorVersionUpgrade Specifies whether minor engine upgrades are applied
+     * automatically to the DB cluster during the maintenance window.
+     */
+    public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
+
     /**
      * @param backtrackWindow The number of seconds to set a cluster's target backtrack window to.
      * This feature is only supported by the Aurora MySQL database engine and
@@ -528,6 +614,12 @@ public interface DatabaseClusterFromSnapshotProps {
     public fun clusterIdentifier(clusterIdentifier: String)
 
     /**
+     * @param clusterScailabilityType Specifies the scalability mode of the Aurora DB cluster.
+     * Set LIMITLESS if you want to use a limitless database; otherwise, set it to STANDARD.
+     */
+    public fun clusterScailabilityType(clusterScailabilityType: ClusterScailabilityType)
+
+    /**
      * @param copyTagsToSnapshot Whether to copy tags to the snapshot when a snapshot is created.
      */
     public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
@@ -572,9 +664,34 @@ public interface DatabaseClusterFromSnapshotProps {
     public fun domainRole(domainRole: IRole)
 
     /**
+     * @param enableClusterLevelEnhancedMonitoring Whether to enable enhanced monitoring at the
+     * cluster level.
+     * If set to true, `monitoringInterval` and `monitoringRole` are applied to not the instances,
+     * but the cluster.
+     * `monitoringInterval` is required to be set if `enableClusterLevelEnhancedMonitoring` is set
+     * to true.
+     */
+    public fun enableClusterLevelEnhancedMonitoring(enableClusterLevelEnhancedMonitoring: Boolean)
+
+    /**
      * @param enableDataApi Whether to enable the Data API for the cluster.
      */
     public fun enableDataApi(enableDataApi: Boolean)
+
+    /**
+     * @param enableLocalWriteForwarding Whether read replicas can forward write operations to the
+     * writer DB instance in the DB cluster.
+     * This setting can only be enabled for Aurora MySQL 3.04 or higher, and for Aurora PostgreSQL
+     * 16.4
+     * or higher (for version 16), 15.8 or higher (for version 15), and 14.13 or higher (for version
+     * 14).
+     */
+    public fun enableLocalWriteForwarding(enableLocalWriteForwarding: Boolean)
+
+    /**
+     * @param enablePerformanceInsights Whether to enable Performance Insights for the DB cluster.
+     */
+    public fun enablePerformanceInsights(enablePerformanceInsights: Boolean)
 
     /**
      * @param engine What kind of database to start. 
@@ -623,13 +740,19 @@ public interface DatabaseClusterFromSnapshotProps {
     public fun instances(instances: Number)
 
     /**
-     * @param monitoringInterval The interval, in seconds, between points when Amazon RDS collects
-     * enhanced monitoring metrics for the DB instances.
+     * @param monitoringInterval The interval between points when Amazon RDS collects enhanced
+     * monitoring metrics.
+     * If you enable `enableClusterLevelEnhancedMonitoring`, this property is applied to the
+     * cluster,
+     * otherwise it is applied to the instances.
      */
     public fun monitoringInterval(monitoringInterval: Duration)
 
     /**
-     * @param monitoringRole Role that will be used to manage DB instances monitoring.
+     * @param monitoringRole Role that will be used to manage DB monitoring.
+     * If you enable `enableClusterLevelEnhancedMonitoring`, this property is applied to the
+     * cluster,
+     * otherwise it is applied to the instances.
      */
     public fun monitoringRole(monitoringRole: IRole)
 
@@ -649,6 +772,18 @@ public interface DatabaseClusterFromSnapshotProps {
      * You need to use a versioned engine to auto-generate a DBClusterParameterGroup.
      */
     public fun parameters(parameters: Map<String, String>)
+
+    /**
+     * @param performanceInsightEncryptionKey The AWS KMS key for encryption of Performance Insights
+     * data.
+     */
+    public fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey)
+
+    /**
+     * @param performanceInsightRetention The amount of time, in days, to retain Performance
+     * Insights data.
+     */
+    public fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention)
 
     /**
      * @param port What port to listen on.
@@ -750,7 +885,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * @param serverlessV2MaxCapacity The maximum number of Aurora capacity units (ACUs) for a DB
      * instance in an Aurora Serverless v2 cluster.
      * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on.
-     * The largest value that you can use is 128 (256GB).
+     * The largest value that you can use is 256.
      *
      * The maximum capacity must be higher than 0.5 ACUs.
      */
@@ -760,7 +895,12 @@ public interface DatabaseClusterFromSnapshotProps {
      * @param serverlessV2MinCapacity The minimum number of Aurora capacity units (ACUs) for a DB
      * instance in an Aurora Serverless v2 cluster.
      * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on.
-     * The smallest value that you can use is 0.5.
+     * The smallest value that you can use is 0.
+     *
+     * For Aurora versions that support the Aurora Serverless v2 auto-pause feature, the smallest
+     * value that you can use is 0.
+     * For versions that don't support Aurora Serverless v2 auto-pause, the smallest value that you
+     * can use is 0.5.
      */
     public fun serverlessV2MinCapacity(serverlessV2MinCapacity: Number)
 
@@ -831,6 +971,14 @@ public interface DatabaseClusterFromSnapshotProps {
         software.amazon.awscdk.services.rds.DatabaseClusterFromSnapshotProps.builder()
 
     /**
+     * @param autoMinorVersionUpgrade Specifies whether minor engine upgrades are applied
+     * automatically to the DB cluster during the maintenance window.
+     */
+    override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
+      cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
+    }
+
+    /**
      * @param backtrackWindow The number of seconds to set a cluster's target backtrack window to.
      * This feature is only supported by the Aurora MySQL database engine and
      * cannot be enabled on existing clusters.
@@ -894,6 +1042,14 @@ public interface DatabaseClusterFromSnapshotProps {
     }
 
     /**
+     * @param clusterScailabilityType Specifies the scalability mode of the Aurora DB cluster.
+     * Set LIMITLESS if you want to use a limitless database; otherwise, set it to STANDARD.
+     */
+    override fun clusterScailabilityType(clusterScailabilityType: ClusterScailabilityType) {
+      cdkBuilder.clusterScailabilityType(clusterScailabilityType.let(ClusterScailabilityType.Companion::unwrap))
+    }
+
+    /**
      * @param copyTagsToSnapshot Whether to copy tags to the snapshot when a snapshot is created.
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
@@ -950,10 +1106,42 @@ public interface DatabaseClusterFromSnapshotProps {
     }
 
     /**
+     * @param enableClusterLevelEnhancedMonitoring Whether to enable enhanced monitoring at the
+     * cluster level.
+     * If set to true, `monitoringInterval` and `monitoringRole` are applied to not the instances,
+     * but the cluster.
+     * `monitoringInterval` is required to be set if `enableClusterLevelEnhancedMonitoring` is set
+     * to true.
+     */
+    override
+        fun enableClusterLevelEnhancedMonitoring(enableClusterLevelEnhancedMonitoring: Boolean) {
+      cdkBuilder.enableClusterLevelEnhancedMonitoring(enableClusterLevelEnhancedMonitoring)
+    }
+
+    /**
      * @param enableDataApi Whether to enable the Data API for the cluster.
      */
     override fun enableDataApi(enableDataApi: Boolean) {
       cdkBuilder.enableDataApi(enableDataApi)
+    }
+
+    /**
+     * @param enableLocalWriteForwarding Whether read replicas can forward write operations to the
+     * writer DB instance in the DB cluster.
+     * This setting can only be enabled for Aurora MySQL 3.04 or higher, and for Aurora PostgreSQL
+     * 16.4
+     * or higher (for version 16), 15.8 or higher (for version 15), and 14.13 or higher (for version
+     * 14).
+     */
+    override fun enableLocalWriteForwarding(enableLocalWriteForwarding: Boolean) {
+      cdkBuilder.enableLocalWriteForwarding(enableLocalWriteForwarding)
+    }
+
+    /**
+     * @param enablePerformanceInsights Whether to enable Performance Insights for the DB cluster.
+     */
+    override fun enablePerformanceInsights(enablePerformanceInsights: Boolean) {
+      cdkBuilder.enablePerformanceInsights(enablePerformanceInsights)
     }
 
     /**
@@ -1016,15 +1204,21 @@ public interface DatabaseClusterFromSnapshotProps {
     }
 
     /**
-     * @param monitoringInterval The interval, in seconds, between points when Amazon RDS collects
-     * enhanced monitoring metrics for the DB instances.
+     * @param monitoringInterval The interval between points when Amazon RDS collects enhanced
+     * monitoring metrics.
+     * If you enable `enableClusterLevelEnhancedMonitoring`, this property is applied to the
+     * cluster,
+     * otherwise it is applied to the instances.
      */
     override fun monitoringInterval(monitoringInterval: Duration) {
       cdkBuilder.monitoringInterval(monitoringInterval.let(Duration.Companion::unwrap))
     }
 
     /**
-     * @param monitoringRole Role that will be used to manage DB instances monitoring.
+     * @param monitoringRole Role that will be used to manage DB monitoring.
+     * If you enable `enableClusterLevelEnhancedMonitoring`, this property is applied to the
+     * cluster,
+     * otherwise it is applied to the instances.
      */
     override fun monitoringRole(monitoringRole: IRole) {
       cdkBuilder.monitoringRole(monitoringRole.let(IRole.Companion::unwrap))
@@ -1051,6 +1245,23 @@ public interface DatabaseClusterFromSnapshotProps {
      */
     override fun parameters(parameters: Map<String, String>) {
       cdkBuilder.parameters(parameters)
+    }
+
+    /**
+     * @param performanceInsightEncryptionKey The AWS KMS key for encryption of Performance Insights
+     * data.
+     */
+    override fun performanceInsightEncryptionKey(performanceInsightEncryptionKey: IKey) {
+      cdkBuilder.performanceInsightEncryptionKey(performanceInsightEncryptionKey.let(IKey.Companion::unwrap))
+    }
+
+    /**
+     * @param performanceInsightRetention The amount of time, in days, to retain Performance
+     * Insights data.
+     */
+    override
+        fun performanceInsightRetention(performanceInsightRetention: PerformanceInsightRetention) {
+      cdkBuilder.performanceInsightRetention(performanceInsightRetention.let(PerformanceInsightRetention.Companion::unwrap))
     }
 
     /**
@@ -1174,7 +1385,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * @param serverlessV2MaxCapacity The maximum number of Aurora capacity units (ACUs) for a DB
      * instance in an Aurora Serverless v2 cluster.
      * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on.
-     * The largest value that you can use is 128 (256GB).
+     * The largest value that you can use is 256.
      *
      * The maximum capacity must be higher than 0.5 ACUs.
      */
@@ -1186,7 +1397,12 @@ public interface DatabaseClusterFromSnapshotProps {
      * @param serverlessV2MinCapacity The minimum number of Aurora capacity units (ACUs) for a DB
      * instance in an Aurora Serverless v2 cluster.
      * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on.
-     * The smallest value that you can use is 0.5.
+     * The smallest value that you can use is 0.
+     *
+     * For Aurora versions that support the Aurora Serverless v2 auto-pause feature, the smallest
+     * value that you can use is 0.
+     * For versions that don't support Aurora Serverless v2 auto-pause, the smallest value that you
+     * can use is 0.5.
      */
     override fun serverlessV2MinCapacity(serverlessV2MinCapacity: Number) {
       cdkBuilder.serverlessV2MinCapacity(serverlessV2MinCapacity)
@@ -1280,6 +1496,14 @@ public interface DatabaseClusterFromSnapshotProps {
   ) : CdkObject(cdkObject),
       DatabaseClusterFromSnapshotProps {
     /**
+     * Specifies whether minor engine upgrades are applied automatically to the DB cluster during
+     * the maintenance window.
+     *
+     * Default: true
+     */
+    override fun autoMinorVersionUpgrade(): Boolean? = unwrap(this).getAutoMinorVersionUpgrade()
+
+    /**
      * The number of seconds to set a cluster's target backtrack window to.
      *
      * This feature is only supported by the Aurora MySQL database engine and
@@ -1338,6 +1562,16 @@ public interface DatabaseClusterFromSnapshotProps {
      * Default: - A name is automatically generated.
      */
     override fun clusterIdentifier(): String? = unwrap(this).getClusterIdentifier()
+
+    /**
+     * Specifies the scalability mode of the Aurora DB cluster.
+     *
+     * Set LIMITLESS if you want to use a limitless database; otherwise, set it to STANDARD.
+     *
+     * Default: ClusterScailabilityType.STANDARD
+     */
+    override fun clusterScailabilityType(): ClusterScailabilityType? =
+        unwrap(this).getClusterScailabilityType()?.let(ClusterScailabilityType::wrap)
 
     /**
      * Whether to copy tags to the snapshot when a snapshot is created.
@@ -1406,11 +1640,49 @@ public interface DatabaseClusterFromSnapshotProps {
     override fun domainRole(): IRole? = unwrap(this).getDomainRole()?.let(IRole::wrap)
 
     /**
+     * Whether to enable enhanced monitoring at the cluster level.
+     *
+     * If set to true, `monitoringInterval` and `monitoringRole` are applied to not the instances,
+     * but the cluster.
+     * `monitoringInterval` is required to be set if `enableClusterLevelEnhancedMonitoring` is set
+     * to true.
+     *
+     * Default: - When the `monitoringInterval` is set, enhanced monitoring is enabled for each
+     * instance.
+     */
+    override fun enableClusterLevelEnhancedMonitoring(): Boolean? =
+        unwrap(this).getEnableClusterLevelEnhancedMonitoring()
+
+    /**
      * Whether to enable the Data API for the cluster.
      *
      * Default: - false
      */
     override fun enableDataApi(): Boolean? = unwrap(this).getEnableDataApi()
+
+    /**
+     * Whether read replicas can forward write operations to the writer DB instance in the DB
+     * cluster.
+     *
+     * This setting can only be enabled for Aurora MySQL 3.04 or higher, and for Aurora PostgreSQL
+     * 16.4
+     * or higher (for version 16), 15.8 or higher (for version 15), and 14.13 or higher (for version
+     * 14).
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-postgresql-write-forwarding.html)
+     */
+    override fun enableLocalWriteForwarding(): Boolean? =
+        unwrap(this).getEnableLocalWriteForwarding()
+
+    /**
+     * Whether to enable Performance Insights for the DB cluster.
+     *
+     * Default: - false, unless `performanceInsightRetention` or `performanceInsightEncryptionKey`
+     * is set.
+     */
+    override fun enablePerformanceInsights(): Boolean? = unwrap(this).getEnablePerformanceInsights()
 
     /**
      * What kind of database to start.
@@ -1465,16 +1737,23 @@ public interface DatabaseClusterFromSnapshotProps {
     override fun instances(): Number? = unwrap(this).getInstances()
 
     /**
-     * The interval, in seconds, between points when Amazon RDS collects enhanced monitoring metrics
-     * for the DB instances.
+     * The interval between points when Amazon RDS collects enhanced monitoring metrics.
      *
-     * Default: no enhanced monitoring
+     * If you enable `enableClusterLevelEnhancedMonitoring`, this property is applied to the
+     * cluster,
+     * otherwise it is applied to the instances.
+     *
+     * Default: - no enhanced monitoring
      */
     override fun monitoringInterval(): Duration? =
         unwrap(this).getMonitoringInterval()?.let(Duration::wrap)
 
     /**
-     * Role that will be used to manage DB instances monitoring.
+     * Role that will be used to manage DB monitoring.
+     *
+     * If you enable `enableClusterLevelEnhancedMonitoring`, this property is applied to the
+     * cluster,
+     * otherwise it is applied to the instances.
      *
      * Default: - A role is automatically created for you
      */
@@ -1504,6 +1783,22 @@ public interface DatabaseClusterFromSnapshotProps {
      * Default: - None
      */
     override fun parameters(): Map<String, String> = unwrap(this).getParameters() ?: emptyMap()
+
+    /**
+     * The AWS KMS key for encryption of Performance Insights data.
+     *
+     * Default: - default master key
+     */
+    override fun performanceInsightEncryptionKey(): IKey? =
+        unwrap(this).getPerformanceInsightEncryptionKey()?.let(IKey::wrap)
+
+    /**
+     * The amount of time, in days, to retain Performance Insights data.
+     *
+     * Default: 7
+     */
+    override fun performanceInsightRetention(): PerformanceInsightRetention? =
+        unwrap(this).getPerformanceInsightRetention()?.let(PerformanceInsightRetention::wrap)
 
     /**
      * What port to listen on.
@@ -1609,7 +1904,7 @@ public interface DatabaseClusterFromSnapshotProps {
     /**
      * Security group.
      *
-     * Default: a new security group is created.
+     * Default: - a new security group is created.
      */
     override fun securityGroups(): List<ISecurityGroup> =
         unwrap(this).getSecurityGroups()?.map(ISecurityGroup::wrap) ?: emptyList()
@@ -1619,7 +1914,7 @@ public interface DatabaseClusterFromSnapshotProps {
      * v2 cluster.
      *
      * You can specify ACU values in half-step increments, such as 40, 40.5, 41, and so on.
-     * The largest value that you can use is 128 (256GB).
+     * The largest value that you can use is 256.
      *
      * The maximum capacity must be higher than 0.5 ACUs.
      *
@@ -1634,11 +1929,16 @@ public interface DatabaseClusterFromSnapshotProps {
      * v2 cluster.
      *
      * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on.
-     * The smallest value that you can use is 0.5.
+     * The smallest value that you can use is 0.
+     *
+     * For Aurora versions that support the Aurora Serverless v2 auto-pause feature, the smallest
+     * value that you can use is 0.
+     * For versions that don't support Aurora Serverless v2 auto-pause, the smallest value that you
+     * can use is 0.5.
      *
      * Default: 0.5
      *
-     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.max_capacity_considerations)
+     * [Documentation](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/aurora-serverless-v2.setting-capacity.html#aurora-serverless-v2.min_capacity_considerations)
      */
     override fun serverlessV2MinCapacity(): Number? = unwrap(this).getServerlessV2MinCapacity()
 
@@ -1713,7 +2013,7 @@ public interface DatabaseClusterFromSnapshotProps {
     /**
      * The instance to use for the cluster writer.
      *
-     * Default: required if instanceProps is not provided
+     * Default: - required if instanceProps is not provided
      */
     override fun writer(): IClusterInstance? = unwrap(this).getWriter()?.let(IClusterInstance::wrap)
   }

@@ -81,7 +81,7 @@ public interface CfnSceneProps {
   public fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
-   * The ID of the scene.
+   * The ID of the workspace.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-workspaceid)
    */
@@ -134,7 +134,7 @@ public interface CfnSceneProps {
     public fun tags(tags: Map<String, String>)
 
     /**
-     * @param workspaceId The ID of the scene. 
+     * @param workspaceId The ID of the workspace. 
      */
     public fun workspaceId(workspaceId: String)
   }
@@ -200,7 +200,7 @@ public interface CfnSceneProps {
     }
 
     /**
-     * @param workspaceId The ID of the scene. 
+     * @param workspaceId The ID of the workspace. 
      */
     override fun workspaceId(workspaceId: String) {
       cdkBuilder.workspaceId(workspaceId)
@@ -257,7 +257,7 @@ public interface CfnSceneProps {
     override fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
     /**
-     * The ID of the scene.
+     * The ID of the workspace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-workspaceid)
      */

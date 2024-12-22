@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -51,6 +52,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnConfigurationSet cfnConfigurationSet = CfnConfigurationSet.Builder.create(this,
  * "MyCfnConfigurationSet")
  * .deliveryOptions(DeliveryOptionsProperty.builder()
+ * .maxDeliverySeconds(123)
  * .sendingPoolName("sendingPoolName")
  * .tlsPolicy("tlsPolicy")
  * .build())
@@ -893,6 +895,7 @@ public open class CfnConfigurationSet(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.ses.*;
    * DeliveryOptionsProperty deliveryOptionsProperty = DeliveryOptionsProperty.builder()
+   * .maxDeliverySeconds(123)
    * .sendingPoolName("sendingPoolName")
    * .tlsPolicy("tlsPolicy")
    * .build();
@@ -901,6 +904,17 @@ public open class CfnConfigurationSet(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-deliveryoptions.html)
    */
   public interface DeliveryOptionsProperty {
+    /**
+     * The maximum amount of time, in seconds, that Amazon SES API v2 will attempt delivery of
+     * email.
+     *
+     * If specified, the value must greater than or equal to 300 seconds (5 minutes) and less than
+     * or equal to 50400 seconds (840 minutes).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-deliveryoptions.html#cfn-ses-configurationset-deliveryoptions-maxdeliveryseconds)
+     */
+    public fun maxDeliverySeconds(): Number? = unwrap(this).getMaxDeliverySeconds()
+
     /**
      * The name of the dedicated IP pool to associate with the configuration set.
      *
@@ -928,6 +942,14 @@ public open class CfnConfigurationSet(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param maxDeliverySeconds The maximum amount of time, in seconds, that Amazon SES API v2
+       * will attempt delivery of email.
+       * If specified, the value must greater than or equal to 300 seconds (5 minutes) and less than
+       * or equal to 50400 seconds (840 minutes).
+       */
+      public fun maxDeliverySeconds(maxDeliverySeconds: Number)
+
+      /**
        * @param sendingPoolName The name of the dedicated IP pool to associate with the
        * configuration set.
        */
@@ -949,6 +971,16 @@ public open class CfnConfigurationSet(
       private val cdkBuilder:
           software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty.Builder =
           software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty.builder()
+
+      /**
+       * @param maxDeliverySeconds The maximum amount of time, in seconds, that Amazon SES API v2
+       * will attempt delivery of email.
+       * If specified, the value must greater than or equal to 300 seconds (5 minutes) and less than
+       * or equal to 50400 seconds (840 minutes).
+       */
+      override fun maxDeliverySeconds(maxDeliverySeconds: Number) {
+        cdkBuilder.maxDeliverySeconds(maxDeliverySeconds)
+      }
 
       /**
        * @param sendingPoolName The name of the dedicated IP pool to associate with the
@@ -980,6 +1012,17 @@ public open class CfnConfigurationSet(
       cdkObject: software.amazon.awscdk.services.ses.CfnConfigurationSet.DeliveryOptionsProperty,
     ) : CdkObject(cdkObject),
         DeliveryOptionsProperty {
+      /**
+       * The maximum amount of time, in seconds, that Amazon SES API v2 will attempt delivery of
+       * email.
+       *
+       * If specified, the value must greater than or equal to 300 seconds (5 minutes) and less than
+       * or equal to 50400 seconds (840 minutes).
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-configurationset-deliveryoptions.html#cfn-ses-configurationset-deliveryoptions-maxdeliveryseconds)
+       */
+      override fun maxDeliverySeconds(): Number? = unwrap(this).getMaxDeliverySeconds()
+
       /**
        * The name of the dedicated IP pool to associate with the configuration set.
        *

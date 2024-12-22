@@ -117,6 +117,11 @@ public open class CfnEndpoint(
   )
 
   /**
+   * The Amazon Resource Name (ARN) of the endpoint.
+   */
+  public open fun attrEndpointArn(): String = unwrap(this).getAttrEndpointArn()
+
+  /**
    * The name of the endpoint, such as `MyEndpoint` .
    */
   public open fun attrEndpointName(): String = unwrap(this).getAttrEndpointName()

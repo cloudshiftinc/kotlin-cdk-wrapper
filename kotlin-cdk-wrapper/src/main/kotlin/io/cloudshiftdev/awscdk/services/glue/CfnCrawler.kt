@@ -130,11 +130,6 @@ public open class CfnCrawler(
   )
 
   /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * A list of UTF-8 strings that specify the names of custom classifiers that are associated with
    * the crawler.
    */

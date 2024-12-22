@@ -40,6 +40,7 @@ import kotlin.jvm.JvmName
  * .name("name")
  * .organization("organization")
  * .password("password")
+ * .port(123)
  * .publiclyAccessible(false)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -148,6 +149,13 @@ public interface CfnInfluxDBInstanceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-password)
    */
   public fun password(): String? = unwrap(this).getPassword()
+
+  /**
+   * The port number on which InfluxDB accepts connections.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-port)
+   */
+  public fun port(): Number? = unwrap(this).getPort()
 
   /**
    * Configures the DB instance with a public IP to facilitate access.
@@ -289,6 +297,11 @@ public interface CfnInfluxDBInstanceProps {
      * in a Secret created in Amazon SecretManager in your account.
      */
     public fun password(password: String)
+
+    /**
+     * @param port The port number on which InfluxDB accepts connections.
+     */
+    public fun port(port: Number)
 
     /**
      * @param publiclyAccessible Configures the DB instance with a public IP to facilitate access.
@@ -466,6 +479,13 @@ public interface CfnInfluxDBInstanceProps {
     }
 
     /**
+     * @param port The port number on which InfluxDB accepts connections.
+     */
+    override fun port(port: Number) {
+      cdkBuilder.port(port)
+    }
+
+    /**
      * @param publiclyAccessible Configures the DB instance with a public IP to facilitate access.
      */
     override fun publiclyAccessible(publiclyAccessible: Boolean) {
@@ -637,6 +657,13 @@ public interface CfnInfluxDBInstanceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-password)
      */
     override fun password(): String? = unwrap(this).getPassword()
+
+    /**
+     * The port number on which InfluxDB accepts connections.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-port)
+     */
+    override fun port(): Number? = unwrap(this).getPort()
 
     /**
      * Configures the DB instance with a public IP to facilitate access.

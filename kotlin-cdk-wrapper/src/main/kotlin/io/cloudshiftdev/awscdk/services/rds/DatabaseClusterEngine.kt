@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Deprecated
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -49,9 +50,11 @@ public open class DatabaseClusterEngine(
     public val AURORA_POSTGRESQL: IClusterEngine =
         IClusterEngine.wrap(software.amazon.awscdk.services.rds.DatabaseClusterEngine.AURORA_POSTGRESQL)
 
+    @Deprecated(message = "deprecated in CDK")
     public fun aurora(props: AuroraClusterEngineProps): IClusterEngine =
         software.amazon.awscdk.services.rds.DatabaseClusterEngine.aurora(props.let(AuroraClusterEngineProps.Companion::unwrap)).let(IClusterEngine::wrap)
 
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("a1f02e1d4bd833b2ddacfd2f40a683d8395cb34c6d2e7af327a81b567a376132")
     public fun aurora(props: AuroraClusterEngineProps.Builder.() -> Unit): IClusterEngine =

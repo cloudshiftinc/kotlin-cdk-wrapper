@@ -3,12 +3,15 @@
 package io.cloudshiftdev.awscdk.services.vpclattice
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnServiceNetwork`.
@@ -22,6 +25,9 @@ import kotlin.collections.List
  * CfnServiceNetworkProps cfnServiceNetworkProps = CfnServiceNetworkProps.builder()
  * .authType("authType")
  * .name("name")
+ * .sharingConfig(SharingConfigProperty.builder()
+ * .enabled(false)
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -59,6 +65,11 @@ public interface CfnServiceNetworkProps {
   public fun name(): String? = unwrap(this).getName()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
+   */
+  public fun sharingConfig(): Any? = unwrap(this).getSharingConfig()
+
+  /**
    * The tags for the service network.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-tags)
@@ -87,6 +98,24 @@ public interface CfnServiceNetworkProps {
      * and later want to replace the resource, you must specify a new name.
      */
     public fun name(name: String)
+
+    /**
+     * @param sharingConfig the value to be set.
+     */
+    public fun sharingConfig(sharingConfig: IResolvable)
+
+    /**
+     * @param sharingConfig the value to be set.
+     */
+    public fun sharingConfig(sharingConfig: CfnServiceNetwork.SharingConfigProperty)
+
+    /**
+     * @param sharingConfig the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d994dbc6c74e05db188f67e20b9698ee2959f26500d57649d04cdef547b25cdd")
+    public
+        fun sharingConfig(sharingConfig: CfnServiceNetwork.SharingConfigProperty.Builder.() -> Unit)
 
     /**
      * @param tags The tags for the service network.
@@ -125,6 +154,29 @@ public interface CfnServiceNetworkProps {
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * @param sharingConfig the value to be set.
+     */
+    override fun sharingConfig(sharingConfig: IResolvable) {
+      cdkBuilder.sharingConfig(sharingConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param sharingConfig the value to be set.
+     */
+    override fun sharingConfig(sharingConfig: CfnServiceNetwork.SharingConfigProperty) {
+      cdkBuilder.sharingConfig(sharingConfig.let(CfnServiceNetwork.SharingConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param sharingConfig the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d994dbc6c74e05db188f67e20b9698ee2959f26500d57649d04cdef547b25cdd")
+    override
+        fun sharingConfig(sharingConfig: CfnServiceNetwork.SharingConfigProperty.Builder.() -> Unit):
+        Unit = sharingConfig(CfnServiceNetwork.SharingConfigProperty(sharingConfig))
 
     /**
      * @param tags The tags for the service network.
@@ -171,6 +223,11 @@ public interface CfnServiceNetworkProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-name)
      */
     override fun name(): String? = unwrap(this).getName()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
+     */
+    override fun sharingConfig(): Any? = unwrap(this).getSharingConfig()
 
     /**
      * The tags for the service network.

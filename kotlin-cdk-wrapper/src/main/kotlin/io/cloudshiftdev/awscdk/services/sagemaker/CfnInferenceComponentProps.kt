@@ -24,19 +24,14 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.sagemaker.*;
  * CfnInferenceComponentProps cfnInferenceComponentProps = CfnInferenceComponentProps.builder()
  * .endpointName("endpointName")
- * .runtimeConfig(InferenceComponentRuntimeConfigProperty.builder()
- * .copyCount(123)
- * .currentCopyCount(123)
- * .desiredCopyCount(123)
- * .build())
  * .specification(InferenceComponentSpecificationProperty.builder()
+ * .baseInferenceComponentName("baseInferenceComponentName")
  * .computeResourceRequirements(InferenceComponentComputeResourceRequirementsProperty.builder()
  * .maxMemoryRequiredInMb(123)
  * .minMemoryRequiredInMb(123)
  * .numberOfAcceleratorDevicesRequired(123)
  * .numberOfCpuCoresRequired(123)
  * .build())
- * // the properties below are optional
  * .container(InferenceComponentContainerSpecificationProperty.builder()
  * .artifactUrl("artifactUrl")
  * .deployedImage(DeployedImageProperty.builder()
@@ -54,14 +49,19 @@ import kotlin.jvm.JvmName
  * .modelDataDownloadTimeoutInSeconds(123)
  * .build())
  * .build())
- * .variantName("variantName")
  * // the properties below are optional
  * .endpointArn("endpointArn")
  * .inferenceComponentName("inferenceComponentName")
+ * .runtimeConfig(InferenceComponentRuntimeConfigProperty.builder()
+ * .copyCount(123)
+ * .currentCopyCount(123)
+ * .desiredCopyCount(123)
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .variantName("variantName")
  * .build();
  * ```
  *
@@ -94,7 +94,7 @@ public interface CfnInferenceComponentProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-runtimeconfig)
    */
-  public fun runtimeConfig(): Any
+  public fun runtimeConfig(): Any? = unwrap(this).getRuntimeConfig()
 
   /**
    * The specification for the inference component.
@@ -115,7 +115,7 @@ public interface CfnInferenceComponentProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-variantname)
    */
-  public fun variantName(): String
+  public fun variantName(): String? = unwrap(this).getVariantName()
 
   /**
    * A builder for [CfnInferenceComponentProps]
@@ -139,18 +139,18 @@ public interface CfnInferenceComponentProps {
     public fun inferenceComponentName(inferenceComponentName: String)
 
     /**
-     * @param runtimeConfig The runtime config for the inference component. 
+     * @param runtimeConfig The runtime config for the inference component.
      */
     public fun runtimeConfig(runtimeConfig: IResolvable)
 
     /**
-     * @param runtimeConfig The runtime config for the inference component. 
+     * @param runtimeConfig The runtime config for the inference component.
      */
     public
         fun runtimeConfig(runtimeConfig: CfnInferenceComponent.InferenceComponentRuntimeConfigProperty)
 
     /**
-     * @param runtimeConfig The runtime config for the inference component. 
+     * @param runtimeConfig The runtime config for the inference component.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1fc0fc930e3310cfe254d100cd68219905cd2098aedcc54c0f79e6b49139b817")
@@ -187,7 +187,7 @@ public interface CfnInferenceComponentProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param variantName The name of the production variant that hosts the inference component. 
+     * @param variantName The name of the production variant that hosts the inference component.
      */
     public fun variantName(variantName: String)
   }
@@ -220,14 +220,14 @@ public interface CfnInferenceComponentProps {
     }
 
     /**
-     * @param runtimeConfig The runtime config for the inference component. 
+     * @param runtimeConfig The runtime config for the inference component.
      */
     override fun runtimeConfig(runtimeConfig: IResolvable) {
       cdkBuilder.runtimeConfig(runtimeConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param runtimeConfig The runtime config for the inference component. 
+     * @param runtimeConfig The runtime config for the inference component.
      */
     override
         fun runtimeConfig(runtimeConfig: CfnInferenceComponent.InferenceComponentRuntimeConfigProperty) {
@@ -235,7 +235,7 @@ public interface CfnInferenceComponentProps {
     }
 
     /**
-     * @param runtimeConfig The runtime config for the inference component. 
+     * @param runtimeConfig The runtime config for the inference component.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("1fc0fc930e3310cfe254d100cd68219905cd2098aedcc54c0f79e6b49139b817")
@@ -282,7 +282,7 @@ public interface CfnInferenceComponentProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param variantName The name of the production variant that hosts the inference component. 
+     * @param variantName The name of the production variant that hosts the inference component.
      */
     override fun variantName(variantName: String) {
       cdkBuilder.variantName(variantName)
@@ -322,7 +322,7 @@ public interface CfnInferenceComponentProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-runtimeconfig)
      */
-    override fun runtimeConfig(): Any = unwrap(this).getRuntimeConfig()
+    override fun runtimeConfig(): Any? = unwrap(this).getRuntimeConfig()
 
     /**
      * The specification for the inference component.
@@ -343,7 +343,7 @@ public interface CfnInferenceComponentProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-inferencecomponent.html#cfn-sagemaker-inferencecomponent-variantname)
      */
-    override fun variantName(): String = unwrap(this).getVariantName()
+    override fun variantName(): String? = unwrap(this).getVariantName()
   }
 
   public companion object {

@@ -179,6 +179,8 @@ public enum class InstanceClass(
   G5G(software.amazon.awscdk.services.ec2.InstanceClass.G5G),
   GRAPHICS6(software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS6),
   G6(software.amazon.awscdk.services.ec2.InstanceClass.G6),
+  GRAPHICS6_EFFICIENT(software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS6_EFFICIENT),
+  G6E(software.amazon.awscdk.services.ec2.InstanceClass.G6E),
   PARALLEL2(software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL2),
   P2(software.amazon.awscdk.services.ec2.InstanceClass.P2),
   PARALLEL3(software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL3),
@@ -485,6 +487,9 @@ public enum class InstanceClass(
       software.amazon.awscdk.services.ec2.InstanceClass.G5G -> InstanceClass.G5G
       software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS6 -> InstanceClass.GRAPHICS6
       software.amazon.awscdk.services.ec2.InstanceClass.G6 -> InstanceClass.G6
+      software.amazon.awscdk.services.ec2.InstanceClass.GRAPHICS6_EFFICIENT ->
+          InstanceClass.GRAPHICS6_EFFICIENT
+      software.amazon.awscdk.services.ec2.InstanceClass.G6E -> InstanceClass.G6E
       software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL2 -> InstanceClass.PARALLEL2
       software.amazon.awscdk.services.ec2.InstanceClass.P2 -> InstanceClass.P2
       software.amazon.awscdk.services.ec2.InstanceClass.PARALLEL3 -> InstanceClass.PARALLEL3

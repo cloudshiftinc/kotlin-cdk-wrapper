@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iam
 
 import io.cloudshiftdev.awscdk.Duration
+import io.cloudshiftdev.awscdk.RemovalPolicy
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -107,6 +108,17 @@ public open class Role(
   @JvmName("e5a2b0fec5c17722d0dc719c3fd27344bee07d931f9f715b331523f4aadc0661")
   public override fun addToPrincipalPolicy(statement: PolicyStatement.Builder.() -> Unit):
       AddToPrincipalPolicyResult = addToPrincipalPolicy(PolicyStatement(statement))
+
+  /**
+   * Skip applyRemovalPolicy if role synthesis is prevented by customizeRoles.
+   *
+   * Because in this case, this construct does not have a CfnResource in the tree.
+   *
+   * @param policy RemovalPolicy. 
+   */
+  public override fun applyRemovalPolicy(policy: RemovalPolicy) {
+    unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
+  }
 
   /**
    * When this Principal is used in an AssumeRole policy, the action to use.

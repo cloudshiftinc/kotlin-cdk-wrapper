@@ -52,6 +52,10 @@ public interface CfnProfileAssociationProps {
   /**
    * ID of the Profile.
    *
+   * Update to this property requires update to the `ResourceId` property as well, because you can
+   * only associate one Profile per VPC. For more information, see [Route 53
+   * Profiles](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/profiles.html) .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53profiles-profileassociation.html#cfn-route53profiles-profileassociation-profileid)
    */
   public fun profileId(): String
@@ -87,6 +91,9 @@ public interface CfnProfileAssociationProps {
 
     /**
      * @param profileId ID of the Profile. 
+     * Update to this property requires update to the `ResourceId` property as well, because you can
+     * only associate one Profile per VPC. For more information, see [Route 53
+     * Profiles](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/profiles.html) .
      */
     public fun profileId(profileId: String)
 
@@ -127,6 +134,9 @@ public interface CfnProfileAssociationProps {
 
     /**
      * @param profileId ID of the Profile. 
+     * Update to this property requires update to the `ResourceId` property as well, because you can
+     * only associate one Profile per VPC. For more information, see [Route 53
+     * Profiles](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/profiles.html) .
      */
     override fun profileId(profileId: String) {
       cdkBuilder.profileId(profileId)
@@ -175,6 +185,10 @@ public interface CfnProfileAssociationProps {
 
     /**
      * ID of the Profile.
+     *
+     * Update to this property requires update to the `ResourceId` property as well, because you can
+     * only associate one Profile per VPC. For more information, see [Route 53
+     * Profiles](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/profiles.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53profiles-profileassociation.html#cfn-route53profiles-profileassociation-profileid)
      */

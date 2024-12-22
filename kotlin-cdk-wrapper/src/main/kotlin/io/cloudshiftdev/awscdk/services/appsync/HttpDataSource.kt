@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.appsync
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -113,6 +114,16 @@ public open class HttpDataSource(
      * @param name The name of the data source. 
      */
     public fun name(name: String)
+
+    /**
+     * The IAM service role to be assumed by AppSync to interact with the data source.
+     *
+     * Default: -  Create a new role
+     *
+     * @param serviceRole The IAM service role to be assumed by AppSync to interact with the data
+     * source. 
+     */
+    public fun serviceRole(serviceRole: IRole)
   }
 
   private class BuilderImpl(
@@ -185,6 +196,18 @@ public open class HttpDataSource(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The IAM service role to be assumed by AppSync to interact with the data source.
+     *
+     * Default: -  Create a new role
+     *
+     * @param serviceRole The IAM service role to be assumed by AppSync to interact with the data
+     * source. 
+     */
+    override fun serviceRole(serviceRole: IRole) {
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.appsync.HttpDataSource = cdkBuilder.build()

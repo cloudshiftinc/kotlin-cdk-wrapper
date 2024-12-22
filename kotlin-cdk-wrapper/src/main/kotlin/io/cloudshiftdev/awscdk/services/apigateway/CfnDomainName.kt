@@ -21,8 +21,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `AWS::ApiGateway::DomainName` resource specifies a custom domain name for your API in API
- * Gateway.
+ * The `AWS::ApiGateway::DomainName` resource specifies a public custom domain name for your API in
+ * API Gateway.
  *
  * You can use a custom domain name to provide a URL that's more intuitive and easier to recall. For
  * more information about using custom domain names, see [Set up Custom Domain Name for an API in API
@@ -115,14 +115,14 @@ public open class CfnDomainName(
   public open fun attrRegionalHostedZoneId(): String = unwrap(this).getAttrRegionalHostedZoneId()
 
   /**
-   * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint for
-   * this domain name.
+   * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint or
+   * private endpoint for this domain name.
    */
   public open fun certificateArn(): String? = unwrap(this).getCertificateArn()
 
   /**
-   * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint for
-   * this domain name.
+   * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint or
+   * private endpoint for this domain name.
    */
   public open fun certificateArn(`value`: String) {
     unwrap(this).setCertificateArn(`value`)
@@ -272,14 +272,14 @@ public open class CfnDomainName(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint for
-     * this domain name.
+     * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint or
+     * private endpoint for this domain name.
      *
      * AWS Certificate Manager is the only supported source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-certificatearn)
      * @param certificateArn The reference to an AWS -managed certificate that will be used by
-     * edge-optimized endpoint for this domain name. 
+     * edge-optimized endpoint or private endpoint for this domain name. 
      */
     public fun certificateArn(certificateArn: String)
 
@@ -425,14 +425,14 @@ public open class CfnDomainName(
         software.amazon.awscdk.services.apigateway.CfnDomainName.Builder.create(scope, id)
 
     /**
-     * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint for
-     * this domain name.
+     * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint or
+     * private endpoint for this domain name.
      *
      * AWS Certificate Manager is the only supported source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigateway-domainname.html#cfn-apigateway-domainname-certificatearn)
      * @param certificateArn The reference to an AWS -managed certificate that will be used by
-     * edge-optimized endpoint for this domain name. 
+     * edge-optimized endpoint or private endpoint for this domain name. 
      */
     override fun certificateArn(certificateArn: String) {
       cdkBuilder.certificateArn(certificateArn)

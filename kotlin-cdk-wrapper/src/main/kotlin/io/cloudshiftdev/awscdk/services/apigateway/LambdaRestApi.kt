@@ -28,19 +28,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Function backend;
- * LambdaRestApi api = LambdaRestApi.Builder.create(this, "myapi")
- * .handler(backend)
- * .proxy(false)
+ * Queue sourceQueue;
+ * Function fn = Function.Builder.create(this, "MyFunc")
+ * .handler("index.handler")
+ * .runtime(Runtime.NODEJS_LATEST)
+ * .code(Code.fromInline("exports.handler = e =&gt; {}"))
  * .build();
- * Resource items = api.root.addResource("items");
- * items.addMethod("GET"); // GET /items
- * items.addMethod("POST"); // POST /items
- * Resource item = items.addResource("{item}");
- * item.addMethod("GET"); // GET /items/{item}
- * // the default integration for methods is "handler", but one can
- * // customize this behavior per method or even a sub path.
- * item.addMethod("DELETE", new HttpIntegration("http://amazon.com"));
+ * LambdaRestApi restApi = LambdaRestApi.Builder.create(this, "MyRestAPI").handler(fn).build();
+ * ApiGatewayTarget apiTarget = new ApiGatewayTarget(restApi);
+ * Pipe pipe = Pipe.Builder.create(this, "Pipe")
+ * .source(new SqsSource(sourceQueue))
+ * .target(apiTarget)
+ * .build();
  * ```
  */
 public open class LambdaRestApi(

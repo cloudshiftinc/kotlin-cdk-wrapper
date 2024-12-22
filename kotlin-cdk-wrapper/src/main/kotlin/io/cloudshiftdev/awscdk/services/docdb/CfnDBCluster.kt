@@ -10,12 +10,15 @@ import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -52,6 +55,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
  * .restoreToTime("restoreToTime")
  * .restoreType("restoreType")
+ * .serverlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationProperty.builder()
+ * .maxCapacity(123)
+ * .minCapacity(123)
+ * .build())
  * .snapshotIdentifier("snapshotIdentifier")
  * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
  * .storageEncrypted(false)
@@ -162,19 +169,22 @@ public open class CfnDBCluster(
   }
 
   /**
-   *
+   * Set to `true` to copy all tags from the source cluster snapshot to the target cluster snapshot,
+   * and otherwise `false` .
    */
   public open fun copyTagsToSnapshot(): Any? = unwrap(this).getCopyTagsToSnapshot()
 
   /**
-   *
+   * Set to `true` to copy all tags from the source cluster snapshot to the target cluster snapshot,
+   * and otherwise `false` .
    */
   public open fun copyTagsToSnapshot(`value`: Boolean) {
     unwrap(this).setCopyTagsToSnapshot(`value`)
   }
 
   /**
-   *
+   * Set to `true` to copy all tags from the source cluster snapshot to the target cluster snapshot,
+   * and otherwise `false` .
    */
   public open fun copyTagsToSnapshot(`value`: IResolvable) {
     unwrap(this).setCopyTagsToSnapshot(`value`.let(IResolvable.Companion::unwrap))
@@ -386,6 +396,36 @@ public open class CfnDBCluster(
   }
 
   /**
+   *
+   */
+  public open fun serverlessV2ScalingConfiguration(): Any? =
+      unwrap(this).getServerlessV2ScalingConfiguration()
+
+  /**
+   *
+   */
+  public open fun serverlessV2ScalingConfiguration(`value`: IResolvable) {
+    unwrap(this).setServerlessV2ScalingConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open
+      fun serverlessV2ScalingConfiguration(`value`: ServerlessV2ScalingConfigurationProperty) {
+    unwrap(this).setServerlessV2ScalingConfiguration(`value`.let(ServerlessV2ScalingConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("bed3cecddf55abffe3d872b1abaafc68533a22a901a96ef864ca55b5b84d9e0b")
+  public open
+      fun serverlessV2ScalingConfiguration(`value`: ServerlessV2ScalingConfigurationProperty.Builder.() -> Unit):
+      Unit = serverlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationProperty(`value`))
+
+  /**
    * The identifier for the snapshot or cluster snapshot to restore from.
    */
   public open fun snapshotIdentifier(): String? = unwrap(this).getSnapshotIdentifier()
@@ -544,14 +584,26 @@ public open class CfnDBCluster(
     public fun backupRetentionPeriod(backupRetentionPeriod: Number)
 
     /**
+     * Set to `true` to copy all tags from the source cluster snapshot to the target cluster
+     * snapshot, and otherwise `false` .
+     *
+     * The default is `false` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-copytagstosnapshot)
-     * @param copyTagsToSnapshot 
+     * @param copyTagsToSnapshot Set to `true` to copy all tags from the source cluster snapshot to
+     * the target cluster snapshot, and otherwise `false` . 
      */
     public fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean)
 
     /**
+     * Set to `true` to copy all tags from the source cluster snapshot to the target cluster
+     * snapshot, and otherwise `false` .
+     *
+     * The default is `false` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-copytagstosnapshot)
-     * @param copyTagsToSnapshot 
+     * @param copyTagsToSnapshot Set to `true` to copy all tags from the source cluster snapshot to
+     * the target cluster snapshot, and otherwise `false` . 
      */
     public fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable)
 
@@ -651,6 +703,12 @@ public open class CfnDBCluster(
      * The `--engine-version` will default to the latest major engine version. For production
      * workloads, we recommend explicitly declaring this parameter with the intended major engine
      * version.
+     *
+     * Changing the `EngineVersion` will start an in-place engine version upgrade. Note that
+     * in-place engine version upgrade will cause downtime in the cluster. See [Amazon DocumentDB
+     * in-place major version
+     * upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html) before
+     * starting an in-place engine version upgrade.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-engineversion)
      * @param engineVersion The version number of the database engine to use. 
@@ -790,6 +848,28 @@ public open class CfnDBCluster(
     public fun restoreType(restoreType: String)
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration)
+     * @param serverlessV2ScalingConfiguration 
+     */
+    public fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration)
+     * @param serverlessV2ScalingConfiguration 
+     */
+    public
+        fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration)
+     * @param serverlessV2ScalingConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("85ebf5ad6f8822e53a89d67eac084ca88ac37cf716c8f34c2d71c1d2c4cb0ddf")
+    public
+        fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * The identifier for the snapshot or cluster snapshot to restore from.
      *
      * You can use either the name or the Amazon Resource Name (ARN) to specify a cluster snapshot.
@@ -820,6 +900,15 @@ public open class CfnDBCluster(
     /**
      * Specifies whether the cluster is encrypted.
      *
+     * If you specify `SourceDBClusterIdentifier` or `SnapshotIdentifier` and don’t specify
+     * `StorageEncrypted` , the encryption property is inherited from the source cluster or snapshot
+     * (unless `KMSKeyId` is specified, in which case the restored cluster will be encrypted with that
+     * KMS key). If the source is encrypted and `StorageEncrypted` is specified to be true, the
+     * restored cluster will be encrypted (if you want to use a different KMS key, specify the
+     * `KMSKeyId` property as well). If the source is unencrypted and `StorageEncrypted` is specified
+     * to be true, then the `KMSKeyId` property must be specified. If the source is encrypted, don’t
+     * specify `StorageEncrypted` to be false as opting out of encryption is not allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-storageencrypted)
      * @param storageEncrypted Specifies whether the cluster is encrypted. 
      */
@@ -827,6 +916,15 @@ public open class CfnDBCluster(
 
     /**
      * Specifies whether the cluster is encrypted.
+     *
+     * If you specify `SourceDBClusterIdentifier` or `SnapshotIdentifier` and don’t specify
+     * `StorageEncrypted` , the encryption property is inherited from the source cluster or snapshot
+     * (unless `KMSKeyId` is specified, in which case the restored cluster will be encrypted with that
+     * KMS key). If the source is encrypted and `StorageEncrypted` is specified to be true, the
+     * restored cluster will be encrypted (if you want to use a different KMS key, specify the
+     * `KMSKeyId` property as well). If the source is unencrypted and `StorageEncrypted` is specified
+     * to be true, then the `KMSKeyId` property must be specified. If the source is encrypted, don’t
+     * specify `StorageEncrypted` to be false as opting out of encryption is not allowed.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-storageencrypted)
      * @param storageEncrypted Specifies whether the cluster is encrypted. 
@@ -962,16 +1060,28 @@ public open class CfnDBCluster(
     }
 
     /**
+     * Set to `true` to copy all tags from the source cluster snapshot to the target cluster
+     * snapshot, and otherwise `false` .
+     *
+     * The default is `false` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-copytagstosnapshot)
-     * @param copyTagsToSnapshot 
+     * @param copyTagsToSnapshot Set to `true` to copy all tags from the source cluster snapshot to
+     * the target cluster snapshot, and otherwise `false` . 
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: Boolean) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot)
     }
 
     /**
+     * Set to `true` to copy all tags from the source cluster snapshot to the target cluster
+     * snapshot, and otherwise `false` .
+     *
+     * The default is `false` .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-copytagstosnapshot)
-     * @param copyTagsToSnapshot 
+     * @param copyTagsToSnapshot Set to `true` to copy all tags from the source cluster snapshot to
+     * the target cluster snapshot, and otherwise `false` . 
      */
     override fun copyTagsToSnapshot(copyTagsToSnapshot: IResolvable) {
       cdkBuilder.copyTagsToSnapshot(copyTagsToSnapshot.let(IResolvable.Companion::unwrap))
@@ -1086,6 +1196,12 @@ public open class CfnDBCluster(
      * The `--engine-version` will default to the latest major engine version. For production
      * workloads, we recommend explicitly declaring this parameter with the intended major engine
      * version.
+     *
+     * Changing the `EngineVersion` will start an in-place engine version upgrade. Note that
+     * in-place engine version upgrade will cause downtime in the cluster. See [Amazon DocumentDB
+     * in-place major version
+     * upgrade](https://docs.aws.amazon.com/documentdb/latest/developerguide/docdb-mvu.html) before
+     * starting an in-place engine version upgrade.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-engineversion)
      * @param engineVersion The version number of the database engine to use. 
@@ -1243,6 +1359,34 @@ public open class CfnDBCluster(
     }
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration)
+     * @param serverlessV2ScalingConfiguration 
+     */
+    override fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: IResolvable) {
+      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration)
+     * @param serverlessV2ScalingConfiguration 
+     */
+    override
+        fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty) {
+      cdkBuilder.serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration.let(ServerlessV2ScalingConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration)
+     * @param serverlessV2ScalingConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("85ebf5ad6f8822e53a89d67eac084ca88ac37cf716c8f34c2d71c1d2c4cb0ddf")
+    override
+        fun serverlessV2ScalingConfiguration(serverlessV2ScalingConfiguration: ServerlessV2ScalingConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        serverlessV2ScalingConfiguration(ServerlessV2ScalingConfigurationProperty(serverlessV2ScalingConfiguration))
+
+    /**
      * The identifier for the snapshot or cluster snapshot to restore from.
      *
      * You can use either the name or the Amazon Resource Name (ARN) to specify a cluster snapshot.
@@ -1277,6 +1421,15 @@ public open class CfnDBCluster(
     /**
      * Specifies whether the cluster is encrypted.
      *
+     * If you specify `SourceDBClusterIdentifier` or `SnapshotIdentifier` and don’t specify
+     * `StorageEncrypted` , the encryption property is inherited from the source cluster or snapshot
+     * (unless `KMSKeyId` is specified, in which case the restored cluster will be encrypted with that
+     * KMS key). If the source is encrypted and `StorageEncrypted` is specified to be true, the
+     * restored cluster will be encrypted (if you want to use a different KMS key, specify the
+     * `KMSKeyId` property as well). If the source is unencrypted and `StorageEncrypted` is specified
+     * to be true, then the `KMSKeyId` property must be specified. If the source is encrypted, don’t
+     * specify `StorageEncrypted` to be false as opting out of encryption is not allowed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-storageencrypted)
      * @param storageEncrypted Specifies whether the cluster is encrypted. 
      */
@@ -1286,6 +1439,15 @@ public open class CfnDBCluster(
 
     /**
      * Specifies whether the cluster is encrypted.
+     *
+     * If you specify `SourceDBClusterIdentifier` or `SnapshotIdentifier` and don’t specify
+     * `StorageEncrypted` , the encryption property is inherited from the source cluster or snapshot
+     * (unless `KMSKeyId` is specified, in which case the restored cluster will be encrypted with that
+     * KMS key). If the source is encrypted and `StorageEncrypted` is specified to be true, the
+     * restored cluster will be encrypted (if you want to use a different KMS key, specify the
+     * `KMSKeyId` property as well). If the source is unencrypted and `StorageEncrypted` is specified
+     * to be true, then the `KMSKeyId` property must be specified. If the source is encrypted, don’t
+     * specify `StorageEncrypted` to be false as opting out of encryption is not allowed.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbcluster.html#cfn-docdb-dbcluster-storageencrypted)
      * @param storageEncrypted Specifies whether the cluster is encrypted. 
@@ -1407,5 +1569,107 @@ public open class CfnDBCluster(
 
     internal fun unwrap(wrapped: CfnDBCluster): software.amazon.awscdk.services.docdb.CfnDBCluster =
         wrapped.cdkObject as software.amazon.awscdk.services.docdb.CfnDBCluster
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.docdb.*;
+   * ServerlessV2ScalingConfigurationProperty serverlessV2ScalingConfigurationProperty =
+   * ServerlessV2ScalingConfigurationProperty.builder()
+   * .maxCapacity(123)
+   * .minCapacity(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-docdb-dbcluster-serverlessv2scalingconfiguration.html)
+   */
+  public interface ServerlessV2ScalingConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-docdb-dbcluster-serverlessv2scalingconfiguration.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration-maxcapacity)
+     */
+    public fun maxCapacity(): Number
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-docdb-dbcluster-serverlessv2scalingconfiguration.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration-mincapacity)
+     */
+    public fun minCapacity(): Number
+
+    /**
+     * A builder for [ServerlessV2ScalingConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxCapacity the value to be set. 
+       */
+      public fun maxCapacity(maxCapacity: Number)
+
+      /**
+       * @param minCapacity the value to be set. 
+       */
+      public fun minCapacity(minCapacity: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.docdb.CfnDBCluster.ServerlessV2ScalingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.docdb.CfnDBCluster.ServerlessV2ScalingConfigurationProperty.builder()
+
+      /**
+       * @param maxCapacity the value to be set. 
+       */
+      override fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
+      }
+
+      /**
+       * @param minCapacity the value to be set. 
+       */
+      override fun minCapacity(minCapacity: Number) {
+        cdkBuilder.minCapacity(minCapacity)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.docdb.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.docdb.CfnDBCluster.ServerlessV2ScalingConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ServerlessV2ScalingConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-docdb-dbcluster-serverlessv2scalingconfiguration.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration-maxcapacity)
+       */
+      override fun maxCapacity(): Number = unwrap(this).getMaxCapacity()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-docdb-dbcluster-serverlessv2scalingconfiguration.html#cfn-docdb-dbcluster-serverlessv2scalingconfiguration-mincapacity)
+       */
+      override fun minCapacity(): Number = unwrap(this).getMinCapacity()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ServerlessV2ScalingConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.docdb.CfnDBCluster.ServerlessV2ScalingConfigurationProperty):
+          ServerlessV2ScalingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ServerlessV2ScalingConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ServerlessV2ScalingConfigurationProperty):
+          software.amazon.awscdk.services.docdb.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.docdb.CfnDBCluster.ServerlessV2ScalingConfigurationProperty
+    }
   }
 }

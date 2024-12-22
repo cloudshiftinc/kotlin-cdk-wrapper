@@ -18,6 +18,7 @@ import io.cloudshiftdev.awscdk.services.ecs.FargateTaskDefinition
 import io.cloudshiftdev.awscdk.services.ecs.ICluster
 import io.cloudshiftdev.awscdk.services.ecs.PropagatedTagSource
 import io.cloudshiftdev.awscdk.services.ecs.RuntimePlatform
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IListenerCertificate
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IpAddressType
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
@@ -34,16 +35,21 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Vpc vpc;
- * SecurityGroup securityGroup;
- * NetworkLoadBalancedFargateService queueProcessingFargateService =
+ * import io.cloudshiftdev.awscdk.services.certificatemanager.Certificate;
+ * ICertificate certificate = Certificate.fromCertificateArn(this, "Cert",
+ * "arn:aws:acm:us-east-1:123456:certificate/abcdefg");
+ * NetworkLoadBalancedFargateService loadBalancedFargateService =
  * NetworkLoadBalancedFargateService.Builder.create(this, "Service")
- * .vpc(vpc)
- * .memoryLimitMiB(512)
+ * // The default value of listenerPort is 443 if you pass in listenerCertificate
+ * // It is configured to port 4443 here
+ * .listenerPort(4443)
+ * .listenerCertificate(certificate)
  * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
+ * // The default value of containerPort is 443 if you pass in listenerCertificate
+ * // It is configured to port 8443 here
+ * .containerPort(8443)
  * .build())
- * .securityGroups(List.of(securityGroup))
  * .build();
  * ```
  */
@@ -229,6 +235,13 @@ public interface NetworkLoadBalancedFargateServiceProps : NetworkLoadBalancedSer
      * you must choose IPv4.
      */
     public fun ipAddressType(ipAddressType: IpAddressType)
+
+    /**
+     * @param listenerCertificate Listener certificate list of ACM cert ARNs.
+     * If you provide a certificate, the listener's protocol will be TLS.
+     * If not, the listener's protocol will be TCP.
+     */
+    public fun listenerCertificate(listenerCertificate: IListenerCertificate)
 
     /**
      * @param listenerPort Listener port of the network load balancer that will serve traffic to the
@@ -577,6 +590,15 @@ public interface NetworkLoadBalancedFargateServiceProps : NetworkLoadBalancedSer
      */
     override fun ipAddressType(ipAddressType: IpAddressType) {
       cdkBuilder.ipAddressType(ipAddressType.let(IpAddressType.Companion::unwrap))
+    }
+
+    /**
+     * @param listenerCertificate Listener certificate list of ACM cert ARNs.
+     * If you provide a certificate, the listener's protocol will be TLS.
+     * If not, the listener's protocol will be TCP.
+     */
+    override fun listenerCertificate(listenerCertificate: IListenerCertificate) {
+      cdkBuilder.listenerCertificate(listenerCertificate.let(IListenerCertificate.Companion::unwrap))
     }
 
     /**
@@ -942,9 +964,20 @@ public interface NetworkLoadBalancedFargateServiceProps : NetworkLoadBalancedSer
         unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
+     * Listener certificate list of ACM cert ARNs.
+     *
+     * If you provide a certificate, the listener's protocol will be TLS.
+     * If not, the listener's protocol will be TCP.
+     *
+     * Default: - none
+     */
+    override fun listenerCertificate(): IListenerCertificate? =
+        unwrap(this).getListenerCertificate()?.let(IListenerCertificate::wrap)
+
+    /**
      * Listener port of the network load balancer that will serve traffic to the service.
      *
-     * Default: 80
+     * Default: 80 or 443 with listenerCertificate provided
      */
     override fun listenerPort(): Number? = unwrap(this).getListenerPort()
 

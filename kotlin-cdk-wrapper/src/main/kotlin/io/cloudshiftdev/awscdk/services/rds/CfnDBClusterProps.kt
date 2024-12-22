@@ -35,6 +35,7 @@ import kotlin.jvm.JvmName
  * .availabilityZones(List.of("availabilityZones"))
  * .backtrackWindow(123)
  * .backupRetentionPeriod(123)
+ * .clusterScalabilityType("clusterScalabilityType")
  * .copyTagsToSnapshot(false)
  * .databaseName("databaseName")
  * .dbClusterIdentifier("dbClusterIdentifier")
@@ -189,6 +190,17 @@ public interface CfnDBClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-backupretentionperiod)
    */
   public fun backupRetentionPeriod(): Number? = unwrap(this).getBackupRetentionPeriod()
+
+  /**
+   * Specifies the scalability mode of the Aurora DB cluster.
+   *
+   * When set to `limitless` , the cluster operates as an Aurora Limitless Database, allowing you to
+   * create a DB shard group for horizontal scaling (sharding) capabilities. When set to `standard`
+   * (the default), the cluster uses normal DB instance creation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-clusterscalabilitytype)
+   */
+  public fun clusterScalabilityType(): String? = unwrap(this).getClusterScalabilityType()
 
   /**
    * A value that indicates whether to copy all tags from the DB cluster to snapshots of the DB
@@ -478,7 +490,7 @@ public interface CfnDBClusterProps {
    * Extended Support, you can run the selected major engine version on your DB cluster past the end of
    * standard support for that engine version. For more information, see the following sections:
    *
-   * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+   * * Amazon Aurora - [Using Amazon RDS Extended
    * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
    * the *Amazon Aurora User Guide*
    * * Amazon RDS - [Using Amazon RDS Extended
@@ -1256,6 +1268,14 @@ public interface CfnDBClusterProps {
     public fun backupRetentionPeriod(backupRetentionPeriod: Number)
 
     /**
+     * @param clusterScalabilityType Specifies the scalability mode of the Aurora DB cluster.
+     * When set to `limitless` , the cluster operates as an Aurora Limitless Database, allowing you
+     * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
+     * `standard` (the default), the cluster uses normal DB instance creation.
+     */
+    public fun clusterScalabilityType(clusterScalabilityType: String)
+
+    /**
      * @param copyTagsToSnapshot A value that indicates whether to copy all tags from the DB cluster
      * to snapshots of the DB cluster.
      * The default is not to copy them.
@@ -1592,7 +1612,7 @@ public interface CfnDBClusterProps {
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * * Amazon Aurora - [Using Amazon RDS Extended
      * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
      * * Amazon RDS - [Using Amazon RDS Extended
@@ -2489,6 +2509,16 @@ public interface CfnDBClusterProps {
     }
 
     /**
+     * @param clusterScalabilityType Specifies the scalability mode of the Aurora DB cluster.
+     * When set to `limitless` , the cluster operates as an Aurora Limitless Database, allowing you
+     * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
+     * `standard` (the default), the cluster uses normal DB instance creation.
+     */
+    override fun clusterScalabilityType(clusterScalabilityType: String) {
+      cdkBuilder.clusterScalabilityType(clusterScalabilityType)
+    }
+
+    /**
      * @param copyTagsToSnapshot A value that indicates whether to copy all tags from the DB cluster
      * to snapshots of the DB cluster.
      * The default is not to copy them.
@@ -2872,7 +2902,7 @@ public interface CfnDBClusterProps {
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * * Amazon Aurora - [Using Amazon RDS Extended
      * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
      * * Amazon RDS - [Using Amazon RDS Extended
@@ -3819,6 +3849,17 @@ public interface CfnDBClusterProps {
     override fun backupRetentionPeriod(): Number? = unwrap(this).getBackupRetentionPeriod()
 
     /**
+     * Specifies the scalability mode of the Aurora DB cluster.
+     *
+     * When set to `limitless` , the cluster operates as an Aurora Limitless Database, allowing you
+     * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
+     * `standard` (the default), the cluster uses normal DB instance creation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-clusterscalabilitytype)
+     */
+    override fun clusterScalabilityType(): String? = unwrap(this).getClusterScalabilityType()
+
+    /**
      * A value that indicates whether to copy all tags from the DB cluster to snapshots of the DB
      * cluster.
      *
@@ -4107,7 +4148,7 @@ public interface CfnDBClusterProps {
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * * Amazon Aurora - [Using Amazon RDS Extended
      * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
      * * Amazon RDS - [Using Amazon RDS Extended

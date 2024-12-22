@@ -29,7 +29,9 @@ import io.cloudshiftdev.awscdk.services.s3.IBucket
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
  * .recordName(recordName) // www
- * .target(RecordTarget.fromAlias(new BucketWebsiteTarget(bucketWebsite)))
+ * .target(RecordTarget.fromAlias(
+ * new BucketWebsiteTarget(bucketWebsite, Map.of(
+ * "evaluateTargetHealth", true))))
  * .build();
  * ```
  */
@@ -39,6 +41,11 @@ public open class BucketWebsiteTarget(
     IAliasRecordTarget {
   public constructor(bucket: IBucket) :
       this(software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget(bucket.let(IBucket.Companion::unwrap))
+  )
+
+  public constructor(bucket: IBucket, props: IAliasRecordTargetProps) :
+      this(software.amazon.awscdk.services.route53.targets.BucketWebsiteTarget(bucket.let(IBucket.Companion::unwrap),
+      props.let(IAliasRecordTargetProps.Companion::unwrap))
   )
 
   /**

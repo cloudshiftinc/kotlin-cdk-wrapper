@@ -29,7 +29,9 @@ import kotlin.Unit
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
  * .recordName(recordName) // www
- * .target(RecordTarget.fromAlias(new BucketWebsiteTarget(bucketWebsite)))
+ * .target(RecordTarget.fromAlias(
+ * new BucketWebsiteTarget(bucketWebsite, Map.of(
+ * "evaluateTargetHealth", true))))
  * .build();
  * ```
  */

@@ -231,6 +231,7 @@ import kotlin.jvm.JvmName
  * .enableDockerAccess("enableDockerAccess")
  * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
  * .build())
+ * .executionRoleIdentityConfig("executionRoleIdentityConfig")
  * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
  * .domainExecutionRoleArn("domainExecutionRoleArn")
  * // the properties below are optional
@@ -246,6 +247,7 @@ import kotlin.jvm.JvmName
  * .securityGroupIds(List.of("securityGroupIds"))
  * .build())
  * .kmsKeyId("kmsKeyId")
+ * .tagPropagation("tagPropagation")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -293,7 +295,10 @@ public interface CfnDomainProps {
   public fun authMode(): String
 
   /**
-   * A collection of settings that apply to spaces created in the domain.
+   * The default settings for shared spaces that users create in the domain.
+   *
+   * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+   * spaces.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
    */
@@ -348,6 +353,14 @@ public interface CfnDomainProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-subnetids)
    */
   public fun subnetIds(): List<String>
+
+  /**
+   * Indicates whether the tags added to Domain, User Profile and Space entity is propagated to all
+   * SageMaker resources.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-tagpropagation)
+   */
+  public fun tagPropagation(): String? = unwrap(this).getTagPropagation()
 
   /**
    * Tags to associated with the Domain.
@@ -409,20 +422,26 @@ public interface CfnDomainProps {
     public fun authMode(authMode: String)
 
     /**
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain.
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      */
     public fun defaultSpaceSettings(defaultSpaceSettings: IResolvable)
 
     /**
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain.
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      */
     public fun defaultSpaceSettings(defaultSpaceSettings: CfnDomain.DefaultSpaceSettingsProperty)
 
     /**
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain.
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d001173177c9a371c53315f8f6c05f9bce841b1b38b146f07a05bd93b5ec8891")
@@ -504,6 +523,12 @@ public interface CfnDomainProps {
     public fun subnetIds(vararg subnetIds: String)
 
     /**
+     * @param tagPropagation Indicates whether the tags added to Domain, User Profile and Space
+     * entity is propagated to all SageMaker resources.
+     */
+    public fun tagPropagation(tagPropagation: String)
+
+    /**
      * @param tags Tags to associated with the Domain.
      * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
      * are searchable using the Search API.
@@ -576,16 +601,20 @@ public interface CfnDomainProps {
     }
 
     /**
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain.
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      */
     override fun defaultSpaceSettings(defaultSpaceSettings: IResolvable) {
       cdkBuilder.defaultSpaceSettings(defaultSpaceSettings.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain.
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      */
     override
         fun defaultSpaceSettings(defaultSpaceSettings: CfnDomain.DefaultSpaceSettingsProperty) {
@@ -593,8 +622,10 @@ public interface CfnDomainProps {
     }
 
     /**
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain.
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d001173177c9a371c53315f8f6c05f9bce841b1b38b146f07a05bd93b5ec8891")
@@ -694,6 +725,14 @@ public interface CfnDomainProps {
     override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
 
     /**
+     * @param tagPropagation Indicates whether the tags added to Domain, User Profile and Space
+     * entity is propagated to all SageMaker resources.
+     */
+    override fun tagPropagation(tagPropagation: String) {
+      cdkBuilder.tagPropagation(tagPropagation)
+    }
+
+    /**
      * @param tags Tags to associated with the Domain.
      * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
      * are searchable using the Search API.
@@ -776,7 +815,10 @@ public interface CfnDomainProps {
     override fun authMode(): String = unwrap(this).getAuthMode()
 
     /**
-     * A collection of settings that apply to spaces created in the domain.
+     * The default settings for shared spaces that users create in the domain.
+     *
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
      */
@@ -831,6 +873,14 @@ public interface CfnDomainProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-subnetids)
      */
     override fun subnetIds(): List<String> = unwrap(this).getSubnetIds()
+
+    /**
+     * Indicates whether the tags added to Domain, User Profile and Space entity is propagated to
+     * all SageMaker resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-tagpropagation)
+     */
+    override fun tagPropagation(): String? = unwrap(this).getTagPropagation()
 
     /**
      * Tags to associated with the Domain.

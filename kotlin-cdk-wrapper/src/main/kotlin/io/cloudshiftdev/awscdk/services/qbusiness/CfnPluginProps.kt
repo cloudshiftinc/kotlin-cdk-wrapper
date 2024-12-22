@@ -24,7 +24,6 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.qbusiness.*;
  * Object noAuthConfiguration;
  * CfnPluginProps cfnPluginProps = CfnPluginProps.builder()
- * .applicationId("applicationId")
  * .authConfiguration(PluginAuthConfigurationProperty.builder()
  * .basicAuthConfiguration(BasicAuthConfigurationProperty.builder()
  * .roleArn("roleArn")
@@ -34,11 +33,15 @@ import kotlin.jvm.JvmName
  * .oAuth2ClientCredentialConfiguration(OAuth2ClientCredentialConfigurationProperty.builder()
  * .roleArn("roleArn")
  * .secretArn("secretArn")
+ * // the properties below are optional
+ * .authorizationUrl("authorizationUrl")
+ * .tokenUrl("tokenUrl")
  * .build())
  * .build())
  * .displayName("displayName")
  * .type("type")
  * // the properties below are optional
+ * .applicationId("applicationId")
  * .customPluginConfiguration(CustomPluginConfigurationProperty.builder()
  * .apiSchema(APISchemaProperty.builder()
  * .payload("payload")
@@ -67,7 +70,7 @@ public interface CfnPluginProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-plugin.html#cfn-qbusiness-plugin-applicationid)
    */
-  public fun applicationId(): String
+  public fun applicationId(): String? = unwrap(this).getApplicationId()
 
   /**
    * Authentication configuration information for an Amazon Q Business plugin.
@@ -128,7 +131,7 @@ public interface CfnPluginProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param applicationId The identifier of the application that will contain the plugin. 
+     * @param applicationId The identifier of the application that will contain the plugin.
      */
     public fun applicationId(applicationId: String)
 
@@ -217,7 +220,7 @@ public interface CfnPluginProps {
         software.amazon.awscdk.services.qbusiness.CfnPluginProps.builder()
 
     /**
-     * @param applicationId The identifier of the application that will contain the plugin. 
+     * @param applicationId The identifier of the application that will contain the plugin.
      */
     override fun applicationId(applicationId: String) {
       cdkBuilder.applicationId(applicationId)
@@ -336,7 +339,7 @@ public interface CfnPluginProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-plugin.html#cfn-qbusiness-plugin-applicationid)
      */
-    override fun applicationId(): String = unwrap(this).getApplicationId()
+    override fun applicationId(): String? = unwrap(this).getApplicationId()
 
     /**
      * Authentication configuration information for an Amazon Q Business plugin.

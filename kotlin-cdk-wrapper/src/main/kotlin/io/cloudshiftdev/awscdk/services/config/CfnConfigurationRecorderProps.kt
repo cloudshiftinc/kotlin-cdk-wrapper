@@ -89,9 +89,8 @@ public interface CfnConfigurationRecorderProps {
   public fun recordingGroup(): Any? = unwrap(this).getRecordingGroup()
 
   /**
-   * Specifies the default recording frequency that AWS Config uses to record configuration changes.
-   *
-   * AWS Config supports *Continuous recording* and *Daily recording* .
+   * Specifies the default recording frequency for the configuration recorder. AWS Config supports
+   * *Continuous recording* and *Daily recording* .
    *
    * * Continuous recording allows you to record configuration changes continuously whenever a
    * change occurs.
@@ -99,6 +98,8 @@ public interface CfnConfigurationRecorderProps {
    * state of your resources over the last 24-hour period, only if it’s different from the previous CI
    * recorded.
    *
+   *
+   * *Some resource types require continuous recording*
    *
    * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
    * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
@@ -220,16 +221,16 @@ public interface CfnConfigurationRecorderProps {
         fun recordingGroup(recordingGroup: CfnConfigurationRecorder.RecordingGroupProperty.Builder.() -> Unit)
 
     /**
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes.
-     * AWS Config supports *Continuous recording* and *Daily recording* .
-     *
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* .
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
      * * Daily recording allows you to receive a configuration item (CI) representing the most
      * recent state of your resources over the last 24-hour period, only if it’s different from the
      * previous CI recorded.
      *
+     *
+     * *Some resource types require continuous recording*
      *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
@@ -240,16 +241,16 @@ public interface CfnConfigurationRecorderProps {
     public fun recordingMode(recordingMode: IResolvable)
 
     /**
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes.
-     * AWS Config supports *Continuous recording* and *Daily recording* .
-     *
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* .
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
      * * Daily recording allows you to receive a configuration item (CI) representing the most
      * recent state of your resources over the last 24-hour period, only if it’s different from the
      * previous CI recorded.
      *
+     *
+     * *Some resource types require continuous recording*
      *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
@@ -260,16 +261,16 @@ public interface CfnConfigurationRecorderProps {
     public fun recordingMode(recordingMode: CfnConfigurationRecorder.RecordingModeProperty)
 
     /**
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes.
-     * AWS Config supports *Continuous recording* and *Daily recording* .
-     *
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* .
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
      * * Daily recording allows you to receive a configuration item (CI) representing the most
      * recent state of your resources over the last 24-hour period, only if it’s different from the
      * previous CI recorded.
      *
+     *
+     * *Some resource types require continuous recording*
      *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
@@ -397,16 +398,16 @@ public interface CfnConfigurationRecorderProps {
         Unit = recordingGroup(CfnConfigurationRecorder.RecordingGroupProperty(recordingGroup))
 
     /**
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes.
-     * AWS Config supports *Continuous recording* and *Daily recording* .
-     *
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* .
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
      * * Daily recording allows you to receive a configuration item (CI) representing the most
      * recent state of your resources over the last 24-hour period, only if it’s different from the
      * previous CI recorded.
      *
+     *
+     * *Some resource types require continuous recording*
      *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
@@ -419,16 +420,16 @@ public interface CfnConfigurationRecorderProps {
     }
 
     /**
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes.
-     * AWS Config supports *Continuous recording* and *Daily recording* .
-     *
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* .
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
      * * Daily recording allows you to receive a configuration item (CI) representing the most
      * recent state of your resources over the last 24-hour period, only if it’s different from the
      * previous CI recorded.
      *
+     *
+     * *Some resource types require continuous recording*
      *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
@@ -441,16 +442,16 @@ public interface CfnConfigurationRecorderProps {
     }
 
     /**
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes.
-     * AWS Config supports *Continuous recording* and *Daily recording* .
-     *
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* .
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
      * * Daily recording allows you to receive a configuration item (CI) representing the most
      * recent state of your resources over the last 24-hour period, only if it’s different from the
      * previous CI recorded.
      *
+     *
+     * *Some resource types require continuous recording*
      *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
@@ -537,10 +538,8 @@ public interface CfnConfigurationRecorderProps {
     override fun recordingGroup(): Any? = unwrap(this).getRecordingGroup()
 
     /**
-     * Specifies the default recording frequency that AWS Config uses to record configuration
-     * changes.
-     *
-     * AWS Config supports *Continuous recording* and *Daily recording* .
+     * Specifies the default recording frequency for the configuration recorder. AWS Config supports
+     * *Continuous recording* and *Daily recording* .
      *
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
@@ -548,6 +547,8 @@ public interface CfnConfigurationRecorderProps {
      * recent state of your resources over the last 24-hour period, only if it’s different from the
      * previous CI recorded.
      *
+     *
+     * *Some resource types require continuous recording*
      *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.

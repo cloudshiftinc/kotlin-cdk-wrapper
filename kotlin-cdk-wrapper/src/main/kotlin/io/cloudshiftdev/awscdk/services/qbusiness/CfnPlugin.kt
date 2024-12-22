@@ -31,7 +31,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.qbusiness.*;
  * Object noAuthConfiguration;
  * CfnPlugin cfnPlugin = CfnPlugin.Builder.create(this, "MyCfnPlugin")
- * .applicationId("applicationId")
  * .authConfiguration(PluginAuthConfigurationProperty.builder()
  * .basicAuthConfiguration(BasicAuthConfigurationProperty.builder()
  * .roleArn("roleArn")
@@ -41,11 +40,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .oAuth2ClientCredentialConfiguration(OAuth2ClientCredentialConfigurationProperty.builder()
  * .roleArn("roleArn")
  * .secretArn("secretArn")
+ * // the properties below are optional
+ * .authorizationUrl("authorizationUrl")
+ * .tokenUrl("tokenUrl")
  * .build())
  * .build())
  * .displayName("displayName")
  * .type("type")
  * // the properties below are optional
+ * .applicationId("applicationId")
  * .customPluginConfiguration(CustomPluginConfigurationProperty.builder()
  * .apiSchema(APISchemaProperty.builder()
  * .payload("payload")
@@ -92,7 +95,7 @@ public open class CfnPlugin(
   /**
    * The identifier of the application that will contain the plugin.
    */
-  public open fun applicationId(): String = unwrap(this).getApplicationId()
+  public open fun applicationId(): String? = unwrap(this).getApplicationId()
 
   /**
    * The identifier of the application that will contain the plugin.
@@ -1044,12 +1047,20 @@ public open class CfnPlugin(
    * OAuth2ClientCredentialConfigurationProperty.builder()
    * .roleArn("roleArn")
    * .secretArn("secretArn")
+   * // the properties below are optional
+   * .authorizationUrl("authorizationUrl")
+   * .tokenUrl("tokenUrl")
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html)
    */
   public interface OAuth2ClientCredentialConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html#cfn-qbusiness-plugin-oauth2clientcredentialconfiguration-authorizationurl)
+     */
+    public fun authorizationUrl(): String? = unwrap(this).getAuthorizationUrl()
+
     /**
      * The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication
      * credentials stored in a Secrets Manager secret.
@@ -1067,10 +1078,20 @@ public open class CfnPlugin(
     public fun secretArn(): String
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html#cfn-qbusiness-plugin-oauth2clientcredentialconfiguration-tokenurl)
+     */
+    public fun tokenUrl(): String? = unwrap(this).getTokenUrl()
+
+    /**
      * A builder for [OAuth2ClientCredentialConfigurationProperty]
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param authorizationUrl the value to be set.
+       */
+      public fun authorizationUrl(authorizationUrl: String)
+
       /**
        * @param roleArn The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0
        * authentication credentials stored in a Secrets Manager secret. 
@@ -1082,6 +1103,11 @@ public open class CfnPlugin(
        * credentials/token used for plugin configuration. 
        */
       public fun secretArn(secretArn: String)
+
+      /**
+       * @param tokenUrl the value to be set.
+       */
+      public fun tokenUrl(tokenUrl: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1089,6 +1115,13 @@ public open class CfnPlugin(
           software.amazon.awscdk.services.qbusiness.CfnPlugin.OAuth2ClientCredentialConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.qbusiness.CfnPlugin.OAuth2ClientCredentialConfigurationProperty.builder()
+
+      /**
+       * @param authorizationUrl the value to be set.
+       */
+      override fun authorizationUrl(authorizationUrl: String) {
+        cdkBuilder.authorizationUrl(authorizationUrl)
+      }
 
       /**
        * @param roleArn The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0
@@ -1106,6 +1139,13 @@ public open class CfnPlugin(
         cdkBuilder.secretArn(secretArn)
       }
 
+      /**
+       * @param tokenUrl the value to be set.
+       */
+      override fun tokenUrl(tokenUrl: String) {
+        cdkBuilder.tokenUrl(tokenUrl)
+      }
+
       public fun build():
           software.amazon.awscdk.services.qbusiness.CfnPlugin.OAuth2ClientCredentialConfigurationProperty
           = cdkBuilder.build()
@@ -1115,6 +1155,11 @@ public open class CfnPlugin(
       cdkObject: software.amazon.awscdk.services.qbusiness.CfnPlugin.OAuth2ClientCredentialConfigurationProperty,
     ) : CdkObject(cdkObject),
         OAuth2ClientCredentialConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html#cfn-qbusiness-plugin-oauth2clientcredentialconfiguration-authorizationurl)
+       */
+      override fun authorizationUrl(): String? = unwrap(this).getAuthorizationUrl()
+
       /**
        * The ARN of an IAM role used by Amazon Q Business to access the OAuth 2.0 authentication
        * credentials stored in a Secrets Manager secret.
@@ -1130,6 +1175,11 @@ public open class CfnPlugin(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html#cfn-qbusiness-plugin-oauth2clientcredentialconfiguration-secretarn)
        */
       override fun secretArn(): String = unwrap(this).getSecretArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-plugin-oauth2clientcredentialconfiguration.html#cfn-qbusiness-plugin-oauth2clientcredentialconfiguration-tokenurl)
+       */
+      override fun tokenUrl(): String? = unwrap(this).getTokenUrl()
     }
 
     public companion object {
@@ -1171,6 +1221,9 @@ public open class CfnPlugin(
    * .oAuth2ClientCredentialConfiguration(OAuth2ClientCredentialConfigurationProperty.builder()
    * .roleArn("roleArn")
    * .secretArn("secretArn")
+   * // the properties below are optional
+   * .authorizationUrl("authorizationUrl")
+   * .tokenUrl("tokenUrl")
    * .build())
    * .build();
    * ```

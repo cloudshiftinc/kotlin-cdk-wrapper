@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -131,11 +132,6 @@ public open class CfnDataSource(
   public open fun attrDataSourceArn(): String = unwrap(this).getAttrDataSourceArn()
 
   /**
-   * The ID value.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * Friendly name for you to identify your AWS AppSync data source after creation.
    */
   public open fun attrName(): String = unwrap(this).getAttrName()
@@ -180,27 +176,31 @@ public open class CfnDataSource(
       dynamoDbConfig(DynamoDBConfigProperty(`value`))
 
   /**
-   * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun elasticsearchConfig(): Any? = unwrap(this).getElasticsearchConfig()
 
   /**
-   * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun elasticsearchConfig(`value`: IResolvable) {
     unwrap(this).setElasticsearchConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun elasticsearchConfig(`value`: ElasticsearchConfigProperty) {
     unwrap(this).setElasticsearchConfig(`value`.let(ElasticsearchConfigProperty.Companion::unwrap))
   }
 
   /**
-   * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("83c2e7247c82d5e138346877167749a065612612e748405dbb788f06dd341875")
   public open fun elasticsearchConfig(`value`: ElasticsearchConfigProperty.Builder.() -> Unit): Unit
@@ -449,42 +449,27 @@ public open class CfnDataSource(
     public fun dynamoDbConfig(dynamoDbConfig: DynamoDBConfigProperty.Builder.() -> Unit)
 
     /**
-     * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
-     *
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig)
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account. 
+     * @deprecated this property has been deprecated
+     * @param elasticsearchConfig 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun elasticsearchConfig(elasticsearchConfig: IResolvable)
 
     /**
-     * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
-     *
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig)
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account. 
+     * @deprecated this property has been deprecated
+     * @param elasticsearchConfig 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty)
 
     /**
-     * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
-     *
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig)
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account. 
+     * @deprecated this property has been deprecated
+     * @param elasticsearchConfig 
      */
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("af23ba3c1884605cbefd293bf604520c0a4999decc3132972519ce6c8f566eec")
     public
@@ -686,6 +671,7 @@ public open class CfnDataSource(
      * * *AMAZON_ELASTICSEARCH* : The data source is an Amazon OpenSearch Service domain.
      * * *AMAZON_EVENTBRIDGE* : The data source is an Amazon EventBridge event bus.
      * * *AMAZON_OPENSEARCH_SERVICE* : The data source is an Amazon OpenSearch Service domain.
+     * * *AMAZON_BEDROCK_RUNTIME* : The data source is the Amazon Bedrock runtime.
      * * *NONE* : There is no data source. This type is used when you wish to invoke a GraphQL
      * operation without connecting to a data source, such as performing data transformation with
      * resolvers or triggering a subscription to be invoked from a mutation.
@@ -758,46 +744,31 @@ public open class CfnDataSource(
         dynamoDbConfig(DynamoDBConfigProperty(dynamoDbConfig))
 
     /**
-     * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
-     *
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig)
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account. 
+     * @deprecated this property has been deprecated
+     * @param elasticsearchConfig 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun elasticsearchConfig(elasticsearchConfig: IResolvable) {
       cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
-     *
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig)
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account. 
+     * @deprecated this property has been deprecated
+     * @param elasticsearchConfig 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun elasticsearchConfig(elasticsearchConfig: ElasticsearchConfigProperty) {
       cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(ElasticsearchConfigProperty.Companion::unwrap))
     }
 
     /**
-     * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
-     *
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig)
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account. 
+     * @deprecated this property has been deprecated
+     * @param elasticsearchConfig 
      */
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("af23ba3c1884605cbefd293bf604520c0a4999decc3132972519ce6c8f566eec")
     override
@@ -1032,6 +1003,7 @@ public open class CfnDataSource(
      * * *AMAZON_ELASTICSEARCH* : The data source is an Amazon OpenSearch Service domain.
      * * *AMAZON_EVENTBRIDGE* : The data source is an Amazon EventBridge event bus.
      * * *AMAZON_OPENSEARCH_SERVICE* : The data source is an Amazon OpenSearch Service domain.
+     * * *AMAZON_BEDROCK_RUNTIME* : The data source is the Amazon Bedrock runtime.
      * * *NONE* : There is no data source. This type is used when you wish to invoke a GraphQL
      * operation without connecting to a data source, such as performing data transformation with
      * resolvers or triggering a subscription to be invoked from a mutation.
@@ -1735,17 +1707,6 @@ public open class CfnDataSource(
   }
 
   /**
-   * The `ElasticsearchConfig` property type specifies the `AwsRegion` and `Endpoints` for an Amazon
-   * OpenSearch Service domain in your account for an AWS AppSync data source.
-   *
-   * ElasticsearchConfig is a property of the
-   * [AWS::AppSync::DataSource](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html)
-   * property type.
-   *
-   * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This property
-   * is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an OpenSearch
-   * Service data source.
-   *
    * Example:
    *
    * ```

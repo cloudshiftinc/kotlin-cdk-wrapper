@@ -86,7 +86,9 @@ public interface BastionHostLinuxProps {
   /**
    * The machine image to use, assumed to have SSM Agent preinstalled.
    *
-   * Default: - An Amazon Linux 2 image which is kept up-to-date automatically (the instance
+   * Default: - An Amazon Linux 2023 image if the
+   * `@aws-cdk/aws-ec2:bastionHostUseAmazonLinux2023ByDefault` feature flag is enabled. Otherwise, an
+   * Amazon Linux 2 image. In both cases, the image is kept up-to-date automatically (the instance
    * may be replaced on every deployment) and already has SSM Agent installed.
    */
   public fun machineImage(): IMachineImage? =
@@ -117,6 +119,25 @@ public interface BastionHostLinuxProps {
    */
   public fun subnetSelection(): SubnetSelection? =
       unwrap(this).getSubnetSelection()?.let(SubnetSelection::wrap)
+
+  /**
+   * Determines whether changes to the UserData will force instance replacement.
+   *
+   * Depending on the EC2 instance type, modifying the UserData may either restart
+   * or replace the instance:
+   *
+   * * Instance store-backed instances are replaced.
+   * * EBS-backed instances are restarted.
+   *
+   * Note that by default, restarting does not execute the updated UserData, so an alternative
+   * mechanism is needed to ensure the instance re-executes the UserData.
+   *
+   * When set to `true`, the instance's Logical ID will depend on the UserData, causing
+   * CloudFormation to replace the instance if the UserData changes.
+   *
+   * Default: - `true` if `initOptions` is specified, otherwise `false`.
+   */
+  public fun userDataCausesReplacement(): Boolean? = unwrap(this).getUserDataCausesReplacement()
 
   /**
    * VPC to launch the instance in.
@@ -214,6 +235,23 @@ public interface BastionHostLinuxProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("69cc1990bc11a26236389fe1d922244ecc49b5f0f6bcc7c7c5c1dfaa54039dee")
     public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
+
+    /**
+     * @param userDataCausesReplacement Determines whether changes to the UserData will force
+     * instance replacement.
+     * Depending on the EC2 instance type, modifying the UserData may either restart
+     * or replace the instance:
+     *
+     * * Instance store-backed instances are replaced.
+     * * EBS-backed instances are restarted.
+     *
+     * Note that by default, restarting does not execute the updated UserData, so an alternative
+     * mechanism is needed to ensure the instance re-executes the UserData.
+     *
+     * When set to `true`, the instance's Logical ID will depend on the UserData, causing
+     * CloudFormation to replace the instance if the UserData changes.
+     */
+    public fun userDataCausesReplacement(userDataCausesReplacement: Boolean)
 
     /**
      * @param vpc VPC to launch the instance in. 
@@ -336,6 +374,25 @@ public interface BastionHostLinuxProps {
         subnetSelection(SubnetSelection(subnetSelection))
 
     /**
+     * @param userDataCausesReplacement Determines whether changes to the UserData will force
+     * instance replacement.
+     * Depending on the EC2 instance type, modifying the UserData may either restart
+     * or replace the instance:
+     *
+     * * Instance store-backed instances are replaced.
+     * * EBS-backed instances are restarted.
+     *
+     * Note that by default, restarting does not execute the updated UserData, so an alternative
+     * mechanism is needed to ensure the instance re-executes the UserData.
+     *
+     * When set to `true`, the instance's Logical ID will depend on the UserData, causing
+     * CloudFormation to replace the instance if the UserData changes.
+     */
+    override fun userDataCausesReplacement(userDataCausesReplacement: Boolean) {
+      cdkBuilder.userDataCausesReplacement(userDataCausesReplacement)
+    }
+
+    /**
      * @param vpc VPC to launch the instance in. 
      */
     override fun vpc(vpc: IVpc) {
@@ -409,7 +466,9 @@ public interface BastionHostLinuxProps {
     /**
      * The machine image to use, assumed to have SSM Agent preinstalled.
      *
-     * Default: - An Amazon Linux 2 image which is kept up-to-date automatically (the instance
+     * Default: - An Amazon Linux 2023 image if the
+     * `@aws-cdk/aws-ec2:bastionHostUseAmazonLinux2023ByDefault` feature flag is enabled. Otherwise, an
+     * Amazon Linux 2 image. In both cases, the image is kept up-to-date automatically (the instance
      * may be replaced on every deployment) and already has SSM Agent installed.
      */
     override fun machineImage(): IMachineImage? =
@@ -441,6 +500,25 @@ public interface BastionHostLinuxProps {
      */
     override fun subnetSelection(): SubnetSelection? =
         unwrap(this).getSubnetSelection()?.let(SubnetSelection::wrap)
+
+    /**
+     * Determines whether changes to the UserData will force instance replacement.
+     *
+     * Depending on the EC2 instance type, modifying the UserData may either restart
+     * or replace the instance:
+     *
+     * * Instance store-backed instances are replaced.
+     * * EBS-backed instances are restarted.
+     *
+     * Note that by default, restarting does not execute the updated UserData, so an alternative
+     * mechanism is needed to ensure the instance re-executes the UserData.
+     *
+     * When set to `true`, the instance's Logical ID will depend on the UserData, causing
+     * CloudFormation to replace the instance if the UserData changes.
+     *
+     * Default: - `true` if `initOptions` is specified, otherwise `false`.
+     */
+    override fun userDataCausesReplacement(): Boolean? = unwrap(this).getUserDataCausesReplacement()
 
     /**
      * VPC to launch the instance in.

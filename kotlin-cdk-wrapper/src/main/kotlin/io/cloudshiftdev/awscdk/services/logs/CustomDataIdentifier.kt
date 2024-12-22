@@ -21,7 +21,7 @@ import kotlin.String
  * Bucket bucket = new Bucket(this, "audit-bucket");
  * S3Bucket s3Destination = new S3Bucket(bucket);
  * DeliveryStream deliveryStream = DeliveryStream.Builder.create(this, "Delivery Stream")
- * .destinations(List.of(s3Destination))
+ * .destination(s3Destination)
  * .build();
  * DataProtectionPolicy dataProtectionPolicy = DataProtectionPolicy.Builder.create()
  * .name("data protection policy")

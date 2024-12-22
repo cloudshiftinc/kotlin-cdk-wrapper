@@ -3,13 +3,17 @@
 package io.cloudshiftdev.awscdk.services.workspacesweb
 
 import io.cloudshiftdev.awscdk.CfnResource
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
 import io.cloudshiftdev.awscdk.IResolvable
+import io.cloudshiftdev.awscdk.ITaggableV2
+import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Any
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.collections.Map
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -33,6 +37,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .identityProviderType("identityProviderType")
  * // the properties below are optional
  * .portalArn("portalArn")
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -41,7 +49,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 public open class CfnIdentityProvider(
   cdkObject: software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider,
 ) : CfnResource(cdkObject),
-    IInspectable {
+    IInspectable,
+    ITaggableV2 {
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -62,6 +71,12 @@ public open class CfnIdentityProvider(
    * The ARN of the identity provider.
    */
   public open fun attrIdentityProviderArn(): String = unwrap(this).getAttrIdentityProviderArn()
+
+  /**
+   * Tag Manager which manages the tags for this resource.
+   */
+  public override fun cdkTagManager(): TagManager =
+      unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
    * The identity provider details.
@@ -132,6 +147,23 @@ public open class CfnIdentityProvider(
   public open fun portalArn(`value`: String) {
     unwrap(this).setPortalArn(`value`)
   }
+
+  /**
+   *
+   */
+  public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   *
+   */
+  public open fun tags(`value`: List<CfnTag>) {
+    unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.workspacesweb.CfnIdentityProvider].
@@ -245,6 +277,18 @@ public open class CfnIdentityProvider(
      * @param portalArn The ARN of the identity provider. 
      */
     public fun portalArn(portalArn: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-identityprovider.html#cfn-workspacesweb-identityprovider-tags)
+     * @param tags 
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-identityprovider.html#cfn-workspacesweb-identityprovider-tags)
+     * @param tags 
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl(
@@ -372,6 +416,20 @@ public open class CfnIdentityProvider(
     override fun portalArn(portalArn: String) {
       cdkBuilder.portalArn(portalArn)
     }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-identityprovider.html#cfn-workspacesweb-identityprovider-tags)
+     * @param tags 
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-identityprovider.html#cfn-workspacesweb-identityprovider-tags)
+     * @param tags 
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.workspacesweb.CfnIdentityProvider =
         cdkBuilder.build()

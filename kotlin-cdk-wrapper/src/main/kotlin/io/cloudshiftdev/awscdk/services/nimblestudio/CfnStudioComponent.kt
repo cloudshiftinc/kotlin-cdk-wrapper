@@ -79,12 +79,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .runContext("runContext")
  * .script("script")
  * .build()))
- * .runtimeRoleArn("runtimeRoleArn")
  * .scriptParameters(List.of(ScriptParameterKeyValueProperty.builder()
  * .key("key")
  * .value("value")
  * .build()))
- * .secureInitializationRoleArn("secureInitializationRoleArn")
  * .subtype("subtype")
  * .tags(Map.of(
  * "tagsKey", "tags"))
@@ -224,20 +222,6 @@ public open class CfnStudioComponent(
   }
 
   /**
-   * An IAM role attached to a Studio Component that gives the studio component access to AWS
-   * resources at anytime while the instance is running.
-   */
-  public open fun runtimeRoleArn(): String? = unwrap(this).getRuntimeRoleArn()
-
-  /**
-   * An IAM role attached to a Studio Component that gives the studio component access to AWS
-   * resources at anytime while the instance is running.
-   */
-  public open fun runtimeRoleArn(`value`: String) {
-    unwrap(this).setRuntimeRoleArn(`value`)
-  }
-
-  /**
    * Parameters for the studio component scripts.
    */
   public open fun scriptParameters(): Any? = unwrap(this).getScriptParameters()
@@ -260,21 +244,6 @@ public open class CfnStudioComponent(
    * Parameters for the studio component scripts.
    */
   public open fun scriptParameters(vararg `value`: Any): Unit = scriptParameters(`value`.toList())
-
-  /**
-   * An IAM role attached to Studio Component when the system initialization script runs which give
-   * the studio component access to AWS resources when the system initialization script runs.
-   */
-  public open fun secureInitializationRoleArn(): String? =
-      unwrap(this).getSecureInitializationRoleArn()
-
-  /**
-   * An IAM role attached to Studio Component when the system initialization script runs which give
-   * the studio component access to AWS resources when the system initialization script runs.
-   */
-  public open fun secureInitializationRoleArn(`value`: String) {
-    unwrap(this).setSecureInitializationRoleArn(`value`)
-  }
 
   /**
    * The unique identifier for a studio resource.
@@ -419,16 +388,6 @@ public open class CfnStudioComponent(
     public fun name(name: String)
 
     /**
-     * An IAM role attached to a Studio Component that gives the studio component access to AWS
-     * resources at anytime while the instance is running.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-runtimerolearn)
-     * @param runtimeRoleArn An IAM role attached to a Studio Component that gives the studio
-     * component access to AWS resources at anytime while the instance is running. 
-     */
-    public fun runtimeRoleArn(runtimeRoleArn: String)
-
-    /**
      * Parameters for the studio component scripts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-scriptparameters)
@@ -451,17 +410,6 @@ public open class CfnStudioComponent(
      * @param scriptParameters Parameters for the studio component scripts. 
      */
     public fun scriptParameters(vararg scriptParameters: Any)
-
-    /**
-     * An IAM role attached to Studio Component when the system initialization script runs which
-     * give the studio component access to AWS resources when the system initialization script runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-secureinitializationrolearn)
-     * @param secureInitializationRoleArn An IAM role attached to Studio Component when the system
-     * initialization script runs which give the studio component access to AWS resources when the
-     * system initialization script runs. 
-     */
-    public fun secureInitializationRoleArn(secureInitializationRoleArn: String)
 
     /**
      * The unique identifier for a studio resource.
@@ -612,18 +560,6 @@ public open class CfnStudioComponent(
     }
 
     /**
-     * An IAM role attached to a Studio Component that gives the studio component access to AWS
-     * resources at anytime while the instance is running.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-runtimerolearn)
-     * @param runtimeRoleArn An IAM role attached to a Studio Component that gives the studio
-     * component access to AWS resources at anytime while the instance is running. 
-     */
-    override fun runtimeRoleArn(runtimeRoleArn: String) {
-      cdkBuilder.runtimeRoleArn(runtimeRoleArn)
-    }
-
-    /**
      * Parameters for the studio component scripts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-scriptparameters)
@@ -651,19 +587,6 @@ public open class CfnStudioComponent(
      */
     override fun scriptParameters(vararg scriptParameters: Any): Unit =
         scriptParameters(scriptParameters.toList())
-
-    /**
-     * An IAM role attached to Studio Component when the system initialization script runs which
-     * give the studio component access to AWS resources when the system initialization script runs.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-nimblestudio-studiocomponent.html#cfn-nimblestudio-studiocomponent-secureinitializationrolearn)
-     * @param secureInitializationRoleArn An IAM role attached to Studio Component when the system
-     * initialization script runs which give the studio component access to AWS resources when the
-     * system initialization script runs. 
-     */
-    override fun secureInitializationRoleArn(secureInitializationRoleArn: String) {
-      cdkBuilder.secureInitializationRoleArn(secureInitializationRoleArn)
-    }
 
     /**
      * The unique identifier for a studio resource.

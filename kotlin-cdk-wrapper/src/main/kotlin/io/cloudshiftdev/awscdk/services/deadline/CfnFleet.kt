@@ -91,6 +91,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .max(123)
  * .build())
  * // the properties below are optional
+ * .acceleratorCapabilities(AcceleratorCapabilitiesProperty.builder()
+ * .selections(List.of(AcceleratorSelectionProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .runtime("runtime")
+ * .build()))
+ * // the properties below are optional
+ * .count(AcceleratorCountRangeProperty.builder()
+ * .min(123)
+ * // the properties below are optional
+ * .max(123)
+ * .build())
+ * .build())
  * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
  * .customAmounts(List.of(FleetAmountCapabilityProperty.builder()
  * .min(123)
@@ -574,7 +587,202 @@ public open class CfnFleet(
   }
 
   /**
-   * The range for the GPU fleet acceleration.
+   * Provides information about the GPU accelerators used for jobs processed by a fleet.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.deadline.*;
+   * AcceleratorCapabilitiesProperty acceleratorCapabilitiesProperty =
+   * AcceleratorCapabilitiesProperty.builder()
+   * .selections(List.of(AcceleratorSelectionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .runtime("runtime")
+   * .build()))
+   * // the properties below are optional
+   * .count(AcceleratorCountRangeProperty.builder()
+   * .min(123)
+   * // the properties below are optional
+   * .max(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorcapabilities.html)
+   */
+  public interface AcceleratorCapabilitiesProperty {
+    /**
+     * The number of GPU accelerators specified for worker hosts in this fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorcapabilities.html#cfn-deadline-fleet-acceleratorcapabilities-count)
+     */
+    public fun count(): Any? = unwrap(this).getCount()
+
+    /**
+     * A list of accelerator capabilities requested for this fleet.
+     *
+     * Only Amazon Elastic Compute Cloud instances that provide these capabilities will be used. For
+     * example, if you specify both L4 and T4 chips, Deadline Cloud will use Amazon EC2 instances that
+     * have either the L4 or the T4 chip installed.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorcapabilities.html#cfn-deadline-fleet-acceleratorcapabilities-selections)
+     */
+    public fun selections(): Any
+
+    /**
+     * A builder for [AcceleratorCapabilitiesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param count The number of GPU accelerators specified for worker hosts in this fleet.
+       */
+      public fun count(count: IResolvable)
+
+      /**
+       * @param count The number of GPU accelerators specified for worker hosts in this fleet.
+       */
+      public fun count(count: AcceleratorCountRangeProperty)
+
+      /**
+       * @param count The number of GPU accelerators specified for worker hosts in this fleet.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f7af5396f782beed6c8649e73efba2796d8ecd0fb0abec8472562a41c47f3abe")
+      public fun count(count: AcceleratorCountRangeProperty.Builder.() -> Unit)
+
+      /**
+       * @param selections A list of accelerator capabilities requested for this fleet. 
+       * Only Amazon Elastic Compute Cloud instances that provide these capabilities will be used.
+       * For example, if you specify both L4 and T4 chips, Deadline Cloud will use Amazon EC2 instances
+       * that have either the L4 or the T4 chip installed.
+       */
+      public fun selections(selections: IResolvable)
+
+      /**
+       * @param selections A list of accelerator capabilities requested for this fleet. 
+       * Only Amazon Elastic Compute Cloud instances that provide these capabilities will be used.
+       * For example, if you specify both L4 and T4 chips, Deadline Cloud will use Amazon EC2 instances
+       * that have either the L4 or the T4 chip installed.
+       */
+      public fun selections(selections: List<Any>)
+
+      /**
+       * @param selections A list of accelerator capabilities requested for this fleet. 
+       * Only Amazon Elastic Compute Cloud instances that provide these capabilities will be used.
+       * For example, if you specify both L4 and T4 chips, Deadline Cloud will use Amazon EC2 instances
+       * that have either the L4 or the T4 chip installed.
+       */
+      public fun selections(vararg selections: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorCapabilitiesProperty.Builder
+          =
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorCapabilitiesProperty.builder()
+
+      /**
+       * @param count The number of GPU accelerators specified for worker hosts in this fleet.
+       */
+      override fun count(count: IResolvable) {
+        cdkBuilder.count(count.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param count The number of GPU accelerators specified for worker hosts in this fleet.
+       */
+      override fun count(count: AcceleratorCountRangeProperty) {
+        cdkBuilder.count(count.let(AcceleratorCountRangeProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param count The number of GPU accelerators specified for worker hosts in this fleet.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f7af5396f782beed6c8649e73efba2796d8ecd0fb0abec8472562a41c47f3abe")
+      override fun count(count: AcceleratorCountRangeProperty.Builder.() -> Unit): Unit =
+          count(AcceleratorCountRangeProperty(count))
+
+      /**
+       * @param selections A list of accelerator capabilities requested for this fleet. 
+       * Only Amazon Elastic Compute Cloud instances that provide these capabilities will be used.
+       * For example, if you specify both L4 and T4 chips, Deadline Cloud will use Amazon EC2 instances
+       * that have either the L4 or the T4 chip installed.
+       */
+      override fun selections(selections: IResolvable) {
+        cdkBuilder.selections(selections.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param selections A list of accelerator capabilities requested for this fleet. 
+       * Only Amazon Elastic Compute Cloud instances that provide these capabilities will be used.
+       * For example, if you specify both L4 and T4 chips, Deadline Cloud will use Amazon EC2 instances
+       * that have either the L4 or the T4 chip installed.
+       */
+      override fun selections(selections: List<Any>) {
+        cdkBuilder.selections(selections.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param selections A list of accelerator capabilities requested for this fleet. 
+       * Only Amazon Elastic Compute Cloud instances that provide these capabilities will be used.
+       * For example, if you specify both L4 and T4 chips, Deadline Cloud will use Amazon EC2 instances
+       * that have either the L4 or the T4 chip installed.
+       */
+      override fun selections(vararg selections: Any): Unit = selections(selections.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorCapabilitiesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorCapabilitiesProperty,
+    ) : CdkObject(cdkObject),
+        AcceleratorCapabilitiesProperty {
+      /**
+       * The number of GPU accelerators specified for worker hosts in this fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorcapabilities.html#cfn-deadline-fleet-acceleratorcapabilities-count)
+       */
+      override fun count(): Any? = unwrap(this).getCount()
+
+      /**
+       * A list of accelerator capabilities requested for this fleet.
+       *
+       * Only Amazon Elastic Compute Cloud instances that provide these capabilities will be used.
+       * For example, if you specify both L4 and T4 chips, Deadline Cloud will use Amazon EC2 instances
+       * that have either the L4 or the T4 chip installed.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorcapabilities.html#cfn-deadline-fleet-acceleratorcapabilities-selections)
+       */
+      override fun selections(): Any = unwrap(this).getSelections()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AcceleratorCapabilitiesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorCapabilitiesProperty):
+          AcceleratorCapabilitiesProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AcceleratorCapabilitiesProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AcceleratorCapabilitiesProperty):
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorCapabilitiesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorCapabilitiesProperty
+    }
+  }
+
+  /**
+   * Defines the maximum and minimum number of GPU accelerators required for a worker instance..
    *
    * Example:
    *
@@ -594,14 +802,14 @@ public open class CfnFleet(
    */
   public interface AcceleratorCountRangeProperty {
     /**
-     * The maximum GPU for the accelerator.
+     * The maximum number of GPU accelerators in the worker host.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorcountrange.html#cfn-deadline-fleet-acceleratorcountrange-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * The minimum GPU for the accelerator.
+     * The minimum number of GPU accelerators in the worker host.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorcountrange.html#cfn-deadline-fleet-acceleratorcountrange-min)
      */
@@ -613,12 +821,12 @@ public open class CfnFleet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param max The maximum GPU for the accelerator.
+       * @param max The maximum number of GPU accelerators in the worker host.
        */
       public fun max(max: Number)
 
       /**
-       * @param min The minimum GPU for the accelerator. 
+       * @param min The minimum number of GPU accelerators in the worker host. 
        */
       public fun min(min: Number)
     }
@@ -629,14 +837,14 @@ public open class CfnFleet(
           software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorCountRangeProperty.builder()
 
       /**
-       * @param max The maximum GPU for the accelerator.
+       * @param max The maximum number of GPU accelerators in the worker host.
        */
       override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
       /**
-       * @param min The minimum GPU for the accelerator. 
+       * @param min The minimum number of GPU accelerators in the worker host. 
        */
       override fun min(min: Number) {
         cdkBuilder.min(min)
@@ -652,14 +860,14 @@ public open class CfnFleet(
     ) : CdkObject(cdkObject),
         AcceleratorCountRangeProperty {
       /**
-       * The maximum GPU for the accelerator.
+       * The maximum number of GPU accelerators in the worker host.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorcountrange.html#cfn-deadline-fleet-acceleratorcountrange-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * The minimum GPU for the accelerator.
+       * The minimum number of GPU accelerators in the worker host.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorcountrange.html#cfn-deadline-fleet-acceleratorcountrange-min)
        */
@@ -685,7 +893,210 @@ public open class CfnFleet(
   }
 
   /**
-   * The range for memory, in MiB, to use for the accelerator.
+   * Describes a specific GPU accelerator required for an Amazon Elastic Compute Cloud worker host.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.deadline.*;
+   * AcceleratorSelectionProperty acceleratorSelectionProperty =
+   * AcceleratorSelectionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .runtime("runtime")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorselection.html)
+   */
+  public interface AcceleratorSelectionProperty {
+    /**
+     * The name of the chip used by the GPU accelerator.
+     *
+     * If you specify `l4` as the name of the accelerator, you must specify `latest` or `grid:r550`
+     * as the runtime.
+     *
+     * The available GPU accelerators are:
+     *
+     * * `t4` - NVIDIA T4 Tensor Core GPU
+     * * `a10g` - NVIDIA A10G Tensor Core GPU
+     * * `l4` - NVIDIA L4 Tensor Core GPU
+     * * `l40s` - NVIDIA L40S Tensor Core GPU
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorselection.html#cfn-deadline-fleet-acceleratorselection-name)
+     */
+    public fun name(): String
+
+    /**
+     * Specifies the runtime driver to use for the GPU accelerator. You must use the same runtime
+     * for all GPUs.
+     *
+     * You can choose from the following runtimes:
+     *
+     * * `latest` - Use the latest runtime available for the chip. If you specify `latest` and a new
+     * version of the runtime is released, the new version of the runtime is used.
+     * * `grid:r550` - [NVIDIA vGPU software
+     * 17](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/17.0/index.html)
+     * * `grid:r535` - [NVIDIA vGPU software
+     * 16](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/16.0/index.html)
+     *
+     * If you don't specify a runtime, Deadline Cloud uses `latest` as the default. However, if you
+     * have multiple accelerators and specify `latest` for some and leave others blank, Deadline Cloud
+     * raises an exception.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorselection.html#cfn-deadline-fleet-acceleratorselection-runtime)
+     */
+    public fun runtime(): String? = unwrap(this).getRuntime()
+
+    /**
+     * A builder for [AcceleratorSelectionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param name The name of the chip used by the GPU accelerator. 
+       * If you specify `l4` as the name of the accelerator, you must specify `latest` or
+       * `grid:r550` as the runtime.
+       *
+       * The available GPU accelerators are:
+       *
+       * * `t4` - NVIDIA T4 Tensor Core GPU
+       * * `a10g` - NVIDIA A10G Tensor Core GPU
+       * * `l4` - NVIDIA L4 Tensor Core GPU
+       * * `l40s` - NVIDIA L40S Tensor Core GPU
+       */
+      public fun name(name: String)
+
+      /**
+       * @param runtime Specifies the runtime driver to use for the GPU accelerator. You must use
+       * the same runtime for all GPUs.
+       * You can choose from the following runtimes:
+       *
+       * * `latest` - Use the latest runtime available for the chip. If you specify `latest` and a
+       * new version of the runtime is released, the new version of the runtime is used.
+       * * `grid:r550` - [NVIDIA vGPU software
+       * 17](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/17.0/index.html)
+       * * `grid:r535` - [NVIDIA vGPU software
+       * 16](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/16.0/index.html)
+       *
+       * If you don't specify a runtime, Deadline Cloud uses `latest` as the default. However, if
+       * you have multiple accelerators and specify `latest` for some and leave others blank, Deadline
+       * Cloud raises an exception.
+       */
+      public fun runtime(runtime: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorSelectionProperty.Builder =
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorSelectionProperty.builder()
+
+      /**
+       * @param name The name of the chip used by the GPU accelerator. 
+       * If you specify `l4` as the name of the accelerator, you must specify `latest` or
+       * `grid:r550` as the runtime.
+       *
+       * The available GPU accelerators are:
+       *
+       * * `t4` - NVIDIA T4 Tensor Core GPU
+       * * `a10g` - NVIDIA A10G Tensor Core GPU
+       * * `l4` - NVIDIA L4 Tensor Core GPU
+       * * `l40s` - NVIDIA L40S Tensor Core GPU
+       */
+      override fun name(name: String) {
+        cdkBuilder.name(name)
+      }
+
+      /**
+       * @param runtime Specifies the runtime driver to use for the GPU accelerator. You must use
+       * the same runtime for all GPUs.
+       * You can choose from the following runtimes:
+       *
+       * * `latest` - Use the latest runtime available for the chip. If you specify `latest` and a
+       * new version of the runtime is released, the new version of the runtime is used.
+       * * `grid:r550` - [NVIDIA vGPU software
+       * 17](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/17.0/index.html)
+       * * `grid:r535` - [NVIDIA vGPU software
+       * 16](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/16.0/index.html)
+       *
+       * If you don't specify a runtime, Deadline Cloud uses `latest` as the default. However, if
+       * you have multiple accelerators and specify `latest` for some and leave others blank, Deadline
+       * Cloud raises an exception.
+       */
+      override fun runtime(runtime: String) {
+        cdkBuilder.runtime(runtime)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorSelectionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorSelectionProperty,
+    ) : CdkObject(cdkObject),
+        AcceleratorSelectionProperty {
+      /**
+       * The name of the chip used by the GPU accelerator.
+       *
+       * If you specify `l4` as the name of the accelerator, you must specify `latest` or
+       * `grid:r550` as the runtime.
+       *
+       * The available GPU accelerators are:
+       *
+       * * `t4` - NVIDIA T4 Tensor Core GPU
+       * * `a10g` - NVIDIA A10G Tensor Core GPU
+       * * `l4` - NVIDIA L4 Tensor Core GPU
+       * * `l40s` - NVIDIA L40S Tensor Core GPU
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorselection.html#cfn-deadline-fleet-acceleratorselection-name)
+       */
+      override fun name(): String = unwrap(this).getName()
+
+      /**
+       * Specifies the runtime driver to use for the GPU accelerator. You must use the same runtime
+       * for all GPUs.
+       *
+       * You can choose from the following runtimes:
+       *
+       * * `latest` - Use the latest runtime available for the chip. If you specify `latest` and a
+       * new version of the runtime is released, the new version of the runtime is used.
+       * * `grid:r550` - [NVIDIA vGPU software
+       * 17](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/17.0/index.html)
+       * * `grid:r535` - [NVIDIA vGPU software
+       * 16](https://docs.aws.amazon.com/https://docs.nvidia.com/vgpu/16.0/index.html)
+       *
+       * If you don't specify a runtime, Deadline Cloud uses `latest` as the default. However, if
+       * you have multiple accelerators and specify `latest` for some and leave others blank, Deadline
+       * Cloud raises an exception.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-acceleratorselection.html#cfn-deadline-fleet-acceleratorselection-runtime)
+       */
+      override fun runtime(): String? = unwrap(this).getRuntime()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AcceleratorSelectionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorSelectionProperty):
+          AcceleratorSelectionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AcceleratorSelectionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AcceleratorSelectionProperty):
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorSelectionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.deadline.CfnFleet.AcceleratorSelectionProperty
+    }
+  }
+
+  /**
+   * Defines the maximum and minimum amount of memory, in MiB, to use for the accelerator.
    *
    * Example:
    *
@@ -2148,6 +2559,19 @@ public open class CfnFleet(
    * .max(123)
    * .build())
    * // the properties below are optional
+   * .acceleratorCapabilities(AcceleratorCapabilitiesProperty.builder()
+   * .selections(List.of(AcceleratorSelectionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .runtime("runtime")
+   * .build()))
+   * // the properties below are optional
+   * .count(AcceleratorCountRangeProperty.builder()
+   * .min(123)
+   * // the properties below are optional
+   * .max(123)
+   * .build())
+   * .build())
    * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
    * .customAmounts(List.of(FleetAmountCapabilityProperty.builder()
    * .min(123)
@@ -2466,6 +2890,19 @@ public open class CfnFleet(
    * .max(123)
    * .build())
    * // the properties below are optional
+   * .acceleratorCapabilities(AcceleratorCapabilitiesProperty.builder()
+   * .selections(List.of(AcceleratorSelectionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .runtime("runtime")
+   * .build()))
+   * // the properties below are optional
+   * .count(AcceleratorCountRangeProperty.builder()
+   * .min(123)
+   * // the properties below are optional
+   * .max(123)
+   * .build())
+   * .build())
    * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
    * .customAmounts(List.of(FleetAmountCapabilityProperty.builder()
    * .min(123)
@@ -2674,6 +3111,19 @@ public open class CfnFleet(
    * .max(123)
    * .build())
    * // the properties below are optional
+   * .acceleratorCapabilities(AcceleratorCapabilitiesProperty.builder()
+   * .selections(List.of(AcceleratorSelectionProperty.builder()
+   * .name("name")
+   * // the properties below are optional
+   * .runtime("runtime")
+   * .build()))
+   * // the properties below are optional
+   * .count(AcceleratorCountRangeProperty.builder()
+   * .min(123)
+   * // the properties below are optional
+   * .max(123)
+   * .build())
+   * .build())
    * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
    * .customAmounts(List.of(FleetAmountCapabilityProperty.builder()
    * .min(123)
@@ -2697,6 +3147,13 @@ public open class CfnFleet(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2instancecapabilities.html)
    */
   public interface ServiceManagedEc2InstanceCapabilitiesProperty {
+    /**
+     * Describes the GPU accelerator capabilities required for worker host instances in this fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2instancecapabilities.html#cfn-deadline-fleet-servicemanagedec2instancecapabilities-acceleratorcapabilities)
+     */
+    public fun acceleratorCapabilities(): Any? = unwrap(this).getAcceleratorCapabilities()
+
     /**
      * The allowable Amazon EC2 instance types.
      *
@@ -2767,6 +3224,27 @@ public open class CfnFleet(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param acceleratorCapabilities Describes the GPU accelerator capabilities required for
+       * worker host instances in this fleet.
+       */
+      public fun acceleratorCapabilities(acceleratorCapabilities: IResolvable)
+
+      /**
+       * @param acceleratorCapabilities Describes the GPU accelerator capabilities required for
+       * worker host instances in this fleet.
+       */
+      public fun acceleratorCapabilities(acceleratorCapabilities: AcceleratorCapabilitiesProperty)
+
+      /**
+       * @param acceleratorCapabilities Describes the GPU accelerator capabilities required for
+       * worker host instances in this fleet.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("12ae8da0592853fdd04a3d23b10e7e6ad78b68a1d1975619f6ca9760c0436432")
+      public
+          fun acceleratorCapabilities(acceleratorCapabilities: AcceleratorCapabilitiesProperty.Builder.() -> Unit)
+
       /**
        * @param allowedInstanceTypes The allowable Amazon EC2 instance types.
        */
@@ -2887,6 +3365,33 @@ public open class CfnFleet(
           software.amazon.awscdk.services.deadline.CfnFleet.ServiceManagedEc2InstanceCapabilitiesProperty.Builder
           =
           software.amazon.awscdk.services.deadline.CfnFleet.ServiceManagedEc2InstanceCapabilitiesProperty.builder()
+
+      /**
+       * @param acceleratorCapabilities Describes the GPU accelerator capabilities required for
+       * worker host instances in this fleet.
+       */
+      override fun acceleratorCapabilities(acceleratorCapabilities: IResolvable) {
+        cdkBuilder.acceleratorCapabilities(acceleratorCapabilities.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param acceleratorCapabilities Describes the GPU accelerator capabilities required for
+       * worker host instances in this fleet.
+       */
+      override
+          fun acceleratorCapabilities(acceleratorCapabilities: AcceleratorCapabilitiesProperty) {
+        cdkBuilder.acceleratorCapabilities(acceleratorCapabilities.let(AcceleratorCapabilitiesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param acceleratorCapabilities Describes the GPU accelerator capabilities required for
+       * worker host instances in this fleet.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("12ae8da0592853fdd04a3d23b10e7e6ad78b68a1d1975619f6ca9760c0436432")
+      override
+          fun acceleratorCapabilities(acceleratorCapabilities: AcceleratorCapabilitiesProperty.Builder.() -> Unit):
+          Unit = acceleratorCapabilities(AcceleratorCapabilitiesProperty(acceleratorCapabilities))
 
       /**
        * @param allowedInstanceTypes The allowable Amazon EC2 instance types.
@@ -3046,6 +3551,14 @@ public open class CfnFleet(
       cdkObject: software.amazon.awscdk.services.deadline.CfnFleet.ServiceManagedEc2InstanceCapabilitiesProperty,
     ) : CdkObject(cdkObject),
         ServiceManagedEc2InstanceCapabilitiesProperty {
+      /**
+       * Describes the GPU accelerator capabilities required for worker host instances in this
+       * fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-deadline-fleet-servicemanagedec2instancecapabilities.html#cfn-deadline-fleet-servicemanagedec2instancecapabilities-acceleratorcapabilities)
+       */
+      override fun acceleratorCapabilities(): Any? = unwrap(this).getAcceleratorCapabilities()
+
       /**
        * The allowable Amazon EC2 instance types.
        *

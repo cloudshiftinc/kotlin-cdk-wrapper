@@ -183,12 +183,12 @@ public open class CfnScene(
   }
 
   /**
-   * The ID of the scene.
+   * The ID of the workspace.
    */
   public open fun workspaceId(): String = unwrap(this).getWorkspaceId()
 
   /**
-   * The ID of the scene.
+   * The ID of the workspace.
    */
   public open fun workspaceId(`value`: String) {
     unwrap(this).setWorkspaceId(`value`)
@@ -265,10 +265,10 @@ public open class CfnScene(
     public fun tags(tags: Map<String, String>)
 
     /**
-     * The ID of the scene.
+     * The ID of the workspace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-workspaceid)
-     * @param workspaceId The ID of the scene. 
+     * @param workspaceId The ID of the workspace. 
      */
     public fun workspaceId(workspaceId: String)
   }
@@ -361,10 +361,10 @@ public open class CfnScene(
     }
 
     /**
-     * The ID of the scene.
+     * The ID of the workspace.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iottwinmaker-scene.html#cfn-iottwinmaker-scene-workspaceid)
-     * @param workspaceId The ID of the scene. 
+     * @param workspaceId The ID of the workspace. 
      */
     override fun workspaceId(workspaceId: String) {
       cdkBuilder.workspaceId(workspaceId)

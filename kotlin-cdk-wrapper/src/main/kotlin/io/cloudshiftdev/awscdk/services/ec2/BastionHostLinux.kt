@@ -238,7 +238,9 @@ public open class BastionHostLinux(
     /**
      * The machine image to use, assumed to have SSM Agent preinstalled.
      *
-     * Default: - An Amazon Linux 2 image which is kept up-to-date automatically (the instance
+     * Default: - An Amazon Linux 2023 image if the
+     * `@aws-cdk/aws-ec2:bastionHostUseAmazonLinux2023ByDefault` feature flag is enabled. Otherwise, an
+     * Amazon Linux 2 image. In both cases, the image is kept up-to-date automatically (the instance
      * may be replaced on every deployment) and already has SSM Agent installed.
      *
      * @param machineImage The machine image to use, assumed to have SSM Agent preinstalled. 
@@ -290,6 +292,28 @@ public open class BastionHostLinux(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("de651b213989ca3417ce5fee09a5e0ac582b2776767ef5cf9eb1f14f8e6656df")
     public fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit)
+
+    /**
+     * Determines whether changes to the UserData will force instance replacement.
+     *
+     * Depending on the EC2 instance type, modifying the UserData may either restart
+     * or replace the instance:
+     *
+     * * Instance store-backed instances are replaced.
+     * * EBS-backed instances are restarted.
+     *
+     * Note that by default, restarting does not execute the updated UserData, so an alternative
+     * mechanism is needed to ensure the instance re-executes the UserData.
+     *
+     * When set to `true`, the instance's Logical ID will depend on the UserData, causing
+     * CloudFormation to replace the instance if the UserData changes.
+     *
+     * Default: - `true` if `initOptions` is specified, otherwise `false`.
+     *
+     * @param userDataCausesReplacement Determines whether changes to the UserData will force
+     * instance replacement. 
+     */
+    public fun userDataCausesReplacement(userDataCausesReplacement: Boolean)
 
     /**
      * VPC to launch the instance in.
@@ -417,7 +441,9 @@ public open class BastionHostLinux(
     /**
      * The machine image to use, assumed to have SSM Agent preinstalled.
      *
-     * Default: - An Amazon Linux 2 image which is kept up-to-date automatically (the instance
+     * Default: - An Amazon Linux 2023 image if the
+     * `@aws-cdk/aws-ec2:bastionHostUseAmazonLinux2023ByDefault` feature flag is enabled. Otherwise, an
+     * Amazon Linux 2 image. In both cases, the image is kept up-to-date automatically (the instance
      * may be replaced on every deployment) and already has SSM Agent installed.
      *
      * @param machineImage The machine image to use, assumed to have SSM Agent preinstalled. 
@@ -478,6 +504,30 @@ public open class BastionHostLinux(
     @JvmName("de651b213989ca3417ce5fee09a5e0ac582b2776767ef5cf9eb1f14f8e6656df")
     override fun subnetSelection(subnetSelection: SubnetSelection.Builder.() -> Unit): Unit =
         subnetSelection(SubnetSelection(subnetSelection))
+
+    /**
+     * Determines whether changes to the UserData will force instance replacement.
+     *
+     * Depending on the EC2 instance type, modifying the UserData may either restart
+     * or replace the instance:
+     *
+     * * Instance store-backed instances are replaced.
+     * * EBS-backed instances are restarted.
+     *
+     * Note that by default, restarting does not execute the updated UserData, so an alternative
+     * mechanism is needed to ensure the instance re-executes the UserData.
+     *
+     * When set to `true`, the instance's Logical ID will depend on the UserData, causing
+     * CloudFormation to replace the instance if the UserData changes.
+     *
+     * Default: - `true` if `initOptions` is specified, otherwise `false`.
+     *
+     * @param userDataCausesReplacement Determines whether changes to the UserData will force
+     * instance replacement. 
+     */
+    override fun userDataCausesReplacement(userDataCausesReplacement: Boolean) {
+      cdkBuilder.userDataCausesReplacement(userDataCausesReplacement)
+    }
 
     /**
      * VPC to launch the instance in.

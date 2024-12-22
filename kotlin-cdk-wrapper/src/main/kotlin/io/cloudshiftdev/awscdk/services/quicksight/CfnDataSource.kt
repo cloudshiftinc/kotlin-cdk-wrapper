@@ -119,6 +119,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .database("database")
  * .host("host")
  * .warehouse("warehouse")
+ * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .build())
  * .sparkParameters(SparkParametersProperty.builder()
  * .host("host")
@@ -134,6 +146,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .host("host")
  * .port(123)
  * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .productType("productType")
  * .build())
  * .teradataParameters(TeradataParametersProperty.builder()
@@ -238,6 +261,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .database("database")
  * .host("host")
  * .warehouse("warehouse")
+ * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .build())
  * .sparkParameters(SparkParametersProperty.builder()
  * .host("host")
@@ -253,6 +288,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .host("host")
  * .port(123)
  * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .productType("productType")
  * .build())
  * .teradataParameters(TeradataParametersProperty.builder()
@@ -354,6 +400,18 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .database("database")
  * .host("host")
  * .warehouse("warehouse")
+ * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .build())
  * .sparkParameters(SparkParametersProperty.builder()
  * .host("host")
@@ -369,6 +427,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .host("host")
  * .port(123)
  * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .productType("productType")
  * .build())
  * .teradataParameters(TeradataParametersProperty.builder()
@@ -386,6 +455,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .message("message")
  * .type("type")
  * .build())
+ * .folderArns(List.of("folderArns"))
  * .permissions(List.of(ResourcePermissionProperty.builder()
  * .actions(List.of("actions"))
  * .principal("principal")
@@ -582,6 +652,23 @@ public open class CfnDataSource(
   @JvmName("9ddc8fa021ece05fff344a70fa737c5c23224128797defc2ff07faceaddb1987")
   public open fun errorInfo(`value`: DataSourceErrorInfoProperty.Builder.() -> Unit): Unit =
       errorInfo(DataSourceErrorInfoProperty(`value`))
+
+  /**
+   *
+   */
+  public open fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
+
+  /**
+   *
+   */
+  public open fun folderArns(`value`: List<String>) {
+    unwrap(this).setFolderArns(`value`)
+  }
+
+  /**
+   *
+   */
+  public open fun folderArns(vararg `value`: String): Unit = folderArns(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -897,6 +984,18 @@ public open class CfnDataSource(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("52fd2007a60586cb2c41684fb7b1685a9c9618931c46f9309ddb447b490d4eac")
     public fun errorInfo(errorInfo: DataSourceErrorInfoProperty.Builder.() -> Unit)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-folderarns)
+     * @param folderArns 
+     */
+    public fun folderArns(folderArns: List<String>)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-folderarns)
+     * @param folderArns 
+     */
+    public fun folderArns(vararg folderArns: String)
 
     /**
      * A display name for the data source.
@@ -1220,6 +1319,20 @@ public open class CfnDataSource(
     @JvmName("52fd2007a60586cb2c41684fb7b1685a9c9618931c46f9309ddb447b490d4eac")
     override fun errorInfo(errorInfo: DataSourceErrorInfoProperty.Builder.() -> Unit): Unit =
         errorInfo(DataSourceErrorInfoProperty(errorInfo))
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-folderarns)
+     * @param folderArns 
+     */
+    override fun folderArns(folderArns: List<String>) {
+      cdkBuilder.folderArns(folderArns)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-folderarns)
+     * @param folderArns 
+     */
+    override fun folderArns(vararg folderArns: String): Unit = folderArns(folderArns.toList())
 
     /**
      * A display name for the data source.
@@ -2077,6 +2190,18 @@ public open class CfnDataSource(
    * .database("database")
    * .host("host")
    * .warehouse("warehouse")
+   * // the properties below are optional
+   * .authenticationType("authenticationType")
+   * .databaseAccessControlRole("databaseAccessControlRole")
+   * .oAuthParameters(OAuthParametersProperty.builder()
+   * .tokenProviderUrl("tokenProviderUrl")
+   * // the properties below are optional
+   * .identityProviderResourceUri("identityProviderResourceUri")
+   * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
+   * .build())
+   * .oAuthScope("oAuthScope")
+   * .build())
    * .build())
    * .sparkParameters(SparkParametersProperty.builder()
    * .host("host")
@@ -2092,6 +2217,17 @@ public open class CfnDataSource(
    * .host("host")
    * .port(123)
    * // the properties below are optional
+   * .authenticationType("authenticationType")
+   * .databaseAccessControlRole("databaseAccessControlRole")
+   * .oAuthParameters(OAuthParametersProperty.builder()
+   * .tokenProviderUrl("tokenProviderUrl")
+   * // the properties below are optional
+   * .identityProviderResourceUri("identityProviderResourceUri")
+   * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
+   * .build())
+   * .oAuthScope("oAuthScope")
+   * .build())
    * .productType("productType")
    * .build())
    * .teradataParameters(TeradataParametersProperty.builder()
@@ -2420,6 +2556,18 @@ public open class CfnDataSource(
    * .database("database")
    * .host("host")
    * .warehouse("warehouse")
+   * // the properties below are optional
+   * .authenticationType("authenticationType")
+   * .databaseAccessControlRole("databaseAccessControlRole")
+   * .oAuthParameters(OAuthParametersProperty.builder()
+   * .tokenProviderUrl("tokenProviderUrl")
+   * // the properties below are optional
+   * .identityProviderResourceUri("identityProviderResourceUri")
+   * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
+   * .build())
+   * .oAuthScope("oAuthScope")
+   * .build())
    * .build())
    * .sparkParameters(SparkParametersProperty.builder()
    * .host("host")
@@ -2435,6 +2583,17 @@ public open class CfnDataSource(
    * .host("host")
    * .port(123)
    * // the properties below are optional
+   * .authenticationType("authenticationType")
+   * .databaseAccessControlRole("databaseAccessControlRole")
+   * .oAuthParameters(OAuthParametersProperty.builder()
+   * .tokenProviderUrl("tokenProviderUrl")
+   * // the properties below are optional
+   * .identityProviderResourceUri("identityProviderResourceUri")
+   * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
+   * .build())
+   * .oAuthScope("oAuthScope")
+   * .build())
    * .productType("productType")
    * .build())
    * .teradataParameters(TeradataParametersProperty.builder()
@@ -2852,6 +3011,18 @@ public open class CfnDataSource(
    * .database("database")
    * .host("host")
    * .warehouse("warehouse")
+   * // the properties below are optional
+   * .authenticationType("authenticationType")
+   * .databaseAccessControlRole("databaseAccessControlRole")
+   * .oAuthParameters(OAuthParametersProperty.builder()
+   * .tokenProviderUrl("tokenProviderUrl")
+   * // the properties below are optional
+   * .identityProviderResourceUri("identityProviderResourceUri")
+   * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
+   * .build())
+   * .oAuthScope("oAuthScope")
+   * .build())
    * .build())
    * .sparkParameters(SparkParametersProperty.builder()
    * .host("host")
@@ -2867,6 +3038,17 @@ public open class CfnDataSource(
    * .host("host")
    * .port(123)
    * // the properties below are optional
+   * .authenticationType("authenticationType")
+   * .databaseAccessControlRole("databaseAccessControlRole")
+   * .oAuthParameters(OAuthParametersProperty.builder()
+   * .tokenProviderUrl("tokenProviderUrl")
+   * // the properties below are optional
+   * .identityProviderResourceUri("identityProviderResourceUri")
+   * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
+   * .build())
+   * .oAuthScope("oAuthScope")
+   * .build())
    * .productType("productType")
    * .build())
    * .teradataParameters(TeradataParametersProperty.builder()
@@ -4665,6 +4847,214 @@ public open class CfnDataSource(
   }
 
   /**
+   * An object that contains information needed to create a data source connection that uses OAuth
+   * client credentials.
+   *
+   * This option is available for data source connections that are made with Snowflake and
+   * Starburst.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.quicksight.*;
+   * OAuthParametersProperty oAuthParametersProperty = OAuthParametersProperty.builder()
+   * .tokenProviderUrl("tokenProviderUrl")
+   * // the properties below are optional
+   * .identityProviderResourceUri("identityProviderResourceUri")
+   * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
+   * .build())
+   * .oAuthScope("oAuthScope")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oauthparameters.html)
+   */
+  public interface OAuthParametersProperty {
+    /**
+     * The resource uri of the identity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oauthparameters.html#cfn-quicksight-datasource-oauthparameters-identityproviderresourceuri)
+     */
+    public fun identityProviderResourceUri(): String? =
+        unwrap(this).getIdentityProviderResourceUri()
+
+    /**
+     * VPC connection properties.</p>.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oauthparameters.html#cfn-quicksight-datasource-oauthparameters-identityprovidervpcconnectionproperties)
+     */
+    public fun identityProviderVpcConnectionProperties(): Any? =
+        unwrap(this).getIdentityProviderVpcConnectionProperties()
+
+    /**
+     * The OAuth scope.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oauthparameters.html#cfn-quicksight-datasource-oauthparameters-oauthscope)
+     */
+    public fun oAuthScope(): String? = unwrap(this).getOAuthScope()
+
+    /**
+     * The token endpoint URL of the identity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oauthparameters.html#cfn-quicksight-datasource-oauthparameters-tokenproviderurl)
+     */
+    public fun tokenProviderUrl(): String
+
+    /**
+     * A builder for [OAuthParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param identityProviderResourceUri The resource uri of the identity provider.
+       */
+      public fun identityProviderResourceUri(identityProviderResourceUri: String)
+
+      /**
+       * @param identityProviderVpcConnectionProperties VPC connection properties.</p>.
+       */
+      public
+          fun identityProviderVpcConnectionProperties(identityProviderVpcConnectionProperties: IResolvable)
+
+      /**
+       * @param identityProviderVpcConnectionProperties VPC connection properties.</p>.
+       */
+      public
+          fun identityProviderVpcConnectionProperties(identityProviderVpcConnectionProperties: VpcConnectionPropertiesProperty)
+
+      /**
+       * @param identityProviderVpcConnectionProperties VPC connection properties.</p>.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7c94320c413b6ede14ea3fc0c7cfb278f0e26a98341f3c2579481ecf7af124b8")
+      public
+          fun identityProviderVpcConnectionProperties(identityProviderVpcConnectionProperties: VpcConnectionPropertiesProperty.Builder.() -> Unit)
+
+      /**
+       * @param oAuthScope The OAuth scope.
+       */
+      public fun oAuthScope(oAuthScope: String)
+
+      /**
+       * @param tokenProviderUrl The token endpoint URL of the identity provider. 
+       */
+      public fun tokenProviderUrl(tokenProviderUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OAuthParametersProperty.Builder =
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OAuthParametersProperty.builder()
+
+      /**
+       * @param identityProviderResourceUri The resource uri of the identity provider.
+       */
+      override fun identityProviderResourceUri(identityProviderResourceUri: String) {
+        cdkBuilder.identityProviderResourceUri(identityProviderResourceUri)
+      }
+
+      /**
+       * @param identityProviderVpcConnectionProperties VPC connection properties.</p>.
+       */
+      override
+          fun identityProviderVpcConnectionProperties(identityProviderVpcConnectionProperties: IResolvable) {
+        cdkBuilder.identityProviderVpcConnectionProperties(identityProviderVpcConnectionProperties.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param identityProviderVpcConnectionProperties VPC connection properties.</p>.
+       */
+      override
+          fun identityProviderVpcConnectionProperties(identityProviderVpcConnectionProperties: VpcConnectionPropertiesProperty) {
+        cdkBuilder.identityProviderVpcConnectionProperties(identityProviderVpcConnectionProperties.let(VpcConnectionPropertiesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param identityProviderVpcConnectionProperties VPC connection properties.</p>.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("7c94320c413b6ede14ea3fc0c7cfb278f0e26a98341f3c2579481ecf7af124b8")
+      override
+          fun identityProviderVpcConnectionProperties(identityProviderVpcConnectionProperties: VpcConnectionPropertiesProperty.Builder.() -> Unit):
+          Unit =
+          identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty(identityProviderVpcConnectionProperties))
+
+      /**
+       * @param oAuthScope The OAuth scope.
+       */
+      override fun oAuthScope(oAuthScope: String) {
+        cdkBuilder.oAuthScope(oAuthScope)
+      }
+
+      /**
+       * @param tokenProviderUrl The token endpoint URL of the identity provider. 
+       */
+      override fun tokenProviderUrl(tokenProviderUrl: String) {
+        cdkBuilder.tokenProviderUrl(tokenProviderUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OAuthParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.OAuthParametersProperty,
+    ) : CdkObject(cdkObject),
+        OAuthParametersProperty {
+      /**
+       * The resource uri of the identity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oauthparameters.html#cfn-quicksight-datasource-oauthparameters-identityproviderresourceuri)
+       */
+      override fun identityProviderResourceUri(): String? =
+          unwrap(this).getIdentityProviderResourceUri()
+
+      /**
+       * VPC connection properties.</p>.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oauthparameters.html#cfn-quicksight-datasource-oauthparameters-identityprovidervpcconnectionproperties)
+       */
+      override fun identityProviderVpcConnectionProperties(): Any? =
+          unwrap(this).getIdentityProviderVpcConnectionProperties()
+
+      /**
+       * The OAuth scope.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oauthparameters.html#cfn-quicksight-datasource-oauthparameters-oauthscope)
+       */
+      override fun oAuthScope(): String? = unwrap(this).getOAuthScope()
+
+      /**
+       * The token endpoint URL of the identity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-oauthparameters.html#cfn-quicksight-datasource-oauthparameters-tokenproviderurl)
+       */
+      override fun tokenProviderUrl(): String = unwrap(this).getTokenProviderUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OAuthParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.quicksight.CfnDataSource.OAuthParametersProperty):
+          OAuthParametersProperty = CdkObjectWrappers.wrap(cdkObject) as? OAuthParametersProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OAuthParametersProperty):
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OAuthParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.quicksight.CfnDataSource.OAuthParametersProperty
+    }
+  }
+
+  /**
    * Oracle parameters.
    *
    * Example:
@@ -6214,12 +6604,33 @@ public open class CfnDataSource(
    * .database("database")
    * .host("host")
    * .warehouse("warehouse")
+   * // the properties below are optional
+   * .authenticationType("authenticationType")
+   * .databaseAccessControlRole("databaseAccessControlRole")
+   * .oAuthParameters(OAuthParametersProperty.builder()
+   * .tokenProviderUrl("tokenProviderUrl")
+   * // the properties below are optional
+   * .identityProviderResourceUri("identityProviderResourceUri")
+   * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
+   * .build())
+   * .oAuthScope("oAuthScope")
+   * .build())
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html)
    */
   public interface SnowflakeParametersProperty {
+    /**
+     * The authentication type that you want to use for your connection.
+     *
+     * This parameter accepts OAuth and non-OAuth authentication types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html#cfn-quicksight-datasource-snowflakeparameters-authenticationtype)
+     */
+    public fun authenticationType(): String? = unwrap(this).getAuthenticationType()
+
     /**
      * Database.
      *
@@ -6228,11 +6639,26 @@ public open class CfnDataSource(
     public fun database(): String
 
     /**
+     * The database access control role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html#cfn-quicksight-datasource-snowflakeparameters-databaseaccesscontrolrole)
+     */
+    public fun databaseAccessControlRole(): String? = unwrap(this).getDatabaseAccessControlRole()
+
+    /**
      * Host.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html#cfn-quicksight-datasource-snowflakeparameters-host)
      */
     public fun host(): String
+
+    /**
+     * An object that contains information needed to create a data source connection between an
+     * Amazon QuickSight account and Snowflake.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html#cfn-quicksight-datasource-snowflakeparameters-oauthparameters)
+     */
+    public fun oAuthParameters(): Any? = unwrap(this).getOAuthParameters()
 
     /**
      * Warehouse.
@@ -6247,14 +6673,45 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param authenticationType The authentication type that you want to use for your connection.
+       * This parameter accepts OAuth and non-OAuth authentication types.
+       */
+      public fun authenticationType(authenticationType: String)
+
+      /**
        * @param database Database. 
        */
       public fun database(database: String)
 
       /**
+       * @param databaseAccessControlRole The database access control role.
+       */
+      public fun databaseAccessControlRole(databaseAccessControlRole: String)
+
+      /**
        * @param host Host. 
        */
       public fun host(host: String)
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Snowflake.
+       */
+      public fun oAuthParameters(oAuthParameters: IResolvable)
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Snowflake.
+       */
+      public fun oAuthParameters(oAuthParameters: OAuthParametersProperty)
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Snowflake.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e5ab03a513487c135852fd82d8879a7e786c73b6e816baa4120275405f38272f")
+      public fun oAuthParameters(oAuthParameters: OAuthParametersProperty.Builder.() -> Unit)
 
       /**
        * @param warehouse Warehouse. 
@@ -6269,10 +6726,25 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.quicksight.CfnDataSource.SnowflakeParametersProperty.builder()
 
       /**
+       * @param authenticationType The authentication type that you want to use for your connection.
+       * This parameter accepts OAuth and non-OAuth authentication types.
+       */
+      override fun authenticationType(authenticationType: String) {
+        cdkBuilder.authenticationType(authenticationType)
+      }
+
+      /**
        * @param database Database. 
        */
       override fun database(database: String) {
         cdkBuilder.database(database)
+      }
+
+      /**
+       * @param databaseAccessControlRole The database access control role.
+       */
+      override fun databaseAccessControlRole(databaseAccessControlRole: String) {
+        cdkBuilder.databaseAccessControlRole(databaseAccessControlRole)
       }
 
       /**
@@ -6281,6 +6753,31 @@ public open class CfnDataSource(
       override fun host(host: String) {
         cdkBuilder.host(host)
       }
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Snowflake.
+       */
+      override fun oAuthParameters(oAuthParameters: IResolvable) {
+        cdkBuilder.oAuthParameters(oAuthParameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Snowflake.
+       */
+      override fun oAuthParameters(oAuthParameters: OAuthParametersProperty) {
+        cdkBuilder.oAuthParameters(oAuthParameters.let(OAuthParametersProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Snowflake.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e5ab03a513487c135852fd82d8879a7e786c73b6e816baa4120275405f38272f")
+      override fun oAuthParameters(oAuthParameters: OAuthParametersProperty.Builder.() -> Unit):
+          Unit = oAuthParameters(OAuthParametersProperty(oAuthParameters))
 
       /**
        * @param warehouse Warehouse. 
@@ -6299,6 +6796,15 @@ public open class CfnDataSource(
     ) : CdkObject(cdkObject),
         SnowflakeParametersProperty {
       /**
+       * The authentication type that you want to use for your connection.
+       *
+       * This parameter accepts OAuth and non-OAuth authentication types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html#cfn-quicksight-datasource-snowflakeparameters-authenticationtype)
+       */
+      override fun authenticationType(): String? = unwrap(this).getAuthenticationType()
+
+      /**
        * Database.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html#cfn-quicksight-datasource-snowflakeparameters-database)
@@ -6306,11 +6812,27 @@ public open class CfnDataSource(
       override fun database(): String = unwrap(this).getDatabase()
 
       /**
+       * The database access control role.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html#cfn-quicksight-datasource-snowflakeparameters-databaseaccesscontrolrole)
+       */
+      override fun databaseAccessControlRole(): String? =
+          unwrap(this).getDatabaseAccessControlRole()
+
+      /**
        * Host.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html#cfn-quicksight-datasource-snowflakeparameters-host)
        */
       override fun host(): String = unwrap(this).getHost()
+
+      /**
+       * An object that contains information needed to create a data source connection between an
+       * Amazon QuickSight account and Snowflake.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-snowflakeparameters.html#cfn-quicksight-datasource-snowflakeparameters-oauthparameters)
+       */
+      override fun oAuthParameters(): Any? = unwrap(this).getOAuthParameters()
 
       /**
        * Warehouse.
@@ -6705,6 +7227,17 @@ public open class CfnDataSource(
    * .host("host")
    * .port(123)
    * // the properties below are optional
+   * .authenticationType("authenticationType")
+   * .databaseAccessControlRole("databaseAccessControlRole")
+   * .oAuthParameters(OAuthParametersProperty.builder()
+   * .tokenProviderUrl("tokenProviderUrl")
+   * // the properties below are optional
+   * .identityProviderResourceUri("identityProviderResourceUri")
+   * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+   * .vpcConnectionArn("vpcConnectionArn")
+   * .build())
+   * .oAuthScope("oAuthScope")
+   * .build())
    * .productType("productType")
    * .build();
    * ```
@@ -6713,6 +7246,15 @@ public open class CfnDataSource(
    */
   public interface StarburstParametersProperty {
     /**
+     * The authentication type that you want to use for your connection.
+     *
+     * This parameter accepts OAuth and non-OAuth authentication types.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-authenticationtype)
+     */
+    public fun authenticationType(): String? = unwrap(this).getAuthenticationType()
+
+    /**
      * The catalog name for the Starburst data source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-catalog)
@@ -6720,11 +7262,26 @@ public open class CfnDataSource(
     public fun catalog(): String
 
     /**
+     * The database access control role.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-databaseaccesscontrolrole)
+     */
+    public fun databaseAccessControlRole(): String? = unwrap(this).getDatabaseAccessControlRole()
+
+    /**
      * The host name of the Starburst data source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-host)
      */
     public fun host(): String
+
+    /**
+     * An object that contains information needed to create a data source connection between an
+     * Amazon QuickSight account and Starburst.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-oauthparameters)
+     */
+    public fun oAuthParameters(): Any? = unwrap(this).getOAuthParameters()
 
     /**
      * The port for the Starburst data source.
@@ -6748,14 +7305,45 @@ public open class CfnDataSource(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param authenticationType The authentication type that you want to use for your connection.
+       * This parameter accepts OAuth and non-OAuth authentication types.
+       */
+      public fun authenticationType(authenticationType: String)
+
+      /**
        * @param catalog The catalog name for the Starburst data source. 
        */
       public fun catalog(catalog: String)
 
       /**
+       * @param databaseAccessControlRole The database access control role.
+       */
+      public fun databaseAccessControlRole(databaseAccessControlRole: String)
+
+      /**
        * @param host The host name of the Starburst data source. 
        */
       public fun host(host: String)
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Starburst.
+       */
+      public fun oAuthParameters(oAuthParameters: IResolvable)
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Starburst.
+       */
+      public fun oAuthParameters(oAuthParameters: OAuthParametersProperty)
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Starburst.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("954f4817d252d438bc1e3dfa2413a2271274aa3a7cb291a8edd100ab0f36c9f9")
+      public fun oAuthParameters(oAuthParameters: OAuthParametersProperty.Builder.() -> Unit)
 
       /**
        * @param port The port for the Starburst data source. 
@@ -6775,10 +7363,25 @@ public open class CfnDataSource(
           software.amazon.awscdk.services.quicksight.CfnDataSource.StarburstParametersProperty.builder()
 
       /**
+       * @param authenticationType The authentication type that you want to use for your connection.
+       * This parameter accepts OAuth and non-OAuth authentication types.
+       */
+      override fun authenticationType(authenticationType: String) {
+        cdkBuilder.authenticationType(authenticationType)
+      }
+
+      /**
        * @param catalog The catalog name for the Starburst data source. 
        */
       override fun catalog(catalog: String) {
         cdkBuilder.catalog(catalog)
+      }
+
+      /**
+       * @param databaseAccessControlRole The database access control role.
+       */
+      override fun databaseAccessControlRole(databaseAccessControlRole: String) {
+        cdkBuilder.databaseAccessControlRole(databaseAccessControlRole)
       }
 
       /**
@@ -6787,6 +7390,31 @@ public open class CfnDataSource(
       override fun host(host: String) {
         cdkBuilder.host(host)
       }
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Starburst.
+       */
+      override fun oAuthParameters(oAuthParameters: IResolvable) {
+        cdkBuilder.oAuthParameters(oAuthParameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Starburst.
+       */
+      override fun oAuthParameters(oAuthParameters: OAuthParametersProperty) {
+        cdkBuilder.oAuthParameters(oAuthParameters.let(OAuthParametersProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param oAuthParameters An object that contains information needed to create a data source
+       * connection between an Amazon QuickSight account and Starburst.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("954f4817d252d438bc1e3dfa2413a2271274aa3a7cb291a8edd100ab0f36c9f9")
+      override fun oAuthParameters(oAuthParameters: OAuthParametersProperty.Builder.() -> Unit):
+          Unit = oAuthParameters(OAuthParametersProperty(oAuthParameters))
 
       /**
        * @param port The port for the Starburst data source. 
@@ -6812,6 +7440,15 @@ public open class CfnDataSource(
     ) : CdkObject(cdkObject),
         StarburstParametersProperty {
       /**
+       * The authentication type that you want to use for your connection.
+       *
+       * This parameter accepts OAuth and non-OAuth authentication types.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-authenticationtype)
+       */
+      override fun authenticationType(): String? = unwrap(this).getAuthenticationType()
+
+      /**
        * The catalog name for the Starburst data source.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-catalog)
@@ -6819,11 +7456,27 @@ public open class CfnDataSource(
       override fun catalog(): String = unwrap(this).getCatalog()
 
       /**
+       * The database access control role.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-databaseaccesscontrolrole)
+       */
+      override fun databaseAccessControlRole(): String? =
+          unwrap(this).getDatabaseAccessControlRole()
+
+      /**
        * The host name of the Starburst data source.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-host)
        */
       override fun host(): String = unwrap(this).getHost()
+
+      /**
+       * An object that contains information needed to create a data source connection between an
+       * Amazon QuickSight account and Starburst.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-datasource-starburstparameters.html#cfn-quicksight-datasource-starburstparameters-oauthparameters)
+       */
+      override fun oAuthParameters(): Any? = unwrap(this).getOAuthParameters()
 
       /**
        * The port for the Starburst data source.

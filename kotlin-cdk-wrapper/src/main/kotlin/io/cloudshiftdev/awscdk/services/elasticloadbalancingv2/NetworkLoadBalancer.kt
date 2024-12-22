@@ -24,17 +24,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration;
- * Vpc vpc = new Vpc(this, "VPC");
- * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
- * NetworkListener listener = lb.addListener("listener",
- * BaseNetworkListenerProps.builder().port(80).build());
- * listener.addTargets("target", AddNetworkTargetsProps.builder()
- * .port(80)
- * .build());
- * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
- * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
+ * Vpc vpc;
+ * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "LB")
+ * .vpc(vpc)
+ * .ipAddressType(IpAddressType.DUAL_STACK)
+ * .enablePrefixForIpv6SourceNat(true)
  * .build();
+ * NetworkListener listener = lb.addListener("Listener", BaseNetworkListenerProps.builder()
+ * .port(1229)
+ * .protocol(Protocol.UDP)
+ * .build());
  * ```
  */
 public open class NetworkLoadBalancer(
@@ -507,6 +506,18 @@ public open class NetworkLoadBalancer(
     public fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean)
 
     /**
+     * Indicates whether to use an IPv6 prefix from each subnet for source NAT.
+     *
+     * The IP address type must be IpAddressType.DUALSTACK.
+     *
+     * Default: undefined - NLB default behavior is false
+     *
+     * @param enablePrefixForIpv6SourceNat Indicates whether to use an IPv6 prefix from each subnet
+     * for source NAT. 
+     */
+    public fun enablePrefixForIpv6SourceNat(enablePrefixForIpv6SourceNat: Boolean)
+
+    /**
      * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
      * Balancer through AWS PrivateLink.
      *
@@ -593,6 +604,16 @@ public open class NetworkLoadBalancer(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("76b4d38b2541f097e5e9a086970529ede085f84e55e0e84f8d77525b2e7f8bb5")
     public fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit)
+
+    /**
+     * Indicates whether zonal shift is enabled.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/zonal-shift.html)
+     * @param zonalShift Indicates whether zonal shift is enabled. 
+     */
+    public fun zonalShift(zonalShift: Boolean)
   }
 
   private class BuilderImpl(
@@ -650,6 +671,20 @@ public open class NetworkLoadBalancer(
      */
     override fun denyAllIgwTraffic(denyAllIgwTraffic: Boolean) {
       cdkBuilder.denyAllIgwTraffic(denyAllIgwTraffic)
+    }
+
+    /**
+     * Indicates whether to use an IPv6 prefix from each subnet for source NAT.
+     *
+     * The IP address type must be IpAddressType.DUALSTACK.
+     *
+     * Default: undefined - NLB default behavior is false
+     *
+     * @param enablePrefixForIpv6SourceNat Indicates whether to use an IPv6 prefix from each subnet
+     * for source NAT. 
+     */
+    override fun enablePrefixForIpv6SourceNat(enablePrefixForIpv6SourceNat: Boolean) {
+      cdkBuilder.enablePrefixForIpv6SourceNat(enablePrefixForIpv6SourceNat)
     }
 
     /**
@@ -755,6 +790,18 @@ public open class NetworkLoadBalancer(
     @JvmName("76b4d38b2541f097e5e9a086970529ede085f84e55e0e84f8d77525b2e7f8bb5")
     override fun vpcSubnets(vpcSubnets: SubnetSelection.Builder.() -> Unit): Unit =
         vpcSubnets(SubnetSelection(vpcSubnets))
+
+    /**
+     * Indicates whether zonal shift is enabled.
+     *
+     * Default: false
+     *
+     * [Documentation](https://docs.aws.amazon.com/elasticloadbalancing/latest/network/zonal-shift.html)
+     * @param zonalShift Indicates whether zonal shift is enabled. 
+     */
+    override fun zonalShift(zonalShift: Boolean) {
+      cdkBuilder.zonalShift(zonalShift)
+    }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkLoadBalancer =
         cdkBuilder.build()

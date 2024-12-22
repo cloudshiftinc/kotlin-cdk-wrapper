@@ -27,6 +27,11 @@ import kotlin.jvm.JvmName
  * .service("service")
  * .taskDefinition("taskDefinition")
  * // the properties below are optional
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .base(123)
+ * .capacityProvider("capacityProvider")
+ * .weight(123)
+ * .build()))
  * .externalId("externalId")
  * .launchType("launchType")
  * .loadBalancers(List.of(LoadBalancerProperty.builder()
@@ -63,6 +68,13 @@ import kotlin.jvm.JvmName
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html)
  */
 public interface CfnTaskSetProps {
+  /**
+   * The capacity provider strategy that are associated with the task set.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-capacityproviderstrategy)
+   */
+  public fun capacityProviderStrategy(): Any? = unwrap(this).getCapacityProviderStrategy()
+
   /**
    * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to
    * create the task set in.
@@ -179,6 +191,24 @@ public interface CfnTaskSetProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set.
+     */
+    public fun capacityProviderStrategy(capacityProviderStrategy: IResolvable)
+
+    /**
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set.
+     */
+    public fun capacityProviderStrategy(capacityProviderStrategy: List<Any>)
+
+    /**
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set.
+     */
+    public fun capacityProviderStrategy(vararg capacityProviderStrategy: Any)
+
     /**
      * @param cluster The short name or full Amazon Resource Name (ARN) of the cluster that hosts
      * the service to create the task set in. 
@@ -346,6 +376,29 @@ public interface CfnTaskSetProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnTaskSetProps.Builder =
         software.amazon.awscdk.services.ecs.CfnTaskSetProps.builder()
+
+    /**
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set.
+     */
+    override fun capacityProviderStrategy(capacityProviderStrategy: IResolvable) {
+      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set.
+     */
+    override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
+      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set.
+     */
+    override fun capacityProviderStrategy(vararg capacityProviderStrategy: Any): Unit =
+        capacityProviderStrategy(capacityProviderStrategy.toList())
 
     /**
      * @param cluster The short name or full Amazon Resource Name (ARN) of the cluster that hosts
@@ -552,6 +605,13 @@ public interface CfnTaskSetProps {
     cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSetProps,
   ) : CdkObject(cdkObject),
       CfnTaskSetProps {
+    /**
+     * The capacity provider strategy that are associated with the task set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-capacityproviderstrategy)
+     */
+    override fun capacityProviderStrategy(): Any? = unwrap(this).getCapacityProviderStrategy()
+
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to
      * create the task set in.

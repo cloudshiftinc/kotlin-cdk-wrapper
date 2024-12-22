@@ -23,7 +23,9 @@ import kotlin.String
  * String ebsEnvironmentUrl;
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
- * .target(RecordTarget.fromAlias(new ElasticBeanstalkEnvironmentEndpointTarget(ebsEnvironmentUrl)))
+ * .target(RecordTarget.fromAlias(
+ * new ElasticBeanstalkEnvironmentEndpointTarget(ebsEnvironmentUrl, Map.of(
+ * "evaluateTargetHealth", true))))
  * .build();
  * ```
  */
@@ -33,6 +35,11 @@ public open class ElasticBeanstalkEnvironmentEndpointTarget(
     IAliasRecordTarget {
   public constructor(environmentEndpoint: String) :
       this(software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget(environmentEndpoint)
+  )
+
+  public constructor(environmentEndpoint: String, props: IAliasRecordTargetProps) :
+      this(software.amazon.awscdk.services.route53.targets.ElasticBeanstalkEnvironmentEndpointTarget(environmentEndpoint,
+      props.let(IAliasRecordTargetProps.Companion::unwrap))
   )
 
   /**

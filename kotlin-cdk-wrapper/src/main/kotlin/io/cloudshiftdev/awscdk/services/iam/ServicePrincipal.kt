@@ -158,6 +158,9 @@ public open class ServicePrincipal(
   }
 
   public companion object {
+    public fun fromStaticServicePrincipleName(servicePrincipalName: String): ServicePrincipal =
+        software.amazon.awscdk.services.iam.ServicePrincipal.fromStaticServicePrincipleName(servicePrincipalName).let(ServicePrincipal::wrap)
+
     public fun servicePrincipalName(service: String): String =
         software.amazon.awscdk.services.iam.ServicePrincipal.servicePrincipalName(service)
 

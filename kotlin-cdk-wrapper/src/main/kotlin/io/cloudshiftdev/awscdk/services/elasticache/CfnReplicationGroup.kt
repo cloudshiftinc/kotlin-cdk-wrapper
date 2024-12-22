@@ -23,25 +23,26 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `AWS::ElastiCache::ReplicationGroup` resource creates an Amazon ElastiCache (Redis OSS)
- * replication group.
+ * The `AWS::ElastiCache::ReplicationGroup` resource creates an Amazon ElastiCache (Valkey or Redis
+ * OSS) replication group.
  *
- * A Redis OSS (cluster mode disabled) replication group is a collection of cache clusters, where
- * one of the clusters is a primary read-write cluster and the others are read-only replicas.
+ * A Valkey or Redis OSS (cluster mode disabled) replication group is a collection of cache
+ * clusters, where one of the clusters is a primary read-write cluster and the others are read-only
+ * replicas.
  *
- * A Redis OSS (cluster mode enabled) cluster is comprised of from 1 to 90 shards (API/CLI: node
- * groups). Each shard has a primary node and up to 5 read-only replica nodes. The configuration can
- * range from 90 shards and 0 replicas to 15 shards and 5 replicas, which is the maximum number or
- * replicas allowed.
+ * A Valkey or Redis OSS (cluster mode enabled) cluster is comprised of from 1 to 90 shards
+ * (API/CLI: node groups). Each shard has a primary node and up to 5 read-only replica nodes. The
+ * configuration can range from 90 shards and 0 replicas to 15 shards and 5 replicas, which is the
+ * maximum number or replicas allowed.
  *
- * The node or shard limit can be increased to a maximum of 500 per cluster if the Redis OSS engine
- * version is 5.0.6 or higher. For example, you can choose to configure a 500 node cluster that ranges
- * between 83 shards (one primary and 5 replicas per shard) and 500 shards (single primary and no
- * replicas). Make sure there are enough available IP addresses to accommodate the increase. Common
- * pitfalls include the subnets in the subnet group have too small a CIDR range or the subnets are
- * shared and heavily used by other clusters. For more information, see [Creating a Subnet
- * Group](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SubnetGroups.Creating.html) . For
- * versions below 5.0.6, the limit is 250 per cluster.
+ * The node or shard limit can be increased to a maximum of 500 per cluster if the engine version is
+ * Valkey 7.2 or higher, or Redis OSS 5.0.6 or higher. For example, you can choose to configure a 500
+ * node cluster that ranges between 83 shards (one primary and 5 replicas per shard) and 500 shards
+ * (single primary and no replicas). Make sure there are enough available IP addresses to accommodate
+ * the increase. Common pitfalls include the subnets in the subnet group have too small a CIDR range or
+ * the subnets are shared and heavily used by other clusters. For more information, see [Creating a
+ * Subnet Group](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SubnetGroups.Creating.html) .
+ * For versions below 5.0.6, the limit is 250 per cluster.
  *
  * To request a limit increase, see [Amazon Service
  * Limits](https://docs.aws.amazon.com/general/latest/gr/aws_service_limits.html) and choose the limit
@@ -165,10 +166,10 @@ public open class CfnReplicationGroup(
    * The DNS hostname of the cache node.
    *
    *
-   * Redis OSS (cluster mode disabled) replication groups don't have this attribute. Therefore,
-   * `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered.
-   * Otherwise, `Fn::GetAtt` fails. For Redis OSS (cluster mode disabled) replication groups, use the
-   * `PrimaryEndpoint` or `ReadEndpoint` attributes.
+   * Valkey or Redis OSS (cluster mode disabled) replication groups don't have this attribute.
+   * Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is
+   * clustered. Otherwise, `Fn::GetAtt` fails. For Valkey or Redis OSS (cluster mode disabled)
+   * replication groups, use the `PrimaryEndpoint` or `ReadEndpoint` attributes.
    */
   public open fun attrConfigurationEndPointAddress(): String =
       unwrap(this).getAttrConfigurationEndPointAddress()
@@ -247,25 +248,25 @@ public open class CfnReplicationGroup(
   }
 
   /**
-   * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want
-   * to opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
-   * versions.
+   * If you are running Valkey 7.2 or later, or Redis OSS 6.0 or later, set this parameter to yes if
+   * you want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
+   * previous versions.
    */
   public open fun autoMinorVersionUpgrade(): Any? = unwrap(this).getAutoMinorVersionUpgrade()
 
   /**
-   * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want
-   * to opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
-   * versions.
+   * If you are running Valkey 7.2 or later, or Redis OSS 6.0 or later, set this parameter to yes if
+   * you want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
+   * previous versions.
    */
   public open fun autoMinorVersionUpgrade(`value`: Boolean) {
     unwrap(this).setAutoMinorVersionUpgrade(`value`)
   }
 
   /**
-   * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want
-   * to opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
-   * versions.
+   * If you are running Valkey 7.2 or later, or Redis OSS 6.0 or later, set this parameter to yes if
+   * you want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
+   * previous versions.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
     unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
@@ -506,13 +507,13 @@ public open class CfnReplicationGroup(
 
   /**
    * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-   * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+   * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
    */
   public open fun nodeGroupConfiguration(): Any? = unwrap(this).getNodeGroupConfiguration()
 
   /**
    * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-   * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+   * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
    */
   public open fun nodeGroupConfiguration(`value`: IResolvable) {
     unwrap(this).setNodeGroupConfiguration(`value`.let(IResolvable.Companion::unwrap))
@@ -520,7 +521,7 @@ public open class CfnReplicationGroup(
 
   /**
    * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-   * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+   * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
    */
   public open fun nodeGroupConfiguration(`value`: List<Any>) {
     unwrap(this).setNodeGroupConfiguration(`value`.map{CdkObjectWrappers.unwrap(it)})
@@ -528,7 +529,7 @@ public open class CfnReplicationGroup(
 
   /**
    * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-   * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+   * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
    */
   public open fun nodeGroupConfiguration(vararg `value`: Any): Unit =
       nodeGroupConfiguration(`value`.toList())
@@ -560,14 +561,14 @@ public open class CfnReplicationGroup(
   }
 
   /**
-   * An optional parameter that specifies the number of node groups (shards) for this Redis OSS
-   * (cluster mode enabled) replication group.
+   * An optional parameter that specifies the number of node groups (shards) for this Valkey or
+   * Redis OSS (cluster mode enabled) replication group.
    */
   public open fun numNodeGroups(): Number? = unwrap(this).getNumNodeGroups()
 
   /**
-   * An optional parameter that specifies the number of node groups (shards) for this Redis OSS
-   * (cluster mode enabled) replication group.
+   * An optional parameter that specifies the number of node groups (shards) for this Valkey or
+   * Redis OSS (cluster mode enabled) replication group.
    */
   public open fun numNodeGroups(`value`: Number) {
     unwrap(this).setNumNodeGroups(`value`)
@@ -690,22 +691,22 @@ public open class CfnReplicationGroup(
       securityGroupIds(`value`.toList())
 
   /**
-   * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files
-   * stored in Amazon S3.
+   * A list of Amazon Resource Names (ARN) that uniquely identify the Valkey or Redis OSS RDB
+   * snapshot files stored in Amazon S3.
    */
   public open fun snapshotArns(): List<String> = unwrap(this).getSnapshotArns() ?: emptyList()
 
   /**
-   * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files
-   * stored in Amazon S3.
+   * A list of Amazon Resource Names (ARN) that uniquely identify the Valkey or Redis OSS RDB
+   * snapshot files stored in Amazon S3.
    */
   public open fun snapshotArns(`value`: List<String>) {
     unwrap(this).setSnapshotArns(`value`)
   }
 
   /**
-   * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files
-   * stored in Amazon S3.
+   * A list of Amazon Resource Names (ARN) that uniquely identify the Valkey or Redis OSS RDB
+   * snapshot files stored in Amazon S3.
    */
   public open fun snapshotArns(vararg `value`: String): Unit = snapshotArns(`value`.toList())
 
@@ -875,8 +876,8 @@ public open class CfnReplicationGroup(
      * *Reserved parameter.* The password used to access a password protected server.
      *
      * `AuthToken` can be specified only on replication groups where `TransitEncryptionEnabled` is
-     * `true` . For more information, see [Authenticating Users with the Redis OSS AUTH
-     * Command](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html) .
+     * `true` . For more information, see [Authenticating Valkey or Redis OSS users with the AUTH
+     * Command](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/auth.html) .
      *
      *
      * For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true` , an `AuthToken`
@@ -906,26 +907,26 @@ public open class CfnReplicationGroup(
     public fun authToken(authToken: String)
 
     /**
-     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
-     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
+     * If you are running Valkey 7.2 or later, or Redis OSS 6.0 or later, set this parameter to yes
+     * if you want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
      * previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-autominorversionupgrade)
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions. 
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS 6.0 or
+     * later, set this parameter to yes if you want to opt-in to the next minor version upgrade
+     * campaign. This parameter is disabled for previous versions. 
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
     /**
-     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
-     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
+     * If you are running Valkey 7.2 or later, or Redis OSS 6.0 or later, set this parameter to yes
+     * if you want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
      * previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-autominorversionupgrade)
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions. 
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS 6.0 or
+     * later, set this parameter to yes if you want to opt-in to the next minor version upgrade
+     * campaign. This parameter is disabled for previous versions. 
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
@@ -933,8 +934,8 @@ public open class CfnReplicationGroup(
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-     * groups.
+     * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+     * replication groups.
      *
      * Default: false
      *
@@ -948,8 +949,8 @@ public open class CfnReplicationGroup(
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-     * groups.
+     * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+     * replication groups.
      *
      * Default: false
      *
@@ -1027,7 +1028,7 @@ public open class CfnReplicationGroup(
      * `cache.r3.4xlarge` , `cache.r3.8xlarge`
      *
      * For region availability, see [Supported Node Types by Amazon
-     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
+     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachenodetype)
      * @param cacheNodeType The compute and memory capacity of the nodes in the node group (shard). 
@@ -1040,12 +1041,13 @@ public open class CfnReplicationGroup(
      * If this argument is omitted, the default cache parameter group for the specified engine is
      * used.
      *
-     * If you are running Redis OSS version 3.2.4 or later, only one node group (shard), and want to
-     * use a default parameter group, we recommend that you specify the parameter group by name.
+     * If you are running Valkey or Redis OSS version 3.2.4 or later, only one node group (shard),
+     * and want to use a default parameter group, we recommend that you specify the parameter group by
+     * name.
      *
-     * * To create a Redis OSS (cluster mode disabled) replication group, use
+     * * To create a Valkey or Redis OSS (cluster mode disabled) replication group, use
      * `CacheParameterGroupName=default.redis3.2` .
-     * * To create a Redis OSS (cluster mode enabled) replication group, use
+     * * To create a Valkey or Redis OSS (cluster mode enabled) replication group, use
      * `CacheParameterGroupName=default.redis3.2.cluster.on` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cacheparametergroupname)
@@ -1092,11 +1094,11 @@ public open class CfnReplicationGroup(
      * Enabled or Disabled.
      *
      * To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode
-     * enabled and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode
-     * enabled, you can then complete cluster mode configuration and set the cluster mode to Enabled.
-     * For more information, see [Modify cluster
-     * mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/modify-cluster-mode.html) .
+     * Compatible. Compatible mode allows your Valkey or Redis OSS clients to connect using both
+     * cluster mode enabled and cluster mode disabled. After you migrate all Valkey or Redis OSS
+     * clients to use cluster mode enabled, you can then complete cluster mode configuration and set
+     * the cluster mode to Enabled. For more information, see [Modify cluster
+     * mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/modify-cluster-mode.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-clustermode)
      * @param clusterMode Enabled or Disabled. 
@@ -1108,7 +1110,7 @@ public open class CfnReplicationGroup(
      *
      * Data tiering is only supported for replication groups using the r6gd node type. This
      * parameter must be set to true when using r6gd nodes. For more information, see [Data
-     * tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html) .
+     * tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/data-tiering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-datatieringenabled)
      * @param dataTieringEnabled Enables data tiering. 
@@ -1120,7 +1122,7 @@ public open class CfnReplicationGroup(
      *
      * Data tiering is only supported for replication groups using the r6gd node type. This
      * parameter must be set to true when using r6gd nodes. For more information, see [Data
-     * tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html) .
+     * tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/data-tiering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-datatieringenabled)
      * @param dataTieringEnabled Enables data tiering. 
@@ -1130,7 +1132,12 @@ public open class CfnReplicationGroup(
     /**
      * The name of the cache engine to be used for the clusters in this replication group.
      *
-     * The value must be set to `Redis` .
+     * The value must be set to `valkey` or `redis` .
+     *
+     *
+     * Upgrading an existing engine from redis to valkey is done through in-place migration, and
+     * requires a parameter group.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-engine)
      * @param engine The name of the cache engine to be used for the clusters in this replication
@@ -1144,7 +1151,7 @@ public open class CfnReplicationGroup(
      * To view the supported cache engine versions, use the `DescribeCacheEngineVersions` operation.
      *
      * *Important:* You can upgrade to a newer engine version (see [Selecting a Cache Engine and
-     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)
+     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SelectEngine.html#VersionManagement)
      * ) in the *ElastiCache User Guide* , but you cannot downgrade to an earlier engine version. If
      * you want to use an earlier engine version, you must delete the existing cluster or replication
      * group and create it anew with the earlier engine version.
@@ -1166,8 +1173,8 @@ public open class CfnReplicationGroup(
     /**
      * The network type you choose when creating a replication group, either `ipv4` | `ipv6` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 or Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-ipdiscovery)
@@ -1212,7 +1219,7 @@ public open class CfnReplicationGroup(
      * A flag indicating if you have Multi-AZ enabled to enhance fault tolerance.
      *
      * For more information, see [Minimizing Downtime:
-     * Multi-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html) .
+     * Multi-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/AutoFailover.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-multiazenabled)
      * @param multiAzEnabled A flag indicating if you have Multi-AZ enabled to enhance fault
@@ -1224,7 +1231,7 @@ public open class CfnReplicationGroup(
      * A flag indicating if you have Multi-AZ enabled to enhance fault tolerance.
      *
      * For more information, see [Minimizing Downtime:
-     * Multi-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html) .
+     * Multi-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/AutoFailover.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-multiazenabled)
      * @param multiAzEnabled A flag indicating if you have Multi-AZ enabled to enhance fault
@@ -1235,8 +1242,8 @@ public open class CfnReplicationGroup(
     /**
      * Must be either `ipv4` | `ipv6` | `dual_stack` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-networktype)
@@ -1246,7 +1253,7 @@ public open class CfnReplicationGroup(
 
     /**
      * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-     * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+     * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
      *
      * If you set
      * [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding)
@@ -1259,13 +1266,13 @@ public open class CfnReplicationGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-nodegroupconfiguration)
      * @param nodeGroupConfiguration `NodeGroupConfiguration` is a property of the
      * `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache
-     * (ElastiCache) Redis OSS cluster node group. 
+     * (ElastiCache) Valkey or Redis OSS cluster node group. 
      */
     public fun nodeGroupConfiguration(nodeGroupConfiguration: IResolvable)
 
     /**
      * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-     * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+     * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
      *
      * If you set
      * [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding)
@@ -1278,13 +1285,13 @@ public open class CfnReplicationGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-nodegroupconfiguration)
      * @param nodeGroupConfiguration `NodeGroupConfiguration` is a property of the
      * `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache
-     * (ElastiCache) Redis OSS cluster node group. 
+     * (ElastiCache) Valkey or Redis OSS cluster node group. 
      */
     public fun nodeGroupConfiguration(nodeGroupConfiguration: List<Any>)
 
     /**
      * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-     * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+     * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
      *
      * If you set
      * [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding)
@@ -1297,7 +1304,7 @@ public open class CfnReplicationGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-nodegroupconfiguration)
      * @param nodeGroupConfiguration `NodeGroupConfiguration` is a property of the
      * `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache
-     * (ElastiCache) Redis OSS cluster node group. 
+     * (ElastiCache) Valkey or Redis OSS cluster node group. 
      */
     public fun nodeGroupConfiguration(vararg nodeGroupConfiguration: Any)
 
@@ -1333,10 +1340,10 @@ public open class CfnReplicationGroup(
     public fun numCacheClusters(numCacheClusters: Number)
 
     /**
-     * An optional parameter that specifies the number of node groups (shards) for this Redis OSS
-     * (cluster mode enabled) replication group.
+     * An optional parameter that specifies the number of node groups (shards) for this Valkey or
+     * Redis OSS (cluster mode enabled) replication group.
      *
-     * For Redis OSS (cluster mode disabled) either omit this parameter or set it to 1.
+     * For Valkey or Redis OSS (cluster mode disabled) either omit this parameter or set it to 1.
      *
      * If you set
      * [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding)
@@ -1349,7 +1356,7 @@ public open class CfnReplicationGroup(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-numnodegroups)
      * @param numNodeGroups An optional parameter that specifies the number of node groups (shards)
-     * for this Redis OSS (cluster mode enabled) replication group. 
+     * for this Valkey or Redis OSS (cluster mode enabled) replication group. 
      */
     public fun numNodeGroups(numNodeGroups: Number)
 
@@ -1507,8 +1514,8 @@ public open class CfnReplicationGroup(
     public fun securityGroupIds(vararg securityGroupIds: String)
 
     /**
-     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files
-     * stored in Amazon S3.
+     * A list of Amazon Resource Names (ARN) that uniquely identify the Valkey or Redis OSS RDB
+     * snapshot files stored in Amazon S3.
      *
      * The snapshot files are used to populate the new replication group. The Amazon S3 object name
      * in the ARN cannot contain any commas. The new replication group will have the number of node
@@ -1518,14 +1525,14 @@ public open class CfnReplicationGroup(
      * Example of an Amazon S3 ARN: `arn:aws:s3:::my_bucket/snapshot1.rdb`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotarns)
-     * @param snapshotArns A list of Amazon Resource Names (ARN) that uniquely identify the Redis
-     * OSS RDB snapshot files stored in Amazon S3. 
+     * @param snapshotArns A list of Amazon Resource Names (ARN) that uniquely identify the Valkey
+     * or Redis OSS RDB snapshot files stored in Amazon S3. 
      */
     public fun snapshotArns(snapshotArns: List<String>)
 
     /**
-     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files
-     * stored in Amazon S3.
+     * A list of Amazon Resource Names (ARN) that uniquely identify the Valkey or Redis OSS RDB
+     * snapshot files stored in Amazon S3.
      *
      * The snapshot files are used to populate the new replication group. The Amazon S3 object name
      * in the ARN cannot contain any commas. The new replication group will have the number of node
@@ -1535,8 +1542,8 @@ public open class CfnReplicationGroup(
      * Example of an Amazon S3 ARN: `arn:aws:s3:::my_bucket/snapshot1.rdb`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotarns)
-     * @param snapshotArns A list of Amazon Resource Names (ARN) that uniquely identify the Redis
-     * OSS RDB snapshot files stored in Amazon S3. 
+     * @param snapshotArns A list of Amazon Resource Names (ARN) that uniquely identify the Valkey
+     * or Redis OSS RDB snapshot files stored in Amazon S3. 
      */
     public fun snapshotArns(vararg snapshotArns: String)
 
@@ -1583,7 +1590,8 @@ public open class CfnReplicationGroup(
     /**
      * The cluster ID that is used as the daily snapshot source for the replication group.
      *
-     * This parameter cannot be set for Redis OSS (cluster mode enabled) replication groups.
+     * This parameter cannot be set for Valkey or Redis OSS (cluster mode enabled) replication
+     * groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshottingclusterid)
      * @param snapshottingClusterId The cluster ID that is used as the daily snapshot source for the
@@ -1627,8 +1635,12 @@ public open class CfnReplicationGroup(
      *
      * If you enable in-transit encryption, you must also specify a value for `CacheSubnetGroup` .
      *
-     * *Required:* Only available when creating a replication group in an Amazon VPC using Redis OSS
-     * version `3.2.6` or `4.x` onward.
+     *
+     * * TransitEncryptionEnabled is only available when creating a replication group in an Amazon
+     * VPC using Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x`
+     * and above.
+     * * TransitEncryptionEnabled is required when creating a new valkey replication group.
+     *
      *
      * Default: `false`
      *
@@ -1655,8 +1667,12 @@ public open class CfnReplicationGroup(
      *
      * If you enable in-transit encryption, you must also specify a value for `CacheSubnetGroup` .
      *
-     * *Required:* Only available when creating a replication group in an Amazon VPC using Redis OSS
-     * version `3.2.6` or `4.x` onward.
+     *
+     * * TransitEncryptionEnabled is only available when creating a replication group in an Amazon
+     * VPC using Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x`
+     * and above.
+     * * TransitEncryptionEnabled is required when creating a new valkey replication group.
+     *
      *
      * Default: `false`
      *
@@ -1677,8 +1693,8 @@ public open class CfnReplicationGroup(
      *
      * When setting `TransitEncryptionEnabled` to `true` , you can set your `TransitEncryptionMode`
      * to `preferred` in the same request, to allow both encrypted and unencrypted connections at the
-     * same time. Once you migrate all your Redis OSS clients to use encrypted connections you can
-     * modify the value to `required` to allow encrypted connections only.
+     * same time. Once you migrate all your Valkey or Redis OSS clients to use encrypted connections
+     * you can modify the value to `required` to allow encrypted connections only.
      *
      * Setting `TransitEncryptionMode` to `required` is a two-step process that requires you to
      * first set the `TransitEncryptionMode` to `preferred` , after that you can set
@@ -1758,8 +1774,8 @@ public open class CfnReplicationGroup(
      * *Reserved parameter.* The password used to access a password protected server.
      *
      * `AuthToken` can be specified only on replication groups where `TransitEncryptionEnabled` is
-     * `true` . For more information, see [Authenticating Users with the Redis OSS AUTH
-     * Command](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/auth.html) .
+     * `true` . For more information, see [Authenticating Valkey or Redis OSS users with the AUTH
+     * Command](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/auth.html) .
      *
      *
      * For HIPAA compliance, you must specify `TransitEncryptionEnabled` as `true` , an `AuthToken`
@@ -1791,28 +1807,28 @@ public open class CfnReplicationGroup(
     }
 
     /**
-     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
-     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
+     * If you are running Valkey 7.2 or later, or Redis OSS 6.0 or later, set this parameter to yes
+     * if you want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
      * previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-autominorversionupgrade)
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions. 
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS 6.0 or
+     * later, set this parameter to yes if you want to opt-in to the next minor version upgrade
+     * campaign. This parameter is disabled for previous versions. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
     /**
-     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
-     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
+     * If you are running Valkey 7.2 or later, or Redis OSS 6.0 or later, set this parameter to yes
+     * if you want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
      * previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-autominorversionupgrade)
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions. 
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS 6.0 or
+     * later, set this parameter to yes if you want to opt-in to the next minor version upgrade
+     * campaign. This parameter is disabled for previous versions. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
@@ -1822,8 +1838,8 @@ public open class CfnReplicationGroup(
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-     * groups.
+     * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+     * replication groups.
      *
      * Default: false
      *
@@ -1839,8 +1855,8 @@ public open class CfnReplicationGroup(
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-     * groups.
+     * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+     * replication groups.
      *
      * Default: false
      *
@@ -1920,7 +1936,7 @@ public open class CfnReplicationGroup(
      * `cache.r3.4xlarge` , `cache.r3.8xlarge`
      *
      * For region availability, see [Supported Node Types by Amazon
-     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
+     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cachenodetype)
      * @param cacheNodeType The compute and memory capacity of the nodes in the node group (shard). 
@@ -1935,12 +1951,13 @@ public open class CfnReplicationGroup(
      * If this argument is omitted, the default cache parameter group for the specified engine is
      * used.
      *
-     * If you are running Redis OSS version 3.2.4 or later, only one node group (shard), and want to
-     * use a default parameter group, we recommend that you specify the parameter group by name.
+     * If you are running Valkey or Redis OSS version 3.2.4 or later, only one node group (shard),
+     * and want to use a default parameter group, we recommend that you specify the parameter group by
+     * name.
      *
-     * * To create a Redis OSS (cluster mode disabled) replication group, use
+     * * To create a Valkey or Redis OSS (cluster mode disabled) replication group, use
      * `CacheParameterGroupName=default.redis3.2` .
-     * * To create a Redis OSS (cluster mode enabled) replication group, use
+     * * To create a Valkey or Redis OSS (cluster mode enabled) replication group, use
      * `CacheParameterGroupName=default.redis3.2.cluster.on` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-cacheparametergroupname)
@@ -1994,11 +2011,11 @@ public open class CfnReplicationGroup(
      * Enabled or Disabled.
      *
      * To modify cluster mode from Disabled to Enabled, you must first set the cluster mode to
-     * Compatible. Compatible mode allows your Redis OSS clients to connect using both cluster mode
-     * enabled and cluster mode disabled. After you migrate all Redis OSS clients to use cluster mode
-     * enabled, you can then complete cluster mode configuration and set the cluster mode to Enabled.
-     * For more information, see [Modify cluster
-     * mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/modify-cluster-mode.html) .
+     * Compatible. Compatible mode allows your Valkey or Redis OSS clients to connect using both
+     * cluster mode enabled and cluster mode disabled. After you migrate all Valkey or Redis OSS
+     * clients to use cluster mode enabled, you can then complete cluster mode configuration and set
+     * the cluster mode to Enabled. For more information, see [Modify cluster
+     * mode](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/modify-cluster-mode.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-clustermode)
      * @param clusterMode Enabled or Disabled. 
@@ -2012,7 +2029,7 @@ public open class CfnReplicationGroup(
      *
      * Data tiering is only supported for replication groups using the r6gd node type. This
      * parameter must be set to true when using r6gd nodes. For more information, see [Data
-     * tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html) .
+     * tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/data-tiering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-datatieringenabled)
      * @param dataTieringEnabled Enables data tiering. 
@@ -2026,7 +2043,7 @@ public open class CfnReplicationGroup(
      *
      * Data tiering is only supported for replication groups using the r6gd node type. This
      * parameter must be set to true when using r6gd nodes. For more information, see [Data
-     * tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/data-tiering.html) .
+     * tiering](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/data-tiering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-datatieringenabled)
      * @param dataTieringEnabled Enables data tiering. 
@@ -2038,7 +2055,12 @@ public open class CfnReplicationGroup(
     /**
      * The name of the cache engine to be used for the clusters in this replication group.
      *
-     * The value must be set to `Redis` .
+     * The value must be set to `valkey` or `redis` .
+     *
+     *
+     * Upgrading an existing engine from redis to valkey is done through in-place migration, and
+     * requires a parameter group.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-engine)
      * @param engine The name of the cache engine to be used for the clusters in this replication
@@ -2054,7 +2076,7 @@ public open class CfnReplicationGroup(
      * To view the supported cache engine versions, use the `DescribeCacheEngineVersions` operation.
      *
      * *Important:* You can upgrade to a newer engine version (see [Selecting a Cache Engine and
-     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)
+     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SelectEngine.html#VersionManagement)
      * ) in the *ElastiCache User Guide* , but you cannot downgrade to an earlier engine version. If
      * you want to use an earlier engine version, you must delete the existing cluster or replication
      * group and create it anew with the earlier engine version.
@@ -2080,8 +2102,8 @@ public open class CfnReplicationGroup(
     /**
      * The network type you choose when creating a replication group, either `ipv4` | `ipv6` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 or Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-ipdiscovery)
@@ -2135,7 +2157,7 @@ public open class CfnReplicationGroup(
      * A flag indicating if you have Multi-AZ enabled to enhance fault tolerance.
      *
      * For more information, see [Minimizing Downtime:
-     * Multi-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html) .
+     * Multi-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/AutoFailover.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-multiazenabled)
      * @param multiAzEnabled A flag indicating if you have Multi-AZ enabled to enhance fault
@@ -2149,7 +2171,7 @@ public open class CfnReplicationGroup(
      * A flag indicating if you have Multi-AZ enabled to enhance fault tolerance.
      *
      * For more information, see [Minimizing Downtime:
-     * Multi-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/AutoFailover.html) .
+     * Multi-AZ](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/AutoFailover.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-multiazenabled)
      * @param multiAzEnabled A flag indicating if you have Multi-AZ enabled to enhance fault
@@ -2162,8 +2184,8 @@ public open class CfnReplicationGroup(
     /**
      * Must be either `ipv4` | `ipv6` | `dual_stack` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-networktype)
@@ -2175,7 +2197,7 @@ public open class CfnReplicationGroup(
 
     /**
      * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-     * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+     * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
      *
      * If you set
      * [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding)
@@ -2188,7 +2210,7 @@ public open class CfnReplicationGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-nodegroupconfiguration)
      * @param nodeGroupConfiguration `NodeGroupConfiguration` is a property of the
      * `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache
-     * (ElastiCache) Redis OSS cluster node group. 
+     * (ElastiCache) Valkey or Redis OSS cluster node group. 
      */
     override fun nodeGroupConfiguration(nodeGroupConfiguration: IResolvable) {
       cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration.let(IResolvable.Companion::unwrap))
@@ -2196,7 +2218,7 @@ public open class CfnReplicationGroup(
 
     /**
      * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-     * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+     * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
      *
      * If you set
      * [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding)
@@ -2209,7 +2231,7 @@ public open class CfnReplicationGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-nodegroupconfiguration)
      * @param nodeGroupConfiguration `NodeGroupConfiguration` is a property of the
      * `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache
-     * (ElastiCache) Redis OSS cluster node group. 
+     * (ElastiCache) Valkey or Redis OSS cluster node group. 
      */
     override fun nodeGroupConfiguration(nodeGroupConfiguration: List<Any>) {
       cdkBuilder.nodeGroupConfiguration(nodeGroupConfiguration.map{CdkObjectWrappers.unwrap(it)})
@@ -2217,7 +2239,7 @@ public open class CfnReplicationGroup(
 
     /**
      * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-     * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+     * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
      *
      * If you set
      * [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding)
@@ -2230,7 +2252,7 @@ public open class CfnReplicationGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-nodegroupconfiguration)
      * @param nodeGroupConfiguration `NodeGroupConfiguration` is a property of the
      * `AWS::ElastiCache::ReplicationGroup` resource that configures an Amazon ElastiCache
-     * (ElastiCache) Redis OSS cluster node group. 
+     * (ElastiCache) Valkey or Redis OSS cluster node group. 
      */
     override fun nodeGroupConfiguration(vararg nodeGroupConfiguration: Any): Unit =
         nodeGroupConfiguration(nodeGroupConfiguration.toList())
@@ -2271,10 +2293,10 @@ public open class CfnReplicationGroup(
     }
 
     /**
-     * An optional parameter that specifies the number of node groups (shards) for this Redis OSS
-     * (cluster mode enabled) replication group.
+     * An optional parameter that specifies the number of node groups (shards) for this Valkey or
+     * Redis OSS (cluster mode enabled) replication group.
      *
-     * For Redis OSS (cluster mode disabled) either omit this parameter or set it to 1.
+     * For Valkey or Redis OSS (cluster mode disabled) either omit this parameter or set it to 1.
      *
      * If you set
      * [UseOnlineResharding](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-updatepolicy.html#cfn-attributes-updatepolicy-useonlineresharding)
@@ -2287,7 +2309,7 @@ public open class CfnReplicationGroup(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-numnodegroups)
      * @param numNodeGroups An optional parameter that specifies the number of node groups (shards)
-     * for this Redis OSS (cluster mode enabled) replication group. 
+     * for this Valkey or Redis OSS (cluster mode enabled) replication group. 
      */
     override fun numNodeGroups(numNodeGroups: Number) {
       cdkBuilder.numNodeGroups(numNodeGroups)
@@ -2465,8 +2487,8 @@ public open class CfnReplicationGroup(
         securityGroupIds(securityGroupIds.toList())
 
     /**
-     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files
-     * stored in Amazon S3.
+     * A list of Amazon Resource Names (ARN) that uniquely identify the Valkey or Redis OSS RDB
+     * snapshot files stored in Amazon S3.
      *
      * The snapshot files are used to populate the new replication group. The Amazon S3 object name
      * in the ARN cannot contain any commas. The new replication group will have the number of node
@@ -2476,16 +2498,16 @@ public open class CfnReplicationGroup(
      * Example of an Amazon S3 ARN: `arn:aws:s3:::my_bucket/snapshot1.rdb`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotarns)
-     * @param snapshotArns A list of Amazon Resource Names (ARN) that uniquely identify the Redis
-     * OSS RDB snapshot files stored in Amazon S3. 
+     * @param snapshotArns A list of Amazon Resource Names (ARN) that uniquely identify the Valkey
+     * or Redis OSS RDB snapshot files stored in Amazon S3. 
      */
     override fun snapshotArns(snapshotArns: List<String>) {
       cdkBuilder.snapshotArns(snapshotArns)
     }
 
     /**
-     * A list of Amazon Resource Names (ARN) that uniquely identify the Redis OSS RDB snapshot files
-     * stored in Amazon S3.
+     * A list of Amazon Resource Names (ARN) that uniquely identify the Valkey or Redis OSS RDB
+     * snapshot files stored in Amazon S3.
      *
      * The snapshot files are used to populate the new replication group. The Amazon S3 object name
      * in the ARN cannot contain any commas. The new replication group will have the number of node
@@ -2495,8 +2517,8 @@ public open class CfnReplicationGroup(
      * Example of an Amazon S3 ARN: `arn:aws:s3:::my_bucket/snapshot1.rdb`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshotarns)
-     * @param snapshotArns A list of Amazon Resource Names (ARN) that uniquely identify the Redis
-     * OSS RDB snapshot files stored in Amazon S3. 
+     * @param snapshotArns A list of Amazon Resource Names (ARN) that uniquely identify the Valkey
+     * or Redis OSS RDB snapshot files stored in Amazon S3. 
      */
     override fun snapshotArns(vararg snapshotArns: String): Unit =
         snapshotArns(snapshotArns.toList())
@@ -2550,7 +2572,8 @@ public open class CfnReplicationGroup(
     /**
      * The cluster ID that is used as the daily snapshot source for the replication group.
      *
-     * This parameter cannot be set for Redis OSS (cluster mode enabled) replication groups.
+     * This parameter cannot be set for Valkey or Redis OSS (cluster mode enabled) replication
+     * groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-replicationgroup.html#cfn-elasticache-replicationgroup-snapshottingclusterid)
      * @param snapshottingClusterId The cluster ID that is used as the daily snapshot source for the
@@ -2598,8 +2621,12 @@ public open class CfnReplicationGroup(
      *
      * If you enable in-transit encryption, you must also specify a value for `CacheSubnetGroup` .
      *
-     * *Required:* Only available when creating a replication group in an Amazon VPC using Redis OSS
-     * version `3.2.6` or `4.x` onward.
+     *
+     * * TransitEncryptionEnabled is only available when creating a replication group in an Amazon
+     * VPC using Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x`
+     * and above.
+     * * TransitEncryptionEnabled is required when creating a new valkey replication group.
+     *
      *
      * Default: `false`
      *
@@ -2628,8 +2655,12 @@ public open class CfnReplicationGroup(
      *
      * If you enable in-transit encryption, you must also specify a value for `CacheSubnetGroup` .
      *
-     * *Required:* Only available when creating a replication group in an Amazon VPC using Redis OSS
-     * version `3.2.6` or `4.x` onward.
+     *
+     * * TransitEncryptionEnabled is only available when creating a replication group in an Amazon
+     * VPC using Valkey version `7.2` and above, Redis OSS version `3.2.6` , or Redis OSS version `4.x`
+     * and above.
+     * * TransitEncryptionEnabled is required when creating a new valkey replication group.
+     *
      *
      * Default: `false`
      *
@@ -2652,8 +2683,8 @@ public open class CfnReplicationGroup(
      *
      * When setting `TransitEncryptionEnabled` to `true` , you can set your `TransitEncryptionMode`
      * to `preferred` in the same request, to allow both encrypted and unencrypted connections at the
-     * same time. Once you migrate all your Redis OSS clients to use encrypted connections you can
-     * modify the value to `required` to allow encrypted connections only.
+     * same time. Once you migrate all your Valkey or Redis OSS clients to use encrypted connections
+     * you can modify the value to `required` to allow encrypted connections only.
      *
      * Setting `TransitEncryptionMode` to `required` is a two-step process that requires you to
      * first set the `TransitEncryptionMode` to `preferred` , after that you can set
@@ -3334,7 +3365,7 @@ public open class CfnReplicationGroup(
 
   /**
    * `NodeGroupConfiguration` is a property of the `AWS::ElastiCache::ReplicationGroup` resource
-   * that configures an Amazon ElastiCache (ElastiCache) Redis OSS cluster node group.
+   * that configures an Amazon ElastiCache (ElastiCache) Valkey or Redis OSS cluster node group.
    *
    * Example:
    *
@@ -3356,8 +3387,8 @@ public open class CfnReplicationGroup(
    */
   public interface NodeGroupConfigurationProperty {
     /**
-     * Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node
-     * group these configuration values apply to.
+     * Either the ElastiCache supplied 4-digit id or a user supplied id for the node group these
+     * configuration values apply to.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-nodegroupid)
      */
@@ -3416,8 +3447,8 @@ public open class CfnReplicationGroup(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param nodeGroupId Either the ElastiCache (Redis OSS) supplied 4-digit id or a user
-       * supplied id for the node group these configuration values apply to.
+       * @param nodeGroupId Either the ElastiCache supplied 4-digit id or a user supplied id for the
+       * node group these configuration values apply to.
        */
       public fun nodeGroupId(nodeGroupId: String)
 
@@ -3475,8 +3506,8 @@ public open class CfnReplicationGroup(
           software.amazon.awscdk.services.elasticache.CfnReplicationGroup.NodeGroupConfigurationProperty.builder()
 
       /**
-       * @param nodeGroupId Either the ElastiCache (Redis OSS) supplied 4-digit id or a user
-       * supplied id for the node group these configuration values apply to.
+       * @param nodeGroupId Either the ElastiCache supplied 4-digit id or a user supplied id for the
+       * node group these configuration values apply to.
        */
       override fun nodeGroupId(nodeGroupId: String) {
         cdkBuilder.nodeGroupId(nodeGroupId)
@@ -3547,8 +3578,8 @@ public open class CfnReplicationGroup(
     ) : CdkObject(cdkObject),
         NodeGroupConfigurationProperty {
       /**
-       * Either the ElastiCache (Redis OSS) supplied 4-digit id or a user supplied id for the node
-       * group these configuration values apply to.
+       * Either the ElastiCache supplied 4-digit id or a user supplied id for the node group these
+       * configuration values apply to.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticache-replicationgroup-nodegroupconfiguration.html#cfn-elasticache-replicationgroup-nodegroupconfiguration-nodegroupid)
        */

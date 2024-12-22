@@ -20,7 +20,7 @@ import kotlin.String
  * ```
  * ISource gitHubSource = Source.gitHub(GitHubSourceProps.builder()
  * .owner("awslabs")
- * .repo("aws-cdk")
+ * .repo("aws-cdk") // optional, default: undefined if unspecified will create organization webhook
  * .webhook(true) // optional, default: true if `webhookFilters` were provided, false otherwise
  * .webhookTriggersBatchBuild(true) // optional, default is false
  * .webhookFilters(List.of(FilterGroup.inEventOf(EventAction.PUSH).andBranchIs("main").andCommitMessageIs("the
@@ -168,6 +168,32 @@ public open class FilterGroup(
    */
   public open fun andHeadRefIsNot(pattern: String): FilterGroup =
       unwrap(this).andHeadRefIsNot(pattern).let(FilterGroup::wrap)
+
+  /**
+   * Create a new FilterGroup with an added condition: the push that is the source of the event
+   * affect only a repository name that matches the given pattern.
+   *
+   * Note that you can only use this method if this Group contains only the `WORKFLOW_JOB_QUEUED`
+   * event action,
+   * only for GitHub sources and only for organization webhook.
+   *
+   * @param pattern a regular expression. 
+   */
+  public open fun andRepositoryNameIs(pattern: String): FilterGroup =
+      unwrap(this).andRepositoryNameIs(pattern).let(FilterGroup::wrap)
+
+  /**
+   * Create a new FilterGroup with an added condition: the push that is the source of the event must
+   * not affect a repository name that matches the given pattern.
+   *
+   * Note that you can only use this method if this Group contains only the `WORKFLOW_JOB_QUEUED`
+   * event action,
+   * only for GitHub sources and only for organization webhook.
+   *
+   * @param pattern a regular expression. 
+   */
+  public open fun andRepositoryNameIsNot(pattern: String): FilterGroup =
+      unwrap(this).andRepositoryNameIsNot(pattern).let(FilterGroup::wrap)
 
   /**
    * Create a new FilterGroup with an added condition: the event must affect the given tag.

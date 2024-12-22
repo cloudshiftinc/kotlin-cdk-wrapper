@@ -1333,13 +1333,18 @@ public open class CfnInsight(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-createdat)
      */
@@ -1439,13 +1444,18 @@ public open class CfnInsight(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-firstobservedat)
      */
@@ -1484,13 +1494,18 @@ public open class CfnInsight(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-lastobservedat)
      */
@@ -1627,13 +1642,18 @@ public open class CfnInsight(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-processlaunchedat)
      */
@@ -1674,13 +1694,18 @@ public open class CfnInsight(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-processterminatedat)
      */
@@ -1903,13 +1928,18 @@ public open class CfnInsight(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-resourcecontainerlaunchedat)
      */
@@ -1985,7 +2015,7 @@ public open class CfnInsight(
      *
      * The value of `Normalized` can be an integer between `0` and `100` .
      *
-     * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
+     * If you provide `Label` and don't provide `Normalized` , then `Normalized` is set
      * automatically as follows.
      *
      * * `INFORMATIONAL` - 0
@@ -2081,13 +2111,18 @@ public open class CfnInsight(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-updatedat)
      */
@@ -2159,8 +2194,8 @@ public open class CfnInsight(
      *
      * * `RecordState` changes from `ARCHIVED` to `ACTIVE` .
      * * `Compliance.Status` changes from `PASSED` to `FAILED` , `WARNING` , or `NOT_AVAILABLE` .
-     * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
-     * is needed.
+     * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action is
+     * needed.
      *
      * The workflow status of a `SUPPRESSED` finding does not change if `RecordState` changes from
      * `ARCHIVED` to `ACTIVE` .
@@ -2380,7 +2415,8 @@ public open class CfnInsight(
        * potential security issue that a finding reflects.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2388,6 +2424,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun createdAt(createdAt: IResolvable)
 
@@ -2396,7 +2436,8 @@ public open class CfnInsight(
        * potential security issue that a finding reflects.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2404,6 +2445,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun createdAt(createdAt: List<Any>)
 
@@ -2412,7 +2457,8 @@ public open class CfnInsight(
        * potential security issue that a finding reflects.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2420,6 +2466,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun createdAt(vararg createdAt: Any)
 
@@ -2635,7 +2685,8 @@ public open class CfnInsight(
        * observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2643,6 +2694,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun firstObservedAt(firstObservedAt: IResolvable)
 
@@ -2651,7 +2706,8 @@ public open class CfnInsight(
        * observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2659,6 +2715,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun firstObservedAt(firstObservedAt: List<Any>)
 
@@ -2667,7 +2727,8 @@ public open class CfnInsight(
        * observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2675,6 +2736,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun firstObservedAt(vararg firstObservedAt: Any)
 
@@ -2740,7 +2805,8 @@ public open class CfnInsight(
        * recently observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2748,6 +2814,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun lastObservedAt(lastObservedAt: IResolvable)
 
@@ -2756,7 +2826,8 @@ public open class CfnInsight(
        * recently observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2764,6 +2835,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun lastObservedAt(lastObservedAt: List<Any>)
 
@@ -2772,7 +2847,8 @@ public open class CfnInsight(
        * recently observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -2780,6 +2856,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun lastObservedAt(vararg lastObservedAt: Any)
 
@@ -3084,7 +3164,8 @@ public open class CfnInsight(
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3092,6 +3173,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun processLaunchedAt(processLaunchedAt: IResolvable)
 
@@ -3099,7 +3184,8 @@ public open class CfnInsight(
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3107,6 +3193,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun processLaunchedAt(processLaunchedAt: List<Any>)
 
@@ -3114,7 +3204,8 @@ public open class CfnInsight(
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3122,6 +3213,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun processLaunchedAt(vararg processLaunchedAt: Any)
 
@@ -3192,7 +3287,8 @@ public open class CfnInsight(
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3200,6 +3296,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun processTerminatedAt(processTerminatedAt: IResolvable)
 
@@ -3207,7 +3307,8 @@ public open class CfnInsight(
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3215,6 +3316,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun processTerminatedAt(processTerminatedAt: List<Any>)
 
@@ -3222,7 +3327,8 @@ public open class CfnInsight(
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3230,6 +3336,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun processTerminatedAt(vararg processTerminatedAt: Any)
 
@@ -3695,7 +3805,8 @@ public open class CfnInsight(
        * started.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3703,6 +3814,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun resourceContainerLaunchedAt(resourceContainerLaunchedAt: IResolvable)
 
@@ -3711,7 +3826,8 @@ public open class CfnInsight(
        * started.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3719,6 +3835,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun resourceContainerLaunchedAt(resourceContainerLaunchedAt: List<Any>)
 
@@ -3727,7 +3847,8 @@ public open class CfnInsight(
        * started.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -3735,6 +3856,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun resourceContainerLaunchedAt(vararg resourceContainerLaunchedAt: Any)
 
@@ -3887,7 +4012,7 @@ public open class CfnInsight(
        * providing `Normalized` , provide `Label` .
        * The value of `Normalized` can be an integer between `0` and `100` .
        *
-       * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
+       * If you provide `Label` and don't provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
        * * `INFORMATIONAL` - 0
@@ -3903,7 +4028,7 @@ public open class CfnInsight(
        * providing `Normalized` , provide `Label` .
        * The value of `Normalized` can be an integer between `0` and `100` .
        *
-       * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
+       * If you provide `Label` and don't provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
        * * `INFORMATIONAL` - 0
@@ -3919,7 +4044,7 @@ public open class CfnInsight(
        * providing `Normalized` , provide `Label` .
        * The value of `Normalized` can be an integer between `0` and `100` .
        *
-       * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
+       * If you provide `Label` and don't provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
        * * `INFORMATIONAL` - 0
@@ -4106,7 +4231,8 @@ public open class CfnInsight(
        * updated the finding record.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4114,6 +4240,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun updatedAt(updatedAt: IResolvable)
 
@@ -4122,7 +4252,8 @@ public open class CfnInsight(
        * updated the finding record.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4130,6 +4261,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun updatedAt(updatedAt: List<Any>)
 
@@ -4138,7 +4273,8 @@ public open class CfnInsight(
        * updated the finding record.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4146,6 +4282,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun updatedAt(vararg updatedAt: Any)
 
@@ -4265,7 +4405,7 @@ public open class CfnInsight(
        *
        * * `RecordState` changes from `ARCHIVED` to `ACTIVE` .
        * * `Compliance.Status` changes from `PASSED` to `FAILED` , `WARNING` , or `NOT_AVAILABLE` .
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed.
        *
        * The workflow status of a `SUPPRESSED` finding does not change if `RecordState` changes from
@@ -4305,7 +4445,7 @@ public open class CfnInsight(
        *
        * * `RecordState` changes from `ARCHIVED` to `ACTIVE` .
        * * `Compliance.Status` changes from `PASSED` to `FAILED` , `WARNING` , or `NOT_AVAILABLE` .
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed.
        *
        * The workflow status of a `SUPPRESSED` finding does not change if `RecordState` changes from
@@ -4345,7 +4485,7 @@ public open class CfnInsight(
        *
        * * `RecordState` changes from `ARCHIVED` to `ACTIVE` .
        * * `Compliance.Status` changes from `PASSED` to `FAILED` , `WARNING` , or `NOT_AVAILABLE` .
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed.
        *
        * The workflow status of a `SUPPRESSED` finding does not change if `RecordState` changes from
@@ -4609,7 +4749,8 @@ public open class CfnInsight(
        * potential security issue that a finding reflects.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4617,6 +4758,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun createdAt(createdAt: IResolvable) {
         cdkBuilder.createdAt(createdAt.let(IResolvable.Companion::unwrap))
@@ -4627,7 +4772,8 @@ public open class CfnInsight(
        * potential security issue that a finding reflects.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4635,6 +4781,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun createdAt(createdAt: List<Any>) {
         cdkBuilder.createdAt(createdAt.map{CdkObjectWrappers.unwrap(it)})
@@ -4645,7 +4795,8 @@ public open class CfnInsight(
        * potential security issue that a finding reflects.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4653,6 +4804,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun createdAt(vararg createdAt: Any): Unit = createdAt(createdAt.toList())
 
@@ -4914,7 +5069,8 @@ public open class CfnInsight(
        * observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4922,6 +5078,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun firstObservedAt(firstObservedAt: IResolvable) {
         cdkBuilder.firstObservedAt(firstObservedAt.let(IResolvable.Companion::unwrap))
@@ -4932,7 +5092,8 @@ public open class CfnInsight(
        * observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4940,6 +5101,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun firstObservedAt(firstObservedAt: List<Any>) {
         cdkBuilder.firstObservedAt(firstObservedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -4950,7 +5115,8 @@ public open class CfnInsight(
        * observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -4958,6 +5124,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun firstObservedAt(vararg firstObservedAt: Any): Unit =
           firstObservedAt(firstObservedAt.toList())
@@ -5036,7 +5206,8 @@ public open class CfnInsight(
        * recently observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -5044,6 +5215,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun lastObservedAt(lastObservedAt: IResolvable) {
         cdkBuilder.lastObservedAt(lastObservedAt.let(IResolvable.Companion::unwrap))
@@ -5054,7 +5229,8 @@ public open class CfnInsight(
        * recently observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -5062,6 +5238,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun lastObservedAt(lastObservedAt: List<Any>) {
         cdkBuilder.lastObservedAt(lastObservedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -5072,7 +5252,8 @@ public open class CfnInsight(
        * recently observed the potential security issue that a finding captured.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -5080,6 +5261,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun lastObservedAt(vararg lastObservedAt: Any): Unit =
           lastObservedAt(lastObservedAt.toList())
@@ -5471,7 +5656,8 @@ public open class CfnInsight(
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -5479,6 +5665,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun processLaunchedAt(processLaunchedAt: IResolvable) {
         cdkBuilder.processLaunchedAt(processLaunchedAt.let(IResolvable.Companion::unwrap))
@@ -5488,7 +5678,8 @@ public open class CfnInsight(
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -5496,6 +5687,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun processLaunchedAt(processLaunchedAt: List<Any>) {
         cdkBuilder.processLaunchedAt(processLaunchedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -5505,7 +5700,8 @@ public open class CfnInsight(
        * @param processLaunchedAt A timestamp that identifies when the process was launched.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -5513,6 +5709,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun processLaunchedAt(vararg processLaunchedAt: Any): Unit =
           processLaunchedAt(processLaunchedAt.toList())
@@ -5601,7 +5801,8 @@ public open class CfnInsight(
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -5609,6 +5810,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun processTerminatedAt(processTerminatedAt: IResolvable) {
         cdkBuilder.processTerminatedAt(processTerminatedAt.let(IResolvable.Companion::unwrap))
@@ -5618,7 +5823,8 @@ public open class CfnInsight(
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -5626,6 +5832,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun processTerminatedAt(processTerminatedAt: List<Any>) {
         cdkBuilder.processTerminatedAt(processTerminatedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -5635,7 +5845,8 @@ public open class CfnInsight(
        * @param processTerminatedAt A timestamp that identifies when the process was terminated.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -5643,6 +5854,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun processTerminatedAt(vararg processTerminatedAt: Any): Unit =
           processTerminatedAt(processTerminatedAt.toList())
@@ -6247,7 +6462,8 @@ public open class CfnInsight(
        * started.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -6255,6 +6471,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun resourceContainerLaunchedAt(resourceContainerLaunchedAt: IResolvable) {
         cdkBuilder.resourceContainerLaunchedAt(resourceContainerLaunchedAt.let(IResolvable.Companion::unwrap))
@@ -6265,7 +6485,8 @@ public open class CfnInsight(
        * started.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -6273,6 +6494,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun resourceContainerLaunchedAt(resourceContainerLaunchedAt: List<Any>) {
         cdkBuilder.resourceContainerLaunchedAt(resourceContainerLaunchedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -6283,7 +6508,8 @@ public open class CfnInsight(
        * started.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -6291,6 +6517,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun resourceContainerLaunchedAt(vararg resourceContainerLaunchedAt: Any): Unit =
           resourceContainerLaunchedAt(resourceContainerLaunchedAt.toList())
@@ -6487,7 +6717,7 @@ public open class CfnInsight(
        * providing `Normalized` , provide `Label` .
        * The value of `Normalized` can be an integer between `0` and `100` .
        *
-       * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
+       * If you provide `Label` and don't provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
        * * `INFORMATIONAL` - 0
@@ -6505,7 +6735,7 @@ public open class CfnInsight(
        * providing `Normalized` , provide `Label` .
        * The value of `Normalized` can be an integer between `0` and `100` .
        *
-       * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
+       * If you provide `Label` and don't provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
        * * `INFORMATIONAL` - 0
@@ -6523,7 +6753,7 @@ public open class CfnInsight(
        * providing `Normalized` , provide `Label` .
        * The value of `Normalized` can be an integer between `0` and `100` .
        *
-       * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
+       * If you provide `Label` and don't provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
        * * `INFORMATIONAL` - 0
@@ -6761,7 +6991,8 @@ public open class CfnInsight(
        * updated the finding record.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -6769,6 +7000,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun updatedAt(updatedAt: IResolvable) {
         cdkBuilder.updatedAt(updatedAt.let(IResolvable.Companion::unwrap))
@@ -6779,7 +7014,8 @@ public open class CfnInsight(
        * updated the finding record.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -6787,6 +7023,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun updatedAt(updatedAt: List<Any>) {
         cdkBuilder.updatedAt(updatedAt.map{CdkObjectWrappers.unwrap(it)})
@@ -6797,7 +7037,8 @@ public open class CfnInsight(
        * updated the finding record.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -6805,6 +7046,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun updatedAt(vararg updatedAt: Any): Unit = updatedAt(updatedAt.toList())
 
@@ -6949,7 +7194,7 @@ public open class CfnInsight(
        *
        * * `RecordState` changes from `ARCHIVED` to `ACTIVE` .
        * * `Compliance.Status` changes from `PASSED` to `FAILED` , `WARNING` , or `NOT_AVAILABLE` .
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed.
        *
        * The workflow status of a `SUPPRESSED` finding does not change if `RecordState` changes from
@@ -6991,7 +7236,7 @@ public open class CfnInsight(
        *
        * * `RecordState` changes from `ARCHIVED` to `ACTIVE` .
        * * `Compliance.Status` changes from `PASSED` to `FAILED` , `WARNING` , or `NOT_AVAILABLE` .
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed.
        *
        * The workflow status of a `SUPPRESSED` finding does not change if `RecordState` changes from
@@ -7033,7 +7278,7 @@ public open class CfnInsight(
        *
        * * `RecordState` changes from `ARCHIVED` to `ACTIVE` .
        * * `Compliance.Status` changes from `PASSED` to `FAILED` , `WARNING` , or `NOT_AVAILABLE` .
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed.
        *
        * The workflow status of a `SUPPRESSED` finding does not change if `RecordState` changes from
@@ -7154,7 +7399,8 @@ public open class CfnInsight(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -7162,6 +7408,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-createdat)
        */
@@ -7261,7 +7511,8 @@ public open class CfnInsight(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -7269,6 +7520,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-firstobservedat)
        */
@@ -7307,7 +7562,8 @@ public open class CfnInsight(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -7315,6 +7571,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-lastobservedat)
        */
@@ -7452,7 +7712,8 @@ public open class CfnInsight(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -7460,6 +7721,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-processlaunchedat)
        */
@@ -7500,7 +7765,8 @@ public open class CfnInsight(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -7508,6 +7774,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-processterminatedat)
        */
@@ -7732,7 +8002,8 @@ public open class CfnInsight(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -7740,6 +8011,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-resourcecontainerlaunchedat)
        */
@@ -7816,7 +8091,7 @@ public open class CfnInsight(
        *
        * The value of `Normalized` can be an integer between `0` and `100` .
        *
-       * If you provide `Label` and do not provide `Normalized` , then `Normalized` is set
+       * If you provide `Label` and don't provide `Normalized` , then `Normalized` is set
        * automatically as follows.
        *
        * * `INFORMATIONAL` - 0
@@ -7913,7 +8188,8 @@ public open class CfnInsight(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -7921,6 +8197,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-awssecurityfindingfilters.html#cfn-securityhub-insight-awssecurityfindingfilters-updatedat)
        */
@@ -7993,7 +8273,7 @@ public open class CfnInsight(
        *
        * * `RecordState` changes from `ARCHIVED` to `ACTIVE` .
        * * `Compliance.Status` changes from `PASSED` to `FAILED` , `WARNING` , or `NOT_AVAILABLE` .
-       * * `SUPPRESSED` - Indicates that you reviewed the finding and do not believe that any action
+       * * `SUPPRESSED` - Indicates that you reviewed the finding and don't believe that any action
        * is needed.
        *
        * The workflow status of a `SUPPRESSED` finding does not change if `RecordState` changes from
@@ -8163,13 +8443,18 @@ public open class CfnInsight(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-datefilter.html#cfn-securityhub-insight-datefilter-end)
      */
@@ -8180,13 +8465,18 @@ public open class CfnInsight(
      *
      * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
      * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+     * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send to
+     * Security Hub:
      *
      * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
      * * `YYYY-MM-DDTHH:MM:SS+HH:MM` (for example, `2024-01-04T15:25:10+17:59` )
      * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
      * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59` )
+     *
+     * If a finding provider sends a finding to Security Hub that contains a timestamp in
+     * nanoseconds, we round it to milliseconds. For example, we round `2024-10-31T23:00:00.123456789Z`
+     * to `2024-10-31T23:00:00.123Z` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-datefilter.html#cfn-securityhub-insight-datefilter-start)
      */
@@ -8218,7 +8508,8 @@ public open class CfnInsight(
        * @param end A timestamp that provides the end date for the date filter.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -8226,6 +8517,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun end(end: String)
 
@@ -8233,7 +8528,8 @@ public open class CfnInsight(
        * @param start A timestamp that provides the start date for the date filter.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -8241,6 +8537,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       public fun start(start: String)
     }
@@ -8276,7 +8576,8 @@ public open class CfnInsight(
        * @param end A timestamp that provides the end date for the date filter.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -8284,6 +8585,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun end(end: String) {
         cdkBuilder.end(end)
@@ -8293,7 +8598,8 @@ public open class CfnInsight(
        * @param start A timestamp that provides the start date for the date filter.
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -8301,6 +8607,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        */
       override fun start(start: String) {
         cdkBuilder.start(start)
@@ -8326,7 +8636,8 @@ public open class CfnInsight(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -8334,6 +8645,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-datefilter.html#cfn-securityhub-insight-datefilter-end)
        */
@@ -8344,7 +8659,8 @@ public open class CfnInsight(
        *
        * This field accepts only the specified formats. Timestamps can end with `Z` or `("+" / "-")
        * time-hour [":" time-minute]` . The time-secfrac after seconds is limited to a maximum of 9
-       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats with examples:
+       * digits. The offset is bounded by +/-18:00. Here are valid timestamp formats that you can send
+       * to Security Hub:
        *
        * * `YYYY-MM-DDTHH:MM:SSZ` (for example, `2019-01-31T23:00:00Z` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmmZ` (for example, `2019-01-31T23:00:00.123456789Z` )
@@ -8352,6 +8668,10 @@ public open class CfnInsight(
        * * `YYYY-MM-DDTHH:MM:SS-HHMM` (for example, `2024-01-04T15:25:10-1759` )
        * * `YYYY-MM-DDTHH:MM:SS.mmmmmmmmm+HH:MM` (for example, `2024-01-04T15:25:10.123456789+17:59`
        * )
+       *
+       * If a finding provider sends a finding to Security Hub that contains a timestamp in
+       * nanoseconds, we round it to milliseconds. For example, we round
+       * `2024-10-31T23:00:00.123456789Z` to `2024-10-31T23:00:00.123Z` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-securityhub-insight-datefilter.html#cfn-securityhub-insight-datefilter-start)
        */

@@ -70,6 +70,10 @@ import kotlin.jvm.JvmName
  * .tableClass(TableClass.STANDARD)
  * .timeToLiveAttribute("timeToLiveAttribute")
  * .waitForReplicationToFinish(false)
+ * .warmThroughput(WarmThroughput.builder()
+ * .readUnitsPerSecond(123)
+ * .writeUnitsPerSecond(123)
+ * .build())
  * .writeCapacity(123)
  * .build();
  * ```
@@ -261,6 +265,19 @@ public interface TableOptions : SchemaOptions {
    * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-replicas)
    */
   public fun waitForReplicationToFinish(): Boolean? = unwrap(this).getWaitForReplicationToFinish()
+
+  /**
+   * Specify values to pre-warm you DynamoDB Table Warm Throughput feature is not available for
+   * Global Table replicas using the `Table` construct.
+   *
+   * To enable Warm Throughput, use the `TableV2` construct instead.
+   *
+   * Default: - warm throughput is not configured
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+   */
+  public fun warmThroughput(): WarmThroughput? =
+      unwrap(this).getWarmThroughput()?.let(WarmThroughput::wrap)
 
   /**
    * The write capacity for the table.
@@ -455,6 +472,22 @@ public interface TableOptions : SchemaOptions {
      * This will cause the existing replicas to be deleted.
      */
     public fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean)
+
+    /**
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct.
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     */
+    public fun warmThroughput(warmThroughput: WarmThroughput)
+
+    /**
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct.
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b6b60beeb0e2ee66bd1a7ae0addfb161429511aee47bee3816dbd2a3d87cfd0c")
+    public fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit)
 
     /**
      * @param writeCapacity The write capacity for the table.
@@ -692,6 +725,25 @@ public interface TableOptions : SchemaOptions {
     }
 
     /**
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct.
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     */
+    override fun warmThroughput(warmThroughput: WarmThroughput) {
+      cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughput.Companion::unwrap))
+    }
+
+    /**
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct.
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b6b60beeb0e2ee66bd1a7ae0addfb161429511aee47bee3816dbd2a3d87cfd0c")
+    override fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit): Unit =
+        warmThroughput(WarmThroughput(warmThroughput))
+
+    /**
      * @param writeCapacity The write capacity for the table.
      * Careful if you add Global Secondary Indexes, as
      * those will share the table's provisioned throughput.
@@ -909,6 +961,19 @@ public interface TableOptions : SchemaOptions {
      */
     override fun waitForReplicationToFinish(): Boolean? =
         unwrap(this).getWaitForReplicationToFinish()
+
+    /**
+     * Specify values to pre-warm you DynamoDB Table Warm Throughput feature is not available for
+     * Global Table replicas using the `Table` construct.
+     *
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     *
+     * Default: - warm throughput is not configured
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     */
+    override fun warmThroughput(): WarmThroughput? =
+        unwrap(this).getWarmThroughput()?.let(WarmThroughput::wrap)
 
     /**
      * The write capacity for the table.

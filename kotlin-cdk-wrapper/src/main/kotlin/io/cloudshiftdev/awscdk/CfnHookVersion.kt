@@ -13,7 +13,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `HookVersion` resource publishes new or first hook version to the AWS CloudFormation
+ * The `HookVersion` resource publishes new or first Hook version to the AWS CloudFormation
  * registry.
  *
  * Example:
@@ -57,23 +57,23 @@ public open class CfnHookVersion(
   )
 
   /**
-   * The Amazon Resource Name (ARN) of the hook.
+   * The Amazon Resource Name (ARN) of the Hook.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   * Whether the specified hook version is set as the default version.
+   * Whether the specified Hook version is set as the default version.
    */
   public open fun attrIsDefaultVersion(): IResolvable =
       unwrap(this).getAttrIsDefaultVersion().let(IResolvable::wrap)
 
   /**
-   * The Amazon Resource Number (ARN) assigned to this version of the hook.
+   * The Amazon Resource Number (ARN) assigned to this version of the Hook.
    */
   public open fun attrTypeArn(): String = unwrap(this).getAttrTypeArn()
 
   /**
-   * The ID of this version of the hook.
+   * The ID of this version of the Hook.
    */
   public open fun attrVersionId(): String = unwrap(this).getAttrVersionId()
 
@@ -89,12 +89,12 @@ public open class CfnHookVersion(
   public open fun attrVisibility(): String = unwrap(this).getAttrVisibility()
 
   /**
-   * The Amazon Resource Name (ARN) of the task execution role that grants the hook permission.
+   * The Amazon Resource Name (ARN) of the task execution role that grants the Hook permission.
    */
   public open fun executionRoleArn(): String? = unwrap(this).getExecutionRoleArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the task execution role that grants the hook permission.
+   * The Amazon Resource Name (ARN) of the task execution role that grants the Hook permission.
    */
   public open fun executionRoleArn(`value`: String) {
     unwrap(this).setExecutionRoleArn(`value`)
@@ -137,14 +137,14 @@ public open class CfnHookVersion(
       loggingConfig(LoggingConfigProperty(`value`))
 
   /**
-   * A URL to the Amazon S3 bucket containing the hook project package that contains the necessary
-   * files for the hook you want to register.
+   * A URL to the Amazon S3 bucket containing the Hook project package that contains the necessary
+   * files for the Hook you want to register.
    */
   public open fun schemaHandlerPackage(): String = unwrap(this).getSchemaHandlerPackage()
 
   /**
-   * A URL to the Amazon S3 bucket containing the hook project package that contains the necessary
-   * files for the hook you want to register.
+   * A URL to the Amazon S3 bucket containing the Hook project package that contains the necessary
+   * files for the Hook you want to register.
    */
   public open fun schemaHandlerPackage(`value`: String) {
     unwrap(this).setSchemaHandlerPackage(`value`)
@@ -168,11 +168,11 @@ public open class CfnHookVersion(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The Amazon Resource Name (ARN) of the task execution role that grants the hook permission.
+     * The Amazon Resource Name (ARN) of the task execution role that grants the Hook permission.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html#cfn-cloudformation-hookversion-executionrolearn)
      * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that grants
-     * the hook permission. 
+     * the Hook permission. 
      */
     public fun executionRoleArn(executionRoleArn: String)
 
@@ -203,8 +203,8 @@ public open class CfnHookVersion(
     public fun loggingConfig(loggingConfig: LoggingConfigProperty.Builder.() -> Unit)
 
     /**
-     * A URL to the Amazon S3 bucket containing the hook project package that contains the necessary
-     * files for the hook you want to register.
+     * A URL to the Amazon S3 bucket containing the Hook project package that contains the necessary
+     * files for the Hook you want to register.
      *
      * For information on generating a schema handler package for the resource you want to register,
      * see
@@ -221,8 +221,8 @@ public open class CfnHookVersion(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html#cfn-cloudformation-hookversion-schemahandlerpackage)
-     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the hook project package
-     * that contains the necessary files for the hook you want to register. 
+     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the Hook project package
+     * that contains the necessary files for the Hook you want to register. 
      */
     public fun schemaHandlerPackage(schemaHandlerPackage: String)
 
@@ -258,11 +258,11 @@ public open class CfnHookVersion(
         software.amazon.awscdk.CfnHookVersion.Builder.create(scope, id)
 
     /**
-     * The Amazon Resource Name (ARN) of the task execution role that grants the hook permission.
+     * The Amazon Resource Name (ARN) of the task execution role that grants the Hook permission.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html#cfn-cloudformation-hookversion-executionrolearn)
      * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that grants
-     * the hook permission. 
+     * the Hook permission. 
      */
     override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
@@ -300,8 +300,8 @@ public open class CfnHookVersion(
         loggingConfig(LoggingConfigProperty(loggingConfig))
 
     /**
-     * A URL to the Amazon S3 bucket containing the hook project package that contains the necessary
-     * files for the hook you want to register.
+     * A URL to the Amazon S3 bucket containing the Hook project package that contains the necessary
+     * files for the Hook you want to register.
      *
      * For information on generating a schema handler package for the resource you want to register,
      * see
@@ -318,8 +318,8 @@ public open class CfnHookVersion(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html#cfn-cloudformation-hookversion-schemahandlerpackage)
-     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the hook project package
-     * that contains the necessary files for the hook you want to register. 
+     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the Hook project package
+     * that contains the necessary files for the Hook you want to register. 
      */
     override fun schemaHandlerPackage(schemaHandlerPackage: String) {
       cdkBuilder.schemaHandlerPackage(schemaHandlerPackage)

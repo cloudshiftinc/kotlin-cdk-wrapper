@@ -153,6 +153,8 @@ public open class CfnStudioLifecycleConfig(
     /**
      * The content of your Amazon SageMaker Studio Lifecycle Configuration script.
      *
+     * This content must be base64 encoded.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-studiolifecycleconfigcontent)
      * @param studioLifecycleConfigContent The content of your Amazon SageMaker Studio Lifecycle
      * Configuration script. 
@@ -171,6 +173,9 @@ public open class CfnStudioLifecycleConfig(
     /**
      * Tags to be associated with the Lifecycle Configuration.
      *
+     * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+     * are searchable using the Search API.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-tags)
      * @param tags Tags to be associated with the Lifecycle Configuration. 
      */
@@ -178,6 +183,9 @@ public open class CfnStudioLifecycleConfig(
 
     /**
      * Tags to be associated with the Lifecycle Configuration.
+     *
+     * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+     * are searchable using the Search API.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-tags)
      * @param tags Tags to be associated with the Lifecycle Configuration. 
@@ -207,6 +215,8 @@ public open class CfnStudioLifecycleConfig(
     /**
      * The content of your Amazon SageMaker Studio Lifecycle Configuration script.
      *
+     * This content must be base64 encoded.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-studiolifecycleconfigcontent)
      * @param studioLifecycleConfigContent The content of your Amazon SageMaker Studio Lifecycle
      * Configuration script. 
@@ -229,6 +239,9 @@ public open class CfnStudioLifecycleConfig(
     /**
      * Tags to be associated with the Lifecycle Configuration.
      *
+     * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+     * are searchable using the Search API.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-tags)
      * @param tags Tags to be associated with the Lifecycle Configuration. 
      */
@@ -238,6 +251,9 @@ public open class CfnStudioLifecycleConfig(
 
     /**
      * Tags to be associated with the Lifecycle Configuration.
+     *
+     * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+     * are searchable using the Search API.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-tags)
      * @param tags Tags to be associated with the Lifecycle Configuration. 

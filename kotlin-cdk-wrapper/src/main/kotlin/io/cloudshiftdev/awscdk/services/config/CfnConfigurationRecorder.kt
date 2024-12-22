@@ -162,26 +162,34 @@ public open class CfnConfigurationRecorder(
       recordingGroup(RecordingGroupProperty(`value`))
 
   /**
-   * Specifies the default recording frequency that AWS Config uses to record configuration changes.
+   * Specifies the default recording frequency for the configuration recorder.
+   *
+   * AWS Config supports *Continuous recording* and *Daily recording* .
    */
   public open fun recordingMode(): Any? = unwrap(this).getRecordingMode()
 
   /**
-   * Specifies the default recording frequency that AWS Config uses to record configuration changes.
+   * Specifies the default recording frequency for the configuration recorder.
+   *
+   * AWS Config supports *Continuous recording* and *Daily recording* .
    */
   public open fun recordingMode(`value`: IResolvable) {
     unwrap(this).setRecordingMode(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies the default recording frequency that AWS Config uses to record configuration changes.
+   * Specifies the default recording frequency for the configuration recorder.
+   *
+   * AWS Config supports *Continuous recording* and *Daily recording* .
    */
   public open fun recordingMode(`value`: RecordingModeProperty) {
     unwrap(this).setRecordingMode(`value`.let(RecordingModeProperty.Companion::unwrap))
   }
 
   /**
-   * Specifies the default recording frequency that AWS Config uses to record configuration changes.
+   * Specifies the default recording frequency for the configuration recorder.
+   *
+   * AWS Config supports *Continuous recording* and *Daily recording* .
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0a9d8ec9a54119901b41a6b7621459d3e9717792772bfbdc26a080973620387f")
@@ -302,10 +310,8 @@ public open class CfnConfigurationRecorder(
     public fun recordingGroup(recordingGroup: RecordingGroupProperty.Builder.() -> Unit)
 
     /**
-     * Specifies the default recording frequency that AWS Config uses to record configuration
-     * changes.
-     *
-     * AWS Config supports *Continuous recording* and *Daily recording* .
+     * Specifies the default recording frequency for the configuration recorder. AWS Config supports
+     * *Continuous recording* and *Daily recording* .
      *
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
@@ -314,6 +320,8 @@ public open class CfnConfigurationRecorder(
      * previous CI recorded.
      *
      *
+     * *Some resource types require continuous recording*
+     *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
      *
@@ -321,16 +329,14 @@ public open class CfnConfigurationRecorder(
      * You can also override the recording frequency for specific resource types.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-recordingmode)
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes. 
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* . 
      */
     public fun recordingMode(recordingMode: IResolvable)
 
     /**
-     * Specifies the default recording frequency that AWS Config uses to record configuration
-     * changes.
-     *
-     * AWS Config supports *Continuous recording* and *Daily recording* .
+     * Specifies the default recording frequency for the configuration recorder. AWS Config supports
+     * *Continuous recording* and *Daily recording* .
      *
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
@@ -339,6 +345,8 @@ public open class CfnConfigurationRecorder(
      * previous CI recorded.
      *
      *
+     * *Some resource types require continuous recording*
+     *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
      *
@@ -346,16 +354,14 @@ public open class CfnConfigurationRecorder(
      * You can also override the recording frequency for specific resource types.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-recordingmode)
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes. 
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* . 
      */
     public fun recordingMode(recordingMode: RecordingModeProperty)
 
     /**
-     * Specifies the default recording frequency that AWS Config uses to record configuration
-     * changes.
-     *
-     * AWS Config supports *Continuous recording* and *Daily recording* .
+     * Specifies the default recording frequency for the configuration recorder. AWS Config supports
+     * *Continuous recording* and *Daily recording* .
      *
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
@@ -364,6 +370,8 @@ public open class CfnConfigurationRecorder(
      * previous CI recorded.
      *
      *
+     * *Some resource types require continuous recording*
+     *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
      *
@@ -371,8 +379,8 @@ public open class CfnConfigurationRecorder(
      * You can also override the recording frequency for specific resource types.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-recordingmode)
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes. 
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00ffd9c129635aac8d171277a5f2480e3862c30ee64c42d0cee3790005d4a31a")
@@ -520,10 +528,8 @@ public open class CfnConfigurationRecorder(
         recordingGroup(RecordingGroupProperty(recordingGroup))
 
     /**
-     * Specifies the default recording frequency that AWS Config uses to record configuration
-     * changes.
-     *
-     * AWS Config supports *Continuous recording* and *Daily recording* .
+     * Specifies the default recording frequency for the configuration recorder. AWS Config supports
+     * *Continuous recording* and *Daily recording* .
      *
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
@@ -532,6 +538,8 @@ public open class CfnConfigurationRecorder(
      * previous CI recorded.
      *
      *
+     * *Some resource types require continuous recording*
+     *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
      *
@@ -539,18 +547,16 @@ public open class CfnConfigurationRecorder(
      * You can also override the recording frequency for specific resource types.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-recordingmode)
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes. 
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* . 
      */
     override fun recordingMode(recordingMode: IResolvable) {
       cdkBuilder.recordingMode(recordingMode.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies the default recording frequency that AWS Config uses to record configuration
-     * changes.
-     *
-     * AWS Config supports *Continuous recording* and *Daily recording* .
+     * Specifies the default recording frequency for the configuration recorder. AWS Config supports
+     * *Continuous recording* and *Daily recording* .
      *
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
@@ -559,6 +565,8 @@ public open class CfnConfigurationRecorder(
      * previous CI recorded.
      *
      *
+     * *Some resource types require continuous recording*
+     *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
      *
@@ -566,18 +574,16 @@ public open class CfnConfigurationRecorder(
      * You can also override the recording frequency for specific resource types.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-recordingmode)
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes. 
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* . 
      */
     override fun recordingMode(recordingMode: RecordingModeProperty) {
       cdkBuilder.recordingMode(recordingMode.let(RecordingModeProperty.Companion::unwrap))
     }
 
     /**
-     * Specifies the default recording frequency that AWS Config uses to record configuration
-     * changes.
-     *
-     * AWS Config supports *Continuous recording* and *Daily recording* .
+     * Specifies the default recording frequency for the configuration recorder. AWS Config supports
+     * *Continuous recording* and *Daily recording* .
      *
      * * Continuous recording allows you to record configuration changes continuously whenever a
      * change occurs.
@@ -586,6 +592,8 @@ public open class CfnConfigurationRecorder(
      * previous CI recorded.
      *
      *
+     * *Some resource types require continuous recording*
+     *
      * AWS Firewall Manager depends on continuous recording to monitor your resources. If you are
      * using Firewall Manager, it is recommended that you set the recording frequency to Continuous.
      *
@@ -593,8 +601,8 @@ public open class CfnConfigurationRecorder(
      * You can also override the recording frequency for specific resource types.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-config-configurationrecorder.html#cfn-config-configurationrecorder-recordingmode)
-     * @param recordingMode Specifies the default recording frequency that AWS Config uses to record
-     * configuration changes. 
+     * @param recordingMode Specifies the default recording frequency for the configuration
+     * recorder. AWS Config supports *Continuous recording* and *Daily recording* . 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("00ffd9c129635aac8d171277a5f2480e3862c30ee64c42d0cee3790005d4a31a")
@@ -2417,7 +2425,7 @@ public open class CfnConfigurationRecorder(
      * override.
      *
      *
-     * Daily recording is not supported for the following resource types:
+     * Daily recording cannot be specified for the following resource types:
      *
      * * `AWS::Config::ResourceCompliance`
      * * `AWS::Config::ConformancePackCompliance`
@@ -2457,7 +2465,7 @@ public open class CfnConfigurationRecorder(
        * @param resourceTypes A comma-separated list that specifies which resource types AWS Config
        * includes in the override. 
        *
-       * Daily recording is not supported for the following resource types:
+       * Daily recording cannot be specified for the following resource types:
        *
        * * `AWS::Config::ResourceCompliance`
        * * `AWS::Config::ConformancePackCompliance`
@@ -2469,7 +2477,7 @@ public open class CfnConfigurationRecorder(
        * @param resourceTypes A comma-separated list that specifies which resource types AWS Config
        * includes in the override. 
        *
-       * Daily recording is not supported for the following resource types:
+       * Daily recording cannot be specified for the following resource types:
        *
        * * `AWS::Config::ResourceCompliance`
        * * `AWS::Config::ConformancePackCompliance`
@@ -2512,7 +2520,7 @@ public open class CfnConfigurationRecorder(
        * @param resourceTypes A comma-separated list that specifies which resource types AWS Config
        * includes in the override. 
        *
-       * Daily recording is not supported for the following resource types:
+       * Daily recording cannot be specified for the following resource types:
        *
        * * `AWS::Config::ResourceCompliance`
        * * `AWS::Config::ConformancePackCompliance`
@@ -2526,7 +2534,7 @@ public open class CfnConfigurationRecorder(
        * @param resourceTypes A comma-separated list that specifies which resource types AWS Config
        * includes in the override. 
        *
-       * Daily recording is not supported for the following resource types:
+       * Daily recording cannot be specified for the following resource types:
        *
        * * `AWS::Config::ResourceCompliance`
        * * `AWS::Config::ConformancePackCompliance`
@@ -2575,7 +2583,7 @@ public open class CfnConfigurationRecorder(
        * override.
        *
        *
-       * Daily recording is not supported for the following resource types:
+       * Daily recording cannot be specified for the following resource types:
        *
        * * `AWS::Config::ResourceCompliance`
        * * `AWS::Config::ConformancePackCompliance`
@@ -2648,7 +2656,7 @@ public open class CfnConfigurationRecorder(
      * The default recording frequency that AWS Config uses to record configuration changes.
      *
      *
-     * Daily recording is not supported for the following resource types:
+     * Daily recording cannot be specified for the following resource types:
      *
      * * `AWS::Config::ResourceCompliance`
      * * `AWS::Config::ConformancePackCompliance`
@@ -2683,7 +2691,7 @@ public open class CfnConfigurationRecorder(
        * @param recordingFrequency The default recording frequency that AWS Config uses to record
        * configuration changes. 
        *
-       * Daily recording is not supported for the following resource types:
+       * Daily recording cannot be specified for the following resource types:
        *
        * * `AWS::Config::ResourceCompliance`
        * * `AWS::Config::ConformancePackCompliance`
@@ -2732,7 +2740,7 @@ public open class CfnConfigurationRecorder(
        * @param recordingFrequency The default recording frequency that AWS Config uses to record
        * configuration changes. 
        *
-       * Daily recording is not supported for the following resource types:
+       * Daily recording cannot be specified for the following resource types:
        *
        * * `AWS::Config::ResourceCompliance`
        * * `AWS::Config::ConformancePackCompliance`
@@ -2790,7 +2798,7 @@ public open class CfnConfigurationRecorder(
        * The default recording frequency that AWS Config uses to record configuration changes.
        *
        *
-       * Daily recording is not supported for the following resource types:
+       * Daily recording cannot be specified for the following resource types:
        *
        * * `AWS::Config::ResourceCompliance`
        * * `AWS::Config::ConformancePackCompliance`

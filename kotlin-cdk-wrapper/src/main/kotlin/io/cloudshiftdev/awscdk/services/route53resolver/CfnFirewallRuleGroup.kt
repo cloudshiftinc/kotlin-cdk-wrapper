@@ -38,14 +38,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "MyCfnFirewallRuleGroup")
  * .firewallRules(List.of(FirewallRuleProperty.builder()
  * .action("action")
- * .firewallDomainListId("firewallDomainListId")
  * .priority(123)
  * // the properties below are optional
  * .blockOverrideDnsType("blockOverrideDnsType")
  * .blockOverrideDomain("blockOverrideDomain")
  * .blockOverrideTtl(123)
  * .blockResponse("blockResponse")
+ * .confidenceThreshold("confidenceThreshold")
+ * .dnsThreatProtection("dnsThreatProtection")
+ * .firewallDomainListId("firewallDomainListId")
  * .firewallDomainRedirectionAction("firewallDomainRedirectionAction")
+ * .firewallThreatProtectionId("firewallThreatProtectionId")
  * .qtype("qtype")
  * .build()))
  * .name("name")
@@ -374,14 +377,17 @@ public open class CfnFirewallRuleGroup(
    * import io.cloudshiftdev.awscdk.services.route53resolver.*;
    * FirewallRuleProperty firewallRuleProperty = FirewallRuleProperty.builder()
    * .action("action")
-   * .firewallDomainListId("firewallDomainListId")
    * .priority(123)
    * // the properties below are optional
    * .blockOverrideDnsType("blockOverrideDnsType")
    * .blockOverrideDomain("blockOverrideDomain")
    * .blockOverrideTtl(123)
    * .blockResponse("blockResponse")
+   * .confidenceThreshold("confidenceThreshold")
+   * .dnsThreatProtection("dnsThreatProtection")
+   * .firewallDomainListId("firewallDomainListId")
    * .firewallDomainRedirectionAction("firewallDomainRedirectionAction")
+   * .firewallThreatProtectionId("firewallThreatProtectionId")
    * .qtype("qtype")
    * .build();
    * ```
@@ -391,7 +397,10 @@ public open class CfnFirewallRuleGroup(
   public interface FirewallRuleProperty {
     /**
      * The action that DNS Firewall should take on a DNS query when it matches one of the domains in
-     * the rule's domain list:  - `ALLOW` - Permit the request to go through.
+     * the rule's domain list, or a threat in a DNS Firewall Advvanced rule:  - `ALLOW` - Permit the
+     * request to go through.
+     *
+     * Not available for DNS Firewall Advanced rules.
      *
      * * `ALERT` - Permit the request to go through but send an alert to the logs.
      * * `BLOCK` - Disallow the request. If this is specified,then `BlockResponse` must also be
@@ -452,11 +461,39 @@ public open class CfnFirewallRuleGroup(
     public fun blockResponse(): String? = unwrap(this).getBlockResponse()
 
     /**
+     * The confidence threshold for DNS Firewall Advanced.
+     *
+     * You must provide this value when you create a DNS Firewall Advanced rule. The confidence
+     * level values mean:
+     *
+     * * `LOW` : Provides the highest detection rate for threats, but also increases false
+     * positives.
+     * * `MEDIUM` : Provides a balance between detecting threats and false positives.
+     * * `HIGH` : Detects only the most well corroborated threats with a low rate of false
+     * positives.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-confidencethreshold)
+     */
+    public fun confidenceThreshold(): String? = unwrap(this).getConfidenceThreshold()
+
+    /**
+     * The type of the DNS Firewall Advanced rule. Valid values are:.
+     *
+     * * `DGA` : Domain generation algorithms detection. DGAs are used by attackers to generate a
+     * large number of domains to to launch malware attacks.
+     * * `DNS_TUNNELING` : DNS tunneling detection. DNS tunneling is used by attackers to exfiltrate
+     * data from the client by using the DNS tunnel without making a network connection to the client.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-dnsthreatprotection)
+     */
+    public fun dnsThreatProtection(): String? = unwrap(this).getDnsThreatProtection()
+
+    /**
      * The ID of the domain list that's used in the rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainlistid)
      */
-    public fun firewallDomainListId(): String
+    public fun firewallDomainListId(): String? = unwrap(this).getFirewallDomainListId()
 
     /**
      * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as
@@ -472,6 +509,13 @@ public open class CfnFirewallRuleGroup(
      */
     public fun firewallDomainRedirectionAction(): String? =
         unwrap(this).getFirewallDomainRedirectionAction()
+
+    /**
+     * ID of the DNS Firewall Advanced rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewallthreatprotectionid)
+     */
+    public fun firewallThreatProtectionId(): String? = unwrap(this).getFirewallThreatProtectionId()
 
     /**
      * The priority of the rule in the rule group.
@@ -515,7 +559,10 @@ public open class CfnFirewallRuleGroup(
     public interface Builder {
       /**
        * @param action The action that DNS Firewall should take on a DNS query when it matches one
-       * of the domains in the rule's domain list:  - `ALLOW` - Permit the request to go through. 
+       * of the domains in the rule's domain list, or a threat in a DNS Firewall Advvanced rule:  -
+       * `ALLOW` - Permit the request to go through. 
+       * Not available for DNS Firewall Advanced rules.
+       *
        * * `ALERT` - Permit the request to go through but send an alert to the logs.
        * * `BLOCK` - Disallow the request. If this is specified,then `BlockResponse` must also be
        * specified.
@@ -561,7 +608,30 @@ public open class CfnFirewallRuleGroup(
       public fun blockResponse(blockResponse: String)
 
       /**
-       * @param firewallDomainListId The ID of the domain list that's used in the rule. 
+       * @param confidenceThreshold The confidence threshold for DNS Firewall Advanced.
+       * You must provide this value when you create a DNS Firewall Advanced rule. The confidence
+       * level values mean:
+       *
+       * * `LOW` : Provides the highest detection rate for threats, but also increases false
+       * positives.
+       * * `MEDIUM` : Provides a balance between detecting threats and false positives.
+       * * `HIGH` : Detects only the most well corroborated threats with a low rate of false
+       * positives.
+       */
+      public fun confidenceThreshold(confidenceThreshold: String)
+
+      /**
+       * @param dnsThreatProtection The type of the DNS Firewall Advanced rule. Valid values are:.
+       * * `DGA` : Domain generation algorithms detection. DGAs are used by attackers to generate a
+       * large number of domains to to launch malware attacks.
+       * * `DNS_TUNNELING` : DNS tunneling detection. DNS tunneling is used by attackers to
+       * exfiltrate data from the client by using the DNS tunnel without making a network connection to
+       * the client.
+       */
+      public fun dnsThreatProtection(dnsThreatProtection: String)
+
+      /**
+       * @param firewallDomainListId The ID of the domain list that's used in the rule.
        */
       public fun firewallDomainListId(firewallDomainListId: String)
 
@@ -576,6 +646,11 @@ public open class CfnFirewallRuleGroup(
        * list.
        */
       public fun firewallDomainRedirectionAction(firewallDomainRedirectionAction: String)
+
+      /**
+       * @param firewallThreatProtectionId ID of the DNS Firewall Advanced rule.
+       */
+      public fun firewallThreatProtectionId(firewallThreatProtectionId: String)
 
       /**
        * @param priority The priority of the rule in the rule group. 
@@ -615,7 +690,10 @@ public open class CfnFirewallRuleGroup(
 
       /**
        * @param action The action that DNS Firewall should take on a DNS query when it matches one
-       * of the domains in the rule's domain list:  - `ALLOW` - Permit the request to go through. 
+       * of the domains in the rule's domain list, or a threat in a DNS Firewall Advvanced rule:  -
+       * `ALLOW` - Permit the request to go through. 
+       * Not available for DNS Firewall Advanced rules.
+       *
        * * `ALERT` - Permit the request to go through but send an alert to the logs.
        * * `BLOCK` - Disallow the request. If this is specified,then `BlockResponse` must also be
        * specified.
@@ -671,7 +749,34 @@ public open class CfnFirewallRuleGroup(
       }
 
       /**
-       * @param firewallDomainListId The ID of the domain list that's used in the rule. 
+       * @param confidenceThreshold The confidence threshold for DNS Firewall Advanced.
+       * You must provide this value when you create a DNS Firewall Advanced rule. The confidence
+       * level values mean:
+       *
+       * * `LOW` : Provides the highest detection rate for threats, but also increases false
+       * positives.
+       * * `MEDIUM` : Provides a balance between detecting threats and false positives.
+       * * `HIGH` : Detects only the most well corroborated threats with a low rate of false
+       * positives.
+       */
+      override fun confidenceThreshold(confidenceThreshold: String) {
+        cdkBuilder.confidenceThreshold(confidenceThreshold)
+      }
+
+      /**
+       * @param dnsThreatProtection The type of the DNS Firewall Advanced rule. Valid values are:.
+       * * `DGA` : Domain generation algorithms detection. DGAs are used by attackers to generate a
+       * large number of domains to to launch malware attacks.
+       * * `DNS_TUNNELING` : DNS tunneling detection. DNS tunneling is used by attackers to
+       * exfiltrate data from the client by using the DNS tunnel without making a network connection to
+       * the client.
+       */
+      override fun dnsThreatProtection(dnsThreatProtection: String) {
+        cdkBuilder.dnsThreatProtection(dnsThreatProtection)
+      }
+
+      /**
+       * @param firewallDomainListId The ID of the domain list that's used in the rule.
        */
       override fun firewallDomainListId(firewallDomainListId: String) {
         cdkBuilder.firewallDomainListId(firewallDomainListId)
@@ -689,6 +794,13 @@ public open class CfnFirewallRuleGroup(
        */
       override fun firewallDomainRedirectionAction(firewallDomainRedirectionAction: String) {
         cdkBuilder.firewallDomainRedirectionAction(firewallDomainRedirectionAction)
+      }
+
+      /**
+       * @param firewallThreatProtectionId ID of the DNS Firewall Advanced rule.
+       */
+      override fun firewallThreatProtectionId(firewallThreatProtectionId: String) {
+        cdkBuilder.firewallThreatProtectionId(firewallThreatProtectionId)
       }
 
       /**
@@ -735,7 +847,10 @@ public open class CfnFirewallRuleGroup(
         FirewallRuleProperty {
       /**
        * The action that DNS Firewall should take on a DNS query when it matches one of the domains
-       * in the rule's domain list:  - `ALLOW` - Permit the request to go through.
+       * in the rule's domain list, or a threat in a DNS Firewall Advvanced rule:  - `ALLOW` - Permit
+       * the request to go through.
+       *
+       * Not available for DNS Firewall Advanced rules.
        *
        * * `ALERT` - Permit the request to go through but send an alert to the logs.
        * * `BLOCK` - Disallow the request. If this is specified,then `BlockResponse` must also be
@@ -796,11 +911,40 @@ public open class CfnFirewallRuleGroup(
       override fun blockResponse(): String? = unwrap(this).getBlockResponse()
 
       /**
+       * The confidence threshold for DNS Firewall Advanced.
+       *
+       * You must provide this value when you create a DNS Firewall Advanced rule. The confidence
+       * level values mean:
+       *
+       * * `LOW` : Provides the highest detection rate for threats, but also increases false
+       * positives.
+       * * `MEDIUM` : Provides a balance between detecting threats and false positives.
+       * * `HIGH` : Detects only the most well corroborated threats with a low rate of false
+       * positives.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-confidencethreshold)
+       */
+      override fun confidenceThreshold(): String? = unwrap(this).getConfidenceThreshold()
+
+      /**
+       * The type of the DNS Firewall Advanced rule. Valid values are:.
+       *
+       * * `DGA` : Domain generation algorithms detection. DGAs are used by attackers to generate a
+       * large number of domains to to launch malware attacks.
+       * * `DNS_TUNNELING` : DNS tunneling detection. DNS tunneling is used by attackers to
+       * exfiltrate data from the client by using the DNS tunnel without making a network connection to
+       * the client.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-dnsthreatprotection)
+       */
+      override fun dnsThreatProtection(): String? = unwrap(this).getDnsThreatProtection()
+
+      /**
        * The ID of the domain list that's used in the rule.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewalldomainlistid)
        */
-      override fun firewallDomainListId(): String = unwrap(this).getFirewallDomainListId()
+      override fun firewallDomainListId(): String? = unwrap(this).getFirewallDomainListId()
 
       /**
        * How you want the the rule to evaluate DNS redirection in the DNS redirection chain, such as
@@ -817,6 +961,14 @@ public open class CfnFirewallRuleGroup(
        */
       override fun firewallDomainRedirectionAction(): String? =
           unwrap(this).getFirewallDomainRedirectionAction()
+
+      /**
+       * ID of the DNS Firewall Advanced rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-firewallrulegroup-firewallrule.html#cfn-route53resolver-firewallrulegroup-firewallrule-firewallthreatprotectionid)
+       */
+      override fun firewallThreatProtectionId(): String? =
+          unwrap(this).getFirewallThreatProtectionId()
 
       /**
        * The priority of the rule in the rule group.

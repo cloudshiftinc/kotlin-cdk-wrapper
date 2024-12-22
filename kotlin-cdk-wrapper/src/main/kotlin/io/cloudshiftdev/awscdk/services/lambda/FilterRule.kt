@@ -43,7 +43,7 @@ public open class FilterRule(
     public fun between(first: Number, second: Number): List<Map<String, List<Any>>> =
         software.amazon.awscdk.services.lambda.FilterRule.between(first, second)
 
-    public fun doNull(): List<String> = software.amazon.awscdk.services.lambda.FilterRule.doNull()
+    public fun doNull(): Any = software.amazon.awscdk.services.lambda.FilterRule.doNull()
 
     public fun empty(): List<String> = software.amazon.awscdk.services.lambda.FilterRule.empty()
 

@@ -42,6 +42,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .engineVersion("engineVersion")
  * .kmsKeyId("kmsKeyId")
  * .multiAz(false)
+ * .networkType("networkType")
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
  * .publiclyAccessible(false)
  * .replicationInstanceIdentifier("replicationInstanceIdentifier")
@@ -210,6 +211,20 @@ public open class CfnReplicationInstance(
    */
   public open fun multiAz(`value`: IResolvable) {
     unwrap(this).setMultiAz(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The type of IP address protocol used by a replication instance, such as IPv4 only or Dual-stack
+   * that supports both IPv4 and IPv6 addressing.
+   */
+  public open fun networkType(): String? = unwrap(this).getNetworkType()
+
+  /**
+   * The type of IP address protocol used by a replication instance, such as IPv4 only or Dual-stack
+   * that supports both IPv4 and IPv6 addressing.
+   */
+  public open fun networkType(`value`: String) {
+    unwrap(this).setNetworkType(`value`)
   }
 
   /**
@@ -474,6 +489,18 @@ public open class CfnReplicationInstance(
      * @param multiAz Specifies whether the replication instance is a Multi-AZ deployment. 
      */
     public fun multiAz(multiAz: IResolvable)
+
+    /**
+     * The type of IP address protocol used by a replication instance, such as IPv4 only or
+     * Dual-stack that supports both IPv4 and IPv6 addressing.
+     *
+     * IPv6 only is not yet supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-networktype)
+     * @param networkType The type of IP address protocol used by a replication instance, such as
+     * IPv4 only or Dual-stack that supports both IPv4 and IPv6 addressing. 
+     */
+    public fun networkType(networkType: String)
 
     /**
      * The weekly time range during which system maintenance can occur, in UTC.
@@ -763,6 +790,20 @@ public open class CfnReplicationInstance(
      */
     override fun multiAz(multiAz: IResolvable) {
       cdkBuilder.multiAz(multiAz.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The type of IP address protocol used by a replication instance, such as IPv4 only or
+     * Dual-stack that supports both IPv4 and IPv6 addressing.
+     *
+     * IPv6 only is not yet supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-networktype)
+     * @param networkType The type of IP address protocol used by a replication instance, such as
+     * IPv4 only or Dual-stack that supports both IPv4 and IPv6 addressing. 
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
     }
 
     /**

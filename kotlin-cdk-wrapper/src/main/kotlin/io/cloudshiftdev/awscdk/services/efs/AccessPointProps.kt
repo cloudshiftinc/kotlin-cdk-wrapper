@@ -22,6 +22,7 @@ import kotlin.jvm.JvmName
  * AccessPointProps accessPointProps = AccessPointProps.builder()
  * .fileSystem(fileSystem)
  * // the properties below are optional
+ * .clientToken("clientToken")
  * .createAcl(Acl.builder()
  * .ownerGid("ownerGid")
  * .ownerUid("ownerUid")
@@ -48,6 +49,11 @@ public interface AccessPointProps : AccessPointOptions {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param clientToken The opaque string specified in the request to ensure idempotent creation.
+     */
+    public fun clientToken(clientToken: String)
+
     /**
      * @param createAcl Specifies the POSIX IDs and permissions to apply when creating the access
      * point's root directory.
@@ -105,6 +111,13 @@ public interface AccessPointProps : AccessPointOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.efs.AccessPointProps.Builder =
         software.amazon.awscdk.services.efs.AccessPointProps.builder()
+
+    /**
+     * @param clientToken The opaque string specified in the request to ensure idempotent creation.
+     */
+    override fun clientToken(clientToken: String) {
+      cdkBuilder.clientToken(clientToken)
+    }
 
     /**
      * @param createAcl Specifies the POSIX IDs and permissions to apply when creating the access
@@ -175,6 +188,15 @@ public interface AccessPointProps : AccessPointOptions {
     cdkObject: software.amazon.awscdk.services.efs.AccessPointProps,
   ) : CdkObject(cdkObject),
       AccessPointProps {
+    /**
+     * The opaque string specified in the request to ensure idempotent creation.
+     *
+     * Default: - No client token
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html#cfn-efs-accesspoint-clienttoken)
+     */
+    override fun clientToken(): String? = unwrap(this).getClientToken()
+
     /**
      * Specifies the POSIX IDs and permissions to apply when creating the access point's root
      * directory.

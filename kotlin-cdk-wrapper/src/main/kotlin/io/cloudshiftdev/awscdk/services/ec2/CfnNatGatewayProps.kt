@@ -83,8 +83,8 @@ public interface CfnNatGatewayProps {
    * Secondary EIP allocation IDs.
    *
    * For more information, see [Create a NAT
-   * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-   * in the *Amazon VPC User Guide* .
+   * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+   * *Amazon VPC User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-secondaryallocationids)
    */
@@ -172,16 +172,16 @@ public interface CfnNatGatewayProps {
     /**
      * @param secondaryAllocationIds Secondary EIP allocation IDs.
      * For more information, see [Create a NAT
-     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-     * in the *Amazon VPC User Guide* .
+     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+     * *Amazon VPC User Guide* .
      */
     public fun secondaryAllocationIds(secondaryAllocationIds: List<String>)
 
     /**
      * @param secondaryAllocationIds Secondary EIP allocation IDs.
      * For more information, see [Create a NAT
-     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-     * in the *Amazon VPC User Guide* .
+     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+     * *Amazon VPC User Guide* .
      */
     public fun secondaryAllocationIds(vararg secondaryAllocationIds: String)
 
@@ -278,8 +278,8 @@ public interface CfnNatGatewayProps {
     /**
      * @param secondaryAllocationIds Secondary EIP allocation IDs.
      * For more information, see [Create a NAT
-     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-     * in the *Amazon VPC User Guide* .
+     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+     * *Amazon VPC User Guide* .
      */
     override fun secondaryAllocationIds(secondaryAllocationIds: List<String>) {
       cdkBuilder.secondaryAllocationIds(secondaryAllocationIds)
@@ -288,8 +288,8 @@ public interface CfnNatGatewayProps {
     /**
      * @param secondaryAllocationIds Secondary EIP allocation IDs.
      * For more information, see [Create a NAT
-     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-     * in the *Amazon VPC User Guide* .
+     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+     * *Amazon VPC User Guide* .
      */
     override fun secondaryAllocationIds(vararg secondaryAllocationIds: String): Unit =
         secondaryAllocationIds(secondaryAllocationIds.toList())
@@ -402,8 +402,8 @@ public interface CfnNatGatewayProps {
      * Secondary EIP allocation IDs.
      *
      * For more information, see [Create a NAT
-     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-     * in the *Amazon VPC User Guide* .
+     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+     * *Amazon VPC User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-secondaryallocationids)
      */

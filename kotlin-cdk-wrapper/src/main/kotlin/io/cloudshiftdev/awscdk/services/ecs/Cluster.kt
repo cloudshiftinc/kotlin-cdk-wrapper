@@ -531,6 +531,27 @@ public open class Cluster(
         fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration.Builder.() -> Unit)
 
     /**
+     * Encryption configuration for ECS Managed storage.
+     *
+     * Default: - no encryption will be applied.
+     *
+     * @param managedStorageConfiguration Encryption configuration for ECS Managed storage. 
+     */
+    public fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfiguration)
+
+    /**
+     * Encryption configuration for ECS Managed storage.
+     *
+     * Default: - no encryption will be applied.
+     *
+     * @param managedStorageConfiguration Encryption configuration for ECS Managed storage. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("61444dbefcd005c7d16d11714b0a979993773333807d067ece91daeab7fc6b20")
+    public
+        fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfiguration.Builder.() -> Unit)
+
+    /**
      * The VPC where your ECS instances will be running or your ENIs will be deployed.
      *
      * Default: - creates a new VPC with two AZs
@@ -656,6 +677,31 @@ public open class Cluster(
     override
         fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration.Builder.() -> Unit):
         Unit = executeCommandConfiguration(ExecuteCommandConfiguration(executeCommandConfiguration))
+
+    /**
+     * Encryption configuration for ECS Managed storage.
+     *
+     * Default: - no encryption will be applied.
+     *
+     * @param managedStorageConfiguration Encryption configuration for ECS Managed storage. 
+     */
+    override
+        fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfiguration) {
+      cdkBuilder.managedStorageConfiguration(managedStorageConfiguration.let(ManagedStorageConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * Encryption configuration for ECS Managed storage.
+     *
+     * Default: - no encryption will be applied.
+     *
+     * @param managedStorageConfiguration Encryption configuration for ECS Managed storage. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("61444dbefcd005c7d16d11714b0a979993773333807d067ece91daeab7fc6b20")
+    override
+        fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfiguration.Builder.() -> Unit):
+        Unit = managedStorageConfiguration(ManagedStorageConfiguration(managedStorageConfiguration))
 
     /**
      * The VPC where your ECS instances will be running or your ENIs will be deployed.

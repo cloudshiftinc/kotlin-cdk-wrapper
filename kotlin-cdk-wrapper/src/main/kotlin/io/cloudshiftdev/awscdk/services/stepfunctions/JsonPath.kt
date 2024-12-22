@@ -16,16 +16,20 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * Activity submitJobActivity = new Activity(this, "SubmitJob");
- * StepFunctionsInvokeActivity.Builder.create(this, "Submit Job")
- * .activity(submitJobActivity)
- * .parameters(Map.of(
- * "comment", "Selecting what I care about.",
- * "MyDetails", Map.of(
- * "size", JsonPath.stringAt("$.product.details.size"),
- * "exists", JsonPath.stringAt("$.product.availability"),
- * "StaticValue", "foo")))
+ * / **
+ * * JSON state input:
+ * *  {
+ * *    "bucketName": "my-bucket",
+ * *    "prefix": "item"
+ * *  }
+ * *&#47;
+ * DistributedMap distributedMap = DistributedMap.Builder.create(this, "DistributedMap")
+ * .itemReader(S3ObjectsItemReader.Builder.create()
+ * .bucketNamePath(JsonPath.stringAt("$.bucketName"))
+ * .prefix(JsonPath.stringAt("$.prefix"))
+ * .build())
  * .build();
+ * distributedMap.itemProcessor(new Pass(this, "Pass"));
  * ```
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/amazon-states-language-paths.html)

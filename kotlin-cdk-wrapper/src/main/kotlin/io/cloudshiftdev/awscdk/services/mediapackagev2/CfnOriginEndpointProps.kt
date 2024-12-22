@@ -34,6 +34,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .drmSignaling("drmSignaling")
  * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .clipStartTime("clipStartTime")
  * .end("end")
  * .manifestFilter("manifestFilter")
  * .start("start")
@@ -62,6 +63,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .childManifestName("childManifestName")
  * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .clipStartTime("clipStartTime")
  * .end("end")
  * .manifestFilter("manifestFilter")
  * .start("start")
@@ -71,6 +73,11 @@ import kotlin.jvm.JvmName
  * .programDateTimeIntervalSeconds(123)
  * .scteHls(ScteHlsProperty.builder()
  * .adMarkerHls("adMarkerHls")
+ * .build())
+ * .startTag(StartTagProperty.builder()
+ * .timeOffset(123)
+ * // the properties below are optional
+ * .precise(false)
  * .build())
  * .url("url")
  * .build()))
@@ -79,6 +86,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .childManifestName("childManifestName")
  * .filterConfiguration(FilterConfigurationProperty.builder()
+ * .clipStartTime("clipStartTime")
  * .end("end")
  * .manifestFilter("manifestFilter")
  * .start("start")
@@ -88,6 +96,11 @@ import kotlin.jvm.JvmName
  * .programDateTimeIntervalSeconds(123)
  * .scteHls(ScteHlsProperty.builder()
  * .adMarkerHls("adMarkerHls")
+ * .build())
+ * .startTag(StartTagProperty.builder()
+ * .timeOffset(123)
+ * // the properties below are optional
+ * .precise(false)
  * .build())
  * .url("url")
  * .build()))
@@ -167,7 +180,7 @@ public interface CfnOriginEndpointProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The failover settings for the endpoint.</p>.
+   * The failover settings for the endpoint.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
    */
@@ -261,18 +274,18 @@ public interface CfnOriginEndpointProps {
     public fun description(description: String)
 
     /**
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.
      */
     public fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: IResolvable)
 
     /**
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.
      */
     public
         fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty)
 
     /**
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2c860eeca035db7ada9cfea1747ec40f43d4a9093396800a7d6cbcb1de92bd6d")
@@ -408,14 +421,14 @@ public interface CfnOriginEndpointProps {
     }
 
     /**
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.
      */
     override fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: IResolvable) {
       cdkBuilder.forceEndpointErrorConfiguration(forceEndpointErrorConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.
      */
     override
         fun forceEndpointErrorConfiguration(forceEndpointErrorConfiguration: CfnOriginEndpoint.ForceEndpointErrorConfigurationProperty) {
@@ -423,7 +436,7 @@ public interface CfnOriginEndpointProps {
     }
 
     /**
-     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.</p>.
+     * @param forceEndpointErrorConfiguration The failover settings for the endpoint.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2c860eeca035db7ada9cfea1747ec40f43d4a9093396800a7d6cbcb1de92bd6d")
@@ -569,7 +582,7 @@ public interface CfnOriginEndpointProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * The failover settings for the endpoint.</p>.
+     * The failover settings for the endpoint.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-originendpoint.html#cfn-mediapackagev2-originendpoint-forceendpointerrorconfiguration)
      */

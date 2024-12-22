@@ -33,6 +33,7 @@ import kotlin.collections.List
  * .engineVersion("engineVersion")
  * .kmsKeyId("kmsKeyId")
  * .multiAz(false)
+ * .networkType("networkType")
  * .preferredMaintenanceWindow("preferredMaintenanceWindow")
  * .publiclyAccessible(false)
  * .replicationInstanceIdentifier("replicationInstanceIdentifier")
@@ -122,6 +123,16 @@ public interface CfnReplicationInstanceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-multiaz)
    */
   public fun multiAz(): Any? = unwrap(this).getMultiAz()
+
+  /**
+   * The type of IP address protocol used by a replication instance, such as IPv4 only or Dual-stack
+   * that supports both IPv4 and IPv6 addressing.
+   *
+   * IPv6 only is not yet supported.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-networktype)
+   */
+  public fun networkType(): String? = unwrap(this).getNetworkType()
 
   /**
    * The weekly time range during which system maintenance can occur, in UTC.
@@ -306,6 +317,13 @@ public interface CfnReplicationInstanceProps {
      * You can't set the `AvailabilityZone` parameter if the Multi-AZ parameter is set to `true` .
      */
     public fun multiAz(multiAz: IResolvable)
+
+    /**
+     * @param networkType The type of IP address protocol used by a replication instance, such as
+     * IPv4 only or Dual-stack that supports both IPv4 and IPv6 addressing.
+     * IPv6 only is not yet supported.
+     */
+    public fun networkType(networkType: String)
 
     /**
      * @param preferredMaintenanceWindow The weekly time range during which system maintenance can
@@ -509,6 +527,15 @@ public interface CfnReplicationInstanceProps {
     }
 
     /**
+     * @param networkType The type of IP address protocol used by a replication instance, such as
+     * IPv4 only or Dual-stack that supports both IPv4 and IPv6 addressing.
+     * IPv6 only is not yet supported.
+     */
+    override fun networkType(networkType: String) {
+      cdkBuilder.networkType(networkType)
+    }
+
+    /**
      * @param preferredMaintenanceWindow The weekly time range during which system maintenance can
      * occur, in UTC.
      * *Format* : `ddd:hh24:mi-ddd:hh24:mi`
@@ -702,6 +729,16 @@ public interface CfnReplicationInstanceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-multiaz)
      */
     override fun multiAz(): Any? = unwrap(this).getMultiAz()
+
+    /**
+     * The type of IP address protocol used by a replication instance, such as IPv4 only or
+     * Dual-stack that supports both IPv4 and IPv6 addressing.
+     *
+     * IPv6 only is not yet supported.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dms-replicationinstance.html#cfn-dms-replicationinstance-networktype)
+     */
+    override fun networkType(): String? = unwrap(this).getNetworkType()
 
     /**
      * The weekly time range during which system maintenance can occur, in UTC.

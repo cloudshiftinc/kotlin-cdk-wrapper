@@ -103,9 +103,9 @@ public open class CfnCacheCluster(
    * The DNS hostname of the cache node.
    *
    *
-   * Redis OSS (cluster mode disabled) replication groups don't have this attribute. Therefore,
-   * `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered.
-   * Otherwise, `Fn::GetAtt` fails.
+   * Valkey and Redis OSS (cluster mode disabled) replication groups don't have this attribute.
+   * Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is
+   * clustered. Otherwise, `Fn::GetAtt` fails.
    */
   public open fun attrConfigurationEndpointAddress(): String =
       unwrap(this).getAttrConfigurationEndpointAddress()
@@ -114,9 +114,9 @@ public open class CfnCacheCluster(
    * The port number of the configuration endpoint for the Memcached cache cluster.
    *
    *
-   * Redis OSS (cluster mode disabled) replication groups don't have this attribute. Therefore,
-   * `Fn::GetAtt` returns a value for this attribute only if the replication group is clustered.
-   * Otherwise, `Fn::GetAtt` fails.
+   * Valkey and Redis OSS (cluster mode disabled) replication groups don't have this attribute.
+   * Therefore, `Fn::GetAtt` returns a value for this attribute only if the replication group is
+   * clustered. Otherwise, `Fn::GetAtt` fails.
    */
   public open fun attrConfigurationEndpointPort(): String =
       unwrap(this).getAttrConfigurationEndpointPort()
@@ -127,35 +127,35 @@ public open class CfnCacheCluster(
   public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
-   * The DNS address of the configuration endpoint for the Redis OSS cache cluster.
+   * The DNS address of the configuration endpoint for the Valkey or Redis OSS cache cluster.
    */
   public open fun attrRedisEndpointAddress(): String = unwrap(this).getAttrRedisEndpointAddress()
 
   /**
-   * The port number of the configuration endpoint for the Redis OSS cache cluster.
+   * The port number of the configuration endpoint for the Valkey or Redis OSS cache cluster.
    */
   public open fun attrRedisEndpointPort(): String = unwrap(this).getAttrRedisEndpointPort()
 
   /**
-   * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want
-   * to opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
-   * versions.
+   * If you are running Valkey 7.2 or later, or Redis OSS engine version 6.0 or later, set this
+   * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This parameter
+   * is disabled for previous versions.
    */
   public open fun autoMinorVersionUpgrade(): Any? = unwrap(this).getAutoMinorVersionUpgrade()
 
   /**
-   * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want
-   * to opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
-   * versions.
+   * If you are running Valkey 7.2 or later, or Redis OSS engine version 6.0 or later, set this
+   * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This parameter
+   * is disabled for previous versions.
    */
   public open fun autoMinorVersionUpgrade(`value`: Boolean) {
     unwrap(this).setAutoMinorVersionUpgrade(`value`)
   }
 
   /**
-   * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you want
-   * to opt-in to the next minor version upgrade campaign. This parameter is disabled for previous
-   * versions.
+   * If you are running Valkey 7.2 or later, or Redis OSS engine version 6.0 or later, set this
+   * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This parameter
+   * is disabled for previous versions.
    */
   public open fun autoMinorVersionUpgrade(`value`: IResolvable) {
     unwrap(this).setAutoMinorVersionUpgrade(`value`.let(IResolvable.Companion::unwrap))
@@ -408,13 +408,13 @@ public open class CfnCacheCluster(
 
   /**
    * A single-element string list containing an Amazon Resource Name (ARN) that uniquely identifies
-   * a Redis OSS RDB snapshot file stored in Amazon S3.
+   * a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
    */
   public open fun snapshotArns(): List<String> = unwrap(this).getSnapshotArns() ?: emptyList()
 
   /**
    * A single-element string list containing an Amazon Resource Name (ARN) that uniquely identifies
-   * a Redis OSS RDB snapshot file stored in Amazon S3.
+   * a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
    */
   public open fun snapshotArns(`value`: List<String>) {
     unwrap(this).setSnapshotArns(`value`)
@@ -422,17 +422,19 @@ public open class CfnCacheCluster(
 
   /**
    * A single-element string list containing an Amazon Resource Name (ARN) that uniquely identifies
-   * a Redis OSS RDB snapshot file stored in Amazon S3.
+   * a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
    */
   public open fun snapshotArns(vararg `value`: String): Unit = snapshotArns(`value`.toList())
 
   /**
-   * The name of a Redis OSS snapshot from which to restore data into the new node group (shard).
+   * The name of a Valkey or Redis OSS snapshot from which to restore data into the new node group
+   * (shard).
    */
   public open fun snapshotName(): String? = unwrap(this).getSnapshotName()
 
   /**
-   * The name of a Redis OSS snapshot from which to restore data into the new node group (shard).
+   * The name of a Valkey or Redis OSS snapshot from which to restore data into the new node group
+   * (shard).
    */
   public open fun snapshotName(`value`: String) {
     unwrap(this).setSnapshotName(`value`)
@@ -531,26 +533,26 @@ public open class CfnCacheCluster(
   @CdkDslMarker
   public interface Builder {
     /**
-     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
-     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
-     * previous versions.
+     * If you are running Valkey 7.2 or later, or Redis OSS engine version 6.0 or later, set this
+     * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
+     * parameter is disabled for previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-autominorversionupgrade)
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions. 
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS engine
+     * version 6.0 or later, set this parameter to yes if you want to opt-in to the next minor version
+     * upgrade campaign. This parameter is disabled for previous versions. 
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean)
 
     /**
-     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
-     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
-     * previous versions.
+     * If you are running Valkey 7.2 or later, or Redis OSS engine version 6.0 or later, set this
+     * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
+     * parameter is disabled for previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-autominorversionupgrade)
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions. 
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS engine
+     * version 6.0 or later, set this parameter to yes if you want to opt-in to the next minor version
+     * upgrade campaign. This parameter is disabled for previous versions. 
      */
     public fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable)
 
@@ -641,13 +643,13 @@ public open class CfnCacheCluster(
      * `cache.r3.4xlarge` , `cache.r3.8xlarge`
      *
      * For region availability, see [Supported Node Types by
-     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
+     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
      *
      * *Additional node type info*
      *
      * * All current generation instance types are created in Amazon VPC by default.
-     * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
-     * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+     * * Valkey and Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+     * * Valkey and Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
      * OSS version 2.8.22 and later.
      *
@@ -728,7 +730,7 @@ public open class CfnCacheCluster(
     /**
      * The name of the cache engine to be used for this cluster.
      *
-     * Valid values for this parameter are: `memcached` | `redis`
+     * Valid values for this parameter are: `memcached` | valkey | `redis`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-engine)
      * @param engine The name of the cache engine to be used for this cluster. 
@@ -741,7 +743,7 @@ public open class CfnCacheCluster(
      * To view the supported cache engine versions, use the DescribeCacheEngineVersions operation.
      *
      * *Important:* You can upgrade to a newer engine version (see [Selecting a Cache Engine and
-     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)
+     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SelectEngine.html#VersionManagement)
      * ), but you cannot downgrade to an earlier engine version. If you want to use an earlier engine
      * version, you must delete the existing cluster or replication group and create it anew with the
      * earlier engine version.
@@ -754,8 +756,8 @@ public open class CfnCacheCluster(
     /**
      * The network type you choose when modifying a cluster, either `ipv4` | `ipv6` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-ipdiscovery)
@@ -791,8 +793,8 @@ public open class CfnCacheCluster(
     /**
      * Must be either `ipv4` | `ipv6` | `dual_stack` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-networktype)
@@ -926,7 +928,7 @@ public open class CfnCacheCluster(
 
     /**
      * A single-element string list containing an Amazon Resource Name (ARN) that uniquely
-     * identifies a Redis OSS RDB snapshot file stored in Amazon S3.
+     * identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
      *
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
@@ -939,13 +941,13 @@ public open class CfnCacheCluster(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-snapshotarns)
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3. 
+     * that uniquely identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3. 
      */
     public fun snapshotArns(snapshotArns: List<String>)
 
     /**
      * A single-element string list containing an Amazon Resource Name (ARN) that uniquely
-     * identifies a Redis OSS RDB snapshot file stored in Amazon S3.
+     * identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
      *
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
@@ -958,12 +960,13 @@ public open class CfnCacheCluster(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-snapshotarns)
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3. 
+     * that uniquely identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3. 
      */
     public fun snapshotArns(vararg snapshotArns: String)
 
     /**
-     * The name of a Redis OSS snapshot from which to restore data into the new node group (shard).
+     * The name of a Valkey or Redis OSS snapshot from which to restore data into the new node group
+     * (shard).
      *
      * The snapshot status changes to `restoring` while the new node group (shard) is being created.
      *
@@ -972,8 +975,8 @@ public open class CfnCacheCluster(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-snapshotname)
-     * @param snapshotName The name of a Redis OSS snapshot from which to restore data into the new
-     * node group (shard). 
+     * @param snapshotName The name of a Valkey or Redis OSS snapshot from which to restore data
+     * into the new node group (shard). 
      */
     public fun snapshotName(snapshotName: String)
 
@@ -1077,28 +1080,28 @@ public open class CfnCacheCluster(
         software.amazon.awscdk.services.elasticache.CfnCacheCluster.Builder.create(scope, id)
 
     /**
-     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
-     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
-     * previous versions.
+     * If you are running Valkey 7.2 or later, or Redis OSS engine version 6.0 or later, set this
+     * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
+     * parameter is disabled for previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-autominorversionupgrade)
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions. 
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS engine
+     * version 6.0 or later, set this parameter to yes if you want to opt-in to the next minor version
+     * upgrade campaign. This parameter is disabled for previous versions. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: Boolean) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade)
     }
 
     /**
-     * If you are running Redis OSS engine version 6.0 or later, set this parameter to yes if you
-     * want to opt-in to the next minor version upgrade campaign. This parameter is disabled for
-     * previous versions.
+     * If you are running Valkey 7.2 or later, or Redis OSS engine version 6.0 or later, set this
+     * parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
+     * parameter is disabled for previous versions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-autominorversionupgrade)
-     * @param autoMinorVersionUpgrade If you are running Redis OSS engine version 6.0 or later, set
-     * this parameter to yes if you want to opt-in to the next minor version upgrade campaign. This
-     * parameter is disabled for previous versions. 
+     * @param autoMinorVersionUpgrade If you are running Valkey 7.2 or later, or Redis OSS engine
+     * version 6.0 or later, set this parameter to yes if you want to opt-in to the next minor version
+     * upgrade campaign. This parameter is disabled for previous versions. 
      */
     override fun autoMinorVersionUpgrade(autoMinorVersionUpgrade: IResolvable) {
       cdkBuilder.autoMinorVersionUpgrade(autoMinorVersionUpgrade.let(IResolvable.Companion::unwrap))
@@ -1193,13 +1196,13 @@ public open class CfnCacheCluster(
      * `cache.r3.4xlarge` , `cache.r3.8xlarge`
      *
      * For region availability, see [Supported Node Types by
-     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
+     * Region](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion)
      *
      * *Additional node type info*
      *
      * * All current generation instance types are created in Amazon VPC by default.
-     * * Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
-     * * Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
+     * * Valkey and Redis OSS append-only files (AOF) are not supported for T1 or T2 instances.
+     * * Valkey and Redis OSS Multi-AZ with automatic failover is not supported on T1 instances.
      * * Redis OSS configuration variables `appendonly` and `appendfsync` are not supported on Redis
      * OSS version 2.8.22 and later.
      *
@@ -1291,7 +1294,7 @@ public open class CfnCacheCluster(
     /**
      * The name of the cache engine to be used for this cluster.
      *
-     * Valid values for this parameter are: `memcached` | `redis`
+     * Valid values for this parameter are: `memcached` | valkey | `redis`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-engine)
      * @param engine The name of the cache engine to be used for this cluster. 
@@ -1306,7 +1309,7 @@ public open class CfnCacheCluster(
      * To view the supported cache engine versions, use the DescribeCacheEngineVersions operation.
      *
      * *Important:* You can upgrade to a newer engine version (see [Selecting a Cache Engine and
-     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/SelectEngine.html#VersionManagement)
+     * Version](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/SelectEngine.html#VersionManagement)
      * ), but you cannot downgrade to an earlier engine version. If you want to use an earlier engine
      * version, you must delete the existing cluster or replication group and create it anew with the
      * earlier engine version.
@@ -1321,8 +1324,8 @@ public open class CfnCacheCluster(
     /**
      * The network type you choose when modifying a cluster, either `ipv4` | `ipv6` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-ipdiscovery)
@@ -1365,8 +1368,8 @@ public open class CfnCacheCluster(
     /**
      * Must be either `ipv4` | `ipv6` | `dual_stack` .
      *
-     * IPv6 is supported for workloads using Redis OSS engine version 6.2 onward or Memcached engine
-     * version 1.6.6 on all instances built on the [Nitro
+     * IPv6 is supported for workloads using Valkey 7.2 and above, Redis OSS engine version 6.2 to
+     * 7.1 and Memcached engine version 1.6.6 and above on all instances built on the [Nitro
      * system](https://docs.aws.amazon.com/ec2/nitro/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-networktype)
@@ -1515,7 +1518,7 @@ public open class CfnCacheCluster(
 
     /**
      * A single-element string list containing an Amazon Resource Name (ARN) that uniquely
-     * identifies a Redis OSS RDB snapshot file stored in Amazon S3.
+     * identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
      *
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
@@ -1528,7 +1531,7 @@ public open class CfnCacheCluster(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-snapshotarns)
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3. 
+     * that uniquely identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3. 
      */
     override fun snapshotArns(snapshotArns: List<String>) {
       cdkBuilder.snapshotArns(snapshotArns)
@@ -1536,7 +1539,7 @@ public open class CfnCacheCluster(
 
     /**
      * A single-element string list containing an Amazon Resource Name (ARN) that uniquely
-     * identifies a Redis OSS RDB snapshot file stored in Amazon S3.
+     * identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3.
      *
      * The snapshot file is used to populate the node group (shard). The Amazon S3 object name in
      * the ARN cannot contain any commas.
@@ -1549,13 +1552,14 @@ public open class CfnCacheCluster(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-snapshotarns)
      * @param snapshotArns A single-element string list containing an Amazon Resource Name (ARN)
-     * that uniquely identifies a Redis OSS RDB snapshot file stored in Amazon S3. 
+     * that uniquely identifies a Valkey or Redis OSS RDB snapshot file stored in Amazon S3. 
      */
     override fun snapshotArns(vararg snapshotArns: String): Unit =
         snapshotArns(snapshotArns.toList())
 
     /**
-     * The name of a Redis OSS snapshot from which to restore data into the new node group (shard).
+     * The name of a Valkey or Redis OSS snapshot from which to restore data into the new node group
+     * (shard).
      *
      * The snapshot status changes to `restoring` while the new node group (shard) is being created.
      *
@@ -1564,8 +1568,8 @@ public open class CfnCacheCluster(
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-cachecluster.html#cfn-elasticache-cachecluster-snapshotname)
-     * @param snapshotName The name of a Redis OSS snapshot from which to restore data into the new
-     * node group (shard). 
+     * @param snapshotName The name of a Valkey or Redis OSS snapshot from which to restore data
+     * into the new node group (shard). 
      */
     override fun snapshotName(snapshotName: String) {
       cdkBuilder.snapshotName(snapshotName)

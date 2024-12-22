@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.secretsmanager.ISecret
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -18,27 +19,31 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.ec2.*;
- * import io.cloudshiftdev.awscdk.services.rds.*;
- * import io.cloudshiftdev.awscdk.services.secretsmanager.*;
- * IClusterEngine clusterEngine;
+ * Vpc vpc;
+ * Function fn;
  * Secret secret;
- * SecurityGroup securityGroup;
- * DatabaseClusterAttributes databaseClusterAttributes = DatabaseClusterAttributes.builder()
- * .clusterIdentifier("clusterIdentifier")
- * // the properties below are optional
- * .clusterEndpointAddress("clusterEndpointAddress")
- * .clusterResourceIdentifier("clusterResourceIdentifier")
- * .engine(clusterEngine)
- * .instanceEndpointAddresses(List.of("instanceEndpointAddresses"))
- * .instanceIdentifiers(List.of("instanceIdentifiers"))
- * .port(123)
- * .readerEndpointAddress("readerEndpointAddress")
- * .secret(secret)
- * .securityGroups(List.of(securityGroup))
+ * // Create a serverless V1 cluster
+ * ServerlessCluster serverlessV1Cluster = ServerlessCluster.Builder.create(this, "AnotherCluster")
+ * .engine(DatabaseClusterEngine.AURORA_MYSQL)
+ * .vpc(vpc) // this parameter is optional for serverless Clusters
+ * .enableDataApi(true)
  * .build();
+ * serverlessV1Cluster.grantDataApiAccess(fn);
+ * // Create an Aurora cluster
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Cluster")
+ * .engine(DatabaseClusterEngine.AURORA_MYSQL)
+ * .vpc(vpc)
+ * .enableDataApi(true)
+ * .build();
+ * cluster.grantDataApiAccess(fn);
+ * // Import an Aurora cluster
+ * IDatabaseCluster importedCluster = DatabaseCluster.fromDatabaseClusterAttributes(this,
+ * "ImportedCluster", DatabaseClusterAttributes.builder()
+ * .clusterIdentifier("clusterIdentifier")
+ * .secret(secret)
+ * .dataApiEnabled(true)
+ * .build());
+ * importedCluster.grantDataApiAccess(fn);
  * ```
  */
 public interface DatabaseClusterAttributes {
@@ -62,6 +67,13 @@ public interface DatabaseClusterAttributes {
    * Default: none
    */
   public fun clusterResourceIdentifier(): String? = unwrap(this).getClusterResourceIdentifier()
+
+  /**
+   * Whether the Data API for the cluster is enabled.
+   *
+   * Default: false
+   */
+  public fun dataApiEnabled(): Boolean? = unwrap(this).getDataApiEnabled()
 
   /**
    * The engine of the existing Cluster.
@@ -136,6 +148,11 @@ public interface DatabaseClusterAttributes {
      * This AWS Region-unique identifier is used to grant access to the cluster.
      */
     public fun clusterResourceIdentifier(clusterResourceIdentifier: String)
+
+    /**
+     * @param dataApiEnabled Whether the Data API for the cluster is enabled.
+     */
+    public fun dataApiEnabled(dataApiEnabled: Boolean)
 
     /**
      * @param engine The engine of the existing Cluster.
@@ -213,6 +230,13 @@ public interface DatabaseClusterAttributes {
      */
     override fun clusterResourceIdentifier(clusterResourceIdentifier: String) {
       cdkBuilder.clusterResourceIdentifier(clusterResourceIdentifier)
+    }
+
+    /**
+     * @param dataApiEnabled Whether the Data API for the cluster is enabled.
+     */
+    override fun dataApiEnabled(dataApiEnabled: Boolean) {
+      cdkBuilder.dataApiEnabled(dataApiEnabled)
     }
 
     /**
@@ -310,6 +334,13 @@ public interface DatabaseClusterAttributes {
      * Default: none
      */
     override fun clusterResourceIdentifier(): String? = unwrap(this).getClusterResourceIdentifier()
+
+    /**
+     * Whether the Data API for the cluster is enabled.
+     *
+     * Default: false
+     */
+    override fun dataApiEnabled(): Boolean? = unwrap(this).getDataApiEnabled()
 
     /**
      * The engine of the existing Cluster.

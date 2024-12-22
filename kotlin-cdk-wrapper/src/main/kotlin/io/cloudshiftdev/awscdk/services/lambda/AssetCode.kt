@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import io.cloudshiftdev.constructs.Construct
 import kotlin.Boolean
@@ -276,6 +277,16 @@ public open class AssetCode(
      * @param readers A list of principals that should be able to read this asset from S3. 
      */
     public fun readers(vararg readers: IGrantable)
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     *
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code. 
+     */
+    public fun sourceKmsKey(sourceKmsKey: IKey)
   }
 
   private class BuilderImpl(
@@ -450,6 +461,18 @@ public open class AssetCode(
      * @param readers A list of principals that should be able to read this asset from S3. 
      */
     override fun readers(vararg readers: IGrantable): Unit = readers(readers.toList())
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     *
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code. 
+     */
+    override fun sourceKmsKey(sourceKmsKey: IKey) {
+      cdkBuilder.sourceKmsKey(sourceKmsKey.let(IKey.Companion::unwrap))
+    }
 
     public fun build(): software.amazon.awscdk.services.lambda.AssetCode = cdkBuilder.build()
   }

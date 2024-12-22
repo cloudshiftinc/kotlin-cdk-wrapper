@@ -83,6 +83,7 @@ import kotlin.jvm.JvmName
  * .sourceIdentifier("sourceIdentifier")
  * .build())
  * // the properties below are optional
+ * .autoRetryLimit(123)
  * .badgeEnabled(false)
  * .buildBatchConfig(ProjectBuildBatchConfigProperty.builder()
  * .batchReportMode("batchReportMode")
@@ -206,6 +207,11 @@ public interface CfnProjectProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-artifacts)
    */
   public fun artifacts(): Any
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-autoretrylimit)
+   */
+  public fun autoRetryLimit(): Number? = unwrap(this).getAutoRetryLimit()
 
   /**
    * Indicates whether AWS CodeBuild generates a publicly accessible URL for your project's build
@@ -469,6 +475,11 @@ public interface CfnProjectProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("85703c5a858300e67fa209c09cf6a9af69098429d94cbe4fc75683956b91eb73")
     public fun artifacts(artifacts: CfnProject.ArtifactsProperty.Builder.() -> Unit)
+
+    /**
+     * @param autoRetryLimit the value to be set.
+     */
+    public fun autoRetryLimit(autoRetryLimit: Number)
 
     /**
      * @param badgeEnabled Indicates whether AWS CodeBuild generates a publicly accessible URL for
@@ -862,6 +873,13 @@ public interface CfnProjectProps {
     @JvmName("85703c5a858300e67fa209c09cf6a9af69098429d94cbe4fc75683956b91eb73")
     override fun artifacts(artifacts: CfnProject.ArtifactsProperty.Builder.() -> Unit): Unit =
         artifacts(CfnProject.ArtifactsProperty(artifacts))
+
+    /**
+     * @param autoRetryLimit the value to be set.
+     */
+    override fun autoRetryLimit(autoRetryLimit: Number) {
+      cdkBuilder.autoRetryLimit(autoRetryLimit)
+    }
 
     /**
      * @param badgeEnabled Indicates whether AWS CodeBuild generates a publicly accessible URL for
@@ -1320,6 +1338,11 @@ public interface CfnProjectProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-artifacts)
      */
     override fun artifacts(): Any = unwrap(this).getArtifacts()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-project.html#cfn-codebuild-project-autoretrylimit)
+     */
+    override fun autoRetryLimit(): Number? = unwrap(this).getAutoRetryLimit()
 
     /**
      * Indicates whether AWS CodeBuild generates a publicly accessible URL for your project's build

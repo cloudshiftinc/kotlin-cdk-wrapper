@@ -35,6 +35,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .custom(Map.of(
  * "customKey", providerAttribute))
  * .email(providerAttribute)
+ * .emailVerified(providerAttribute)
  * .familyName(providerAttribute)
  * .fullname(providerAttribute)
  * .gender(providerAttribute)

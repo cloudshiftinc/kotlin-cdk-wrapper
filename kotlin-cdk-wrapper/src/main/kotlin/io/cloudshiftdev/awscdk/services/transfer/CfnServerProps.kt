@@ -166,7 +166,7 @@ public interface CfnServerProps {
    *
    * Accepts an array containing all of the information required to use a directory in
    * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-   * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+   * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-identityproviderdetails)
    */
@@ -455,7 +455,7 @@ public interface CfnServerProps {
      * `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or `API_GATEWAY` .
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      */
     public fun identityProviderDetails(identityProviderDetails: IResolvable)
 
@@ -464,7 +464,7 @@ public interface CfnServerProps {
      * `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or `API_GATEWAY` .
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      */
     public
         fun identityProviderDetails(identityProviderDetails: CfnServer.IdentityProviderDetailsProperty)
@@ -474,7 +474,7 @@ public interface CfnServerProps {
      * `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or `API_GATEWAY` .
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6667a8bdf89f0753feaef33b9217a294a51f08fbe0aa3ea2ee73f5f953743e1c")
@@ -886,7 +886,7 @@ public interface CfnServerProps {
      * `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or `API_GATEWAY` .
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      */
     override fun identityProviderDetails(identityProviderDetails: IResolvable) {
       cdkBuilder.identityProviderDetails(identityProviderDetails.let(IResolvable.Companion::unwrap))
@@ -897,7 +897,7 @@ public interface CfnServerProps {
      * `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or `API_GATEWAY` .
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      */
     override
         fun identityProviderDetails(identityProviderDetails: CfnServer.IdentityProviderDetailsProperty) {
@@ -909,7 +909,7 @@ public interface CfnServerProps {
      * `AWS_DIRECTORY_SERVICE` , `AWS _LAMBDA` or `API_GATEWAY` .
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("6667a8bdf89f0753feaef33b9217a294a51f08fbe0aa3ea2ee73f5f953743e1c")
@@ -1336,7 +1336,7 @@ public interface CfnServerProps {
      *
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-identityproviderdetails)
      */

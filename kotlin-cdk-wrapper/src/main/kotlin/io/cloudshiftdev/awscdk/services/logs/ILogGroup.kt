@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
+import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
@@ -142,6 +143,96 @@ public interface ILogGroup : IResourceWithPolicy {
    * Public method to get the physical name of this log group.
    */
   public fun logGroupPhysicalName(): String
+
+  /**
+   * Return the given named metric for this Log Group.
+   *
+   * @param metricName The name of the metric. 
+   * @param props Properties for the metric.
+   */
+  public fun metric(metricName: String): Metric
+
+  /**
+   * Return the given named metric for this Log Group.
+   *
+   * @param metricName The name of the metric. 
+   * @param props Properties for the metric.
+   */
+  public fun metric(metricName: String, props: MetricOptions): Metric
+
+  /**
+   * Return the given named metric for this Log Group.
+   *
+   * @param metricName The name of the metric. 
+   * @param props Properties for the metric.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
+  public fun metric(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric
+
+  /**
+   * The volume of log events in uncompressed bytes uploaded to CloudWatch Logs.
+   *
+   * When used with the LogGroupName dimension, this is the volume of log events
+   * in uncompressed bytes uploaded to the log group.
+   *
+   * @param props Properties for the Cloudwatch metric.
+   */
+  public fun metricIncomingBytes(): Metric
+
+  /**
+   * The volume of log events in uncompressed bytes uploaded to CloudWatch Logs.
+   *
+   * When used with the LogGroupName dimension, this is the volume of log events
+   * in uncompressed bytes uploaded to the log group.
+   *
+   * @param props Properties for the Cloudwatch metric.
+   */
+  public fun metricIncomingBytes(props: MetricOptions): Metric
+
+  /**
+   * The volume of log events in uncompressed bytes uploaded to CloudWatch Logs.
+   *
+   * When used with the LogGroupName dimension, this is the volume of log events
+   * in uncompressed bytes uploaded to the log group.
+   *
+   * @param props Properties for the Cloudwatch metric.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("289b17285610a67712940bcd7a3287676eb71631ba3f6c55430acb662300effc")
+  public fun metricIncomingBytes(props: MetricOptions.Builder.() -> Unit): Metric
+
+  /**
+   * The number of log events uploaded to CloudWatch Logs.
+   *
+   * When used with the LogGroupName dimension, this is the number of
+   * log events uploaded to the log group.
+   *
+   * @param props Properties for the Cloudwatch metric.
+   */
+  public fun metricIncomingLogEvents(): Metric
+
+  /**
+   * The number of log events uploaded to CloudWatch Logs.
+   *
+   * When used with the LogGroupName dimension, this is the number of
+   * log events uploaded to the log group.
+   *
+   * @param props Properties for the Cloudwatch metric.
+   */
+  public fun metricIncomingLogEvents(props: MetricOptions): Metric
+
+  /**
+   * The number of log events uploaded to CloudWatch Logs.
+   *
+   * When used with the LogGroupName dimension, this is the number of
+   * log events uploaded to the log group.
+   *
+   * @param props Properties for the Cloudwatch metric.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("01022ee4a8224c9369c1e598131d0c672ff4b9255fd2f5aa5162fc8003c3f15e")
+  public fun metricIncomingLogEvents(props: MetricOptions.Builder.() -> Unit): Metric
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.logs.ILogGroup,
@@ -325,6 +416,106 @@ public interface ILogGroup : IResourceWithPolicy {
      * Public method to get the physical name of this log group.
      */
     override fun logGroupPhysicalName(): String = unwrap(this).logGroupPhysicalName()
+
+    /**
+     * Return the given named metric for this Log Group.
+     *
+     * @param metricName The name of the metric. 
+     * @param props Properties for the metric.
+     */
+    override fun metric(metricName: String): Metric =
+        unwrap(this).metric(metricName).let(Metric::wrap)
+
+    /**
+     * Return the given named metric for this Log Group.
+     *
+     * @param metricName The name of the metric. 
+     * @param props Properties for the metric.
+     */
+    override fun metric(metricName: String, props: MetricOptions): Metric =
+        unwrap(this).metric(metricName,
+        props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
+
+    /**
+     * Return the given named metric for this Log Group.
+     *
+     * @param metricName The name of the metric. 
+     * @param props Properties for the metric.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
+    override fun metric(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric =
+        metric(metricName, MetricOptions(props))
+
+    /**
+     * The volume of log events in uncompressed bytes uploaded to CloudWatch Logs.
+     *
+     * When used with the LogGroupName dimension, this is the volume of log events
+     * in uncompressed bytes uploaded to the log group.
+     *
+     * @param props Properties for the Cloudwatch metric.
+     */
+    override fun metricIncomingBytes(): Metric =
+        unwrap(this).metricIncomingBytes().let(Metric::wrap)
+
+    /**
+     * The volume of log events in uncompressed bytes uploaded to CloudWatch Logs.
+     *
+     * When used with the LogGroupName dimension, this is the volume of log events
+     * in uncompressed bytes uploaded to the log group.
+     *
+     * @param props Properties for the Cloudwatch metric.
+     */
+    override fun metricIncomingBytes(props: MetricOptions): Metric =
+        unwrap(this).metricIncomingBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
+
+    /**
+     * The volume of log events in uncompressed bytes uploaded to CloudWatch Logs.
+     *
+     * When used with the LogGroupName dimension, this is the volume of log events
+     * in uncompressed bytes uploaded to the log group.
+     *
+     * @param props Properties for the Cloudwatch metric.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("289b17285610a67712940bcd7a3287676eb71631ba3f6c55430acb662300effc")
+    override fun metricIncomingBytes(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricIncomingBytes(MetricOptions(props))
+
+    /**
+     * The number of log events uploaded to CloudWatch Logs.
+     *
+     * When used with the LogGroupName dimension, this is the number of
+     * log events uploaded to the log group.
+     *
+     * @param props Properties for the Cloudwatch metric.
+     */
+    override fun metricIncomingLogEvents(): Metric =
+        unwrap(this).metricIncomingLogEvents().let(Metric::wrap)
+
+    /**
+     * The number of log events uploaded to CloudWatch Logs.
+     *
+     * When used with the LogGroupName dimension, this is the number of
+     * log events uploaded to the log group.
+     *
+     * @param props Properties for the Cloudwatch metric.
+     */
+    override fun metricIncomingLogEvents(props: MetricOptions): Metric =
+        unwrap(this).metricIncomingLogEvents(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
+
+    /**
+     * The number of log events uploaded to CloudWatch Logs.
+     *
+     * When used with the LogGroupName dimension, this is the number of
+     * log events uploaded to the log group.
+     *
+     * @param props Properties for the Cloudwatch metric.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("01022ee4a8224c9369c1e598131d0c672ff4b9255fd2f5aa5162fc8003c3f15e")
+    override fun metricIncomingLogEvents(props: MetricOptions.Builder.() -> Unit): Metric =
+        metricIncomingLogEvents(MetricOptions(props))
 
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 

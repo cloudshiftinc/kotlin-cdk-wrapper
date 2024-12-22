@@ -42,6 +42,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .authenticationType("authenticationType")
  * .browserSettingsArn("browserSettingsArn")
  * .customerManagedKey("customerManagedKey")
+ * .dataProtectionSettingsArn("dataProtectionSettingsArn")
  * .displayName("displayName")
  * .instanceType("instanceType")
  * .ipAccessSettingsArn("ipAccessSettingsArn")
@@ -190,6 +191,18 @@ public open class CfnPortal(
    */
   public open fun customerManagedKey(`value`: String) {
     unwrap(this).setCustomerManagedKey(`value`)
+  }
+
+  /**
+   * The ARN of the data protection settings.
+   */
+  public open fun dataProtectionSettingsArn(): String? = unwrap(this).getDataProtectionSettingsArn()
+
+  /**
+   * The ARN of the data protection settings.
+   */
+  public open fun dataProtectionSettingsArn(`value`: String) {
+    unwrap(this).setDataProtectionSettingsArn(`value`)
   }
 
   /**
@@ -388,6 +401,14 @@ public open class CfnPortal(
     public fun customerManagedKey(customerManagedKey: String)
 
     /**
+     * The ARN of the data protection settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-dataprotectionsettingsarn)
+     * @param dataProtectionSettingsArn The ARN of the data protection settings. 
+     */
+    public fun dataProtectionSettingsArn(dataProtectionSettingsArn: String)
+
+    /**
      * The name of the web portal.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-displayname)
@@ -557,6 +578,16 @@ public open class CfnPortal(
      */
     override fun customerManagedKey(customerManagedKey: String) {
       cdkBuilder.customerManagedKey(customerManagedKey)
+    }
+
+    /**
+     * The ARN of the data protection settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-dataprotectionsettingsarn)
+     * @param dataProtectionSettingsArn The ARN of the data protection settings. 
+     */
+    override fun dataProtectionSettingsArn(dataProtectionSettingsArn: String) {
+      cdkBuilder.dataProtectionSettingsArn(dataProtectionSettingsArn)
     }
 
     /**

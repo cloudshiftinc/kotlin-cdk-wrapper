@@ -48,16 +48,16 @@ public interface CfnServiceNetworkServiceAssociationProps {
   public fun dnsEntry(): Any? = unwrap(this).getDnsEntry()
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service.
+   * The ID or ARN of the service.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-serviceidentifier)
    */
   public fun serviceIdentifier(): String? = unwrap(this).getServiceIdentifier()
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service network.
+   * The ID or ARN of the service network.
    *
-   * You must use the ARN if the resources specified in the operation are in different accounts.
+   * You must use an ARN if the resources are in different accounts.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-servicenetworkidentifier)
    */
@@ -94,13 +94,13 @@ public interface CfnServiceNetworkServiceAssociationProps {
         fun dnsEntry(dnsEntry: CfnServiceNetworkServiceAssociation.DnsEntryProperty.Builder.() -> Unit)
 
     /**
-     * @param serviceIdentifier The ID or Amazon Resource Name (ARN) of the service.
+     * @param serviceIdentifier The ID or ARN of the service.
      */
     public fun serviceIdentifier(serviceIdentifier: String)
 
     /**
-     * @param serviceNetworkIdentifier The ID or Amazon Resource Name (ARN) of the service network.
-     * You must use the ARN if the resources specified in the operation are in different accounts.
+     * @param serviceNetworkIdentifier The ID or ARN of the service network.
+     * You must use an ARN if the resources are in different accounts.
      */
     public fun serviceNetworkIdentifier(serviceNetworkIdentifier: String)
 
@@ -145,15 +145,15 @@ public interface CfnServiceNetworkServiceAssociationProps {
         Unit = dnsEntry(CfnServiceNetworkServiceAssociation.DnsEntryProperty(dnsEntry))
 
     /**
-     * @param serviceIdentifier The ID or Amazon Resource Name (ARN) of the service.
+     * @param serviceIdentifier The ID or ARN of the service.
      */
     override fun serviceIdentifier(serviceIdentifier: String) {
       cdkBuilder.serviceIdentifier(serviceIdentifier)
     }
 
     /**
-     * @param serviceNetworkIdentifier The ID or Amazon Resource Name (ARN) of the service network.
-     * You must use the ARN if the resources specified in the operation are in different accounts.
+     * @param serviceNetworkIdentifier The ID or ARN of the service network.
+     * You must use an ARN if the resources are in different accounts.
      */
     override fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
       cdkBuilder.serviceNetworkIdentifier(serviceNetworkIdentifier)
@@ -188,16 +188,16 @@ public interface CfnServiceNetworkServiceAssociationProps {
     override fun dnsEntry(): Any? = unwrap(this).getDnsEntry()
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or ARN of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-serviceidentifier)
      */
     override fun serviceIdentifier(): String? = unwrap(this).getServiceIdentifier()
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service network.
+     * The ID or ARN of the service network.
      *
-     * You must use the ARN if the resources specified in the operation are in different accounts.
+     * You must use an ARN if the resources are in different accounts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-servicenetworkidentifier)
      */

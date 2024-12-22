@@ -40,6 +40,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
+ * Object serviceAttributes;
  * CfnService cfnService = CfnService.Builder.create(this, "MyCfnService")
  * .description("description")
  * .dnsConfig(DnsConfigProperty.builder()
@@ -62,6 +63,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .name("name")
  * .namespaceId("namespaceId")
+ * .serviceAttributes(serviceAttributes)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -250,6 +252,18 @@ public open class CfnService(
    */
   public open fun namespaceId(`value`: String) {
     unwrap(this).setNamespaceId(`value`)
+  }
+
+  /**
+   *
+   */
+  public open fun serviceAttributes(): Any? = unwrap(this).getServiceAttributes()
+
+  /**
+   *
+   */
+  public open fun serviceAttributes(`value`: Any) {
+    unwrap(this).setServiceAttributes(`value`)
   }
 
   /**
@@ -462,6 +476,12 @@ public open class CfnService(
      * @param namespaceId The ID of the namespace that was used to create the service. 
      */
     public fun namespaceId(namespaceId: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-serviceattributes)
+     * @param serviceAttributes 
+     */
+    public fun serviceAttributes(serviceAttributes: Any)
 
     /**
      * The tags for the service.
@@ -695,6 +715,14 @@ public open class CfnService(
      */
     override fun namespaceId(namespaceId: String) {
       cdkBuilder.namespaceId(namespaceId)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-serviceattributes)
+     * @param serviceAttributes 
+     */
+    override fun serviceAttributes(serviceAttributes: Any) {
+      cdkBuilder.serviceAttributes(serviceAttributes)
     }
 
     /**

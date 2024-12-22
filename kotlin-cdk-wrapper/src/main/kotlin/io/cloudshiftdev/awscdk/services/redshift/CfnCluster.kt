@@ -82,6 +82,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .maintenanceTrackName("maintenanceTrackName")
  * .manageMasterPassword(false)
  * .manualSnapshotRetentionPeriod(123)
+ * .masterPasswordSecretKmsKeyId("masterPasswordSecretKmsKeyId")
  * .masterUserPassword("masterUserPassword")
  * .multiAz(false)
  * .namespaceResourcePolicy(namespaceResourcePolicy)
@@ -668,6 +669,21 @@ public open class CfnCluster(
    */
   public open fun manualSnapshotRetentionPeriod(`value`: Number) {
     unwrap(this).setManualSnapshotRetentionPeriod(`value`)
+  }
+
+  /**
+   * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
+   * admin credentials secret.
+   */
+  public open fun masterPasswordSecretKmsKeyId(): String? =
+      unwrap(this).getMasterPasswordSecretKmsKeyId()
+
+  /**
+   * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
+   * admin credentials secret.
+   */
+  public open fun masterPasswordSecretKmsKeyId(`value`: String) {
+    unwrap(this).setMasterPasswordSecretKmsKeyId(`value`)
   }
 
   /**
@@ -1534,6 +1550,18 @@ public open class CfnCluster(
     public fun manualSnapshotRetentionPeriod(manualSnapshotRetentionPeriod: Number)
 
     /**
+     * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
+     * admin credentials secret.
+     *
+     * You can only use this parameter if `ManageMasterPassword` is true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterpasswordsecretkmskeyid)
+     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
+     * to encrypt and store the cluster's admin credentials secret. 
+     */
+    public fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String)
+
+    /**
      * The password associated with the admin user account for the cluster that is being created.
      *
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -1612,7 +1640,8 @@ public open class CfnCluster(
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.large` | `ra3.xlplus` | `ra3.4xlarge` |
+     * `ra3.16xlarge`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
      * @param nodeType The node type to be provisioned for the cluster. 
@@ -2513,6 +2542,20 @@ public open class CfnCluster(
     }
 
     /**
+     * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
+     * admin credentials secret.
+     *
+     * You can only use this parameter if `ManageMasterPassword` is true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterpasswordsecretkmskeyid)
+     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
+     * to encrypt and store the cluster's admin credentials secret. 
+     */
+    override fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String) {
+      cdkBuilder.masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId)
+    }
+
+    /**
      * The password associated with the admin user account for the cluster that is being created.
      *
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -2601,7 +2644,8 @@ public open class CfnCluster(
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.large` | `ra3.xlplus` | `ra3.4xlarge` |
+     * `ra3.16xlarge`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
      * @param nodeType The node type to be provisioned for the cluster. 
@@ -3084,16 +3128,10 @@ public open class CfnCluster(
     /**
      * The prefix applied to the log file names.
      *
-     * Constraints:
-     *
-     * * Cannot exceed 512 characters
-     * * Cannot contain spaces( ), double quotes ("), single quotes ('), a backslash (), or control
-     * characters. The hexadecimal codes for invalid characters are:
-     * * x00 to x20
-     * * x22
-     * * x27
-     * * x5c
-     * * x7f or larger
+     * Valid characters are any letter from any language, any whitespace character, any numeric
+     * character, and the following characters: underscore ( `_` ), period ( `.` ), colon ( `:` ),
+     * slash ( `/` ), equal ( `=` ), plus ( `+` ), backslash ( `\` ), hyphen ( `-` ), at symbol (
+     * `&#64;` ).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-s3keyprefix)
      */
@@ -3133,16 +3171,10 @@ public open class CfnCluster(
 
       /**
        * @param s3KeyPrefix The prefix applied to the log file names.
-       * Constraints:
-       *
-       * * Cannot exceed 512 characters
-       * * Cannot contain spaces( ), double quotes ("), single quotes ('), a backslash (), or
-       * control characters. The hexadecimal codes for invalid characters are:
-       * * x00 to x20
-       * * x22
-       * * x27
-       * * x5c
-       * * x7f or larger
+       * Valid characters are any letter from any language, any whitespace character, any numeric
+       * character, and the following characters: underscore ( `_` ), period ( `.` ), colon ( `:` ),
+       * slash ( `/` ), equal ( `=` ), plus ( `+` ), backslash ( `\` ), hyphen ( `-` ), at symbol (
+       * `&#64;` ).
        */
       public fun s3KeyPrefix(s3KeyPrefix: String)
     }
@@ -3187,16 +3219,10 @@ public open class CfnCluster(
 
       /**
        * @param s3KeyPrefix The prefix applied to the log file names.
-       * Constraints:
-       *
-       * * Cannot exceed 512 characters
-       * * Cannot contain spaces( ), double quotes ("), single quotes ('), a backslash (), or
-       * control characters. The hexadecimal codes for invalid characters are:
-       * * x00 to x20
-       * * x22
-       * * x27
-       * * x5c
-       * * x7f or larger
+       * Valid characters are any letter from any language, any whitespace character, any numeric
+       * character, and the following characters: underscore ( `_` ), period ( `.` ), colon ( `:` ),
+       * slash ( `/` ), equal ( `=` ), plus ( `+` ), backslash ( `\` ), hyphen ( `-` ), at symbol (
+       * `&#64;` ).
        */
       override fun s3KeyPrefix(s3KeyPrefix: String) {
         cdkBuilder.s3KeyPrefix(s3KeyPrefix)
@@ -3244,16 +3270,10 @@ public open class CfnCluster(
       /**
        * The prefix applied to the log file names.
        *
-       * Constraints:
-       *
-       * * Cannot exceed 512 characters
-       * * Cannot contain spaces( ), double quotes ("), single quotes ('), a backslash (), or
-       * control characters. The hexadecimal codes for invalid characters are:
-       * * x00 to x20
-       * * x22
-       * * x27
-       * * x5c
-       * * x7f or larger
+       * Valid characters are any letter from any language, any whitespace character, any numeric
+       * character, and the following characters: underscore ( `_` ), period ( `.` ), colon ( `:` ),
+       * slash ( `/` ), equal ( `=` ), plus ( `+` ), backslash ( `\` ), hyphen ( `-` ), at symbol (
+       * `&#64;` ).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-redshift-cluster-loggingproperties.html#cfn-redshift-cluster-loggingproperties-s3keyprefix)
        */

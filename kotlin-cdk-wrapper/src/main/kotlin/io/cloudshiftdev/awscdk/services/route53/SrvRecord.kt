@@ -23,6 +23,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.route53.*;
  * GeoLocation geoLocation;
+ * HealthCheck healthCheck;
  * HostedZone hostedZone;
  * SrvRecord srvRecord = SrvRecord.Builder.create(this, "MySrvRecord")
  * .values(List.of(SrvRecordValue.builder()
@@ -36,6 +37,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .comment("comment")
  * .deleteExisting(false)
  * .geoLocation(geoLocation)
+ * .healthCheck(healthCheck)
  * .multiValueAnswer(false)
  * .recordName("recordName")
  * .region("region")
@@ -106,6 +108,18 @@ public open class SrvRecord(
      * user's location. 
      */
     public fun geoLocation(geoLocation: GeoLocation)
+
+    /**
+     * The health check to associate with the record set.
+     *
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     *
+     * Default: - No health check configured
+     *
+     * @param healthCheck The health check to associate with the record set. 
+     */
+    public fun healthCheck(healthCheck: IHealthCheck)
 
     /**
      * A string used to distinguish between different records with the same combination of DNS name
@@ -269,6 +283,20 @@ public open class SrvRecord(
      */
     override fun geoLocation(geoLocation: GeoLocation) {
       cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
+    }
+
+    /**
+     * The health check to associate with the record set.
+     *
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     *
+     * Default: - No health check configured
+     *
+     * @param healthCheck The health check to associate with the record set. 
+     */
+    override fun healthCheck(healthCheck: IHealthCheck) {
+      cdkBuilder.healthCheck(healthCheck.let(IHealthCheck.Companion::unwrap))
     }
 
     /**

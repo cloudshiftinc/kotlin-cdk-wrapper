@@ -226,26 +226,26 @@ public open class CfnConfiguredTable(
   }
 
   /**
-   * The AWS Glue table that this configured table represents.
+   * The table that this configured table represents.
    */
   public open fun tableReference(): Any = unwrap(this).getTableReference()
 
   /**
-   * The AWS Glue table that this configured table represents.
+   * The table that this configured table represents.
    */
   public open fun tableReference(`value`: IResolvable) {
     unwrap(this).setTableReference(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * The AWS Glue table that this configured table represents.
+   * The table that this configured table represents.
    */
   public open fun tableReference(`value`: TableReferenceProperty) {
     unwrap(this).setTableReference(`value`.let(TableReferenceProperty.Companion::unwrap))
   }
 
   /**
-   * The AWS Glue table that this configured table represents.
+   * The table that this configured table represents.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("4839bbb0b7a8e4db4d671fed6496347f1c920b201fde8594778c604acc4f4606")
@@ -343,26 +343,26 @@ public open class CfnConfiguredTable(
     public fun name(name: String)
 
     /**
-     * The AWS Glue table that this configured table represents.
+     * The table that this configured table represents.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-tablereference)
-     * @param tableReference The AWS Glue table that this configured table represents. 
+     * @param tableReference The table that this configured table represents. 
      */
     public fun tableReference(tableReference: IResolvable)
 
     /**
-     * The AWS Glue table that this configured table represents.
+     * The table that this configured table represents.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-tablereference)
-     * @param tableReference The AWS Glue table that this configured table represents. 
+     * @param tableReference The table that this configured table represents. 
      */
     public fun tableReference(tableReference: TableReferenceProperty)
 
     /**
-     * The AWS Glue table that this configured table represents.
+     * The table that this configured table represents.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-tablereference)
-     * @param tableReference The AWS Glue table that this configured table represents. 
+     * @param tableReference The table that this configured table represents. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ecc93edf43a16f86dba9d1e61f5caca0faf208cf696a67f7a196a38ef52bb4ff")
@@ -483,30 +483,30 @@ public open class CfnConfiguredTable(
     }
 
     /**
-     * The AWS Glue table that this configured table represents.
+     * The table that this configured table represents.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-tablereference)
-     * @param tableReference The AWS Glue table that this configured table represents. 
+     * @param tableReference The table that this configured table represents. 
      */
     override fun tableReference(tableReference: IResolvable) {
       cdkBuilder.tableReference(tableReference.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * The AWS Glue table that this configured table represents.
+     * The table that this configured table represents.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-tablereference)
-     * @param tableReference The AWS Glue table that this configured table represents. 
+     * @param tableReference The table that this configured table represents. 
      */
     override fun tableReference(tableReference: TableReferenceProperty) {
       cdkBuilder.tableReference(tableReference.let(TableReferenceProperty.Companion::unwrap))
     }
 
     /**
-     * The AWS Glue table that this configured table represents.
+     * The table that this configured table represents.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-configuredtable.html#cfn-cleanrooms-configuredtable-tablereference)
-     * @param tableReference The AWS Glue table that this configured table represents. 
+     * @param tableReference The table that this configured table represents. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ecc93edf43a16f86dba9d1e61f5caca0faf208cf696a67f7a196a38ef52bb4ff")
@@ -2728,8 +2728,6 @@ public open class CfnConfiguredTable(
 
   /**
    * A pointer to the dataset that underlies this table.
-   *
-   * Currently, this can only be an AWS Glue table.
    *
    * Example:
    *

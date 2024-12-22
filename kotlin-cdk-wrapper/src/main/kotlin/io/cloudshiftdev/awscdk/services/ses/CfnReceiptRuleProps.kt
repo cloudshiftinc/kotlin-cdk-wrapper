@@ -35,6 +35,10 @@ import kotlin.jvm.JvmName
  * .statusCode("statusCode")
  * .topicArn("topicArn")
  * .build())
+ * .connectAction(ConnectActionProperty.builder()
+ * .iamRoleArn("iamRoleArn")
+ * .instanceArn("instanceArn")
+ * .build())
  * .lambdaAction(LambdaActionProperty.builder()
  * .functionArn("functionArn")
  * // the properties below are optional

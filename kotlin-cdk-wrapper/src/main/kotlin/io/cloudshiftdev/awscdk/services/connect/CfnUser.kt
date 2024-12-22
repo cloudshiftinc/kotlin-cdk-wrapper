@@ -702,7 +702,9 @@ public open class CfnUser(
    *
    * For Amazon Connect instances that are created with the `EXISTING_DIRECTORY` identity management
    * type, `FirstName` , `LastName` , and `Email` cannot be updated from within Amazon Connect because
-   * they are managed by the directory.
+   * they are managed by the directory. &gt; The `FirstName` and `LastName` length constraints below
+   * apply only to instances using SAML for identity management. If you are using Amazon Connect for
+   * identity management, the length constraints are 1-255 for `FirstName` , and 1-256 for `LastName` .
    *
    *
    * Example:

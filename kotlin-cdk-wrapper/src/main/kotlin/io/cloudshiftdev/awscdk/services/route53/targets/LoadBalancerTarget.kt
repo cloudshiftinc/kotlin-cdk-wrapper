@@ -20,7 +20,9 @@ import io.cloudshiftdev.awscdk.services.route53.IRecordSet
  * ApplicationLoadBalancer lb;
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
- * .target(RecordTarget.fromAlias(new LoadBalancerTarget(lb)))
+ * .target(RecordTarget.fromAlias(
+ * new LoadBalancerTarget(lb, Map.of(
+ * "evaluateTargetHealth", true))))
  * .build();
  * ```
  */
@@ -30,6 +32,11 @@ public open class LoadBalancerTarget(
     IAliasRecordTarget {
   public constructor(loadBalancer: ILoadBalancerV2) :
       this(software.amazon.awscdk.services.route53.targets.LoadBalancerTarget(loadBalancer.let(ILoadBalancerV2.Companion::unwrap))
+  )
+
+  public constructor(loadBalancer: ILoadBalancerV2, props: IAliasRecordTargetProps) :
+      this(software.amazon.awscdk.services.route53.targets.LoadBalancerTarget(loadBalancer.let(ILoadBalancerV2.Companion::unwrap),
+      props.let(IAliasRecordTargetProps.Companion::unwrap))
   )
 
   /**

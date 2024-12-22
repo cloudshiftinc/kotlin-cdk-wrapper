@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
+import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
 import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
@@ -231,6 +232,219 @@ public open class LogGroup(
    * @return Physical name of log group
    */
   public override fun logGroupPhysicalName(): String = unwrap(this).logGroupPhysicalName()
+
+  /**
+   * Creates a CloudWatch metric for this log group.
+   *
+   * @return A CloudWatch Metric object representing the specified metric for this log group.
+   *
+   * This method creates a CloudWatch Metric object with predefined settings for the log group.
+   * It sets the namespace to 'AWS/Logs' and the statistic to 'Sum' by default.
+   *
+   * The created metric is automatically associated with this log group using the `attachTo` method.
+   *
+   * Common metric names for log groups include:
+   *
+   * * 'IncomingBytes': The volume of log data in bytes ingested into the log group.
+   * * 'IncomingLogEvents': The number of log events ingested into the log group.
+   *
+   * ```
+   * ```
+   * @param metricName * The name of the metric to create. 
+   * @param props * Optional.
+   */
+  public override fun metric(metricName: String): Metric =
+      unwrap(this).metric(metricName).let(Metric::wrap)
+
+  /**
+   * Creates a CloudWatch metric for this log group.
+   *
+   * @return A CloudWatch Metric object representing the specified metric for this log group.
+   *
+   * This method creates a CloudWatch Metric object with predefined settings for the log group.
+   * It sets the namespace to 'AWS/Logs' and the statistic to 'Sum' by default.
+   *
+   * The created metric is automatically associated with this log group using the `attachTo` method.
+   *
+   * Common metric names for log groups include:
+   *
+   * * 'IncomingBytes': The volume of log data in bytes ingested into the log group.
+   * * 'IncomingLogEvents': The number of log events ingested into the log group.
+   *
+   * ```
+   * ```
+   * @param metricName * The name of the metric to create. 
+   * @param props * Optional.
+   */
+  public override fun metric(metricName: String, props: MetricOptions): Metric =
+      unwrap(this).metric(metricName, props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
+
+  /**
+   * Creates a CloudWatch metric for this log group.
+   *
+   * @return A CloudWatch Metric object representing the specified metric for this log group.
+   *
+   * This method creates a CloudWatch Metric object with predefined settings for the log group.
+   * It sets the namespace to 'AWS/Logs' and the statistic to 'Sum' by default.
+   *
+   * The created metric is automatically associated with this log group using the `attachTo` method.
+   *
+   * Common metric names for log groups include:
+   *
+   * * 'IncomingBytes': The volume of log data in bytes ingested into the log group.
+   * * 'IncomingLogEvents': The number of log events ingested into the log group.
+   *
+   * ```
+   * ```
+   * @param metricName * The name of the metric to create. 
+   * @param props * Optional.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("629ccc2b9ed0d0686ac72be3c432836a76a92f56ab45dae83dc2e318f17ba80c")
+  public override fun metric(metricName: String, props: MetricOptions.Builder.() -> Unit): Metric =
+      metric(metricName, MetricOptions(props))
+
+  /**
+   * Creates a CloudWatch metric for the volume of incoming log data in bytes to this log group.
+   *
+   * @return A CloudWatch Metric object representing the IncomingBytes metric.
+   *
+   * This method allows you to monitor the volume of data being ingested into the log group.
+   * It's useful for understanding the size of your logs, which can impact storage costs
+   * and help in identifying unexpectedly large log entries.
+   *
+   * Example usage:
+   *
+   * ```
+   * const logGroup = new logs.LogGroup(this, 'MyLogGroup');
+   * logGroup.metricIncomingBytes().createAlarm(stack, 'IncomingBytesPerInstanceAlarm', {
+   * threshold: 1,
+   * evaluationPeriods: 1,
+   * });
+   * ```
+   * @param props * Optional.
+   */
+  public override fun metricIncomingBytes(): Metric =
+      unwrap(this).metricIncomingBytes().let(Metric::wrap)
+
+  /**
+   * Creates a CloudWatch metric for the volume of incoming log data in bytes to this log group.
+   *
+   * @return A CloudWatch Metric object representing the IncomingBytes metric.
+   *
+   * This method allows you to monitor the volume of data being ingested into the log group.
+   * It's useful for understanding the size of your logs, which can impact storage costs
+   * and help in identifying unexpectedly large log entries.
+   *
+   * Example usage:
+   *
+   * ```
+   * const logGroup = new logs.LogGroup(this, 'MyLogGroup');
+   * logGroup.metricIncomingBytes().createAlarm(stack, 'IncomingBytesPerInstanceAlarm', {
+   * threshold: 1,
+   * evaluationPeriods: 1,
+   * });
+   * ```
+   * @param props * Optional.
+   */
+  public override fun metricIncomingBytes(props: MetricOptions): Metric =
+      unwrap(this).metricIncomingBytes(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
+
+  /**
+   * Creates a CloudWatch metric for the volume of incoming log data in bytes to this log group.
+   *
+   * @return A CloudWatch Metric object representing the IncomingBytes metric.
+   *
+   * This method allows you to monitor the volume of data being ingested into the log group.
+   * It's useful for understanding the size of your logs, which can impact storage costs
+   * and help in identifying unexpectedly large log entries.
+   *
+   * Example usage:
+   *
+   * ```
+   * const logGroup = new logs.LogGroup(this, 'MyLogGroup');
+   * logGroup.metricIncomingBytes().createAlarm(stack, 'IncomingBytesPerInstanceAlarm', {
+   * threshold: 1,
+   * evaluationPeriods: 1,
+   * });
+   * ```
+   * @param props * Optional.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("289b17285610a67712940bcd7a3287676eb71631ba3f6c55430acb662300effc")
+  public override fun metricIncomingBytes(props: MetricOptions.Builder.() -> Unit): Metric =
+      metricIncomingBytes(MetricOptions(props))
+
+  /**
+   * Creates a CloudWatch metric for the number of incoming log events to this log group.
+   *
+   * @return A CloudWatch Metric object representing the IncomingLogEvents metric.
+   *
+   * This method allows you to monitor the rate at which log events are being ingested
+   * into the log group. It's useful for understanding the volume of logging activity
+   * and can help in capacity planning or detecting unusual spikes in logging.
+   *
+   * Example usage:
+   *
+   * ```
+   * const logGroup = new logs.LogGroup(this, 'MyLogGroup');
+   * logGroup.metricIncomingLogEvents().createAlarm(stack, 'IncomingEventsPerInstanceAlarm', {
+   * threshold: 1,
+   * evaluationPeriods: 1,
+   * });
+   * ```
+   * @param props * Optional.
+   */
+  public override fun metricIncomingLogEvents(): Metric =
+      unwrap(this).metricIncomingLogEvents().let(Metric::wrap)
+
+  /**
+   * Creates a CloudWatch metric for the number of incoming log events to this log group.
+   *
+   * @return A CloudWatch Metric object representing the IncomingLogEvents metric.
+   *
+   * This method allows you to monitor the rate at which log events are being ingested
+   * into the log group. It's useful for understanding the volume of logging activity
+   * and can help in capacity planning or detecting unusual spikes in logging.
+   *
+   * Example usage:
+   *
+   * ```
+   * const logGroup = new logs.LogGroup(this, 'MyLogGroup');
+   * logGroup.metricIncomingLogEvents().createAlarm(stack, 'IncomingEventsPerInstanceAlarm', {
+   * threshold: 1,
+   * evaluationPeriods: 1,
+   * });
+   * ```
+   * @param props * Optional.
+   */
+  public override fun metricIncomingLogEvents(props: MetricOptions): Metric =
+      unwrap(this).metricIncomingLogEvents(props.let(MetricOptions.Companion::unwrap)).let(Metric::wrap)
+
+  /**
+   * Creates a CloudWatch metric for the number of incoming log events to this log group.
+   *
+   * @return A CloudWatch Metric object representing the IncomingLogEvents metric.
+   *
+   * This method allows you to monitor the rate at which log events are being ingested
+   * into the log group. It's useful for understanding the volume of logging activity
+   * and can help in capacity planning or detecting unusual spikes in logging.
+   *
+   * Example usage:
+   *
+   * ```
+   * const logGroup = new logs.LogGroup(this, 'MyLogGroup');
+   * logGroup.metricIncomingLogEvents().createAlarm(stack, 'IncomingEventsPerInstanceAlarm', {
+   * threshold: 1,
+   * evaluationPeriods: 1,
+   * });
+   * ```
+   * @param props * Optional.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("01022ee4a8224c9369c1e598131d0c672ff4b9255fd2f5aa5162fc8003c3f15e")
+  public override fun metricIncomingLogEvents(props: MetricOptions.Builder.() -> Unit): Metric =
+      metricIncomingLogEvents(MetricOptions(props))
 
   /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.logs.LogGroup].

@@ -18,12 +18,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.apigateway.*;
+ * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
  * HostedZone zone;
- * LambdaRestApi restApi;
+ * ApplicationLoadBalancer lb;
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
- * .target(RecordTarget.fromAlias(new ApiGateway(restApi)))
+ * .target(RecordTarget.fromAlias(
+ * new LoadBalancerTarget(lb, Map.of(
+ * "evaluateTargetHealth", true))))
  * .build();
  * ```
  */
@@ -88,6 +90,18 @@ public open class ARecord(
      * user's location. 
      */
     public fun geoLocation(geoLocation: GeoLocation)
+
+    /**
+     * The health check to associate with the record set.
+     *
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     *
+     * Default: - No health check configured
+     *
+     * @param healthCheck The health check to associate with the record set. 
+     */
+    public fun healthCheck(healthCheck: IHealthCheck)
 
     /**
      * A string used to distinguish between different records with the same combination of DNS name
@@ -244,6 +258,20 @@ public open class ARecord(
      */
     override fun geoLocation(geoLocation: GeoLocation) {
       cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
+    }
+
+    /**
+     * The health check to associate with the record set.
+     *
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     *
+     * Default: - No health check configured
+     *
+     * @param healthCheck The health check to associate with the record set. 
+     */
+    override fun healthCheck(healthCheck: IHealthCheck) {
+      cdkBuilder.healthCheck(healthCheck.let(IHealthCheck.Companion::unwrap))
     }
 
     /**

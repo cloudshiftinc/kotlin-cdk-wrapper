@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
 import kotlin.Boolean
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -77,7 +78,45 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .managedServiceData("managedServiceData")
  * .policyOption(PolicyOptionProperty.builder()
- * .networkAclCommonPolicy(NetworkAclCommonPolicyProperty.builder().build())
+ * .networkAclCommonPolicy(NetworkAclCommonPolicyProperty.builder()
+ * .networkAclEntrySet(NetworkAclEntrySetProperty.builder()
+ * .forceRemediateForFirstEntries(false)
+ * .forceRemediateForLastEntries(false)
+ * // the properties below are optional
+ * .firstEntries(List.of(NetworkAclEntryProperty.builder()
+ * .egress(false)
+ * .protocol("protocol")
+ * .ruleAction("ruleAction")
+ * // the properties below are optional
+ * .cidrBlock("cidrBlock")
+ * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+ * .code(123)
+ * .type(123)
+ * .build())
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .portRange(PortRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build())
+ * .build()))
+ * .lastEntries(List.of(NetworkAclEntryProperty.builder()
+ * .egress(false)
+ * .protocol("protocol")
+ * .ruleAction("ruleAction")
+ * // the properties below are optional
+ * .cidrBlock("cidrBlock")
+ * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+ * .code(123)
+ * .type(123)
+ * .build())
+ * .ipv6CidrBlock("ipv6CidrBlock")
+ * .portRange(PortRangeProperty.builder()
+ * .from(123)
+ * .to(123)
+ * .build())
+ * .build()))
+ * .build())
+ * .build())
  * .networkFirewallPolicy(NetworkFirewallPolicyProperty.builder()
  * .firewallDeploymentModel("firewallDeploymentModel")
  * .build())
@@ -2647,6 +2686,113 @@ public open class CfnPolicy(
   }
 
   /**
+   * ICMP protocol: The ICMP type and code.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fms.*;
+   * IcmpTypeCodeProperty icmpTypeCodeProperty = IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-icmptypecode.html)
+   */
+  public interface IcmpTypeCodeProperty {
+    /**
+     * ICMP code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-icmptypecode.html#cfn-fms-policy-icmptypecode-code)
+     */
+    public fun code(): Number
+
+    /**
+     * ICMP type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-icmptypecode.html#cfn-fms-policy-icmptypecode-type)
+     */
+    public fun type(): Number
+
+    /**
+     * A builder for [IcmpTypeCodeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param code ICMP code. 
+       */
+      public fun code(code: Number)
+
+      /**
+       * @param type ICMP type. 
+       */
+      public fun type(type: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fms.CfnPolicy.IcmpTypeCodeProperty.Builder =
+          software.amazon.awscdk.services.fms.CfnPolicy.IcmpTypeCodeProperty.builder()
+
+      /**
+       * @param code ICMP code. 
+       */
+      override fun code(code: Number) {
+        cdkBuilder.code(code)
+      }
+
+      /**
+       * @param type ICMP type. 
+       */
+      override fun type(type: Number) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.fms.CfnPolicy.IcmpTypeCodeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.IcmpTypeCodeProperty,
+    ) : CdkObject(cdkObject),
+        IcmpTypeCodeProperty {
+      /**
+       * ICMP code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-icmptypecode.html#cfn-fms-policy-icmptypecode-code)
+       */
+      override fun code(): Number = unwrap(this).getCode()
+
+      /**
+       * ICMP type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-icmptypecode.html#cfn-fms-policy-icmptypecode-type)
+       */
+      override fun type(): Number = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IcmpTypeCodeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.IcmpTypeCodeProperty):
+          IcmpTypeCodeProperty = CdkObjectWrappers.wrap(cdkObject) as? IcmpTypeCodeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IcmpTypeCodeProperty):
+          software.amazon.awscdk.services.fms.CfnPolicy.IcmpTypeCodeProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.fms.CfnPolicy.IcmpTypeCodeProperty
+    }
+  }
+
+  /**
    * Defines a Firewall Manager network ACL policy.
    *
    * This is used in the `PolicyOption` of a `SecurityServicePolicyData` for a `Policy` , when the
@@ -2663,22 +2809,114 @@ public open class CfnPolicy(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.fms.*;
    * NetworkAclCommonPolicyProperty networkAclCommonPolicyProperty =
-   * NetworkAclCommonPolicyProperty.builder().build();
+   * NetworkAclCommonPolicyProperty.builder()
+   * .networkAclEntrySet(NetworkAclEntrySetProperty.builder()
+   * .forceRemediateForFirstEntries(false)
+   * .forceRemediateForLastEntries(false)
+   * // the properties below are optional
+   * .firstEntries(List.of(NetworkAclEntryProperty.builder()
+   * .egress(false)
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * // the properties below are optional
+   * .cidrBlock("cidrBlock")
+   * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build())
+   * .ipv6CidrBlock("ipv6CidrBlock")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .build()))
+   * .lastEntries(List.of(NetworkAclEntryProperty.builder()
+   * .egress(false)
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * // the properties below are optional
+   * .cidrBlock("cidrBlock")
+   * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build())
+   * .ipv6CidrBlock("ipv6CidrBlock")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .build()))
+   * .build())
+   * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclcommonpolicy.html)
    */
   public interface NetworkAclCommonPolicyProperty {
     /**
+     * The definition of the first and last rules for the network ACL policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclcommonpolicy.html#cfn-fms-policy-networkaclcommonpolicy-networkaclentryset)
+     */
+    public fun networkAclEntrySet(): Any
+
+    /**
      * A builder for [NetworkAclCommonPolicyProperty]
      */
     @CdkDslMarker
-    public interface Builder
+    public interface Builder {
+      /**
+       * @param networkAclEntrySet The definition of the first and last rules for the network ACL
+       * policy. 
+       */
+      public fun networkAclEntrySet(networkAclEntrySet: IResolvable)
+
+      /**
+       * @param networkAclEntrySet The definition of the first and last rules for the network ACL
+       * policy. 
+       */
+      public fun networkAclEntrySet(networkAclEntrySet: NetworkAclEntrySetProperty)
+
+      /**
+       * @param networkAclEntrySet The definition of the first and last rules for the network ACL
+       * policy. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bed9e7e0ed3aa051a332d1ee92fae799671b1a29e0b9edd3b0b74a75dd197e01")
+      public
+          fun networkAclEntrySet(networkAclEntrySet: NetworkAclEntrySetProperty.Builder.() -> Unit)
+    }
 
     private class BuilderImpl : Builder {
       private val cdkBuilder:
           software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclCommonPolicyProperty.Builder =
           software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclCommonPolicyProperty.builder()
+
+      /**
+       * @param networkAclEntrySet The definition of the first and last rules for the network ACL
+       * policy. 
+       */
+      override fun networkAclEntrySet(networkAclEntrySet: IResolvable) {
+        cdkBuilder.networkAclEntrySet(networkAclEntrySet.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param networkAclEntrySet The definition of the first and last rules for the network ACL
+       * policy. 
+       */
+      override fun networkAclEntrySet(networkAclEntrySet: NetworkAclEntrySetProperty) {
+        cdkBuilder.networkAclEntrySet(networkAclEntrySet.let(NetworkAclEntrySetProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param networkAclEntrySet The definition of the first and last rules for the network ACL
+       * policy. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("bed9e7e0ed3aa051a332d1ee92fae799671b1a29e0b9edd3b0b74a75dd197e01")
+      override
+          fun networkAclEntrySet(networkAclEntrySet: NetworkAclEntrySetProperty.Builder.() -> Unit):
+          Unit = networkAclEntrySet(NetworkAclEntrySetProperty(networkAclEntrySet))
 
       public fun build():
           software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclCommonPolicyProperty =
@@ -2688,7 +2926,14 @@ public open class CfnPolicy(
     private class Wrapper(
       cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclCommonPolicyProperty,
     ) : CdkObject(cdkObject),
-        NetworkAclCommonPolicyProperty
+        NetworkAclCommonPolicyProperty {
+      /**
+       * The definition of the first and last rules for the network ACL policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclcommonpolicy.html#cfn-fms-policy-networkaclcommonpolicy-networkaclentryset)
+       */
+      override fun networkAclEntrySet(): Any = unwrap(this).getNetworkAclEntrySet()
+    }
 
     public companion object {
       public operator fun invoke(block: Builder.() -> Unit = {}): NetworkAclCommonPolicyProperty {
@@ -2705,6 +2950,838 @@ public open class CfnPolicy(
           software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclCommonPolicyProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclCommonPolicyProperty
+    }
+  }
+
+  /**
+   * Describes a rule in a network ACL.
+   *
+   * Each network ACL has a set of numbered ingress rules and a separate set of numbered egress
+   * rules. When determining
+   * whether a packet should be allowed in or out of a subnet associated with the network ACL, AWS
+   * processes the entries in the network ACL according to the rule numbers, in ascending order.
+   *
+   * When you manage an individual network ACL, you explicitly specify the rule numbers. When you
+   * specify the network ACL rules in a Firewall Manager policy, you provide the rules to run first, in
+   * the order that you want them to run, and the rules to run last, in the order that you want them to
+   * run. Firewall Manager assigns the rule numbers for you when you save the network ACL policy
+   * specification.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fms.*;
+   * NetworkAclEntryProperty networkAclEntryProperty = NetworkAclEntryProperty.builder()
+   * .egress(false)
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * // the properties below are optional
+   * .cidrBlock("cidrBlock")
+   * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build())
+   * .ipv6CidrBlock("ipv6CidrBlock")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html)
+   */
+  public interface NetworkAclEntryProperty {
+    /**
+     * The IPv4 network range to allow or deny, in CIDR notation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-cidrblock)
+     */
+    public fun cidrBlock(): String? = unwrap(this).getCidrBlock()
+
+    /**
+     * Indicates whether the rule is an egress, or outbound, rule (applied to traffic leaving the
+     * subnet).
+     *
+     * If it's not an egress rule, then it's an ingress, or inbound, rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-egress)
+     */
+    public fun egress(): Any
+
+    /**
+     * ICMP protocol: The ICMP type and code.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-icmptypecode)
+     */
+    public fun icmpTypeCode(): Any? = unwrap(this).getIcmpTypeCode()
+
+    /**
+     * The IPv6 network range to allow or deny, in CIDR notation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-ipv6cidrblock)
+     */
+    public fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
+
+    /**
+     * TCP or UDP protocols: The range of ports the rule applies to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-portrange)
+     */
+    public fun portRange(): Any? = unwrap(this).getPortRange()
+
+    /**
+     * The protocol number.
+     *
+     * A value of "-1" means all protocols.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-protocol)
+     */
+    public fun protocol(): String
+
+    /**
+     * Indicates whether to allow or deny the traffic that matches the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-ruleaction)
+     */
+    public fun ruleAction(): String
+
+    /**
+     * A builder for [NetworkAclEntryProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidrBlock The IPv4 network range to allow or deny, in CIDR notation.
+       */
+      public fun cidrBlock(cidrBlock: String)
+
+      /**
+       * @param egress Indicates whether the rule is an egress, or outbound, rule (applied to
+       * traffic leaving the subnet). 
+       * If it's not an egress rule, then it's an ingress, or inbound, rule.
+       */
+      public fun egress(egress: Boolean)
+
+      /**
+       * @param egress Indicates whether the rule is an egress, or outbound, rule (applied to
+       * traffic leaving the subnet). 
+       * If it's not an egress rule, then it's an ingress, or inbound, rule.
+       */
+      public fun egress(egress: IResolvable)
+
+      /**
+       * @param icmpTypeCode ICMP protocol: The ICMP type and code.
+       */
+      public fun icmpTypeCode(icmpTypeCode: IResolvable)
+
+      /**
+       * @param icmpTypeCode ICMP protocol: The ICMP type and code.
+       */
+      public fun icmpTypeCode(icmpTypeCode: IcmpTypeCodeProperty)
+
+      /**
+       * @param icmpTypeCode ICMP protocol: The ICMP type and code.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4889e24011146b25e795f1b876a87ecbde2416f0b21712281e71b4d71d11f67b")
+      public fun icmpTypeCode(icmpTypeCode: IcmpTypeCodeProperty.Builder.() -> Unit)
+
+      /**
+       * @param ipv6CidrBlock The IPv6 network range to allow or deny, in CIDR notation.
+       */
+      public fun ipv6CidrBlock(ipv6CidrBlock: String)
+
+      /**
+       * @param portRange TCP or UDP protocols: The range of ports the rule applies to.
+       */
+      public fun portRange(portRange: IResolvable)
+
+      /**
+       * @param portRange TCP or UDP protocols: The range of ports the rule applies to.
+       */
+      public fun portRange(portRange: PortRangeProperty)
+
+      /**
+       * @param portRange TCP or UDP protocols: The range of ports the rule applies to.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("06cc23273aaeda648e9ba9891b9d300ad2961375b4ebca58e7d00e2d9b9485b6")
+      public fun portRange(portRange: PortRangeProperty.Builder.() -> Unit)
+
+      /**
+       * @param protocol The protocol number. 
+       * A value of "-1" means all protocols.
+       */
+      public fun protocol(protocol: String)
+
+      /**
+       * @param ruleAction Indicates whether to allow or deny the traffic that matches the rule. 
+       */
+      public fun ruleAction(ruleAction: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntryProperty.Builder =
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntryProperty.builder()
+
+      /**
+       * @param cidrBlock The IPv4 network range to allow or deny, in CIDR notation.
+       */
+      override fun cidrBlock(cidrBlock: String) {
+        cdkBuilder.cidrBlock(cidrBlock)
+      }
+
+      /**
+       * @param egress Indicates whether the rule is an egress, or outbound, rule (applied to
+       * traffic leaving the subnet). 
+       * If it's not an egress rule, then it's an ingress, or inbound, rule.
+       */
+      override fun egress(egress: Boolean) {
+        cdkBuilder.egress(egress)
+      }
+
+      /**
+       * @param egress Indicates whether the rule is an egress, or outbound, rule (applied to
+       * traffic leaving the subnet). 
+       * If it's not an egress rule, then it's an ingress, or inbound, rule.
+       */
+      override fun egress(egress: IResolvable) {
+        cdkBuilder.egress(egress.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param icmpTypeCode ICMP protocol: The ICMP type and code.
+       */
+      override fun icmpTypeCode(icmpTypeCode: IResolvable) {
+        cdkBuilder.icmpTypeCode(icmpTypeCode.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param icmpTypeCode ICMP protocol: The ICMP type and code.
+       */
+      override fun icmpTypeCode(icmpTypeCode: IcmpTypeCodeProperty) {
+        cdkBuilder.icmpTypeCode(icmpTypeCode.let(IcmpTypeCodeProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param icmpTypeCode ICMP protocol: The ICMP type and code.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4889e24011146b25e795f1b876a87ecbde2416f0b21712281e71b4d71d11f67b")
+      override fun icmpTypeCode(icmpTypeCode: IcmpTypeCodeProperty.Builder.() -> Unit): Unit =
+          icmpTypeCode(IcmpTypeCodeProperty(icmpTypeCode))
+
+      /**
+       * @param ipv6CidrBlock The IPv6 network range to allow or deny, in CIDR notation.
+       */
+      override fun ipv6CidrBlock(ipv6CidrBlock: String) {
+        cdkBuilder.ipv6CidrBlock(ipv6CidrBlock)
+      }
+
+      /**
+       * @param portRange TCP or UDP protocols: The range of ports the rule applies to.
+       */
+      override fun portRange(portRange: IResolvable) {
+        cdkBuilder.portRange(portRange.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param portRange TCP or UDP protocols: The range of ports the rule applies to.
+       */
+      override fun portRange(portRange: PortRangeProperty) {
+        cdkBuilder.portRange(portRange.let(PortRangeProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param portRange TCP or UDP protocols: The range of ports the rule applies to.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("06cc23273aaeda648e9ba9891b9d300ad2961375b4ebca58e7d00e2d9b9485b6")
+      override fun portRange(portRange: PortRangeProperty.Builder.() -> Unit): Unit =
+          portRange(PortRangeProperty(portRange))
+
+      /**
+       * @param protocol The protocol number. 
+       * A value of "-1" means all protocols.
+       */
+      override fun protocol(protocol: String) {
+        cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param ruleAction Indicates whether to allow or deny the traffic that matches the rule. 
+       */
+      override fun ruleAction(ruleAction: String) {
+        cdkBuilder.ruleAction(ruleAction)
+      }
+
+      public fun build(): software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntryProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntryProperty,
+    ) : CdkObject(cdkObject),
+        NetworkAclEntryProperty {
+      /**
+       * The IPv4 network range to allow or deny, in CIDR notation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-cidrblock)
+       */
+      override fun cidrBlock(): String? = unwrap(this).getCidrBlock()
+
+      /**
+       * Indicates whether the rule is an egress, or outbound, rule (applied to traffic leaving the
+       * subnet).
+       *
+       * If it's not an egress rule, then it's an ingress, or inbound, rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-egress)
+       */
+      override fun egress(): Any = unwrap(this).getEgress()
+
+      /**
+       * ICMP protocol: The ICMP type and code.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-icmptypecode)
+       */
+      override fun icmpTypeCode(): Any? = unwrap(this).getIcmpTypeCode()
+
+      /**
+       * The IPv6 network range to allow or deny, in CIDR notation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-ipv6cidrblock)
+       */
+      override fun ipv6CidrBlock(): String? = unwrap(this).getIpv6CidrBlock()
+
+      /**
+       * TCP or UDP protocols: The range of ports the rule applies to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-portrange)
+       */
+      override fun portRange(): Any? = unwrap(this).getPortRange()
+
+      /**
+       * The protocol number.
+       *
+       * A value of "-1" means all protocols.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-protocol)
+       */
+      override fun protocol(): String = unwrap(this).getProtocol()
+
+      /**
+       * Indicates whether to allow or deny the traffic that matches the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentry.html#cfn-fms-policy-networkaclentry-ruleaction)
+       */
+      override fun ruleAction(): String = unwrap(this).getRuleAction()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkAclEntryProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntryProperty):
+          NetworkAclEntryProperty = CdkObjectWrappers.wrap(cdkObject) as? NetworkAclEntryProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkAclEntryProperty):
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntryProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntryProperty
+    }
+  }
+
+  /**
+   * The configuration of the first and last rules for the network ACL policy, and the remediation
+   * settings for each.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fms.*;
+   * NetworkAclEntrySetProperty networkAclEntrySetProperty = NetworkAclEntrySetProperty.builder()
+   * .forceRemediateForFirstEntries(false)
+   * .forceRemediateForLastEntries(false)
+   * // the properties below are optional
+   * .firstEntries(List.of(NetworkAclEntryProperty.builder()
+   * .egress(false)
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * // the properties below are optional
+   * .cidrBlock("cidrBlock")
+   * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build())
+   * .ipv6CidrBlock("ipv6CidrBlock")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .build()))
+   * .lastEntries(List.of(NetworkAclEntryProperty.builder()
+   * .egress(false)
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * // the properties below are optional
+   * .cidrBlock("cidrBlock")
+   * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build())
+   * .ipv6CidrBlock("ipv6CidrBlock")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentryset.html)
+   */
+  public interface NetworkAclEntrySetProperty {
+    /**
+     * The rules that you want to run first in the Firewall Manager managed network ACLs.
+     *
+     *
+     * Provide these in the order in which you want them to run. Firewall Manager will assign the
+     * specific rule numbers for you, in the network ACLs that it creates.
+     *
+     *
+     * You must specify at least one first entry or one last entry in any network ACL policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentryset.html#cfn-fms-policy-networkaclentryset-firstentries)
+     */
+    public fun firstEntries(): Any? = unwrap(this).getFirstEntries()
+
+    /**
+     * Applies only when remediation is enabled for the policy as a whole.
+     *
+     * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+     * between the custom entries and the policy entries.
+     *
+     * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and
+     * does not try to remediate. For more information about the remediation behavior, see [Remediation
+     * for managed network
+     * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+     * in the *AWS Firewall Manager Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentryset.html#cfn-fms-policy-networkaclentryset-forceremediateforfirstentries)
+     */
+    public fun forceRemediateForFirstEntries(): Any
+
+    /**
+     * Applies only when remediation is enabled for the policy as a whole.
+     *
+     * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+     * between the custom entries and the policy entries.
+     *
+     * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant and
+     * does not try to remediate. For more information about the remediation behavior, see [Remediation
+     * for managed network
+     * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+     * in the *AWS Firewall Manager Developer Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentryset.html#cfn-fms-policy-networkaclentryset-forceremediateforlastentries)
+     */
+    public fun forceRemediateForLastEntries(): Any
+
+    /**
+     * The rules that you want to run last in the Firewall Manager managed network ACLs.
+     *
+     *
+     * Provide these in the order in which you want them to run. Firewall Manager will assign the
+     * specific rule numbers for you, in the network ACLs that it creates.
+     *
+     *
+     * You must specify at least one first entry or one last entry in any network ACL policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentryset.html#cfn-fms-policy-networkaclentryset-lastentries)
+     */
+    public fun lastEntries(): Any? = unwrap(this).getLastEntries()
+
+    /**
+     * A builder for [NetworkAclEntrySetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param firstEntries The rules that you want to run first in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      public fun firstEntries(firstEntries: IResolvable)
+
+      /**
+       * @param firstEntries The rules that you want to run first in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      public fun firstEntries(firstEntries: List<Any>)
+
+      /**
+       * @param firstEntries The rules that you want to run first in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      public fun firstEntries(vararg firstEntries: Any)
+
+      /**
+       * @param forceRemediateForFirstEntries Applies only when remediation is enabled for the
+       * policy as a whole. 
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       */
+      public fun forceRemediateForFirstEntries(forceRemediateForFirstEntries: Boolean)
+
+      /**
+       * @param forceRemediateForFirstEntries Applies only when remediation is enabled for the
+       * policy as a whole. 
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       */
+      public fun forceRemediateForFirstEntries(forceRemediateForFirstEntries: IResolvable)
+
+      /**
+       * @param forceRemediateForLastEntries Applies only when remediation is enabled for the policy
+       * as a whole. 
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       */
+      public fun forceRemediateForLastEntries(forceRemediateForLastEntries: Boolean)
+
+      /**
+       * @param forceRemediateForLastEntries Applies only when remediation is enabled for the policy
+       * as a whole. 
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       */
+      public fun forceRemediateForLastEntries(forceRemediateForLastEntries: IResolvable)
+
+      /**
+       * @param lastEntries The rules that you want to run last in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      public fun lastEntries(lastEntries: IResolvable)
+
+      /**
+       * @param lastEntries The rules that you want to run last in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      public fun lastEntries(lastEntries: List<Any>)
+
+      /**
+       * @param lastEntries The rules that you want to run last in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      public fun lastEntries(vararg lastEntries: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntrySetProperty.Builder =
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntrySetProperty.builder()
+
+      /**
+       * @param firstEntries The rules that you want to run first in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      override fun firstEntries(firstEntries: IResolvable) {
+        cdkBuilder.firstEntries(firstEntries.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param firstEntries The rules that you want to run first in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      override fun firstEntries(firstEntries: List<Any>) {
+        cdkBuilder.firstEntries(firstEntries.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param firstEntries The rules that you want to run first in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      override fun firstEntries(vararg firstEntries: Any): Unit =
+          firstEntries(firstEntries.toList())
+
+      /**
+       * @param forceRemediateForFirstEntries Applies only when remediation is enabled for the
+       * policy as a whole. 
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       */
+      override fun forceRemediateForFirstEntries(forceRemediateForFirstEntries: Boolean) {
+        cdkBuilder.forceRemediateForFirstEntries(forceRemediateForFirstEntries)
+      }
+
+      /**
+       * @param forceRemediateForFirstEntries Applies only when remediation is enabled for the
+       * policy as a whole. 
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       */
+      override fun forceRemediateForFirstEntries(forceRemediateForFirstEntries: IResolvable) {
+        cdkBuilder.forceRemediateForFirstEntries(forceRemediateForFirstEntries.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param forceRemediateForLastEntries Applies only when remediation is enabled for the policy
+       * as a whole. 
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       */
+      override fun forceRemediateForLastEntries(forceRemediateForLastEntries: Boolean) {
+        cdkBuilder.forceRemediateForLastEntries(forceRemediateForLastEntries)
+      }
+
+      /**
+       * @param forceRemediateForLastEntries Applies only when remediation is enabled for the policy
+       * as a whole. 
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       */
+      override fun forceRemediateForLastEntries(forceRemediateForLastEntries: IResolvable) {
+        cdkBuilder.forceRemediateForLastEntries(forceRemediateForLastEntries.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param lastEntries The rules that you want to run last in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      override fun lastEntries(lastEntries: IResolvable) {
+        cdkBuilder.lastEntries(lastEntries.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param lastEntries The rules that you want to run last in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      override fun lastEntries(lastEntries: List<Any>) {
+        cdkBuilder.lastEntries(lastEntries.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param lastEntries The rules that you want to run last in the Firewall Manager managed
+       * network ACLs.
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       */
+      override fun lastEntries(vararg lastEntries: Any): Unit = lastEntries(lastEntries.toList())
+
+      public fun build(): software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntrySetProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntrySetProperty,
+    ) : CdkObject(cdkObject),
+        NetworkAclEntrySetProperty {
+      /**
+       * The rules that you want to run first in the Firewall Manager managed network ACLs.
+       *
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentryset.html#cfn-fms-policy-networkaclentryset-firstentries)
+       */
+      override fun firstEntries(): Any? = unwrap(this).getFirstEntries()
+
+      /**
+       * Applies only when remediation is enabled for the policy as a whole.
+       *
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentryset.html#cfn-fms-policy-networkaclentryset-forceremediateforfirstentries)
+       */
+      override fun forceRemediateForFirstEntries(): Any =
+          unwrap(this).getForceRemediateForFirstEntries()
+
+      /**
+       * Applies only when remediation is enabled for the policy as a whole.
+       *
+       * Firewall Manager uses this setting when it finds policy violations that involve conflicts
+       * between the custom entries and the policy entries.
+       *
+       * If forced remediation is disabled, Firewall Manager marks the network ACL as noncompliant
+       * and does not try to remediate. For more information about the remediation behavior, see
+       * [Remediation for managed network
+       * ACLs](https://docs.aws.amazon.com/waf/latest/developerguide/network-acl-policies.html#network-acls-remediation)
+       * in the *AWS Firewall Manager Developer Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentryset.html#cfn-fms-policy-networkaclentryset-forceremediateforlastentries)
+       */
+      override fun forceRemediateForLastEntries(): Any =
+          unwrap(this).getForceRemediateForLastEntries()
+
+      /**
+       * The rules that you want to run last in the Firewall Manager managed network ACLs.
+       *
+       *
+       * Provide these in the order in which you want them to run. Firewall Manager will assign the
+       * specific rule numbers for you, in the network ACLs that it creates.
+       *
+       *
+       * You must specify at least one first entry or one last entry in any network ACL policy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-networkaclentryset.html#cfn-fms-policy-networkaclentryset-lastentries)
+       */
+      override fun lastEntries(): Any? = unwrap(this).getLastEntries()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NetworkAclEntrySetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntrySetProperty):
+          NetworkAclEntrySetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          NetworkAclEntrySetProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NetworkAclEntrySetProperty):
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntrySetProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fms.CfnPolicy.NetworkAclEntrySetProperty
     }
   }
 
@@ -2823,7 +3900,45 @@ public open class CfnPolicy(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.fms.*;
    * PolicyOptionProperty policyOptionProperty = PolicyOptionProperty.builder()
-   * .networkAclCommonPolicy(NetworkAclCommonPolicyProperty.builder().build())
+   * .networkAclCommonPolicy(NetworkAclCommonPolicyProperty.builder()
+   * .networkAclEntrySet(NetworkAclEntrySetProperty.builder()
+   * .forceRemediateForFirstEntries(false)
+   * .forceRemediateForLastEntries(false)
+   * // the properties below are optional
+   * .firstEntries(List.of(NetworkAclEntryProperty.builder()
+   * .egress(false)
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * // the properties below are optional
+   * .cidrBlock("cidrBlock")
+   * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build())
+   * .ipv6CidrBlock("ipv6CidrBlock")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .build()))
+   * .lastEntries(List.of(NetworkAclEntryProperty.builder()
+   * .egress(false)
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * // the properties below are optional
+   * .cidrBlock("cidrBlock")
+   * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build())
+   * .ipv6CidrBlock("ipv6CidrBlock")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .build()))
+   * .build())
+   * .build())
    * .networkFirewallPolicy(NetworkFirewallPolicyProperty.builder()
    * .firewallDeploymentModel("firewallDeploymentModel")
    * .build())
@@ -3178,6 +4293,112 @@ public open class CfnPolicy(
   }
 
   /**
+   * TCP or UDP protocols: The range of ports the rule applies to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fms.*;
+   * PortRangeProperty portRangeProperty = PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-portrange.html)
+   */
+  public interface PortRangeProperty {
+    /**
+     * The beginning port number of the range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-portrange.html#cfn-fms-policy-portrange-from)
+     */
+    public fun from(): Number
+
+    /**
+     * The ending port number of the range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-portrange.html#cfn-fms-policy-portrange-to)
+     */
+    public fun to(): Number
+
+    /**
+     * A builder for [PortRangeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param from The beginning port number of the range. 
+       */
+      public fun from(from: Number)
+
+      /**
+       * @param to The ending port number of the range. 
+       */
+      public fun to(to: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fms.CfnPolicy.PortRangeProperty.Builder =
+          software.amazon.awscdk.services.fms.CfnPolicy.PortRangeProperty.builder()
+
+      /**
+       * @param from The beginning port number of the range. 
+       */
+      override fun from(from: Number) {
+        cdkBuilder.from(from)
+      }
+
+      /**
+       * @param to The ending port number of the range. 
+       */
+      override fun to(to: Number) {
+        cdkBuilder.to(to)
+      }
+
+      public fun build(): software.amazon.awscdk.services.fms.CfnPolicy.PortRangeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PortRangeProperty,
+    ) : CdkObject(cdkObject),
+        PortRangeProperty {
+      /**
+       * The beginning port number of the range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-portrange.html#cfn-fms-policy-portrange-from)
+       */
+      override fun from(): Number = unwrap(this).getFrom()
+
+      /**
+       * The ending port number of the range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fms-policy-portrange.html#cfn-fms-policy-portrange-to)
+       */
+      override fun to(): Number = unwrap(this).getTo()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PortRangeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal fun wrap(cdkObject: software.amazon.awscdk.services.fms.CfnPolicy.PortRangeProperty):
+          PortRangeProperty = CdkObjectWrappers.wrap(cdkObject) as? PortRangeProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PortRangeProperty):
+          software.amazon.awscdk.services.fms.CfnPolicy.PortRangeProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.fms.CfnPolicy.PortRangeProperty
+    }
+  }
+
+  /**
    * The resource tags that AWS Firewall Manager uses to determine if a particular resource should
    * be included or excluded from the AWS Firewall Manager policy.
    *
@@ -3307,7 +4528,45 @@ public open class CfnPolicy(
    * // the properties below are optional
    * .managedServiceData("managedServiceData")
    * .policyOption(PolicyOptionProperty.builder()
-   * .networkAclCommonPolicy(NetworkAclCommonPolicyProperty.builder().build())
+   * .networkAclCommonPolicy(NetworkAclCommonPolicyProperty.builder()
+   * .networkAclEntrySet(NetworkAclEntrySetProperty.builder()
+   * .forceRemediateForFirstEntries(false)
+   * .forceRemediateForLastEntries(false)
+   * // the properties below are optional
+   * .firstEntries(List.of(NetworkAclEntryProperty.builder()
+   * .egress(false)
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * // the properties below are optional
+   * .cidrBlock("cidrBlock")
+   * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build())
+   * .ipv6CidrBlock("ipv6CidrBlock")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .build()))
+   * .lastEntries(List.of(NetworkAclEntryProperty.builder()
+   * .egress(false)
+   * .protocol("protocol")
+   * .ruleAction("ruleAction")
+   * // the properties below are optional
+   * .cidrBlock("cidrBlock")
+   * .icmpTypeCode(IcmpTypeCodeProperty.builder()
+   * .code(123)
+   * .type(123)
+   * .build())
+   * .ipv6CidrBlock("ipv6CidrBlock")
+   * .portRange(PortRangeProperty.builder()
+   * .from(123)
+   * .to(123)
+   * .build())
+   * .build()))
+   * .build())
+   * .build())
    * .networkFirewallPolicy(NetworkFirewallPolicyProperty.builder()
    * .firewallDeploymentModel("firewallDeploymentModel")
    * .build())

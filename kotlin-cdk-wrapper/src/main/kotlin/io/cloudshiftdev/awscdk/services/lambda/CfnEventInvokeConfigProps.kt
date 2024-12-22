@@ -47,8 +47,14 @@ public interface CfnEventInvokeConfigProps {
    * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
    *
    * * *Queue* - The ARN of a standard SQS queue.
+   * * *Bucket* - The ARN of an Amazon S3 bucket.
    * * *Topic* - The ARN of a standard SNS topic.
    * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+   *
+   *
+   * S3 buckets are supported only for on-failure destinations. To retain records of successful
+   * invocations, use another destination type.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig)
    */
@@ -103,8 +109,13 @@ public interface CfnEventInvokeConfigProps {
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
      */
     public fun destinationConfig(destinationConfig: IResolvable)
 
@@ -114,8 +125,13 @@ public interface CfnEventInvokeConfigProps {
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
      */
     public fun destinationConfig(destinationConfig: CfnEventInvokeConfig.DestinationConfigProperty)
 
@@ -125,8 +141,13 @@ public interface CfnEventInvokeConfigProps {
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("64b99df99a06cbb8645d797fcd6c72bf465a89145ba509290b04eb1839175f1a")
@@ -174,8 +195,13 @@ public interface CfnEventInvokeConfigProps {
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
      */
     override fun destinationConfig(destinationConfig: IResolvable) {
       cdkBuilder.destinationConfig(destinationConfig.let(IResolvable.Companion::unwrap))
@@ -187,8 +213,13 @@ public interface CfnEventInvokeConfigProps {
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
      */
     override
         fun destinationConfig(destinationConfig: CfnEventInvokeConfig.DestinationConfigProperty) {
@@ -201,8 +232,13 @@ public interface CfnEventInvokeConfigProps {
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("64b99df99a06cbb8645d797fcd6c72bf465a89145ba509290b04eb1839175f1a")
@@ -262,8 +298,14 @@ public interface CfnEventInvokeConfigProps {
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig)
      */

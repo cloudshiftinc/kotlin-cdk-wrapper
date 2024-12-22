@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import kotlin.Boolean
 import kotlin.String
@@ -28,9 +29,11 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.ec2.*;
  * import io.cloudshiftdev.awscdk.services.iam.*;
+ * import io.cloudshiftdev.awscdk.services.kms.*;
  * DockerImage dockerImage;
  * IGrantable grantable;
  * InitServiceRestartHandle initServiceRestartHandle;
+ * Key key;
  * ILocalBundling localBundling;
  * InitSourceAssetOptions initSourceAssetOptions = InitSourceAssetOptions.builder()
  * .assetHash("assetHash")
@@ -64,6 +67,7 @@ import kotlin.jvm.JvmName
  * .ignoreMode(IgnoreMode.GLOB)
  * .readers(List.of(grantable))
  * .serviceRestartHandles(List.of(initServiceRestartHandle))
+ * .sourceKMSKey(key)
  * .build();
  * ```
  */
@@ -178,6 +182,11 @@ public interface InitSourceAssetOptions : InitSourceOptions, AssetOptions {
      * extracted.
      */
     public fun serviceRestartHandles(vararg serviceRestartHandles: InitServiceRestartHandle)
+
+    /**
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code.
+     */
+    public fun sourceKmsKey(sourceKmsKey: IKey)
   }
 
   private class BuilderImpl : Builder {
@@ -310,6 +319,13 @@ public interface InitSourceAssetOptions : InitSourceOptions, AssetOptions {
     override fun serviceRestartHandles(vararg serviceRestartHandles: InitServiceRestartHandle): Unit
         = serviceRestartHandles(serviceRestartHandles.toList())
 
+    /**
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code.
+     */
+    override fun sourceKmsKey(sourceKmsKey: IKey) {
+      cdkBuilder.sourceKmsKey(sourceKmsKey.let(IKey.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.ec2.InitSourceAssetOptions =
         cdkBuilder.build()
   }
@@ -421,6 +437,14 @@ public interface InitSourceAssetOptions : InitSourceOptions, AssetOptions {
      */
     override fun serviceRestartHandles(): List<InitServiceRestartHandle> =
         unwrap(this).getServiceRestartHandles()?.map(InitServiceRestartHandle::wrap) ?: emptyList()
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     */
+    override fun sourceKMSKey(): IKey? = unwrap(this).getSourceKMSKey()?.let(IKey::wrap)
   }
 
   public companion object {

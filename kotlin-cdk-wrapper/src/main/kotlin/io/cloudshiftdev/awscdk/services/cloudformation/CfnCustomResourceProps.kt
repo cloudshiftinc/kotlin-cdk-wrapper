@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.cloudformation
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 
@@ -19,12 +20,23 @@ import kotlin.Unit
  * import io.cloudshiftdev.awscdk.services.cloudformation.*;
  * CfnCustomResourceProps cfnCustomResourceProps = CfnCustomResourceProps.builder()
  * .serviceToken("serviceToken")
+ * // the properties below are optional
+ * .serviceTimeout(123)
  * .build();
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html)
  */
 public interface CfnCustomResourceProps {
+  /**
+   * The maximum time, in seconds, that can elapse before a custom resource operation times out.
+   *
+   * The value must be an integer from 1 to 3600. The default value is 3600 seconds (1 hour).
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html#cfn-cloudformation-customresource-servicetimeout)
+   */
+  public fun serviceTimeout(): Number? = unwrap(this).getServiceTimeout()
+
   /**
    * The service token, such as an Amazon SNS topic ARN or Lambda function ARN.
    *
@@ -42,6 +54,13 @@ public interface CfnCustomResourceProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param serviceTimeout The maximum time, in seconds, that can elapse before a custom resource
+     * operation times out.
+     * The value must be an integer from 1 to 3600. The default value is 3600 seconds (1 hour).
+     */
+    public fun serviceTimeout(serviceTimeout: Number)
+
+    /**
      * @param serviceToken The service token, such as an Amazon SNS topic ARN or Lambda function
      * ARN. 
      * The service token must be from the same Region as the stack.
@@ -55,6 +74,15 @@ public interface CfnCustomResourceProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.cloudformation.CfnCustomResourceProps.Builder =
         software.amazon.awscdk.services.cloudformation.CfnCustomResourceProps.builder()
+
+    /**
+     * @param serviceTimeout The maximum time, in seconds, that can elapse before a custom resource
+     * operation times out.
+     * The value must be an integer from 1 to 3600. The default value is 3600 seconds (1 hour).
+     */
+    override fun serviceTimeout(serviceTimeout: Number) {
+      cdkBuilder.serviceTimeout(serviceTimeout)
+    }
 
     /**
      * @param serviceToken The service token, such as an Amazon SNS topic ARN or Lambda function
@@ -75,6 +103,15 @@ public interface CfnCustomResourceProps {
     cdkObject: software.amazon.awscdk.services.cloudformation.CfnCustomResourceProps,
   ) : CdkObject(cdkObject),
       CfnCustomResourceProps {
+    /**
+     * The maximum time, in seconds, that can elapse before a custom resource operation times out.
+     *
+     * The value must be an integer from 1 to 3600. The default value is 3600 seconds (1 hour).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-customresource.html#cfn-cloudformation-customresource-servicetimeout)
+     */
+    override fun serviceTimeout(): Number? = unwrap(this).getServiceTimeout()
+
     /**
      * The service token, such as an Amazon SNS topic ARN or Lambda function ARN.
      *

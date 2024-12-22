@@ -64,6 +64,14 @@ public interface AttributeMapping {
   public fun email(): ProviderAttribute? = unwrap(this).getEmail()?.let(ProviderAttribute::wrap)
 
   /**
+   * The user's e-mail address is verification.
+   *
+   * Default: - not mapped
+   */
+  public fun emailVerified(): ProviderAttribute? =
+      unwrap(this).getEmailVerified()?.let(ProviderAttribute::wrap)
+
+  /**
    * The surname or last name of user.
    *
    * Default: - not mapped
@@ -199,6 +207,11 @@ public interface AttributeMapping {
     public fun email(email: ProviderAttribute)
 
     /**
+     * @param emailVerified The user's e-mail address is verification.
+     */
+    public fun emailVerified(emailVerified: ProviderAttribute)
+
+    /**
      * @param familyName The surname or last name of user.
      */
     public fun familyName(familyName: ProviderAttribute)
@@ -300,6 +313,13 @@ public interface AttributeMapping {
      */
     override fun email(email: ProviderAttribute) {
       cdkBuilder.email(email.let(ProviderAttribute.Companion::unwrap))
+    }
+
+    /**
+     * @param emailVerified The user's e-mail address is verification.
+     */
+    override fun emailVerified(emailVerified: ProviderAttribute) {
+      cdkBuilder.emailVerified(emailVerified.let(ProviderAttribute.Companion::unwrap))
     }
 
     /**
@@ -439,6 +459,14 @@ public interface AttributeMapping {
      * Default: - not mapped
      */
     override fun email(): ProviderAttribute? = unwrap(this).getEmail()?.let(ProviderAttribute::wrap)
+
+    /**
+     * The user's e-mail address is verification.
+     *
+     * Default: - not mapped
+     */
+    override fun emailVerified(): ProviderAttribute? =
+        unwrap(this).getEmailVerified()?.let(ProviderAttribute::wrap)
 
     /**
      * The surname or last name of user.

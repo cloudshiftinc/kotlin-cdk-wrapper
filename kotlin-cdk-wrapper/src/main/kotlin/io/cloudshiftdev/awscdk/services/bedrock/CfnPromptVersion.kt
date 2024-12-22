@@ -78,7 +78,7 @@ public open class CfnPromptVersion(
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
   /**
-   * A KMS key ARN.
+   * The Amazon Resource Name (ARN) of the KMS key that the prompt version is encrypted with.
    */
   public open fun attrCustomerEncryptionKeyArn(): String =
       unwrap(this).getAttrCustomerEncryptionKeyArn()
@@ -158,12 +158,12 @@ public open class CfnPromptVersion(
   }
 
   /**
-   * A map of tag keys and values.
+   * A map of tags attached to the prompt version and their values.
    */
   public open fun tags(): Map<String, String> = unwrap(this).getTags() ?: emptyMap()
 
   /**
-   * A map of tag keys and values.
+   * A map of tags attached to the prompt version and their values.
    */
   public open fun tags(`value`: Map<String, String>) {
     unwrap(this).setTags(`value`)
@@ -191,10 +191,10 @@ public open class CfnPromptVersion(
     public fun promptArn(promptArn: String)
 
     /**
-     * A map of tag keys and values.
+     * A map of tags attached to the prompt version and their values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-promptversion.html#cfn-bedrock-promptversion-tags)
-     * @param tags A map of tag keys and values. 
+     * @param tags A map of tags attached to the prompt version and their values. 
      */
     public fun tags(tags: Map<String, String>)
   }
@@ -227,10 +227,10 @@ public open class CfnPromptVersion(
     }
 
     /**
-     * A map of tag keys and values.
+     * A map of tags attached to the prompt version and their values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-promptversion.html#cfn-bedrock-promptversion-tags)
-     * @param tags A map of tag keys and values. 
+     * @param tags A map of tags attached to the prompt version and their values. 
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
@@ -276,7 +276,6 @@ public open class CfnPromptVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build())
    * .build();
@@ -479,7 +478,6 @@ public open class CfnPromptVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build();
    * ```
@@ -510,14 +508,6 @@ public open class CfnPromptVersion(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptmodelinferenceconfiguration.html#cfn-bedrock-promptversion-promptmodelinferenceconfiguration-temperature)
      */
     public fun temperature(): Number? = unwrap(this).getTemperature()
-
-    /**
-     * The number of most-likely candidates that the model considers for the next token during
-     * generation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptmodelinferenceconfiguration.html#cfn-bedrock-promptversion-promptmodelinferenceconfiguration-topk)
-     */
-    public fun topK(): Number? = unwrap(this).getTopK()
 
     /**
      * The percentage of most-likely candidates that the model considers for the next token.
@@ -554,12 +544,6 @@ public open class CfnPromptVersion(
        * outputs.
        */
       public fun temperature(temperature: Number)
-
-      /**
-       * @param topK The number of most-likely candidates that the model considers for the next
-       * token during generation.
-       */
-      public fun topK(topK: Number)
 
       /**
        * @param topP The percentage of most-likely candidates that the model considers for the next
@@ -606,14 +590,6 @@ public open class CfnPromptVersion(
       }
 
       /**
-       * @param topK The number of most-likely candidates that the model considers for the next
-       * token during generation.
-       */
-      override fun topK(topK: Number) {
-        cdkBuilder.topK(topK)
-      }
-
-      /**
        * @param topP The percentage of most-likely candidates that the model considers for the next
        * token.
        */
@@ -655,14 +631,6 @@ public open class CfnPromptVersion(
       override fun temperature(): Number? = unwrap(this).getTemperature()
 
       /**
-       * The number of most-likely candidates that the model considers for the next token during
-       * generation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptmodelinferenceconfiguration.html#cfn-bedrock-promptversion-promptmodelinferenceconfiguration-topk)
-       */
-      override fun topK(): Number? = unwrap(this).getTopK()
-
-      /**
        * The percentage of most-likely candidates that the model considers for the next token.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptmodelinferenceconfiguration.html#cfn-bedrock-promptversion-promptmodelinferenceconfiguration-topp)
@@ -692,8 +660,8 @@ public open class CfnPromptVersion(
   /**
    * Contains the message for a prompt.
    *
-   * For more information, see [Prompt management in Amazon
-   * Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html) .
+   * For more information, see [Construct and store reusable prompts with Prompt management in
+   * Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html) .
    *
    * Example:
    *
@@ -821,18 +789,6 @@ public open class CfnPromptVersion(
    * import io.cloudshiftdev.awscdk.services.bedrock.*;
    * PromptVariantProperty promptVariantProperty = PromptVariantProperty.builder()
    * .name("name")
-   * .templateType("templateType")
-   * // the properties below are optional
-   * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
-   * .text(PromptModelInferenceConfigurationProperty.builder()
-   * .maxTokens(123)
-   * .stopSequences(List.of("stopSequences"))
-   * .temperature(123)
-   * .topK(123)
-   * .topP(123)
-   * .build())
-   * .build())
-   * .modelId("modelId")
    * .templateConfiguration(PromptTemplateConfigurationProperty.builder()
    * .text(TextPromptTemplateConfigurationProperty.builder()
    * .text("text")
@@ -842,6 +798,17 @@ public open class CfnPromptVersion(
    * .build()))
    * .build())
    * .build())
+   * .templateType("templateType")
+   * // the properties below are optional
+   * .inferenceConfiguration(PromptInferenceConfigurationProperty.builder()
+   * .text(PromptModelInferenceConfigurationProperty.builder()
+   * .maxTokens(123)
+   * .stopSequences(List.of("stopSequences"))
+   * .temperature(123)
+   * .topP(123)
+   * .build())
+   * .build())
+   * .modelId("modelId")
    * .build();
    * ```
    *
@@ -856,7 +823,9 @@ public open class CfnPromptVersion(
     public fun inferenceConfiguration(): Any? = unwrap(this).getInferenceConfiguration()
 
     /**
-     * The unique identifier of the model with which to run inference on the prompt.
+     * The unique identifier of the model or [inference
+     * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) with
+     * which to run inference on the prompt.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptvariant.html#cfn-bedrock-promptversion-promptvariant-modelid)
      */
@@ -874,7 +843,7 @@ public open class CfnPromptVersion(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptvariant.html#cfn-bedrock-promptversion-promptvariant-templateconfiguration)
      */
-    public fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
+    public fun templateConfiguration(): Any
 
     /**
      * The type of prompt template to use.
@@ -908,8 +877,9 @@ public open class CfnPromptVersion(
           fun inferenceConfiguration(inferenceConfiguration: PromptInferenceConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param modelId The unique identifier of the model with which to run inference on the
-       * prompt.
+       * @param modelId The unique identifier of the model or [inference
+       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html)
+       * with which to run inference on the prompt.
        */
       public fun modelId(modelId: String)
 
@@ -919,17 +889,17 @@ public open class CfnPromptVersion(
       public fun name(name: String)
 
       /**
-       * @param templateConfiguration Contains configurations for the prompt template.
+       * @param templateConfiguration Contains configurations for the prompt template. 
        */
       public fun templateConfiguration(templateConfiguration: IResolvable)
 
       /**
-       * @param templateConfiguration Contains configurations for the prompt template.
+       * @param templateConfiguration Contains configurations for the prompt template. 
        */
       public fun templateConfiguration(templateConfiguration: PromptTemplateConfigurationProperty)
 
       /**
-       * @param templateConfiguration Contains configurations for the prompt template.
+       * @param templateConfiguration Contains configurations for the prompt template. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fd43c246455bc988caccf0f0c2809d2caf1170f715eb08f94e6fea0e78046a9f")
@@ -973,8 +943,9 @@ public open class CfnPromptVersion(
           inferenceConfiguration(PromptInferenceConfigurationProperty(inferenceConfiguration))
 
       /**
-       * @param modelId The unique identifier of the model with which to run inference on the
-       * prompt.
+       * @param modelId The unique identifier of the model or [inference
+       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html)
+       * with which to run inference on the prompt.
        */
       override fun modelId(modelId: String) {
         cdkBuilder.modelId(modelId)
@@ -988,14 +959,14 @@ public open class CfnPromptVersion(
       }
 
       /**
-       * @param templateConfiguration Contains configurations for the prompt template.
+       * @param templateConfiguration Contains configurations for the prompt template. 
        */
       override fun templateConfiguration(templateConfiguration: IResolvable) {
         cdkBuilder.templateConfiguration(templateConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param templateConfiguration Contains configurations for the prompt template.
+       * @param templateConfiguration Contains configurations for the prompt template. 
        */
       override
           fun templateConfiguration(templateConfiguration: PromptTemplateConfigurationProperty) {
@@ -1003,7 +974,7 @@ public open class CfnPromptVersion(
       }
 
       /**
-       * @param templateConfiguration Contains configurations for the prompt template.
+       * @param templateConfiguration Contains configurations for the prompt template. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fd43c246455bc988caccf0f0c2809d2caf1170f715eb08f94e6fea0e78046a9f")
@@ -1035,7 +1006,9 @@ public open class CfnPromptVersion(
       override fun inferenceConfiguration(): Any? = unwrap(this).getInferenceConfiguration()
 
       /**
-       * The unique identifier of the model with which to run inference on the prompt.
+       * The unique identifier of the model or [inference
+       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html)
+       * with which to run inference on the prompt.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptvariant.html#cfn-bedrock-promptversion-promptvariant-modelid)
        */
@@ -1053,7 +1026,7 @@ public open class CfnPromptVersion(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-promptversion-promptvariant.html#cfn-bedrock-promptversion-promptvariant-templateconfiguration)
        */
-      override fun templateConfiguration(): Any? = unwrap(this).getTemplateConfiguration()
+      override fun templateConfiguration(): Any = unwrap(this).getTemplateConfiguration()
 
       /**
        * The type of prompt template to use.

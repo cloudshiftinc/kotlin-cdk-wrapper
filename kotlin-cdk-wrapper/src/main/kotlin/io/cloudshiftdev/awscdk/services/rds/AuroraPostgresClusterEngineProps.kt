@@ -15,47 +15,21 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // Build a data source for AppSync to access the database.
- * GraphqlApi api;
- * // Create username and password secret for DB Cluster
- * DatabaseSecret secret = DatabaseSecret.Builder.create(this, "AuroraSecret")
- * .username("clusteradmin")
- * .build();
- * // The VPC to place the cluster in
- * Vpc vpc = new Vpc(this, "AuroraVpc");
- * // Create the serverless cluster, provide all values needed to customise the database.
- * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "AuroraClusterV2")
- * .engine(DatabaseClusterEngine.auroraPostgres(AuroraPostgresClusterEngineProps.builder().version(AuroraPostgresEngineVersion.VER_15_5).build()))
- * .credentials(Map.of("username", "clusteradmin"))
- * .clusterIdentifier("db-endpoint-test")
- * .writer(ClusterInstance.serverlessV2("writer"))
- * .serverlessV2MinCapacity(2)
- * .serverlessV2MaxCapacity(10)
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraPostgres(AuroraPostgresClusterEngineProps.builder().version(AuroraPostgresEngineVersion.VER_15_2).build()))
+ * .credentials(Credentials.fromUsername("adminuser",
+ * CredentialsFromUsernameOptions.builder().password(SecretValue.unsafePlainText("7959866cacc02c2d243ecfe177464fe6")).build()))
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .publiclyAccessible(false)
+ * .build()))
+ * .readers(List.of(ClusterInstance.provisioned("reader")))
+ * .storageType(DBClusterStorageType.AURORA_IOPT1)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+ * .build())
  * .vpc(vpc)
- * .defaultDatabaseName("demos")
- * .enableDataApi(true)
  * .build();
- * RdsDataSource rdsDS = api.addRdsDataSourceV2("rds", cluster, secret, "demos");
- * // Set up a resolver for an RDS query.
- * rdsDS.createResolver("QueryGetDemosRdsResolver", BaseResolverProps.builder()
- * .typeName("Query")
- * .fieldName("getDemosRds")
- * .requestMappingTemplate(MappingTemplate.fromString("\n  {\n    \"version\": \"2018-05-29\",\n   
- * \"statements\": [\n      \"SELECT * FROM demos\"\n    ]\n  }\n  "))
- * .responseMappingTemplate(MappingTemplate.fromString("\n   
- * $utils.toJson($utils.rds.toJsonObject($ctx.result)[0])\n  "))
- * .build());
- * // Set up a resolver for an RDS mutation.
- * rdsDS.createResolver("MutationAddDemoRdsResolver", BaseResolverProps.builder()
- * .typeName("Mutation")
- * .fieldName("addDemoRds")
- * .requestMappingTemplate(MappingTemplate.fromString("\n  {\n    \"version\": \"2018-05-29\",\n   
- * \"statements\": [\n      \"INSERT INTO demos VALUES (:id, :version)\",\n      \"SELECT * WHERE id =
- * :id\"\n    ],\n    \"variableMap\": {\n      \":id\": $util.toJson($util.autoId()),\n     
- * \":version\": $util.toJson($ctx.args.version)\n    }\n  }\n  "))
- * .responseMappingTemplate(MappingTemplate.fromString("\n   
- * $utils.toJson($utils.rds.toJsonObject($ctx.result)[1][0])\n  "))
- * .build());
  * ```
  */
 public interface AuroraPostgresClusterEngineProps {

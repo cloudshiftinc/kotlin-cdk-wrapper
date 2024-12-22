@@ -12,6 +12,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -57,6 +58,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .maxConcurrentRuns(123)
  * .build())
  * .glueVersion("glueVersion")
+ * .jobMode("jobMode")
+ * .jobRunQueuingEnabled(false)
  * .logUri("logUri")
  * .maintenanceWindow("maintenanceWindow")
  * .maxCapacity(123)
@@ -112,11 +115,6 @@ public open class CfnJob(
   public open fun allocatedCapacity(`value`: Number) {
     unwrap(this).setAllocatedCapacity(`value`)
   }
-
-  /**
-   * The ID of this job run.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
    * The code that executes a job.
@@ -254,6 +252,41 @@ public open class CfnJob(
    */
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
+  }
+
+  /**
+   * A mode that describes how a job was created.
+   *
+   * Valid values are:.
+   */
+  public open fun jobMode(): String? = unwrap(this).getJobMode()
+
+  /**
+   * A mode that describes how a job was created.
+   *
+   * Valid values are:.
+   */
+  public open fun jobMode(`value`: String) {
+    unwrap(this).setJobMode(`value`)
+  }
+
+  /**
+   * Specifies whether job run queuing is enabled for the job runs for this job.
+   */
+  public open fun jobRunQueuingEnabled(): Any? = unwrap(this).getJobRunQueuingEnabled()
+
+  /**
+   * Specifies whether job run queuing is enabled for the job runs for this job.
+   */
+  public open fun jobRunQueuingEnabled(`value`: Boolean) {
+    unwrap(this).setJobRunQueuingEnabled(`value`)
+  }
+
+  /**
+   * Specifies whether job run queuing is enabled for the job runs for this job.
+   */
+  public open fun jobRunQueuingEnabled(`value`: IResolvable) {
+    unwrap(this).setJobRunQueuingEnabled(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
@@ -592,6 +625,50 @@ public open class CfnJob(
      * Glue supports. 
      */
     public fun glueVersion(glueVersion: String)
+
+    /**
+     * A mode that describes how a job was created. Valid values are:.
+     *
+     * * `SCRIPT` - The job was created using the AWS Glue Studio script editor.
+     * * `VISUAL` - The job was created using the AWS Glue Studio visual editor.
+     * * `NOTEBOOK` - The job was created using an interactive sessions notebook.
+     *
+     * When the `JobMode` field is missing or null, `SCRIPT` is assigned as the default value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobmode)
+     * @param jobMode A mode that describes how a job was created. Valid values are:. 
+     */
+    public fun jobMode(jobMode: String)
+
+    /**
+     * Specifies whether job run queuing is enabled for the job runs for this job.
+     *
+     * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+     * the job runs will not be considered for queueing.
+     *
+     * If this field does not match the value set in the job run, then the value from the job run
+     * field will be used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobrunqueuingenabled)
+     * @param jobRunQueuingEnabled Specifies whether job run queuing is enabled for the job runs for
+     * this job. 
+     */
+    public fun jobRunQueuingEnabled(jobRunQueuingEnabled: Boolean)
+
+    /**
+     * Specifies whether job run queuing is enabled for the job runs for this job.
+     *
+     * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+     * the job runs will not be considered for queueing.
+     *
+     * If this field does not match the value set in the job run, then the value from the job run
+     * field will be used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobrunqueuingenabled)
+     * @param jobRunQueuingEnabled Specifies whether job run queuing is enabled for the job runs for
+     * this job. 
+     */
+    public fun jobRunQueuingEnabled(jobRunQueuingEnabled: IResolvable)
 
     /**
      * This field is reserved for future use.
@@ -964,6 +1041,56 @@ public open class CfnJob(
      */
     override fun glueVersion(glueVersion: String) {
       cdkBuilder.glueVersion(glueVersion)
+    }
+
+    /**
+     * A mode that describes how a job was created. Valid values are:.
+     *
+     * * `SCRIPT` - The job was created using the AWS Glue Studio script editor.
+     * * `VISUAL` - The job was created using the AWS Glue Studio visual editor.
+     * * `NOTEBOOK` - The job was created using an interactive sessions notebook.
+     *
+     * When the `JobMode` field is missing or null, `SCRIPT` is assigned as the default value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobmode)
+     * @param jobMode A mode that describes how a job was created. Valid values are:. 
+     */
+    override fun jobMode(jobMode: String) {
+      cdkBuilder.jobMode(jobMode)
+    }
+
+    /**
+     * Specifies whether job run queuing is enabled for the job runs for this job.
+     *
+     * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+     * the job runs will not be considered for queueing.
+     *
+     * If this field does not match the value set in the job run, then the value from the job run
+     * field will be used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobrunqueuingenabled)
+     * @param jobRunQueuingEnabled Specifies whether job run queuing is enabled for the job runs for
+     * this job. 
+     */
+    override fun jobRunQueuingEnabled(jobRunQueuingEnabled: Boolean) {
+      cdkBuilder.jobRunQueuingEnabled(jobRunQueuingEnabled)
+    }
+
+    /**
+     * Specifies whether job run queuing is enabled for the job runs for this job.
+     *
+     * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+     * the job runs will not be considered for queueing.
+     *
+     * If this field does not match the value set in the job run, then the value from the job run
+     * field will be used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobrunqueuingenabled)
+     * @param jobRunQueuingEnabled Specifies whether job run queuing is enabled for the job runs for
+     * this job. 
+     */
+    override fun jobRunQueuingEnabled(jobRunQueuingEnabled: IResolvable) {
+      cdkBuilder.jobRunQueuingEnabled(jobRunQueuingEnabled.let(IResolvable.Companion::unwrap))
     }
 
     /**

@@ -43,6 +43,7 @@ import kotlin.collections.List
  * .build()))
  * .build()))
  * .tenancy("tenancy")
+ * .unusedReservationBillingOwnerId("unusedReservationBillingOwnerId")
  * .build();
  * ```
  *
@@ -81,6 +82,9 @@ public interface CfnCapacityReservationProps {
    * the specified time. For example, if you specify 5/31/2019, 13:30:55, the Capacity Reservation is
    * guaranteed to end between 13:30:55 and 14:30:55 on 5/31/2019.
    *
+   * If you are requesting a future-dated Capacity Reservation, you can't specify an end date and
+   * time that is within the commitment duration.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-enddate)
    */
   public fun endDate(): String? = unwrap(this).getEndDate()
@@ -109,6 +113,12 @@ public interface CfnCapacityReservationProps {
   /**
    * The number of instances for which to reserve capacity.
    *
+   *
+   * You can request future-dated Capacity Reservations for an instance count with a minimum of 100
+   * VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge` instances,
+   * you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+   *
+   *
    * Valid range: 1 - 1000
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-instancecount)
@@ -127,6 +137,10 @@ public interface CfnCapacityReservationProps {
    * (instance type, platform, and Availability Zone), and explicitly target the Capacity Reservation.
    * This ensures that only permitted instances can use the reserved capacity.
    *
+   *
+   * If you are requesting a future-dated Capacity Reservation, you must specify `targeted` .
+   *
+   *
    * Default: `open`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-instancematchcriteria)
@@ -143,6 +157,11 @@ public interface CfnCapacityReservationProps {
   /**
    * The instance type for which to reserve capacity.
    *
+   *
+   * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and T
+   * instance families only.
+   *
+   *
    * For more information, see [Instance
    * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon EC2
    * User Guide* .
@@ -152,6 +171,8 @@ public interface CfnCapacityReservationProps {
   public fun instanceType(): String
 
   /**
+   * Not supported for future-dated Capacity Reservations.
+   *
    * The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-outpostarn)
@@ -159,10 +180,10 @@ public interface CfnCapacityReservationProps {
   public fun outPostArn(): String? = unwrap(this).getOutPostArn()
 
   /**
-   * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity
-   * Reservation.
+   * Not supported for future-dated Capacity Reservations.
    *
-   * For more information, see [Capacity Reservations for cluster placement
+   * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity
+   * Reservation. For more information, see [Capacity Reservations for cluster placement
    * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html) in the *Amazon EC2 User
    * Guide* .
    *
@@ -189,6 +210,25 @@ public interface CfnCapacityReservationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tenancy)
    */
   public fun tenancy(): String? = unwrap(this).getTenancy()
+
+  /**
+   * The ID of the AWS account to which to assign billing of the unused capacity of the Capacity
+   * Reservation.
+   *
+   * A request will be sent to the specified account. That account must accept the request for the
+   * billing to be assigned to their account. For more information, see [Billing assignment for shared
+   * Amazon EC2 Capacity
+   * Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/assign-billing.html) .
+   *
+   * You can assign billing only for shared Capacity Reservations. To share a Capacity Reservation,
+   * you must add it to a resource share. For more information, see
+   * [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-unusedreservationbillingownerid)
+   */
+  public fun unusedReservationBillingOwnerId(): String? =
+      unwrap(this).getUnusedReservationBillingOwnerId()
 
   /**
    * A builder for [CfnCapacityReservationProps]
@@ -230,6 +270,9 @@ public interface CfnCapacityReservationProps {
      * If the `EndDateType` is `limited` , the Capacity Reservation is cancelled within an hour from
      * the specified time. For example, if you specify 5/31/2019, 13:30:55, the Capacity Reservation is
      * guaranteed to end between 13:30:55 and 14:30:55 on 5/31/2019.
+     *
+     * If you are requesting a future-dated Capacity Reservation, you can't specify an end date and
+     * time that is within the commitment duration.
      */
     public fun endDate(endDate: String)
 
@@ -256,6 +299,12 @@ public interface CfnCapacityReservationProps {
 
     /**
      * @param instanceCount The number of instances for which to reserve capacity. 
+     *
+     * You can request future-dated Capacity Reservations for an instance count with a minimum of
+     * 100 VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
+     * instances, you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+     *
+     *
      * Valid range: 1 - 1000
      */
     public fun instanceCount(instanceCount: Number)
@@ -271,6 +320,10 @@ public interface CfnCapacityReservationProps {
      * (instance type, platform, and Availability Zone), and explicitly target the Capacity
      * Reservation. This ensures that only permitted instances can use the reserved capacity.
      *
+     *
+     * If you are requesting a future-dated Capacity Reservation, you must specify `targeted` .
+     *
+     *
      * Default: `open`
      */
     public fun instanceMatchCriteria(instanceMatchCriteria: String)
@@ -282,6 +335,11 @@ public interface CfnCapacityReservationProps {
 
     /**
      * @param instanceType The instance type for which to reserve capacity. 
+     *
+     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and
+     * T instance families only.
+     *
+     *
      * For more information, see [Instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
      * EC2 User Guide* .
@@ -289,15 +347,15 @@ public interface CfnCapacityReservationProps {
     public fun instanceType(instanceType: String)
 
     /**
-     * @param outPostArn The Amazon Resource Name (ARN) of the Outpost on which to create the
-     * Capacity Reservation.
+     * @param outPostArn Not supported for future-dated Capacity Reservations.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
      */
     public fun outPostArn(outPostArn: String)
 
     /**
-     * @param placementGroupArn The Amazon Resource Name (ARN) of the cluster placement group in
-     * which to create the Capacity Reservation.
-     * For more information, see [Capacity Reservations for cluster placement
+     * @param placementGroupArn Not supported for future-dated Capacity Reservations.
+     * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity
+     * Reservation. For more information, see [Capacity Reservations for cluster placement
      * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html) in the *Amazon EC2 User
      * Guide* .
      */
@@ -327,6 +385,21 @@ public interface CfnCapacityReservationProps {
      * dedicated to a single AWS account .
      */
     public fun tenancy(tenancy: String)
+
+    /**
+     * @param unusedReservationBillingOwnerId The ID of the AWS account to which to assign billing
+     * of the unused capacity of the Capacity Reservation.
+     * A request will be sent to the specified account. That account must accept the request for the
+     * billing to be assigned to their account. For more information, see [Billing assignment for
+     * shared Amazon EC2 Capacity
+     * Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/assign-billing.html) .
+     *
+     * You can assign billing only for shared Capacity Reservations. To share a Capacity
+     * Reservation, you must add it to a resource share. For more information, see
+     * [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
+     * .
+     */
+    public fun unusedReservationBillingOwnerId(unusedReservationBillingOwnerId: String)
   }
 
   private class BuilderImpl : Builder {
@@ -374,6 +447,9 @@ public interface CfnCapacityReservationProps {
      * If the `EndDateType` is `limited` , the Capacity Reservation is cancelled within an hour from
      * the specified time. For example, if you specify 5/31/2019, 13:30:55, the Capacity Reservation is
      * guaranteed to end between 13:30:55 and 14:30:55 on 5/31/2019.
+     *
+     * If you are requesting a future-dated Capacity Reservation, you can't specify an end date and
+     * time that is within the commitment duration.
      */
     override fun endDate(endDate: String) {
       cdkBuilder.endDate(endDate)
@@ -408,6 +484,12 @@ public interface CfnCapacityReservationProps {
 
     /**
      * @param instanceCount The number of instances for which to reserve capacity. 
+     *
+     * You can request future-dated Capacity Reservations for an instance count with a minimum of
+     * 100 VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
+     * instances, you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+     *
+     *
      * Valid range: 1 - 1000
      */
     override fun instanceCount(instanceCount: Number) {
@@ -425,6 +507,10 @@ public interface CfnCapacityReservationProps {
      * (instance type, platform, and Availability Zone), and explicitly target the Capacity
      * Reservation. This ensures that only permitted instances can use the reserved capacity.
      *
+     *
+     * If you are requesting a future-dated Capacity Reservation, you must specify `targeted` .
+     *
+     *
      * Default: `open`
      */
     override fun instanceMatchCriteria(instanceMatchCriteria: String) {
@@ -440,6 +526,11 @@ public interface CfnCapacityReservationProps {
 
     /**
      * @param instanceType The instance type for which to reserve capacity. 
+     *
+     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and
+     * T instance families only.
+     *
+     *
      * For more information, see [Instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
      * EC2 User Guide* .
@@ -449,17 +540,17 @@ public interface CfnCapacityReservationProps {
     }
 
     /**
-     * @param outPostArn The Amazon Resource Name (ARN) of the Outpost on which to create the
-     * Capacity Reservation.
+     * @param outPostArn Not supported for future-dated Capacity Reservations.
+     * The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
      */
     override fun outPostArn(outPostArn: String) {
       cdkBuilder.outPostArn(outPostArn)
     }
 
     /**
-     * @param placementGroupArn The Amazon Resource Name (ARN) of the cluster placement group in
-     * which to create the Capacity Reservation.
-     * For more information, see [Capacity Reservations for cluster placement
+     * @param placementGroupArn Not supported for future-dated Capacity Reservations.
+     * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity
+     * Reservation. For more information, see [Capacity Reservations for cluster placement
      * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html) in the *Amazon EC2 User
      * Guide* .
      */
@@ -497,6 +588,23 @@ public interface CfnCapacityReservationProps {
      */
     override fun tenancy(tenancy: String) {
       cdkBuilder.tenancy(tenancy)
+    }
+
+    /**
+     * @param unusedReservationBillingOwnerId The ID of the AWS account to which to assign billing
+     * of the unused capacity of the Capacity Reservation.
+     * A request will be sent to the specified account. That account must accept the request for the
+     * billing to be assigned to their account. For more information, see [Billing assignment for
+     * shared Amazon EC2 Capacity
+     * Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/assign-billing.html) .
+     *
+     * You can assign billing only for shared Capacity Reservations. To share a Capacity
+     * Reservation, you must add it to a resource share. For more information, see
+     * [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
+     * .
+     */
+    override fun unusedReservationBillingOwnerId(unusedReservationBillingOwnerId: String) {
+      cdkBuilder.unusedReservationBillingOwnerId(unusedReservationBillingOwnerId)
     }
 
     public fun build(): software.amazon.awscdk.services.ec2.CfnCapacityReservationProps =
@@ -539,6 +647,9 @@ public interface CfnCapacityReservationProps {
      * the specified time. For example, if you specify 5/31/2019, 13:30:55, the Capacity Reservation is
      * guaranteed to end between 13:30:55 and 14:30:55 on 5/31/2019.
      *
+     * If you are requesting a future-dated Capacity Reservation, you can't specify an end date and
+     * time that is within the commitment duration.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-enddate)
      */
     override fun endDate(): String? = unwrap(this).getEndDate()
@@ -567,6 +678,12 @@ public interface CfnCapacityReservationProps {
     /**
      * The number of instances for which to reserve capacity.
      *
+     *
+     * You can request future-dated Capacity Reservations for an instance count with a minimum of
+     * 100 VPUs. For example, if you request a future-dated Capacity Reservation for `m5.xlarge`
+     * instances, you must request at least 25 instances ( *25 * m5.xlarge = 100 vCPUs* ).
+     *
+     *
      * Valid range: 1 - 1000
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-instancecount)
@@ -585,6 +702,10 @@ public interface CfnCapacityReservationProps {
      * (instance type, platform, and Availability Zone), and explicitly target the Capacity
      * Reservation. This ensures that only permitted instances can use the reserved capacity.
      *
+     *
+     * If you are requesting a future-dated Capacity Reservation, you must specify `targeted` .
+     *
+     *
      * Default: `open`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-instancematchcriteria)
@@ -601,6 +722,11 @@ public interface CfnCapacityReservationProps {
     /**
      * The instance type for which to reserve capacity.
      *
+     *
+     * You can request future-dated Capacity Reservations for instance types in the C, M, R, I, and
+     * T instance families only.
+     *
+     *
      * For more information, see [Instance
      * types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html) in the *Amazon
      * EC2 User Guide* .
@@ -610,6 +736,8 @@ public interface CfnCapacityReservationProps {
     override fun instanceType(): String = unwrap(this).getInstanceType()
 
     /**
+     * Not supported for future-dated Capacity Reservations.
+     *
      * The Amazon Resource Name (ARN) of the Outpost on which to create the Capacity Reservation.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-outpostarn)
@@ -617,10 +745,10 @@ public interface CfnCapacityReservationProps {
     override fun outPostArn(): String? = unwrap(this).getOutPostArn()
 
     /**
-     * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity
-     * Reservation.
+     * Not supported for future-dated Capacity Reservations.
      *
-     * For more information, see [Capacity Reservations for cluster placement
+     * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity
+     * Reservation. For more information, see [Capacity Reservations for cluster placement
      * groups](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html) in the *Amazon EC2 User
      * Guide* .
      *
@@ -647,6 +775,25 @@ public interface CfnCapacityReservationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-tenancy)
      */
     override fun tenancy(): String? = unwrap(this).getTenancy()
+
+    /**
+     * The ID of the AWS account to which to assign billing of the unused capacity of the Capacity
+     * Reservation.
+     *
+     * A request will be sent to the specified account. That account must accept the request for the
+     * billing to be assigned to their account. For more information, see [Billing assignment for
+     * shared Amazon EC2 Capacity
+     * Reservations](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/assign-billing.html) .
+     *
+     * You can assign billing only for shared Capacity Reservations. To share a Capacity
+     * Reservation, you must add it to a resource share. For more information, see
+     * [AWS::RAM::ResourceShare](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ram-resourceshare.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-capacityreservation.html#cfn-ec2-capacityreservation-unusedreservationbillingownerid)
+     */
+    override fun unusedReservationBillingOwnerId(): String? =
+        unwrap(this).getUnusedReservationBillingOwnerId()
   }
 
   public companion object {

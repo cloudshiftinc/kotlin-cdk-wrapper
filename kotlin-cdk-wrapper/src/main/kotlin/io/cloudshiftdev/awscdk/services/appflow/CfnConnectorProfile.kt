@@ -7232,8 +7232,14 @@ public open class CfnConnectorProfile(
     public fun clientNumber(): String? = unwrap(this).getClientNumber()
 
     /**
-     * If you set this parameter to true, Amazon AppFlow bypasses the single sign-on (SSO) settings
-     * in your SAP account when it accesses your SAP OData instance.
+     * If you set this parameter to `true` , Amazon AppFlow bypasses the single sign-on (SSO)
+     * settings in your SAP account when it accesses your SAP OData instance.
+     *
+     * Whether you need this option depends on the types of credentials that you applied to your SAP
+     * OData connection profile. If your profile uses basic authentication credentials, SAP SSO can
+     * prevent Amazon AppFlow from connecting to your account with your username and password. In this
+     * case, bypassing SSO makes it possible for Amazon AppFlow to connect successfully. However, if
+     * your profile uses OAuth credentials, this parameter has no affect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-sapodataconnectorprofileproperties.html#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-disablesso)
      */
@@ -7288,14 +7294,24 @@ public open class CfnConnectorProfile(
       public fun clientNumber(clientNumber: String)
 
       /**
-       * @param disableSso If you set this parameter to true, Amazon AppFlow bypasses the single
+       * @param disableSso If you set this parameter to `true` , Amazon AppFlow bypasses the single
        * sign-on (SSO) settings in your SAP account when it accesses your SAP OData instance.
+       * Whether you need this option depends on the types of credentials that you applied to your
+       * SAP OData connection profile. If your profile uses basic authentication credentials, SAP SSO
+       * can prevent Amazon AppFlow from connecting to your account with your username and password. In
+       * this case, bypassing SSO makes it possible for Amazon AppFlow to connect successfully.
+       * However, if your profile uses OAuth credentials, this parameter has no affect.
        */
       public fun disableSso(disableSso: Boolean)
 
       /**
-       * @param disableSso If you set this parameter to true, Amazon AppFlow bypasses the single
+       * @param disableSso If you set this parameter to `true` , Amazon AppFlow bypasses the single
        * sign-on (SSO) settings in your SAP account when it accesses your SAP OData instance.
+       * Whether you need this option depends on the types of credentials that you applied to your
+       * SAP OData connection profile. If your profile uses basic authentication credentials, SAP SSO
+       * can prevent Amazon AppFlow from connecting to your account with your username and password. In
+       * this case, bypassing SSO makes it possible for Amazon AppFlow to connect successfully.
+       * However, if your profile uses OAuth credentials, this parameter has no affect.
        */
       public fun disableSso(disableSso: IResolvable)
 
@@ -7364,16 +7380,26 @@ public open class CfnConnectorProfile(
       }
 
       /**
-       * @param disableSso If you set this parameter to true, Amazon AppFlow bypasses the single
+       * @param disableSso If you set this parameter to `true` , Amazon AppFlow bypasses the single
        * sign-on (SSO) settings in your SAP account when it accesses your SAP OData instance.
+       * Whether you need this option depends on the types of credentials that you applied to your
+       * SAP OData connection profile. If your profile uses basic authentication credentials, SAP SSO
+       * can prevent Amazon AppFlow from connecting to your account with your username and password. In
+       * this case, bypassing SSO makes it possible for Amazon AppFlow to connect successfully.
+       * However, if your profile uses OAuth credentials, this parameter has no affect.
        */
       override fun disableSso(disableSso: Boolean) {
         cdkBuilder.disableSso(disableSso)
       }
 
       /**
-       * @param disableSso If you set this parameter to true, Amazon AppFlow bypasses the single
+       * @param disableSso If you set this parameter to `true` , Amazon AppFlow bypasses the single
        * sign-on (SSO) settings in your SAP account when it accesses your SAP OData instance.
+       * Whether you need this option depends on the types of credentials that you applied to your
+       * SAP OData connection profile. If your profile uses basic authentication credentials, SAP SSO
+       * can prevent Amazon AppFlow from connecting to your account with your username and password. In
+       * this case, bypassing SSO makes it possible for Amazon AppFlow to connect successfully.
+       * However, if your profile uses OAuth credentials, this parameter has no affect.
        */
       override fun disableSso(disableSso: IResolvable) {
         cdkBuilder.disableSso(disableSso.let(IResolvable.Companion::unwrap))
@@ -7457,8 +7483,14 @@ public open class CfnConnectorProfile(
       override fun clientNumber(): String? = unwrap(this).getClientNumber()
 
       /**
-       * If you set this parameter to true, Amazon AppFlow bypasses the single sign-on (SSO)
+       * If you set this parameter to `true` , Amazon AppFlow bypasses the single sign-on (SSO)
        * settings in your SAP account when it accesses your SAP OData instance.
+       *
+       * Whether you need this option depends on the types of credentials that you applied to your
+       * SAP OData connection profile. If your profile uses basic authentication credentials, SAP SSO
+       * can prevent Amazon AppFlow from connecting to your account with your username and password. In
+       * this case, bypassing SSO makes it possible for Amazon AppFlow to connect successfully.
+       * However, if your profile uses OAuth credentials, this parameter has no affect.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-sapodataconnectorprofileproperties.html#cfn-appflow-connectorprofile-sapodataconnectorprofileproperties-disablesso)
        */
@@ -7577,13 +7609,14 @@ public open class CfnConnectorProfile(
      * * **AUTHORIZATION_CODE** - Amazon AppFlow passes an authorization code when it requests the
      * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
      * after you log in to your Salesforce account and authorize Amazon AppFlow to access your records.
-     * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
-     * secret) when it requests the access token from Salesforce. You provide these credentials to
-     * Amazon AppFlow when you define the connection to your Salesforce account.
      * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
      * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
      * your Salesforce account. When you use this grant type, you don't need to log in to your
      * Salesforce account to authorize Amazon AppFlow to access your records.
+     *
+     *
+     * The CLIENT_CREDENTIALS value is not supported for Salesforce.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-oauth2granttype)
      */
@@ -7649,13 +7682,13 @@ public open class CfnConnectorProfile(
        * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
        * after you log in to your Salesforce account and authorize Amazon AppFlow to access your
        * records.
-       * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
-       * secret) when it requests the access token from Salesforce. You provide these credentials to
-       * Amazon AppFlow when you define the connection to your Salesforce account.
        * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
        * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
        * your Salesforce account. When you use this grant type, you don't need to log in to your
        * Salesforce account to authorize Amazon AppFlow to access your records.
+       *
+       *
+       * The CLIENT_CREDENTIALS value is not supported for Salesforce.
        */
       public fun oAuth2GrantType(oAuth2GrantType: String)
 
@@ -7730,13 +7763,13 @@ public open class CfnConnectorProfile(
        * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
        * after you log in to your Salesforce account and authorize Amazon AppFlow to access your
        * records.
-       * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
-       * secret) when it requests the access token from Salesforce. You provide these credentials to
-       * Amazon AppFlow when you define the connection to your Salesforce account.
        * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
        * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
        * your Salesforce account. When you use this grant type, you don't need to log in to your
        * Salesforce account to authorize Amazon AppFlow to access your records.
+       *
+       *
+       * The CLIENT_CREDENTIALS value is not supported for Salesforce.
        */
       override fun oAuth2GrantType(oAuth2GrantType: String) {
         cdkBuilder.oAuth2GrantType(oAuth2GrantType)
@@ -7799,13 +7832,14 @@ public open class CfnConnectorProfile(
        * access token from Salesforce. Amazon AppFlow receives the authorization code from Salesforce
        * after you log in to your Salesforce account and authorize Amazon AppFlow to access your
        * records.
-       * * **CLIENT_CREDENTIALS** - Amazon AppFlow passes client credentials (a client ID and client
-       * secret) when it requests the access token from Salesforce. You provide these credentials to
-       * Amazon AppFlow when you define the connection to your Salesforce account.
        * * **JWT_BEARER** - Amazon AppFlow passes a JSON web token (JWT) when it requests the access
        * token from Salesforce. You provide the JWT to Amazon AppFlow when you define the connection to
        * your Salesforce account. When you use this grant type, you don't need to log in to your
        * Salesforce account to authorize Amazon AppFlow to access your records.
+       *
+       *
+       * The CLIENT_CREDENTIALS value is not supported for Salesforce.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-salesforceconnectorprofilecredentials.html#cfn-appflow-connectorprofile-salesforceconnectorprofilecredentials-oauth2granttype)
        */
@@ -8204,6 +8238,8 @@ public open class CfnConnectorProfile(
    */
   public interface ServiceNowConnectorProfileCredentialsProperty {
     /**
+     * The OAuth 2.0 credentials required to authenticate the user.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-oauth2credentials)
      */
     public fun oAuth2Credentials(): Any? = unwrap(this).getOAuth2Credentials()
@@ -8228,17 +8264,17 @@ public open class CfnConnectorProfile(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param oAuth2Credentials The OAuth 2.0 credentials required to authenticate the user.
        */
       public fun oAuth2Credentials(oAuth2Credentials: IResolvable)
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param oAuth2Credentials The OAuth 2.0 credentials required to authenticate the user.
        */
       public fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty)
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param oAuth2Credentials The OAuth 2.0 credentials required to authenticate the user.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52363dd6c5a8eb299b5db6177cba24c77f4eff2eb58a49b48fab009df69af22f")
@@ -8262,21 +8298,21 @@ public open class CfnConnectorProfile(
           software.amazon.awscdk.services.appflow.CfnConnectorProfile.ServiceNowConnectorProfileCredentialsProperty.builder()
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param oAuth2Credentials The OAuth 2.0 credentials required to authenticate the user.
        */
       override fun oAuth2Credentials(oAuth2Credentials: IResolvable) {
         cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param oAuth2Credentials The OAuth 2.0 credentials required to authenticate the user.
        */
       override fun oAuth2Credentials(oAuth2Credentials: OAuth2CredentialsProperty) {
         cdkBuilder.oAuth2Credentials(oAuth2Credentials.let(OAuth2CredentialsProperty.Companion::unwrap))
       }
 
       /**
-       * @param oAuth2Credentials the value to be set.
+       * @param oAuth2Credentials The OAuth 2.0 credentials required to authenticate the user.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("52363dd6c5a8eb299b5db6177cba24c77f4eff2eb58a49b48fab009df69af22f")
@@ -8308,6 +8344,8 @@ public open class CfnConnectorProfile(
     ) : CdkObject(cdkObject),
         ServiceNowConnectorProfileCredentialsProperty {
       /**
+       * The OAuth 2.0 credentials required to authenticate the user.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-connectorprofile-servicenowconnectorprofilecredentials.html#cfn-appflow-connectorprofile-servicenowconnectorprofilecredentials-oauth2credentials)
        */
       override fun oAuth2Credentials(): Any? = unwrap(this).getOAuth2Credentials()

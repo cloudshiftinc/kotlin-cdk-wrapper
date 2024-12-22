@@ -13,7 +13,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Retrieves information about the resource policy.
+ * Retrieves information about the specified resource policy.
  *
  * The resource policy is an IAM policy created on behalf of the resource owner when they share a
  * resource.

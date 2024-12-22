@@ -22,7 +22,7 @@ import kotlin.Unit
  * WindowsImageType.SERVER_2019))
  * // optional certificate to include in the build image
  * .certificate(BuildEnvironmentCertificate.builder()
- * .bucket(Bucket.fromBucketName(this, "Bucket", "my-bucket"))
+ * .bucket(Bucket.fromBucketName(this, "Bucket", "amzn-s3-demo-bucket"))
  * .objectKey("path/to/cert.pem")
  * .build())
  * .build())

@@ -195,27 +195,28 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .physicalTableMap(Map.of(
  * "physicalTableMapKey", PhysicalTableProperty.builder()
  * .customSql(CustomSqlProperty.builder()
+ * .dataSourceArn("dataSourceArn")
+ * .name("name")
+ * .sqlQuery("sqlQuery")
+ * // the properties below are optional
  * .columns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
  * // the properties below are optional
  * .subType("subType")
  * .build()))
- * .dataSourceArn("dataSourceArn")
- * .name("name")
- * .sqlQuery("sqlQuery")
  * .build())
  * .relationalTable(RelationalTableProperty.builder()
  * .dataSourceArn("dataSourceArn")
+ * .name("name")
+ * // the properties below are optional
+ * .catalog("catalog")
  * .inputColumns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
  * // the properties below are optional
  * .subType("subType")
  * .build()))
- * .name("name")
- * // the properties below are optional
- * .catalog("catalog")
  * .schema("schema")
  * .build())
  * .s3Source(S3SourceProperty.builder()
@@ -2515,15 +2516,16 @@ public open class CfnDataSet(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
    * CustomSqlProperty customSqlProperty = CustomSqlProperty.builder()
+   * .dataSourceArn("dataSourceArn")
+   * .name("name")
+   * .sqlQuery("sqlQuery")
+   * // the properties below are optional
    * .columns(List.of(InputColumnProperty.builder()
    * .name("name")
    * .type("type")
    * // the properties below are optional
    * .subType("subType")
    * .build()))
-   * .dataSourceArn("dataSourceArn")
-   * .name("name")
-   * .sqlQuery("sqlQuery")
    * .build();
    * ```
    *
@@ -2535,7 +2537,7 @@ public open class CfnDataSet(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-customsql.html#cfn-quicksight-dataset-customsql-columns)
      */
-    public fun columns(): Any
+    public fun columns(): Any? = unwrap(this).getColumns()
 
     /**
      * The Amazon Resource Name (ARN) of the data source.
@@ -2564,17 +2566,17 @@ public open class CfnDataSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param columns The column schema from the SQL query result set. 
+       * @param columns The column schema from the SQL query result set.
        */
       public fun columns(columns: IResolvable)
 
       /**
-       * @param columns The column schema from the SQL query result set. 
+       * @param columns The column schema from the SQL query result set.
        */
       public fun columns(columns: List<Any>)
 
       /**
-       * @param columns The column schema from the SQL query result set. 
+       * @param columns The column schema from the SQL query result set.
        */
       public fun columns(vararg columns: Any)
 
@@ -2600,21 +2602,21 @@ public open class CfnDataSet(
           software.amazon.awscdk.services.quicksight.CfnDataSet.CustomSqlProperty.builder()
 
       /**
-       * @param columns The column schema from the SQL query result set. 
+       * @param columns The column schema from the SQL query result set.
        */
       override fun columns(columns: IResolvable) {
         cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param columns The column schema from the SQL query result set. 
+       * @param columns The column schema from the SQL query result set.
        */
       override fun columns(columns: List<Any>) {
         cdkBuilder.columns(columns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param columns The column schema from the SQL query result set. 
+       * @param columns The column schema from the SQL query result set.
        */
       override fun columns(vararg columns: Any): Unit = columns(columns.toList())
 
@@ -2652,7 +2654,7 @@ public open class CfnDataSet(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-customsql.html#cfn-quicksight-dataset-customsql-columns)
        */
-      override fun columns(): Any = unwrap(this).getColumns()
+      override fun columns(): Any? = unwrap(this).getColumns()
 
       /**
        * The Amazon Resource Name (ARN) of the data source.
@@ -6628,27 +6630,28 @@ public open class CfnDataSet(
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
    * PhysicalTableProperty physicalTableProperty = PhysicalTableProperty.builder()
    * .customSql(CustomSqlProperty.builder()
+   * .dataSourceArn("dataSourceArn")
+   * .name("name")
+   * .sqlQuery("sqlQuery")
+   * // the properties below are optional
    * .columns(List.of(InputColumnProperty.builder()
    * .name("name")
    * .type("type")
    * // the properties below are optional
    * .subType("subType")
    * .build()))
-   * .dataSourceArn("dataSourceArn")
-   * .name("name")
-   * .sqlQuery("sqlQuery")
    * .build())
    * .relationalTable(RelationalTableProperty.builder()
    * .dataSourceArn("dataSourceArn")
+   * .name("name")
+   * // the properties below are optional
+   * .catalog("catalog")
    * .inputColumns(List.of(InputColumnProperty.builder()
    * .name("name")
    * .type("type")
    * // the properties below are optional
    * .subType("subType")
    * .build()))
-   * .name("name")
-   * // the properties below are optional
-   * .catalog("catalog")
    * .schema("schema")
    * .build())
    * .s3Source(S3SourceProperty.builder()
@@ -7097,15 +7100,15 @@ public open class CfnDataSet(
    * import io.cloudshiftdev.awscdk.services.quicksight.*;
    * RelationalTableProperty relationalTableProperty = RelationalTableProperty.builder()
    * .dataSourceArn("dataSourceArn")
+   * .name("name")
+   * // the properties below are optional
+   * .catalog("catalog")
    * .inputColumns(List.of(InputColumnProperty.builder()
    * .name("name")
    * .type("type")
    * // the properties below are optional
    * .subType("subType")
    * .build()))
-   * .name("name")
-   * // the properties below are optional
-   * .catalog("catalog")
    * .schema("schema")
    * .build();
    * ```
@@ -7132,7 +7135,7 @@ public open class CfnDataSet(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-relationaltable.html#cfn-quicksight-dataset-relationaltable-inputcolumns)
      */
-    public fun inputColumns(): Any
+    public fun inputColumns(): Any? = unwrap(this).getInputColumns()
 
     /**
      * The name of the relational table.
@@ -7166,17 +7169,17 @@ public open class CfnDataSet(
       public fun dataSourceArn(dataSourceArn: String)
 
       /**
-       * @param inputColumns The column schema of the table. 
+       * @param inputColumns The column schema of the table.
        */
       public fun inputColumns(inputColumns: IResolvable)
 
       /**
-       * @param inputColumns The column schema of the table. 
+       * @param inputColumns The column schema of the table.
        */
       public fun inputColumns(inputColumns: List<Any>)
 
       /**
-       * @param inputColumns The column schema of the table. 
+       * @param inputColumns The column schema of the table.
        */
       public fun inputColumns(vararg inputColumns: Any)
 
@@ -7212,21 +7215,21 @@ public open class CfnDataSet(
       }
 
       /**
-       * @param inputColumns The column schema of the table. 
+       * @param inputColumns The column schema of the table.
        */
       override fun inputColumns(inputColumns: IResolvable) {
         cdkBuilder.inputColumns(inputColumns.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param inputColumns The column schema of the table. 
+       * @param inputColumns The column schema of the table.
        */
       override fun inputColumns(inputColumns: List<Any>) {
         cdkBuilder.inputColumns(inputColumns.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param inputColumns The column schema of the table. 
+       * @param inputColumns The column schema of the table.
        */
       override fun inputColumns(vararg inputColumns: Any): Unit =
           inputColumns(inputColumns.toList())
@@ -7274,7 +7277,7 @@ public open class CfnDataSet(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-relationaltable.html#cfn-quicksight-dataset-relationaltable-inputcolumns)
        */
-      override fun inputColumns(): Any = unwrap(this).getInputColumns()
+      override fun inputColumns(): Any? = unwrap(this).getInputColumns()
 
       /**
        * The name of the relational table.
@@ -8939,7 +8942,7 @@ public open class CfnDataSet(
 
     /**
      * A transform operation that overrides the dataset parameter values that are defined in another
-     * dataset.</p>.
+     * dataset.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-transformoperation.html#cfn-quicksight-dataset-transformoperation-overridedatasetparameteroperation)
      */
@@ -9042,20 +9045,20 @@ public open class CfnDataSet(
 
       /**
        * @param overrideDatasetParameterOperation A transform operation that overrides the dataset
-       * parameter values that are defined in another dataset.</p>.
+       * parameter values that are defined in another dataset.
        */
       public fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: IResolvable)
 
       /**
        * @param overrideDatasetParameterOperation A transform operation that overrides the dataset
-       * parameter values that are defined in another dataset.</p>.
+       * parameter values that are defined in another dataset.
        */
       public
           fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: OverrideDatasetParameterOperationProperty)
 
       /**
        * @param overrideDatasetParameterOperation A transform operation that overrides the dataset
-       * parameter values that are defined in another dataset.</p>.
+       * parameter values that are defined in another dataset.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21ab89056d9e1abb0f8cde30f2a70da44800cc1d476ede018f934876ae0ddc99")
@@ -9222,7 +9225,7 @@ public open class CfnDataSet(
 
       /**
        * @param overrideDatasetParameterOperation A transform operation that overrides the dataset
-       * parameter values that are defined in another dataset.</p>.
+       * parameter values that are defined in another dataset.
        */
       override
           fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: IResolvable) {
@@ -9231,7 +9234,7 @@ public open class CfnDataSet(
 
       /**
        * @param overrideDatasetParameterOperation A transform operation that overrides the dataset
-       * parameter values that are defined in another dataset.</p>.
+       * parameter values that are defined in another dataset.
        */
       override
           fun overrideDatasetParameterOperation(overrideDatasetParameterOperation: OverrideDatasetParameterOperationProperty) {
@@ -9240,7 +9243,7 @@ public open class CfnDataSet(
 
       /**
        * @param overrideDatasetParameterOperation A transform operation that overrides the dataset
-       * parameter values that are defined in another dataset.</p>.
+       * parameter values that are defined in another dataset.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("21ab89056d9e1abb0f8cde30f2a70da44800cc1d476ede018f934876ae0ddc99")
@@ -9380,7 +9383,7 @@ public open class CfnDataSet(
 
       /**
        * A transform operation that overrides the dataset parameter values that are defined in
-       * another dataset.</p>.
+       * another dataset.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-dataset-transformoperation.html#cfn-quicksight-dataset-transformoperation-overridedatasetparameteroperation)
        */

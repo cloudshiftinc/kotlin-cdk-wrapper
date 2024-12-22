@@ -99,6 +99,15 @@ public interface GraphqlApiProps {
   public fun name(): String
 
   /**
+   * The owner contact information for an API resource.
+   *
+   * This field accepts any string input with a length of 0 - 256 characters.
+   *
+   * Default: - No owner contact.
+   */
+  public fun ownerContact(): String? = unwrap(this).getOwnerContact()
+
+  /**
    * A number indicating the maximum depth resolvers should be accepted when handling queries.
    *
    * Value must be withing range of 0 to 75
@@ -219,6 +228,12 @@ public interface GraphqlApiProps {
      * @param name the name of the GraphQL API. 
      */
     public fun name(name: String)
+
+    /**
+     * @param ownerContact The owner contact information for an API resource.
+     * This field accepts any string input with a length of 0 - 256 characters.
+     */
+    public fun ownerContact(ownerContact: String)
 
     /**
      * @param queryDepthLimit A number indicating the maximum depth resolvers should be accepted
@@ -348,6 +363,14 @@ public interface GraphqlApiProps {
     }
 
     /**
+     * @param ownerContact The owner contact information for an API resource.
+     * This field accepts any string input with a length of 0 - 256 characters.
+     */
+    override fun ownerContact(ownerContact: String) {
+      cdkBuilder.ownerContact(ownerContact)
+    }
+
+    /**
      * @param queryDepthLimit A number indicating the maximum depth resolvers should be accepted
      * when handling queries.
      * Value must be withing range of 0 to 75
@@ -458,6 +481,15 @@ public interface GraphqlApiProps {
      * the name of the GraphQL API.
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The owner contact information for an API resource.
+     *
+     * This field accepts any string input with a length of 0 - 256 characters.
+     *
+     * Default: - No owner contact.
+     */
+    override fun ownerContact(): String? = unwrap(this).getOwnerContact()
 
     /**
      * A number indicating the maximum depth resolvers should be accepted when handling queries.

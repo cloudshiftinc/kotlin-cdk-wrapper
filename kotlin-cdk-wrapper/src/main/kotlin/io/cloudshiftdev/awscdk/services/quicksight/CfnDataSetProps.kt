@@ -184,27 +184,28 @@ import kotlin.jvm.JvmName
  * .physicalTableMap(Map.of(
  * "physicalTableMapKey", PhysicalTableProperty.builder()
  * .customSql(CustomSqlProperty.builder()
+ * .dataSourceArn("dataSourceArn")
+ * .name("name")
+ * .sqlQuery("sqlQuery")
+ * // the properties below are optional
  * .columns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
  * // the properties below are optional
  * .subType("subType")
  * .build()))
- * .dataSourceArn("dataSourceArn")
- * .name("name")
- * .sqlQuery("sqlQuery")
  * .build())
  * .relationalTable(RelationalTableProperty.builder()
  * .dataSourceArn("dataSourceArn")
+ * .name("name")
+ * // the properties below are optional
+ * .catalog("catalog")
  * .inputColumns(List.of(InputColumnProperty.builder()
  * .name("name")
  * .type("type")
  * // the properties below are optional
  * .subType("subType")
  * .build()))
- * .name("name")
- * // the properties below are optional
- * .catalog("catalog")
  * .schema("schema")
  * .build())
  * .s3Source(S3SourceProperty.builder()

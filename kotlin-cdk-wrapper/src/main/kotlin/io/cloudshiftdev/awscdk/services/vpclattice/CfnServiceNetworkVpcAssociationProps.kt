@@ -48,9 +48,9 @@ public interface CfnServiceNetworkVpcAssociationProps {
   public fun securityGroupIds(): List<String> = unwrap(this).getSecurityGroupIds() ?: emptyList()
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service network.
+   * The ID or ARN of the service network.
    *
-   * You must use the ARN when the resources specified in the operation are in different accounts.
+   * You must use an ARN if the resources are in different accounts.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkvpcassociation.html#cfn-vpclattice-servicenetworkvpcassociation-servicenetworkidentifier)
    */
@@ -96,8 +96,8 @@ public interface CfnServiceNetworkVpcAssociationProps {
     public fun securityGroupIds(vararg securityGroupIds: String)
 
     /**
-     * @param serviceNetworkIdentifier The ID or Amazon Resource Name (ARN) of the service network.
-     * You must use the ARN when the resources specified in the operation are in different accounts.
+     * @param serviceNetworkIdentifier The ID or ARN of the service network.
+     * You must use an ARN if the resources are in different accounts.
      */
     public fun serviceNetworkIdentifier(serviceNetworkIdentifier: String)
 
@@ -146,8 +146,8 @@ public interface CfnServiceNetworkVpcAssociationProps {
         securityGroupIds(securityGroupIds.toList())
 
     /**
-     * @param serviceNetworkIdentifier The ID or Amazon Resource Name (ARN) of the service network.
-     * You must use the ARN when the resources specified in the operation are in different accounts.
+     * @param serviceNetworkIdentifier The ID or ARN of the service network.
+     * You must use an ARN if the resources are in different accounts.
      */
     override fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
       cdkBuilder.serviceNetworkIdentifier(serviceNetworkIdentifier)
@@ -196,9 +196,9 @@ public interface CfnServiceNetworkVpcAssociationProps {
         emptyList()
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service network.
+     * The ID or ARN of the service network.
      *
-     * You must use the ARN when the resources specified in the operation are in different accounts.
+     * You must use an ARN if the resources are in different accounts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkvpcassociation.html#cfn-vpclattice-servicenetworkvpcassociation-servicenetworkidentifier)
      */

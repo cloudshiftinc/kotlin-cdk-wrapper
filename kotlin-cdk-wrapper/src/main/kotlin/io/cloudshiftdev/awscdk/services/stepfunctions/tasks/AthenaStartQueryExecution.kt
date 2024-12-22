@@ -36,7 +36,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .encryptionOption(EncryptionOption.S3_MANAGED)
  * .build())
  * .outputLocation(Location.builder()
- * .bucketName("query-results-bucket")
+ * .bucketName("amzn-s3-demo-bucket")
  * .objectKey("folder")
  * .build())
  * .build())

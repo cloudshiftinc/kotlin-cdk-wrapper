@@ -39,6 +39,11 @@ import kotlin.jvm.JvmName
  * .bootstrapClusterCreatorAdminPermissions(false)
  * .build())
  * .bootstrapSelfManagedAddons(false)
+ * .computeConfig(ComputeConfigProperty.builder()
+ * .enabled(false)
+ * .nodePools(List.of("nodePools"))
+ * .nodeRoleArn("nodeRoleArn")
+ * .build())
  * .encryptionConfig(List.of(EncryptionConfigProperty.builder()
  * .provider(ProviderProperty.builder()
  * .keyArn("keyArn")
@@ -46,6 +51,9 @@ import kotlin.jvm.JvmName
  * .resources(List.of("resources"))
  * .build()))
  * .kubernetesNetworkConfig(KubernetesNetworkConfigProperty.builder()
+ * .elasticLoadBalancing(ElasticLoadBalancingProperty.builder()
+ * .enabled(false)
+ * .build())
  * .ipFamily("ipFamily")
  * .serviceIpv4Cidr("serviceIpv4Cidr")
  * .serviceIpv6Cidr("serviceIpv6Cidr")
@@ -66,6 +74,20 @@ import kotlin.jvm.JvmName
  * .groupName("groupName")
  * .build())
  * .build())
+ * .remoteNetworkConfig(RemoteNetworkConfigProperty.builder()
+ * .remoteNodeNetworks(List.of(RemoteNodeNetworkProperty.builder()
+ * .cidrs(List.of("cidrs"))
+ * .build()))
+ * // the properties below are optional
+ * .remotePodNetworks(List.of(RemotePodNetworkProperty.builder()
+ * .cidrs(List.of("cidrs"))
+ * .build()))
+ * .build())
+ * .storageConfig(StorageConfigProperty.builder()
+ * .blockStorage(BlockStorageProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -74,6 +96,9 @@ import kotlin.jvm.JvmName
  * .supportType("supportType")
  * .build())
  * .version("version")
+ * .zonalShiftConfig(ZonalShiftConfigProperty.builder()
+ * .enabled(false)
+ * .build())
  * .build();
  * ```
  *
@@ -101,6 +126,17 @@ public interface CfnClusterProps {
   public fun bootstrapSelfManagedAddons(): Any? = unwrap(this).getBootstrapSelfManagedAddons()
 
   /**
+   * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+   *
+   * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+   * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+   * information, see EKS Auto Mode compute capability in the EKS User Guide.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
+   */
+  public fun computeConfig(): Any? = unwrap(this).getComputeConfig()
+
+  /**
    * The encryption configuration for the cluster.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig)
@@ -124,6 +160,11 @@ public interface CfnClusterProps {
   /**
    * The unique name to give to your cluster.
    *
+   * The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start
+   * with an alphanumeric character and can't be longer than 100 characters. The name must be unique
+   * within the AWS Region and AWS account that you're creating the cluster in. Note that underscores
+   * can't be used in AWS CloudFormation .
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-name)
    */
   public fun name(): String? = unwrap(this).getName()
@@ -136,6 +177,15 @@ public interface CfnClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-outpostconfig)
    */
   public fun outpostConfig(): Any? = unwrap(this).getOutpostConfig()
+
+  /**
+   * The configuration in the cluster for EKS Hybrid Nodes.
+   *
+   * You can't change or update this configuration after the cluster is created.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
+   */
+  public fun remoteNetworkConfig(): Any? = unwrap(this).getRemoteNetworkConfig()
 
   /**
    * The VPC configuration that's used by the cluster control plane.
@@ -164,6 +214,18 @@ public interface CfnClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn)
    */
   public fun roleArn(): String
+
+  /**
+   * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+   * cluster.
+   *
+   * For example, if the capability is enabled or disabled. If the block storage capability is
+   * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+   * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
+   */
+  public fun storageConfig(): Any? = unwrap(this).getStorageConfig()
 
   /**
    * The metadata that you apply to the cluster to assist with categorization and organization.
@@ -207,6 +269,13 @@ public interface CfnClusterProps {
   public fun version(): String? = unwrap(this).getVersion()
 
   /**
+   * The configuration for zonal shift for the cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-zonalshiftconfig)
+   */
+  public fun zonalShiftConfig(): Any? = unwrap(this).getZonalShiftConfig()
+
+  /**
    * A builder for [CfnClusterProps]
    */
   @CdkDslMarker
@@ -247,6 +316,35 @@ public interface CfnClusterProps {
      * default networking add-ons.
      */
     public fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: IResolvable)
+
+    /**
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     */
+    public fun computeConfig(computeConfig: IResolvable)
+
+    /**
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     */
+    public fun computeConfig(computeConfig: CfnCluster.ComputeConfigProperty)
+
+    /**
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b6ecd17793f597e6c5dd37f6d83cee516e0e704371bd39c1145bde6d175a13f4")
+    public fun computeConfig(computeConfig: CfnCluster.ComputeConfigProperty.Builder.() -> Unit)
 
     /**
      * @param encryptionConfig The encryption configuration for the cluster.
@@ -301,6 +399,10 @@ public interface CfnClusterProps {
 
     /**
      * @param name The unique name to give to your cluster.
+     * The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start
+     * with an alphanumeric character and can't be longer than 100 characters. The name must be unique
+     * within the AWS Region and AWS account that you're creating the cluster in. Note that underscores
+     * can't be used in AWS CloudFormation .
      */
     public fun name(name: String)
 
@@ -326,6 +428,27 @@ public interface CfnClusterProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9f1d69dea2f2c473564e7ee22b1f197e68618b93fee6df6d35b64ea8684fcb51")
     public fun outpostConfig(outpostConfig: CfnCluster.OutpostConfigProperty.Builder.() -> Unit)
+
+    /**
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
+     * You can't change or update this configuration after the cluster is created.
+     */
+    public fun remoteNetworkConfig(remoteNetworkConfig: IResolvable)
+
+    /**
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
+     * You can't change or update this configuration after the cluster is created.
+     */
+    public fun remoteNetworkConfig(remoteNetworkConfig: CfnCluster.RemoteNetworkConfigProperty)
+
+    /**
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
+     * You can't change or update this configuration after the cluster is created.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9cec3c4da94376326ae42354991198f4e1d93dd7e05dd1e823a9f3349e00c936")
+    public
+        fun remoteNetworkConfig(remoteNetworkConfig: CfnCluster.RemoteNetworkConfigProperty.Builder.() -> Unit)
 
     /**
      * @param resourcesVpcConfig The VPC configuration that's used by the cluster control plane. 
@@ -377,6 +500,35 @@ public interface CfnClusterProps {
      * EKS User Guide** .
      */
     public fun roleArn(roleArn: String)
+
+    /**
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     */
+    public fun storageConfig(storageConfig: IResolvable)
+
+    /**
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     */
+    public fun storageConfig(storageConfig: CfnCluster.StorageConfigProperty)
+
+    /**
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("166a9eef5624306eb4c35f4469db18fc5f85a3a2eea858dd618d78055a436f8f")
+    public fun storageConfig(storageConfig: CfnCluster.StorageConfigProperty.Builder.() -> Unit)
 
     /**
      * @param tags The metadata that you apply to the cluster to assist with categorization and
@@ -442,6 +594,24 @@ public interface CfnClusterProps {
      * The default version might not be the latest version available.
      */
     public fun version(version: String)
+
+    /**
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster.
+     */
+    public fun zonalShiftConfig(zonalShiftConfig: IResolvable)
+
+    /**
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster.
+     */
+    public fun zonalShiftConfig(zonalShiftConfig: CfnCluster.ZonalShiftConfigProperty)
+
+    /**
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("59c5f21b35789f6dee7d63d21e0bc2bad59ef4e4f053bf2ff7c143876b0c9fb4")
+    public
+        fun zonalShiftConfig(zonalShiftConfig: CfnCluster.ZonalShiftConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -493,6 +663,40 @@ public interface CfnClusterProps {
     override fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: IResolvable) {
       cdkBuilder.bootstrapSelfManagedAddons(bootstrapSelfManagedAddons.let(IResolvable.Companion::unwrap))
     }
+
+    /**
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     */
+    override fun computeConfig(computeConfig: IResolvable) {
+      cdkBuilder.computeConfig(computeConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     */
+    override fun computeConfig(computeConfig: CfnCluster.ComputeConfigProperty) {
+      cdkBuilder.computeConfig(computeConfig.let(CfnCluster.ComputeConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b6ecd17793f597e6c5dd37f6d83cee516e0e704371bd39c1145bde6d175a13f4")
+    override fun computeConfig(computeConfig: CfnCluster.ComputeConfigProperty.Builder.() -> Unit):
+        Unit = computeConfig(CfnCluster.ComputeConfigProperty(computeConfig))
 
     /**
      * @param encryptionConfig The encryption configuration for the cluster.
@@ -563,6 +767,10 @@ public interface CfnClusterProps {
 
     /**
      * @param name The unique name to give to your cluster.
+     * The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start
+     * with an alphanumeric character and can't be longer than 100 characters. The name must be unique
+     * within the AWS Region and AWS account that you're creating the cluster in. Note that underscores
+     * can't be used in AWS CloudFormation .
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -595,6 +803,32 @@ public interface CfnClusterProps {
     @JvmName("9f1d69dea2f2c473564e7ee22b1f197e68618b93fee6df6d35b64ea8684fcb51")
     override fun outpostConfig(outpostConfig: CfnCluster.OutpostConfigProperty.Builder.() -> Unit):
         Unit = outpostConfig(CfnCluster.OutpostConfigProperty(outpostConfig))
+
+    /**
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
+     * You can't change or update this configuration after the cluster is created.
+     */
+    override fun remoteNetworkConfig(remoteNetworkConfig: IResolvable) {
+      cdkBuilder.remoteNetworkConfig(remoteNetworkConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
+     * You can't change or update this configuration after the cluster is created.
+     */
+    override fun remoteNetworkConfig(remoteNetworkConfig: CfnCluster.RemoteNetworkConfigProperty) {
+      cdkBuilder.remoteNetworkConfig(remoteNetworkConfig.let(CfnCluster.RemoteNetworkConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes.
+     * You can't change or update this configuration after the cluster is created.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9cec3c4da94376326ae42354991198f4e1d93dd7e05dd1e823a9f3349e00c936")
+    override
+        fun remoteNetworkConfig(remoteNetworkConfig: CfnCluster.RemoteNetworkConfigProperty.Builder.() -> Unit):
+        Unit = remoteNetworkConfig(CfnCluster.RemoteNetworkConfigProperty(remoteNetworkConfig))
 
     /**
      * @param resourcesVpcConfig The VPC configuration that's used by the cluster control plane. 
@@ -653,6 +887,40 @@ public interface CfnClusterProps {
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
+
+    /**
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     */
+    override fun storageConfig(storageConfig: IResolvable) {
+      cdkBuilder.storageConfig(storageConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     */
+    override fun storageConfig(storageConfig: CfnCluster.StorageConfigProperty) {
+      cdkBuilder.storageConfig(storageConfig.let(CfnCluster.StorageConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster.
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("166a9eef5624306eb4c35f4469db18fc5f85a3a2eea858dd618d78055a436f8f")
+    override fun storageConfig(storageConfig: CfnCluster.StorageConfigProperty.Builder.() -> Unit):
+        Unit = storageConfig(CfnCluster.StorageConfigProperty(storageConfig))
 
     /**
      * @param tags The metadata that you apply to the cluster to assist with categorization and
@@ -728,6 +996,29 @@ public interface CfnClusterProps {
       cdkBuilder.version(version)
     }
 
+    /**
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster.
+     */
+    override fun zonalShiftConfig(zonalShiftConfig: IResolvable) {
+      cdkBuilder.zonalShiftConfig(zonalShiftConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster.
+     */
+    override fun zonalShiftConfig(zonalShiftConfig: CfnCluster.ZonalShiftConfigProperty) {
+      cdkBuilder.zonalShiftConfig(zonalShiftConfig.let(CfnCluster.ZonalShiftConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("59c5f21b35789f6dee7d63d21e0bc2bad59ef4e4f053bf2ff7c143876b0c9fb4")
+    override
+        fun zonalShiftConfig(zonalShiftConfig: CfnCluster.ZonalShiftConfigProperty.Builder.() -> Unit):
+        Unit = zonalShiftConfig(CfnCluster.ZonalShiftConfigProperty(zonalShiftConfig))
+
     public fun build(): software.amazon.awscdk.services.eks.CfnClusterProps = cdkBuilder.build()
   }
 
@@ -756,6 +1047,17 @@ public interface CfnClusterProps {
     override fun bootstrapSelfManagedAddons(): Any? = unwrap(this).getBootstrapSelfManagedAddons()
 
     /**
+     * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
+     */
+    override fun computeConfig(): Any? = unwrap(this).getComputeConfig()
+
+    /**
      * The encryption configuration for the cluster.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-encryptionconfig)
@@ -779,6 +1081,11 @@ public interface CfnClusterProps {
     /**
      * The unique name to give to your cluster.
      *
+     * The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start
+     * with an alphanumeric character and can't be longer than 100 characters. The name must be unique
+     * within the AWS Region and AWS account that you're creating the cluster in. Note that underscores
+     * can't be used in AWS CloudFormation .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-name)
      */
     override fun name(): String? = unwrap(this).getName()
@@ -791,6 +1098,15 @@ public interface CfnClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-outpostconfig)
      */
     override fun outpostConfig(): Any? = unwrap(this).getOutpostConfig()
+
+    /**
+     * The configuration in the cluster for EKS Hybrid Nodes.
+     *
+     * You can't change or update this configuration after the cluster is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
+     */
+    override fun remoteNetworkConfig(): Any? = unwrap(this).getRemoteNetworkConfig()
 
     /**
      * The VPC configuration that's used by the cluster control plane.
@@ -819,6 +1135,18 @@ public interface CfnClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-rolearn)
      */
     override fun roleArn(): String = unwrap(this).getRoleArn()
+
+    /**
+     * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+     * cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
+     */
+    override fun storageConfig(): Any? = unwrap(this).getStorageConfig()
 
     /**
      * The metadata that you apply to the cluster to assist with categorization and organization.
@@ -860,6 +1188,13 @@ public interface CfnClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-version)
      */
     override fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * The configuration for zonal shift for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-zonalshiftconfig)
+     */
+    override fun zonalShiftConfig(): Any? = unwrap(this).getZonalShiftConfig()
   }
 
   public companion object {

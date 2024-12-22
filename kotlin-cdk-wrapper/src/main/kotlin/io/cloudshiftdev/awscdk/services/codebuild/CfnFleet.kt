@@ -33,8 +33,22 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.codebuild.*;
  * CfnFleet cfnFleet = CfnFleet.Builder.create(this, "MyCfnFleet")
  * .baseCapacity(123)
+ * .computeConfiguration(ComputeConfigurationProperty.builder()
+ * .disk(123)
+ * .machineType("machineType")
+ * .memory(123)
+ * .vCpu(123)
+ * .build())
  * .computeType("computeType")
  * .environmentType("environmentType")
+ * .fleetProxyConfiguration(ProxyConfigurationProperty.builder()
+ * .defaultBehavior("defaultBehavior")
+ * .orderedProxyRules(List.of(FleetProxyRuleProperty.builder()
+ * .effect("effect")
+ * .entities(List.of("entities"))
+ * .type("type")
+ * .build()))
+ * .build())
  * .fleetServiceRole("fleetServiceRole")
  * .fleetVpcConfig(VpcConfigProperty.builder()
  * .securityGroupIds(List.of("securityGroupIds"))
@@ -44,6 +58,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .imageId("imageId")
  * .name("name")
  * .overflowBehavior("overflowBehavior")
+ * .scalingConfiguration(ScalingConfigurationInputProperty.builder()
+ * .maxCapacity(123)
+ * .scalingType("scalingType")
+ * .targetTrackingScalingConfigs(List.of(TargetTrackingScalingConfigurationProperty.builder()
+ * .metricType("metricType")
+ * .targetValue(123)
+ * .build()))
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -105,28 +127,90 @@ public open class CfnFleet(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * The compute configuration of the compute fleet.
+   */
+  public open fun computeConfiguration(): Any? = unwrap(this).getComputeConfiguration()
+
+  /**
+   * The compute configuration of the compute fleet.
+   */
+  public open fun computeConfiguration(`value`: IResolvable) {
+    unwrap(this).setComputeConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The compute configuration of the compute fleet.
+   */
+  public open fun computeConfiguration(`value`: ComputeConfigurationProperty) {
+    unwrap(this).setComputeConfiguration(`value`.let(ComputeConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The compute configuration of the compute fleet.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("5bc3d7cf1d3331a9c8a1aa7e9b441f78b0906f7c7e75c4a3d7b23ce88c759d13")
+  public open fun computeConfiguration(`value`: ComputeConfigurationProperty.Builder.() -> Unit):
+      Unit = computeConfiguration(ComputeConfigurationProperty(`value`))
+
+  /**
+   * Information about the compute resources the compute fleet uses.
+   *
+   * Available values include:.
    */
   public open fun computeType(): String? = unwrap(this).getComputeType()
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * Information about the compute resources the compute fleet uses.
+   *
+   * Available values include:.
    */
   public open fun computeType(`value`: String) {
     unwrap(this).setComputeType(`value`)
   }
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * The environment type of the compute fleet.
    */
   public open fun environmentType(): String? = unwrap(this).getEnvironmentType()
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * The environment type of the compute fleet.
    */
   public open fun environmentType(`value`: String) {
     unwrap(this).setEnvironmentType(`value`)
   }
+
+  /**
+   * Information about the proxy configurations that apply network access control to your reserved
+   * capacity instances.
+   */
+  public open fun fleetProxyConfiguration(): Any? = unwrap(this).getFleetProxyConfiguration()
+
+  /**
+   * Information about the proxy configurations that apply network access control to your reserved
+   * capacity instances.
+   */
+  public open fun fleetProxyConfiguration(`value`: IResolvable) {
+    unwrap(this).setFleetProxyConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Information about the proxy configurations that apply network access control to your reserved
+   * capacity instances.
+   */
+  public open fun fleetProxyConfiguration(`value`: ProxyConfigurationProperty) {
+    unwrap(this).setFleetProxyConfiguration(`value`.let(ProxyConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Information about the proxy configurations that apply network access control to your reserved
+   * capacity instances.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("9bc92f2222bba99709c21cf3d1316495d9b43881f6c09ce25af1344b5659b086")
+  public open fun fleetProxyConfiguration(`value`: ProxyConfigurationProperty.Builder.() -> Unit):
+      Unit = fleetProxyConfiguration(ProxyConfigurationProperty(`value`))
 
   /**
    * The service role associated with the compute fleet.
@@ -141,26 +225,26 @@ public open class CfnFleet(
   }
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * Information about the VPC configuration that AWS CodeBuild accesses.
    */
   public open fun fleetVpcConfig(): Any? = unwrap(this).getFleetVpcConfig()
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * Information about the VPC configuration that AWS CodeBuild accesses.
    */
   public open fun fleetVpcConfig(`value`: IResolvable) {
     unwrap(this).setFleetVpcConfig(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * Information about the VPC configuration that AWS CodeBuild accesses.
    */
   public open fun fleetVpcConfig(`value`: VpcConfigProperty) {
     unwrap(this).setFleetVpcConfig(`value`.let(VpcConfigProperty.Companion::unwrap))
   }
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * Information about the VPC configuration that AWS CodeBuild accesses.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("0ae880fbe2c1ab8b417e5fafe263789c3105b4e087fa381af6efbae306dd1cbe")
@@ -168,12 +252,12 @@ public open class CfnFleet(
       fleetVpcConfig(VpcConfigProperty(`value`))
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * The Amazon Machine Image (AMI) of the compute fleet.
    */
   public open fun imageId(): String? = unwrap(this).getImageId()
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * The Amazon Machine Image (AMI) of the compute fleet.
    */
   public open fun imageId(`value`: String) {
     unwrap(this).setImageId(`value`)
@@ -213,6 +297,34 @@ public open class CfnFleet(
   }
 
   /**
+   * The scaling configuration of the compute fleet.
+   */
+  public open fun scalingConfiguration(): Any? = unwrap(this).getScalingConfiguration()
+
+  /**
+   * The scaling configuration of the compute fleet.
+   */
+  public open fun scalingConfiguration(`value`: IResolvable) {
+    unwrap(this).setScalingConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The scaling configuration of the compute fleet.
+   */
+  public open fun scalingConfiguration(`value`: ScalingConfigurationInputProperty) {
+    unwrap(this).setScalingConfiguration(`value`.let(ScalingConfigurationInputProperty.Companion::unwrap))
+  }
+
+  /**
+   * The scaling configuration of the compute fleet.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("fa6942666d42992917d9bc2b1ac49d78c6414079a640569124ada6dbd56df027")
+  public open
+      fun scalingConfiguration(`value`: ScalingConfigurationInputProperty.Builder.() -> Unit): Unit
+      = scalingConfiguration(ScalingConfigurationInputProperty(`value`))
+
+  /**
    * A list of tag key and value pairs associated with this compute fleet.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
@@ -245,61 +357,123 @@ public open class CfnFleet(
     public fun baseCapacity(baseCapacity: Number)
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
+     * The compute configuration of the compute fleet.
      *
-     * Information about the compute resources the compute fleet uses. Available values include:
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
      *
-     * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
-     * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    public fun computeConfiguration(computeConfiguration: IResolvable)
+
+    /**
+     * The compute configuration of the compute fleet.
+     *
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    public fun computeConfiguration(computeConfiguration: ComputeConfigurationProperty)
+
+    /**
+     * The compute configuration of the compute fleet.
+     *
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9f22f53c3a5666dfcbba65c1605efd18e2a5216e46148795f829059ed870e379")
+    public
+        fun computeConfiguration(computeConfiguration: ComputeConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * Information about the compute resources the compute fleet uses. Available values include:.
+     *
+     * * `ATTRIBUTE_BASED_COMPUTE` : Specify the amount of vCPUs, memory, disk space, and the type
+     * of machine.
+     *
+     *
+     * If you use `ATTRIBUTE_BASED_COMPUTE` , you must define your attributes by using
+     * `computeConfiguration` . AWS CodeBuild will select the cheapest instance that satisfies your
+     * specified attributes. For more information, see [Reserved capacity environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     * in the *AWS CodeBuild User Guide* .
+     *
+     *
+     * * `BUILD_GENERAL1_SMALL` : Use up to 4 GiB memory and 2 vCPUs for builds.
+     * * `BUILD_GENERAL1_MEDIUM` : Use up to 8 GiB memory and 4 vCPUs for builds.
+     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GiB memory and 8 vCPUs for builds, depending on your
      * environment type.
-     * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on your
-     * environment type.
-     * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage for
-     * builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_GENERAL1_XLARGE` : Use up to 72 GiB memory and 36 vCPUs for builds, depending on
+     * your environment type.
+     * * `BUILD_GENERAL1_2XLARGE` : Use up to 144 GiB memory, 72 vCPUs, and 824 GB of SSD storage
+     * for builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_LAMBDA_1GB` : Use up to 1 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_2GB` : Use up to 2 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_4GB` : Use up to 4 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_8GB` : Use up to 8 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_10GB` : Use up to 10 GiB memory for builds. Only available for environment
+     * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
      *
      * If you use `BUILD_GENERAL1_SMALL` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 3 GB memory and 2 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GB memory, 4 vCPUs, and 1
-     * NVIDIA A10G Tensor Core GPU for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 4 GB memory and 2 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GiB memory, 4 vCPUs, and
+     * 1 NVIDIA A10G Tensor Core GPU for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs on
      * ARM-based processors for builds.
      *
      * If you use `BUILD_GENERAL1_LARGE` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 15 GB memory and 8 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GB memory, 32 vCPUs, and
-     * 4 NVIDIA Tesla V100 GPUs for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 16 GB memory and 8 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GiB memory, 32 vCPUs,
+     * and 4 NVIDIA Tesla V100 GPUs for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs on
      * ARM-based processors for builds.
      *
-     * For more information, see [Build environment compute
-     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+     * For more information, see [On-demand environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment.types)
      * in the *AWS CodeBuild User Guide.*
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computetype)
-     * @param computeType Updating this field is not allowed for `MAC_ARM` . 
+     * @param computeType Information about the compute resources the compute fleet uses. Available
+     * values include:. 
      */
     public fun computeType(computeType: String)
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * The environment type of the compute fleet.
      *
      * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
      * East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).
+     * * The environment type `ARM_EC2` is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_CONTAINER` is available only in regions US East (N. Virginia),
      * US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific
      * (Mumbai).
+     * * The environment type `LINUX_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
      * Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo),
      * and Asia Pacific (Sydney).
+     * * The environment type `MAC_ARM` is available only in regions US East (Ohio), US East (N.
+     * Virginia), US West (Oregon), Europe (Frankfurt), and Asia Pacific (Sydney).
+     * * The environment type `WINDOWS_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `WINDOWS_SERVER_2019_CONTAINER` is available only in regions US East
      * (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo),
      * Asia Pacific (Mumbai) and EU (Ireland).
@@ -313,9 +487,42 @@ public open class CfnFleet(
      * in the *AWS CodeBuild user guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-environmenttype)
-     * @param environmentType Updating this field is not allowed for `MAC_ARM` . 
+     * @param environmentType The environment type of the compute fleet. 
      */
     public fun environmentType(environmentType: String)
+
+    /**
+     * Information about the proxy configurations that apply network access control to your reserved
+     * capacity instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetproxyconfiguration)
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances. 
+     */
+    public fun fleetProxyConfiguration(fleetProxyConfiguration: IResolvable)
+
+    /**
+     * Information about the proxy configurations that apply network access control to your reserved
+     * capacity instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetproxyconfiguration)
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances. 
+     */
+    public fun fleetProxyConfiguration(fleetProxyConfiguration: ProxyConfigurationProperty)
+
+    /**
+     * Information about the proxy configurations that apply network access control to your reserved
+     * capacity instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetproxyconfiguration)
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d7f466d9b685059567f31e91fcd6f5a3e72d80dae10726bd8069cdec656bbe0f")
+    public
+        fun fleetProxyConfiguration(fleetProxyConfiguration: ProxyConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The service role associated with the compute fleet.
@@ -330,44 +537,36 @@ public open class CfnFleet(
     public fun fleetServiceRole(fleetServiceRole: String)
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * Information about the VPC configuration that AWS CodeBuild accesses.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses. 
      */
     public fun fleetVpcConfig(fleetVpcConfig: IResolvable)
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * Information about the VPC configuration that AWS CodeBuild accesses.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses. 
      */
     public fun fleetVpcConfig(fleetVpcConfig: VpcConfigProperty)
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * Information about the VPC configuration that AWS CodeBuild accesses.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2364dacd7b4942e2f55e3813ce37e4e78473c73fbc2e69544b423c50f197c6c1")
     public fun fleetVpcConfig(fleetVpcConfig: VpcConfigProperty.Builder.() -> Unit)
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * The Amazon Machine Image (AMI) of the compute fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-imageid)
-     * @param imageId Updating this field is not allowed for `MAC_ARM` . 
+     * @param imageId The Amazon Machine Image (AMI) of the compute fleet. 
      */
     public fun imageId(imageId: String)
 
@@ -399,6 +598,33 @@ public open class CfnFleet(
      * @param overflowBehavior The compute fleet overflow behavior. 
      */
     public fun overflowBehavior(overflowBehavior: String)
+
+    /**
+     * The scaling configuration of the compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-scalingconfiguration)
+     * @param scalingConfiguration The scaling configuration of the compute fleet. 
+     */
+    public fun scalingConfiguration(scalingConfiguration: IResolvable)
+
+    /**
+     * The scaling configuration of the compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-scalingconfiguration)
+     * @param scalingConfiguration The scaling configuration of the compute fleet. 
+     */
+    public fun scalingConfiguration(scalingConfiguration: ScalingConfigurationInputProperty)
+
+    /**
+     * The scaling configuration of the compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-scalingconfiguration)
+     * @param scalingConfiguration The scaling configuration of the compute fleet. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ca8407e1aadcb082faf18bb1ece916833097131a551e0a7092a9dc552dcca1d8")
+    public
+        fun scalingConfiguration(scalingConfiguration: ScalingConfigurationInputProperty.Builder.() -> Unit)
 
     /**
      * A list of tag key and value pairs associated with this compute fleet.
@@ -443,63 +669,130 @@ public open class CfnFleet(
     }
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
+     * The compute configuration of the compute fleet.
      *
-     * Information about the compute resources the compute fleet uses. Available values include:
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
      *
-     * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
-     * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    override fun computeConfiguration(computeConfiguration: IResolvable) {
+      cdkBuilder.computeConfiguration(computeConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The compute configuration of the compute fleet.
+     *
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    override fun computeConfiguration(computeConfiguration: ComputeConfigurationProperty) {
+      cdkBuilder.computeConfiguration(computeConfiguration.let(ComputeConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The compute configuration of the compute fleet.
+     *
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
+     * @param computeConfiguration The compute configuration of the compute fleet. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9f22f53c3a5666dfcbba65c1605efd18e2a5216e46148795f829059ed870e379")
+    override
+        fun computeConfiguration(computeConfiguration: ComputeConfigurationProperty.Builder.() -> Unit):
+        Unit = computeConfiguration(ComputeConfigurationProperty(computeConfiguration))
+
+    /**
+     * Information about the compute resources the compute fleet uses. Available values include:.
+     *
+     * * `ATTRIBUTE_BASED_COMPUTE` : Specify the amount of vCPUs, memory, disk space, and the type
+     * of machine.
+     *
+     *
+     * If you use `ATTRIBUTE_BASED_COMPUTE` , you must define your attributes by using
+     * `computeConfiguration` . AWS CodeBuild will select the cheapest instance that satisfies your
+     * specified attributes. For more information, see [Reserved capacity environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     * in the *AWS CodeBuild User Guide* .
+     *
+     *
+     * * `BUILD_GENERAL1_SMALL` : Use up to 4 GiB memory and 2 vCPUs for builds.
+     * * `BUILD_GENERAL1_MEDIUM` : Use up to 8 GiB memory and 4 vCPUs for builds.
+     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GiB memory and 8 vCPUs for builds, depending on your
      * environment type.
-     * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on your
-     * environment type.
-     * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage for
-     * builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_GENERAL1_XLARGE` : Use up to 72 GiB memory and 36 vCPUs for builds, depending on
+     * your environment type.
+     * * `BUILD_GENERAL1_2XLARGE` : Use up to 144 GiB memory, 72 vCPUs, and 824 GB of SSD storage
+     * for builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_LAMBDA_1GB` : Use up to 1 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_2GB` : Use up to 2 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_4GB` : Use up to 4 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_8GB` : Use up to 8 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_10GB` : Use up to 10 GiB memory for builds. Only available for environment
+     * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
      *
      * If you use `BUILD_GENERAL1_SMALL` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 3 GB memory and 2 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GB memory, 4 vCPUs, and 1
-     * NVIDIA A10G Tensor Core GPU for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 4 GB memory and 2 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GiB memory, 4 vCPUs, and
+     * 1 NVIDIA A10G Tensor Core GPU for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs on
      * ARM-based processors for builds.
      *
      * If you use `BUILD_GENERAL1_LARGE` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 15 GB memory and 8 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GB memory, 32 vCPUs, and
-     * 4 NVIDIA Tesla V100 GPUs for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 16 GB memory and 8 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GiB memory, 32 vCPUs,
+     * and 4 NVIDIA Tesla V100 GPUs for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs on
      * ARM-based processors for builds.
      *
-     * For more information, see [Build environment compute
-     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+     * For more information, see [On-demand environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment.types)
      * in the *AWS CodeBuild User Guide.*
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computetype)
-     * @param computeType Updating this field is not allowed for `MAC_ARM` . 
+     * @param computeType Information about the compute resources the compute fleet uses. Available
+     * values include:. 
      */
     override fun computeType(computeType: String) {
       cdkBuilder.computeType(computeType)
     }
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * The environment type of the compute fleet.
      *
      * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
      * East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).
+     * * The environment type `ARM_EC2` is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_CONTAINER` is available only in regions US East (N. Virginia),
      * US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific
      * (Mumbai).
+     * * The environment type `LINUX_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
      * Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo),
      * and Asia Pacific (Sydney).
+     * * The environment type `MAC_ARM` is available only in regions US East (Ohio), US East (N.
+     * Virginia), US West (Oregon), Europe (Frankfurt), and Asia Pacific (Sydney).
+     * * The environment type `WINDOWS_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `WINDOWS_SERVER_2019_CONTAINER` is available only in regions US East
      * (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo),
      * Asia Pacific (Mumbai) and EU (Ireland).
@@ -513,11 +806,49 @@ public open class CfnFleet(
      * in the *AWS CodeBuild user guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-environmenttype)
-     * @param environmentType Updating this field is not allowed for `MAC_ARM` . 
+     * @param environmentType The environment type of the compute fleet. 
      */
     override fun environmentType(environmentType: String) {
       cdkBuilder.environmentType(environmentType)
     }
+
+    /**
+     * Information about the proxy configurations that apply network access control to your reserved
+     * capacity instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetproxyconfiguration)
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances. 
+     */
+    override fun fleetProxyConfiguration(fleetProxyConfiguration: IResolvable) {
+      cdkBuilder.fleetProxyConfiguration(fleetProxyConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Information about the proxy configurations that apply network access control to your reserved
+     * capacity instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetproxyconfiguration)
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances. 
+     */
+    override fun fleetProxyConfiguration(fleetProxyConfiguration: ProxyConfigurationProperty) {
+      cdkBuilder.fleetProxyConfiguration(fleetProxyConfiguration.let(ProxyConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Information about the proxy configurations that apply network access control to your reserved
+     * capacity instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetproxyconfiguration)
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d7f466d9b685059567f31e91fcd6f5a3e72d80dae10726bd8069cdec656bbe0f")
+    override
+        fun fleetProxyConfiguration(fleetProxyConfiguration: ProxyConfigurationProperty.Builder.() -> Unit):
+        Unit = fleetProxyConfiguration(ProxyConfigurationProperty(fleetProxyConfiguration))
 
     /**
      * The service role associated with the compute fleet.
@@ -534,36 +865,30 @@ public open class CfnFleet(
     }
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * Information about the VPC configuration that AWS CodeBuild accesses.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses. 
      */
     override fun fleetVpcConfig(fleetVpcConfig: IResolvable) {
       cdkBuilder.fleetVpcConfig(fleetVpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * Information about the VPC configuration that AWS CodeBuild accesses.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses. 
      */
     override fun fleetVpcConfig(fleetVpcConfig: VpcConfigProperty) {
       cdkBuilder.fleetVpcConfig(fleetVpcConfig.let(VpcConfigProperty.Companion::unwrap))
     }
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * Information about the VPC configuration that AWS CodeBuild accesses.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` . 
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("2364dacd7b4942e2f55e3813ce37e4e78473c73fbc2e69544b423c50f197c6c1")
@@ -571,12 +896,10 @@ public open class CfnFleet(
         fleetVpcConfig(VpcConfigProperty(fleetVpcConfig))
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * The Amazon Machine Image (AMI) of the compute fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-imageid)
-     * @param imageId Updating this field is not allowed for `MAC_ARM` . 
+     * @param imageId The Amazon Machine Image (AMI) of the compute fleet. 
      */
     override fun imageId(imageId: String) {
       cdkBuilder.imageId(imageId)
@@ -614,6 +937,38 @@ public open class CfnFleet(
     override fun overflowBehavior(overflowBehavior: String) {
       cdkBuilder.overflowBehavior(overflowBehavior)
     }
+
+    /**
+     * The scaling configuration of the compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-scalingconfiguration)
+     * @param scalingConfiguration The scaling configuration of the compute fleet. 
+     */
+    override fun scalingConfiguration(scalingConfiguration: IResolvable) {
+      cdkBuilder.scalingConfiguration(scalingConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The scaling configuration of the compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-scalingconfiguration)
+     * @param scalingConfiguration The scaling configuration of the compute fleet. 
+     */
+    override fun scalingConfiguration(scalingConfiguration: ScalingConfigurationInputProperty) {
+      cdkBuilder.scalingConfiguration(scalingConfiguration.let(ScalingConfigurationInputProperty.Companion::unwrap))
+    }
+
+    /**
+     * The scaling configuration of the compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-scalingconfiguration)
+     * @param scalingConfiguration The scaling configuration of the compute fleet. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ca8407e1aadcb082faf18bb1ece916833097131a551e0a7092a9dc552dcca1d8")
+    override
+        fun scalingConfiguration(scalingConfiguration: ScalingConfigurationInputProperty.Builder.() -> Unit):
+        Unit = scalingConfiguration(ScalingConfigurationInputProperty(scalingConfiguration))
 
     /**
      * A list of tag key and value pairs associated with this compute fleet.
@@ -660,6 +1015,741 @@ public open class CfnFleet(
 
     internal fun unwrap(wrapped: CfnFleet): software.amazon.awscdk.services.codebuild.CfnFleet =
         wrapped.cdkObject as software.amazon.awscdk.services.codebuild.CfnFleet
+  }
+
+  /**
+   * Contains compute attributes.
+   *
+   * These attributes only need be specified when your project's or fleet's `computeType` is set to
+   * `ATTRIBUTE_BASED_COMPUTE` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * ComputeConfigurationProperty computeConfigurationProperty =
+   * ComputeConfigurationProperty.builder()
+   * .disk(123)
+   * .machineType("machineType")
+   * .memory(123)
+   * .vCpu(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html)
+   */
+  public interface ComputeConfigurationProperty {
+    /**
+     * The amount of disk space of the instance type included in your fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-disk)
+     */
+    public fun disk(): Number? = unwrap(this).getDisk()
+
+    /**
+     * The machine type of the instance type included in your fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-machinetype)
+     */
+    public fun machineType(): String? = unwrap(this).getMachineType()
+
+    /**
+     * The amount of memory of the instance type included in your fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-memory)
+     */
+    public fun memory(): Number? = unwrap(this).getMemory()
+
+    /**
+     * The number of vCPUs of the instance type included in your fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-vcpu)
+     */
+    public fun vCpu(): Number? = unwrap(this).getVCpu()
+
+    /**
+     * A builder for [ComputeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param disk The amount of disk space of the instance type included in your fleet.
+       */
+      public fun disk(disk: Number)
+
+      /**
+       * @param machineType The machine type of the instance type included in your fleet.
+       */
+      public fun machineType(machineType: String)
+
+      /**
+       * @param memory The amount of memory of the instance type included in your fleet.
+       */
+      public fun memory(memory: Number)
+
+      /**
+       * @param vCpu The number of vCPUs of the instance type included in your fleet.
+       */
+      public fun vCpu(vCpu: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnFleet.ComputeConfigurationProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnFleet.ComputeConfigurationProperty.builder()
+
+      /**
+       * @param disk The amount of disk space of the instance type included in your fleet.
+       */
+      override fun disk(disk: Number) {
+        cdkBuilder.disk(disk)
+      }
+
+      /**
+       * @param machineType The machine type of the instance type included in your fleet.
+       */
+      override fun machineType(machineType: String) {
+        cdkBuilder.machineType(machineType)
+      }
+
+      /**
+       * @param memory The amount of memory of the instance type included in your fleet.
+       */
+      override fun memory(memory: Number) {
+        cdkBuilder.memory(memory)
+      }
+
+      /**
+       * @param vCpu The number of vCPUs of the instance type included in your fleet.
+       */
+      override fun vCpu(vCpu: Number) {
+        cdkBuilder.vCpu(vCpu)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codebuild.CfnFleet.ComputeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.ComputeConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ComputeConfigurationProperty {
+      /**
+       * The amount of disk space of the instance type included in your fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-disk)
+       */
+      override fun disk(): Number? = unwrap(this).getDisk()
+
+      /**
+       * The machine type of the instance type included in your fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-machinetype)
+       */
+      override fun machineType(): String? = unwrap(this).getMachineType()
+
+      /**
+       * The amount of memory of the instance type included in your fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-memory)
+       */
+      override fun memory(): Number? = unwrap(this).getMemory()
+
+      /**
+       * The number of vCPUs of the instance type included in your fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-computeconfiguration.html#cfn-codebuild-fleet-computeconfiguration-vcpu)
+       */
+      override fun vCpu(): Number? = unwrap(this).getVCpu()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComputeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.ComputeConfigurationProperty):
+          ComputeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ComputeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComputeConfigurationProperty):
+          software.amazon.awscdk.services.codebuild.CfnFleet.ComputeConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnFleet.ComputeConfigurationProperty
+    }
+  }
+
+  /**
+   * Information about the proxy rule for your reserved capacity instances.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * FleetProxyRuleProperty fleetProxyRuleProperty = FleetProxyRuleProperty.builder()
+   * .effect("effect")
+   * .entities(List.of("entities"))
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-fleetproxyrule.html)
+   */
+  public interface FleetProxyRuleProperty {
+    /**
+     * The behavior of the proxy rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-fleetproxyrule.html#cfn-codebuild-fleet-fleetproxyrule-effect)
+     */
+    public fun effect(): String? = unwrap(this).getEffect()
+
+    /**
+     * The destination of the proxy rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-fleetproxyrule.html#cfn-codebuild-fleet-fleetproxyrule-entities)
+     */
+    public fun entities(): List<String> = unwrap(this).getEntities() ?: emptyList()
+
+    /**
+     * The type of proxy rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-fleetproxyrule.html#cfn-codebuild-fleet-fleetproxyrule-type)
+     */
+    public fun type(): String? = unwrap(this).getType()
+
+    /**
+     * A builder for [FleetProxyRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param effect The behavior of the proxy rule.
+       */
+      public fun effect(effect: String)
+
+      /**
+       * @param entities The destination of the proxy rule.
+       */
+      public fun entities(entities: List<String>)
+
+      /**
+       * @param entities The destination of the proxy rule.
+       */
+      public fun entities(vararg entities: String)
+
+      /**
+       * @param type The type of proxy rule.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnFleet.FleetProxyRuleProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnFleet.FleetProxyRuleProperty.builder()
+
+      /**
+       * @param effect The behavior of the proxy rule.
+       */
+      override fun effect(effect: String) {
+        cdkBuilder.effect(effect)
+      }
+
+      /**
+       * @param entities The destination of the proxy rule.
+       */
+      override fun entities(entities: List<String>) {
+        cdkBuilder.entities(entities)
+      }
+
+      /**
+       * @param entities The destination of the proxy rule.
+       */
+      override fun entities(vararg entities: String): Unit = entities(entities.toList())
+
+      /**
+       * @param type The type of proxy rule.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build(): software.amazon.awscdk.services.codebuild.CfnFleet.FleetProxyRuleProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.FleetProxyRuleProperty,
+    ) : CdkObject(cdkObject),
+        FleetProxyRuleProperty {
+      /**
+       * The behavior of the proxy rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-fleetproxyrule.html#cfn-codebuild-fleet-fleetproxyrule-effect)
+       */
+      override fun effect(): String? = unwrap(this).getEffect()
+
+      /**
+       * The destination of the proxy rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-fleetproxyrule.html#cfn-codebuild-fleet-fleetproxyrule-entities)
+       */
+      override fun entities(): List<String> = unwrap(this).getEntities() ?: emptyList()
+
+      /**
+       * The type of proxy rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-fleetproxyrule.html#cfn-codebuild-fleet-fleetproxyrule-type)
+       */
+      override fun type(): String? = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FleetProxyRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.FleetProxyRuleProperty):
+          FleetProxyRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? FleetProxyRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FleetProxyRuleProperty):
+          software.amazon.awscdk.services.codebuild.CfnFleet.FleetProxyRuleProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnFleet.FleetProxyRuleProperty
+    }
+  }
+
+  /**
+   * Information about the proxy configurations that apply network access control to your reserved
+   * capacity instances.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * ProxyConfigurationProperty proxyConfigurationProperty = ProxyConfigurationProperty.builder()
+   * .defaultBehavior("defaultBehavior")
+   * .orderedProxyRules(List.of(FleetProxyRuleProperty.builder()
+   * .effect("effect")
+   * .entities(List.of("entities"))
+   * .type("type")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-proxyconfiguration.html)
+   */
+  public interface ProxyConfigurationProperty {
+    /**
+     * The default behavior of outgoing traffic.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-proxyconfiguration.html#cfn-codebuild-fleet-proxyconfiguration-defaultbehavior)
+     */
+    public fun defaultBehavior(): String? = unwrap(this).getDefaultBehavior()
+
+    /**
+     * An array of `FleetProxyRule` objects that represent the specified destination domains or IPs
+     * to allow or deny network access control to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-proxyconfiguration.html#cfn-codebuild-fleet-proxyconfiguration-orderedproxyrules)
+     */
+    public fun orderedProxyRules(): Any? = unwrap(this).getOrderedProxyRules()
+
+    /**
+     * A builder for [ProxyConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param defaultBehavior The default behavior of outgoing traffic.
+       */
+      public fun defaultBehavior(defaultBehavior: String)
+
+      /**
+       * @param orderedProxyRules An array of `FleetProxyRule` objects that represent the specified
+       * destination domains or IPs to allow or deny network access control to.
+       */
+      public fun orderedProxyRules(orderedProxyRules: IResolvable)
+
+      /**
+       * @param orderedProxyRules An array of `FleetProxyRule` objects that represent the specified
+       * destination domains or IPs to allow or deny network access control to.
+       */
+      public fun orderedProxyRules(orderedProxyRules: List<Any>)
+
+      /**
+       * @param orderedProxyRules An array of `FleetProxyRule` objects that represent the specified
+       * destination domains or IPs to allow or deny network access control to.
+       */
+      public fun orderedProxyRules(vararg orderedProxyRules: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnFleet.ProxyConfigurationProperty.Builder =
+          software.amazon.awscdk.services.codebuild.CfnFleet.ProxyConfigurationProperty.builder()
+
+      /**
+       * @param defaultBehavior The default behavior of outgoing traffic.
+       */
+      override fun defaultBehavior(defaultBehavior: String) {
+        cdkBuilder.defaultBehavior(defaultBehavior)
+      }
+
+      /**
+       * @param orderedProxyRules An array of `FleetProxyRule` objects that represent the specified
+       * destination domains or IPs to allow or deny network access control to.
+       */
+      override fun orderedProxyRules(orderedProxyRules: IResolvable) {
+        cdkBuilder.orderedProxyRules(orderedProxyRules.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param orderedProxyRules An array of `FleetProxyRule` objects that represent the specified
+       * destination domains or IPs to allow or deny network access control to.
+       */
+      override fun orderedProxyRules(orderedProxyRules: List<Any>) {
+        cdkBuilder.orderedProxyRules(orderedProxyRules.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param orderedProxyRules An array of `FleetProxyRule` objects that represent the specified
+       * destination domains or IPs to allow or deny network access control to.
+       */
+      override fun orderedProxyRules(vararg orderedProxyRules: Any): Unit =
+          orderedProxyRules(orderedProxyRules.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codebuild.CfnFleet.ProxyConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.ProxyConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ProxyConfigurationProperty {
+      /**
+       * The default behavior of outgoing traffic.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-proxyconfiguration.html#cfn-codebuild-fleet-proxyconfiguration-defaultbehavior)
+       */
+      override fun defaultBehavior(): String? = unwrap(this).getDefaultBehavior()
+
+      /**
+       * An array of `FleetProxyRule` objects that represent the specified destination domains or
+       * IPs to allow or deny network access control to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-proxyconfiguration.html#cfn-codebuild-fleet-proxyconfiguration-orderedproxyrules)
+       */
+      override fun orderedProxyRules(): Any? = unwrap(this).getOrderedProxyRules()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ProxyConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.ProxyConfigurationProperty):
+          ProxyConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ProxyConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ProxyConfigurationProperty):
+          software.amazon.awscdk.services.codebuild.CfnFleet.ProxyConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnFleet.ProxyConfigurationProperty
+    }
+  }
+
+  /**
+   * The scaling configuration input of a compute fleet.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * ScalingConfigurationInputProperty scalingConfigurationInputProperty =
+   * ScalingConfigurationInputProperty.builder()
+   * .maxCapacity(123)
+   * .scalingType("scalingType")
+   * .targetTrackingScalingConfigs(List.of(TargetTrackingScalingConfigurationProperty.builder()
+   * .metricType("metricType")
+   * .targetValue(123)
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-scalingconfigurationinput.html)
+   */
+  public interface ScalingConfigurationInputProperty {
+    /**
+     * The maximum number of instances in the ﬂeet when auto-scaling.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-scalingconfigurationinput.html#cfn-codebuild-fleet-scalingconfigurationinput-maxcapacity)
+     */
+    public fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
+
+    /**
+     * The scaling type for a compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-scalingconfigurationinput.html#cfn-codebuild-fleet-scalingconfigurationinput-scalingtype)
+     */
+    public fun scalingType(): String? = unwrap(this).getScalingType()
+
+    /**
+     * A list of `TargetTrackingScalingConfiguration` objects.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-scalingconfigurationinput.html#cfn-codebuild-fleet-scalingconfigurationinput-targettrackingscalingconfigs)
+     */
+    public fun targetTrackingScalingConfigs(): Any? = unwrap(this).getTargetTrackingScalingConfigs()
+
+    /**
+     * A builder for [ScalingConfigurationInputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maxCapacity The maximum number of instances in the ﬂeet when auto-scaling.
+       */
+      public fun maxCapacity(maxCapacity: Number)
+
+      /**
+       * @param scalingType The scaling type for a compute fleet.
+       */
+      public fun scalingType(scalingType: String)
+
+      /**
+       * @param targetTrackingScalingConfigs A list of `TargetTrackingScalingConfiguration` objects.
+       */
+      public fun targetTrackingScalingConfigs(targetTrackingScalingConfigs: IResolvable)
+
+      /**
+       * @param targetTrackingScalingConfigs A list of `TargetTrackingScalingConfiguration` objects.
+       */
+      public fun targetTrackingScalingConfigs(targetTrackingScalingConfigs: List<Any>)
+
+      /**
+       * @param targetTrackingScalingConfigs A list of `TargetTrackingScalingConfiguration` objects.
+       */
+      public fun targetTrackingScalingConfigs(vararg targetTrackingScalingConfigs: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnFleet.ScalingConfigurationInputProperty.Builder
+          =
+          software.amazon.awscdk.services.codebuild.CfnFleet.ScalingConfigurationInputProperty.builder()
+
+      /**
+       * @param maxCapacity The maximum number of instances in the ﬂeet when auto-scaling.
+       */
+      override fun maxCapacity(maxCapacity: Number) {
+        cdkBuilder.maxCapacity(maxCapacity)
+      }
+
+      /**
+       * @param scalingType The scaling type for a compute fleet.
+       */
+      override fun scalingType(scalingType: String) {
+        cdkBuilder.scalingType(scalingType)
+      }
+
+      /**
+       * @param targetTrackingScalingConfigs A list of `TargetTrackingScalingConfiguration` objects.
+       */
+      override fun targetTrackingScalingConfigs(targetTrackingScalingConfigs: IResolvable) {
+        cdkBuilder.targetTrackingScalingConfigs(targetTrackingScalingConfigs.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param targetTrackingScalingConfigs A list of `TargetTrackingScalingConfiguration` objects.
+       */
+      override fun targetTrackingScalingConfigs(targetTrackingScalingConfigs: List<Any>) {
+        cdkBuilder.targetTrackingScalingConfigs(targetTrackingScalingConfigs.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param targetTrackingScalingConfigs A list of `TargetTrackingScalingConfiguration` objects.
+       */
+      override fun targetTrackingScalingConfigs(vararg targetTrackingScalingConfigs: Any): Unit =
+          targetTrackingScalingConfigs(targetTrackingScalingConfigs.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.codebuild.CfnFleet.ScalingConfigurationInputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.ScalingConfigurationInputProperty,
+    ) : CdkObject(cdkObject),
+        ScalingConfigurationInputProperty {
+      /**
+       * The maximum number of instances in the ﬂeet when auto-scaling.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-scalingconfigurationinput.html#cfn-codebuild-fleet-scalingconfigurationinput-maxcapacity)
+       */
+      override fun maxCapacity(): Number? = unwrap(this).getMaxCapacity()
+
+      /**
+       * The scaling type for a compute fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-scalingconfigurationinput.html#cfn-codebuild-fleet-scalingconfigurationinput-scalingtype)
+       */
+      override fun scalingType(): String? = unwrap(this).getScalingType()
+
+      /**
+       * A list of `TargetTrackingScalingConfiguration` objects.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-scalingconfigurationinput.html#cfn-codebuild-fleet-scalingconfigurationinput-targettrackingscalingconfigs)
+       */
+      override fun targetTrackingScalingConfigs(): Any? =
+          unwrap(this).getTargetTrackingScalingConfigs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ScalingConfigurationInputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.ScalingConfigurationInputProperty):
+          ScalingConfigurationInputProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ScalingConfigurationInputProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ScalingConfigurationInputProperty):
+          software.amazon.awscdk.services.codebuild.CfnFleet.ScalingConfigurationInputProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnFleet.ScalingConfigurationInputProperty
+    }
+  }
+
+  /**
+   * Defines when a new instance is auto-scaled into the compute fleet.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codebuild.*;
+   * TargetTrackingScalingConfigurationProperty targetTrackingScalingConfigurationProperty =
+   * TargetTrackingScalingConfigurationProperty.builder()
+   * .metricType("metricType")
+   * .targetValue(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-targettrackingscalingconfiguration.html)
+   */
+  public interface TargetTrackingScalingConfigurationProperty {
+    /**
+     * The metric type to determine auto-scaling.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-targettrackingscalingconfiguration.html#cfn-codebuild-fleet-targettrackingscalingconfiguration-metrictype)
+     */
+    public fun metricType(): String? = unwrap(this).getMetricType()
+
+    /**
+     * The value of `metricType` when to start scaling.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-targettrackingscalingconfiguration.html#cfn-codebuild-fleet-targettrackingscalingconfiguration-targetvalue)
+     */
+    public fun targetValue(): Number? = unwrap(this).getTargetValue()
+
+    /**
+     * A builder for [TargetTrackingScalingConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param metricType The metric type to determine auto-scaling.
+       */
+      public fun metricType(metricType: String)
+
+      /**
+       * @param targetValue The value of `metricType` when to start scaling.
+       */
+      public fun targetValue(targetValue: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codebuild.CfnFleet.TargetTrackingScalingConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.codebuild.CfnFleet.TargetTrackingScalingConfigurationProperty.builder()
+
+      /**
+       * @param metricType The metric type to determine auto-scaling.
+       */
+      override fun metricType(metricType: String) {
+        cdkBuilder.metricType(metricType)
+      }
+
+      /**
+       * @param targetValue The value of `metricType` when to start scaling.
+       */
+      override fun targetValue(targetValue: Number) {
+        cdkBuilder.targetValue(targetValue)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codebuild.CfnFleet.TargetTrackingScalingConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.TargetTrackingScalingConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        TargetTrackingScalingConfigurationProperty {
+      /**
+       * The metric type to determine auto-scaling.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-targettrackingscalingconfiguration.html#cfn-codebuild-fleet-targettrackingscalingconfiguration-metrictype)
+       */
+      override fun metricType(): String? = unwrap(this).getMetricType()
+
+      /**
+       * The value of `metricType` when to start scaling.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codebuild-fleet-targettrackingscalingconfiguration.html#cfn-codebuild-fleet-targettrackingscalingconfiguration-targetvalue)
+       */
+      override fun targetValue(): Number? = unwrap(this).getTargetValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          TargetTrackingScalingConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codebuild.CfnFleet.TargetTrackingScalingConfigurationProperty):
+          TargetTrackingScalingConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TargetTrackingScalingConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TargetTrackingScalingConfigurationProperty):
+          software.amazon.awscdk.services.codebuild.CfnFleet.TargetTrackingScalingConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codebuild.CfnFleet.TargetTrackingScalingConfigurationProperty
+    }
   }
 
   /**

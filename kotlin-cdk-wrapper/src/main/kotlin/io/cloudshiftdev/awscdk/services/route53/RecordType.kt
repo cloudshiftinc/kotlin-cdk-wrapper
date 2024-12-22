@@ -10,6 +10,7 @@ public enum class RecordType(
   CAA(software.amazon.awscdk.services.route53.RecordType.CAA),
   CNAME(software.amazon.awscdk.services.route53.RecordType.CNAME),
   DS(software.amazon.awscdk.services.route53.RecordType.DS),
+  HTTPS(software.amazon.awscdk.services.route53.RecordType.HTTPS),
   MX(software.amazon.awscdk.services.route53.RecordType.MX),
   NAPTR(software.amazon.awscdk.services.route53.RecordType.NAPTR),
   NS(software.amazon.awscdk.services.route53.RecordType.NS),
@@ -17,6 +18,9 @@ public enum class RecordType(
   SOA(software.amazon.awscdk.services.route53.RecordType.SOA),
   SPF(software.amazon.awscdk.services.route53.RecordType.SPF),
   SRV(software.amazon.awscdk.services.route53.RecordType.SRV),
+  SSHFP(software.amazon.awscdk.services.route53.RecordType.SSHFP),
+  SVCB(software.amazon.awscdk.services.route53.RecordType.SVCB),
+  TLSA(software.amazon.awscdk.services.route53.RecordType.TLSA),
   TXT(software.amazon.awscdk.services.route53.RecordType.TXT),
   ;
 
@@ -28,6 +32,7 @@ public enum class RecordType(
       software.amazon.awscdk.services.route53.RecordType.CAA -> RecordType.CAA
       software.amazon.awscdk.services.route53.RecordType.CNAME -> RecordType.CNAME
       software.amazon.awscdk.services.route53.RecordType.DS -> RecordType.DS
+      software.amazon.awscdk.services.route53.RecordType.HTTPS -> RecordType.HTTPS
       software.amazon.awscdk.services.route53.RecordType.MX -> RecordType.MX
       software.amazon.awscdk.services.route53.RecordType.NAPTR -> RecordType.NAPTR
       software.amazon.awscdk.services.route53.RecordType.NS -> RecordType.NS
@@ -35,6 +40,9 @@ public enum class RecordType(
       software.amazon.awscdk.services.route53.RecordType.SOA -> RecordType.SOA
       software.amazon.awscdk.services.route53.RecordType.SPF -> RecordType.SPF
       software.amazon.awscdk.services.route53.RecordType.SRV -> RecordType.SRV
+      software.amazon.awscdk.services.route53.RecordType.SSHFP -> RecordType.SSHFP
+      software.amazon.awscdk.services.route53.RecordType.SVCB -> RecordType.SVCB
+      software.amazon.awscdk.services.route53.RecordType.TLSA -> RecordType.TLSA
       software.amazon.awscdk.services.route53.RecordType.TXT -> RecordType.TXT
     }
 

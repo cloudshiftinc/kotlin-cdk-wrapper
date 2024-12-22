@@ -590,6 +590,19 @@ public open class ContainerDefinition(
     public fun dockerSecurityOptions(vararg dockerSecurityOptions: String)
 
     /**
+     * Enable a restart policy for a container.
+     *
+     * When you set up a restart policy, Amazon ECS can restart the container without needing to
+     * replace the task.
+     *
+     * Default: - false unless `restartIgnoredExitCodes` or `restartAttemptPeriod` is set.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+     * @param enableRestartPolicy Enable a restart policy for a container. 
+     */
+    public fun enableRestartPolicy(enableRestartPolicy: Boolean)
+
+    /**
      * The ENTRYPOINT value to pass to the container.
      *
      * Default: - Entry point configured in container.
@@ -855,6 +868,54 @@ public open class ContainerDefinition(
      * access to its root file system. 
      */
     public fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean)
+
+    /**
+     * A period of time that the container must run for before a restart can be attempted.
+     *
+     * A container can be restarted only once every `restartAttemptPeriod` seconds.
+     * If a container isn't able to run for this time period and exits early, it will not be
+     * restarted.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can set a minimum `restartAttemptPeriod` of 60 seconds and a maximum
+     * `restartAttemptPeriod`
+     * of 1800 seconds.
+     *
+     * Default: - Duration.seconds(300) if `enableRestartPolicy` is true, otherwise no period.
+     *
+     * @param restartAttemptPeriod A period of time that the container must run for before a restart
+     * can be attempted. 
+     */
+    public fun restartAttemptPeriod(restartAttemptPeriod: Duration)
+
+    /**
+     * A list of exit codes that Amazon ECS will ignore and not attempt a restart on.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can specify a maximum of 50 container exit codes.
+     *
+     * Default: - No exit codes are ignored.
+     *
+     * @param restartIgnoredExitCodes A list of exit codes that Amazon ECS will ignore and not
+     * attempt a restart on. 
+     */
+    public fun restartIgnoredExitCodes(restartIgnoredExitCodes: List<Number>)
+
+    /**
+     * A list of exit codes that Amazon ECS will ignore and not attempt a restart on.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can specify a maximum of 50 container exit codes.
+     *
+     * Default: - No exit codes are ignored.
+     *
+     * @param restartIgnoredExitCodes A list of exit codes that Amazon ECS will ignore and not
+     * attempt a restart on. 
+     */
+    public fun restartIgnoredExitCodes(vararg restartIgnoredExitCodes: Number)
 
     /**
      * The secret environment variables to pass to the container.
@@ -1129,6 +1190,21 @@ public open class ContainerDefinition(
      */
     override fun dockerSecurityOptions(vararg dockerSecurityOptions: String): Unit =
         dockerSecurityOptions(dockerSecurityOptions.toList())
+
+    /**
+     * Enable a restart policy for a container.
+     *
+     * When you set up a restart policy, Amazon ECS can restart the container without needing to
+     * replace the task.
+     *
+     * Default: - false unless `restartIgnoredExitCodes` or `restartAttemptPeriod` is set.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+     * @param enableRestartPolicy Enable a restart policy for a container. 
+     */
+    override fun enableRestartPolicy(enableRestartPolicy: Boolean) {
+      cdkBuilder.enableRestartPolicy(enableRestartPolicy)
+    }
 
     /**
      * The ENTRYPOINT value to pass to the container.
@@ -1438,6 +1514,59 @@ public open class ContainerDefinition(
     override fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean) {
       cdkBuilder.readonlyRootFilesystem(readonlyRootFilesystem)
     }
+
+    /**
+     * A period of time that the container must run for before a restart can be attempted.
+     *
+     * A container can be restarted only once every `restartAttemptPeriod` seconds.
+     * If a container isn't able to run for this time period and exits early, it will not be
+     * restarted.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can set a minimum `restartAttemptPeriod` of 60 seconds and a maximum
+     * `restartAttemptPeriod`
+     * of 1800 seconds.
+     *
+     * Default: - Duration.seconds(300) if `enableRestartPolicy` is true, otherwise no period.
+     *
+     * @param restartAttemptPeriod A period of time that the container must run for before a restart
+     * can be attempted. 
+     */
+    override fun restartAttemptPeriod(restartAttemptPeriod: Duration) {
+      cdkBuilder.restartAttemptPeriod(restartAttemptPeriod.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * A list of exit codes that Amazon ECS will ignore and not attempt a restart on.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can specify a maximum of 50 container exit codes.
+     *
+     * Default: - No exit codes are ignored.
+     *
+     * @param restartIgnoredExitCodes A list of exit codes that Amazon ECS will ignore and not
+     * attempt a restart on. 
+     */
+    override fun restartIgnoredExitCodes(restartIgnoredExitCodes: List<Number>) {
+      cdkBuilder.restartIgnoredExitCodes(restartIgnoredExitCodes)
+    }
+
+    /**
+     * A list of exit codes that Amazon ECS will ignore and not attempt a restart on.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can specify a maximum of 50 container exit codes.
+     *
+     * Default: - No exit codes are ignored.
+     *
+     * @param restartIgnoredExitCodes A list of exit codes that Amazon ECS will ignore and not
+     * attempt a restart on. 
+     */
+    override fun restartIgnoredExitCodes(vararg restartIgnoredExitCodes: Number): Unit =
+        restartIgnoredExitCodes(restartIgnoredExitCodes.toList())
 
     /**
      * The secret environment variables to pass to the container.

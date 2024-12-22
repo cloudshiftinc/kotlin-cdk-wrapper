@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.sns.subscriptions
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.sns.DeliveryPolicy
 import io.cloudshiftdev.awscdk.services.sns.FilterOrPolicy
 import io.cloudshiftdev.awscdk.services.sns.ITopic
 import io.cloudshiftdev.awscdk.services.sns.ITopicSubscription
@@ -15,6 +16,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Use a URL as a subscription target.
@@ -25,7 +27,8 @@ import kotlin.collections.Map
  *
  * ```
  * Topic myTopic = new Topic(this, "MyTopic");
- * myTopic.addSubscription(new UrlSubscription("https://foobar.com/"));
+ * CfnParameter url = new CfnParameter(this, "url-param");
+ * myTopic.addSubscription(new UrlSubscription(url.getValueAsString()));
  * ```
  *
  * [Documentation](https://docs.aws.amazon.com/sns/latest/dg/sns-http-https-endpoint-as-subscriber.html)
@@ -70,6 +73,28 @@ public open class UrlSubscription(
      * @param deadLetterQueue Queue to be used as dead letter queue. 
      */
     public fun deadLetterQueue(deadLetterQueue: IQueue)
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     *
+     * @param deliveryPolicy The delivery policy. 
+     */
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy)
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     *
+     * @param deliveryPolicy The delivery policy. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2077efc95ee5ee87aa401dcd5427db1560b4e984fffa3e24bdfa1882abddf786")
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit)
 
     /**
      * The filter policy.
@@ -132,6 +157,31 @@ public open class UrlSubscription(
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
       cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     *
+     * @param deliveryPolicy The delivery policy. 
+     */
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy) {
+      cdkBuilder.deliveryPolicy(deliveryPolicy.let(DeliveryPolicy.Companion::unwrap))
+    }
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     *
+     * @param deliveryPolicy The delivery policy. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2077efc95ee5ee87aa401dcd5427db1560b4e984fffa3e24bdfa1882abddf786")
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit): Unit =
+        deliveryPolicy(DeliveryPolicy(deliveryPolicy))
 
     /**
      * The filter policy.

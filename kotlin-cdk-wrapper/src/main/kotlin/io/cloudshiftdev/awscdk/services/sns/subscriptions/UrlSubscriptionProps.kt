@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.sns.subscriptions
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.sns.DeliveryPolicy
 import io.cloudshiftdev.awscdk.services.sns.FilterOrPolicy
 import io.cloudshiftdev.awscdk.services.sns.SubscriptionFilter
 import io.cloudshiftdev.awscdk.services.sns.SubscriptionProtocol
@@ -13,6 +14,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Options for URL subscriptions.
@@ -20,26 +22,36 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.sns.*;
- * import io.cloudshiftdev.awscdk.services.sns.subscriptions.*;
- * import io.cloudshiftdev.awscdk.services.sqs.*;
- * FilterOrPolicy filterOrPolicy;
- * Queue queue;
- * SubscriptionFilter subscriptionFilter;
- * UrlSubscriptionProps urlSubscriptionProps = UrlSubscriptionProps.builder()
- * .deadLetterQueue(queue)
- * .filterPolicy(Map.of(
- * "filterPolicyKey", subscriptionFilter))
- * .filterPolicyWithMessageBody(Map.of(
- * "filterPolicyWithMessageBodyKey", filterOrPolicy))
- * .protocol(SubscriptionProtocol.HTTP)
- * .rawMessageDelivery(false)
- * .build();
+ * Topic myTopic = new Topic(this, "MyTopic");
+ * myTopic.addSubscription(
+ * UrlSubscription.Builder.create("https://foobar.com/")
+ * .deliveryPolicy(DeliveryPolicy.builder()
+ * .healthyRetryPolicy(HealthyRetryPolicy.builder()
+ * .minDelayTarget(Duration.seconds(5))
+ * .maxDelayTarget(Duration.seconds(10))
+ * .numRetries(6)
+ * .backoffFunction(BackoffFunction.EXPONENTIAL)
+ * .build())
+ * .throttlePolicy(ThrottlePolicy.builder()
+ * .maxReceivesPerSecond(10)
+ * .build())
+ * .requestPolicy(RequestPolicy.builder()
+ * .headerContentType("application/json")
+ * .build())
+ * .build())
+ * .build());
  * ```
  */
 public interface UrlSubscriptionProps : SubscriptionProps {
+  /**
+   * The delivery policy.
+   *
+   * Default: - if the initial delivery of the message fails, three retries with a delay between
+   * failed attempts set at 20 seconds
+   */
+  public fun deliveryPolicy(): DeliveryPolicy? =
+      unwrap(this).getDeliveryPolicy()?.let(DeliveryPolicy::wrap)
+
   /**
    * The subscription's protocol.
    *
@@ -67,6 +79,18 @@ public interface UrlSubscriptionProps : SubscriptionProps {
      * If not passed no dead letter queue is enabled.
      */
     public fun deadLetterQueue(deadLetterQueue: IQueue)
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy)
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("80ff28c9732efceee233b16c54975c46eb955e14a45b8a87e60a3448ecca8abd")
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit)
 
     /**
      * @param filterPolicy The filter policy.
@@ -104,6 +128,21 @@ public interface UrlSubscriptionProps : SubscriptionProps {
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
       cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy) {
+      cdkBuilder.deliveryPolicy(deliveryPolicy.let(DeliveryPolicy.Companion::unwrap))
+    }
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("80ff28c9732efceee233b16c54975c46eb955e14a45b8a87e60a3448ecca8abd")
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit): Unit =
+        deliveryPolicy(DeliveryPolicy(deliveryPolicy))
 
     /**
      * @param filterPolicy The filter policy.
@@ -153,6 +192,15 @@ public interface UrlSubscriptionProps : SubscriptionProps {
      * Default: - No dead letter queue enabled.
      */
     override fun deadLetterQueue(): IQueue? = unwrap(this).getDeadLetterQueue()?.let(IQueue::wrap)
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     */
+    override fun deliveryPolicy(): DeliveryPolicy? =
+        unwrap(this).getDeliveryPolicy()?.let(DeliveryPolicy::wrap)
 
     /**
      * The filter policy.

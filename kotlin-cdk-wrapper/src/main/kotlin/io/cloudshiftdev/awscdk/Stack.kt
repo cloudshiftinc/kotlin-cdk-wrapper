@@ -127,7 +127,7 @@ public open class Stack(
   }
 
   /**
-   * Adds an arbitary key-value pair, with information you want to record about the stack.
+   * Adds an arbitrary key-value pair, with information you want to record about the stack.
    *
    * These get translated to the Metadata section of the generated template.
    *

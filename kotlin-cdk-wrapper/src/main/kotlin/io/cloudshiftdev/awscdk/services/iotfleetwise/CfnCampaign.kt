@@ -28,9 +28,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * collect and transfer data to the cloud. You create campaigns in the cloud. After you or your team
  * approve campaigns, AWS IoT FleetWise automatically deploys them to vehicles.
  *
- * For more information, see [Collect and transfer data with
- * campaigns](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/campaigns.html) in the
+ * For more information, see
+ * [Campaigns](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/campaigns.html) in the
  * *AWS IoT FleetWise Developer Guide* .
+ *
+ *
+ * Access to certain AWS IoT FleetWise features is currently gated. For more information, see [AWS
+ * Region and feature
+ * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+ * in the *AWS IoT FleetWise Developer Guide* .
+ *
  *
  * Example:
  *
@@ -39,7 +46,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
  * CfnCampaign cfnCampaign = CfnCampaign.Builder.create(this, "MyCfnCampaign")
- * .action("action")
  * .collectionScheme(CollectionSchemeProperty.builder()
  * .conditionBasedCollectionScheme(ConditionBasedCollectionSchemeProperty.builder()
  * .expression("expression")
@@ -56,6 +62,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .signalCatalogArn("signalCatalogArn")
  * .targetArn("targetArn")
  * // the properties below are optional
+ * .action("action")
  * .compression("compression")
  * .dataDestinationConfigs(List.of(DataDestinationConfigProperty.builder()
  * .mqttTopicConfig(MqttTopicConfigProperty.builder()
@@ -75,6 +82,26 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build()))
  * .dataExtraDimensions(List.of("dataExtraDimensions"))
+ * .dataPartitions(List.of(DataPartitionProperty.builder()
+ * .id("id")
+ * .storageOptions(DataPartitionStorageOptionsProperty.builder()
+ * .maximumSize(StorageMaximumSizeProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .minimumTimeToLive(StorageMinimumTimeToLiveProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .storageLocation("storageLocation")
+ * .build())
+ * // the properties below are optional
+ * .uploadOptions(DataPartitionUploadOptionsProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .conditionLanguageVersion(123)
+ * .build())
+ * .build()))
  * .description("description")
  * .diagnosticsMode("diagnosticsMode")
  * .expiryTime("expiryTime")
@@ -83,6 +110,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .signalsToCollect(List.of(SignalInformationProperty.builder()
  * .name("name")
  * // the properties below are optional
+ * .dataPartitionId("dataPartitionId")
  * .maxSampleCount(123)
  * .minimumSamplingIntervalMs(123)
  * .build()))
@@ -138,7 +166,7 @@ public open class CfnCampaign(
    *
    * The action can be one of the following:.
    */
-  public open fun action(): String = unwrap(this).getAction()
+  public open fun action(): String? = unwrap(this).getAction()
 
   /**
    * Specifies how to update a campaign.
@@ -200,94 +228,116 @@ public open class CfnCampaign(
       collectionScheme(CollectionSchemeProperty(`value`))
 
   /**
-   * (Optional) Whether to compress signals before transmitting data to AWS IoT FleetWise .
+   * Whether to compress signals before transmitting data to AWS IoT FleetWise .
    */
   public open fun compression(): String? = unwrap(this).getCompression()
 
   /**
-   * (Optional) Whether to compress signals before transmitting data to AWS IoT FleetWise .
+   * Whether to compress signals before transmitting data to AWS IoT FleetWise .
    */
   public open fun compression(`value`: String) {
     unwrap(this).setCompression(`value`)
   }
 
   /**
-   * (Optional) The destination where the campaign sends data.
+   * The destination where the campaign sends data.
    */
   public open fun dataDestinationConfigs(): Any? = unwrap(this).getDataDestinationConfigs()
 
   /**
-   * (Optional) The destination where the campaign sends data.
+   * The destination where the campaign sends data.
    */
   public open fun dataDestinationConfigs(`value`: IResolvable) {
     unwrap(this).setDataDestinationConfigs(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * (Optional) The destination where the campaign sends data.
+   * The destination where the campaign sends data.
    */
   public open fun dataDestinationConfigs(`value`: List<Any>) {
     unwrap(this).setDataDestinationConfigs(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * (Optional) The destination where the campaign sends data.
+   * The destination where the campaign sends data.
    */
   public open fun dataDestinationConfigs(vararg `value`: Any): Unit =
       dataDestinationConfigs(`value`.toList())
 
   /**
-   * (Optional) A list of vehicle attributes to associate with a campaign.
+   * A list of vehicle attributes to associate with a campaign.
    */
   public open fun dataExtraDimensions(): List<String> = unwrap(this).getDataExtraDimensions() ?:
       emptyList()
 
   /**
-   * (Optional) A list of vehicle attributes to associate with a campaign.
+   * A list of vehicle attributes to associate with a campaign.
    */
   public open fun dataExtraDimensions(`value`: List<String>) {
     unwrap(this).setDataExtraDimensions(`value`)
   }
 
   /**
-   * (Optional) A list of vehicle attributes to associate with a campaign.
+   * A list of vehicle attributes to associate with a campaign.
    */
   public open fun dataExtraDimensions(vararg `value`: String): Unit =
       dataExtraDimensions(`value`.toList())
 
   /**
-   * (Optional) The description of the campaign.
+   * The data partitions associated with the signals collected from the vehicle.
+   */
+  public open fun dataPartitions(): Any? = unwrap(this).getDataPartitions()
+
+  /**
+   * The data partitions associated with the signals collected from the vehicle.
+   */
+  public open fun dataPartitions(`value`: IResolvable) {
+    unwrap(this).setDataPartitions(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The data partitions associated with the signals collected from the vehicle.
+   */
+  public open fun dataPartitions(`value`: List<Any>) {
+    unwrap(this).setDataPartitions(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The data partitions associated with the signals collected from the vehicle.
+   */
+  public open fun dataPartitions(vararg `value`: Any): Unit = dataPartitions(`value`.toList())
+
+  /**
+   * The description of the campaign.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * (Optional) The description of the campaign.
+   * The description of the campaign.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
 
   /**
-   * (Optional) Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
+   * Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
    */
   public open fun diagnosticsMode(): String? = unwrap(this).getDiagnosticsMode()
 
   /**
-   * (Optional) Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
+   * Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
    */
   public open fun diagnosticsMode(`value`: String) {
     unwrap(this).setDiagnosticsMode(`value`)
   }
 
   /**
-   * (Optional) The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight
-   * UTC time).
+   * The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight UTC time).
    */
   public open fun expiryTime(): String? = unwrap(this).getExpiryTime()
 
   /**
-   * (Optional) The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight
-   * UTC time).
+   * The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight UTC time).
    */
   public open fun expiryTime(`value`: String) {
     unwrap(this).setExpiryTime(`value`)
@@ -315,29 +365,29 @@ public open class CfnCampaign(
   }
 
   /**
-   * (Optional) How long (in milliseconds) to collect raw data after a triggering event initiates
-   * the collection.
+   * How long (in milliseconds) to collect raw data after a triggering event initiates the
+   * collection.
    */
   public open fun postTriggerCollectionDuration(): Number? =
       unwrap(this).getPostTriggerCollectionDuration()
 
   /**
-   * (Optional) How long (in milliseconds) to collect raw data after a triggering event initiates
-   * the collection.
+   * How long (in milliseconds) to collect raw data after a triggering event initiates the
+   * collection.
    */
   public open fun postTriggerCollectionDuration(`value`: Number) {
     unwrap(this).setPostTriggerCollectionDuration(`value`)
   }
 
   /**
-   * (Optional) A number indicating the priority of one campaign over another campaign for a certain
-   * vehicle or fleet.
+   * A number indicating the priority of one campaign over another campaign for a certain vehicle or
+   * fleet.
    */
   public open fun priority(): Number? = unwrap(this).getPriority()
 
   /**
-   * (Optional) A number indicating the priority of one campaign over another campaign for a certain
-   * vehicle or fleet.
+   * A number indicating the priority of one campaign over another campaign for a certain vehicle or
+   * fleet.
    */
   public open fun priority(`value`: Number) {
     unwrap(this).setPriority(`value`)
@@ -356,72 +406,76 @@ public open class CfnCampaign(
   }
 
   /**
-   * (Optional) A list of information about signals to collect.
+   * A list of information about signals to collect.
    */
   public open fun signalsToCollect(): Any? = unwrap(this).getSignalsToCollect()
 
   /**
-   * (Optional) A list of information about signals to collect.
+   * A list of information about signals to collect.
    */
   public open fun signalsToCollect(`value`: IResolvable) {
     unwrap(this).setSignalsToCollect(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * (Optional) A list of information about signals to collect.
+   * A list of information about signals to collect.
    */
   public open fun signalsToCollect(`value`: List<Any>) {
     unwrap(this).setSignalsToCollect(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * (Optional) A list of information about signals to collect.
+   * A list of information about signals to collect.
    */
   public open fun signalsToCollect(vararg `value`: Any): Unit = signalsToCollect(`value`.toList())
 
   /**
-   *
+   * A list of information about signals to fetch.
    */
   public open fun signalsToFetch(): Any? = unwrap(this).getSignalsToFetch()
 
   /**
-   *
+   * A list of information about signals to fetch.
    */
   public open fun signalsToFetch(`value`: IResolvable) {
     unwrap(this).setSignalsToFetch(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * A list of information about signals to fetch.
    */
   public open fun signalsToFetch(`value`: List<Any>) {
     unwrap(this).setSignalsToFetch(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   *
+   * A list of information about signals to fetch.
    */
   public open fun signalsToFetch(vararg `value`: Any): Unit = signalsToFetch(`value`.toList())
 
   /**
-   * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
+   * Whether to store collected data after a vehicle lost a connection with the cloud.
    */
   public open fun spoolingMode(): String? = unwrap(this).getSpoolingMode()
 
   /**
-   * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
+   * Whether to store collected data after a vehicle lost a connection with the cloud.
    */
   public open fun spoolingMode(`value`: String) {
     unwrap(this).setSpoolingMode(`value`)
   }
 
   /**
-   * (Optional) The time, in milliseconds, to deliver a campaign after it was approved.
+   * The time, in milliseconds, to deliver a campaign after it was approved.
+   *
+   * If it's not specified, `0` is used.
    */
   public open fun startTime(): String? = unwrap(this).getStartTime()
 
   /**
-   * (Optional) The time, in milliseconds, to deliver a campaign after it was approved.
+   * The time, in milliseconds, to deliver a campaign after it was approved.
+   *
+   * If it's not specified, `0` is used.
    */
   public open fun startTime(`value`: String) {
     unwrap(this).setStartTime(`value`)
@@ -433,20 +487,20 @@ public open class CfnCampaign(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * (Optional) Metadata that can be used to manage the campaign.
+   * Metadata that can be used to manage the campaign.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * (Optional) Metadata that can be used to manage the campaign.
+   * Metadata that can be used to manage the campaign.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * (Optional) Metadata that can be used to manage the campaign.
+   * Metadata that can be used to manage the campaign.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -515,7 +569,7 @@ public open class CfnCampaign(
     public fun collectionScheme(collectionScheme: CollectionSchemeProperty.Builder.() -> Unit)
 
     /**
-     * (Optional) Whether to compress signals before transmitting data to AWS IoT FleetWise .
+     * Whether to compress signals before transmitting data to AWS IoT FleetWise .
      *
      * If you don't want to compress the signals, use `OFF` . If it's not specified, `SNAPPY` is
      * used.
@@ -525,13 +579,13 @@ public open class CfnCampaign(
      * Default: - "OFF"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-compression)
-     * @param compression (Optional) Whether to compress signals before transmitting data to AWS IoT
-     * FleetWise . 
+     * @param compression Whether to compress signals before transmitting data to AWS IoT FleetWise
+     * . 
      */
     public fun compression(compression: String)
 
     /**
-     * (Optional) The destination where the campaign sends data.
+     * The destination where the campaign sends data.
      *
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
@@ -544,12 +598,12 @@ public open class CfnCampaign(
      * vehicle data so that you can identify trends and patterns.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datadestinationconfigs)
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data. 
+     * @param dataDestinationConfigs The destination where the campaign sends data. 
      */
     public fun dataDestinationConfigs(dataDestinationConfigs: IResolvable)
 
     /**
-     * (Optional) The destination where the campaign sends data.
+     * The destination where the campaign sends data.
      *
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
@@ -562,12 +616,12 @@ public open class CfnCampaign(
      * vehicle data so that you can identify trends and patterns.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datadestinationconfigs)
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data. 
+     * @param dataDestinationConfigs The destination where the campaign sends data. 
      */
     public fun dataDestinationConfigs(dataDestinationConfigs: List<Any>)
 
     /**
-     * (Optional) The destination where the campaign sends data.
+     * The destination where the campaign sends data.
      *
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
@@ -580,12 +634,12 @@ public open class CfnCampaign(
      * vehicle data so that you can identify trends and patterns.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datadestinationconfigs)
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data. 
+     * @param dataDestinationConfigs The destination where the campaign sends data. 
      */
     public fun dataDestinationConfigs(vararg dataDestinationConfigs: Any)
 
     /**
-     * (Optional) A list of vehicle attributes to associate with a campaign.
+     * A list of vehicle attributes to associate with a campaign.
      *
      * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
      * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
@@ -594,13 +648,12 @@ public open class CfnCampaign(
      * Default: An empty array
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-dataextradimensions)
-     * @param dataExtraDimensions (Optional) A list of vehicle attributes to associate with a
-     * campaign. 
+     * @param dataExtraDimensions A list of vehicle attributes to associate with a campaign. 
      */
     public fun dataExtraDimensions(dataExtraDimensions: List<String>)
 
     /**
-     * (Optional) A list of vehicle attributes to associate with a campaign.
+     * A list of vehicle attributes to associate with a campaign.
      *
      * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
      * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
@@ -609,21 +662,47 @@ public open class CfnCampaign(
      * Default: An empty array
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-dataextradimensions)
-     * @param dataExtraDimensions (Optional) A list of vehicle attributes to associate with a
-     * campaign. 
+     * @param dataExtraDimensions A list of vehicle attributes to associate with a campaign. 
      */
     public fun dataExtraDimensions(vararg dataExtraDimensions: String)
 
     /**
-     * (Optional) The description of the campaign.
+     * The data partitions associated with the signals collected from the vehicle.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datapartitions)
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle. 
+     */
+    public fun dataPartitions(dataPartitions: IResolvable)
+
+    /**
+     * The data partitions associated with the signals collected from the vehicle.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datapartitions)
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle. 
+     */
+    public fun dataPartitions(dataPartitions: List<Any>)
+
+    /**
+     * The data partitions associated with the signals collected from the vehicle.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datapartitions)
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle. 
+     */
+    public fun dataPartitions(vararg dataPartitions: Any)
+
+    /**
+     * The description of the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-description)
-     * @param description (Optional) The description of the campaign. 
+     * @param description The description of the campaign. 
      */
     public fun description(description: String)
 
     /**
-     * (Optional) Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
+     * Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
      *
      * If you want to send diagnostic trouble codes, use `SEND_ACTIVE_DTCS` . If it's not specified,
      * `OFF` is used.
@@ -633,14 +712,13 @@ public open class CfnCampaign(
      * Default: - "OFF"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-diagnosticsmode)
-     * @param diagnosticsMode (Optional) Option for a vehicle to send diagnostic trouble codes to
-     * AWS IoT FleetWise . 
+     * @param diagnosticsMode Option for a vehicle to send diagnostic trouble codes to AWS IoT
+     * FleetWise . 
      */
     public fun diagnosticsMode(diagnosticsMode: String)
 
     /**
-     * (Optional) The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight
-     * UTC time).
+     * The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight UTC time).
      *
      * Vehicle data isn't collected after the campaign expires.
      *
@@ -649,8 +727,8 @@ public open class CfnCampaign(
      * Default: - "253402214400"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-expirytime)
-     * @param expiryTime (Optional) The time the campaign expires, in seconds since epoch (January
-     * 1, 1970 at midnight UTC time). 
+     * @param expiryTime The time the campaign expires, in seconds since epoch (January 1, 1970 at
+     * midnight UTC time). 
      */
     public fun expiryTime(expiryTime: String)
 
@@ -663,8 +741,8 @@ public open class CfnCampaign(
     public fun name(name: String)
 
     /**
-     * (Optional) How long (in milliseconds) to collect raw data after a triggering event initiates
-     * the collection.
+     * How long (in milliseconds) to collect raw data after a triggering event initiates the
+     * collection.
      *
      * If it's not specified, `0` is used.
      *
@@ -673,14 +751,14 @@ public open class CfnCampaign(
      * Default: - 0
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-posttriggercollectionduration)
-     * @param postTriggerCollectionDuration (Optional) How long (in milliseconds) to collect raw
-     * data after a triggering event initiates the collection. 
+     * @param postTriggerCollectionDuration How long (in milliseconds) to collect raw data after a
+     * triggering event initiates the collection. 
      */
     public fun postTriggerCollectionDuration(postTriggerCollectionDuration: Number)
 
     /**
-     * (Optional) A number indicating the priority of one campaign over another campaign for a
-     * certain vehicle or fleet.
+     * A number indicating the priority of one campaign over another campaign for a certain vehicle
+     * or fleet.
      *
      * A campaign with the lowest value is deployed to vehicles before any other campaigns. If it's
      * not specified, `0` is used.
@@ -690,8 +768,8 @@ public open class CfnCampaign(
      * Default: - 0
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-priority)
-     * @param priority (Optional) A number indicating the priority of one campaign over another
-     * campaign for a certain vehicle or fleet. 
+     * @param priority A number indicating the priority of one campaign over another campaign for a
+     * certain vehicle or fleet. 
      */
     public fun priority(priority: Number)
 
@@ -705,49 +783,55 @@ public open class CfnCampaign(
     public fun signalCatalogArn(signalCatalogArn: String)
 
     /**
-     * (Optional) A list of information about signals to collect.
+     * A list of information about signals to collect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
-     * @param signalsToCollect (Optional) A list of information about signals to collect. 
+     * @param signalsToCollect A list of information about signals to collect. 
      */
     public fun signalsToCollect(signalsToCollect: IResolvable)
 
     /**
-     * (Optional) A list of information about signals to collect.
+     * A list of information about signals to collect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
-     * @param signalsToCollect (Optional) A list of information about signals to collect. 
+     * @param signalsToCollect A list of information about signals to collect. 
      */
     public fun signalsToCollect(signalsToCollect: List<Any>)
 
     /**
-     * (Optional) A list of information about signals to collect.
+     * A list of information about signals to collect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
-     * @param signalsToCollect (Optional) A list of information about signals to collect. 
+     * @param signalsToCollect A list of information about signals to collect. 
      */
     public fun signalsToCollect(vararg signalsToCollect: Any)
 
     /**
+     * A list of information about signals to fetch.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
-     * @param signalsToFetch 
+     * @param signalsToFetch A list of information about signals to fetch. 
      */
     public fun signalsToFetch(signalsToFetch: IResolvable)
 
     /**
+     * A list of information about signals to fetch.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
-     * @param signalsToFetch 
+     * @param signalsToFetch A list of information about signals to fetch. 
      */
     public fun signalsToFetch(signalsToFetch: List<Any>)
 
     /**
+     * A list of information about signals to fetch.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
-     * @param signalsToFetch 
+     * @param signalsToFetch A list of information about signals to fetch. 
      */
     public fun signalsToFetch(vararg signalsToFetch: Any)
 
     /**
-     * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
+     * Whether to store collected data after a vehicle lost a connection with the cloud.
      *
      * After a connection is re-established, the data is automatically forwarded to AWS IoT
      * FleetWise . If you want to store collected data when a vehicle loses connection with the cloud,
@@ -758,39 +842,38 @@ public open class CfnCampaign(
      * Default: - "OFF"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-spoolingmode)
-     * @param spoolingMode (Optional) Whether to store collected data after a vehicle lost a
-     * connection with the cloud. 
+     * @param spoolingMode Whether to store collected data after a vehicle lost a connection with
+     * the cloud. 
      */
     public fun spoolingMode(spoolingMode: String)
 
     /**
-     * (Optional) The time, in milliseconds, to deliver a campaign after it was approved.
-     *
-     * If it's not specified, `0` is used.
+     * The time, in milliseconds, to deliver a campaign after it was approved. If it's not
+     * specified, `0` is used.
      *
      * Default: `0`
      *
      * Default: - "0"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-starttime)
-     * @param startTime (Optional) The time, in milliseconds, to deliver a campaign after it was
-     * approved. 
+     * @param startTime The time, in milliseconds, to deliver a campaign after it was approved. If
+     * it's not specified, `0` is used. 
      */
     public fun startTime(startTime: String)
 
     /**
-     * (Optional) Metadata that can be used to manage the campaign.
+     * Metadata that can be used to manage the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-tags)
-     * @param tags (Optional) Metadata that can be used to manage the campaign. 
+     * @param tags Metadata that can be used to manage the campaign. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * (Optional) Metadata that can be used to manage the campaign.
+     * Metadata that can be used to manage the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-tags)
-     * @param tags (Optional) Metadata that can be used to manage the campaign. 
+     * @param tags Metadata that can be used to manage the campaign. 
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -866,7 +949,7 @@ public open class CfnCampaign(
         Unit = collectionScheme(CollectionSchemeProperty(collectionScheme))
 
     /**
-     * (Optional) Whether to compress signals before transmitting data to AWS IoT FleetWise .
+     * Whether to compress signals before transmitting data to AWS IoT FleetWise .
      *
      * If you don't want to compress the signals, use `OFF` . If it's not specified, `SNAPPY` is
      * used.
@@ -876,15 +959,15 @@ public open class CfnCampaign(
      * Default: - "OFF"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-compression)
-     * @param compression (Optional) Whether to compress signals before transmitting data to AWS IoT
-     * FleetWise . 
+     * @param compression Whether to compress signals before transmitting data to AWS IoT FleetWise
+     * . 
      */
     override fun compression(compression: String) {
       cdkBuilder.compression(compression)
     }
 
     /**
-     * (Optional) The destination where the campaign sends data.
+     * The destination where the campaign sends data.
      *
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
@@ -897,14 +980,14 @@ public open class CfnCampaign(
      * vehicle data so that you can identify trends and patterns.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datadestinationconfigs)
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data. 
+     * @param dataDestinationConfigs The destination where the campaign sends data. 
      */
     override fun dataDestinationConfigs(dataDestinationConfigs: IResolvable) {
       cdkBuilder.dataDestinationConfigs(dataDestinationConfigs.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * (Optional) The destination where the campaign sends data.
+     * The destination where the campaign sends data.
      *
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
@@ -917,14 +1000,14 @@ public open class CfnCampaign(
      * vehicle data so that you can identify trends and patterns.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datadestinationconfigs)
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data. 
+     * @param dataDestinationConfigs The destination where the campaign sends data. 
      */
     override fun dataDestinationConfigs(dataDestinationConfigs: List<Any>) {
       cdkBuilder.dataDestinationConfigs(dataDestinationConfigs.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * (Optional) The destination where the campaign sends data.
+     * The destination where the campaign sends data.
      *
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
@@ -937,13 +1020,13 @@ public open class CfnCampaign(
      * vehicle data so that you can identify trends and patterns.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datadestinationconfigs)
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data. 
+     * @param dataDestinationConfigs The destination where the campaign sends data. 
      */
     override fun dataDestinationConfigs(vararg dataDestinationConfigs: Any): Unit =
         dataDestinationConfigs(dataDestinationConfigs.toList())
 
     /**
-     * (Optional) A list of vehicle attributes to associate with a campaign.
+     * A list of vehicle attributes to associate with a campaign.
      *
      * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
      * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
@@ -952,15 +1035,14 @@ public open class CfnCampaign(
      * Default: An empty array
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-dataextradimensions)
-     * @param dataExtraDimensions (Optional) A list of vehicle attributes to associate with a
-     * campaign. 
+     * @param dataExtraDimensions A list of vehicle attributes to associate with a campaign. 
      */
     override fun dataExtraDimensions(dataExtraDimensions: List<String>) {
       cdkBuilder.dataExtraDimensions(dataExtraDimensions)
     }
 
     /**
-     * (Optional) A list of vehicle attributes to associate with a campaign.
+     * A list of vehicle attributes to associate with a campaign.
      *
      * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
      * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
@@ -969,24 +1051,55 @@ public open class CfnCampaign(
      * Default: An empty array
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-dataextradimensions)
-     * @param dataExtraDimensions (Optional) A list of vehicle attributes to associate with a
-     * campaign. 
+     * @param dataExtraDimensions A list of vehicle attributes to associate with a campaign. 
      */
     override fun dataExtraDimensions(vararg dataExtraDimensions: String): Unit =
         dataExtraDimensions(dataExtraDimensions.toList())
 
     /**
-     * (Optional) The description of the campaign.
+     * The data partitions associated with the signals collected from the vehicle.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datapartitions)
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle. 
+     */
+    override fun dataPartitions(dataPartitions: IResolvable) {
+      cdkBuilder.dataPartitions(dataPartitions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The data partitions associated with the signals collected from the vehicle.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datapartitions)
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle. 
+     */
+    override fun dataPartitions(dataPartitions: List<Any>) {
+      cdkBuilder.dataPartitions(dataPartitions.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The data partitions associated with the signals collected from the vehicle.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datapartitions)
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle. 
+     */
+    override fun dataPartitions(vararg dataPartitions: Any): Unit =
+        dataPartitions(dataPartitions.toList())
+
+    /**
+     * The description of the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-description)
-     * @param description (Optional) The description of the campaign. 
+     * @param description The description of the campaign. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * (Optional) Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
+     * Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
      *
      * If you want to send diagnostic trouble codes, use `SEND_ACTIVE_DTCS` . If it's not specified,
      * `OFF` is used.
@@ -996,16 +1109,15 @@ public open class CfnCampaign(
      * Default: - "OFF"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-diagnosticsmode)
-     * @param diagnosticsMode (Optional) Option for a vehicle to send diagnostic trouble codes to
-     * AWS IoT FleetWise . 
+     * @param diagnosticsMode Option for a vehicle to send diagnostic trouble codes to AWS IoT
+     * FleetWise . 
      */
     override fun diagnosticsMode(diagnosticsMode: String) {
       cdkBuilder.diagnosticsMode(diagnosticsMode)
     }
 
     /**
-     * (Optional) The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight
-     * UTC time).
+     * The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight UTC time).
      *
      * Vehicle data isn't collected after the campaign expires.
      *
@@ -1014,8 +1126,8 @@ public open class CfnCampaign(
      * Default: - "253402214400"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-expirytime)
-     * @param expiryTime (Optional) The time the campaign expires, in seconds since epoch (January
-     * 1, 1970 at midnight UTC time). 
+     * @param expiryTime The time the campaign expires, in seconds since epoch (January 1, 1970 at
+     * midnight UTC time). 
      */
     override fun expiryTime(expiryTime: String) {
       cdkBuilder.expiryTime(expiryTime)
@@ -1032,8 +1144,8 @@ public open class CfnCampaign(
     }
 
     /**
-     * (Optional) How long (in milliseconds) to collect raw data after a triggering event initiates
-     * the collection.
+     * How long (in milliseconds) to collect raw data after a triggering event initiates the
+     * collection.
      *
      * If it's not specified, `0` is used.
      *
@@ -1042,16 +1154,16 @@ public open class CfnCampaign(
      * Default: - 0
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-posttriggercollectionduration)
-     * @param postTriggerCollectionDuration (Optional) How long (in milliseconds) to collect raw
-     * data after a triggering event initiates the collection. 
+     * @param postTriggerCollectionDuration How long (in milliseconds) to collect raw data after a
+     * triggering event initiates the collection. 
      */
     override fun postTriggerCollectionDuration(postTriggerCollectionDuration: Number) {
       cdkBuilder.postTriggerCollectionDuration(postTriggerCollectionDuration)
     }
 
     /**
-     * (Optional) A number indicating the priority of one campaign over another campaign for a
-     * certain vehicle or fleet.
+     * A number indicating the priority of one campaign over another campaign for a certain vehicle
+     * or fleet.
      *
      * A campaign with the lowest value is deployed to vehicles before any other campaigns. If it's
      * not specified, `0` is used.
@@ -1061,8 +1173,8 @@ public open class CfnCampaign(
      * Default: - 0
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-priority)
-     * @param priority (Optional) A number indicating the priority of one campaign over another
-     * campaign for a certain vehicle or fleet. 
+     * @param priority A number indicating the priority of one campaign over another campaign for a
+     * certain vehicle or fleet. 
      */
     override fun priority(priority: Number) {
       cdkBuilder.priority(priority)
@@ -1080,59 +1192,65 @@ public open class CfnCampaign(
     }
 
     /**
-     * (Optional) A list of information about signals to collect.
+     * A list of information about signals to collect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
-     * @param signalsToCollect (Optional) A list of information about signals to collect. 
+     * @param signalsToCollect A list of information about signals to collect. 
      */
     override fun signalsToCollect(signalsToCollect: IResolvable) {
       cdkBuilder.signalsToCollect(signalsToCollect.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * (Optional) A list of information about signals to collect.
+     * A list of information about signals to collect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
-     * @param signalsToCollect (Optional) A list of information about signals to collect. 
+     * @param signalsToCollect A list of information about signals to collect. 
      */
     override fun signalsToCollect(signalsToCollect: List<Any>) {
       cdkBuilder.signalsToCollect(signalsToCollect.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * (Optional) A list of information about signals to collect.
+     * A list of information about signals to collect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
-     * @param signalsToCollect (Optional) A list of information about signals to collect. 
+     * @param signalsToCollect A list of information about signals to collect. 
      */
     override fun signalsToCollect(vararg signalsToCollect: Any): Unit =
         signalsToCollect(signalsToCollect.toList())
 
     /**
+     * A list of information about signals to fetch.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
-     * @param signalsToFetch 
+     * @param signalsToFetch A list of information about signals to fetch. 
      */
     override fun signalsToFetch(signalsToFetch: IResolvable) {
       cdkBuilder.signalsToFetch(signalsToFetch.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * A list of information about signals to fetch.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
-     * @param signalsToFetch 
+     * @param signalsToFetch A list of information about signals to fetch. 
      */
     override fun signalsToFetch(signalsToFetch: List<Any>) {
       cdkBuilder.signalsToFetch(signalsToFetch.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
+     * A list of information about signals to fetch.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
-     * @param signalsToFetch 
+     * @param signalsToFetch A list of information about signals to fetch. 
      */
     override fun signalsToFetch(vararg signalsToFetch: Any): Unit =
         signalsToFetch(signalsToFetch.toList())
 
     /**
-     * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
+     * Whether to store collected data after a vehicle lost a connection with the cloud.
      *
      * After a connection is re-established, the data is automatically forwarded to AWS IoT
      * FleetWise . If you want to store collected data when a vehicle loses connection with the cloud,
@@ -1143,45 +1261,44 @@ public open class CfnCampaign(
      * Default: - "OFF"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-spoolingmode)
-     * @param spoolingMode (Optional) Whether to store collected data after a vehicle lost a
-     * connection with the cloud. 
+     * @param spoolingMode Whether to store collected data after a vehicle lost a connection with
+     * the cloud. 
      */
     override fun spoolingMode(spoolingMode: String) {
       cdkBuilder.spoolingMode(spoolingMode)
     }
 
     /**
-     * (Optional) The time, in milliseconds, to deliver a campaign after it was approved.
-     *
-     * If it's not specified, `0` is used.
+     * The time, in milliseconds, to deliver a campaign after it was approved. If it's not
+     * specified, `0` is used.
      *
      * Default: `0`
      *
      * Default: - "0"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-starttime)
-     * @param startTime (Optional) The time, in milliseconds, to deliver a campaign after it was
-     * approved. 
+     * @param startTime The time, in milliseconds, to deliver a campaign after it was approved. If
+     * it's not specified, `0` is used. 
      */
     override fun startTime(startTime: String) {
       cdkBuilder.startTime(startTime)
     }
 
     /**
-     * (Optional) Metadata that can be used to manage the campaign.
+     * Metadata that can be used to manage the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-tags)
-     * @param tags (Optional) Metadata that can be used to manage the campaign. 
+     * @param tags Metadata that can be used to manage the campaign. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * (Optional) Metadata that can be used to manage the campaign.
+     * Metadata that can be used to manage the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-tags)
-     * @param tags (Optional) Metadata that can be used to manage the campaign. 
+     * @param tags Metadata that can be used to manage the campaign. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -1248,8 +1365,8 @@ public open class CfnCampaign(
    */
   public interface CollectionSchemeProperty {
     /**
-     * (Optional) Information about a collection scheme that uses a simple logical expression to
-     * recognize what data to collect.
+     * Information about a collection scheme that uses a simple logical expression to recognize what
+     * data to collect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-collectionscheme.html#cfn-iotfleetwise-campaign-collectionscheme-conditionbasedcollectionscheme)
      */
@@ -1257,8 +1374,8 @@ public open class CfnCampaign(
         unwrap(this).getConditionBasedCollectionScheme()
 
     /**
-     * (Optional) Information about a collection scheme that uses a time period to decide how often
-     * to collect data.
+     * Information about a collection scheme that uses a time period to decide how often to collect
+     * data.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-collectionscheme.html#cfn-iotfleetwise-campaign-collectionscheme-timebasedcollectionscheme)
      */
@@ -1270,21 +1387,21 @@ public open class CfnCampaign(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param conditionBasedCollectionScheme (Optional) Information about a collection scheme that
-       * uses a simple logical expression to recognize what data to collect.
+       * @param conditionBasedCollectionScheme Information about a collection scheme that uses a
+       * simple logical expression to recognize what data to collect.
        */
       public fun conditionBasedCollectionScheme(conditionBasedCollectionScheme: IResolvable)
 
       /**
-       * @param conditionBasedCollectionScheme (Optional) Information about a collection scheme that
-       * uses a simple logical expression to recognize what data to collect.
+       * @param conditionBasedCollectionScheme Information about a collection scheme that uses a
+       * simple logical expression to recognize what data to collect.
        */
       public
           fun conditionBasedCollectionScheme(conditionBasedCollectionScheme: ConditionBasedCollectionSchemeProperty)
 
       /**
-       * @param conditionBasedCollectionScheme (Optional) Information about a collection scheme that
-       * uses a simple logical expression to recognize what data to collect.
+       * @param conditionBasedCollectionScheme Information about a collection scheme that uses a
+       * simple logical expression to recognize what data to collect.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a1df1e2b1bf841c9ce4e9b5e01afaaea56630c36b5a28789a4f8544aa030e0e3")
@@ -1292,21 +1409,21 @@ public open class CfnCampaign(
           fun conditionBasedCollectionScheme(conditionBasedCollectionScheme: ConditionBasedCollectionSchemeProperty.Builder.() -> Unit)
 
       /**
-       * @param timeBasedCollectionScheme (Optional) Information about a collection scheme that uses
-       * a time period to decide how often to collect data.
+       * @param timeBasedCollectionScheme Information about a collection scheme that uses a time
+       * period to decide how often to collect data.
        */
       public fun timeBasedCollectionScheme(timeBasedCollectionScheme: IResolvable)
 
       /**
-       * @param timeBasedCollectionScheme (Optional) Information about a collection scheme that uses
-       * a time period to decide how often to collect data.
+       * @param timeBasedCollectionScheme Information about a collection scheme that uses a time
+       * period to decide how often to collect data.
        */
       public
           fun timeBasedCollectionScheme(timeBasedCollectionScheme: TimeBasedCollectionSchemeProperty)
 
       /**
-       * @param timeBasedCollectionScheme (Optional) Information about a collection scheme that uses
-       * a time period to decide how often to collect data.
+       * @param timeBasedCollectionScheme Information about a collection scheme that uses a time
+       * period to decide how often to collect data.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb6d5f9760f304755b0590d89a23765cc637c5c42cd4e2e9220310753a03f05a")
@@ -1321,16 +1438,16 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.CollectionSchemeProperty.builder()
 
       /**
-       * @param conditionBasedCollectionScheme (Optional) Information about a collection scheme that
-       * uses a simple logical expression to recognize what data to collect.
+       * @param conditionBasedCollectionScheme Information about a collection scheme that uses a
+       * simple logical expression to recognize what data to collect.
        */
       override fun conditionBasedCollectionScheme(conditionBasedCollectionScheme: IResolvable) {
         cdkBuilder.conditionBasedCollectionScheme(conditionBasedCollectionScheme.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param conditionBasedCollectionScheme (Optional) Information about a collection scheme that
-       * uses a simple logical expression to recognize what data to collect.
+       * @param conditionBasedCollectionScheme Information about a collection scheme that uses a
+       * simple logical expression to recognize what data to collect.
        */
       override
           fun conditionBasedCollectionScheme(conditionBasedCollectionScheme: ConditionBasedCollectionSchemeProperty) {
@@ -1338,8 +1455,8 @@ public open class CfnCampaign(
       }
 
       /**
-       * @param conditionBasedCollectionScheme (Optional) Information about a collection scheme that
-       * uses a simple logical expression to recognize what data to collect.
+       * @param conditionBasedCollectionScheme Information about a collection scheme that uses a
+       * simple logical expression to recognize what data to collect.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a1df1e2b1bf841c9ce4e9b5e01afaaea56630c36b5a28789a4f8544aa030e0e3")
@@ -1349,16 +1466,16 @@ public open class CfnCampaign(
           conditionBasedCollectionScheme(ConditionBasedCollectionSchemeProperty(conditionBasedCollectionScheme))
 
       /**
-       * @param timeBasedCollectionScheme (Optional) Information about a collection scheme that uses
-       * a time period to decide how often to collect data.
+       * @param timeBasedCollectionScheme Information about a collection scheme that uses a time
+       * period to decide how often to collect data.
        */
       override fun timeBasedCollectionScheme(timeBasedCollectionScheme: IResolvable) {
         cdkBuilder.timeBasedCollectionScheme(timeBasedCollectionScheme.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param timeBasedCollectionScheme (Optional) Information about a collection scheme that uses
-       * a time period to decide how often to collect data.
+       * @param timeBasedCollectionScheme Information about a collection scheme that uses a time
+       * period to decide how often to collect data.
        */
       override
           fun timeBasedCollectionScheme(timeBasedCollectionScheme: TimeBasedCollectionSchemeProperty) {
@@ -1366,8 +1483,8 @@ public open class CfnCampaign(
       }
 
       /**
-       * @param timeBasedCollectionScheme (Optional) Information about a collection scheme that uses
-       * a time period to decide how often to collect data.
+       * @param timeBasedCollectionScheme Information about a collection scheme that uses a time
+       * period to decide how often to collect data.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("cb6d5f9760f304755b0590d89a23765cc637c5c42cd4e2e9220310753a03f05a")
@@ -1386,8 +1503,8 @@ public open class CfnCampaign(
     ) : CdkObject(cdkObject),
         CollectionSchemeProperty {
       /**
-       * (Optional) Information about a collection scheme that uses a simple logical expression to
-       * recognize what data to collect.
+       * Information about a collection scheme that uses a simple logical expression to recognize
+       * what data to collect.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-collectionscheme.html#cfn-iotfleetwise-campaign-collectionscheme-conditionbasedcollectionscheme)
        */
@@ -1395,8 +1512,8 @@ public open class CfnCampaign(
           unwrap(this).getConditionBasedCollectionScheme()
 
       /**
-       * (Optional) Information about a collection scheme that uses a time period to decide how
-       * often to collect data.
+       * Information about a collection scheme that uses a time period to decide how often to
+       * collect data.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-collectionscheme.html#cfn-iotfleetwise-campaign-collectionscheme-timebasedcollectionscheme)
        */
@@ -1445,7 +1562,7 @@ public open class CfnCampaign(
    */
   public interface ConditionBasedCollectionSchemeProperty {
     /**
-     * (Optional) Specifies the version of the conditional expression language.
+     * Specifies the version of the conditional expression language.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedcollectionscheme.html#cfn-iotfleetwise-campaign-conditionbasedcollectionscheme-conditionlanguageversion)
      */
@@ -1461,8 +1578,7 @@ public open class CfnCampaign(
     public fun expression(): String
 
     /**
-     * (Optional) The minimum duration of time between two triggering events to collect data, in
-     * milliseconds.
+     * The minimum duration of time between two triggering events to collect data, in milliseconds.
      *
      *
      * If a signal changes often, you might want to collect data at a slower rate.
@@ -1473,7 +1589,7 @@ public open class CfnCampaign(
     public fun minimumTriggerIntervalMs(): Number? = unwrap(this).getMinimumTriggerIntervalMs()
 
     /**
-     * (Optional) Whether to collect data for all triggering events ( `ALWAYS` ).
+     * Whether to collect data for all triggering events ( `ALWAYS` ).
      *
      * Specify ( `RISING_EDGE` ), or specify only when the condition first evaluates to false. For
      * example, triggering on "AirbagDeployed"; Users aren't interested on triggering when the airbag
@@ -1489,8 +1605,8 @@ public open class CfnCampaign(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param conditionLanguageVersion (Optional) Specifies the version of the conditional
-       * expression language.
+       * @param conditionLanguageVersion Specifies the version of the conditional expression
+       * language.
        */
       public fun conditionLanguageVersion(conditionLanguageVersion: Number)
 
@@ -1501,16 +1617,15 @@ public open class CfnCampaign(
       public fun expression(expression: String)
 
       /**
-       * @param minimumTriggerIntervalMs (Optional) The minimum duration of time between two
-       * triggering events to collect data, in milliseconds.
+       * @param minimumTriggerIntervalMs The minimum duration of time between two triggering events
+       * to collect data, in milliseconds.
        *
        * If a signal changes often, you might want to collect data at a slower rate.
        */
       public fun minimumTriggerIntervalMs(minimumTriggerIntervalMs: Number)
 
       /**
-       * @param triggerMode (Optional) Whether to collect data for all triggering events ( `ALWAYS`
-       * ).
+       * @param triggerMode Whether to collect data for all triggering events ( `ALWAYS` ).
        * Specify ( `RISING_EDGE` ), or specify only when the condition first evaluates to false. For
        * example, triggering on "AirbagDeployed"; Users aren't interested on triggering when the airbag
        * is already exploded; they only care about the change from not deployed =&gt; deployed.
@@ -1525,8 +1640,8 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedCollectionSchemeProperty.builder()
 
       /**
-       * @param conditionLanguageVersion (Optional) Specifies the version of the conditional
-       * expression language.
+       * @param conditionLanguageVersion Specifies the version of the conditional expression
+       * language.
        */
       override fun conditionLanguageVersion(conditionLanguageVersion: Number) {
         cdkBuilder.conditionLanguageVersion(conditionLanguageVersion)
@@ -1541,8 +1656,8 @@ public open class CfnCampaign(
       }
 
       /**
-       * @param minimumTriggerIntervalMs (Optional) The minimum duration of time between two
-       * triggering events to collect data, in milliseconds.
+       * @param minimumTriggerIntervalMs The minimum duration of time between two triggering events
+       * to collect data, in milliseconds.
        *
        * If a signal changes often, you might want to collect data at a slower rate.
        */
@@ -1551,8 +1666,7 @@ public open class CfnCampaign(
       }
 
       /**
-       * @param triggerMode (Optional) Whether to collect data for all triggering events ( `ALWAYS`
-       * ).
+       * @param triggerMode Whether to collect data for all triggering events ( `ALWAYS` ).
        * Specify ( `RISING_EDGE` ), or specify only when the condition first evaluates to false. For
        * example, triggering on "AirbagDeployed"; Users aren't interested on triggering when the airbag
        * is already exploded; they only care about the change from not deployed =&gt; deployed.
@@ -1571,7 +1685,7 @@ public open class CfnCampaign(
     ) : CdkObject(cdkObject),
         ConditionBasedCollectionSchemeProperty {
       /**
-       * (Optional) Specifies the version of the conditional expression language.
+       * Specifies the version of the conditional expression language.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedcollectionscheme.html#cfn-iotfleetwise-campaign-conditionbasedcollectionscheme-conditionlanguageversion)
        */
@@ -1587,7 +1701,7 @@ public open class CfnCampaign(
       override fun expression(): String = unwrap(this).getExpression()
 
       /**
-       * (Optional) The minimum duration of time between two triggering events to collect data, in
+       * The minimum duration of time between two triggering events to collect data, in
        * milliseconds.
        *
        *
@@ -1599,7 +1713,7 @@ public open class CfnCampaign(
       override fun minimumTriggerIntervalMs(): Number? = unwrap(this).getMinimumTriggerIntervalMs()
 
       /**
-       * (Optional) Whether to collect data for all triggering events ( `ALWAYS` ).
+       * Whether to collect data for all triggering events ( `ALWAYS` ).
        *
        * Specify ( `RISING_EDGE` ), or specify only when the condition first evaluates to false. For
        * example, triggering on "AirbagDeployed"; Users aren't interested on triggering when the airbag
@@ -1630,6 +1744,8 @@ public open class CfnCampaign(
   }
 
   /**
+   * Specifies the condition under which a signal fetch occurs.
+   *
    * Example:
    *
    * ```
@@ -1647,11 +1763,15 @@ public open class CfnCampaign(
    */
   public interface ConditionBasedSignalFetchConfigProperty {
     /**
+     * The condition that must be satisfied to trigger a signal fetch.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-conditionbasedsignalfetchconfig-conditionexpression)
      */
     public fun conditionExpression(): String
 
     /**
+     * Indicates the mode in which the signal fetch is triggered.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-conditionbasedsignalfetchconfig-triggermode)
      */
     public fun triggerMode(): String
@@ -1662,12 +1782,12 @@ public open class CfnCampaign(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param conditionExpression the value to be set. 
+       * @param conditionExpression The condition that must be satisfied to trigger a signal fetch. 
        */
       public fun conditionExpression(conditionExpression: String)
 
       /**
-       * @param triggerMode the value to be set. 
+       * @param triggerMode Indicates the mode in which the signal fetch is triggered. 
        */
       public fun triggerMode(triggerMode: String)
     }
@@ -1679,14 +1799,14 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.ConditionBasedSignalFetchConfigProperty.builder()
 
       /**
-       * @param conditionExpression the value to be set. 
+       * @param conditionExpression The condition that must be satisfied to trigger a signal fetch. 
        */
       override fun conditionExpression(conditionExpression: String) {
         cdkBuilder.conditionExpression(conditionExpression)
       }
 
       /**
-       * @param triggerMode the value to be set. 
+       * @param triggerMode Indicates the mode in which the signal fetch is triggered. 
        */
       override fun triggerMode(triggerMode: String) {
         cdkBuilder.triggerMode(triggerMode)
@@ -1702,11 +1822,15 @@ public open class CfnCampaign(
     ) : CdkObject(cdkObject),
         ConditionBasedSignalFetchConfigProperty {
       /**
+       * The condition that must be satisfied to trigger a signal fetch.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-conditionbasedsignalfetchconfig-conditionexpression)
        */
       override fun conditionExpression(): String = unwrap(this).getConditionExpression()
 
       /**
+       * Indicates the mode in which the signal fetch is triggered.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-conditionbasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-conditionbasedsignalfetchconfig-triggermode)
        */
       override fun triggerMode(): String = unwrap(this).getTriggerMode()
@@ -1766,19 +1890,28 @@ public open class CfnCampaign(
    */
   public interface DataDestinationConfigProperty {
     /**
+     * The MQTT topic to which the AWS IoT FleetWise campaign routes data.
+     *
+     *
+     * Access to certain AWS IoT FleetWise features is currently gated. For more information, see
+     * [AWS Region and feature
+     * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+     * in the *AWS IoT FleetWise Developer Guide* .
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-mqtttopicconfig)
      */
     public fun mqttTopicConfig(): Any? = unwrap(this).getMqttTopicConfig()
 
     /**
-     * (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
+     * The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-s3config)
      */
     public fun s3Config(): Any? = unwrap(this).getS3Config()
 
     /**
-     * (Optional) The Amazon Timestream table where the campaign sends data.
+     * The Amazon Timestream table where the campaign sends data.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-timestreamconfig)
      */
@@ -1790,57 +1923,66 @@ public open class CfnCampaign(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param mqttTopicConfig the value to be set.
+       * @param mqttTopicConfig The MQTT topic to which the AWS IoT FleetWise campaign routes data.
+       *
+       * Access to certain AWS IoT FleetWise features is currently gated. For more information, see
+       * [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
        */
       public fun mqttTopicConfig(mqttTopicConfig: IResolvable)
 
       /**
-       * @param mqttTopicConfig the value to be set.
+       * @param mqttTopicConfig The MQTT topic to which the AWS IoT FleetWise campaign routes data.
+       *
+       * Access to certain AWS IoT FleetWise features is currently gated. For more information, see
+       * [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
        */
       public fun mqttTopicConfig(mqttTopicConfig: MqttTopicConfigProperty)
 
       /**
-       * @param mqttTopicConfig the value to be set.
+       * @param mqttTopicConfig The MQTT topic to which the AWS IoT FleetWise campaign routes data.
+       *
+       * Access to certain AWS IoT FleetWise features is currently gated. For more information, see
+       * [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("56eb0f11ad367f66b034a2f29775d7135605ee5356c6e51b5c013a12de9e5188")
       public fun mqttTopicConfig(mqttTopicConfig: MqttTopicConfigProperty.Builder.() -> Unit)
 
       /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
+       * @param s3Config The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
        */
       public fun s3Config(s3Config: IResolvable)
 
       /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
+       * @param s3Config The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
        */
       public fun s3Config(s3Config: S3ConfigProperty)
 
       /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
+       * @param s3Config The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aa0827b0454fc9c29afa4ccc11da06ed4a232455f4ac9194e6f07ac3800cd503")
       public fun s3Config(s3Config: S3ConfigProperty.Builder.() -> Unit)
 
       /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
+       * @param timestreamConfig The Amazon Timestream table where the campaign sends data.
        */
       public fun timestreamConfig(timestreamConfig: IResolvable)
 
       /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
+       * @param timestreamConfig The Amazon Timestream table where the campaign sends data.
        */
       public fun timestreamConfig(timestreamConfig: TimestreamConfigProperty)
 
       /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
+       * @param timestreamConfig The Amazon Timestream table where the campaign sends data.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e05a80e07ddd9ec9c84f411b8d0482847c9fa86797ac250f5483a620132e716")
@@ -1854,21 +1996,36 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataDestinationConfigProperty.builder()
 
       /**
-       * @param mqttTopicConfig the value to be set.
+       * @param mqttTopicConfig The MQTT topic to which the AWS IoT FleetWise campaign routes data.
+       *
+       * Access to certain AWS IoT FleetWise features is currently gated. For more information, see
+       * [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
        */
       override fun mqttTopicConfig(mqttTopicConfig: IResolvable) {
         cdkBuilder.mqttTopicConfig(mqttTopicConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param mqttTopicConfig the value to be set.
+       * @param mqttTopicConfig The MQTT topic to which the AWS IoT FleetWise campaign routes data.
+       *
+       * Access to certain AWS IoT FleetWise features is currently gated. For more information, see
+       * [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
        */
       override fun mqttTopicConfig(mqttTopicConfig: MqttTopicConfigProperty) {
         cdkBuilder.mqttTopicConfig(mqttTopicConfig.let(MqttTopicConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param mqttTopicConfig the value to be set.
+       * @param mqttTopicConfig The MQTT topic to which the AWS IoT FleetWise campaign routes data.
+       *
+       * Access to certain AWS IoT FleetWise features is currently gated. For more information, see
+       * [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("56eb0f11ad367f66b034a2f29775d7135605ee5356c6e51b5c013a12de9e5188")
@@ -1876,24 +2033,21 @@ public open class CfnCampaign(
           Unit = mqttTopicConfig(MqttTopicConfigProperty(mqttTopicConfig))
 
       /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
+       * @param s3Config The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
        */
       override fun s3Config(s3Config: IResolvable) {
         cdkBuilder.s3Config(s3Config.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
+       * @param s3Config The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
        */
       override fun s3Config(s3Config: S3ConfigProperty) {
         cdkBuilder.s3Config(s3Config.let(S3ConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param s3Config (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends
-       * data.
+       * @param s3Config The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("aa0827b0454fc9c29afa4ccc11da06ed4a232455f4ac9194e6f07ac3800cd503")
@@ -1901,24 +2055,21 @@ public open class CfnCampaign(
           s3Config(S3ConfigProperty(s3Config))
 
       /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
+       * @param timestreamConfig The Amazon Timestream table where the campaign sends data.
        */
       override fun timestreamConfig(timestreamConfig: IResolvable) {
         cdkBuilder.timestreamConfig(timestreamConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
+       * @param timestreamConfig The Amazon Timestream table where the campaign sends data.
        */
       override fun timestreamConfig(timestreamConfig: TimestreamConfigProperty) {
         cdkBuilder.timestreamConfig(timestreamConfig.let(TimestreamConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param timestreamConfig (Optional) The Amazon Timestream table where the campaign sends
-       * data.
+       * @param timestreamConfig The Amazon Timestream table where the campaign sends data.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("3e05a80e07ddd9ec9c84f411b8d0482847c9fa86797ac250f5483a620132e716")
@@ -1935,19 +2086,28 @@ public open class CfnCampaign(
     ) : CdkObject(cdkObject),
         DataDestinationConfigProperty {
       /**
+       * The MQTT topic to which the AWS IoT FleetWise campaign routes data.
+       *
+       *
+       * Access to certain AWS IoT FleetWise features is currently gated. For more information, see
+       * [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
+       *
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-mqtttopicconfig)
        */
       override fun mqttTopicConfig(): Any? = unwrap(this).getMqttTopicConfig()
 
       /**
-       * (Optional) The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
+       * The Amazon S3 bucket where the AWS IoT FleetWise campaign sends data.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-s3config)
        */
       override fun s3Config(): Any? = unwrap(this).getS3Config()
 
       /**
-       * (Optional) The Amazon Timestream table where the campaign sends data.
+       * The Amazon Timestream table where the campaign sends data.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datadestinationconfig.html#cfn-iotfleetwise-campaign-datadestinationconfig-timestreamconfig)
        */
@@ -1973,6 +2133,653 @@ public open class CfnCampaign(
   }
 
   /**
+   * The configuration for signal data storage and upload options.
+   *
+   * You can only specify these options when the campaign's spooling mode is `TO_DISK` .
+   *
+   *
+   * Access to certain AWS IoT FleetWise features is currently gated. For more information, see [AWS
+   * Region and feature
+   * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+   * in the *AWS IoT FleetWise Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * DataPartitionProperty dataPartitionProperty = DataPartitionProperty.builder()
+   * .id("id")
+   * .storageOptions(DataPartitionStorageOptionsProperty.builder()
+   * .maximumSize(StorageMaximumSizeProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build())
+   * .minimumTimeToLive(StorageMinimumTimeToLiveProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build())
+   * .storageLocation("storageLocation")
+   * .build())
+   * // the properties below are optional
+   * .uploadOptions(DataPartitionUploadOptionsProperty.builder()
+   * .expression("expression")
+   * // the properties below are optional
+   * .conditionLanguageVersion(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartition.html)
+   */
+  public interface DataPartitionProperty {
+    /**
+     * The ID of the data partition.
+     *
+     * The data partition ID must be unique within a campaign. You can establish a data partition as
+     * the default partition for a campaign by using `default` as the ID.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartition.html#cfn-iotfleetwise-campaign-datapartition-id)
+     */
+    public fun id(): String
+
+    /**
+     * The storage options for a data partition.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartition.html#cfn-iotfleetwise-campaign-datapartition-storageoptions)
+     */
+    public fun storageOptions(): Any
+
+    /**
+     * The upload options for the data partition.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartition.html#cfn-iotfleetwise-campaign-datapartition-uploadoptions)
+     */
+    public fun uploadOptions(): Any? = unwrap(this).getUploadOptions()
+
+    /**
+     * A builder for [DataPartitionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param id The ID of the data partition. 
+       * The data partition ID must be unique within a campaign. You can establish a data partition
+       * as the default partition for a campaign by using `default` as the ID.
+       */
+      public fun id(id: String)
+
+      /**
+       * @param storageOptions The storage options for a data partition. 
+       */
+      public fun storageOptions(storageOptions: IResolvable)
+
+      /**
+       * @param storageOptions The storage options for a data partition. 
+       */
+      public fun storageOptions(storageOptions: DataPartitionStorageOptionsProperty)
+
+      /**
+       * @param storageOptions The storage options for a data partition. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9a9e56ad962ffdfe974db5bb030a740e825690c274679e4a844d940af8c7744d")
+      public
+          fun storageOptions(storageOptions: DataPartitionStorageOptionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param uploadOptions The upload options for the data partition.
+       */
+      public fun uploadOptions(uploadOptions: IResolvable)
+
+      /**
+       * @param uploadOptions The upload options for the data partition.
+       */
+      public fun uploadOptions(uploadOptions: DataPartitionUploadOptionsProperty)
+
+      /**
+       * @param uploadOptions The upload options for the data partition.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("251daca10f1f22ea63ca09869ecebf5e10622487a5b21a6036ce0d070e3918fe")
+      public fun uploadOptions(uploadOptions: DataPartitionUploadOptionsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionProperty.Builder =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionProperty.builder()
+
+      /**
+       * @param id The ID of the data partition. 
+       * The data partition ID must be unique within a campaign. You can establish a data partition
+       * as the default partition for a campaign by using `default` as the ID.
+       */
+      override fun id(id: String) {
+        cdkBuilder.id(id)
+      }
+
+      /**
+       * @param storageOptions The storage options for a data partition. 
+       */
+      override fun storageOptions(storageOptions: IResolvable) {
+        cdkBuilder.storageOptions(storageOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param storageOptions The storage options for a data partition. 
+       */
+      override fun storageOptions(storageOptions: DataPartitionStorageOptionsProperty) {
+        cdkBuilder.storageOptions(storageOptions.let(DataPartitionStorageOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param storageOptions The storage options for a data partition. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9a9e56ad962ffdfe974db5bb030a740e825690c274679e4a844d940af8c7744d")
+      override
+          fun storageOptions(storageOptions: DataPartitionStorageOptionsProperty.Builder.() -> Unit):
+          Unit = storageOptions(DataPartitionStorageOptionsProperty(storageOptions))
+
+      /**
+       * @param uploadOptions The upload options for the data partition.
+       */
+      override fun uploadOptions(uploadOptions: IResolvable) {
+        cdkBuilder.uploadOptions(uploadOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param uploadOptions The upload options for the data partition.
+       */
+      override fun uploadOptions(uploadOptions: DataPartitionUploadOptionsProperty) {
+        cdkBuilder.uploadOptions(uploadOptions.let(DataPartitionUploadOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param uploadOptions The upload options for the data partition.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("251daca10f1f22ea63ca09869ecebf5e10622487a5b21a6036ce0d070e3918fe")
+      override
+          fun uploadOptions(uploadOptions: DataPartitionUploadOptionsProperty.Builder.() -> Unit):
+          Unit = uploadOptions(DataPartitionUploadOptionsProperty(uploadOptions))
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionProperty,
+    ) : CdkObject(cdkObject),
+        DataPartitionProperty {
+      /**
+       * The ID of the data partition.
+       *
+       * The data partition ID must be unique within a campaign. You can establish a data partition
+       * as the default partition for a campaign by using `default` as the ID.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartition.html#cfn-iotfleetwise-campaign-datapartition-id)
+       */
+      override fun id(): String = unwrap(this).getId()
+
+      /**
+       * The storage options for a data partition.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartition.html#cfn-iotfleetwise-campaign-datapartition-storageoptions)
+       */
+      override fun storageOptions(): Any = unwrap(this).getStorageOptions()
+
+      /**
+       * The upload options for the data partition.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartition.html#cfn-iotfleetwise-campaign-datapartition-uploadoptions)
+       */
+      override fun uploadOptions(): Any? = unwrap(this).getUploadOptions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataPartitionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionProperty):
+          DataPartitionProperty = CdkObjectWrappers.wrap(cdkObject) as? DataPartitionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataPartitionProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionProperty
+    }
+  }
+
+  /**
+   * Size, time, and location options for the data partition.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * DataPartitionStorageOptionsProperty dataPartitionStorageOptionsProperty =
+   * DataPartitionStorageOptionsProperty.builder()
+   * .maximumSize(StorageMaximumSizeProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build())
+   * .minimumTimeToLive(StorageMinimumTimeToLiveProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build())
+   * .storageLocation("storageLocation")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionstorageoptions.html)
+   */
+  public interface DataPartitionStorageOptionsProperty {
+    /**
+     * The maximum storage size of the data stored in the data partition.
+     *
+     *
+     * Newer data overwrites older data when the partition reaches the maximum size.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionstorageoptions.html#cfn-iotfleetwise-campaign-datapartitionstorageoptions-maximumsize)
+     */
+    public fun maximumSize(): Any
+
+    /**
+     * The amount of time that data in this partition will be kept on disk.
+     *
+     * * After the designated amount of time passes, the data can be removed, but it's not
+     * guaranteed to be removed.
+     * * Before the time expires, data in this partition can still be deleted if the partition
+     * reaches its configured maximum size.
+     * * Newer data will overwrite older data when the partition reaches the maximum size.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionstorageoptions.html#cfn-iotfleetwise-campaign-datapartitionstorageoptions-minimumtimetolive)
+     */
+    public fun minimumTimeToLive(): Any
+
+    /**
+     * The folder name for the data partition under the campaign storage folder.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionstorageoptions.html#cfn-iotfleetwise-campaign-datapartitionstorageoptions-storagelocation)
+     */
+    public fun storageLocation(): String
+
+    /**
+     * A builder for [DataPartitionStorageOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param maximumSize The maximum storage size of the data stored in the data partition. 
+       *
+       * Newer data overwrites older data when the partition reaches the maximum size.
+       */
+      public fun maximumSize(maximumSize: IResolvable)
+
+      /**
+       * @param maximumSize The maximum storage size of the data stored in the data partition. 
+       *
+       * Newer data overwrites older data when the partition reaches the maximum size.
+       */
+      public fun maximumSize(maximumSize: StorageMaximumSizeProperty)
+
+      /**
+       * @param maximumSize The maximum storage size of the data stored in the data partition. 
+       *
+       * Newer data overwrites older data when the partition reaches the maximum size.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9672c4d18f444e2c702e0b739eb99dd0fdf2ec3f64a73350a22cbbff9abdb4a7")
+      public fun maximumSize(maximumSize: StorageMaximumSizeProperty.Builder.() -> Unit)
+
+      /**
+       * @param minimumTimeToLive The amount of time that data in this partition will be kept on
+       * disk. 
+       * * After the designated amount of time passes, the data can be removed, but it's not
+       * guaranteed to be removed.
+       * * Before the time expires, data in this partition can still be deleted if the partition
+       * reaches its configured maximum size.
+       * * Newer data will overwrite older data when the partition reaches the maximum size.
+       */
+      public fun minimumTimeToLive(minimumTimeToLive: IResolvable)
+
+      /**
+       * @param minimumTimeToLive The amount of time that data in this partition will be kept on
+       * disk. 
+       * * After the designated amount of time passes, the data can be removed, but it's not
+       * guaranteed to be removed.
+       * * Before the time expires, data in this partition can still be deleted if the partition
+       * reaches its configured maximum size.
+       * * Newer data will overwrite older data when the partition reaches the maximum size.
+       */
+      public fun minimumTimeToLive(minimumTimeToLive: StorageMinimumTimeToLiveProperty)
+
+      /**
+       * @param minimumTimeToLive The amount of time that data in this partition will be kept on
+       * disk. 
+       * * After the designated amount of time passes, the data can be removed, but it's not
+       * guaranteed to be removed.
+       * * Before the time expires, data in this partition can still be deleted if the partition
+       * reaches its configured maximum size.
+       * * Newer data will overwrite older data when the partition reaches the maximum size.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a5a50995f5b7fb6b53066d2bbde132a93b43c659bbd65c4c437baa744bbee5d4")
+      public
+          fun minimumTimeToLive(minimumTimeToLive: StorageMinimumTimeToLiveProperty.Builder.() -> Unit)
+
+      /**
+       * @param storageLocation The folder name for the data partition under the campaign storage
+       * folder. 
+       */
+      public fun storageLocation(storageLocation: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionStorageOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionStorageOptionsProperty.builder()
+
+      /**
+       * @param maximumSize The maximum storage size of the data stored in the data partition. 
+       *
+       * Newer data overwrites older data when the partition reaches the maximum size.
+       */
+      override fun maximumSize(maximumSize: IResolvable) {
+        cdkBuilder.maximumSize(maximumSize.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param maximumSize The maximum storage size of the data stored in the data partition. 
+       *
+       * Newer data overwrites older data when the partition reaches the maximum size.
+       */
+      override fun maximumSize(maximumSize: StorageMaximumSizeProperty) {
+        cdkBuilder.maximumSize(maximumSize.let(StorageMaximumSizeProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param maximumSize The maximum storage size of the data stored in the data partition. 
+       *
+       * Newer data overwrites older data when the partition reaches the maximum size.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9672c4d18f444e2c702e0b739eb99dd0fdf2ec3f64a73350a22cbbff9abdb4a7")
+      override fun maximumSize(maximumSize: StorageMaximumSizeProperty.Builder.() -> Unit): Unit =
+          maximumSize(StorageMaximumSizeProperty(maximumSize))
+
+      /**
+       * @param minimumTimeToLive The amount of time that data in this partition will be kept on
+       * disk. 
+       * * After the designated amount of time passes, the data can be removed, but it's not
+       * guaranteed to be removed.
+       * * Before the time expires, data in this partition can still be deleted if the partition
+       * reaches its configured maximum size.
+       * * Newer data will overwrite older data when the partition reaches the maximum size.
+       */
+      override fun minimumTimeToLive(minimumTimeToLive: IResolvable) {
+        cdkBuilder.minimumTimeToLive(minimumTimeToLive.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param minimumTimeToLive The amount of time that data in this partition will be kept on
+       * disk. 
+       * * After the designated amount of time passes, the data can be removed, but it's not
+       * guaranteed to be removed.
+       * * Before the time expires, data in this partition can still be deleted if the partition
+       * reaches its configured maximum size.
+       * * Newer data will overwrite older data when the partition reaches the maximum size.
+       */
+      override fun minimumTimeToLive(minimumTimeToLive: StorageMinimumTimeToLiveProperty) {
+        cdkBuilder.minimumTimeToLive(minimumTimeToLive.let(StorageMinimumTimeToLiveProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param minimumTimeToLive The amount of time that data in this partition will be kept on
+       * disk. 
+       * * After the designated amount of time passes, the data can be removed, but it's not
+       * guaranteed to be removed.
+       * * Before the time expires, data in this partition can still be deleted if the partition
+       * reaches its configured maximum size.
+       * * Newer data will overwrite older data when the partition reaches the maximum size.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a5a50995f5b7fb6b53066d2bbde132a93b43c659bbd65c4c437baa744bbee5d4")
+      override
+          fun minimumTimeToLive(minimumTimeToLive: StorageMinimumTimeToLiveProperty.Builder.() -> Unit):
+          Unit = minimumTimeToLive(StorageMinimumTimeToLiveProperty(minimumTimeToLive))
+
+      /**
+       * @param storageLocation The folder name for the data partition under the campaign storage
+       * folder. 
+       */
+      override fun storageLocation(storageLocation: String) {
+        cdkBuilder.storageLocation(storageLocation)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionStorageOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionStorageOptionsProperty,
+    ) : CdkObject(cdkObject),
+        DataPartitionStorageOptionsProperty {
+      /**
+       * The maximum storage size of the data stored in the data partition.
+       *
+       *
+       * Newer data overwrites older data when the partition reaches the maximum size.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionstorageoptions.html#cfn-iotfleetwise-campaign-datapartitionstorageoptions-maximumsize)
+       */
+      override fun maximumSize(): Any = unwrap(this).getMaximumSize()
+
+      /**
+       * The amount of time that data in this partition will be kept on disk.
+       *
+       * * After the designated amount of time passes, the data can be removed, but it's not
+       * guaranteed to be removed.
+       * * Before the time expires, data in this partition can still be deleted if the partition
+       * reaches its configured maximum size.
+       * * Newer data will overwrite older data when the partition reaches the maximum size.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionstorageoptions.html#cfn-iotfleetwise-campaign-datapartitionstorageoptions-minimumtimetolive)
+       */
+      override fun minimumTimeToLive(): Any = unwrap(this).getMinimumTimeToLive()
+
+      /**
+       * The folder name for the data partition under the campaign storage folder.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionstorageoptions.html#cfn-iotfleetwise-campaign-datapartitionstorageoptions-storagelocation)
+       */
+      override fun storageLocation(): String = unwrap(this).getStorageLocation()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DataPartitionStorageOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionStorageOptionsProperty):
+          DataPartitionStorageOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataPartitionStorageOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataPartitionStorageOptionsProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionStorageOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionStorageOptionsProperty
+    }
+  }
+
+  /**
+   * The upload options for the data partition.
+   *
+   * If upload options are specified, you must also specify storage options. See
+   * [DataPartitionStorageOptions](https://docs.aws.amazon.com/iot-fleetwise/latest/APIReference/API_DataPartitionStorageOptions.html)
+   * .
+   *
+   *
+   * Access to certain AWS IoT FleetWise features is currently gated. For more information, see [AWS
+   * Region and feature
+   * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+   * in the *AWS IoT FleetWise Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * DataPartitionUploadOptionsProperty dataPartitionUploadOptionsProperty =
+   * DataPartitionUploadOptionsProperty.builder()
+   * .expression("expression")
+   * // the properties below are optional
+   * .conditionLanguageVersion(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionuploadoptions.html)
+   */
+  public interface DataPartitionUploadOptionsProperty {
+    /**
+     * The version of the condition language.
+     *
+     * Defaults to the most recent condition language version.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionuploadoptions.html#cfn-iotfleetwise-campaign-datapartitionuploadoptions-conditionlanguageversion)
+     */
+    public fun conditionLanguageVersion(): Number? = unwrap(this).getConditionLanguageVersion()
+
+    /**
+     * The logical expression used to recognize what data to collect.
+     *
+     * For example, `$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionuploadoptions.html#cfn-iotfleetwise-campaign-datapartitionuploadoptions-expression)
+     */
+    public fun expression(): String
+
+    /**
+     * A builder for [DataPartitionUploadOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param conditionLanguageVersion The version of the condition language.
+       * Defaults to the most recent condition language version.
+       */
+      public fun conditionLanguageVersion(conditionLanguageVersion: Number)
+
+      /**
+       * @param expression The logical expression used to recognize what data to collect. 
+       * For example, `$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0` .
+       */
+      public fun expression(expression: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionUploadOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionUploadOptionsProperty.builder()
+
+      /**
+       * @param conditionLanguageVersion The version of the condition language.
+       * Defaults to the most recent condition language version.
+       */
+      override fun conditionLanguageVersion(conditionLanguageVersion: Number) {
+        cdkBuilder.conditionLanguageVersion(conditionLanguageVersion)
+      }
+
+      /**
+       * @param expression The logical expression used to recognize what data to collect. 
+       * For example, `$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0` .
+       */
+      override fun expression(expression: String) {
+        cdkBuilder.expression(expression)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionUploadOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionUploadOptionsProperty,
+    ) : CdkObject(cdkObject),
+        DataPartitionUploadOptionsProperty {
+      /**
+       * The version of the condition language.
+       *
+       * Defaults to the most recent condition language version.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionuploadoptions.html#cfn-iotfleetwise-campaign-datapartitionuploadoptions-conditionlanguageversion)
+       */
+      override fun conditionLanguageVersion(): Number? = unwrap(this).getConditionLanguageVersion()
+
+      /**
+       * The logical expression used to recognize what data to collect.
+       *
+       * For example, `$variable.`Vehicle.OutsideAirTemperature` &gt;= 105.0` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-datapartitionuploadoptions.html#cfn-iotfleetwise-campaign-datapartitionuploadoptions-expression)
+       */
+      override fun expression(): String = unwrap(this).getExpression()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DataPartitionUploadOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionUploadOptionsProperty):
+          DataPartitionUploadOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DataPartitionUploadOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataPartitionUploadOptionsProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionUploadOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.DataPartitionUploadOptionsProperty
+    }
+  }
+
+  /**
+   * The MQTT topic to which the AWS IoT FleetWise campaign routes data.
+   *
+   * For more information, see [Device communication
+   * protocols](https://docs.aws.amazon.com/iot/latest/developerguide/protocols.html) in the *AWS IoT
+   * Core Developer Guide* .
+   *
+   *
+   * Access to certain AWS IoT FleetWise features is currently gated. For more information, see [AWS
+   * Region and feature
+   * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+   * in the *AWS IoT FleetWise Developer Guide* .
+   *
+   *
    * Example:
    *
    * ```
@@ -1989,11 +2796,16 @@ public open class CfnCampaign(
    */
   public interface MqttTopicConfigProperty {
     /**
+     * The ARN of the role that grants AWS IoT FleetWise permission to access and act on messages
+     * sent to the MQTT topic.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-mqtttopicconfig.html#cfn-iotfleetwise-campaign-mqtttopicconfig-executionrolearn)
      */
     public fun executionRoleArn(): String
 
     /**
+     * The ARN of the MQTT topic.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-mqtttopicconfig.html#cfn-iotfleetwise-campaign-mqtttopicconfig-mqtttopicarn)
      */
     public fun mqttTopicArn(): String
@@ -2004,12 +2816,13 @@ public open class CfnCampaign(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param executionRoleArn the value to be set. 
+       * @param executionRoleArn The ARN of the role that grants AWS IoT FleetWise permission to
+       * access and act on messages sent to the MQTT topic. 
        */
       public fun executionRoleArn(executionRoleArn: String)
 
       /**
-       * @param mqttTopicArn the value to be set. 
+       * @param mqttTopicArn The ARN of the MQTT topic. 
        */
       public fun mqttTopicArn(mqttTopicArn: String)
     }
@@ -2020,14 +2833,15 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.MqttTopicConfigProperty.builder()
 
       /**
-       * @param executionRoleArn the value to be set. 
+       * @param executionRoleArn The ARN of the role that grants AWS IoT FleetWise permission to
+       * access and act on messages sent to the MQTT topic. 
        */
       override fun executionRoleArn(executionRoleArn: String) {
         cdkBuilder.executionRoleArn(executionRoleArn)
       }
 
       /**
-       * @param mqttTopicArn the value to be set. 
+       * @param mqttTopicArn The ARN of the MQTT topic. 
        */
       override fun mqttTopicArn(mqttTopicArn: String) {
         cdkBuilder.mqttTopicArn(mqttTopicArn)
@@ -2043,11 +2857,16 @@ public open class CfnCampaign(
     ) : CdkObject(cdkObject),
         MqttTopicConfigProperty {
       /**
+       * The ARN of the role that grants AWS IoT FleetWise permission to access and act on messages
+       * sent to the MQTT topic.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-mqtttopicconfig.html#cfn-iotfleetwise-campaign-mqtttopicconfig-executionrolearn)
        */
       override fun executionRoleArn(): String = unwrap(this).getExecutionRoleArn()
 
       /**
+       * The ARN of the MQTT topic.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-mqtttopicconfig.html#cfn-iotfleetwise-campaign-mqtttopicconfig-mqtttopicarn)
        */
       override fun mqttTopicArn(): String = unwrap(this).getMqttTopicArn()
@@ -2105,7 +2924,7 @@ public open class CfnCampaign(
     public fun bucketArn(): String
 
     /**
-     * (Optional) Specify the format that files are saved in the Amazon S3 bucket.
+     * Specify the format that files are saved in the Amazon S3 bucket.
      *
      * You can save files in an Apache Parquet or JSON format.
      *
@@ -2118,7 +2937,7 @@ public open class CfnCampaign(
     public fun dataFormat(): String? = unwrap(this).getDataFormat()
 
     /**
-     * (Optional) Enter an S3 bucket prefix.
+     * Enter an S3 bucket prefix.
      *
      * The prefix is the string of characters after the bucket name and before the object name. You
      * can use the prefix to organize data stored in Amazon S3 buckets. For more information, see
@@ -2136,8 +2955,8 @@ public open class CfnCampaign(
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     /**
-     * (Optional) By default, stored data is compressed as a .gzip file. Compressed files have a
-     * reduced file size, which can optimize the cost of data storage.
+     * By default, stored data is compressed as a .gzip file. Compressed files have a reduced file
+     * size, which can optimize the cost of data storage.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-s3config.html#cfn-iotfleetwise-campaign-s3config-storagecompressionformat)
      */
@@ -2154,8 +2973,7 @@ public open class CfnCampaign(
       public fun bucketArn(bucketArn: String)
 
       /**
-       * @param dataFormat (Optional) Specify the format that files are saved in the Amazon S3
-       * bucket.
+       * @param dataFormat Specify the format that files are saved in the Amazon S3 bucket.
        * You can save files in an Apache Parquet or JSON format.
        *
        * * Parquet - Store data in a columnar storage file format. Parquet is optimal for fast data
@@ -2165,7 +2983,7 @@ public open class CfnCampaign(
       public fun dataFormat(dataFormat: String)
 
       /**
-       * @param prefix (Optional) Enter an S3 bucket prefix.
+       * @param prefix Enter an S3 bucket prefix.
        * The prefix is the string of characters after the bucket name and before the object name.
        * You can use the prefix to organize data stored in Amazon S3 buckets. For more information, see
        * [Organizing objects using
@@ -2181,8 +2999,8 @@ public open class CfnCampaign(
       public fun prefix(prefix: String)
 
       /**
-       * @param storageCompressionFormat (Optional) By default, stored data is compressed as a .gzip
-       * file. Compressed files have a reduced file size, which can optimize the cost of data storage.
+       * @param storageCompressionFormat By default, stored data is compressed as a .gzip file.
+       * Compressed files have a reduced file size, which can optimize the cost of data storage.
        */
       public fun storageCompressionFormat(storageCompressionFormat: String)
     }
@@ -2200,8 +3018,7 @@ public open class CfnCampaign(
       }
 
       /**
-       * @param dataFormat (Optional) Specify the format that files are saved in the Amazon S3
-       * bucket.
+       * @param dataFormat Specify the format that files are saved in the Amazon S3 bucket.
        * You can save files in an Apache Parquet or JSON format.
        *
        * * Parquet - Store data in a columnar storage file format. Parquet is optimal for fast data
@@ -2213,7 +3030,7 @@ public open class CfnCampaign(
       }
 
       /**
-       * @param prefix (Optional) Enter an S3 bucket prefix.
+       * @param prefix Enter an S3 bucket prefix.
        * The prefix is the string of characters after the bucket name and before the object name.
        * You can use the prefix to organize data stored in Amazon S3 buckets. For more information, see
        * [Organizing objects using
@@ -2231,8 +3048,8 @@ public open class CfnCampaign(
       }
 
       /**
-       * @param storageCompressionFormat (Optional) By default, stored data is compressed as a .gzip
-       * file. Compressed files have a reduced file size, which can optimize the cost of data storage.
+       * @param storageCompressionFormat By default, stored data is compressed as a .gzip file.
+       * Compressed files have a reduced file size, which can optimize the cost of data storage.
        */
       override fun storageCompressionFormat(storageCompressionFormat: String) {
         cdkBuilder.storageCompressionFormat(storageCompressionFormat)
@@ -2254,7 +3071,7 @@ public open class CfnCampaign(
       override fun bucketArn(): String = unwrap(this).getBucketArn()
 
       /**
-       * (Optional) Specify the format that files are saved in the Amazon S3 bucket.
+       * Specify the format that files are saved in the Amazon S3 bucket.
        *
        * You can save files in an Apache Parquet or JSON format.
        *
@@ -2267,7 +3084,7 @@ public open class CfnCampaign(
       override fun dataFormat(): String? = unwrap(this).getDataFormat()
 
       /**
-       * (Optional) Enter an S3 bucket prefix.
+       * Enter an S3 bucket prefix.
        *
        * The prefix is the string of characters after the bucket name and before the object name.
        * You can use the prefix to organize data stored in Amazon S3 buckets. For more information, see
@@ -2286,8 +3103,8 @@ public open class CfnCampaign(
       override fun prefix(): String? = unwrap(this).getPrefix()
 
       /**
-       * (Optional) By default, stored data is compressed as a .gzip file. Compressed files have a
-       * reduced file size, which can optimize the cost of data storage.
+       * By default, stored data is compressed as a .gzip file. Compressed files have a reduced file
+       * size, which can optimize the cost of data storage.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-s3config.html#cfn-iotfleetwise-campaign-s3config-storagecompressionformat)
        */
@@ -2313,6 +3130,15 @@ public open class CfnCampaign(
   }
 
   /**
+   * The configuration of the signal fetch operation.
+   *
+   *
+   * Access to certain AWS IoT FleetWise features is currently gated. For more information, see [AWS
+   * Region and feature
+   * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+   * in the *AWS IoT FleetWise Developer Guide* .
+   *
+   *
    * Example:
    *
    * ```
@@ -2334,11 +3160,15 @@ public open class CfnCampaign(
    */
   public interface SignalFetchConfigProperty {
     /**
+     * The configuration of a condition-based signal fetch operation.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchconfig.html#cfn-iotfleetwise-campaign-signalfetchconfig-conditionbased)
      */
     public fun conditionBased(): Any? = unwrap(this).getConditionBased()
 
     /**
+     * The configuration of a time-based signal fetch operation.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchconfig.html#cfn-iotfleetwise-campaign-signalfetchconfig-timebased)
      */
     public fun timeBased(): Any? = unwrap(this).getTimeBased()
@@ -2349,17 +3179,17 @@ public open class CfnCampaign(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param conditionBased the value to be set.
+       * @param conditionBased The configuration of a condition-based signal fetch operation.
        */
       public fun conditionBased(conditionBased: IResolvable)
 
       /**
-       * @param conditionBased the value to be set.
+       * @param conditionBased The configuration of a condition-based signal fetch operation.
        */
       public fun conditionBased(conditionBased: ConditionBasedSignalFetchConfigProperty)
 
       /**
-       * @param conditionBased the value to be set.
+       * @param conditionBased The configuration of a condition-based signal fetch operation.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0792e8d6a50c4d84d0d00d2d7644caad0646ca0941c06c22932753e3b6794de8")
@@ -2367,17 +3197,17 @@ public open class CfnCampaign(
           fun conditionBased(conditionBased: ConditionBasedSignalFetchConfigProperty.Builder.() -> Unit)
 
       /**
-       * @param timeBased the value to be set.
+       * @param timeBased The configuration of a time-based signal fetch operation.
        */
       public fun timeBased(timeBased: IResolvable)
 
       /**
-       * @param timeBased the value to be set.
+       * @param timeBased The configuration of a time-based signal fetch operation.
        */
       public fun timeBased(timeBased: TimeBasedSignalFetchConfigProperty)
 
       /**
-       * @param timeBased the value to be set.
+       * @param timeBased The configuration of a time-based signal fetch operation.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c4cf236a85c5ab84bc92f6aa9bc27c3c11b82c9ef1c7e9d1dcd9c5ad79ed595e")
@@ -2391,21 +3221,21 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchConfigProperty.builder()
 
       /**
-       * @param conditionBased the value to be set.
+       * @param conditionBased The configuration of a condition-based signal fetch operation.
        */
       override fun conditionBased(conditionBased: IResolvable) {
         cdkBuilder.conditionBased(conditionBased.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param conditionBased the value to be set.
+       * @param conditionBased The configuration of a condition-based signal fetch operation.
        */
       override fun conditionBased(conditionBased: ConditionBasedSignalFetchConfigProperty) {
         cdkBuilder.conditionBased(conditionBased.let(ConditionBasedSignalFetchConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param conditionBased the value to be set.
+       * @param conditionBased The configuration of a condition-based signal fetch operation.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0792e8d6a50c4d84d0d00d2d7644caad0646ca0941c06c22932753e3b6794de8")
@@ -2414,21 +3244,21 @@ public open class CfnCampaign(
           Unit = conditionBased(ConditionBasedSignalFetchConfigProperty(conditionBased))
 
       /**
-       * @param timeBased the value to be set.
+       * @param timeBased The configuration of a time-based signal fetch operation.
        */
       override fun timeBased(timeBased: IResolvable) {
         cdkBuilder.timeBased(timeBased.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param timeBased the value to be set.
+       * @param timeBased The configuration of a time-based signal fetch operation.
        */
       override fun timeBased(timeBased: TimeBasedSignalFetchConfigProperty) {
         cdkBuilder.timeBased(timeBased.let(TimeBasedSignalFetchConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param timeBased the value to be set.
+       * @param timeBased The configuration of a time-based signal fetch operation.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("c4cf236a85c5ab84bc92f6aa9bc27c3c11b82c9ef1c7e9d1dcd9c5ad79ed595e")
@@ -2445,11 +3275,15 @@ public open class CfnCampaign(
     ) : CdkObject(cdkObject),
         SignalFetchConfigProperty {
       /**
+       * The configuration of a condition-based signal fetch operation.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchconfig.html#cfn-iotfleetwise-campaign-signalfetchconfig-conditionbased)
        */
       override fun conditionBased(): Any? = unwrap(this).getConditionBased()
 
       /**
+       * The configuration of a time-based signal fetch operation.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchconfig.html#cfn-iotfleetwise-campaign-signalfetchconfig-timebased)
        */
       override fun timeBased(): Any? = unwrap(this).getTimeBased()
@@ -2474,6 +3308,15 @@ public open class CfnCampaign(
   }
 
   /**
+   * Information about the signal to be fetched.
+   *
+   *
+   * Access to certain AWS IoT FleetWise features is currently gated. For more information, see [AWS
+   * Region and feature
+   * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+   * in the *AWS IoT FleetWise Developer Guide* .
+   *
+   *
    * Example:
    *
    * ```
@@ -2502,21 +3345,29 @@ public open class CfnCampaign(
    */
   public interface SignalFetchInformationProperty {
     /**
+     * The actions to be performed by the signal fetch.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-actions)
      */
     public fun actions(): List<String>
 
     /**
+     * The version of the condition language used.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-conditionlanguageversion)
      */
     public fun conditionLanguageVersion(): Number? = unwrap(this).getConditionLanguageVersion()
 
     /**
+     * The fully qualified name of the signal to be fetched.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-fullyqualifiedname)
      */
     public fun fullyQualifiedName(): String
 
     /**
+     * The configuration of the signal fetch operation.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-signalfetchconfig)
      */
     public fun signalFetchConfig(): Any
@@ -2527,37 +3378,37 @@ public open class CfnCampaign(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param actions the value to be set. 
+       * @param actions The actions to be performed by the signal fetch. 
        */
       public fun actions(actions: List<String>)
 
       /**
-       * @param actions the value to be set. 
+       * @param actions The actions to be performed by the signal fetch. 
        */
       public fun actions(vararg actions: String)
 
       /**
-       * @param conditionLanguageVersion the value to be set.
+       * @param conditionLanguageVersion The version of the condition language used.
        */
       public fun conditionLanguageVersion(conditionLanguageVersion: Number)
 
       /**
-       * @param fullyQualifiedName the value to be set. 
+       * @param fullyQualifiedName The fully qualified name of the signal to be fetched. 
        */
       public fun fullyQualifiedName(fullyQualifiedName: String)
 
       /**
-       * @param signalFetchConfig the value to be set. 
+       * @param signalFetchConfig The configuration of the signal fetch operation. 
        */
       public fun signalFetchConfig(signalFetchConfig: IResolvable)
 
       /**
-       * @param signalFetchConfig the value to be set. 
+       * @param signalFetchConfig The configuration of the signal fetch operation. 
        */
       public fun signalFetchConfig(signalFetchConfig: SignalFetchConfigProperty)
 
       /**
-       * @param signalFetchConfig the value to be set. 
+       * @param signalFetchConfig The configuration of the signal fetch operation. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fead850def1f2655988c799819e78891e79f097f3bd3834a5fcd8d5570211117")
@@ -2571,47 +3422,47 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalFetchInformationProperty.builder()
 
       /**
-       * @param actions the value to be set. 
+       * @param actions The actions to be performed by the signal fetch. 
        */
       override fun actions(actions: List<String>) {
         cdkBuilder.actions(actions)
       }
 
       /**
-       * @param actions the value to be set. 
+       * @param actions The actions to be performed by the signal fetch. 
        */
       override fun actions(vararg actions: String): Unit = actions(actions.toList())
 
       /**
-       * @param conditionLanguageVersion the value to be set.
+       * @param conditionLanguageVersion The version of the condition language used.
        */
       override fun conditionLanguageVersion(conditionLanguageVersion: Number) {
         cdkBuilder.conditionLanguageVersion(conditionLanguageVersion)
       }
 
       /**
-       * @param fullyQualifiedName the value to be set. 
+       * @param fullyQualifiedName The fully qualified name of the signal to be fetched. 
        */
       override fun fullyQualifiedName(fullyQualifiedName: String) {
         cdkBuilder.fullyQualifiedName(fullyQualifiedName)
       }
 
       /**
-       * @param signalFetchConfig the value to be set. 
+       * @param signalFetchConfig The configuration of the signal fetch operation. 
        */
       override fun signalFetchConfig(signalFetchConfig: IResolvable) {
         cdkBuilder.signalFetchConfig(signalFetchConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param signalFetchConfig the value to be set. 
+       * @param signalFetchConfig The configuration of the signal fetch operation. 
        */
       override fun signalFetchConfig(signalFetchConfig: SignalFetchConfigProperty) {
         cdkBuilder.signalFetchConfig(signalFetchConfig.let(SignalFetchConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param signalFetchConfig the value to be set. 
+       * @param signalFetchConfig The configuration of the signal fetch operation. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("fead850def1f2655988c799819e78891e79f097f3bd3834a5fcd8d5570211117")
@@ -2629,21 +3480,29 @@ public open class CfnCampaign(
     ) : CdkObject(cdkObject),
         SignalFetchInformationProperty {
       /**
+       * The actions to be performed by the signal fetch.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-actions)
        */
       override fun actions(): List<String> = unwrap(this).getActions()
 
       /**
+       * The version of the condition language used.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-conditionlanguageversion)
        */
       override fun conditionLanguageVersion(): Number? = unwrap(this).getConditionLanguageVersion()
 
       /**
+       * The fully qualified name of the signal to be fetched.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-fullyqualifiedname)
        */
       override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
       /**
+       * The configuration of the signal fetch operation.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalfetchinformation.html#cfn-iotfleetwise-campaign-signalfetchinformation-signalfetchconfig)
        */
       override fun signalFetchConfig(): Any = unwrap(this).getSignalFetchConfig()
@@ -2679,6 +3538,7 @@ public open class CfnCampaign(
    * SignalInformationProperty signalInformationProperty = SignalInformationProperty.builder()
    * .name("name")
    * // the properties below are optional
+   * .dataPartitionId("dataPartitionId")
    * .maxSampleCount(123)
    * .minimumSamplingIntervalMs(123)
    * .build();
@@ -2688,15 +3548,33 @@ public open class CfnCampaign(
    */
   public interface SignalInformationProperty {
     /**
-     * (Optional) The maximum number of samples to collect.
+     * The ID of the data partition this signal is associated with.
+     *
+     * The ID must match one of the IDs provided in `dataPartitions` . This is accomplished either
+     * by specifying a particular data partition ID or by using `default` for an established default
+     * partition. You can establish a default partition in the `DataPartition` data type.
+     *
+     *
+     * If you upload a signal as a condition for a campaign's data partition, the same signal must
+     * be included in `signalsToCollect` . &gt; Access to certain AWS IoT FleetWise features is
+     * currently gated. For more information, see [AWS Region and feature
+     * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+     * in the *AWS IoT FleetWise Developer Guide* .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-datapartitionid)
+     */
+    public fun dataPartitionId(): String? = unwrap(this).getDataPartitionId()
+
+    /**
+     * The maximum number of samples to collect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-maxsamplecount)
      */
     public fun maxSampleCount(): Number? = unwrap(this).getMaxSampleCount()
 
     /**
-     * (Optional) The minimum duration of time (in milliseconds) between two triggering events to
-     * collect data.
+     * The minimum duration of time (in milliseconds) between two triggering events to collect data.
      *
      *
      * If a signal changes often, you might want to collect data at a slower rate.
@@ -2719,13 +3597,28 @@ public open class CfnCampaign(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxSampleCount (Optional) The maximum number of samples to collect.
+       * @param dataPartitionId The ID of the data partition this signal is associated with.
+       * The ID must match one of the IDs provided in `dataPartitions` . This is accomplished either
+       * by specifying a particular data partition ID or by using `default` for an established default
+       * partition. You can establish a default partition in the `DataPartition` data type.
+       *
+       *
+       * If you upload a signal as a condition for a campaign's data partition, the same signal must
+       * be included in `signalsToCollect` . &gt; Access to certain AWS IoT FleetWise features is
+       * currently gated. For more information, see [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
+       */
+      public fun dataPartitionId(dataPartitionId: String)
+
+      /**
+       * @param maxSampleCount The maximum number of samples to collect.
        */
       public fun maxSampleCount(maxSampleCount: Number)
 
       /**
-       * @param minimumSamplingIntervalMs (Optional) The minimum duration of time (in milliseconds)
-       * between two triggering events to collect data.
+       * @param minimumSamplingIntervalMs The minimum duration of time (in milliseconds) between two
+       * triggering events to collect data.
        *
        * If a signal changes often, you might want to collect data at a slower rate.
        */
@@ -2744,15 +3637,32 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty.builder()
 
       /**
-       * @param maxSampleCount (Optional) The maximum number of samples to collect.
+       * @param dataPartitionId The ID of the data partition this signal is associated with.
+       * The ID must match one of the IDs provided in `dataPartitions` . This is accomplished either
+       * by specifying a particular data partition ID or by using `default` for an established default
+       * partition. You can establish a default partition in the `DataPartition` data type.
+       *
+       *
+       * If you upload a signal as a condition for a campaign's data partition, the same signal must
+       * be included in `signalsToCollect` . &gt; Access to certain AWS IoT FleetWise features is
+       * currently gated. For more information, see [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
+       */
+      override fun dataPartitionId(dataPartitionId: String) {
+        cdkBuilder.dataPartitionId(dataPartitionId)
+      }
+
+      /**
+       * @param maxSampleCount The maximum number of samples to collect.
        */
       override fun maxSampleCount(maxSampleCount: Number) {
         cdkBuilder.maxSampleCount(maxSampleCount)
       }
 
       /**
-       * @param minimumSamplingIntervalMs (Optional) The minimum duration of time (in milliseconds)
-       * between two triggering events to collect data.
+       * @param minimumSamplingIntervalMs The minimum duration of time (in milliseconds) between two
+       * triggering events to collect data.
        *
        * If a signal changes often, you might want to collect data at a slower rate.
        */
@@ -2777,15 +3687,34 @@ public open class CfnCampaign(
     ) : CdkObject(cdkObject),
         SignalInformationProperty {
       /**
-       * (Optional) The maximum number of samples to collect.
+       * The ID of the data partition this signal is associated with.
+       *
+       * The ID must match one of the IDs provided in `dataPartitions` . This is accomplished either
+       * by specifying a particular data partition ID or by using `default` for an established default
+       * partition. You can establish a default partition in the `DataPartition` data type.
+       *
+       *
+       * If you upload a signal as a condition for a campaign's data partition, the same signal must
+       * be included in `signalsToCollect` . &gt; Access to certain AWS IoT FleetWise features is
+       * currently gated. For more information, see [AWS Region and feature
+       * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+       * in the *AWS IoT FleetWise Developer Guide* .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-datapartitionid)
+       */
+      override fun dataPartitionId(): String? = unwrap(this).getDataPartitionId()
+
+      /**
+       * The maximum number of samples to collect.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-signalinformation.html#cfn-iotfleetwise-campaign-signalinformation-maxsamplecount)
        */
       override fun maxSampleCount(): Number? = unwrap(this).getMaxSampleCount()
 
       /**
-       * (Optional) The minimum duration of time (in milliseconds) between two triggering events to
-       * collect data.
+       * The minimum duration of time (in milliseconds) between two triggering events to collect
+       * data.
        *
        *
        * If a signal changes often, you might want to collect data at a slower rate.
@@ -2819,6 +3748,241 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.SignalInformationProperty
+    }
+  }
+
+  /**
+   * The maximum storage size for the data partition.
+   *
+   *
+   * Access to certain AWS IoT FleetWise features is currently gated. For more information, see [AWS
+   * Region and feature
+   * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+   * in the *AWS IoT FleetWise Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * StorageMaximumSizeProperty storageMaximumSizeProperty = StorageMaximumSizeProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storagemaximumsize.html)
+   */
+  public interface StorageMaximumSizeProperty {
+    /**
+     * The data type of the data to store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storagemaximumsize.html#cfn-iotfleetwise-campaign-storagemaximumsize-unit)
+     */
+    public fun unit(): String
+
+    /**
+     * The maximum amount of time to store data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storagemaximumsize.html#cfn-iotfleetwise-campaign-storagemaximumsize-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [StorageMaximumSizeProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param unit The data type of the data to store. 
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value The maximum amount of time to store data. 
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMaximumSizeProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMaximumSizeProperty.builder()
+
+      /**
+       * @param unit The data type of the data to store. 
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value The maximum amount of time to store data. 
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMaximumSizeProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMaximumSizeProperty,
+    ) : CdkObject(cdkObject),
+        StorageMaximumSizeProperty {
+      /**
+       * The data type of the data to store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storagemaximumsize.html#cfn-iotfleetwise-campaign-storagemaximumsize-unit)
+       */
+      override fun unit(): String = unwrap(this).getUnit()
+
+      /**
+       * The maximum amount of time to store data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storagemaximumsize.html#cfn-iotfleetwise-campaign-storagemaximumsize-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StorageMaximumSizeProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMaximumSizeProperty):
+          StorageMaximumSizeProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageMaximumSizeProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StorageMaximumSizeProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMaximumSizeProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMaximumSizeProperty
+    }
+  }
+
+  /**
+   * Information about the minimum amount of time that data will be kept.
+   *
+   *
+   * Access to certain AWS IoT FleetWise features is currently gated. For more information, see [AWS
+   * Region and feature
+   * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+   * in the *AWS IoT FleetWise Developer Guide* .
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
+   * StorageMinimumTimeToLiveProperty storageMinimumTimeToLiveProperty =
+   * StorageMinimumTimeToLiveProperty.builder()
+   * .unit("unit")
+   * .value(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storageminimumtimetolive.html)
+   */
+  public interface StorageMinimumTimeToLiveProperty {
+    /**
+     * The time increment type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storageminimumtimetolive.html#cfn-iotfleetwise-campaign-storageminimumtimetolive-unit)
+     */
+    public fun unit(): String
+
+    /**
+     * The minimum amount of time to store the data.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storageminimumtimetolive.html#cfn-iotfleetwise-campaign-storageminimumtimetolive-value)
+     */
+    public fun `value`(): Number
+
+    /**
+     * A builder for [StorageMinimumTimeToLiveProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param unit The time increment type. 
+       */
+      public fun unit(unit: String)
+
+      /**
+       * @param value The minimum amount of time to store the data. 
+       */
+      public fun `value`(`value`: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMinimumTimeToLiveProperty.Builder
+          =
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMinimumTimeToLiveProperty.builder()
+
+      /**
+       * @param unit The time increment type. 
+       */
+      override fun unit(unit: String) {
+        cdkBuilder.unit(unit)
+      }
+
+      /**
+       * @param value The minimum amount of time to store the data. 
+       */
+      override fun `value`(`value`: Number) {
+        cdkBuilder.`value`(`value`)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMinimumTimeToLiveProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMinimumTimeToLiveProperty,
+    ) : CdkObject(cdkObject),
+        StorageMinimumTimeToLiveProperty {
+      /**
+       * The time increment type.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storageminimumtimetolive.html#cfn-iotfleetwise-campaign-storageminimumtimetolive-unit)
+       */
+      override fun unit(): String = unwrap(this).getUnit()
+
+      /**
+       * The minimum amount of time to store the data.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-storageminimumtimetolive.html#cfn-iotfleetwise-campaign-storageminimumtimetolive-value)
+       */
+      override fun `value`(): Number = unwrap(this).getValue()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StorageMinimumTimeToLiveProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMinimumTimeToLiveProperty):
+          StorageMinimumTimeToLiveProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          StorageMinimumTimeToLiveProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StorageMinimumTimeToLiveProperty):
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMinimumTimeToLiveProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iotfleetwise.CfnCampaign.StorageMinimumTimeToLiveProperty
     }
   }
 
@@ -2919,6 +4083,8 @@ public open class CfnCampaign(
   }
 
   /**
+   * Used to configure a frequency-based vehicle signal fetch.
+   *
    * Example:
    *
    * ```
@@ -2935,6 +4101,8 @@ public open class CfnCampaign(
    */
   public interface TimeBasedSignalFetchConfigProperty {
     /**
+     * The frequency with which the signal fetch will be executed.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-timebasedsignalfetchconfig-executionfrequencyms)
      */
     public fun executionFrequencyMs(): Number
@@ -2945,7 +4113,7 @@ public open class CfnCampaign(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param executionFrequencyMs the value to be set. 
+       * @param executionFrequencyMs The frequency with which the signal fetch will be executed. 
        */
       public fun executionFrequencyMs(executionFrequencyMs: Number)
     }
@@ -2957,7 +4125,7 @@ public open class CfnCampaign(
           software.amazon.awscdk.services.iotfleetwise.CfnCampaign.TimeBasedSignalFetchConfigProperty.builder()
 
       /**
-       * @param executionFrequencyMs the value to be set. 
+       * @param executionFrequencyMs The frequency with which the signal fetch will be executed. 
        */
       override fun executionFrequencyMs(executionFrequencyMs: Number) {
         cdkBuilder.executionFrequencyMs(executionFrequencyMs)
@@ -2973,6 +4141,8 @@ public open class CfnCampaign(
     ) : CdkObject(cdkObject),
         TimeBasedSignalFetchConfigProperty {
       /**
+       * The frequency with which the signal fetch will be executed.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-campaign-timebasedsignalfetchconfig.html#cfn-iotfleetwise-campaign-timebasedsignalfetchconfig-executionfrequencyms)
        */
       override fun executionFrequencyMs(): Number = unwrap(this).getExecutionFrequencyMs()

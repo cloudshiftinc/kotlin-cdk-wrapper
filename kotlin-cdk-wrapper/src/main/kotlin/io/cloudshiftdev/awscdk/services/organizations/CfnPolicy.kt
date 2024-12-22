@@ -228,9 +228,10 @@ public open class CfnPolicy(
      * policy document:
      *
      * * Service control policies: 5,120 characters
-     * * AI services opt-out policies: 2,500 characters
      * * Backup policies: 10,000 characters
      * * Tag policies: 10,000 characters
+     * * Chatbot policies: 10,000 characters
+     * * AI services opt-out policies: 2,500 characters
      *
      * For more information about Organizations service quotas, see [Quotas for AWS
      * Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html)
@@ -386,9 +387,10 @@ public open class CfnPolicy(
      * policy document:
      *
      * * Service control policies: 5,120 characters
-     * * AI services opt-out policies: 2,500 characters
      * * Backup policies: 10,000 characters
      * * Tag policies: 10,000 characters
+     * * Chatbot policies: 10,000 characters
+     * * AI services opt-out policies: 2,500 characters
      *
      * For more information about Organizations service quotas, see [Quotas for AWS
      * Organizations](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html)

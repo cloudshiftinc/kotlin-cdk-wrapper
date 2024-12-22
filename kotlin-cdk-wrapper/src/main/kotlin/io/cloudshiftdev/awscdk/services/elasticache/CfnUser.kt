@@ -21,9 +21,9 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * For Redis OSS engine version 6.0 onwards: Creates a Redis OSS user. For more information, see
- * [Using Role Based Access Control
- * (RBAC)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html) .
+ * For Valkey 7.2 and onwards, or Redis OSS engine version 6.0 and onwards: Creates user. For more
+ * information, see [Using Role Based Access Control
+ * (RBAC)](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/Clusters.RBAC.html) .
  *
  * Example:
  *
@@ -112,12 +112,12 @@ public open class CfnUser(
   }
 
   /**
-   * The current supported value is redis.
+   * The current supported values are valkey and redis.
    */
   public open fun engine(): String = unwrap(this).getEngine()
 
   /**
-   * The current supported value is redis.
+   * The current supported values are valkey and redis.
    */
   public open fun engine(`value`: String) {
     unwrap(this).setEngine(`value`)
@@ -243,10 +243,10 @@ public open class CfnUser(
     public fun authenticationMode(authenticationMode: Any)
 
     /**
-     * The current supported value is redis.
+     * The current supported values are valkey and redis.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-engine)
-     * @param engine The current supported value is redis. 
+     * @param engine The current supported values are valkey and redis. 
      */
     public fun engine(engine: String)
 
@@ -353,10 +353,10 @@ public open class CfnUser(
     }
 
     /**
-     * The current supported value is redis.
+     * The current supported values are valkey and redis.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-engine)
-     * @param engine The current supported value is redis. 
+     * @param engine The current supported values are valkey and redis. 
      */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)

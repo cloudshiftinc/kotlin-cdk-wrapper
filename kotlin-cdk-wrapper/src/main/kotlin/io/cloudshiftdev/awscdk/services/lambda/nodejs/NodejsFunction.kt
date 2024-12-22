@@ -322,20 +322,20 @@ public open class NodejsFunction(
     public fun deadLetterTopic(deadLetterTopic: ITopic)
 
     /**
-     * The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml` or
+     * The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml`, `bun.lockb` or
      * `package-lock.json`).
      *
      * This will be used as the source for the volume mounted in the Docker
      * container.
      *
      * Modules specified in `nodeModules` will be installed using the right
-     * installer (`yarn`, `pnpm` or `npm`) along with this lock file.
+     * installer (`yarn`, `pnpm`, `bun` or `npm`) along with this lock file.
      *
      * Default: - the path is found by walking up parent directories searching for
-     * a `yarn.lock`, `pnpm-lock.yaml` or `package-lock.json` file
+     * a `yarn.lock`, `pnpm-lock.yaml`, `bun.lockb` or `package-lock.json` file
      *
-     * @param depsLockFilePath The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml`
-     * or `package-lock.json`). 
+     * @param depsLockFilePath The path to the dependencies lock file (`yarn.lock`,
+     * `pnpm-lock.yaml`, `bun.lockb` or `package-lock.json`). 
      */
     public fun depsLockFilePath(depsLockFilePath: String)
 
@@ -734,7 +734,7 @@ public open class NodejsFunction(
     /**
      * Sets the Recursive Loop Protection for Lambda Function.
      *
-     * It lets Lambda detect and terminate unintended recusrive loops.
+     * It lets Lambda detect and terminate unintended recursive loops.
      *
      * Default: RecursiveLoop.Terminate
      *
@@ -840,7 +840,8 @@ public open class NodejsFunction(
     /**
      * Enable SnapStart for Lambda Function.
      *
-     * SnapStart is currently supported only for Java 11, 17 runtime
+     * SnapStart is currently supported for Java 11, Java 17, Python 3.12, Python 3.13, and .NET 8
+     * runtime
      *
      * Default: - No snapstart
      *
@@ -1203,20 +1204,20 @@ public open class NodejsFunction(
     }
 
     /**
-     * The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml` or
+     * The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml`, `bun.lockb` or
      * `package-lock.json`).
      *
      * This will be used as the source for the volume mounted in the Docker
      * container.
      *
      * Modules specified in `nodeModules` will be installed using the right
-     * installer (`yarn`, `pnpm` or `npm`) along with this lock file.
+     * installer (`yarn`, `pnpm`, `bun` or `npm`) along with this lock file.
      *
      * Default: - the path is found by walking up parent directories searching for
-     * a `yarn.lock`, `pnpm-lock.yaml` or `package-lock.json` file
+     * a `yarn.lock`, `pnpm-lock.yaml`, `bun.lockb` or `package-lock.json` file
      *
-     * @param depsLockFilePath The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml`
-     * or `package-lock.json`). 
+     * @param depsLockFilePath The path to the dependencies lock file (`yarn.lock`,
+     * `pnpm-lock.yaml`, `bun.lockb` or `package-lock.json`). 
      */
     override fun depsLockFilePath(depsLockFilePath: String) {
       cdkBuilder.depsLockFilePath(depsLockFilePath)
@@ -1673,7 +1674,7 @@ public open class NodejsFunction(
     /**
      * Sets the Recursive Loop Protection for Lambda Function.
      *
-     * It lets Lambda detect and terminate unintended recusrive loops.
+     * It lets Lambda detect and terminate unintended recursive loops.
      *
      * Default: RecursiveLoop.Terminate
      *
@@ -1794,7 +1795,8 @@ public open class NodejsFunction(
     /**
      * Enable SnapStart for Lambda Function.
      *
-     * SnapStart is currently supported only for Java 11, 17 runtime
+     * SnapStart is currently supported for Java 11, Java 17, Python 3.12, Python 3.13, and .NET 8
+     * runtime
      *
      * Default: - No snapstart
      *

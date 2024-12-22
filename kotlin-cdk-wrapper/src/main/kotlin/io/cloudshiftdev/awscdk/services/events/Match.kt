@@ -24,7 +24,6 @@ import kotlin.collections.List
  * "size", Match.greaterThan(1024)),
  * // 'OR' condition
  * "source-storage-class", Match.anyOf(Match.prefix("GLACIER"), Match.exactString("DEEP_ARCHIVE"))))
- * .detailType(Match.equalsIgnoreCase("object created"))
  * // If you prefer, you can use a low level array of strings, as directly consumed by EventBridge
  * .source(List.of("aws.s3"))
  * .region(Match.anythingButPrefix("us-gov"))
@@ -68,8 +67,17 @@ public open class Match(
     public fun anythingBut(values: Any): List<String> =
         software.amazon.awscdk.services.events.Match.anythingBut(values)
 
-    public fun anythingButPrefix(prefix: String): List<String> =
-        software.amazon.awscdk.services.events.Match.anythingButPrefix(prefix)
+    public fun anythingButEqualsIgnoreCase(values: String): List<String> =
+        software.amazon.awscdk.services.events.Match.anythingButEqualsIgnoreCase(values)
+
+    public fun anythingButPrefix(values: String): List<String> =
+        software.amazon.awscdk.services.events.Match.anythingButPrefix(values)
+
+    public fun anythingButSuffix(values: String): List<String> =
+        software.amazon.awscdk.services.events.Match.anythingButSuffix(values)
+
+    public fun anythingButWildcard(values: String): List<String> =
+        software.amazon.awscdk.services.events.Match.anythingButWildcard(values)
 
     public fun cidr(range: String): List<String> =
         software.amazon.awscdk.services.events.Match.cidr(range)
@@ -111,8 +119,17 @@ public open class Match(
     public fun prefix(`value`: String): List<String> =
         software.amazon.awscdk.services.events.Match.prefix(`value`)
 
+    public fun prefixEqualsIgnoreCase(`value`: String): List<String> =
+        software.amazon.awscdk.services.events.Match.prefixEqualsIgnoreCase(`value`)
+
     public fun suffix(`value`: String): List<String> =
         software.amazon.awscdk.services.events.Match.suffix(`value`)
+
+    public fun suffixEqualsIgnoreCase(`value`: String): List<String> =
+        software.amazon.awscdk.services.events.Match.suffixEqualsIgnoreCase(`value`)
+
+    public fun wildcard(`value`: String): List<String> =
+        software.amazon.awscdk.services.events.Match.wildcard(`value`)
 
     internal fun wrap(cdkObject: software.amazon.awscdk.services.events.Match): Match =
         Match(cdkObject)

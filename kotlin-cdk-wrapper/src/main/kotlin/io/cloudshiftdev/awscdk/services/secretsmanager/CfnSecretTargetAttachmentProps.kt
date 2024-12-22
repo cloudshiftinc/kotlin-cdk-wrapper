@@ -33,7 +33,7 @@ public interface CfnSecretTargetAttachmentProps {
    *
    * To reference a secret also created in this template, use the see
    * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
-   * function with the secret's logical ID.
+   * function with the secret's logical ID. This field is unique for each target attachment definition.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-secretid)
    */
@@ -73,7 +73,8 @@ public interface CfnSecretTargetAttachmentProps {
      * @param secretId The ARN or name of the secret. 
      * To reference a secret also created in this template, use the see
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
-     * function with the secret's logical ID.
+     * function with the secret's logical ID. This field is unique for each target attachment
+     * definition.
      */
     public fun secretId(secretId: String)
 
@@ -108,7 +109,8 @@ public interface CfnSecretTargetAttachmentProps {
      * @param secretId The ARN or name of the secret. 
      * To reference a secret also created in this template, use the see
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
-     * function with the secret's logical ID.
+     * function with the secret's logical ID. This field is unique for each target attachment
+     * definition.
      */
     override fun secretId(secretId: String) {
       cdkBuilder.secretId(secretId)
@@ -153,7 +155,8 @@ public interface CfnSecretTargetAttachmentProps {
      *
      * To reference a secret also created in this template, use the see
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
-     * function with the secret's logical ID.
+     * function with the secret's logical ID. This field is unique for each target attachment
+     * definition.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-secretid)
      */

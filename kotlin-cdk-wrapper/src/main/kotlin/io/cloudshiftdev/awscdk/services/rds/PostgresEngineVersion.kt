@@ -225,6 +225,12 @@ public open class PostgresEngineVersion(
     public val VER_12_20: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_12_20)
 
+    public val VER_12_21: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_12_21)
+
+    public val VER_12_22: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_12_22)
+
     public val VER_12_3: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_12_3)
 
@@ -273,6 +279,12 @@ public open class PostgresEngineVersion(
     public val VER_13_16: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_13_16)
 
+    public val VER_13_17: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_13_17)
+
+    public val VER_13_18: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_13_18)
+
     public val VER_13_2: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_13_2)
 
@@ -315,6 +327,12 @@ public open class PostgresEngineVersion(
     public val VER_14_13: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_14_13)
 
+    public val VER_14_14: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_14_14)
+
+    public val VER_14_15: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_14_15)
+
     public val VER_14_2: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_14_2)
 
@@ -342,6 +360,9 @@ public open class PostgresEngineVersion(
     public val VER_15: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_15)
 
+    public val VER_15_10: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_15_10)
+
     public val VER_15_2: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_15_2)
 
@@ -363,6 +384,9 @@ public open class PostgresEngineVersion(
     public val VER_15_8: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_15_8)
 
+    public val VER_15_9: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_15_9)
+
     public val VER_16: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_16)
 
@@ -377,6 +401,21 @@ public open class PostgresEngineVersion(
 
     public val VER_16_4: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_16_4)
+
+    public val VER_16_5: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_16_5)
+
+    public val VER_16_6: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_16_6)
+
+    public val VER_17: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_17)
+
+    public val VER_17_1: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_17_1)
+
+    public val VER_17_2: PostgresEngineVersion =
+        PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_17_2)
 
     public val VER_9_6_24: PostgresEngineVersion =
         PostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.PostgresEngineVersion.VER_9_6_24)

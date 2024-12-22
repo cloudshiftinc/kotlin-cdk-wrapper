@@ -52,7 +52,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .managedTerminationProtection("managedTerminationProtection")
  * .build())
- * // the properties below are optional
  * .name("name")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -68,6 +67,11 @@ public open class CfnCapacityProvider(
 ) : CfnResource(cdkObject),
     IInspectable,
     ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.ecs.CfnCapacityProvider(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id)
+  )
+
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -87,7 +91,7 @@ public open class CfnCapacityProvider(
   /**
    * The Auto Scaling group settings for the capacity provider.
    */
-  public open fun autoScalingGroupProvider(): Any = unwrap(this).getAutoScalingGroupProvider()
+  public open fun autoScalingGroupProvider(): Any? = unwrap(this).getAutoScalingGroupProvider()
 
   /**
    * The Auto Scaling group settings for the capacity provider.
@@ -662,6 +666,15 @@ public open class CfnCapacityProvider(
 
   /**
    * The managed scaling settings for the Auto Scaling group capacity provider.
+   *
+   * When managed scaling is turned on, Amazon ECS manages the scale-in and scale-out actions of the
+   * Auto Scaling group. Amazon ECS manages a target tracking scaling policy using an Amazon ECS
+   * managed CloudWatch metric with the specified `targetCapacity` value as the target value for the
+   * metric. For more information, see [Using managed
+   * scaling](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/asg-capacity-providers.html#asg-capacity-providers-managed-scaling)
+   * in the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * If managed scaling is off, the user must manage the scaling of the Auto Scaling group.
    *
    * Example:
    *

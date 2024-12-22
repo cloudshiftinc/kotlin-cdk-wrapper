@@ -30,7 +30,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * ```
  * FargateCluster cluster = FargateCluster.Builder.create(this, "MyCluster")
- * .version(KubernetesVersion.V1_30)
+ * .version(KubernetesVersion.V1_31)
  * .build();
  * ```
  */

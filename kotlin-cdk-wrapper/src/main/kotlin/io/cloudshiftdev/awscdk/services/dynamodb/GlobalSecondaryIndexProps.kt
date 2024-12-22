@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.dynamodb
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -17,30 +18,25 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.dynamodb.*;
- * GlobalSecondaryIndexProps globalSecondaryIndexProps = GlobalSecondaryIndexProps.builder()
- * .indexName("indexName")
- * .partitionKey(Attribute.builder()
- * .name("name")
- * .type(AttributeType.BINARY)
- * .build())
- * // the properties below are optional
- * .maxReadRequestUnits(123)
- * .maxWriteRequestUnits(123)
- * .nonKeyAttributes(List.of("nonKeyAttributes"))
- * .projectionType(ProjectionType.KEYS_ONLY)
- * .readCapacity(123)
- * .sortKey(Attribute.builder()
- * .name("name")
- * .type(AttributeType.BINARY)
- * .build())
- * .writeCapacity(123)
+ * Table table = Table.Builder.create(this, "Table")
+ * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+ * .contributorInsightsEnabled(true)
  * .build();
+ * table.addGlobalSecondaryIndex(GlobalSecondaryIndexProps.builder()
+ * .contributorInsightsEnabled(true) // for a specific global secondary index
+ * .indexName("gsi")
+ * .partitionKey(Attribute.builder().name("pk").type(AttributeType.STRING).build())
+ * .build());
  * ```
  */
 public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions {
+  /**
+   * Whether CloudWatch contributor insights is enabled for the specified global secondary index.
+   *
+   * Default: false
+   */
+  public fun contributorInsightsEnabled(): Boolean? = unwrap(this).getContributorInsightsEnabled()
+
   /**
    * The maximum read request units for the global secondary index.
    *
@@ -69,6 +65,14 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
   public fun readCapacity(): Number? = unwrap(this).getReadCapacity()
 
   /**
+   * The warm throughput configuration for the global secondary index.
+   *
+   * Default: - no warm throughput is configured
+   */
+  public fun warmThroughput(): WarmThroughput? =
+      unwrap(this).getWarmThroughput()?.let(WarmThroughput::wrap)
+
+  /**
    * The write capacity for the global secondary index.
    *
    * Can only be provided if table billingMode is Provisioned or undefined.
@@ -82,6 +86,12 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param contributorInsightsEnabled Whether CloudWatch contributor insights is enabled for the
+     * specified global secondary index.
+     */
+    public fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean)
+
     /**
      * @param indexName The name of the secondary index. 
      */
@@ -145,6 +155,18 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
     public fun sortKey(sortKey: Attribute.Builder.() -> Unit)
 
     /**
+     * @param warmThroughput The warm throughput configuration for the global secondary index.
+     */
+    public fun warmThroughput(warmThroughput: WarmThroughput)
+
+    /**
+     * @param warmThroughput The warm throughput configuration for the global secondary index.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("92b82b674fa2cf7a6212df136473b095c46139b1cd265fa2e067f459e2405eb9")
+    public fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit)
+
+    /**
      * @param writeCapacity The write capacity for the global secondary index.
      * Can only be provided if table billingMode is Provisioned or undefined.
      */
@@ -155,6 +177,14 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
     private val cdkBuilder:
         software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexProps.Builder =
         software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexProps.builder()
+
+    /**
+     * @param contributorInsightsEnabled Whether CloudWatch contributor insights is enabled for the
+     * specified global secondary index.
+     */
+    override fun contributorInsightsEnabled(contributorInsightsEnabled: Boolean) {
+      cdkBuilder.contributorInsightsEnabled(contributorInsightsEnabled)
+    }
 
     /**
      * @param indexName The name of the secondary index. 
@@ -237,6 +267,21 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
     override fun sortKey(sortKey: Attribute.Builder.() -> Unit): Unit = sortKey(Attribute(sortKey))
 
     /**
+     * @param warmThroughput The warm throughput configuration for the global secondary index.
+     */
+    override fun warmThroughput(warmThroughput: WarmThroughput) {
+      cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughput.Companion::unwrap))
+    }
+
+    /**
+     * @param warmThroughput The warm throughput configuration for the global secondary index.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("92b82b674fa2cf7a6212df136473b095c46139b1cd265fa2e067f459e2405eb9")
+    override fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit): Unit =
+        warmThroughput(WarmThroughput(warmThroughput))
+
+    /**
      * @param writeCapacity The write capacity for the global secondary index.
      * Can only be provided if table billingMode is Provisioned or undefined.
      */
@@ -252,6 +297,14 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
     cdkObject: software.amazon.awscdk.services.dynamodb.GlobalSecondaryIndexProps,
   ) : CdkObject(cdkObject),
       GlobalSecondaryIndexProps {
+    /**
+     * Whether CloudWatch contributor insights is enabled for the specified global secondary index.
+     *
+     * Default: false
+     */
+    override fun contributorInsightsEnabled(): Boolean? =
+        unwrap(this).getContributorInsightsEnabled()
+
     /**
      * The name of the secondary index.
      */
@@ -311,6 +364,14 @@ public interface GlobalSecondaryIndexProps : SecondaryIndexProps, SchemaOptions 
      * Default: no sort key
      */
     override fun sortKey(): Attribute? = unwrap(this).getSortKey()?.let(Attribute::wrap)
+
+    /**
+     * The warm throughput configuration for the global secondary index.
+     *
+     * Default: - no warm throughput is configured
+     */
+    override fun warmThroughput(): WarmThroughput? =
+        unwrap(this).getWarmThroughput()?.let(WarmThroughput::wrap)
 
     /**
      * The write capacity for the global secondary index.

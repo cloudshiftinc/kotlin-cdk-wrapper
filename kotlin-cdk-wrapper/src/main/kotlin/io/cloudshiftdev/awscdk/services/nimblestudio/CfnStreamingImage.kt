@@ -65,7 +65,7 @@ public open class CfnStreamingImage(
   )
 
   /**
-   * TODO</p>.
+   *
    */
   public open fun attrEncryptionConfiguration(): IResolvable =
       unwrap(this).getAttrEncryptionConfiguration().let(IResolvable::wrap)

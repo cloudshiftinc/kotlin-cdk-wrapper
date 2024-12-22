@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.deployment.ServerSideEncryption
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -31,7 +32,7 @@ import kotlin.Unit
  * }
  * }
  * Bucket userDefinedBucket = Bucket.Builder.create(this, "UserDefinedBucket")
- * .bucketName("user-defined-bucket-for-product-stack-assets")
+ * .bucketName("amzn-s3-demo-bucket")
  * .build();
  * CloudFormationProduct product = CloudFormationProduct.Builder.create(this, "Product")
  * .productName("My Product")
@@ -48,11 +49,26 @@ import kotlin.Unit
  */
 public interface ProductStackProps {
   /**
+   * Include runtime versioning information in this Stack.
+   *
+   * Default: - `analyticsReporting` setting of containing `App`, or value of
+   * 'aws:cdk:version-reporting' context key
+   */
+  public fun analyticsReporting(): Boolean? = unwrap(this).getAnalyticsReporting()
+
+  /**
    * A Bucket can be passed to store assets, enabling ProductStack Asset support.
    *
    * Default: - No Bucket provided and Assets will not be supported.
    */
   public fun assetBucket(): IBucket? = unwrap(this).getAssetBucket()?.let(IBucket::wrap)
+
+  /**
+   * A description of the stack.
+   *
+   * Default: - No description.
+   */
+  public fun description(): String? = unwrap(this).getDescription()
 
   /**
    * The amount of memory (in MiB) to allocate to the AWS Lambda function which replicates the files
@@ -88,10 +104,20 @@ public interface ProductStackProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param analyticsReporting Include runtime versioning information in this Stack.
+     */
+    public fun analyticsReporting(analyticsReporting: Boolean)
+
+    /**
      * @param assetBucket A Bucket can be passed to store assets, enabling ProductStack Asset
      * support.
      */
     public fun assetBucket(assetBucket: IBucket)
+
+    /**
+     * @param description A description of the stack.
+     */
+    public fun description(description: String)
 
     /**
      * @param memoryLimit The amount of memory (in MiB) to allocate to the AWS Lambda function which
@@ -119,11 +145,25 @@ public interface ProductStackProps {
         = software.amazon.awscdk.services.servicecatalog.ProductStackProps.builder()
 
     /**
+     * @param analyticsReporting Include runtime versioning information in this Stack.
+     */
+    override fun analyticsReporting(analyticsReporting: Boolean) {
+      cdkBuilder.analyticsReporting(analyticsReporting)
+    }
+
+    /**
      * @param assetBucket A Bucket can be passed to store assets, enabling ProductStack Asset
      * support.
      */
     override fun assetBucket(assetBucket: IBucket) {
       cdkBuilder.assetBucket(assetBucket.let(IBucket.Companion::unwrap))
+    }
+
+    /**
+     * @param description A description of the stack.
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**
@@ -161,11 +201,26 @@ public interface ProductStackProps {
   ) : CdkObject(cdkObject),
       ProductStackProps {
     /**
+     * Include runtime versioning information in this Stack.
+     *
+     * Default: - `analyticsReporting` setting of containing `App`, or value of
+     * 'aws:cdk:version-reporting' context key
+     */
+    override fun analyticsReporting(): Boolean? = unwrap(this).getAnalyticsReporting()
+
+    /**
      * A Bucket can be passed to store assets, enabling ProductStack Asset support.
      *
      * Default: - No Bucket provided and Assets will not be supported.
      */
     override fun assetBucket(): IBucket? = unwrap(this).getAssetBucket()?.let(IBucket::wrap)
+
+    /**
+     * A description of the stack.
+     *
+     * Default: - No description.
+     */
+    override fun description(): String? = unwrap(this).getDescription()
 
     /**
      * The amount of memory (in MiB) to allocate to the AWS Lambda function which replicates the

@@ -876,7 +876,7 @@ public open class SingletonFunction(
     /**
      * Sets the Recursive Loop Protection for Lambda Function.
      *
-     * It lets Lambda detect and terminate unintended recusrive loops.
+     * It lets Lambda detect and terminate unintended recursive loops.
      *
      * Default: RecursiveLoop.Terminate
      *
@@ -981,7 +981,8 @@ public open class SingletonFunction(
     /**
      * Enable SnapStart for Lambda Function.
      *
-     * SnapStart is currently supported only for Java 11, 17 runtime
+     * SnapStart is currently supported for Java 11, Java 17, Python 3.12, Python 3.13, and .NET 8
+     * runtime
      *
      * Default: - No snapstart
      *
@@ -1739,7 +1740,7 @@ public open class SingletonFunction(
     /**
      * Sets the Recursive Loop Protection for Lambda Function.
      *
-     * It lets Lambda detect and terminate unintended recusrive loops.
+     * It lets Lambda detect and terminate unintended recursive loops.
      *
      * Default: RecursiveLoop.Terminate
      *
@@ -1859,7 +1860,8 @@ public open class SingletonFunction(
     /**
      * Enable SnapStart for Lambda Function.
      *
-     * SnapStart is currently supported only for Java 11, 17 runtime
+     * SnapStart is currently supported for Java 11, Java 17, Python 3.12, Python 3.13, and .NET 8
+     * runtime
      *
      * Default: - No snapstart
      *

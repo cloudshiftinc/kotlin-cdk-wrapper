@@ -141,12 +141,12 @@ public open class CfnPermission(
   }
 
   /**
-   * The AWS service or AWS account that invokes the function.
+   * The AWS service , AWS account , IAM user, or IAM role that invokes the function.
    */
   public open fun principal(): String = unwrap(this).getPrincipal()
 
   /**
-   * The AWS service or AWS account that invokes the function.
+   * The AWS service , AWS account , IAM user, or IAM role that invokes the function.
    */
   public open fun principal(`value`: String) {
     unwrap(this).setPrincipal(`value`)
@@ -244,13 +244,14 @@ public open class CfnPermission(
     public fun functionUrlAuthType(functionUrlAuthType: String)
 
     /**
-     * The AWS service or AWS account that invokes the function.
+     * The AWS service , AWS account , IAM user, or IAM role that invokes the function.
      *
      * If you specify a service, use `SourceArn` or `SourceAccount` to limit who can invoke the
      * function through that service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-principal)
-     * @param principal The AWS service or AWS account that invokes the function. 
+     * @param principal The AWS service , AWS account , IAM user, or IAM role that invokes the
+     * function. 
      */
     public fun principal(principal: String)
 
@@ -354,13 +355,14 @@ public open class CfnPermission(
     }
 
     /**
-     * The AWS service or AWS account that invokes the function.
+     * The AWS service , AWS account , IAM user, or IAM role that invokes the function.
      *
      * If you specify a service, use `SourceArn` or `SourceAccount` to limit who can invoke the
      * function through that service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-permission.html#cfn-lambda-permission-principal)
-     * @param principal The AWS service or AWS account that invokes the function. 
+     * @param principal The AWS service , AWS account , IAM user, or IAM role that invokes the
+     * function. 
      */
     override fun principal(principal: String) {
       cdkBuilder.principal(principal)

@@ -1529,6 +1529,8 @@ public open class CfnWirelessDevice(
   }
 
   /**
+   * OTAA device object for v1.0.x.
+   *
    * Example:
    *
    * ```

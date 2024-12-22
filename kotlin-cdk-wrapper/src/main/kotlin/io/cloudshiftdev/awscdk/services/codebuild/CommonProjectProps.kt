@@ -193,7 +193,7 @@ public interface CommonProjectProps {
   /**
    * Build environment to use for the build.
    *
-   * Default: BuildEnvironment.LinuxBuildImage.STANDARD_1_0
+   * Default: BuildEnvironment.LinuxBuildImage.STANDARD_7_0
    */
   public fun environment(): BuildEnvironment? =
       unwrap(this).getEnvironment()?.let(BuildEnvironment::wrap)
@@ -965,7 +965,7 @@ public interface CommonProjectProps {
     /**
      * Build environment to use for the build.
      *
-     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_1_0
+     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_7_0
      */
     override fun environment(): BuildEnvironment? =
         unwrap(this).getEnvironment()?.let(BuildEnvironment::wrap)

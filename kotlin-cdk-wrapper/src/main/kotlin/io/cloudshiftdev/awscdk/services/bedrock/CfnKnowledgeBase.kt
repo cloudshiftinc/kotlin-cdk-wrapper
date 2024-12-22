@@ -132,7 +132,7 @@ public open class CfnKnowledgeBase(
   )
 
   /**
-   * The time at which the knowledge base was created.
+   * The time the knowledge base was created.
    */
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
@@ -147,7 +147,7 @@ public open class CfnKnowledgeBase(
   public open fun attrKnowledgeBaseArn(): String = unwrap(this).getAttrKnowledgeBaseArn()
 
   /**
-   * The unique identifier of the knowledge base.
+   * The unique identifier for a knowledge base associated with the inline agent.
    */
   public open fun attrKnowledgeBaseId(): String = unwrap(this).getAttrKnowledgeBaseId()
 
@@ -157,7 +157,7 @@ public open class CfnKnowledgeBase(
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
   /**
-   * The time at which the knowledge base was last updated.
+   * The time the knowledge base was last updated.
    */
   public open fun attrUpdatedAt(): String = unwrap(this).getAttrUpdatedAt()
 
@@ -168,12 +168,12 @@ public open class CfnKnowledgeBase(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   * The description of the knowledge base.
+   * The description of the knowledge base associated with the inline agent.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * The description of the knowledge base.
+   * The description of the knowledge base associated with the inline agent.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -291,10 +291,10 @@ public open class CfnKnowledgeBase(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The description of the knowledge base.
+     * The description of the knowledge base associated with the inline agent.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-description)
-     * @param description The description of the knowledge base. 
+     * @param description The description of the knowledge base associated with the inline agent. 
      */
     public fun description(description: String)
 
@@ -401,10 +401,10 @@ public open class CfnKnowledgeBase(
         software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.Builder.create(scope, id)
 
     /**
-     * The description of the knowledge base.
+     * The description of the knowledge base associated with the inline agent.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-description)
-     * @param description The description of the knowledge base. 
+     * @param description The description of the knowledge base associated with the inline agent. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -800,7 +800,8 @@ public open class CfnKnowledgeBase(
     public fun type(): String
 
     /**
-     * Contains details about the embeddings model that'sused to convert the data source.
+     * Contains details about the model that's used to convert the data source into vector
+     * embeddings.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-vectorknowledgebaseconfiguration)
      */
@@ -818,21 +819,21 @@ public open class CfnKnowledgeBase(
       public fun type(type: String)
 
       /**
-       * @param vectorKnowledgeBaseConfiguration Contains details about the embeddings model
-       * that'sused to convert the data source. 
+       * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
+       * convert the data source into vector embeddings. 
        */
       public fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: IResolvable)
 
       /**
-       * @param vectorKnowledgeBaseConfiguration Contains details about the embeddings model
-       * that'sused to convert the data source. 
+       * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
+       * convert the data source into vector embeddings. 
        */
       public
           fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: VectorKnowledgeBaseConfigurationProperty)
 
       /**
-       * @param vectorKnowledgeBaseConfiguration Contains details about the embeddings model
-       * that'sused to convert the data source. 
+       * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
+       * convert the data source into vector embeddings. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1436463a51d226fda4896a15739aa86c924098a9d68554af8e2d3e4633b861f")
@@ -855,16 +856,16 @@ public open class CfnKnowledgeBase(
       }
 
       /**
-       * @param vectorKnowledgeBaseConfiguration Contains details about the embeddings model
-       * that'sused to convert the data source. 
+       * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
+       * convert the data source into vector embeddings. 
        */
       override fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: IResolvable) {
         cdkBuilder.vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param vectorKnowledgeBaseConfiguration Contains details about the embeddings model
-       * that'sused to convert the data source. 
+       * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
+       * convert the data source into vector embeddings. 
        */
       override
           fun vectorKnowledgeBaseConfiguration(vectorKnowledgeBaseConfiguration: VectorKnowledgeBaseConfigurationProperty) {
@@ -872,8 +873,8 @@ public open class CfnKnowledgeBase(
       }
 
       /**
-       * @param vectorKnowledgeBaseConfiguration Contains details about the embeddings model
-       * that'sused to convert the data source. 
+       * @param vectorKnowledgeBaseConfiguration Contains details about the model that's used to
+       * convert the data source into vector embeddings. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d1436463a51d226fda4896a15739aa86c924098a9d68554af8e2d3e4633b861f")
@@ -899,7 +900,8 @@ public open class CfnKnowledgeBase(
       override fun type(): String = unwrap(this).getType()
 
       /**
-       * Contains details about the embeddings model that'sused to convert the data source.
+       * Contains details about the model that's used to convert the data source into vector
+       * embeddings.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-knowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-knowledgebaseconfiguration-vectorknowledgebaseconfiguration)
        */
@@ -2355,8 +2357,8 @@ public open class CfnKnowledgeBase(
    */
   public interface VectorKnowledgeBaseConfigurationProperty {
     /**
-     * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the
-     * knowledge base.
+     * The Amazon Resource Name (ARN) of the model or inference profile used to create vector
+     * embeddings for the knowledge base.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-vectorknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-vectorknowledgebaseconfiguration-embeddingmodelarn)
      */
@@ -2375,8 +2377,8 @@ public open class CfnKnowledgeBase(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param embeddingModelArn The Amazon Resource Name (ARN) of the model used to create vector
-       * embeddings for the knowledge base. 
+       * @param embeddingModelArn The Amazon Resource Name (ARN) of the model or inference profile
+       * used to create vector embeddings for the knowledge base. 
        */
       public fun embeddingModelArn(embeddingModelArn: String)
 
@@ -2410,8 +2412,8 @@ public open class CfnKnowledgeBase(
           software.amazon.awscdk.services.bedrock.CfnKnowledgeBase.VectorKnowledgeBaseConfigurationProperty.builder()
 
       /**
-       * @param embeddingModelArn The Amazon Resource Name (ARN) of the model used to create vector
-       * embeddings for the knowledge base. 
+       * @param embeddingModelArn The Amazon Resource Name (ARN) of the model or inference profile
+       * used to create vector embeddings for the knowledge base. 
        */
       override fun embeddingModelArn(embeddingModelArn: String) {
         cdkBuilder.embeddingModelArn(embeddingModelArn)
@@ -2455,8 +2457,8 @@ public open class CfnKnowledgeBase(
     ) : CdkObject(cdkObject),
         VectorKnowledgeBaseConfigurationProperty {
       /**
-       * The Amazon Resource Name (ARN) of the model used to create vector embeddings for the
-       * knowledge base.
+       * The Amazon Resource Name (ARN) of the model or inference profile used to create vector
+       * embeddings for the knowledge base.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-knowledgebase-vectorknowledgebaseconfiguration.html#cfn-bedrock-knowledgebase-vectorknowledgebaseconfiguration-embeddingmodelarn)
        */

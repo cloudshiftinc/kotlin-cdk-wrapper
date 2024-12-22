@@ -33,13 +33,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.m2.*;
  * CfnApplication cfnApplication = CfnApplication.Builder.create(this, "MyCfnApplication")
+ * .engineType("engineType")
+ * .name("name")
+ * // the properties below are optional
  * .definition(DefinitionProperty.builder()
  * .content("content")
  * .s3Location("s3Location")
  * .build())
- * .engineType("engineType")
- * .name("name")
- * // the properties below are optional
  * .description("description")
  * .kmsKeyId("kmsKeyId")
  * .roleArn("roleArn")
@@ -86,7 +86,7 @@ public open class CfnApplication(
    *
    * You can specify either inline JSON or an Amazon S3 bucket location.
    */
-  public open fun definition(): Any = unwrap(this).getDefinition()
+  public open fun definition(): Any? = unwrap(this).getDefinition()
 
   /**
    * The application definition for a particular application.

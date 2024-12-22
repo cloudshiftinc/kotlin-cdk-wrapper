@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -33,6 +34,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .customDomainConfig(CustomDomainConfigTypeProperty.builder()
  * .certificateArn("certificateArn")
  * .build())
+ * .managedLoginVersion(123)
  * .build();
  * ```
  *
@@ -102,12 +104,14 @@ public open class CfnUserPoolDomain(
       Unit = customDomainConfig(CustomDomainConfigTypeProperty(`value`))
 
   /**
-   * The domain name for the domain that hosts the sign-up and sign-in pages for your application.
+   * The domain name for the custom domain that hosts the sign-up and sign-in pages for your
+   * application.
    */
   public open fun domain(): String = unwrap(this).getDomain()
 
   /**
-   * The domain name for the domain that hosts the sign-up and sign-in pages for your application.
+   * The domain name for the custom domain that hosts the sign-up and sign-in pages for your
+   * application.
    */
   public open fun domain(`value`: String) {
     unwrap(this).setDomain(`value`)
@@ -123,12 +127,26 @@ public open class CfnUserPoolDomain(
   }
 
   /**
-   * The user pool ID for the user pool where you want to associate a user pool domain.
+   * A version number that indicates the state of managed login for your domain.
+   */
+  public open fun managedLoginVersion(): Number? = unwrap(this).getManagedLoginVersion()
+
+  /**
+   * A version number that indicates the state of managed login for your domain.
+   */
+  public open fun managedLoginVersion(`value`: Number) {
+    unwrap(this).setManagedLoginVersion(`value`)
+  }
+
+  /**
+   * The ID of the user pool that is associated with the custom domain whose certificate you're
+   * updating.
    */
   public open fun userPoolId(): String = unwrap(this).getUserPoolId()
 
   /**
-   * The user pool ID for the user pool where you want to associate a user pool domain.
+   * The ID of the user pool that is associated with the custom domain whose certificate you're
+   * updating.
    */
   public open fun userPoolId(`value`: String) {
     unwrap(this).setUserPoolId(`value`)
@@ -145,6 +163,13 @@ public open class CfnUserPoolDomain(
      *
      * Use this object to specify an SSL certificate that is managed by ACM.
      *
+     * When you create a custom domain, the passkey RP ID defaults to the custom domain. If you had
+     * a prefix domain active, this will cause passkey integration for your prefix domain to stop
+     * working due to a mismatch in RP ID. To keep the prefix domain passkey integration working, you
+     * can explicitly set RP ID to the prefix domain. Update the RP ID in a
+     * [SetUserPoolMfaConfig](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolMfaConfig.html)
+     * request.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-customdomainconfig)
      * @param customDomainConfig The configuration for a custom domain that hosts the sign-up and
      * sign-in pages for your application. 
@@ -156,6 +181,13 @@ public open class CfnUserPoolDomain(
      * application.
      *
      * Use this object to specify an SSL certificate that is managed by ACM.
+     *
+     * When you create a custom domain, the passkey RP ID defaults to the custom domain. If you had
+     * a prefix domain active, this will cause passkey integration for your prefix domain to stop
+     * working due to a mismatch in RP ID. To keep the prefix domain passkey integration working, you
+     * can explicitly set RP ID to the prefix domain. Update the RP ID in a
+     * [SetUserPoolMfaConfig](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolMfaConfig.html)
+     * request.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-customdomainconfig)
      * @param customDomainConfig The configuration for a custom domain that hosts the sign-up and
@@ -169,6 +201,13 @@ public open class CfnUserPoolDomain(
      *
      * Use this object to specify an SSL certificate that is managed by ACM.
      *
+     * When you create a custom domain, the passkey RP ID defaults to the custom domain. If you had
+     * a prefix domain active, this will cause passkey integration for your prefix domain to stop
+     * working due to a mismatch in RP ID. To keep the prefix domain passkey integration working, you
+     * can explicitly set RP ID to the prefix domain. Update the RP ID in a
+     * [SetUserPoolMfaConfig](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolMfaConfig.html)
+     * request.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-customdomainconfig)
      * @param customDomainConfig The configuration for a custom domain that hosts the sign-up and
      * sign-in pages for your application. 
@@ -179,26 +218,41 @@ public open class CfnUserPoolDomain(
         fun customDomainConfig(customDomainConfig: CustomDomainConfigTypeProperty.Builder.() -> Unit)
 
     /**
-     * The domain name for the domain that hosts the sign-up and sign-in pages for your application.
+     * The domain name for the custom domain that hosts the sign-up and sign-in pages for your
+     * application.
      *
-     * For example: `auth.example.com` . If you're using a prefix domain, this field denotes the
-     * first part of the domain before `.auth.[region].amazoncognito.com` .
+     * One example might be `auth.example.com` .
      *
      * This string can include only lowercase letters, numbers, and hyphens. Don't use a hyphen for
      * the first or last character. Use periods to separate subdomain names.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-domain)
-     * @param domain The domain name for the domain that hosts the sign-up and sign-in pages for
-     * your application. 
+     * @param domain The domain name for the custom domain that hosts the sign-up and sign-in pages
+     * for your application. 
      */
     public fun domain(domain: String)
 
     /**
-     * The user pool ID for the user pool where you want to associate a user pool domain.
+     * A version number that indicates the state of managed login for your domain.
+     *
+     * Version `1` is hosted UI (classic). Version `2` is the newer managed login with the branding
+     * designer. For more information, see [Managed
+     * login](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-managedloginversion)
+     * @param managedLoginVersion A version number that indicates the state of managed login for
+     * your domain. 
+     */
+    public fun managedLoginVersion(managedLoginVersion: Number)
+
+    /**
+     * The ID of the user pool that is associated with the custom domain whose certificate you're
+     * updating.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-userpoolid)
-     * @param userPoolId The user pool ID for the user pool where you want to associate a user pool
-     * domain. 
+     * @param userPoolId The ID of the user pool that is associated with the custom domain whose
+     * certificate you're updating. 
      */
     public fun userPoolId(userPoolId: String)
   }
@@ -216,6 +270,13 @@ public open class CfnUserPoolDomain(
      *
      * Use this object to specify an SSL certificate that is managed by ACM.
      *
+     * When you create a custom domain, the passkey RP ID defaults to the custom domain. If you had
+     * a prefix domain active, this will cause passkey integration for your prefix domain to stop
+     * working due to a mismatch in RP ID. To keep the prefix domain passkey integration working, you
+     * can explicitly set RP ID to the prefix domain. Update the RP ID in a
+     * [SetUserPoolMfaConfig](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolMfaConfig.html)
+     * request.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-customdomainconfig)
      * @param customDomainConfig The configuration for a custom domain that hosts the sign-up and
      * sign-in pages for your application. 
@@ -229,6 +290,13 @@ public open class CfnUserPoolDomain(
      * application.
      *
      * Use this object to specify an SSL certificate that is managed by ACM.
+     *
+     * When you create a custom domain, the passkey RP ID defaults to the custom domain. If you had
+     * a prefix domain active, this will cause passkey integration for your prefix domain to stop
+     * working due to a mismatch in RP ID. To keep the prefix domain passkey integration working, you
+     * can explicitly set RP ID to the prefix domain. Update the RP ID in a
+     * [SetUserPoolMfaConfig](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolMfaConfig.html)
+     * request.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-customdomainconfig)
      * @param customDomainConfig The configuration for a custom domain that hosts the sign-up and
@@ -244,6 +312,13 @@ public open class CfnUserPoolDomain(
      *
      * Use this object to specify an SSL certificate that is managed by ACM.
      *
+     * When you create a custom domain, the passkey RP ID defaults to the custom domain. If you had
+     * a prefix domain active, this will cause passkey integration for your prefix domain to stop
+     * working due to a mismatch in RP ID. To keep the prefix domain passkey integration working, you
+     * can explicitly set RP ID to the prefix domain. Update the RP ID in a
+     * [SetUserPoolMfaConfig](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolMfaConfig.html)
+     * request.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-customdomainconfig)
      * @param customDomainConfig The configuration for a custom domain that hosts the sign-up and
      * sign-in pages for your application. 
@@ -255,28 +330,45 @@ public open class CfnUserPoolDomain(
         Unit = customDomainConfig(CustomDomainConfigTypeProperty(customDomainConfig))
 
     /**
-     * The domain name for the domain that hosts the sign-up and sign-in pages for your application.
+     * The domain name for the custom domain that hosts the sign-up and sign-in pages for your
+     * application.
      *
-     * For example: `auth.example.com` . If you're using a prefix domain, this field denotes the
-     * first part of the domain before `.auth.[region].amazoncognito.com` .
+     * One example might be `auth.example.com` .
      *
      * This string can include only lowercase letters, numbers, and hyphens. Don't use a hyphen for
      * the first or last character. Use periods to separate subdomain names.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-domain)
-     * @param domain The domain name for the domain that hosts the sign-up and sign-in pages for
-     * your application. 
+     * @param domain The domain name for the custom domain that hosts the sign-up and sign-in pages
+     * for your application. 
      */
     override fun domain(domain: String) {
       cdkBuilder.domain(domain)
     }
 
     /**
-     * The user pool ID for the user pool where you want to associate a user pool domain.
+     * A version number that indicates the state of managed login for your domain.
+     *
+     * Version `1` is hosted UI (classic). Version `2` is the newer managed login with the branding
+     * designer. For more information, see [Managed
+     * login](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-managed-login.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-managedloginversion)
+     * @param managedLoginVersion A version number that indicates the state of managed login for
+     * your domain. 
+     */
+    override fun managedLoginVersion(managedLoginVersion: Number) {
+      cdkBuilder.managedLoginVersion(managedLoginVersion)
+    }
+
+    /**
+     * The ID of the user pool that is associated with the custom domain whose certificate you're
+     * updating.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooldomain.html#cfn-cognito-userpooldomain-userpoolid)
-     * @param userPoolId The user pool ID for the user pool where you want to associate a user pool
-     * domain. 
+     * @param userPoolId The ID of the user pool that is associated with the custom domain whose
+     * certificate you're updating. 
      */
     override fun userPoolId(userPoolId: String) {
       cdkBuilder.userPoolId(userPoolId)

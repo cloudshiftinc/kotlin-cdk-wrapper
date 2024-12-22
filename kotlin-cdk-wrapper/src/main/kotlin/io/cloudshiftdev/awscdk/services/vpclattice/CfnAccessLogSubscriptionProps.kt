@@ -24,6 +24,7 @@ import kotlin.collections.List
  * .destinationArn("destinationArn")
  * // the properties below are optional
  * .resourceIdentifier("resourceIdentifier")
+ * .serviceNetworkLogType("serviceNetworkLogType")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -45,11 +46,18 @@ public interface CfnAccessLogSubscriptionProps {
   public fun destinationArn(): String
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service network or service.
+   * The ID or ARN of the service network or service.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-accesslogsubscription.html#cfn-vpclattice-accesslogsubscription-resourceidentifier)
    */
   public fun resourceIdentifier(): String? = unwrap(this).getResourceIdentifier()
+
+  /**
+   * Log type of the service network.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-accesslogsubscription.html#cfn-vpclattice-accesslogsubscription-servicenetworklogtype)
+   */
+  public fun serviceNetworkLogType(): String? = unwrap(this).getServiceNetworkLogType()
 
   /**
    * The tags for the access log subscription.
@@ -71,10 +79,14 @@ public interface CfnAccessLogSubscriptionProps {
     public fun destinationArn(destinationArn: String)
 
     /**
-     * @param resourceIdentifier The ID or Amazon Resource Name (ARN) of the service network or
-     * service.
+     * @param resourceIdentifier The ID or ARN of the service network or service.
      */
     public fun resourceIdentifier(resourceIdentifier: String)
+
+    /**
+     * @param serviceNetworkLogType Log type of the service network.
+     */
+    public fun serviceNetworkLogType(serviceNetworkLogType: String)
 
     /**
      * @param tags The tags for the access log subscription.
@@ -102,11 +114,17 @@ public interface CfnAccessLogSubscriptionProps {
     }
 
     /**
-     * @param resourceIdentifier The ID or Amazon Resource Name (ARN) of the service network or
-     * service.
+     * @param resourceIdentifier The ID or ARN of the service network or service.
      */
     override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
+    }
+
+    /**
+     * @param serviceNetworkLogType Log type of the service network.
+     */
+    override fun serviceNetworkLogType(serviceNetworkLogType: String) {
+      cdkBuilder.serviceNetworkLogType(serviceNetworkLogType)
     }
 
     /**
@@ -140,11 +158,18 @@ public interface CfnAccessLogSubscriptionProps {
     override fun destinationArn(): String = unwrap(this).getDestinationArn()
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service network or service.
+     * The ID or ARN of the service network or service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-accesslogsubscription.html#cfn-vpclattice-accesslogsubscription-resourceidentifier)
      */
     override fun resourceIdentifier(): String? = unwrap(this).getResourceIdentifier()
+
+    /**
+     * Log type of the service network.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-accesslogsubscription.html#cfn-vpclattice-accesslogsubscription-servicenetworklogtype)
+     */
+    override fun serviceNetworkLogType(): String? = unwrap(this).getServiceNetworkLogType()
 
     /**
      * The tags for the access log subscription.

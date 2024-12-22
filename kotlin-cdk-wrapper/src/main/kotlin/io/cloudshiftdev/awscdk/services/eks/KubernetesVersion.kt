@@ -15,7 +15,7 @@ import kotlin.String
  * Vpc vpc;
  * Cluster.Builder.create(this, "MyCluster")
  * .kubectlMemory(Size.gibibytes(4))
- * .version(KubernetesVersion.V1_30)
+ * .version(KubernetesVersion.V1_31)
  * .build();
  * Cluster.fromClusterAttributes(this, "MyCluster", ClusterAttributes.builder()
  * .kubectlMemory(Size.gibibytes(4))
@@ -85,6 +85,9 @@ public open class KubernetesVersion(
 
     public val V1_30: KubernetesVersion =
         KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_30)
+
+    public val V1_31: KubernetesVersion =
+        KubernetesVersion.wrap(software.amazon.awscdk.services.eks.KubernetesVersion.V1_31)
 
     public fun of(version: String): KubernetesVersion =
         software.amazon.awscdk.services.eks.KubernetesVersion.of(version).let(KubernetesVersion::wrap)

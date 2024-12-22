@@ -2197,7 +2197,8 @@ public open class CfnDistributionConfiguration(
     /**
      * The name of the container repository where the output container image is stored.
      *
-     * This name is prefixed by the repository location.
+     * This name is prefixed by the repository location. For example, `&lt;repository location
+     * url&gt;/repository_name` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-targetcontainerrepository.html#cfn-imagebuilder-distributionconfiguration-targetcontainerrepository-repositoryname)
      */
@@ -2218,7 +2219,8 @@ public open class CfnDistributionConfiguration(
       /**
        * @param repositoryName The name of the container repository where the output container image
        * is stored.
-       * This name is prefixed by the repository location.
+       * This name is prefixed by the repository location. For example, `&lt;repository location
+       * url&gt;/repository_name` .
        */
       public fun repositoryName(repositoryName: String)
 
@@ -2237,7 +2239,8 @@ public open class CfnDistributionConfiguration(
       /**
        * @param repositoryName The name of the container repository where the output container image
        * is stored.
-       * This name is prefixed by the repository location.
+       * This name is prefixed by the repository location. For example, `&lt;repository location
+       * url&gt;/repository_name` .
        */
       override fun repositoryName(repositoryName: String) {
         cdkBuilder.repositoryName(repositoryName)
@@ -2262,7 +2265,8 @@ public open class CfnDistributionConfiguration(
       /**
        * The name of the container repository where the output container image is stored.
        *
-       * This name is prefixed by the repository location.
+       * This name is prefixed by the repository location. For example, `&lt;repository location
+       * url&gt;/repository_name` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-distributionconfiguration-targetcontainerrepository.html#cfn-imagebuilder-distributionconfiguration-targetcontainerrepository-repositoryname)
        */

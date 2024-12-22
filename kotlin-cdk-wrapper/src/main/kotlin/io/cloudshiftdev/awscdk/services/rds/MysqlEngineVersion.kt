@@ -13,13 +13,13 @@ import kotlin.String
  * ```
  * Vpc vpc;
  * DatabaseInstance iopsInstance = DatabaseInstance.Builder.create(this, "IopsInstance")
- * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_30).build()))
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_39).build()))
  * .vpc(vpc)
  * .storageType(StorageType.IO1)
  * .iops(5000)
  * .build();
  * DatabaseInstance gp3Instance = DatabaseInstance.Builder.create(this, "Gp3Instance")
- * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_30).build()))
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_39).build()))
  * .vpc(vpc)
  * .allocatedStorage(500)
  * .storageType(StorageType.GP3)
@@ -199,6 +199,12 @@ public open class MysqlEngineVersion(
 
     public val VER_8_0_39: MysqlEngineVersion =
         MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_39)
+
+    public val VER_8_0_40: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_0_40)
+
+    public val VER_8_4_3: MysqlEngineVersion =
+        MysqlEngineVersion.wrap(software.amazon.awscdk.services.rds.MysqlEngineVersion.VER_8_4_3)
 
     public fun of(mysqlFullVersion: String, mysqlMajorVersion: String): MysqlEngineVersion =
         software.amazon.awscdk.services.rds.MysqlEngineVersion.of(mysqlFullVersion,

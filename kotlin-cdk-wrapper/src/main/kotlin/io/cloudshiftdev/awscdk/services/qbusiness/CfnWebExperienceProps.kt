@@ -25,6 +25,12 @@ import kotlin.jvm.JvmName
  * CfnWebExperienceProps cfnWebExperienceProps = CfnWebExperienceProps.builder()
  * .applicationId("applicationId")
  * // the properties below are optional
+ * .customizationConfiguration(CustomizationConfigurationProperty.builder()
+ * .customCssUrl("customCssUrl")
+ * .faviconUrl("faviconUrl")
+ * .fontUrl("fontUrl")
+ * .logoUrl("logoUrl")
+ * .build())
  * .identityProviderConfiguration(IdentityProviderConfigurationProperty.builder()
  * .openIdConnectConfiguration(OpenIDConnectProviderConfigurationProperty.builder()
  * .secretsArn("secretsArn")
@@ -34,6 +40,7 @@ import kotlin.jvm.JvmName
  * .authenticationUrl("authenticationUrl")
  * .build())
  * .build())
+ * .origins(List.of("origins"))
  * .roleArn("roleArn")
  * .samplePromptsControlMode("samplePromptsControlMode")
  * .subtitle("subtitle")
@@ -57,12 +64,32 @@ public interface CfnWebExperienceProps {
   public fun applicationId(): String
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
+   */
+  public fun customizationConfiguration(): Any? = unwrap(this).getCustomizationConfiguration()
+
+  /**
    * Provides information about the identity provider (IdP) used to authenticate end users of an
    * Amazon Q Business web experience.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-identityproviderconfiguration)
    */
   public fun identityProviderConfiguration(): Any? = unwrap(this).getIdentityProviderConfiguration()
+
+  /**
+   * Sets the website domain origins that are allowed to embed the Amazon Q Business web experience.
+   *
+   * The *domain origin* refers to the base URL for accessing a website including the protocol (
+   * `http/https` ), the domain name, and the port number (if specified).
+   *
+   *
+   * You must only submit a *base URL* and not a full path. For example,
+   * `https://docs.aws.amazon.com` .
+   *
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-origins)
+   */
+  public fun origins(): List<String> = unwrap(this).getOrigins() ?: emptyList()
 
   /**
    * The Amazon Resource Name (ARN) of the service role attached to your web experience.
@@ -126,6 +153,25 @@ public interface CfnWebExperienceProps {
     public fun applicationId(applicationId: String)
 
     /**
+     * @param customizationConfiguration the value to be set.
+     */
+    public fun customizationConfiguration(customizationConfiguration: IResolvable)
+
+    /**
+     * @param customizationConfiguration the value to be set.
+     */
+    public
+        fun customizationConfiguration(customizationConfiguration: CfnWebExperience.CustomizationConfigurationProperty)
+
+    /**
+     * @param customizationConfiguration the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4860db948daf2b7d44698045a45faa789e06387b6512a062b8939be18ff95e2e")
+    public
+        fun customizationConfiguration(customizationConfiguration: CfnWebExperience.CustomizationConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param identityProviderConfiguration Provides information about the identity provider (IdP)
      * used to authenticate end users of an Amazon Q Business web experience.
      */
@@ -146,6 +192,30 @@ public interface CfnWebExperienceProps {
     @JvmName("e1334806cf79c952d418cfe28c0781a9868ab9e4f550f7fc6adf7114b645a4f5")
     public
         fun identityProviderConfiguration(identityProviderConfiguration: CfnWebExperience.IdentityProviderConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param origins Sets the website domain origins that are allowed to embed the Amazon Q
+     * Business web experience.
+     * The *domain origin* refers to the base URL for accessing a website including the protocol (
+     * `http/https` ), the domain name, and the port number (if specified).
+     *
+     *
+     * You must only submit a *base URL* and not a full path. For example,
+     * `https://docs.aws.amazon.com` .
+     */
+    public fun origins(origins: List<String>)
+
+    /**
+     * @param origins Sets the website domain origins that are allowed to embed the Amazon Q
+     * Business web experience.
+     * The *domain origin* refers to the base URL for accessing a website including the protocol (
+     * `http/https` ), the domain name, and the port number (if specified).
+     *
+     *
+     * You must only submit a *base URL* and not a full path. For example,
+     * `https://docs.aws.amazon.com` .
+     */
+    public fun origins(vararg origins: String)
 
     /**
      * @param roleArn The Amazon Resource Name (ARN) of the service role attached to your web
@@ -207,6 +277,31 @@ public interface CfnWebExperienceProps {
     }
 
     /**
+     * @param customizationConfiguration the value to be set.
+     */
+    override fun customizationConfiguration(customizationConfiguration: IResolvable) {
+      cdkBuilder.customizationConfiguration(customizationConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param customizationConfiguration the value to be set.
+     */
+    override
+        fun customizationConfiguration(customizationConfiguration: CfnWebExperience.CustomizationConfigurationProperty) {
+      cdkBuilder.customizationConfiguration(customizationConfiguration.let(CfnWebExperience.CustomizationConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param customizationConfiguration the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4860db948daf2b7d44698045a45faa789e06387b6512a062b8939be18ff95e2e")
+    override
+        fun customizationConfiguration(customizationConfiguration: CfnWebExperience.CustomizationConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        customizationConfiguration(CfnWebExperience.CustomizationConfigurationProperty(customizationConfiguration))
+
+    /**
      * @param identityProviderConfiguration Provides information about the identity provider (IdP)
      * used to authenticate end users of an Amazon Q Business web experience.
      */
@@ -233,6 +328,32 @@ public interface CfnWebExperienceProps {
         fun identityProviderConfiguration(identityProviderConfiguration: CfnWebExperience.IdentityProviderConfigurationProperty.Builder.() -> Unit):
         Unit =
         identityProviderConfiguration(CfnWebExperience.IdentityProviderConfigurationProperty(identityProviderConfiguration))
+
+    /**
+     * @param origins Sets the website domain origins that are allowed to embed the Amazon Q
+     * Business web experience.
+     * The *domain origin* refers to the base URL for accessing a website including the protocol (
+     * `http/https` ), the domain name, and the port number (if specified).
+     *
+     *
+     * You must only submit a *base URL* and not a full path. For example,
+     * `https://docs.aws.amazon.com` .
+     */
+    override fun origins(origins: List<String>) {
+      cdkBuilder.origins(origins)
+    }
+
+    /**
+     * @param origins Sets the website domain origins that are allowed to embed the Amazon Q
+     * Business web experience.
+     * The *domain origin* refers to the base URL for accessing a website including the protocol (
+     * `http/https` ), the domain name, and the port number (if specified).
+     *
+     *
+     * You must only submit a *base URL* and not a full path. For example,
+     * `https://docs.aws.amazon.com` .
+     */
+    override fun origins(vararg origins: String): Unit = origins(origins.toList())
 
     /**
      * @param roleArn The Amazon Resource Name (ARN) of the service role attached to your web
@@ -309,6 +430,11 @@ public interface CfnWebExperienceProps {
     override fun applicationId(): String = unwrap(this).getApplicationId()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
+     */
+    override fun customizationConfiguration(): Any? = unwrap(this).getCustomizationConfiguration()
+
+    /**
      * Provides information about the identity provider (IdP) used to authenticate end users of an
      * Amazon Q Business web experience.
      *
@@ -316,6 +442,22 @@ public interface CfnWebExperienceProps {
      */
     override fun identityProviderConfiguration(): Any? =
         unwrap(this).getIdentityProviderConfiguration()
+
+    /**
+     * Sets the website domain origins that are allowed to embed the Amazon Q Business web
+     * experience.
+     *
+     * The *domain origin* refers to the base URL for accessing a website including the protocol (
+     * `http/https` ), the domain name, and the port number (if specified).
+     *
+     *
+     * You must only submit a *base URL* and not a full path. For example,
+     * `https://docs.aws.amazon.com` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-origins)
+     */
+    override fun origins(): List<String> = unwrap(this).getOrigins() ?: emptyList()
 
     /**
      * The Amazon Resource Name (ARN) of the service role attached to your web experience.

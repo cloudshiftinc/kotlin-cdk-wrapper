@@ -3,10 +3,12 @@
 package io.cloudshiftdev.awscdk.services.rds
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.Deprecated
 import kotlin.String
 
 /**
- * The versions for the Aurora cluster engine (those returned by `DatabaseClusterEngine.aurora`).
+ * (deprecated) The versions for the Aurora cluster engine (those returned by
+ * `DatabaseClusterEngine.aurora`).
  *
  * Example:
  *
@@ -19,20 +21,24 @@ import kotlin.String
  * .snapshotIdentifier("mySnapshot")
  * .build();
  * ```
+ *
+ * @deprecated use `AuroraMysqlEngineVersion` instead
  */
 public open class AuroraEngineVersion(
   cdkObject: software.amazon.awscdk.services.rds.AuroraEngineVersion,
 ) : CdkObject(cdkObject) {
   /**
-   * The full version string, for example, "5.6.mysql_aurora.1.78.3.6".
+   * (deprecated) The full version string, for example, "5.6.mysql_aurora.1.78.3.6".
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun auroraFullVersion(): String = unwrap(this).getAuroraFullVersion()
 
   /**
-   * The major version of the engine.
+   * (deprecated) The major version of the engine.
    *
    * Currently, it's always "5.6".
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun auroraMajorVersion(): String = unwrap(this).getAuroraMajorVersion()
 
   public companion object {
@@ -102,9 +108,11 @@ public open class AuroraEngineVersion(
     public val VER_10_A: AuroraEngineVersion =
         AuroraEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraEngineVersion.VER_10_A)
 
+    @Deprecated(message = "deprecated in CDK")
     public fun of(auroraFullVersion: String): AuroraEngineVersion =
         software.amazon.awscdk.services.rds.AuroraEngineVersion.of(auroraFullVersion).let(AuroraEngineVersion::wrap)
 
+    @Deprecated(message = "deprecated in CDK")
     public fun of(auroraFullVersion: String, auroraMajorVersion: String): AuroraEngineVersion =
         software.amazon.awscdk.services.rds.AuroraEngineVersion.of(auroraFullVersion,
         auroraMajorVersion).let(AuroraEngineVersion::wrap)

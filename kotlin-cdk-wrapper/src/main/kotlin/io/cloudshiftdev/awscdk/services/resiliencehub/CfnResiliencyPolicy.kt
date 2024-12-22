@@ -124,12 +124,12 @@ public open class CfnResiliencyPolicy(
   }
 
   /**
-   * The description for the policy.
+   * Description of the resiliency policy.
    */
   public open fun policyDescription(): String? = unwrap(this).getPolicyDescription()
 
   /**
-   * The description for the policy.
+   * Description of the resiliency policy.
    */
   public open fun policyDescription(`value`: String) {
     unwrap(this).setPolicyDescription(`value`)
@@ -210,10 +210,10 @@ public open class CfnResiliencyPolicy(
     public fun policy(policy: Map<String, Any>)
 
     /**
-     * The description for the policy.
+     * Description of the resiliency policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-policydescription)
-     * @param policyDescription The description for the policy. 
+     * @param policyDescription Description of the resiliency policy. 
      */
     public fun policyDescription(policyDescription: String)
 
@@ -287,10 +287,10 @@ public open class CfnResiliencyPolicy(
     }
 
     /**
-     * The description for the policy.
+     * Description of the resiliency policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-policydescription)
-     * @param policyDescription The description for the policy. 
+     * @param policyDescription Description of the resiliency policy. 
      */
     override fun policyDescription(policyDescription: String) {
       cdkBuilder.policyDescription(policyDescription)

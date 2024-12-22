@@ -25,6 +25,7 @@ import kotlin.collections.List
  * .modelManifestArn("modelManifestArn")
  * .name("name")
  * // the properties below are optional
+ * .defaultForUnmappedSignals("defaultForUnmappedSignals")
  * .description("description")
  * .networkInterfaces(List.of(NetworkInterfacesItemsProperty.builder()
  * .interfaceId("interfaceId")
@@ -88,7 +89,16 @@ import kotlin.collections.List
  */
 public interface CfnDecoderManifestProps {
   /**
-   * (Optional) A brief description of the decoder manifest.
+   * Use default decoders for all unmapped signals in the model.
+   *
+   * You don't need to provide any detailed decoding information.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-defaultforunmappedsignals)
+   */
+  public fun defaultForUnmappedSignals(): String? = unwrap(this).getDefaultForUnmappedSignals()
+
+  /**
+   * A brief description of the decoder manifest.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-description)
    */
@@ -110,21 +120,21 @@ public interface CfnDecoderManifestProps {
   public fun name(): String
 
   /**
-   * (Optional) A list of information about available network interfaces.
+   * A list of information about available network interfaces.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
    */
   public fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
 
   /**
-   * (Optional) A list of information about signal decoders.
+   * A list of information about signal decoders.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
    */
   public fun signalDecoders(): Any? = unwrap(this).getSignalDecoders()
 
   /**
-   * (Optional) The state of the decoder manifest.
+   * The state of the decoder manifest.
    *
    * If the status is `ACTIVE` , the decoder manifest can't be edited. If the status is marked
    * `DRAFT` , you can edit the decoder manifest.
@@ -136,7 +146,7 @@ public interface CfnDecoderManifestProps {
   public fun status(): String? = unwrap(this).getStatus()
 
   /**
-   * (Optional) Metadata that can be used to manage the decoder manifest.
+   * Metadata that can be used to manage the decoder manifest.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-tags)
    */
@@ -148,7 +158,13 @@ public interface CfnDecoderManifestProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param description (Optional) A brief description of the decoder manifest.
+     * @param defaultForUnmappedSignals Use default decoders for all unmapped signals in the model.
+     * You don't need to provide any detailed decoding information.
+     */
+    public fun defaultForUnmappedSignals(defaultForUnmappedSignals: String)
+
+    /**
+     * @param description A brief description of the decoder manifest.
      */
     public fun description(description: String)
 
@@ -164,49 +180,49 @@ public interface CfnDecoderManifestProps {
     public fun name(name: String)
 
     /**
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
+     * @param networkInterfaces A list of information about available network interfaces.
      */
     public fun networkInterfaces(networkInterfaces: IResolvable)
 
     /**
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
+     * @param networkInterfaces A list of information about available network interfaces.
      */
     public fun networkInterfaces(networkInterfaces: List<Any>)
 
     /**
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
+     * @param networkInterfaces A list of information about available network interfaces.
      */
     public fun networkInterfaces(vararg networkInterfaces: Any)
 
     /**
-     * @param signalDecoders (Optional) A list of information about signal decoders.
+     * @param signalDecoders A list of information about signal decoders.
      */
     public fun signalDecoders(signalDecoders: IResolvable)
 
     /**
-     * @param signalDecoders (Optional) A list of information about signal decoders.
+     * @param signalDecoders A list of information about signal decoders.
      */
     public fun signalDecoders(signalDecoders: List<Any>)
 
     /**
-     * @param signalDecoders (Optional) A list of information about signal decoders.
+     * @param signalDecoders A list of information about signal decoders.
      */
     public fun signalDecoders(vararg signalDecoders: Any)
 
     /**
-     * @param status (Optional) The state of the decoder manifest.
+     * @param status The state of the decoder manifest.
      * If the status is `ACTIVE` , the decoder manifest can't be edited. If the status is marked
      * `DRAFT` , you can edit the decoder manifest.
      */
     public fun status(status: String)
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the decoder manifest.
+     * @param tags Metadata that can be used to manage the decoder manifest.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the decoder manifest.
+     * @param tags Metadata that can be used to manage the decoder manifest.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -217,7 +233,15 @@ public interface CfnDecoderManifestProps {
         software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifestProps.builder()
 
     /**
-     * @param description (Optional) A brief description of the decoder manifest.
+     * @param defaultForUnmappedSignals Use default decoders for all unmapped signals in the model.
+     * You don't need to provide any detailed decoding information.
+     */
+    override fun defaultForUnmappedSignals(defaultForUnmappedSignals: String) {
+      cdkBuilder.defaultForUnmappedSignals(defaultForUnmappedSignals)
+    }
+
+    /**
+     * @param description A brief description of the decoder manifest.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -239,47 +263,47 @@ public interface CfnDecoderManifestProps {
     }
 
     /**
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
+     * @param networkInterfaces A list of information about available network interfaces.
      */
     override fun networkInterfaces(networkInterfaces: IResolvable) {
       cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
+     * @param networkInterfaces A list of information about available network interfaces.
      */
     override fun networkInterfaces(networkInterfaces: List<Any>) {
       cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
+     * @param networkInterfaces A list of information about available network interfaces.
      */
     override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
         networkInterfaces(networkInterfaces.toList())
 
     /**
-     * @param signalDecoders (Optional) A list of information about signal decoders.
+     * @param signalDecoders A list of information about signal decoders.
      */
     override fun signalDecoders(signalDecoders: IResolvable) {
       cdkBuilder.signalDecoders(signalDecoders.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param signalDecoders (Optional) A list of information about signal decoders.
+     * @param signalDecoders A list of information about signal decoders.
      */
     override fun signalDecoders(signalDecoders: List<Any>) {
       cdkBuilder.signalDecoders(signalDecoders.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param signalDecoders (Optional) A list of information about signal decoders.
+     * @param signalDecoders A list of information about signal decoders.
      */
     override fun signalDecoders(vararg signalDecoders: Any): Unit =
         signalDecoders(signalDecoders.toList())
 
     /**
-     * @param status (Optional) The state of the decoder manifest.
+     * @param status The state of the decoder manifest.
      * If the status is `ACTIVE` , the decoder manifest can't be edited. If the status is marked
      * `DRAFT` , you can edit the decoder manifest.
      */
@@ -288,14 +312,14 @@ public interface CfnDecoderManifestProps {
     }
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the decoder manifest.
+     * @param tags Metadata that can be used to manage the decoder manifest.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the decoder manifest.
+     * @param tags Metadata that can be used to manage the decoder manifest.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -308,7 +332,16 @@ public interface CfnDecoderManifestProps {
   ) : CdkObject(cdkObject),
       CfnDecoderManifestProps {
     /**
-     * (Optional) A brief description of the decoder manifest.
+     * Use default decoders for all unmapped signals in the model.
+     *
+     * You don't need to provide any detailed decoding information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-defaultforunmappedsignals)
+     */
+    override fun defaultForUnmappedSignals(): String? = unwrap(this).getDefaultForUnmappedSignals()
+
+    /**
+     * A brief description of the decoder manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-description)
      */
@@ -330,21 +363,21 @@ public interface CfnDecoderManifestProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * (Optional) A list of information about available network interfaces.
+     * A list of information about available network interfaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
      */
     override fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
 
     /**
-     * (Optional) A list of information about signal decoders.
+     * A list of information about signal decoders.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
      */
     override fun signalDecoders(): Any? = unwrap(this).getSignalDecoders()
 
     /**
-     * (Optional) The state of the decoder manifest.
+     * The state of the decoder manifest.
      *
      * If the status is `ACTIVE` , the decoder manifest can't be edited. If the status is marked
      * `DRAFT` , you can edit the decoder manifest.
@@ -356,7 +389,7 @@ public interface CfnDecoderManifestProps {
     override fun status(): String? = unwrap(this).getStatus()
 
     /**
-     * (Optional) Metadata that can be used to manage the decoder manifest.
+     * Metadata that can be used to manage the decoder manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-tags)
      */

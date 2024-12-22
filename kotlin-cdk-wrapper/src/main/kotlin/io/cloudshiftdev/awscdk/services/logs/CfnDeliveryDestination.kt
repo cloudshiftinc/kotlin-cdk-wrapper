@@ -57,6 +57,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .deliveryDestinationPolicy(deliveryDestinationPolicy)
  * .destinationResourceArn("destinationResourceArn")
+ * .outputFormat("outputFormat")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -150,6 +151,18 @@ public open class CfnDeliveryDestination(
   }
 
   /**
+   * The format of the logs that are sent to this delivery destination.
+   */
+  public open fun outputFormat(): String? = unwrap(this).getOutputFormat()
+
+  /**
+   * The format of the logs that are sent to this delivery destination.
+   */
+  public open fun outputFormat(`value`: String) {
+    unwrap(this).setOutputFormat(`value`)
+  }
+
+  /**
    * The tags that have been assigned to this delivery destination.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
@@ -199,6 +212,14 @@ public open class CfnDeliveryDestination(
      * @param name The name of this delivery destination. 
      */
     public fun name(name: String)
+
+    /**
+     * The format of the logs that are sent to this delivery destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-outputformat)
+     * @param outputFormat The format of the logs that are sent to this delivery destination. 
+     */
+    public fun outputFormat(outputFormat: String)
 
     /**
      * The tags that have been assigned to this delivery destination.
@@ -257,6 +278,16 @@ public open class CfnDeliveryDestination(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The format of the logs that are sent to this delivery destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-outputformat)
+     * @param outputFormat The format of the logs that are sent to this delivery destination. 
+     */
+    override fun outputFormat(outputFormat: String) {
+      cdkBuilder.outputFormat(outputFormat)
     }
 
     /**

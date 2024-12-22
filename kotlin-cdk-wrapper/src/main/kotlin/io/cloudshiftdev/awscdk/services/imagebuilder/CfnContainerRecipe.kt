@@ -1820,7 +1820,8 @@ public open class CfnContainerRecipe(
     /**
      * The name of the container repository where the output container image is stored.
      *
-     * This name is prefixed by the repository location.
+     * This name is prefixed by the repository location. For example, `&lt;repository location
+     * url&gt;/repository_name` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-repositoryname)
      */
@@ -1841,7 +1842,8 @@ public open class CfnContainerRecipe(
       /**
        * @param repositoryName The name of the container repository where the output container image
        * is stored.
-       * This name is prefixed by the repository location.
+       * This name is prefixed by the repository location. For example, `&lt;repository location
+       * url&gt;/repository_name` .
        */
       public fun repositoryName(repositoryName: String)
 
@@ -1860,7 +1862,8 @@ public open class CfnContainerRecipe(
       /**
        * @param repositoryName The name of the container repository where the output container image
        * is stored.
-       * This name is prefixed by the repository location.
+       * This name is prefixed by the repository location. For example, `&lt;repository location
+       * url&gt;/repository_name` .
        */
       override fun repositoryName(repositoryName: String) {
         cdkBuilder.repositoryName(repositoryName)
@@ -1885,7 +1888,8 @@ public open class CfnContainerRecipe(
       /**
        * The name of the container repository where the output container image is stored.
        *
-       * This name is prefixed by the repository location.
+       * This name is prefixed by the repository location. For example, `&lt;repository location
+       * url&gt;/repository_name` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-containerrecipe-targetcontainerrepository.html#cfn-imagebuilder-containerrecipe-targetcontainerrepository-repositoryname)
        */

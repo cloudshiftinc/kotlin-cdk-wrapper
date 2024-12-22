@@ -42,6 +42,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .statusCode("statusCode")
  * .topicArn("topicArn")
  * .build())
+ * .connectAction(ConnectActionProperty.builder()
+ * .iamRoleArn("iamRoleArn")
+ * .instanceArn("instanceArn")
+ * .build())
  * .lambdaAction(LambdaActionProperty.builder()
  * .functionArn("functionArn")
  * // the properties below are optional
@@ -346,6 +350,10 @@ public open class CfnReceiptRule(
    * .statusCode("statusCode")
    * .topicArn("topicArn")
    * .build())
+   * .connectAction(ConnectActionProperty.builder()
+   * .iamRoleArn("iamRoleArn")
+   * .instanceArn("instanceArn")
+   * .build())
    * .lambdaAction(LambdaActionProperty.builder()
    * .functionArn("functionArn")
    * // the properties below are optional
@@ -394,6 +402,11 @@ public open class CfnReceiptRule(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-bounceaction)
      */
     public fun bounceAction(): Any? = unwrap(this).getBounceAction()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-connectaction)
+     */
+    public fun connectAction(): Any? = unwrap(this).getConnectAction()
 
     /**
      * Calls an AWS Lambda function, and optionally, publishes a notification to Amazon SNS.
@@ -473,6 +486,23 @@ public open class CfnReceiptRule(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45943b0805b36445eee8feb6884a6b0e91f26389e796f71bca770b22ee55b580")
       public fun bounceAction(bounceAction: BounceActionProperty.Builder.() -> Unit)
+
+      /**
+       * @param connectAction the value to be set.
+       */
+      public fun connectAction(connectAction: IResolvable)
+
+      /**
+       * @param connectAction the value to be set.
+       */
+      public fun connectAction(connectAction: ConnectActionProperty)
+
+      /**
+       * @param connectAction the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55cfe6aad27e75ff2397713926fed8e5ded0e3f04981ac3330737e642289284c")
+      public fun connectAction(connectAction: ConnectActionProperty.Builder.() -> Unit)
 
       /**
        * @param lambdaAction Calls an AWS Lambda function, and optionally, publishes a notification
@@ -625,6 +655,28 @@ public open class CfnReceiptRule(
           bounceAction(BounceActionProperty(bounceAction))
 
       /**
+       * @param connectAction the value to be set.
+       */
+      override fun connectAction(connectAction: IResolvable) {
+        cdkBuilder.connectAction(connectAction.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param connectAction the value to be set.
+       */
+      override fun connectAction(connectAction: ConnectActionProperty) {
+        cdkBuilder.connectAction(connectAction.let(ConnectActionProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param connectAction the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55cfe6aad27e75ff2397713926fed8e5ded0e3f04981ac3330737e642289284c")
+      override fun connectAction(connectAction: ConnectActionProperty.Builder.() -> Unit): Unit =
+          connectAction(ConnectActionProperty(connectAction))
+
+      /**
        * @param lambdaAction Calls an AWS Lambda function, and optionally, publishes a notification
        * to Amazon SNS.
        */
@@ -768,6 +820,11 @@ public open class CfnReceiptRule(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-bounceaction)
        */
       override fun bounceAction(): Any? = unwrap(this).getBounceAction()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-action.html#cfn-ses-receiptrule-action-connectaction)
+       */
+      override fun connectAction(): Any? = unwrap(this).getConnectAction()
 
       /**
        * Calls an AWS Lambda function, and optionally, publishes a notification to Amazon SNS.
@@ -1197,6 +1254,104 @@ public open class CfnReceiptRule(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ses.*;
+   * ConnectActionProperty connectActionProperty = ConnectActionProperty.builder()
+   * .iamRoleArn("iamRoleArn")
+   * .instanceArn("instanceArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-connectaction.html)
+   */
+  public interface ConnectActionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-connectaction.html#cfn-ses-receiptrule-connectaction-iamrolearn)
+     */
+    public fun iamRoleArn(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-connectaction.html#cfn-ses-receiptrule-connectaction-instancearn)
+     */
+    public fun instanceArn(): String
+
+    /**
+     * A builder for [ConnectActionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param iamRoleArn the value to be set. 
+       */
+      public fun iamRoleArn(iamRoleArn: String)
+
+      /**
+       * @param instanceArn the value to be set. 
+       */
+      public fun instanceArn(instanceArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ses.CfnReceiptRule.ConnectActionProperty.Builder =
+          software.amazon.awscdk.services.ses.CfnReceiptRule.ConnectActionProperty.builder()
+
+      /**
+       * @param iamRoleArn the value to be set. 
+       */
+      override fun iamRoleArn(iamRoleArn: String) {
+        cdkBuilder.iamRoleArn(iamRoleArn)
+      }
+
+      /**
+       * @param instanceArn the value to be set. 
+       */
+      override fun instanceArn(instanceArn: String) {
+        cdkBuilder.instanceArn(instanceArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ses.CfnReceiptRule.ConnectActionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.ConnectActionProperty,
+    ) : CdkObject(cdkObject),
+        ConnectActionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-connectaction.html#cfn-ses-receiptrule-connectaction-iamrolearn)
+       */
+      override fun iamRoleArn(): String = unwrap(this).getIamRoleArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-receiptrule-connectaction.html#cfn-ses-receiptrule-connectaction-instancearn)
+       */
+      override fun instanceArn(): String = unwrap(this).getInstanceArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectActionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ses.CfnReceiptRule.ConnectActionProperty):
+          ConnectActionProperty = CdkObjectWrappers.wrap(cdkObject) as? ConnectActionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConnectActionProperty):
+          software.amazon.awscdk.services.ses.CfnReceiptRule.ConnectActionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ses.CfnReceiptRule.ConnectActionProperty
+    }
+  }
+
+  /**
    * When included in a receipt rule, this action calls an AWS Lambda function and, optionally,
    * publishes a notification to Amazon Simple Notification Service (Amazon SNS).
    *
@@ -1463,6 +1618,10 @@ public open class CfnReceiptRule(
    * // the properties below are optional
    * .statusCode("statusCode")
    * .topicArn("topicArn")
+   * .build())
+   * .connectAction(ConnectActionProperty.builder()
+   * .iamRoleArn("iamRoleArn")
+   * .instanceArn("instanceArn")
    * .build())
    * .lambdaAction(LambdaActionProperty.builder()
    * .functionArn("functionArn")

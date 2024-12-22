@@ -39,11 +39,59 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .objectFields(List.of("objectFields"))
  * .build())
+ * .managedSourceConfiguration(ManagedSourceConfigurationProperty.builder()
+ * .webCrawlerConfiguration(WebCrawlerConfigurationProperty.builder()
+ * .urlConfiguration(UrlConfigurationProperty.builder()
+ * .seedUrls(List.of(SeedUrlProperty.builder()
+ * .url("url")
+ * .build()))
+ * .build())
+ * // the properties below are optional
+ * .crawlerLimits(CrawlerLimitsProperty.builder()
+ * .rateLimit(123)
+ * .build())
+ * .exclusionFilters(List.of("exclusionFilters"))
+ * .inclusionFilters(List.of("inclusionFilters"))
+ * .scope("scope")
+ * .build())
+ * .build())
  * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .vectorIngestionConfiguration(VectorIngestionConfigurationProperty.builder()
+ * .chunkingConfiguration(ChunkingConfigurationProperty.builder()
+ * .chunkingStrategy("chunkingStrategy")
+ * // the properties below are optional
+ * .fixedSizeChunkingConfiguration(FixedSizeChunkingConfigurationProperty.builder()
+ * .maxTokens(123)
+ * .overlapPercentage(123)
+ * .build())
+ * .hierarchicalChunkingConfiguration(HierarchicalChunkingConfigurationProperty.builder()
+ * .levelConfigurations(List.of(HierarchicalChunkingLevelConfigurationProperty.builder()
+ * .maxTokens(123)
+ * .build()))
+ * .overlapTokens(123)
+ * .build())
+ * .semanticChunkingConfiguration(SemanticChunkingConfigurationProperty.builder()
+ * .breakpointPercentileThreshold(123)
+ * .bufferSize(123)
+ * .maxTokens(123)
+ * .build())
+ * .build())
+ * .parsingConfiguration(ParsingConfigurationProperty.builder()
+ * .parsingStrategy("parsingStrategy")
+ * // the properties below are optional
+ * .bedrockFoundationModelConfiguration(BedrockFoundationModelConfigurationProperty.builder()
+ * .modelArn("modelArn")
+ * // the properties below are optional
+ * .parsingPrompt(ParsingPromptProperty.builder()
+ * .parsingPromptText("parsingPromptText")
+ * .build())
+ * .build())
+ * .build())
+ * .build())
  * .build();
  * ```
  *
@@ -100,7 +148,7 @@ public interface CfnKnowledgeBaseProps {
   /**
    * The source of the knowledge base content.
    *
-   * Only set this argument for EXTERNAL knowledge bases.
+   * Only set this argument for EXTERNAL or Managed knowledge bases.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-knowledgebase.html#cfn-wisdom-knowledgebase-sourceconfiguration)
    */
@@ -112,6 +160,13 @@ public interface CfnKnowledgeBaseProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-knowledgebase.html#cfn-wisdom-knowledgebase-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+  /**
+   * Contains details about how to ingest the documents in a data source.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-knowledgebase.html#cfn-wisdom-knowledgebase-vectoringestionconfiguration)
+   */
+  public fun vectorIngestionConfiguration(): Any? = unwrap(this).getVectorIngestionConfiguration()
 
   /**
    * A builder for [CfnKnowledgeBaseProps]
@@ -199,20 +254,20 @@ public interface CfnKnowledgeBaseProps {
 
     /**
      * @param sourceConfiguration The source of the knowledge base content.
-     * Only set this argument for EXTERNAL knowledge bases.
+     * Only set this argument for EXTERNAL or Managed knowledge bases.
      */
     public fun sourceConfiguration(sourceConfiguration: IResolvable)
 
     /**
      * @param sourceConfiguration The source of the knowledge base content.
-     * Only set this argument for EXTERNAL knowledge bases.
+     * Only set this argument for EXTERNAL or Managed knowledge bases.
      */
     public
         fun sourceConfiguration(sourceConfiguration: CfnKnowledgeBase.SourceConfigurationProperty)
 
     /**
      * @param sourceConfiguration The source of the knowledge base content.
-     * Only set this argument for EXTERNAL knowledge bases.
+     * Only set this argument for EXTERNAL or Managed knowledge bases.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("831e5321be410a3412eb38e68908afcea65252ea3272798458e677caa1c889d9")
@@ -228,6 +283,28 @@ public interface CfnKnowledgeBaseProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     public fun tags(vararg tags: CfnTag)
+
+    /**
+     * @param vectorIngestionConfiguration Contains details about how to ingest the documents in a
+     * data source.
+     */
+    public fun vectorIngestionConfiguration(vectorIngestionConfiguration: IResolvable)
+
+    /**
+     * @param vectorIngestionConfiguration Contains details about how to ingest the documents in a
+     * data source.
+     */
+    public
+        fun vectorIngestionConfiguration(vectorIngestionConfiguration: CfnKnowledgeBase.VectorIngestionConfigurationProperty)
+
+    /**
+     * @param vectorIngestionConfiguration Contains details about how to ingest the documents in a
+     * data source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3c7cae53f0118d68bc1f1ad29a68d461dfc5a782354a6796002a907353325d2f")
+    public
+        fun vectorIngestionConfiguration(vectorIngestionConfiguration: CfnKnowledgeBase.VectorIngestionConfigurationProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -333,7 +410,7 @@ public interface CfnKnowledgeBaseProps {
 
     /**
      * @param sourceConfiguration The source of the knowledge base content.
-     * Only set this argument for EXTERNAL knowledge bases.
+     * Only set this argument for EXTERNAL or Managed knowledge bases.
      */
     override fun sourceConfiguration(sourceConfiguration: IResolvable) {
       cdkBuilder.sourceConfiguration(sourceConfiguration.let(IResolvable.Companion::unwrap))
@@ -341,7 +418,7 @@ public interface CfnKnowledgeBaseProps {
 
     /**
      * @param sourceConfiguration The source of the knowledge base content.
-     * Only set this argument for EXTERNAL knowledge bases.
+     * Only set this argument for EXTERNAL or Managed knowledge bases.
      */
     override
         fun sourceConfiguration(sourceConfiguration: CfnKnowledgeBase.SourceConfigurationProperty) {
@@ -350,7 +427,7 @@ public interface CfnKnowledgeBaseProps {
 
     /**
      * @param sourceConfiguration The source of the knowledge base content.
-     * Only set this argument for EXTERNAL knowledge bases.
+     * Only set this argument for EXTERNAL or Managed knowledge bases.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("831e5321be410a3412eb38e68908afcea65252ea3272798458e677caa1c889d9")
@@ -370,6 +447,34 @@ public interface CfnKnowledgeBaseProps {
      * @param tags The tags used to organize, track, or control access for this resource.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * @param vectorIngestionConfiguration Contains details about how to ingest the documents in a
+     * data source.
+     */
+    override fun vectorIngestionConfiguration(vectorIngestionConfiguration: IResolvable) {
+      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param vectorIngestionConfiguration Contains details about how to ingest the documents in a
+     * data source.
+     */
+    override
+        fun vectorIngestionConfiguration(vectorIngestionConfiguration: CfnKnowledgeBase.VectorIngestionConfigurationProperty) {
+      cdkBuilder.vectorIngestionConfiguration(vectorIngestionConfiguration.let(CfnKnowledgeBase.VectorIngestionConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param vectorIngestionConfiguration Contains details about how to ingest the documents in a
+     * data source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3c7cae53f0118d68bc1f1ad29a68d461dfc5a782354a6796002a907353325d2f")
+    override
+        fun vectorIngestionConfiguration(vectorIngestionConfiguration: CfnKnowledgeBase.VectorIngestionConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        vectorIngestionConfiguration(CfnKnowledgeBase.VectorIngestionConfigurationProperty(vectorIngestionConfiguration))
 
     public fun build(): software.amazon.awscdk.services.wisdom.CfnKnowledgeBaseProps =
         cdkBuilder.build()
@@ -429,7 +534,7 @@ public interface CfnKnowledgeBaseProps {
     /**
      * The source of the knowledge base content.
      *
-     * Only set this argument for EXTERNAL knowledge bases.
+     * Only set this argument for EXTERNAL or Managed knowledge bases.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-knowledgebase.html#cfn-wisdom-knowledgebase-sourceconfiguration)
      */
@@ -441,6 +546,14 @@ public interface CfnKnowledgeBaseProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-knowledgebase.html#cfn-wisdom-knowledgebase-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * Contains details about how to ingest the documents in a data source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-wisdom-knowledgebase.html#cfn-wisdom-knowledgebase-vectoringestionconfiguration)
+     */
+    override fun vectorIngestionConfiguration(): Any? =
+        unwrap(this).getVectorIngestionConfiguration()
   }
 
   public companion object {

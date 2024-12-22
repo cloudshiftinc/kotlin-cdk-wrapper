@@ -441,6 +441,9 @@ public open class CfnStorageLens(
      * This property contains the details of the account-level bucket-level configurations for
      * Amazon S3 Storage Lens.
      *
+     * To enable bucket-level configurations, make sure to also set the same metrics at the account
+     * level.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-accountlevel.html#cfn-s3-storagelens-accountlevel-bucketlevel)
      */
     public fun bucketLevel(): Any
@@ -533,18 +536,24 @@ public open class CfnStorageLens(
       /**
        * @param bucketLevel This property contains the details of the account-level bucket-level
        * configurations for Amazon S3 Storage Lens. 
+       * To enable bucket-level configurations, make sure to also set the same metrics at the
+       * account level.
        */
       public fun bucketLevel(bucketLevel: IResolvable)
 
       /**
        * @param bucketLevel This property contains the details of the account-level bucket-level
        * configurations for Amazon S3 Storage Lens. 
+       * To enable bucket-level configurations, make sure to also set the same metrics at the
+       * account level.
        */
       public fun bucketLevel(bucketLevel: BucketLevelProperty)
 
       /**
        * @param bucketLevel This property contains the details of the account-level bucket-level
        * configurations for Amazon S3 Storage Lens. 
+       * To enable bucket-level configurations, make sure to also set the same metrics at the
+       * account level.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("637ed525a35ec747caf0fa5ed4fa1c294d734be664c6fc7489df2ae4313fabe9")
@@ -683,6 +692,8 @@ public open class CfnStorageLens(
       /**
        * @param bucketLevel This property contains the details of the account-level bucket-level
        * configurations for Amazon S3 Storage Lens. 
+       * To enable bucket-level configurations, make sure to also set the same metrics at the
+       * account level.
        */
       override fun bucketLevel(bucketLevel: IResolvable) {
         cdkBuilder.bucketLevel(bucketLevel.let(IResolvable.Companion::unwrap))
@@ -691,6 +702,8 @@ public open class CfnStorageLens(
       /**
        * @param bucketLevel This property contains the details of the account-level bucket-level
        * configurations for Amazon S3 Storage Lens. 
+       * To enable bucket-level configurations, make sure to also set the same metrics at the
+       * account level.
        */
       override fun bucketLevel(bucketLevel: BucketLevelProperty) {
         cdkBuilder.bucketLevel(bucketLevel.let(BucketLevelProperty.Companion::unwrap))
@@ -699,6 +712,8 @@ public open class CfnStorageLens(
       /**
        * @param bucketLevel This property contains the details of the account-level bucket-level
        * configurations for Amazon S3 Storage Lens. 
+       * To enable bucket-level configurations, make sure to also set the same metrics at the
+       * account level.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("637ed525a35ec747caf0fa5ed4fa1c294d734be664c6fc7489df2ae4313fabe9")
@@ -795,6 +810,9 @@ public open class CfnStorageLens(
       /**
        * This property contains the details of the account-level bucket-level configurations for
        * Amazon S3 Storage Lens.
+       *
+       * To enable bucket-level configurations, make sure to also set the same metrics at the
+       * account level.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3-storagelens-accountlevel.html#cfn-s3-storagelens-accountlevel-bucketlevel)
        */

@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -15,24 +16,27 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancing.*;
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
- * LoadBalancer clb;
- * ApplicationLoadBalancer alb;
- * NetworkLoadBalancer nlb;
- * ApplicationListener albListener = alb.addListener("ALBListener",
- * BaseApplicationListenerProps.builder().port(80).build());
- * ApplicationTargetGroup albTargetGroup = albListener.addTargets("ALBFleet",
- * AddApplicationTargetsProps.builder().port(80).build());
- * NetworkListener nlbListener = nlb.addListener("NLBListener",
- * BaseNetworkListenerProps.builder().port(80).build());
- * NetworkTargetGroup nlbTargetGroup = nlbListener.addTargets("NLBFleet",
- * AddNetworkTargetsProps.builder().port(80).build());
- * ServerDeploymentGroup deploymentGroup = ServerDeploymentGroup.Builder.create(this,
- * "DeploymentGroup")
- * .loadBalancers(List.of(LoadBalancer.classic(clb), LoadBalancer.application(albTargetGroup),
- * LoadBalancer.network(nlbTargetGroup)))
+ * Vpc vpc;
+ * AutoScalingGroup asg;
+ * ISecurityGroup sg1;
+ * ISecurityGroup sg2;
+ * // Create the load balancer in a VPC. 'internetFacing' is 'false'
+ * // by default, which creates an internal load balancer.
+ * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "LB")
+ * .vpc(vpc)
+ * .internetFacing(true)
+ * .securityGroups(List.of(sg1))
  * .build();
+ * lb.addSecurityGroup(sg2);
+ * // Add a listener on a particular port.
+ * NetworkListener listener = lb.addListener("Listener", BaseNetworkListenerProps.builder()
+ * .port(443)
+ * .build());
+ * // Add targets on a particular port.
+ * listener.addTargets("AppFleet", AddNetworkTargetsProps.builder()
+ * .port(443)
+ * .targets(List.of(asg))
+ * .build());
  * ```
  */
 public interface BaseNetworkListenerProps {
@@ -107,6 +111,13 @@ public interface BaseNetworkListenerProps {
   public fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
 
   /**
+   * The load balancer TCP idle timeout.
+   *
+   * Default: Duration.seconds(350)
+   */
+  public fun tcpIdleTimeout(): Duration? = unwrap(this).getTcpIdleTimeout()?.let(Duration::wrap)
+
+  /**
    * A builder for [BaseNetworkListenerProps]
    */
   @CdkDslMarker
@@ -177,6 +188,11 @@ public interface BaseNetworkListenerProps {
      * @param sslPolicy SSL Policy.
      */
     public fun sslPolicy(sslPolicy: SslPolicy)
+
+    /**
+     * @param tcpIdleTimeout The load balancer TCP idle timeout.
+     */
+    public fun tcpIdleTimeout(tcpIdleTimeout: Duration)
   }
 
   private class BuilderImpl : Builder {
@@ -267,6 +283,13 @@ public interface BaseNetworkListenerProps {
       cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
     }
 
+    /**
+     * @param tcpIdleTimeout The load balancer TCP idle timeout.
+     */
+    override fun tcpIdleTimeout(tcpIdleTimeout: Duration) {
+      cdkBuilder.tcpIdleTimeout(tcpIdleTimeout.let(Duration.Companion::unwrap))
+    }
+
     public fun build():
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseNetworkListenerProps =
         cdkBuilder.build()
@@ -345,6 +368,13 @@ public interface BaseNetworkListenerProps {
      * Default: - Current predefined security policy.
      */
     override fun sslPolicy(): SslPolicy? = unwrap(this).getSslPolicy()?.let(SslPolicy::wrap)
+
+    /**
+     * The load balancer TCP idle timeout.
+     *
+     * Default: Duration.seconds(350)
+     */
+    override fun tcpIdleTimeout(): Duration? = unwrap(this).getTcpIdleTimeout()?.let(Duration::wrap)
   }
 
   public companion object {

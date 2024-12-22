@@ -12,6 +12,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Subscription configuration.
@@ -21,6 +22,7 @@ import kotlin.collections.Map
  * ```
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
+ * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.sns.*;
  * import io.cloudshiftdev.awscdk.services.sqs.*;
  * import software.constructs.*;
@@ -35,6 +37,23 @@ import kotlin.collections.Map
  * .subscriberId("subscriberId")
  * // the properties below are optional
  * .deadLetterQueue(queue)
+ * .deliveryPolicy(DeliveryPolicy.builder()
+ * .healthyRetryPolicy(HealthyRetryPolicy.builder()
+ * .backoffFunction(BackoffFunction.ARITHMETIC)
+ * .maxDelayTarget(Duration.minutes(30))
+ * .minDelayTarget(Duration.minutes(30))
+ * .numMaxDelayRetries(123)
+ * .numMinDelayRetries(123)
+ * .numNoDelayRetries(123)
+ * .numRetries(123)
+ * .build())
+ * .requestPolicy(RequestPolicy.builder()
+ * .headerContentType("headerContentType")
+ * .build())
+ * .throttlePolicy(ThrottlePolicy.builder()
+ * .maxReceivesPerSecond(123)
+ * .build())
+ * .build())
  * .filterPolicy(Map.of(
  * "filterPolicyKey", subscriptionFilter))
  * .filterPolicyWithMessageBody(Map.of(
@@ -94,6 +113,18 @@ public interface TopicSubscriptionConfig : SubscriptionOptions {
      * If not passed no dead letter queue is enabled.
      */
     public fun deadLetterQueue(deadLetterQueue: IQueue)
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy)
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a97c0035d50678bf6d8a22fcb4294e449db8146af282d98ffae0484c06b359cb")
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit)
 
     /**
      * @param endpoint The subscription endpoint. 
@@ -178,6 +209,21 @@ public interface TopicSubscriptionConfig : SubscriptionOptions {
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
       cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy) {
+      cdkBuilder.deliveryPolicy(deliveryPolicy.let(DeliveryPolicy.Companion::unwrap))
+    }
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a97c0035d50678bf6d8a22fcb4294e449db8146af282d98ffae0484c06b359cb")
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit): Unit =
+        deliveryPolicy(DeliveryPolicy(deliveryPolicy))
 
     /**
      * @param endpoint The subscription endpoint. 
@@ -287,6 +333,15 @@ public interface TopicSubscriptionConfig : SubscriptionOptions {
      * Default: - No dead letter queue enabled.
      */
     override fun deadLetterQueue(): IQueue? = unwrap(this).getDeadLetterQueue()?.let(IQueue::wrap)
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     */
+    override fun deliveryPolicy(): DeliveryPolicy? =
+        unwrap(this).getDeliveryPolicy()?.let(DeliveryPolicy::wrap)
 
     /**
      * The subscription endpoint.

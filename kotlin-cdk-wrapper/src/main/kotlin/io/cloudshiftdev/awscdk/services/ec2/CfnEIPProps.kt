@@ -32,6 +32,13 @@ import kotlin.collections.List
  */
 public interface CfnEIPProps {
   /**
+   * An Elastic IP address or a carrier IP address in a Wavelength Zone.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-address)
+   */
+  public fun address(): String? = unwrap(this).getAddress()
+
+  /**
    * The network ( `vpc` ).
    *
    * If you define an Elastic IP address and associate it with a VPC that is defined in the same
@@ -54,6 +61,18 @@ public interface CfnEIPProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-instanceid)
    */
   public fun instanceId(): String? = unwrap(this).getInstanceId()
+
+  /**
+   * The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4 CIDR provisioned to
+   * it.
+   *
+   * For more information, see [Allocate sequential Elastic IP addresses from an IPAM
+   * pool](https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-eip-pool.html) in the *Amazon VPC IPAM
+   * User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-ipampoolid)
+   */
+  public fun ipamPoolId(): String? = unwrap(this).getIpamPoolId()
 
   /**
    * A unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS advertises
@@ -114,6 +133,11 @@ public interface CfnEIPProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param address An Elastic IP address or a carrier IP address in a Wavelength Zone.
+     */
+    public fun address(address: String)
+
+    /**
      * @param domain The network ( `vpc` ).
      * If you define an Elastic IP address and associate it with a VPC that is defined in the same
      * template, you must declare a dependency on the VPC-gateway attachment by using the [DependsOn
@@ -129,6 +153,15 @@ public interface CfnEIPProps {
      * reassociates the address on its associated resource.
      */
     public fun instanceId(instanceId: String)
+
+    /**
+     * @param ipamPoolId The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4
+     * CIDR provisioned to it.
+     * For more information, see [Allocate sequential Elastic IP addresses from an IPAM
+     * pool](https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-eip-pool.html) in the *Amazon VPC
+     * IPAM User Guide* .
+     */
+    public fun ipamPoolId(ipamPoolId: String)
 
     /**
      * @param networkBorderGroup A unique set of Availability Zones, Local Zones, or Wavelength
@@ -183,6 +216,13 @@ public interface CfnEIPProps {
         software.amazon.awscdk.services.ec2.CfnEIPProps.builder()
 
     /**
+     * @param address An Elastic IP address or a carrier IP address in a Wavelength Zone.
+     */
+    override fun address(address: String) {
+      cdkBuilder.address(address)
+    }
+
+    /**
      * @param domain The network ( `vpc` ).
      * If you define an Elastic IP address and associate it with a VPC that is defined in the same
      * template, you must declare a dependency on the VPC-gateway attachment by using the [DependsOn
@@ -201,6 +241,17 @@ public interface CfnEIPProps {
      */
     override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
+    }
+
+    /**
+     * @param ipamPoolId The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4
+     * CIDR provisioned to it.
+     * For more information, see [Allocate sequential Elastic IP addresses from an IPAM
+     * pool](https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-eip-pool.html) in the *Amazon VPC
+     * IPAM User Guide* .
+     */
+    override fun ipamPoolId(ipamPoolId: String) {
+      cdkBuilder.ipamPoolId(ipamPoolId)
     }
 
     /**
@@ -266,6 +317,13 @@ public interface CfnEIPProps {
   ) : CdkObject(cdkObject),
       CfnEIPProps {
     /**
+     * An Elastic IP address or a carrier IP address in a Wavelength Zone.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-address)
+     */
+    override fun address(): String? = unwrap(this).getAddress()
+
+    /**
      * The network ( `vpc` ).
      *
      * If you define an Elastic IP address and associate it with a VPC that is defined in the same
@@ -288,6 +346,18 @@ public interface CfnEIPProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-instanceid)
      */
     override fun instanceId(): String? = unwrap(this).getInstanceId()
+
+    /**
+     * The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4 CIDR provisioned to
+     * it.
+     *
+     * For more information, see [Allocate sequential Elastic IP addresses from an IPAM
+     * pool](https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-eip-pool.html) in the *Amazon VPC
+     * IPAM User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-ipampoolid)
+     */
+    override fun ipamPoolId(): String? = unwrap(this).getIpamPoolId()
 
     /**
      * A unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS

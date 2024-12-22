@@ -22,6 +22,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * secrets](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_secret_json_structure.html)
  * .
  *
+ * A single secret resource can only have one target attached to it.
+ *
  * When you remove a `SecretTargetAttachment` from a stack, Secrets Manager removes the database
  * connection information from the secret with a `PutSecretValue` call.
  *
@@ -130,7 +132,8 @@ public open class CfnSecretTargetAttachment(
      *
      * To reference a secret also created in this template, use the see
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
-     * function with the secret's logical ID.
+     * function with the secret's logical ID. This field is unique for each target attachment
+     * definition.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-secretid)
      * @param secretId The ARN or name of the secret. 
@@ -180,7 +183,8 @@ public open class CfnSecretTargetAttachment(
      *
      * To reference a secret also created in this template, use the see
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
-     * function with the secret's logical ID.
+     * function with the secret's logical ID. This field is unique for each target attachment
+     * definition.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-secrettargetattachment.html#cfn-secretsmanager-secrettargetattachment-secretid)
      * @param secretId The ARN or name of the secret. 

@@ -55,6 +55,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .s3KeyPrefix("s3KeyPrefix")
  * .build())
  * .build())
+ * .placement(PlacementProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .hostId("hostId")
+ * .hostResourceGroupArn("hostResourceGroupArn")
+ * .tenancy("tenancy")
+ * .build())
  * .resourceTags(Map.of(
  * "resourceTagsKey", "resourceTags"))
  * .securityGroupIds(List.of("securityGroupIds"))
@@ -231,6 +237,37 @@ public open class CfnInfrastructureConfiguration(
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
+
+  /**
+   * The instance placement settings that define where the instances that are launched from your
+   * image will run.
+   */
+  public open fun placement(): Any? = unwrap(this).getPlacement()
+
+  /**
+   * The instance placement settings that define where the instances that are launched from your
+   * image will run.
+   */
+  public open fun placement(`value`: IResolvable) {
+    unwrap(this).setPlacement(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The instance placement settings that define where the instances that are launched from your
+   * image will run.
+   */
+  public open fun placement(`value`: PlacementProperty) {
+    unwrap(this).setPlacement(`value`.let(PlacementProperty.Companion::unwrap))
+  }
+
+  /**
+   * The instance placement settings that define where the instances that are launched from your
+   * image will run.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("6f24e5e4ac9843cf2116fbf560a9380abdddc3dcb63a4ba74652ea06ddffab7e")
+  public open fun placement(`value`: PlacementProperty.Builder.() -> Unit): Unit =
+      placement(PlacementProperty(`value`))
 
   /**
    * The tags attached to the resource created by Image Builder.
@@ -441,6 +478,38 @@ public open class CfnInfrastructureConfiguration(
     public fun name(name: String)
 
     /**
+     * The instance placement settings that define where the instances that are launched from your
+     * image will run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-placement)
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run. 
+     */
+    public fun placement(placement: IResolvable)
+
+    /**
+     * The instance placement settings that define where the instances that are launched from your
+     * image will run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-placement)
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run. 
+     */
+    public fun placement(placement: PlacementProperty)
+
+    /**
+     * The instance placement settings that define where the instances that are launched from your
+     * image will run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-placement)
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a2c0a2dd5885107f70776f68f2648842b5a2c986e283fd733e081f34224894d2")
+    public fun placement(placement: PlacementProperty.Builder.() -> Unit)
+
+    /**
      * The tags attached to the resource created by Image Builder.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-resourcetags)
@@ -649,6 +718,43 @@ public open class CfnInfrastructureConfiguration(
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
+
+    /**
+     * The instance placement settings that define where the instances that are launched from your
+     * image will run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-placement)
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run. 
+     */
+    override fun placement(placement: IResolvable) {
+      cdkBuilder.placement(placement.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The instance placement settings that define where the instances that are launched from your
+     * image will run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-placement)
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run. 
+     */
+    override fun placement(placement: PlacementProperty) {
+      cdkBuilder.placement(placement.let(PlacementProperty.Companion::unwrap))
+    }
+
+    /**
+     * The instance placement settings that define where the instances that are launched from your
+     * image will run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-placement)
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a2c0a2dd5885107f70776f68f2648842b5a2c986e283fd733e081f34224894d2")
+    override fun placement(placement: PlacementProperty.Builder.() -> Unit): Unit =
+        placement(PlacementProperty(placement))
 
     /**
      * The tags attached to the resource created by Image Builder.
@@ -1052,6 +1158,231 @@ public open class CfnInfrastructureConfiguration(
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.LoggingProperty
+    }
+  }
+
+  /**
+   * By default, EC2 instances run on shared tenancy hardware.
+   *
+   * This means that multiple AWS accounts might share the same physical hardware. When you use
+   * dedicated hardware, the physical server that hosts your instances is dedicated to your AWS account
+   * . Instance placement settings contain the details for the physical hardware where instances that
+   * Image Builder launches during image creation will run.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.imagebuilder.*;
+   * PlacementProperty placementProperty = PlacementProperty.builder()
+   * .availabilityZone("availabilityZone")
+   * .hostId("hostId")
+   * .hostResourceGroupArn("hostResourceGroupArn")
+   * .tenancy("tenancy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-placement.html)
+   */
+  public interface PlacementProperty {
+    /**
+     * The Availability Zone where your build and test instances will launch.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-placement.html#cfn-imagebuilder-infrastructureconfiguration-placement-availabilityzone)
+     */
+    public fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+    /**
+     * The ID of the Dedicated Host on which build and test instances run.
+     *
+     * This only applies if `tenancy` is `host` . If you specify the host ID, you must not specify
+     * the resource group ARN. If you specify both, Image Builder returns an error.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-placement.html#cfn-imagebuilder-infrastructureconfiguration-placement-hostid)
+     */
+    public fun hostId(): String? = unwrap(this).getHostId()
+
+    /**
+     * The Amazon Resource Name (ARN) of the host resource group in which to launch build and test
+     * instances.
+     *
+     * This only applies if `tenancy` is `host` . If you specify the resource group ARN, you must
+     * not specify the host ID. If you specify both, Image Builder returns an error.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-placement.html#cfn-imagebuilder-infrastructureconfiguration-placement-hostresourcegrouparn)
+     */
+    public fun hostResourceGroupArn(): String? = unwrap(this).getHostResourceGroupArn()
+
+    /**
+     * The tenancy of the instance.
+     *
+     * An instance with a tenancy of `dedicated` runs on single-tenant hardware. An instance with a
+     * tenancy of `host` runs on a Dedicated Host.
+     *
+     * If tenancy is set to `host` , then you can optionally specify one target for placement –
+     * either host ID or host resource group ARN. If automatic placement is enabled for your host, and
+     * you don't specify any placement target, Amazon EC2 will try to find an available host for your
+     * build and test instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-placement.html#cfn-imagebuilder-infrastructureconfiguration-placement-tenancy)
+     */
+    public fun tenancy(): String? = unwrap(this).getTenancy()
+
+    /**
+     * A builder for [PlacementProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param availabilityZone The Availability Zone where your build and test instances will
+       * launch.
+       */
+      public fun availabilityZone(availabilityZone: String)
+
+      /**
+       * @param hostId The ID of the Dedicated Host on which build and test instances run.
+       * This only applies if `tenancy` is `host` . If you specify the host ID, you must not specify
+       * the resource group ARN. If you specify both, Image Builder returns an error.
+       */
+      public fun hostId(hostId: String)
+
+      /**
+       * @param hostResourceGroupArn The Amazon Resource Name (ARN) of the host resource group in
+       * which to launch build and test instances.
+       * This only applies if `tenancy` is `host` . If you specify the resource group ARN, you must
+       * not specify the host ID. If you specify both, Image Builder returns an error.
+       */
+      public fun hostResourceGroupArn(hostResourceGroupArn: String)
+
+      /**
+       * @param tenancy The tenancy of the instance.
+       * An instance with a tenancy of `dedicated` runs on single-tenant hardware. An instance with
+       * a tenancy of `host` runs on a Dedicated Host.
+       *
+       * If tenancy is set to `host` , then you can optionally specify one target for placement –
+       * either host ID or host resource group ARN. If automatic placement is enabled for your host,
+       * and you don't specify any placement target, Amazon EC2 will try to find an available host for
+       * your build and test instances.
+       */
+      public fun tenancy(tenancy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.PlacementProperty.Builder
+          =
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.PlacementProperty.builder()
+
+      /**
+       * @param availabilityZone The Availability Zone where your build and test instances will
+       * launch.
+       */
+      override fun availabilityZone(availabilityZone: String) {
+        cdkBuilder.availabilityZone(availabilityZone)
+      }
+
+      /**
+       * @param hostId The ID of the Dedicated Host on which build and test instances run.
+       * This only applies if `tenancy` is `host` . If you specify the host ID, you must not specify
+       * the resource group ARN. If you specify both, Image Builder returns an error.
+       */
+      override fun hostId(hostId: String) {
+        cdkBuilder.hostId(hostId)
+      }
+
+      /**
+       * @param hostResourceGroupArn The Amazon Resource Name (ARN) of the host resource group in
+       * which to launch build and test instances.
+       * This only applies if `tenancy` is `host` . If you specify the resource group ARN, you must
+       * not specify the host ID. If you specify both, Image Builder returns an error.
+       */
+      override fun hostResourceGroupArn(hostResourceGroupArn: String) {
+        cdkBuilder.hostResourceGroupArn(hostResourceGroupArn)
+      }
+
+      /**
+       * @param tenancy The tenancy of the instance.
+       * An instance with a tenancy of `dedicated` runs on single-tenant hardware. An instance with
+       * a tenancy of `host` runs on a Dedicated Host.
+       *
+       * If tenancy is set to `host` , then you can optionally specify one target for placement –
+       * either host ID or host resource group ARN. If automatic placement is enabled for your host,
+       * and you don't specify any placement target, Amazon EC2 will try to find an available host for
+       * your build and test instances.
+       */
+      override fun tenancy(tenancy: String) {
+        cdkBuilder.tenancy(tenancy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.PlacementProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.PlacementProperty,
+    ) : CdkObject(cdkObject),
+        PlacementProperty {
+      /**
+       * The Availability Zone where your build and test instances will launch.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-placement.html#cfn-imagebuilder-infrastructureconfiguration-placement-availabilityzone)
+       */
+      override fun availabilityZone(): String? = unwrap(this).getAvailabilityZone()
+
+      /**
+       * The ID of the Dedicated Host on which build and test instances run.
+       *
+       * This only applies if `tenancy` is `host` . If you specify the host ID, you must not specify
+       * the resource group ARN. If you specify both, Image Builder returns an error.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-placement.html#cfn-imagebuilder-infrastructureconfiguration-placement-hostid)
+       */
+      override fun hostId(): String? = unwrap(this).getHostId()
+
+      /**
+       * The Amazon Resource Name (ARN) of the host resource group in which to launch build and test
+       * instances.
+       *
+       * This only applies if `tenancy` is `host` . If you specify the resource group ARN, you must
+       * not specify the host ID. If you specify both, Image Builder returns an error.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-placement.html#cfn-imagebuilder-infrastructureconfiguration-placement-hostresourcegrouparn)
+       */
+      override fun hostResourceGroupArn(): String? = unwrap(this).getHostResourceGroupArn()
+
+      /**
+       * The tenancy of the instance.
+       *
+       * An instance with a tenancy of `dedicated` runs on single-tenant hardware. An instance with
+       * a tenancy of `host` runs on a Dedicated Host.
+       *
+       * If tenancy is set to `host` , then you can optionally specify one target for placement –
+       * either host ID or host resource group ARN. If automatic placement is enabled for your host,
+       * and you don't specify any placement target, Amazon EC2 will try to find an available host for
+       * your build and test instances.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-imagebuilder-infrastructureconfiguration-placement.html#cfn-imagebuilder-infrastructureconfiguration-placement-tenancy)
+       */
+      override fun tenancy(): String? = unwrap(this).getTenancy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): PlacementProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.PlacementProperty):
+          PlacementProperty = CdkObjectWrappers.wrap(cdkObject) as? PlacementProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PlacementProperty):
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.PlacementProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.imagebuilder.CfnInfrastructureConfiguration.PlacementProperty
     }
   }
 

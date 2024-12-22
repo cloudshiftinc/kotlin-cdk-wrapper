@@ -11,6 +11,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
@@ -61,6 +62,14 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
    */
   public fun readers(): List<IGrantable> = unwrap(this).getReaders()?.map(IGrantable::wrap) ?:
       emptyList()
+
+  /**
+   * The ARN of the KMS key used to encrypt the handler code.
+   *
+   * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+   * used.
+   */
+  public fun sourceKMSKey(): IKey? = unwrap(this).getSourceKMSKey()?.let(IKey::wrap)
 
   /**
    * A builder for [AssetOptions]
@@ -160,6 +169,11 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      * You can use `asset.grantRead(principal)` to grant read permissions later.
      */
     public fun readers(vararg readers: IGrantable)
+
+    /**
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code.
+     */
+    public fun sourceKmsKey(sourceKmsKey: IKey)
   }
 
   private class BuilderImpl : Builder {
@@ -277,6 +291,13 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      */
     override fun readers(vararg readers: IGrantable): Unit = readers(readers.toList())
 
+    /**
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code.
+     */
+    override fun sourceKmsKey(sourceKmsKey: IKey) {
+      cdkBuilder.sourceKmsKey(sourceKmsKey.let(IKey.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.s3.assets.AssetOptions = cdkBuilder.build()
   }
 
@@ -379,6 +400,14 @@ public interface AssetOptions : io.cloudshiftdev.awscdk.AssetOptions, FileCopyOp
      */
     override fun readers(): List<IGrantable> = unwrap(this).getReaders()?.map(IGrantable::wrap) ?:
         emptyList()
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     */
+    override fun sourceKMSKey(): IKey? = unwrap(this).getSourceKMSKey()?.let(IKey::wrap)
   }
 
   public companion object {

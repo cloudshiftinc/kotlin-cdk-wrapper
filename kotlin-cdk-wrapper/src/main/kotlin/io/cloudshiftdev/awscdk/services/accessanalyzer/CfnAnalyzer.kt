@@ -39,6 +39,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // the properties below are optional
  * .analyzerConfiguration(AnalyzerConfigurationProperty.builder()
  * .unusedAccessConfiguration(UnusedAccessConfigurationProperty.builder()
+ * .analysisRule(AnalysisRuleProperty.builder()
+ * .exclusions(List.of(AnalysisRuleCriteriaProperty.builder()
+ * .accountIds(List.of("accountIds"))
+ * .resourceTags(List.of(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build())))
+ * .build()))
+ * .build())
  * .unusedAccessAge(123)
  * .build())
  * .build())
@@ -85,30 +94,26 @@ public open class CfnAnalyzer(
   )
 
   /**
-   * Contains information about the configuration of an unused access analyzer for an AWS
-   * organization or account.
+   * Contains information about the configuration of an analyzer for an AWS organization or account.
    */
   public open fun analyzerConfiguration(): Any? = unwrap(this).getAnalyzerConfiguration()
 
   /**
-   * Contains information about the configuration of an unused access analyzer for an AWS
-   * organization or account.
+   * Contains information about the configuration of an analyzer for an AWS organization or account.
    */
   public open fun analyzerConfiguration(`value`: IResolvable) {
     unwrap(this).setAnalyzerConfiguration(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Contains information about the configuration of an unused access analyzer for an AWS
-   * organization or account.
+   * Contains information about the configuration of an analyzer for an AWS organization or account.
    */
   public open fun analyzerConfiguration(`value`: AnalyzerConfigurationProperty) {
     unwrap(this).setAnalyzerConfiguration(`value`.let(AnalyzerConfigurationProperty.Companion::unwrap))
   }
 
   /**
-   * Contains information about the configuration of an unused access analyzer for an AWS
-   * organization or account.
+   * Contains information about the configuration of an analyzer for an AWS organization or account.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d96198f42b896af4b94eb3419f13ed3346f921e992c5710fccec212e0514de1b")
@@ -206,32 +211,32 @@ public open class CfnAnalyzer(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Contains information about the configuration of an unused access analyzer for an AWS
-     * organization or account.
+     * Contains information about the configuration of an analyzer for an AWS organization or
+     * account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account. 
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account. 
      */
     public fun analyzerConfiguration(analyzerConfiguration: IResolvable)
 
     /**
-     * Contains information about the configuration of an unused access analyzer for an AWS
-     * organization or account.
+     * Contains information about the configuration of an analyzer for an AWS organization or
+     * account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account. 
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account. 
      */
     public fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty)
 
     /**
-     * Contains information about the configuration of an unused access analyzer for an AWS
-     * organization or account.
+     * Contains information about the configuration of an analyzer for an AWS organization or
+     * account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account. 
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08181d83c131043275ab65dc780b8019da1eaca230ceb165db05ef754008c5a8")
@@ -279,6 +284,14 @@ public open class CfnAnalyzer(
     /**
      * An array of key-value pairs to apply to the analyzer.
      *
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
      * @param tags An array of key-value pairs to apply to the analyzer. 
      */
@@ -286,6 +299,14 @@ public open class CfnAnalyzer(
 
     /**
      * An array of key-value pairs to apply to the analyzer.
+     *
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
      * @param tags An array of key-value pairs to apply to the analyzer. 
@@ -312,36 +333,36 @@ public open class CfnAnalyzer(
         software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.Builder.create(scope, id)
 
     /**
-     * Contains information about the configuration of an unused access analyzer for an AWS
-     * organization or account.
+     * Contains information about the configuration of an analyzer for an AWS organization or
+     * account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account. 
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account. 
      */
     override fun analyzerConfiguration(analyzerConfiguration: IResolvable) {
       cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Contains information about the configuration of an unused access analyzer for an AWS
-     * organization or account.
+     * Contains information about the configuration of an analyzer for an AWS organization or
+     * account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account. 
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account. 
      */
     override fun analyzerConfiguration(analyzerConfiguration: AnalyzerConfigurationProperty) {
       cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(AnalyzerConfigurationProperty.Companion::unwrap))
     }
 
     /**
-     * Contains information about the configuration of an unused access analyzer for an AWS
-     * organization or account.
+     * Contains information about the configuration of an analyzer for an AWS organization or
+     * account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account. 
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("08181d83c131043275ab65dc780b8019da1eaca230ceb165db05ef754008c5a8")
@@ -396,6 +417,14 @@ public open class CfnAnalyzer(
     /**
      * An array of key-value pairs to apply to the analyzer.
      *
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
      * @param tags An array of key-value pairs to apply to the analyzer. 
      */
@@ -405,6 +434,14 @@ public open class CfnAnalyzer(
 
     /**
      * An array of key-value pairs to apply to the analyzer.
+     *
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
      * @param tags An array of key-value pairs to apply to the analyzer. 
@@ -450,8 +487,379 @@ public open class CfnAnalyzer(
   }
 
   /**
-   * Contains information about the configuration of an unused access analyzer for an AWS
-   * organization or account.
+   * The criteria for an analysis rule for an analyzer.
+   *
+   * The criteria determine which entities will generate findings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
+   * AnalysisRuleCriteriaProperty analysisRuleCriteriaProperty =
+   * AnalysisRuleCriteriaProperty.builder()
+   * .accountIds(List.of("accountIds"))
+   * .resourceTags(List.of(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build())))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analysisrulecriteria.html)
+   */
+  public interface AnalysisRuleCriteriaProperty {
+    /**
+     * A list of AWS account IDs to apply to the analysis rule criteria.
+     *
+     * The accounts cannot include the organization analyzer owner account. Account IDs can only be
+     * applied to the analysis rule criteria for organization-level analyzers. The list cannot include
+     * more than 2,000 account IDs.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analysisrulecriteria.html#cfn-accessanalyzer-analyzer-analysisrulecriteria-accountids)
+     */
+    public fun accountIds(): List<String> = unwrap(this).getAccountIds() ?: emptyList()
+
+    /**
+     * An array of key-value pairs to match for your resources.
+     *
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length. If the
+     * specified tag value is 0 characters, the rule is applied to all principals with the specified
+     * tag key.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analysisrulecriteria.html#cfn-accessanalyzer-analyzer-analysisrulecriteria-resourcetags)
+     */
+    public fun resourceTags(): Any? = unwrap(this).getResourceTags()
+
+    /**
+     * A builder for [AnalysisRuleCriteriaProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param accountIds A list of AWS account IDs to apply to the analysis rule criteria.
+       * The accounts cannot include the organization analyzer owner account. Account IDs can only
+       * be applied to the analysis rule criteria for organization-level analyzers. The list cannot
+       * include more than 2,000 account IDs.
+       */
+      public fun accountIds(accountIds: List<String>)
+
+      /**
+       * @param accountIds A list of AWS account IDs to apply to the analysis rule criteria.
+       * The accounts cannot include the organization analyzer owner account. Account IDs can only
+       * be applied to the analysis rule criteria for organization-level analyzers. The list cannot
+       * include more than 2,000 account IDs.
+       */
+      public fun accountIds(vararg accountIds: String)
+
+      /**
+       * @param resourceTags An array of key-value pairs to match for your resources.
+       * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` ,
+       * and `-` .
+       *
+       * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot
+       * be prefixed with `aws:` .
+       *
+       * For the tag value, you can specify a value that is 0 to 256 characters in length. If the
+       * specified tag value is 0 characters, the rule is applied to all principals with the specified
+       * tag key.
+       */
+      public fun resourceTags(resourceTags: IResolvable)
+
+      /**
+       * @param resourceTags An array of key-value pairs to match for your resources.
+       * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` ,
+       * and `-` .
+       *
+       * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot
+       * be prefixed with `aws:` .
+       *
+       * For the tag value, you can specify a value that is 0 to 256 characters in length. If the
+       * specified tag value is 0 characters, the rule is applied to all principals with the specified
+       * tag key.
+       */
+      public fun resourceTags(resourceTags: List<Any>)
+
+      /**
+       * @param resourceTags An array of key-value pairs to match for your resources.
+       * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` ,
+       * and `-` .
+       *
+       * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot
+       * be prefixed with `aws:` .
+       *
+       * For the tag value, you can specify a value that is 0 to 256 characters in length. If the
+       * specified tag value is 0 characters, the rule is applied to all principals with the specified
+       * tag key.
+       */
+      public fun resourceTags(vararg resourceTags: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleCriteriaProperty.Builder
+          =
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleCriteriaProperty.builder()
+
+      /**
+       * @param accountIds A list of AWS account IDs to apply to the analysis rule criteria.
+       * The accounts cannot include the organization analyzer owner account. Account IDs can only
+       * be applied to the analysis rule criteria for organization-level analyzers. The list cannot
+       * include more than 2,000 account IDs.
+       */
+      override fun accountIds(accountIds: List<String>) {
+        cdkBuilder.accountIds(accountIds)
+      }
+
+      /**
+       * @param accountIds A list of AWS account IDs to apply to the analysis rule criteria.
+       * The accounts cannot include the organization analyzer owner account. Account IDs can only
+       * be applied to the analysis rule criteria for organization-level analyzers. The list cannot
+       * include more than 2,000 account IDs.
+       */
+      override fun accountIds(vararg accountIds: String): Unit = accountIds(accountIds.toList())
+
+      /**
+       * @param resourceTags An array of key-value pairs to match for your resources.
+       * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` ,
+       * and `-` .
+       *
+       * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot
+       * be prefixed with `aws:` .
+       *
+       * For the tag value, you can specify a value that is 0 to 256 characters in length. If the
+       * specified tag value is 0 characters, the rule is applied to all principals with the specified
+       * tag key.
+       */
+      override fun resourceTags(resourceTags: IResolvable) {
+        cdkBuilder.resourceTags(resourceTags.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param resourceTags An array of key-value pairs to match for your resources.
+       * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` ,
+       * and `-` .
+       *
+       * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot
+       * be prefixed with `aws:` .
+       *
+       * For the tag value, you can specify a value that is 0 to 256 characters in length. If the
+       * specified tag value is 0 characters, the rule is applied to all principals with the specified
+       * tag key.
+       */
+      override fun resourceTags(resourceTags: List<Any>) {
+        cdkBuilder.resourceTags(resourceTags.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param resourceTags An array of key-value pairs to match for your resources.
+       * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` ,
+       * and `-` .
+       *
+       * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot
+       * be prefixed with `aws:` .
+       *
+       * For the tag value, you can specify a value that is 0 to 256 characters in length. If the
+       * specified tag value is 0 characters, the rule is applied to all principals with the specified
+       * tag key.
+       */
+      override fun resourceTags(vararg resourceTags: Any): Unit =
+          resourceTags(resourceTags.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleCriteriaProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleCriteriaProperty,
+    ) : CdkObject(cdkObject),
+        AnalysisRuleCriteriaProperty {
+      /**
+       * A list of AWS account IDs to apply to the analysis rule criteria.
+       *
+       * The accounts cannot include the organization analyzer owner account. Account IDs can only
+       * be applied to the analysis rule criteria for organization-level analyzers. The list cannot
+       * include more than 2,000 account IDs.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analysisrulecriteria.html#cfn-accessanalyzer-analyzer-analysisrulecriteria-accountids)
+       */
+      override fun accountIds(): List<String> = unwrap(this).getAccountIds() ?: emptyList()
+
+      /**
+       * An array of key-value pairs to match for your resources.
+       *
+       * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` ,
+       * and `-` .
+       *
+       * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot
+       * be prefixed with `aws:` .
+       *
+       * For the tag value, you can specify a value that is 0 to 256 characters in length. If the
+       * specified tag value is 0 characters, the rule is applied to all principals with the specified
+       * tag key.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analysisrulecriteria.html#cfn-accessanalyzer-analyzer-analysisrulecriteria-resourcetags)
+       */
+      override fun resourceTags(): Any? = unwrap(this).getResourceTags()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisRuleCriteriaProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleCriteriaProperty):
+          AnalysisRuleCriteriaProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AnalysisRuleCriteriaProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisRuleCriteriaProperty):
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleCriteriaProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleCriteriaProperty
+    }
+  }
+
+  /**
+   * Contains information about analysis rules for the analyzer.
+   *
+   * Analysis rules determine which entities will generate findings based on the criteria you define
+   * when you create the rule.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
+   * AnalysisRuleProperty analysisRuleProperty = AnalysisRuleProperty.builder()
+   * .exclusions(List.of(AnalysisRuleCriteriaProperty.builder()
+   * .accountIds(List.of("accountIds"))
+   * .resourceTags(List.of(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build())))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analysisrule.html)
+   */
+  public interface AnalysisRuleProperty {
+    /**
+     * A list of rules for the analyzer containing criteria to exclude from analysis.
+     *
+     * Entities that meet the rule criteria will not generate findings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analysisrule.html#cfn-accessanalyzer-analyzer-analysisrule-exclusions)
+     */
+    public fun exclusions(): Any? = unwrap(this).getExclusions()
+
+    /**
+     * A builder for [AnalysisRuleProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exclusions A list of rules for the analyzer containing criteria to exclude from
+       * analysis.
+       * Entities that meet the rule criteria will not generate findings.
+       */
+      public fun exclusions(exclusions: IResolvable)
+
+      /**
+       * @param exclusions A list of rules for the analyzer containing criteria to exclude from
+       * analysis.
+       * Entities that meet the rule criteria will not generate findings.
+       */
+      public fun exclusions(exclusions: List<Any>)
+
+      /**
+       * @param exclusions A list of rules for the analyzer containing criteria to exclude from
+       * analysis.
+       * Entities that meet the rule criteria will not generate findings.
+       */
+      public fun exclusions(vararg exclusions: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleProperty.Builder =
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleProperty.builder()
+
+      /**
+       * @param exclusions A list of rules for the analyzer containing criteria to exclude from
+       * analysis.
+       * Entities that meet the rule criteria will not generate findings.
+       */
+      override fun exclusions(exclusions: IResolvable) {
+        cdkBuilder.exclusions(exclusions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param exclusions A list of rules for the analyzer containing criteria to exclude from
+       * analysis.
+       * Entities that meet the rule criteria will not generate findings.
+       */
+      override fun exclusions(exclusions: List<Any>) {
+        cdkBuilder.exclusions(exclusions.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param exclusions A list of rules for the analyzer containing criteria to exclude from
+       * analysis.
+       * Entities that meet the rule criteria will not generate findings.
+       */
+      override fun exclusions(vararg exclusions: Any): Unit = exclusions(exclusions.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleProperty,
+    ) : CdkObject(cdkObject),
+        AnalysisRuleProperty {
+      /**
+       * A list of rules for the analyzer containing criteria to exclude from analysis.
+       *
+       * Entities that meet the rule criteria will not generate findings.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analysisrule.html#cfn-accessanalyzer-analyzer-analysisrule-exclusions)
+       */
+      override fun exclusions(): Any? = unwrap(this).getExclusions()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnalysisRuleProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleProperty):
+          AnalysisRuleProperty = CdkObjectWrappers.wrap(cdkObject) as? AnalysisRuleProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnalysisRuleProperty):
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.AnalysisRuleProperty
+    }
+  }
+
+  /**
+   * Contains information about the configuration of an analyzer for an AWS organization or account.
    *
    * Example:
    *
@@ -462,6 +870,15 @@ public open class CfnAnalyzer(
    * AnalyzerConfigurationProperty analyzerConfigurationProperty =
    * AnalyzerConfigurationProperty.builder()
    * .unusedAccessConfiguration(UnusedAccessConfigurationProperty.builder()
+   * .analysisRule(AnalysisRuleProperty.builder()
+   * .exclusions(List.of(AnalysisRuleCriteriaProperty.builder()
+   * .accountIds(List.of("accountIds"))
+   * .resourceTags(List.of(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build())))
+   * .build()))
+   * .build())
    * .unusedAccessAge(123)
    * .build())
    * .build();
@@ -472,8 +889,6 @@ public open class CfnAnalyzer(
   public interface AnalyzerConfigurationProperty {
     /**
      * Specifies the configuration of an unused access analyzer for an AWS organization or account.
-     *
-     * External access analyzers do not support any configuration.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html#cfn-accessanalyzer-analyzer-analyzerconfiguration-unusedaccessconfiguration)
      */
@@ -487,14 +902,12 @@ public open class CfnAnalyzer(
       /**
        * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
        * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
        */
       public fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable)
 
       /**
        * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
        * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
        */
       public
           fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty)
@@ -502,7 +915,6 @@ public open class CfnAnalyzer(
       /**
        * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
        * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63ab8f673dc332d9b0d20c53140bcf87473a0e8d671b6890e885eeb33b85cc81")
@@ -519,7 +931,6 @@ public open class CfnAnalyzer(
       /**
        * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
        * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
        */
       override fun unusedAccessConfiguration(unusedAccessConfiguration: IResolvable) {
         cdkBuilder.unusedAccessConfiguration(unusedAccessConfiguration.let(IResolvable.Companion::unwrap))
@@ -528,7 +939,6 @@ public open class CfnAnalyzer(
       /**
        * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
        * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
        */
       override
           fun unusedAccessConfiguration(unusedAccessConfiguration: UnusedAccessConfigurationProperty) {
@@ -538,7 +948,6 @@ public open class CfnAnalyzer(
       /**
        * @param unusedAccessConfiguration Specifies the configuration of an unused access analyzer
        * for an AWS organization or account.
-       * External access analyzers do not support any configuration.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63ab8f673dc332d9b0d20c53140bcf87473a0e8d671b6890e885eeb33b85cc81")
@@ -559,8 +968,6 @@ public open class CfnAnalyzer(
       /**
        * Specifies the configuration of an unused access analyzer for an AWS organization or
        * account.
-       *
-       * External access analyzers do not support any configuration.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-analyzerconfiguration.html#cfn-accessanalyzer-analyzer-analyzerconfiguration-unusedaccessconfiguration)
        */
@@ -587,6 +994,9 @@ public open class CfnAnalyzer(
 
   /**
    * Contains information about an archive rule.
+   *
+   * Archive rules automatically archive new findings that meet the criteria you define when you
+   * create the rule.
    *
    * Example:
    *
@@ -970,6 +1380,15 @@ public open class CfnAnalyzer(
    * import io.cloudshiftdev.awscdk.services.accessanalyzer.*;
    * UnusedAccessConfigurationProperty unusedAccessConfigurationProperty =
    * UnusedAccessConfigurationProperty.builder()
+   * .analysisRule(AnalysisRuleProperty.builder()
+   * .exclusions(List.of(AnalysisRuleCriteriaProperty.builder()
+   * .accountIds(List.of("accountIds"))
+   * .resourceTags(List.of(List.of(CfnTag.builder()
+   * .key("key")
+   * .value("value")
+   * .build())))
+   * .build()))
+   * .build())
    * .unusedAccessAge(123)
    * .build();
    * ```
@@ -978,11 +1397,21 @@ public open class CfnAnalyzer(
    */
   public interface UnusedAccessConfigurationProperty {
     /**
+     * Contains information about analysis rules for the analyzer.
+     *
+     * Analysis rules determine which entities will generate findings based on the criteria you
+     * define when you create the rule.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-unusedaccessconfiguration.html#cfn-accessanalyzer-analyzer-unusedaccessconfiguration-analysisrule)
+     */
+    public fun analysisRule(): Any? = unwrap(this).getAnalysisRule()
+
+    /**
      * The specified access age in days for which to generate findings for unused access.
      *
      * For example, if you specify 90 days, the analyzer will generate findings for IAM entities
      * within the accounts of the selected organization for any access that hasn't been used in 90 or
-     * more days since the analyzer's last scan. You can choose a value between 1 and 180 days.
+     * more days since the analyzer's last scan. You can choose a value between 1 and 365 days.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-unusedaccessconfiguration.html#cfn-accessanalyzer-analyzer-unusedaccessconfiguration-unusedaccessage)
      */
@@ -994,11 +1423,34 @@ public open class CfnAnalyzer(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param analysisRule Contains information about analysis rules for the analyzer.
+       * Analysis rules determine which entities will generate findings based on the criteria you
+       * define when you create the rule.
+       */
+      public fun analysisRule(analysisRule: IResolvable)
+
+      /**
+       * @param analysisRule Contains information about analysis rules for the analyzer.
+       * Analysis rules determine which entities will generate findings based on the criteria you
+       * define when you create the rule.
+       */
+      public fun analysisRule(analysisRule: AnalysisRuleProperty)
+
+      /**
+       * @param analysisRule Contains information about analysis rules for the analyzer.
+       * Analysis rules determine which entities will generate findings based on the criteria you
+       * define when you create the rule.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f1df882813b57a10a69199200f7a6d1c602b657341cd9299f41a1dd2e718e3c9")
+      public fun analysisRule(analysisRule: AnalysisRuleProperty.Builder.() -> Unit)
+
+      /**
        * @param unusedAccessAge The specified access age in days for which to generate findings for
        * unused access.
        * For example, if you specify 90 days, the analyzer will generate findings for IAM entities
        * within the accounts of the selected organization for any access that hasn't been used in 90 or
-       * more days since the analyzer's last scan. You can choose a value between 1 and 180 days.
+       * more days since the analyzer's last scan. You can choose a value between 1 and 365 days.
        */
       public fun unusedAccessAge(unusedAccessAge: Number)
     }
@@ -1010,11 +1462,39 @@ public open class CfnAnalyzer(
           software.amazon.awscdk.services.accessanalyzer.CfnAnalyzer.UnusedAccessConfigurationProperty.builder()
 
       /**
+       * @param analysisRule Contains information about analysis rules for the analyzer.
+       * Analysis rules determine which entities will generate findings based on the criteria you
+       * define when you create the rule.
+       */
+      override fun analysisRule(analysisRule: IResolvable) {
+        cdkBuilder.analysisRule(analysisRule.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param analysisRule Contains information about analysis rules for the analyzer.
+       * Analysis rules determine which entities will generate findings based on the criteria you
+       * define when you create the rule.
+       */
+      override fun analysisRule(analysisRule: AnalysisRuleProperty) {
+        cdkBuilder.analysisRule(analysisRule.let(AnalysisRuleProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param analysisRule Contains information about analysis rules for the analyzer.
+       * Analysis rules determine which entities will generate findings based on the criteria you
+       * define when you create the rule.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f1df882813b57a10a69199200f7a6d1c602b657341cd9299f41a1dd2e718e3c9")
+      override fun analysisRule(analysisRule: AnalysisRuleProperty.Builder.() -> Unit): Unit =
+          analysisRule(AnalysisRuleProperty(analysisRule))
+
+      /**
        * @param unusedAccessAge The specified access age in days for which to generate findings for
        * unused access.
        * For example, if you specify 90 days, the analyzer will generate findings for IAM entities
        * within the accounts of the selected organization for any access that hasn't been used in 90 or
-       * more days since the analyzer's last scan. You can choose a value between 1 and 180 days.
+       * more days since the analyzer's last scan. You can choose a value between 1 and 365 days.
        */
       override fun unusedAccessAge(unusedAccessAge: Number) {
         cdkBuilder.unusedAccessAge(unusedAccessAge)
@@ -1030,11 +1510,21 @@ public open class CfnAnalyzer(
     ) : CdkObject(cdkObject),
         UnusedAccessConfigurationProperty {
       /**
+       * Contains information about analysis rules for the analyzer.
+       *
+       * Analysis rules determine which entities will generate findings based on the criteria you
+       * define when you create the rule.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-unusedaccessconfiguration.html#cfn-accessanalyzer-analyzer-unusedaccessconfiguration-analysisrule)
+       */
+      override fun analysisRule(): Any? = unwrap(this).getAnalysisRule()
+
+      /**
        * The specified access age in days for which to generate findings for unused access.
        *
        * For example, if you specify 90 days, the analyzer will generate findings for IAM entities
        * within the accounts of the selected organization for any access that hasn't been used in 90 or
-       * more days since the analyzer's last scan. You can choose a value between 1 and 180 days.
+       * more days since the analyzer's last scan. You can choose a value between 1 and 365 days.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-accessanalyzer-analyzer-unusedaccessconfiguration.html#cfn-accessanalyzer-analyzer-unusedaccessconfiguration-unusedaccessage)
        */

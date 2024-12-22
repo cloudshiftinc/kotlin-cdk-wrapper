@@ -12,9 +12,9 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `HookDefaultVersion` resource specifies the default version of the hook.
+ * The `HookDefaultVersion` resource specifies the default version of the Hook.
  *
- * The default version of the hook is used in CloudFormation operations for this AWS account and AWS
+ * The default version of the Hook is used in CloudFormation operations for this AWS account and AWS
  * Region .
  *
  * Example:
@@ -73,12 +73,12 @@ public open class CfnHookDefaultVersion(
   }
 
   /**
-   * The name of the hook.
+   * The name of the Hook.
    */
   public open fun typeName(): String? = unwrap(this).getTypeName()
 
   /**
-   * The name of the hook.
+   * The name of the Hook.
    */
   public open fun typeName(`value`: String) {
     unwrap(this).setTypeName(`value`)
@@ -114,12 +114,12 @@ public open class CfnHookDefaultVersion(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The name of the hook.
+     * The name of the Hook.
      *
      * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html#cfn-cloudformation-hookdefaultversion-typename)
-     * @param typeName The name of the hook. 
+     * @param typeName The name of the Hook. 
      */
     public fun typeName(typeName: String)
 
@@ -154,12 +154,12 @@ public open class CfnHookDefaultVersion(
         id)
 
     /**
-     * The name of the hook.
+     * The name of the Hook.
      *
      * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookdefaultversion.html#cfn-cloudformation-hookdefaultversion-typename)
-     * @param typeName The name of the hook. 
+     * @param typeName The name of the Hook. 
      */
     override fun typeName(typeName: String) {
       cdkBuilder.typeName(typeName)

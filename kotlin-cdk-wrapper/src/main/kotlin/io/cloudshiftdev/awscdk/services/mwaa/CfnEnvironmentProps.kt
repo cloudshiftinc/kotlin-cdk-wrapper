@@ -180,7 +180,8 @@ public interface CfnEnvironmentProps {
    * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set in
    * `MinxWebserers` .
    *
-   * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+   * Valid values: For environments larger than mw1.micro, accepts values from `2` to `5` . Defaults
+   * to `2` for all environment sizes except mw1.micro, which defaults to `1` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxwebservers)
    */
@@ -207,7 +208,8 @@ public interface CfnEnvironmentProps {
    * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set in
    * `MinxWebserers` .
    *
-   * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+   * Valid values: For environments larger than mw1.micro, accepts values from `2` to `5` . Defaults
+   * to `2` for all environment sizes except mw1.micro, which defaults to `1` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minwebservers)
    */
@@ -465,7 +467,8 @@ public interface CfnEnvironmentProps {
      * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set
      * in `MinxWebserers` .
      *
-     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     * Valid values: For environments larger than mw1.micro, accepts values from `2` to `5` .
+     * Defaults to `2` for all environment sizes except mw1.micro, which defaults to `1` .
      */
     public fun maxWebservers(maxWebservers: Number)
 
@@ -487,7 +490,8 @@ public interface CfnEnvironmentProps {
      * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set
      * in `MinxWebserers` .
      *
-     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     * Valid values: For environments larger than mw1.micro, accepts values from `2` to `5` .
+     * Defaults to `2` for all environment sizes except mw1.micro, which defaults to `1` .
      */
     public fun minWebservers(minWebservers: Number)
 
@@ -751,7 +755,8 @@ public interface CfnEnvironmentProps {
      * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set
      * in `MinxWebserers` .
      *
-     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     * Valid values: For environments larger than mw1.micro, accepts values from `2` to `5` .
+     * Defaults to `2` for all environment sizes except mw1.micro, which defaults to `1` .
      */
     override fun maxWebservers(maxWebservers: Number) {
       cdkBuilder.maxWebservers(maxWebservers)
@@ -777,7 +782,8 @@ public interface CfnEnvironmentProps {
      * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set
      * in `MinxWebserers` .
      *
-     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     * Valid values: For environments larger than mw1.micro, accepts values from `2` to `5` .
+     * Defaults to `2` for all environment sizes except mw1.micro, which defaults to `1` .
      */
     override fun minWebservers(minWebservers: Number) {
       cdkBuilder.minWebservers(minWebservers)
@@ -1063,7 +1069,8 @@ public interface CfnEnvironmentProps {
      * decrease Amazon MWAA disposes of the additional web servers, and scales down to the number set
      * in `MinxWebserers` .
      *
-     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     * Valid values: For environments larger than mw1.micro, accepts values from `2` to `5` .
+     * Defaults to `2` for all environment sizes except mw1.micro, which defaults to `1` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-maxwebservers)
      */
@@ -1090,7 +1097,8 @@ public interface CfnEnvironmentProps {
      * decrease, Amazon MWAA disposes of the additional web servers, and scales down to the number set
      * in `MinxWebserers` .
      *
-     * Valid values: Accepts between `2` and `5` . Defaults to `2` .
+     * Valid values: For environments larger than mw1.micro, accepts values from `2` to `5` .
+     * Defaults to `2` for all environment sizes except mw1.micro, which defaults to `1` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mwaa-environment.html#cfn-mwaa-environment-minwebservers)
      */

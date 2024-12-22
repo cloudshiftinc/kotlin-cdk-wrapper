@@ -1846,6 +1846,9 @@ public open class CfnAssetModel(
     /**
      * The data type of the asset model property.
      *
+     * If you specify `STRUCT` , you must also specify `dataTypeSpec` to identify the type of the
+     * structure for this property.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatype)
      */
     public fun dataType(): String
@@ -1925,6 +1928,8 @@ public open class CfnAssetModel(
     public interface Builder {
       /**
        * @param dataType The data type of the asset model property. 
+       * If you specify `STRUCT` , you must also specify `dataTypeSpec` to identify the type of the
+       * structure for this property.
        */
       public fun dataType(dataType: String)
 
@@ -1998,6 +2003,8 @@ public open class CfnAssetModel(
 
       /**
        * @param dataType The data type of the asset model property. 
+       * If you specify `STRUCT` , you must also specify `dataTypeSpec` to identify the type of the
+       * structure for this property.
        */
       override fun dataType(dataType: String) {
         cdkBuilder.dataType(dataType)
@@ -2092,6 +2099,9 @@ public open class CfnAssetModel(
         AssetModelPropertyProperty {
       /**
        * The data type of the asset model property.
+       *
+       * If you specify `STRUCT` , you must also specify `dataTypeSpec` to identify the type of the
+       * structure for this property.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotsitewise-assetmodel-assetmodelproperty.html#cfn-iotsitewise-assetmodel-assetmodelproperty-datatype)
        */

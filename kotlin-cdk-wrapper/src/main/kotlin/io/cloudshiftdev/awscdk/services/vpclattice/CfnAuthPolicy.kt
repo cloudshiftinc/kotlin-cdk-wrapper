@@ -87,14 +87,12 @@ public open class CfnAuthPolicy(
   }
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service network or service for which the policy is
-   * created.
+   * The ID or ARN of the service network or service for which the policy is created.
    */
   public open fun resourceIdentifier(): String = unwrap(this).getResourceIdentifier()
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service network or service for which the policy is
-   * created.
+   * The ID or ARN of the service network or service for which the policy is created.
    */
   public open fun resourceIdentifier(`value`: String) {
     unwrap(this).setResourceIdentifier(`value`)
@@ -114,12 +112,11 @@ public open class CfnAuthPolicy(
     public fun policy(policy: Any)
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service network or service for which the policy
-     * is created.
+     * The ID or ARN of the service network or service for which the policy is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-authpolicy.html#cfn-vpclattice-authpolicy-resourceidentifier)
-     * @param resourceIdentifier The ID or Amazon Resource Name (ARN) of the service network or
-     * service for which the policy is created. 
+     * @param resourceIdentifier The ID or ARN of the service network or service for which the
+     * policy is created. 
      */
     public fun resourceIdentifier(resourceIdentifier: String)
   }
@@ -142,12 +139,11 @@ public open class CfnAuthPolicy(
     }
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service network or service for which the policy
-     * is created.
+     * The ID or ARN of the service network or service for which the policy is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-authpolicy.html#cfn-vpclattice-authpolicy-resourceidentifier)
-     * @param resourceIdentifier The ID or Amazon Resource Name (ARN) of the service network or
-     * service for which the policy is created. 
+     * @param resourceIdentifier The ID or ARN of the service network or service for which the
+     * policy is created. 
      */
     override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)

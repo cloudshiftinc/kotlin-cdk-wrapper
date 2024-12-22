@@ -569,6 +569,25 @@ public open class Bucket(
     public fun transferAcceleration(transferAcceleration: Boolean)
 
     /**
+     * Indicates which default minimum object size behavior is applied to the lifecycle
+     * configuration.
+     *
+     * To customize the minimum object size for any transition you can add a filter that specifies a
+     * custom
+     * `objectSizeGreaterThan` or `objectSizeLessThan` for `lifecycleRules` property. Custom filters
+     * always
+     * take precedence over the default transition behavior.
+     *
+     * Default: - TransitionDefaultMinimumObjectSize.VARIES_BY_STORAGE_CLASS before September 2024,
+     * otherwise TransitionDefaultMinimumObjectSize.ALL_STORAGE_CLASSES_128_K.
+     *
+     * @param transitionDefaultMinimumObjectSize Indicates which default minimum object size
+     * behavior is applied to the lifecycle configuration. 
+     */
+    public
+        fun transitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize: TransitionDefaultMinimumObjectSize)
+
+    /**
      * Whether this bucket should have versioning turned on or not.
      *
      * Default: false (unless object lock is enabled, then true)
@@ -1074,6 +1093,27 @@ public open class Bucket(
      */
     override fun transferAcceleration(transferAcceleration: Boolean) {
       cdkBuilder.transferAcceleration(transferAcceleration)
+    }
+
+    /**
+     * Indicates which default minimum object size behavior is applied to the lifecycle
+     * configuration.
+     *
+     * To customize the minimum object size for any transition you can add a filter that specifies a
+     * custom
+     * `objectSizeGreaterThan` or `objectSizeLessThan` for `lifecycleRules` property. Custom filters
+     * always
+     * take precedence over the default transition behavior.
+     *
+     * Default: - TransitionDefaultMinimumObjectSize.VARIES_BY_STORAGE_CLASS before September 2024,
+     * otherwise TransitionDefaultMinimumObjectSize.ALL_STORAGE_CLASSES_128_K.
+     *
+     * @param transitionDefaultMinimumObjectSize Indicates which default minimum object size
+     * behavior is applied to the lifecycle configuration. 
+     */
+    override
+        fun transitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize: TransitionDefaultMinimumObjectSize) {
+      cdkBuilder.transitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize.let(TransitionDefaultMinimumObjectSize.Companion::unwrap))
     }
 
     /**

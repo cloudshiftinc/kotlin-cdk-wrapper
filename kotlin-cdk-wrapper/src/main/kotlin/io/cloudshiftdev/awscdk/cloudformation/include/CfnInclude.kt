@@ -16,6 +16,7 @@ import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.collections.Map
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
@@ -227,6 +228,36 @@ public open class CfnInclude(
     public fun allowCyclicalReferences(allowCyclicalReferences: Boolean)
 
     /**
+     * Specifies a list of LogicalIDs for resources that will be included in the CDK Stack, but will
+     * not be parsed and converted to CDK types.
+     *
+     * This allows you to use CFN templates
+     * that rely on Intrinsic placement that `cfn-include`
+     * would otherwise reject, such as non-primitive values in resource update policies.
+     *
+     * Default: - All resources are hydrated
+     *
+     * @param dehydratedResources Specifies a list of LogicalIDs for resources that will be included
+     * in the CDK Stack, but will not be parsed and converted to CDK types. 
+     */
+    public fun dehydratedResources(dehydratedResources: List<String>)
+
+    /**
+     * Specifies a list of LogicalIDs for resources that will be included in the CDK Stack, but will
+     * not be parsed and converted to CDK types.
+     *
+     * This allows you to use CFN templates
+     * that rely on Intrinsic placement that `cfn-include`
+     * would otherwise reject, such as non-primitive values in resource update policies.
+     *
+     * Default: - All resources are hydrated
+     *
+     * @param dehydratedResources Specifies a list of LogicalIDs for resources that will be included
+     * in the CDK Stack, but will not be parsed and converted to CDK types. 
+     */
+    public fun dehydratedResources(vararg dehydratedResources: String)
+
+    /**
      * Specifies the template files that define nested stacks that should be included.
      *
      * If your template specifies a stack that isn't included here, it won't be created as a
@@ -314,6 +345,39 @@ public open class CfnInclude(
     override fun allowCyclicalReferences(allowCyclicalReferences: Boolean) {
       cdkBuilder.allowCyclicalReferences(allowCyclicalReferences)
     }
+
+    /**
+     * Specifies a list of LogicalIDs for resources that will be included in the CDK Stack, but will
+     * not be parsed and converted to CDK types.
+     *
+     * This allows you to use CFN templates
+     * that rely on Intrinsic placement that `cfn-include`
+     * would otherwise reject, such as non-primitive values in resource update policies.
+     *
+     * Default: - All resources are hydrated
+     *
+     * @param dehydratedResources Specifies a list of LogicalIDs for resources that will be included
+     * in the CDK Stack, but will not be parsed and converted to CDK types. 
+     */
+    override fun dehydratedResources(dehydratedResources: List<String>) {
+      cdkBuilder.dehydratedResources(dehydratedResources)
+    }
+
+    /**
+     * Specifies a list of LogicalIDs for resources that will be included in the CDK Stack, but will
+     * not be parsed and converted to CDK types.
+     *
+     * This allows you to use CFN templates
+     * that rely on Intrinsic placement that `cfn-include`
+     * would otherwise reject, such as non-primitive values in resource update policies.
+     *
+     * Default: - All resources are hydrated
+     *
+     * @param dehydratedResources Specifies a list of LogicalIDs for resources that will be included
+     * in the CDK Stack, but will not be parsed and converted to CDK types. 
+     */
+    override fun dehydratedResources(vararg dehydratedResources: String): Unit =
+        dehydratedResources(dehydratedResources.toList())
 
     /**
      * Specifies the template files that define nested stacks that should be included.

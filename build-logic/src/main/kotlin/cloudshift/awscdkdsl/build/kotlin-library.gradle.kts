@@ -53,7 +53,6 @@ tasks.withType<Test>().configureEach {
 tasks.withType<KotlinCompile>().configureEach {
     compilerOptions {
         freeCompilerArgs.add("-Xjsr305=strict")
-//        freeCompilerArgs.add("-Xcontext-receivers")
     }
 }
 
@@ -98,6 +97,6 @@ kotlin {
     }
     kotlinDaemonJvmArgs = when {
         System.getenv("CI") != null -> listOf("-Xms20g", "-Xmx20g")
-        else -> listOf("-Xms10g", "-Xmx10g")
+        else -> listOf("-Xms10g", "-Xmx15g")
     }
 }

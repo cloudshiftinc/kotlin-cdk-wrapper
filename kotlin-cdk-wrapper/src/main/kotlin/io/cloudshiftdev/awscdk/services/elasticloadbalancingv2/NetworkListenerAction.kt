@@ -23,14 +23,13 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.*;
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
- * NetworkTargetGroup networkTargetGroup;
- * NetworkListenerAction networkListenerAction =
- * NetworkListenerAction.forward(List.of(networkTargetGroup), NetworkForwardOptions.builder()
- * .stickinessDuration(Duration.minutes(30))
+ * NetworkLoadBalancer lb;
+ * NetworkTargetGroup group;
+ * NetworkListener listener = lb.addListener("Listener", BaseNetworkListenerProps.builder()
+ * .port(80)
+ * .defaultAction(NetworkListenerAction.forward(List.of(group)))
+ * // The tcp idle timeout value. The valid range is 60-6000 seconds. The default is 350 seconds.
+ * .tcpIdleTimeout(Duration.seconds(100))
  * .build());
  * ```
  */

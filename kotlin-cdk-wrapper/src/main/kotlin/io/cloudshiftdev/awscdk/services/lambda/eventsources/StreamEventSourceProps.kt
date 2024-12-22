@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSourceDlq
+import io.cloudshiftdev.awscdk.services.lambda.MetricsConfig
 import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import kotlin.Any
 import kotlin.Boolean
@@ -16,6 +17,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * The set of properties for streaming event sources shared by Dynamo and Kinesis.
@@ -43,8 +45,15 @@ import kotlin.collections.Map
  * "filtersKey", filters)))
  * .maxBatchingWindow(Duration.minutes(30))
  * .maxRecordAge(Duration.minutes(30))
+ * .metricsConfig(MetricsConfig.builder()
+ * .metrics(List.of(MetricType.EVENT_COUNT))
+ * .build())
  * .onFailure(eventSourceDlq)
  * .parallelizationFactor(123)
+ * .provisionedPollerConfig(ProvisionedPollerConfig.builder()
+ * .maximumPollers(123)
+ * .minimumPollers(123)
+ * .build())
  * .reportBatchItemFailures(false)
  * .retryAttempts(123)
  * .tumblingWindow(Duration.minutes(30))
@@ -90,6 +99,15 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
    * Default: -1
    */
   public fun maxRecordAge(): Duration? = unwrap(this).getMaxRecordAge()?.let(Duration::wrap)
+
+  /**
+   * Configuration for enhanced monitoring metrics collection When specified, enables collection of
+   * additional metrics for the stream event source.
+   *
+   * Default: - Enhanced monitoring is disabled
+   */
+  public fun metricsConfig(): MetricsConfig? =
+      unwrap(this).getMetricsConfig()?.let(MetricsConfig::wrap)
 
   /**
    * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
@@ -206,6 +224,20 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
     public fun maxRecordAge(maxRecordAge: Duration)
 
     /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    public fun metricsConfig(metricsConfig: MetricsConfig)
+
+    /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a7ba9b157b71b8aaf10216cf3b3261d0ce2f5002ebf82c5d4b7efa4e901a845b")
+    public fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit)
+
+    /**
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      */
     public fun onFailure(onFailure: IEventSourceDlq)
@@ -218,6 +250,25 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
      * * Maximum value of 10
      */
     public fun parallelizationFactor(parallelizationFactor: Number)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    public fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e18b827622a2f733a936ccb25336446ca601083b19a13d81adee22a0a60ea2b9")
+    public
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit)
 
     /**
      * @param reportBatchItemFailures Allow functions to return partially successful responses for a
@@ -328,6 +379,23 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
     }
 
     /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    override fun metricsConfig(metricsConfig: MetricsConfig) {
+      cdkBuilder.metricsConfig(metricsConfig.let(MetricsConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a7ba9b157b71b8aaf10216cf3b3261d0ce2f5002ebf82c5d4b7efa4e901a845b")
+    override fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit): Unit =
+        metricsConfig(MetricsConfig(metricsConfig))
+
+    /**
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
@@ -344,6 +412,28 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
     override fun parallelizationFactor(parallelizationFactor: Number) {
       cdkBuilder.parallelizationFactor(parallelizationFactor)
     }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    override fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig) {
+      cdkBuilder.provisionedPollerConfig(provisionedPollerConfig.let(ProvisionedPollerConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e18b827622a2f733a936ccb25336446ca601083b19a13d81adee22a0a60ea2b9")
+    override
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit):
+        Unit = provisionedPollerConfig(ProvisionedPollerConfig(provisionedPollerConfig))
 
     /**
      * @param reportBatchItemFailures Allow functions to return partially successful responses for a
@@ -467,6 +557,15 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
     override fun maxRecordAge(): Duration? = unwrap(this).getMaxRecordAge()?.let(Duration::wrap)
 
     /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     */
+    override fun metricsConfig(): MetricsConfig? =
+        unwrap(this).getMetricsConfig()?.let(MetricsConfig::wrap)
+
+    /**
      * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      *
      * Default: - discarded records are ignored
@@ -485,6 +584,17 @@ public interface StreamEventSourceProps : BaseStreamEventSourceProps {
      * Default: 1
      */
     override fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     */
+    override fun provisionedPollerConfig(): ProvisionedPollerConfig? =
+        unwrap(this).getProvisionedPollerConfig()?.let(ProvisionedPollerConfig::wrap)
 
     /**
      * Allow functions to return partially successful responses for a batch of records.

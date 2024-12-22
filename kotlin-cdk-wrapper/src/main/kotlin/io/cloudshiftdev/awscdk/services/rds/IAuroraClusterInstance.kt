@@ -8,7 +8,9 @@ import io.cloudshiftdev.awscdk.ResourceEnvironment
 import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.constructs.Node
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 
@@ -42,7 +44,24 @@ public interface IAuroraClusterInstance : IResource {
   public fun instanceSize(): String? = unwrap(this).getInstanceSize()
 
   /**
-   * Te promotion tier the instance was created in.
+   * The AWS KMS key for encryption of Performance Insights data.
+   */
+  public fun performanceInsightEncryptionKey(): IKey? =
+      unwrap(this).getPerformanceInsightEncryptionKey()?.let(IKey::wrap)
+
+  /**
+   * The amount of time, in days, to retain Performance Insights data.
+   */
+  public fun performanceInsightRetention(): PerformanceInsightRetention? =
+      unwrap(this).getPerformanceInsightRetention()?.let(PerformanceInsightRetention::wrap)
+
+  /**
+   * Whether Performance Insights is enabled.
+   */
+  public fun performanceInsightsEnabled(): Boolean? = unwrap(this).getPerformanceInsightsEnabled()
+
+  /**
+   * The promotion tier the instance was created in.
    */
   public fun tier(): Number
 
@@ -112,12 +131,30 @@ public interface IAuroraClusterInstance : IResource {
     override fun node(): Node = unwrap(this).getNode().let(Node::wrap)
 
     /**
+     * The AWS KMS key for encryption of Performance Insights data.
+     */
+    override fun performanceInsightEncryptionKey(): IKey? =
+        unwrap(this).getPerformanceInsightEncryptionKey()?.let(IKey::wrap)
+
+    /**
+     * The amount of time, in days, to retain Performance Insights data.
+     */
+    override fun performanceInsightRetention(): PerformanceInsightRetention? =
+        unwrap(this).getPerformanceInsightRetention()?.let(PerformanceInsightRetention::wrap)
+
+    /**
+     * Whether Performance Insights is enabled.
+     */
+    override fun performanceInsightsEnabled(): Boolean? =
+        unwrap(this).getPerformanceInsightsEnabled()
+
+    /**
      * The stack in which this resource is defined.
      */
     override fun stack(): Stack = unwrap(this).getStack().let(Stack::wrap)
 
     /**
-     * Te promotion tier the instance was created in.
+     * The promotion tier the instance was created in.
      */
     override fun tier(): Number = unwrap(this).getTier()
 

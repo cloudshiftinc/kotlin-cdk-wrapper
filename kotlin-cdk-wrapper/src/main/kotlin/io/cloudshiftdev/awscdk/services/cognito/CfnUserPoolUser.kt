@@ -156,26 +156,30 @@ public open class CfnUserPoolUser(
   }
 
   /**
-   * An array of name-value pairs that contain user attributes and attribute values.
+   * An array of name-value pairs that contain user attributes and attribute values to be set for
+   * the user to be created.
    */
   public open fun userAttributes(): Any? = unwrap(this).getUserAttributes()
 
   /**
-   * An array of name-value pairs that contain user attributes and attribute values.
+   * An array of name-value pairs that contain user attributes and attribute values to be set for
+   * the user to be created.
    */
   public open fun userAttributes(`value`: IResolvable) {
     unwrap(this).setUserAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * An array of name-value pairs that contain user attributes and attribute values.
+   * An array of name-value pairs that contain user attributes and attribute values to be set for
+   * the user to be created.
    */
   public open fun userAttributes(`value`: List<Any>) {
     unwrap(this).setUserAttributes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * An array of name-value pairs that contain user attributes and attribute values.
+   * An array of name-value pairs that contain user attributes and attribute values to be set for
+   * the user to be created.
    */
   public open fun userAttributes(vararg `value`: Any): Unit = userAttributes(`value`.toList())
 
@@ -377,29 +381,116 @@ public open class CfnUserPoolUser(
     public fun messageAction(messageAction: String)
 
     /**
-     * An array of name-value pairs that contain user attributes and attribute values.
+     * An array of name-value pairs that contain user attributes and attribute values to be set for
+     * the user to be created.
+     *
+     * You can create a user without specifying any attributes other than `Username` . However, any
+     * attributes that you specify as required (when creating a user pool or in the *Attributes* tab of
+     * the console) either you should supply (in your call to `AdminCreateUser` ) or the user should
+     * supply (when they sign up in response to your welcome message).
+     *
+     * For custom attributes, you must prepend the `custom:` prefix to the attribute name.
+     *
+     * To send a message inviting the user to sign up, you must specify the user's email address or
+     * phone number. You can do this in your call to AdminCreateUser or in the *Users* tab of the
+     * Amazon Cognito console for managing your user pools.
+     *
+     * You must also provide an email address or phone number when you expect the user to do
+     * passwordless sign-in with an email or SMS OTP. These attributes must be provided when
+     * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
+     *
+     * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
+     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
+     * calling
+     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
+     * .
+     *
+     * * *email* : The email address of the user to whom the message that contains the code and
+     * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
+     * `"EMAIL"` is specified in the `DesiredDeliveryMediums` parameter.
+     * * *phone_number* : The phone number of the user to whom the message that contains the code
+     * and username will be sent. Required if the `phone_number_verified` attribute is set to `True` ,
+     * or if `"SMS"` is specified in the `DesiredDeliveryMediums` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userattributes)
      * @param userAttributes An array of name-value pairs that contain user attributes and attribute
-     * values. 
+     * values to be set for the user to be created. 
      */
     public fun userAttributes(userAttributes: IResolvable)
 
     /**
-     * An array of name-value pairs that contain user attributes and attribute values.
+     * An array of name-value pairs that contain user attributes and attribute values to be set for
+     * the user to be created.
+     *
+     * You can create a user without specifying any attributes other than `Username` . However, any
+     * attributes that you specify as required (when creating a user pool or in the *Attributes* tab of
+     * the console) either you should supply (in your call to `AdminCreateUser` ) or the user should
+     * supply (when they sign up in response to your welcome message).
+     *
+     * For custom attributes, you must prepend the `custom:` prefix to the attribute name.
+     *
+     * To send a message inviting the user to sign up, you must specify the user's email address or
+     * phone number. You can do this in your call to AdminCreateUser or in the *Users* tab of the
+     * Amazon Cognito console for managing your user pools.
+     *
+     * You must also provide an email address or phone number when you expect the user to do
+     * passwordless sign-in with an email or SMS OTP. These attributes must be provided when
+     * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
+     *
+     * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
+     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
+     * calling
+     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
+     * .
+     *
+     * * *email* : The email address of the user to whom the message that contains the code and
+     * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
+     * `"EMAIL"` is specified in the `DesiredDeliveryMediums` parameter.
+     * * *phone_number* : The phone number of the user to whom the message that contains the code
+     * and username will be sent. Required if the `phone_number_verified` attribute is set to `True` ,
+     * or if `"SMS"` is specified in the `DesiredDeliveryMediums` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userattributes)
      * @param userAttributes An array of name-value pairs that contain user attributes and attribute
-     * values. 
+     * values to be set for the user to be created. 
      */
     public fun userAttributes(userAttributes: List<Any>)
 
     /**
-     * An array of name-value pairs that contain user attributes and attribute values.
+     * An array of name-value pairs that contain user attributes and attribute values to be set for
+     * the user to be created.
+     *
+     * You can create a user without specifying any attributes other than `Username` . However, any
+     * attributes that you specify as required (when creating a user pool or in the *Attributes* tab of
+     * the console) either you should supply (in your call to `AdminCreateUser` ) or the user should
+     * supply (when they sign up in response to your welcome message).
+     *
+     * For custom attributes, you must prepend the `custom:` prefix to the attribute name.
+     *
+     * To send a message inviting the user to sign up, you must specify the user's email address or
+     * phone number. You can do this in your call to AdminCreateUser or in the *Users* tab of the
+     * Amazon Cognito console for managing your user pools.
+     *
+     * You must also provide an email address or phone number when you expect the user to do
+     * passwordless sign-in with an email or SMS OTP. These attributes must be provided when
+     * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
+     *
+     * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
+     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
+     * calling
+     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
+     * .
+     *
+     * * *email* : The email address of the user to whom the message that contains the code and
+     * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
+     * `"EMAIL"` is specified in the `DesiredDeliveryMediums` parameter.
+     * * *phone_number* : The phone number of the user to whom the message that contains the code
+     * and username will be sent. Required if the `phone_number_verified` attribute is set to `True` ,
+     * or if `"SMS"` is specified in the `DesiredDeliveryMediums` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userattributes)
      * @param userAttributes An array of name-value pairs that contain user attributes and attribute
-     * values. 
+     * values to be set for the user to be created. 
      */
     public fun userAttributes(vararg userAttributes: Any)
 
@@ -658,33 +749,120 @@ public open class CfnUserPoolUser(
     }
 
     /**
-     * An array of name-value pairs that contain user attributes and attribute values.
+     * An array of name-value pairs that contain user attributes and attribute values to be set for
+     * the user to be created.
+     *
+     * You can create a user without specifying any attributes other than `Username` . However, any
+     * attributes that you specify as required (when creating a user pool or in the *Attributes* tab of
+     * the console) either you should supply (in your call to `AdminCreateUser` ) or the user should
+     * supply (when they sign up in response to your welcome message).
+     *
+     * For custom attributes, you must prepend the `custom:` prefix to the attribute name.
+     *
+     * To send a message inviting the user to sign up, you must specify the user's email address or
+     * phone number. You can do this in your call to AdminCreateUser or in the *Users* tab of the
+     * Amazon Cognito console for managing your user pools.
+     *
+     * You must also provide an email address or phone number when you expect the user to do
+     * passwordless sign-in with an email or SMS OTP. These attributes must be provided when
+     * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
+     *
+     * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
+     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
+     * calling
+     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
+     * .
+     *
+     * * *email* : The email address of the user to whom the message that contains the code and
+     * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
+     * `"EMAIL"` is specified in the `DesiredDeliveryMediums` parameter.
+     * * *phone_number* : The phone number of the user to whom the message that contains the code
+     * and username will be sent. Required if the `phone_number_verified` attribute is set to `True` ,
+     * or if `"SMS"` is specified in the `DesiredDeliveryMediums` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userattributes)
      * @param userAttributes An array of name-value pairs that contain user attributes and attribute
-     * values. 
+     * values to be set for the user to be created. 
      */
     override fun userAttributes(userAttributes: IResolvable) {
       cdkBuilder.userAttributes(userAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * An array of name-value pairs that contain user attributes and attribute values.
+     * An array of name-value pairs that contain user attributes and attribute values to be set for
+     * the user to be created.
+     *
+     * You can create a user without specifying any attributes other than `Username` . However, any
+     * attributes that you specify as required (when creating a user pool or in the *Attributes* tab of
+     * the console) either you should supply (in your call to `AdminCreateUser` ) or the user should
+     * supply (when they sign up in response to your welcome message).
+     *
+     * For custom attributes, you must prepend the `custom:` prefix to the attribute name.
+     *
+     * To send a message inviting the user to sign up, you must specify the user's email address or
+     * phone number. You can do this in your call to AdminCreateUser or in the *Users* tab of the
+     * Amazon Cognito console for managing your user pools.
+     *
+     * You must also provide an email address or phone number when you expect the user to do
+     * passwordless sign-in with an email or SMS OTP. These attributes must be provided when
+     * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
+     *
+     * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
+     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
+     * calling
+     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
+     * .
+     *
+     * * *email* : The email address of the user to whom the message that contains the code and
+     * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
+     * `"EMAIL"` is specified in the `DesiredDeliveryMediums` parameter.
+     * * *phone_number* : The phone number of the user to whom the message that contains the code
+     * and username will be sent. Required if the `phone_number_verified` attribute is set to `True` ,
+     * or if `"SMS"` is specified in the `DesiredDeliveryMediums` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userattributes)
      * @param userAttributes An array of name-value pairs that contain user attributes and attribute
-     * values. 
+     * values to be set for the user to be created. 
      */
     override fun userAttributes(userAttributes: List<Any>) {
       cdkBuilder.userAttributes(userAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * An array of name-value pairs that contain user attributes and attribute values.
+     * An array of name-value pairs that contain user attributes and attribute values to be set for
+     * the user to be created.
+     *
+     * You can create a user without specifying any attributes other than `Username` . However, any
+     * attributes that you specify as required (when creating a user pool or in the *Attributes* tab of
+     * the console) either you should supply (in your call to `AdminCreateUser` ) or the user should
+     * supply (when they sign up in response to your welcome message).
+     *
+     * For custom attributes, you must prepend the `custom:` prefix to the attribute name.
+     *
+     * To send a message inviting the user to sign up, you must specify the user's email address or
+     * phone number. You can do this in your call to AdminCreateUser or in the *Users* tab of the
+     * Amazon Cognito console for managing your user pools.
+     *
+     * You must also provide an email address or phone number when you expect the user to do
+     * passwordless sign-in with an email or SMS OTP. These attributes must be provided when
+     * passwordless options are the only available, or when you don't submit a `TemporaryPassword` .
+     *
+     * In your call to `AdminCreateUser` , you can set the `email_verified` attribute to `True` ,
+     * and you can set the `phone_number_verified` attribute to `True` . You can also do this by
+     * calling
+     * [AdminUpdateUserAttributes](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminUpdateUserAttributes.html)
+     * .
+     *
+     * * *email* : The email address of the user to whom the message that contains the code and
+     * username will be sent. Required if the `email_verified` attribute is set to `True` , or if
+     * `"EMAIL"` is specified in the `DesiredDeliveryMediums` parameter.
+     * * *phone_number* : The phone number of the user to whom the message that contains the code
+     * and username will be sent. Required if the `phone_number_verified` attribute is set to `True` ,
+     * or if `"SMS"` is specified in the `DesiredDeliveryMediums` parameter.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluser.html#cfn-cognito-userpooluser-userattributes)
      * @param userAttributes An array of name-value pairs that contain user attributes and attribute
-     * values. 
+     * values to be set for the user to be created. 
      */
     override fun userAttributes(vararg userAttributes: Any): Unit =
         userAttributes(userAttributes.toList())

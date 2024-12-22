@@ -36,7 +36,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .compatibility("compatibility")
  * .dataFormat("dataFormat")
  * .name("name")
- * .schemaDefinition("schemaDefinition")
  * // the properties below are optional
  * .checkpointVersion(SchemaVersionProperty.builder()
  * .isLatest(false)
@@ -47,6 +46,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .arn("arn")
  * .name("name")
  * .build())
+ * .schemaDefinition("schemaDefinition")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -204,7 +204,7 @@ public open class CfnSchema(
   /**
    * The schema definition using the `DataFormat` setting for `SchemaName` .
    */
-  public open fun schemaDefinition(): String = unwrap(this).getSchemaDefinition()
+  public open fun schemaDefinition(): String? = unwrap(this).getSchemaDefinition()
 
   /**
    * The schema definition using the `DataFormat` setting for `SchemaName` .

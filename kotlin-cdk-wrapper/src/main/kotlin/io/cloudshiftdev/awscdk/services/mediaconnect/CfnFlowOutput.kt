@@ -24,8 +24,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * Each flow can have up to 50 outputs. An output can have the same protocol or a different protocol
  * from the source. The following protocols are supported: RIST, RTP, RTP-FEC, SRT-listener,
- * SRT-caller, Zixi pull, Zixi push, and Fujitsu-QoS. CDI and ST 2110 JPEG XS protocols are not
- * currently supported by AWS CloudFormation.
+ * SRT-caller, Zixi pull, and Zixi push. CDI and ST 2110 JPEG XS protocols are not currently supported
+ * by AWS CloudFormation.
  *
  * Example:
  *
@@ -257,12 +257,12 @@ public open class CfnFlowOutput(
   }
 
   /**
-   * An indication of whether the output should transmit data or not.
+   * An indication of whether the new output should be enabled or disabled as soon as it is created.
    */
   public open fun outputStatus(): String? = unwrap(this).getOutputStatus()
 
   /**
-   * An indication of whether the output should transmit data or not.
+   * An indication of whether the new output should be enabled or disabled as soon as it is created.
    */
   public open fun outputStatus(`value`: String) {
     unwrap(this).setOutputStatus(`value`)
@@ -441,7 +441,7 @@ public open class CfnFlowOutput(
     /**
      * The maximum latency in milliseconds.
      *
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-maxlatency)
      * @param maxLatency The maximum latency in milliseconds. 
@@ -499,10 +499,14 @@ public open class CfnFlowOutput(
     public fun name(name: String)
 
     /**
-     * An indication of whether the output should transmit data or not.
+     * An indication of whether the new output should be enabled or disabled as soon as it is
+     * created.
+     *
+     * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-outputstatus)
-     * @param outputStatus An indication of whether the output should transmit data or not. 
+     * @param outputStatus An indication of whether the new output should be enabled or disabled as
+     * soon as it is created. 
      */
     public fun outputStatus(outputStatus: String)
 
@@ -516,6 +520,11 @@ public open class CfnFlowOutput(
 
     /**
      * The protocol to use for the output.
+     *
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-protocol)
      * @param protocol The protocol to use for the output. 
@@ -680,7 +689,7 @@ public open class CfnFlowOutput(
     /**
      * The maximum latency in milliseconds.
      *
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-maxlatency)
      * @param maxLatency The maximum latency in milliseconds. 
@@ -749,10 +758,14 @@ public open class CfnFlowOutput(
     }
 
     /**
-     * An indication of whether the output should transmit data or not.
+     * An indication of whether the new output should be enabled or disabled as soon as it is
+     * created.
+     *
+     * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-outputstatus)
-     * @param outputStatus An indication of whether the output should transmit data or not. 
+     * @param outputStatus An indication of whether the new output should be enabled or disabled as
+     * soon as it is created. 
      */
     override fun outputStatus(outputStatus: String) {
       cdkBuilder.outputStatus(outputStatus)
@@ -770,6 +783,11 @@ public open class CfnFlowOutput(
 
     /**
      * The protocol to use for the output.
+     *
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-protocol)
      * @param protocol The protocol to use for the output. 

@@ -15,7 +15,7 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * String bucketName = "my-favorite-bucket-name";
+ * String bucketName = "amzn-s3-demo-bucket";
  * Bucket accessLogsBucket = Bucket.Builder.create(this, "AccessLogsBucket")
  * .objectOwnership(ObjectOwnership.BUCKET_OWNER_ENFORCED)
  * .bucketName(bucketName)

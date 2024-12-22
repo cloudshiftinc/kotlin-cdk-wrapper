@@ -53,6 +53,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .name("name")
  * // the properties below are optional
+ * .commands(List.of("commands"))
  * .configuration(configuration)
  * .inputArtifacts(List.of(InputArtifactProperty.builder()
  * .name("name")
@@ -60,7 +61,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .namespace("namespace")
  * .outputArtifacts(List.of(OutputArtifactProperty.builder()
  * .name("name")
+ * // the properties below are optional
+ * .files(List.of("files"))
  * .build()))
+ * .outputVariables(List.of("outputVariables"))
  * .region("region")
  * .roleArn("roleArn")
  * .runOrder(123)
@@ -112,6 +116,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .build()))
  * .result("result")
+ * .retryConfiguration(RetryConfigurationProperty.builder()
+ * .retryMode("retryMode")
+ * .build())
  * .build())
  * .onSuccess(SuccessConditionsProperty.builder()
  * .conditions(List.of(ConditionProperty.builder()
@@ -1226,6 +1233,7 @@ public open class CfnPipeline(
    * .build())
    * .name("name")
    * // the properties below are optional
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
@@ -1233,7 +1241,10 @@ public open class CfnPipeline(
    * .namespace("namespace")
    * .outputArtifacts(List.of(OutputArtifactProperty.builder()
    * .name("name")
+   * // the properties below are optional
+   * .files(List.of("files"))
    * .build()))
+   * .outputVariables(List.of("outputVariables"))
    * .region("region")
    * .roleArn("roleArn")
    * .runOrder(123)
@@ -1250,6 +1261,20 @@ public open class CfnPipeline(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-actiontypeid)
      */
     public fun actionTypeId(): Any
+
+    /**
+     * The shell commands to run with your compute action in CodePipeline.
+     *
+     * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+     * are used, you do not need to create any resources in CodeBuild.
+     *
+     *
+     * Using compute time for this action will incur separate charges in AWS CodeBuild .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-commands)
+     */
+    public fun commands(): List<String> = unwrap(this).getCommands() ?: emptyList()
 
     /**
      * The action's configuration.
@@ -1326,6 +1351,15 @@ public open class CfnPipeline(
     public fun outputArtifacts(): Any? = unwrap(this).getOutputArtifacts()
 
     /**
+     * The list of variables that are to be exported from the compute action.
+     *
+     * This is specifically CodeBuild environment variables as used for that action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-outputvariables)
+     */
+    public fun outputVariables(): List<String> = unwrap(this).getOutputVariables() ?: emptyList()
+
+    /**
      * The action declaration's AWS Region, such as us-east-1.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-region)
@@ -1379,6 +1413,26 @@ public open class CfnPipeline(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("e2092269ef9990e90dc63fe85f23371fa1920f3a0164d9fae3941e98a5e81871")
       public fun actionTypeId(actionTypeId: ActionTypeIdProperty.Builder.() -> Unit)
+
+      /**
+       * @param commands The shell commands to run with your compute action in CodePipeline.
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       */
+      public fun commands(commands: List<String>)
+
+      /**
+       * @param commands The shell commands to run with your compute action in CodePipeline.
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       */
+      public fun commands(vararg commands: String)
 
       /**
        * @param configuration The action's configuration.
@@ -1498,6 +1552,20 @@ public open class CfnPipeline(
       public fun outputArtifacts(vararg outputArtifacts: Any)
 
       /**
+       * @param outputVariables The list of variables that are to be exported from the compute
+       * action.
+       * This is specifically CodeBuild environment variables as used for that action.
+       */
+      public fun outputVariables(outputVariables: List<String>)
+
+      /**
+       * @param outputVariables The list of variables that are to be exported from the compute
+       * action.
+       * This is specifically CodeBuild environment variables as used for that action.
+       */
+      public fun outputVariables(vararg outputVariables: String)
+
+      /**
        * @param region The action declaration's AWS Region, such as us-east-1.
        */
       public fun region(region: String)
@@ -1549,6 +1617,28 @@ public open class CfnPipeline(
       @JvmName("e2092269ef9990e90dc63fe85f23371fa1920f3a0164d9fae3941e98a5e81871")
       override fun actionTypeId(actionTypeId: ActionTypeIdProperty.Builder.() -> Unit): Unit =
           actionTypeId(ActionTypeIdProperty(actionTypeId))
+
+      /**
+       * @param commands The shell commands to run with your compute action in CodePipeline.
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       */
+      override fun commands(commands: List<String>) {
+        cdkBuilder.commands(commands)
+      }
+
+      /**
+       * @param commands The shell commands to run with your compute action in CodePipeline.
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       */
+      override fun commands(vararg commands: String): Unit = commands(commands.toList())
 
       /**
        * @param configuration The action's configuration.
@@ -1684,6 +1774,23 @@ public open class CfnPipeline(
           outputArtifacts(outputArtifacts.toList())
 
       /**
+       * @param outputVariables The list of variables that are to be exported from the compute
+       * action.
+       * This is specifically CodeBuild environment variables as used for that action.
+       */
+      override fun outputVariables(outputVariables: List<String>) {
+        cdkBuilder.outputVariables(outputVariables)
+      }
+
+      /**
+       * @param outputVariables The list of variables that are to be exported from the compute
+       * action.
+       * This is specifically CodeBuild environment variables as used for that action.
+       */
+      override fun outputVariables(vararg outputVariables: String): Unit =
+          outputVariables(outputVariables.toList())
+
+      /**
        * @param region The action declaration's AWS Region, such as us-east-1.
        */
       override fun region(region: String) {
@@ -1730,6 +1837,20 @@ public open class CfnPipeline(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-actiontypeid)
        */
       override fun actionTypeId(): Any = unwrap(this).getActionTypeId()
+
+      /**
+       * The shell commands to run with your compute action in CodePipeline.
+       *
+       * All commands are supported except multi-line formats. While CodeBuild logs and permissions
+       * are used, you do not need to create any resources in CodeBuild.
+       *
+       *
+       * Using compute time for this action will incur separate charges in AWS CodeBuild .
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-commands)
+       */
+      override fun commands(): List<String> = unwrap(this).getCommands() ?: emptyList()
 
       /**
        * The action's configuration.
@@ -1804,6 +1925,16 @@ public open class CfnPipeline(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-outputartifacts)
        */
       override fun outputArtifacts(): Any? = unwrap(this).getOutputArtifacts()
+
+      /**
+       * The list of variables that are to be exported from the compute action.
+       *
+       * This is specifically CodeBuild environment variables as used for that action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-actiondeclaration.html#cfn-codepipeline-pipeline-actiondeclaration-outputvariables)
+       */
+      override fun outputVariables(): List<String> = unwrap(this).getOutputVariables() ?:
+          emptyList()
 
       /**
        * The action declaration's AWS Region, such as us-east-1.
@@ -2761,7 +2892,11 @@ public open class CfnPipeline(
   /**
    * The condition for the stage.
    *
-   * A condition is made up of the rules and the result for the condition.
+   * A condition is made up of the rules and the result for the condition. For more information
+   * about conditions, see [Stage
+   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) . For
+   * more information about rules, see the [AWS CodePipeline rule
+   * reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html) .
    *
    * Example:
    *
@@ -3093,6 +3228,9 @@ public open class CfnPipeline(
    * .build()))
    * .build()))
    * .result("result")
+   * .retryConfiguration(RetryConfigurationProperty.builder()
+   * .retryMode("retryMode")
+   * .build())
    * .build();
    * ```
    *
@@ -3112,6 +3250,14 @@ public open class CfnPipeline(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-result)
      */
     public fun result(): String? = unwrap(this).getResult()
+
+    /**
+     * The retry configuration specifies automatic retry for a failed stage, along with the
+     * configured retry mode.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-retryconfiguration)
+     */
+    public fun retryConfiguration(): Any? = unwrap(this).getRetryConfiguration()
 
     /**
      * A builder for [FailureConditionsProperty]
@@ -3138,6 +3284,27 @@ public open class CfnPipeline(
        * back the stage.
        */
       public fun result(result: String)
+
+      /**
+       * @param retryConfiguration The retry configuration specifies automatic retry for a failed
+       * stage, along with the configured retry mode.
+       */
+      public fun retryConfiguration(retryConfiguration: IResolvable)
+
+      /**
+       * @param retryConfiguration The retry configuration specifies automatic retry for a failed
+       * stage, along with the configured retry mode.
+       */
+      public fun retryConfiguration(retryConfiguration: RetryConfigurationProperty)
+
+      /**
+       * @param retryConfiguration The retry configuration specifies automatic retry for a failed
+       * stage, along with the configured retry mode.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d12112b500e01adb31da47cdca5f39d3da7575bfa0423cb60c0699532e9b1d9a")
+      public
+          fun retryConfiguration(retryConfiguration: RetryConfigurationProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3173,6 +3340,32 @@ public open class CfnPipeline(
         cdkBuilder.result(result)
       }
 
+      /**
+       * @param retryConfiguration The retry configuration specifies automatic retry for a failed
+       * stage, along with the configured retry mode.
+       */
+      override fun retryConfiguration(retryConfiguration: IResolvable) {
+        cdkBuilder.retryConfiguration(retryConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param retryConfiguration The retry configuration specifies automatic retry for a failed
+       * stage, along with the configured retry mode.
+       */
+      override fun retryConfiguration(retryConfiguration: RetryConfigurationProperty) {
+        cdkBuilder.retryConfiguration(retryConfiguration.let(RetryConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param retryConfiguration The retry configuration specifies automatic retry for a failed
+       * stage, along with the configured retry mode.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d12112b500e01adb31da47cdca5f39d3da7575bfa0423cb60c0699532e9b1d9a")
+      override
+          fun retryConfiguration(retryConfiguration: RetryConfigurationProperty.Builder.() -> Unit):
+          Unit = retryConfiguration(RetryConfigurationProperty(retryConfiguration))
+
       public fun build():
           software.amazon.awscdk.services.codepipeline.CfnPipeline.FailureConditionsProperty =
           cdkBuilder.build()
@@ -3196,6 +3389,14 @@ public open class CfnPipeline(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-result)
        */
       override fun result(): String? = unwrap(this).getResult()
+
+      /**
+       * The retry configuration specifies automatic retry for a failed stage, along with the
+       * configured retry mode.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-failureconditions.html#cfn-codepipeline-pipeline-failureconditions-retryconfiguration)
+       */
+      override fun retryConfiguration(): Any? = unwrap(this).getRetryConfiguration()
     }
 
     public companion object {
@@ -4485,12 +4686,22 @@ public open class CfnPipeline(
    * import io.cloudshiftdev.awscdk.services.codepipeline.*;
    * OutputArtifactProperty outputArtifactProperty = OutputArtifactProperty.builder()
    * .name("name")
+   * // the properties below are optional
+   * .files(List.of("files"))
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html)
    */
   public interface OutputArtifactProperty {
+    /**
+     * The files that you want to associate with the output artifact that will be exported from the
+     * compute action.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html#cfn-codepipeline-pipeline-outputartifact-files)
+     */
+    public fun files(): List<String> = unwrap(this).getFiles() ?: emptyList()
+
     /**
      * The name of the output of an artifact, such as "My App".
      *
@@ -4511,6 +4722,18 @@ public open class CfnPipeline(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param files The files that you want to associate with the output artifact that will be
+       * exported from the compute action.
+       */
+      public fun files(files: List<String>)
+
+      /**
+       * @param files The files that you want to associate with the output artifact that will be
+       * exported from the compute action.
+       */
+      public fun files(vararg files: String)
+
+      /**
        * @param name The name of the output of an artifact, such as "My App". 
        * The output artifact name must exactly match the input artifact declared for a downstream
        * action. However, the downstream action's input artifact does not have to be the next action in
@@ -4526,6 +4749,20 @@ public open class CfnPipeline(
       private val cdkBuilder:
           software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty.Builder =
           software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty.builder()
+
+      /**
+       * @param files The files that you want to associate with the output artifact that will be
+       * exported from the compute action.
+       */
+      override fun files(files: List<String>) {
+        cdkBuilder.files(files)
+      }
+
+      /**
+       * @param files The files that you want to associate with the output artifact that will be
+       * exported from the compute action.
+       */
+      override fun files(vararg files: String): Unit = files(files.toList())
 
       /**
        * @param name The name of the output of an artifact, such as "My App". 
@@ -4549,6 +4786,14 @@ public open class CfnPipeline(
       cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.OutputArtifactProperty,
     ) : CdkObject(cdkObject),
         OutputArtifactProperty {
+      /**
+       * The files that you want to associate with the output artifact that will be exported from
+       * the compute action.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-outputartifact.html#cfn-codepipeline-pipeline-outputartifact-files)
+       */
+      override fun files(): List<String> = unwrap(this).getFiles() ?: emptyList()
+
       /**
        * The name of the output of an artifact, such as "My App".
        *
@@ -4770,10 +5015,106 @@ public open class CfnPipeline(
   }
 
   /**
+   * The retry configuration specifies automatic retry for a failed stage, along with the configured
+   * retry mode.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.codepipeline.*;
+   * RetryConfigurationProperty retryConfigurationProperty = RetryConfigurationProperty.builder()
+   * .retryMode("retryMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-retryconfiguration.html)
+   */
+  public interface RetryConfigurationProperty {
+    /**
+     * The method that you want to configure for automatic stage retry on stage failure.
+     *
+     * You can specify to retry only failed action in the stage or all actions in the stage.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-retryconfiguration.html#cfn-codepipeline-pipeline-retryconfiguration-retrymode)
+     */
+    public fun retryMode(): String? = unwrap(this).getRetryMode()
+
+    /**
+     * A builder for [RetryConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param retryMode The method that you want to configure for automatic stage retry on stage
+       * failure.
+       * You can specify to retry only failed action in the stage or all actions in the stage.
+       */
+      public fun retryMode(retryMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RetryConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RetryConfigurationProperty.builder()
+
+      /**
+       * @param retryMode The method that you want to configure for automatic stage retry on stage
+       * failure.
+       * You can specify to retry only failed action in the stage or all actions in the stage.
+       */
+      override fun retryMode(retryMode: String) {
+        cdkBuilder.retryMode(retryMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RetryConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.RetryConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        RetryConfigurationProperty {
+      /**
+       * The method that you want to configure for automatic stage retry on stage failure.
+       *
+       * You can specify to retry only failed action in the stage or all actions in the stage.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-retryconfiguration.html#cfn-codepipeline-pipeline-retryconfiguration-retrymode)
+       */
+      override fun retryMode(): String? = unwrap(this).getRetryMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RetryConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.codepipeline.CfnPipeline.RetryConfigurationProperty):
+          RetryConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RetryConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RetryConfigurationProperty):
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RetryConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.codepipeline.CfnPipeline.RetryConfigurationProperty
+    }
+  }
+
+  /**
    * Represents information about the rule to be created for an associated condition.
    *
    * An example would be creating a new rule for an entry condition, such as a rule that checks for
-   * a test result before allowing the run to enter the deployment stage.
+   * a test result before allowing the run to enter the deployment stage. For more information about
+   * conditions, see [Stage
+   * conditions](https://docs.aws.amazon.com/codepipeline/latest/userguide/stage-conditions.html) . For
+   * more information about rules, see the [AWS CodePipeline rule
+   * reference](https://docs.aws.amazon.com/codepipeline/latest/userguide/rule-reference.html) .
    *
    * Example:
    *
@@ -4817,7 +5158,7 @@ public open class CfnPipeline(
     public fun inputArtifacts(): Any? = unwrap(this).getInputArtifacts()
 
     /**
-     * The name of the rule that is created for the condition, such as CheckAllResults.
+     * The name of the rule that is created for the condition, such as `VariableCheck` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-name)
      */
@@ -4874,8 +5215,8 @@ public open class CfnPipeline(
       public fun inputArtifacts(vararg inputArtifacts: Any)
 
       /**
-       * @param name The name of the rule that is created for the condition, such as
-       * CheckAllResults.
+       * @param name The name of the rule that is created for the condition, such as `VariableCheck`
+       * .
        */
       public fun name(name: String)
 
@@ -4946,8 +5287,8 @@ public open class CfnPipeline(
           inputArtifacts(inputArtifacts.toList())
 
       /**
-       * @param name The name of the rule that is created for the condition, such as
-       * CheckAllResults.
+       * @param name The name of the rule that is created for the condition, such as `VariableCheck`
+       * .
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -5016,7 +5357,7 @@ public open class CfnPipeline(
       override fun inputArtifacts(): Any? = unwrap(this).getInputArtifacts()
 
       /**
-       * The name of the rule that is created for the condition, such as CheckAllResults.
+       * The name of the rule that is created for the condition, such as `VariableCheck` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-codepipeline-pipeline-ruledeclaration.html#cfn-codepipeline-pipeline-ruledeclaration-name)
        */
@@ -5263,6 +5604,7 @@ public open class CfnPipeline(
    * .build())
    * .name("name")
    * // the properties below are optional
+   * .commands(List.of("commands"))
    * .configuration(configuration)
    * .inputArtifacts(List.of(InputArtifactProperty.builder()
    * .name("name")
@@ -5270,7 +5612,10 @@ public open class CfnPipeline(
    * .namespace("namespace")
    * .outputArtifacts(List.of(OutputArtifactProperty.builder()
    * .name("name")
+   * // the properties below are optional
+   * .files(List.of("files"))
    * .build()))
+   * .outputVariables(List.of("outputVariables"))
    * .region("region")
    * .roleArn("roleArn")
    * .runOrder(123)
@@ -5322,6 +5667,9 @@ public open class CfnPipeline(
    * .build()))
    * .build()))
    * .result("result")
+   * .retryConfiguration(RetryConfigurationProperty.builder()
+   * .retryMode("retryMode")
+   * .build())
    * .build())
    * .onSuccess(SuccessConditionsProperty.builder()
    * .conditions(List.of(ConditionProperty.builder()

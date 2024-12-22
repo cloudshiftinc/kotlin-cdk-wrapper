@@ -15,8 +15,10 @@ import kotlin.String
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.cloudfront.*;
  * import io.cloudshiftdev.awscdk.services.iam.*;
+ * import io.cloudshiftdev.awscdk.services.kms.*;
  * DockerImage dockerImage;
  * IGrantable grantable;
+ * Key key;
  * ILocalBundling localBundling;
  * ImportSource inlineImportSource = InlineImportSource.fromAsset("path", AssetOptions.builder()
  * .assetHash("assetHash")
@@ -49,6 +51,7 @@ import kotlin.String
  * .followSymlinks(SymlinkFollowMode.NEVER)
  * .ignoreMode(IgnoreMode.GLOB)
  * .readers(List.of(grantable))
+ * .sourceKMSKey(key)
  * .build());
  * ```
  */

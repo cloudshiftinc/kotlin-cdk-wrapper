@@ -105,9 +105,13 @@ public interface BucketDeploymentProps {
   public fun destinationBucket(): IBucket
 
   /**
-   * Key prefix in the destination bucket.
+   * Key prefix in the destination bucket. Must be &lt;=104 characters.
    *
-   * Must be &lt;=104 characters
+   * If it's set with prune: true, it will only prune files with the prefix.
+   *
+   * We recommend to always configure the `destinationKeyPrefix` property. This will prevent the
+   * deployment
+   * from accidentally deleting data that wasn't uploaded by it.
    *
    * Default: "/" (unzip to root of the destination bucket)
    */
@@ -226,8 +230,22 @@ public interface BucketDeploymentProps {
   public fun metadata(): Map<String, String> = unwrap(this).getMetadata() ?: emptyMap()
 
   /**
-   * If this is set to false, files in the destination bucket that do not exist in the asset, will
-   * NOT be deleted during deployment (create/update).
+   * If set to false, the custom resource will not send back the SourceObjectKeys.
+   *
+   * This is useful when you are facing the error `Response object is too long`
+   *
+   * See https://github.com/aws/aws-cdk/issues/28579
+   *
+   * Default: true
+   */
+  public fun outputObjectKeys(): Boolean? = unwrap(this).getOutputObjectKeys()
+
+  /**
+   * By default, files in the destination bucket that don't exist in the source will be deleted when
+   * the BucketDeployment resource is created or updated.
+   *
+   * If this is set to false, files in the destination bucket that
+   * do not exist in the asset, will NOT be deleted during deployment (create/update).
    *
    * Default: true
    *
@@ -406,8 +424,13 @@ public interface BucketDeploymentProps {
     public fun destinationBucket(destinationBucket: IBucket)
 
     /**
-     * @param destinationKeyPrefix Key prefix in the destination bucket.
-     * Must be &lt;=104 characters
+     * @param destinationKeyPrefix Key prefix in the destination bucket. Must be &lt;=104
+     * characters.
+     * If it's set with prune: true, it will only prune files with the prefix.
+     *
+     * We recommend to always configure the `destinationKeyPrefix` property. This will prevent the
+     * deployment
+     * from accidentally deleting data that wasn't uploaded by it.
      */
     public fun destinationKeyPrefix(destinationKeyPrefix: String)
 
@@ -514,8 +537,19 @@ public interface BucketDeploymentProps {
     public fun metadata(metadata: Map<String, String>)
 
     /**
-     * @param prune If this is set to false, files in the destination bucket that do not exist in
-     * the asset, will NOT be deleted during deployment (create/update).
+     * @param outputObjectKeys If set to false, the custom resource will not send back the
+     * SourceObjectKeys.
+     * This is useful when you are facing the error `Response object is too long`
+     *
+     * See https://github.com/aws/aws-cdk/issues/28579
+     */
+    public fun outputObjectKeys(outputObjectKeys: Boolean)
+
+    /**
+     * @param prune By default, files in the destination bucket that don't exist in the source will
+     * be deleted when the BucketDeployment resource is created or updated.
+     * If this is set to false, files in the destination bucket that
+     * do not exist in the asset, will NOT be deleted during deployment (create/update).
      */
     public fun prune(prune: Boolean)
 
@@ -678,8 +712,13 @@ public interface BucketDeploymentProps {
     }
 
     /**
-     * @param destinationKeyPrefix Key prefix in the destination bucket.
-     * Must be &lt;=104 characters
+     * @param destinationKeyPrefix Key prefix in the destination bucket. Must be &lt;=104
+     * characters.
+     * If it's set with prune: true, it will only prune files with the prefix.
+     *
+     * We recommend to always configure the `destinationKeyPrefix` property. This will prevent the
+     * deployment
+     * from accidentally deleting data that wasn't uploaded by it.
      */
     override fun destinationKeyPrefix(destinationKeyPrefix: String) {
       cdkBuilder.destinationKeyPrefix(destinationKeyPrefix)
@@ -811,8 +850,21 @@ public interface BucketDeploymentProps {
     }
 
     /**
-     * @param prune If this is set to false, files in the destination bucket that do not exist in
-     * the asset, will NOT be deleted during deployment (create/update).
+     * @param outputObjectKeys If set to false, the custom resource will not send back the
+     * SourceObjectKeys.
+     * This is useful when you are facing the error `Response object is too long`
+     *
+     * See https://github.com/aws/aws-cdk/issues/28579
+     */
+    override fun outputObjectKeys(outputObjectKeys: Boolean) {
+      cdkBuilder.outputObjectKeys(outputObjectKeys)
+    }
+
+    /**
+     * @param prune By default, files in the destination bucket that don't exist in the source will
+     * be deleted when the BucketDeployment resource is created or updated.
+     * If this is set to false, files in the destination bucket that
+     * do not exist in the asset, will NOT be deleted during deployment (create/update).
      */
     override fun prune(prune: Boolean) {
       cdkBuilder.prune(prune)
@@ -1005,9 +1057,13 @@ public interface BucketDeploymentProps {
         unwrap(this).getDestinationBucket().let(IBucket::wrap)
 
     /**
-     * Key prefix in the destination bucket.
+     * Key prefix in the destination bucket. Must be &lt;=104 characters.
      *
-     * Must be &lt;=104 characters
+     * If it's set with prune: true, it will only prune files with the prefix.
+     *
+     * We recommend to always configure the `destinationKeyPrefix` property. This will prevent the
+     * deployment
+     * from accidentally deleting data that wasn't uploaded by it.
      *
      * Default: "/" (unzip to root of the destination bucket)
      */
@@ -1130,8 +1186,22 @@ public interface BucketDeploymentProps {
     override fun metadata(): Map<String, String> = unwrap(this).getMetadata() ?: emptyMap()
 
     /**
-     * If this is set to false, files in the destination bucket that do not exist in the asset, will
-     * NOT be deleted during deployment (create/update).
+     * If set to false, the custom resource will not send back the SourceObjectKeys.
+     *
+     * This is useful when you are facing the error `Response object is too long`
+     *
+     * See https://github.com/aws/aws-cdk/issues/28579
+     *
+     * Default: true
+     */
+    override fun outputObjectKeys(): Boolean? = unwrap(this).getOutputObjectKeys()
+
+    /**
+     * By default, files in the destination bucket that don't exist in the source will be deleted
+     * when the BucketDeployment resource is created or updated.
+     *
+     * If this is set to false, files in the destination bucket that
+     * do not exist in the asset, will NOT be deleted during deployment (create/update).
      *
      * Default: true
      *

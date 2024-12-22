@@ -278,6 +278,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .enableDockerAccess("enableDockerAccess")
  * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
  * .build())
+ * .executionRoleIdentityConfig("executionRoleIdentityConfig")
  * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
  * .domainExecutionRoleArn("domainExecutionRoleArn")
  * // the properties below are optional
@@ -293,6 +294,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .securityGroupIds(List.of("securityGroupIds"))
  * .build())
  * .kmsKeyId("kmsKeyId")
+ * .tagPropagation("tagPropagation")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -409,26 +411,26 @@ public open class CfnDomain(
   }
 
   /**
-   * A collection of settings that apply to spaces created in the domain.
+   * The default settings for shared spaces that users create in the domain.
    */
   public open fun defaultSpaceSettings(): Any? = unwrap(this).getDefaultSpaceSettings()
 
   /**
-   * A collection of settings that apply to spaces created in the domain.
+   * The default settings for shared spaces that users create in the domain.
    */
   public open fun defaultSpaceSettings(`value`: IResolvable) {
     unwrap(this).setDefaultSpaceSettings(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * A collection of settings that apply to spaces created in the domain.
+   * The default settings for shared spaces that users create in the domain.
    */
   public open fun defaultSpaceSettings(`value`: DefaultSpaceSettingsProperty) {
     unwrap(this).setDefaultSpaceSettings(`value`.let(DefaultSpaceSettingsProperty.Companion::unwrap))
   }
 
   /**
-   * A collection of settings that apply to spaces created in the domain.
+   * The default settings for shared spaces that users create in the domain.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("d8429aaee9219de4fa0172153b1dca8f882dbe27a0aeec0d1a2bf36272c2db21")
@@ -542,6 +544,20 @@ public open class CfnDomain(
   public open fun subnetIds(vararg `value`: String): Unit = subnetIds(`value`.toList())
 
   /**
+   * Indicates whether the tags added to Domain, User Profile and Space entity is propagated to all
+   * SageMaker resources.
+   */
+  public open fun tagPropagation(): String? = unwrap(this).getTagPropagation()
+
+  /**
+   * Indicates whether the tags added to Domain, User Profile and Space entity is propagated to all
+   * SageMaker resources.
+   */
+  public open fun tagPropagation(`value`: String) {
+    unwrap(this).setTagPropagation(`value`)
+  }
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -623,28 +639,37 @@ public open class CfnDomain(
     public fun authMode(authMode: String)
 
     /**
-     * A collection of settings that apply to spaces created in the domain.
+     * The default settings for shared spaces that users create in the domain.
+     *
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain. 
      */
     public fun defaultSpaceSettings(defaultSpaceSettings: IResolvable)
 
     /**
-     * A collection of settings that apply to spaces created in the domain.
+     * The default settings for shared spaces that users create in the domain.
+     *
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain. 
      */
     public fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty)
 
     /**
-     * A collection of settings that apply to spaces created in the domain.
+     * The default settings for shared spaces that users create in the domain.
+     *
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -763,6 +788,16 @@ public open class CfnDomain(
     public fun subnetIds(vararg subnetIds: String)
 
     /**
+     * Indicates whether the tags added to Domain, User Profile and Space entity is propagated to
+     * all SageMaker resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-tagpropagation)
+     * @param tagPropagation Indicates whether the tags added to Domain, User Profile and Space
+     * entity is propagated to all SageMaker resources. 
+     */
+    public fun tagPropagation(tagPropagation: String)
+
+    /**
      * Tags to associated with the Domain.
      *
      * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
@@ -863,10 +898,13 @@ public open class CfnDomain(
     }
 
     /**
-     * A collection of settings that apply to spaces created in the domain.
+     * The default settings for shared spaces that users create in the domain.
+     *
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain. 
      */
     override fun defaultSpaceSettings(defaultSpaceSettings: IResolvable) {
@@ -874,10 +912,13 @@ public open class CfnDomain(
     }
 
     /**
-     * A collection of settings that apply to spaces created in the domain.
+     * The default settings for shared spaces that users create in the domain.
+     *
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain. 
      */
     override fun defaultSpaceSettings(defaultSpaceSettings: DefaultSpaceSettingsProperty) {
@@ -885,10 +926,13 @@ public open class CfnDomain(
     }
 
     /**
-     * A collection of settings that apply to spaces created in the domain.
+     * The default settings for shared spaces that users create in the domain.
+     *
+     * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+     * spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-defaultspacesettings)
-     * @param defaultSpaceSettings A collection of settings that apply to spaces created in the
+     * @param defaultSpaceSettings The default settings for shared spaces that users create in the
      * domain. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -1022,6 +1066,18 @@ public open class CfnDomain(
      * @param subnetIds The VPC subnets that Studio uses for communication. 
      */
     override fun subnetIds(vararg subnetIds: String): Unit = subnetIds(subnetIds.toList())
+
+    /**
+     * Indicates whether the tags added to Domain, User Profile and Space entity is propagated to
+     * all SageMaker resources.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-domain.html#cfn-sagemaker-domain-tagpropagation)
+     * @param tagPropagation Indicates whether the tags added to Domain, User Profile and Space
+     * entity is propagated to all SageMaker resources. 
+     */
+    override fun tagPropagation(tagPropagation: String) {
+      cdkBuilder.tagPropagation(tagPropagation)
+    }
 
     /**
      * Tags to associated with the Domain.
@@ -2086,7 +2142,10 @@ public open class CfnDomain(
   }
 
   /**
-   * A collection of settings that apply to spaces created in the domain.
+   * The default settings for shared spaces that users create in the domain.
+   *
+   * SageMaker applies these settings only to shared spaces. It doesn't apply them to private
+   * spaces.
    *
    * Example:
    *
@@ -2875,6 +2934,7 @@ public open class CfnDomain(
    * .enableDockerAccess("enableDockerAccess")
    * .vpcOnlyTrustedAccounts(List.of("vpcOnlyTrustedAccounts"))
    * .build())
+   * .executionRoleIdentityConfig("executionRoleIdentityConfig")
    * .rStudioServerProDomainSettings(RStudioServerProDomainSettingsProperty.builder()
    * .domainExecutionRoleArn("domainExecutionRoleArn")
    * // the properties below are optional
@@ -2900,6 +2960,17 @@ public open class CfnDomain(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-domainsettings.html#cfn-sagemaker-domain-domainsettings-dockersettings)
      */
     public fun dockerSettings(): Any? = unwrap(this).getDockerSettings()
+
+    /**
+     * The configuration for attaching a SageMaker user profile name to the execution role as a
+     * [sts:SourceIdentity
+     * key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_monitor.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-domainsettings.html#cfn-sagemaker-domain-domainsettings-executionroleidentityconfig)
+     */
+    public fun executionRoleIdentityConfig(): String? =
+        unwrap(this).getExecutionRoleIdentityConfig()
 
     /**
      * A collection of settings that configure the `RStudioServerPro` Domain-level app.
@@ -2941,6 +3012,14 @@ public open class CfnDomain(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("93ef0e9d4e8ab8c25f1dacd8a12798de73fea998b847b67fee5327f6c7af6f6e")
       public fun dockerSettings(dockerSettings: DockerSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param executionRoleIdentityConfig The configuration for attaching a SageMaker user profile
+       * name to the execution role as a [sts:SourceIdentity
+       * key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_monitor.html)
+       * .
+       */
+      public fun executionRoleIdentityConfig(executionRoleIdentityConfig: String)
 
       /**
        * @param rStudioServerProDomainSettings A collection of settings that configure the
@@ -3008,6 +3087,16 @@ public open class CfnDomain(
           dockerSettings(DockerSettingsProperty(dockerSettings))
 
       /**
+       * @param executionRoleIdentityConfig The configuration for attaching a SageMaker user profile
+       * name to the execution role as a [sts:SourceIdentity
+       * key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_monitor.html)
+       * .
+       */
+      override fun executionRoleIdentityConfig(executionRoleIdentityConfig: String) {
+        cdkBuilder.executionRoleIdentityConfig(executionRoleIdentityConfig)
+      }
+
+      /**
        * @param rStudioServerProDomainSettings A collection of settings that configure the
        * `RStudioServerPro` Domain-level app.
        */
@@ -3064,6 +3153,17 @@ public open class CfnDomain(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-domainsettings.html#cfn-sagemaker-domain-domainsettings-dockersettings)
        */
       override fun dockerSettings(): Any? = unwrap(this).getDockerSettings()
+
+      /**
+       * The configuration for attaching a SageMaker user profile name to the execution role as a
+       * [sts:SourceIdentity
+       * key](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_monitor.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-domainsettings.html#cfn-sagemaker-domain-domainsettings-executionroleidentityconfig)
+       */
+      override fun executionRoleIdentityConfig(): String? =
+          unwrap(this).getExecutionRoleIdentityConfig()
 
       /**
        * A collection of settings that configure the `RStudioServerPro` Domain-level app.
@@ -5412,6 +5512,9 @@ public open class CfnDomain(
     /**
      * The Code Editor application settings.
      *
+     * SageMaker applies these settings only to private spaces that the user creates in the domain.
+     * SageMaker doesn't apply these settings to shared spaces.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-codeeditorappsettings)
      */
     public fun codeEditorAppSettings(): Any? = unwrap(this).getCodeEditorAppSettings()
@@ -5421,12 +5524,18 @@ public open class CfnDomain(
      *
      * Permitted users can access this file system in Amazon SageMaker Studio.
      *
+     * SageMaker applies these settings only to private spaces that the user creates in the domain.
+     * SageMaker doesn't apply these settings to shared spaces.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-customfilesystemconfigs)
      */
     public fun customFileSystemConfigs(): Any? = unwrap(this).getCustomFileSystemConfigs()
 
     /**
      * Details about the POSIX identity that is used for file system operations.
+     *
+     * SageMaker applies these settings only to private spaces that the user creates in the domain.
+     * SageMaker doesn't apply these settings to shared spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-customposixuserconfig)
      */
@@ -5447,12 +5556,18 @@ public open class CfnDomain(
     /**
      * The execution role for the user.
      *
+     * SageMaker applies this setting only to private spaces that the user creates in the domain.
+     * SageMaker doesn't apply this setting to shared spaces.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-executionrole)
      */
     public fun executionRole(): String
 
     /**
      * The settings for the JupyterLab application.
+     *
+     * SageMaker applies these settings only to private spaces that the user creates in the domain.
+     * SageMaker doesn't apply these settings to shared spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-jupyterlabappsettings)
      */
@@ -5500,6 +5615,9 @@ public open class CfnDomain(
      * Therefore, the number of security groups that you can specify is one less than the maximum
      * number shown.
      *
+     * SageMaker applies these settings only to private spaces that the user creates in the domain.
+     * SageMaker doesn't apply these settings to shared spaces.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-securitygroups)
      */
     public fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
@@ -5513,6 +5631,9 @@ public open class CfnDomain(
 
     /**
      * The storage settings for a space.
+     *
+     * SageMaker applies these settings only to private spaces that the user creates in the domain.
+     * SageMaker doesn't apply these settings to shared spaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-spacestoragesettings)
      */
@@ -5545,16 +5666,22 @@ public open class CfnDomain(
     public interface Builder {
       /**
        * @param codeEditorAppSettings The Code Editor application settings.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun codeEditorAppSettings(codeEditorAppSettings: IResolvable)
 
       /**
        * @param codeEditorAppSettings The Code Editor application settings.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty)
 
       /**
        * @param codeEditorAppSettings The Code Editor application settings.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4efe1cbcf116b00bf28ee2dea6f2e7016d8969fc73b002a063cb1fa3d4de7a47")
@@ -5565,6 +5692,9 @@ public open class CfnDomain(
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
        * Permitted users can access this file system in Amazon SageMaker Studio.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun customFileSystemConfigs(customFileSystemConfigs: IResolvable)
 
@@ -5572,6 +5702,9 @@ public open class CfnDomain(
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
        * Permitted users can access this file system in Amazon SageMaker Studio.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun customFileSystemConfigs(customFileSystemConfigs: List<Any>)
 
@@ -5579,24 +5712,33 @@ public open class CfnDomain(
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
        * Permitted users can access this file system in Amazon SageMaker Studio.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun customFileSystemConfigs(vararg customFileSystemConfigs: Any)
 
       /**
        * @param customPosixUserConfig Details about the POSIX identity that is used for file system
        * operations.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun customPosixUserConfig(customPosixUserConfig: IResolvable)
 
       /**
        * @param customPosixUserConfig Details about the POSIX identity that is used for file system
        * operations.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty)
 
       /**
        * @param customPosixUserConfig Details about the POSIX identity that is used for file system
        * operations.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7bee93cda65afaeafe67b14506c41615fd81e0789bb79e798e5b9288ffc9fa40")
@@ -5614,21 +5756,29 @@ public open class CfnDomain(
 
       /**
        * @param executionRole The execution role for the user. 
+       * SageMaker applies this setting only to private spaces that the user creates in the domain.
+       * SageMaker doesn't apply this setting to shared spaces.
        */
       public fun executionRole(executionRole: String)
 
       /**
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable)
 
       /**
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty)
 
       /**
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f3b69c867059c09728cf81b6b719b840463a94d379ae6f52619fa454c24c7d4")
@@ -5728,6 +5878,9 @@ public open class CfnDomain(
        * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
        * Therefore, the number of security groups that you can specify is one less than the maximum
        * number shown.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun securityGroups(securityGroups: List<String>)
 
@@ -5743,6 +5896,9 @@ public open class CfnDomain(
        * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
        * Therefore, the number of security groups that you can specify is one less than the maximum
        * number shown.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun securityGroups(vararg securityGroups: String)
 
@@ -5765,16 +5921,22 @@ public open class CfnDomain(
 
       /**
        * @param spaceStorageSettings The storage settings for a space.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun spaceStorageSettings(spaceStorageSettings: IResolvable)
 
       /**
        * @param spaceStorageSettings The storage settings for a space.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       public fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty)
 
       /**
        * @param spaceStorageSettings The storage settings for a space.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a3aae4112a7de18e3c56555dbe10493634a6f69dfe8f103aab3796ca359b6f1")
@@ -5820,6 +5982,8 @@ public open class CfnDomain(
 
       /**
        * @param codeEditorAppSettings The Code Editor application settings.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun codeEditorAppSettings(codeEditorAppSettings: IResolvable) {
         cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(IResolvable.Companion::unwrap))
@@ -5827,6 +5991,8 @@ public open class CfnDomain(
 
       /**
        * @param codeEditorAppSettings The Code Editor application settings.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun codeEditorAppSettings(codeEditorAppSettings: CodeEditorAppSettingsProperty) {
         cdkBuilder.codeEditorAppSettings(codeEditorAppSettings.let(CodeEditorAppSettingsProperty.Companion::unwrap))
@@ -5834,6 +6000,8 @@ public open class CfnDomain(
 
       /**
        * @param codeEditorAppSettings The Code Editor application settings.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4efe1cbcf116b00bf28ee2dea6f2e7016d8969fc73b002a063cb1fa3d4de7a47")
@@ -5845,6 +6013,9 @@ public open class CfnDomain(
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
        * Permitted users can access this file system in Amazon SageMaker Studio.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun customFileSystemConfigs(customFileSystemConfigs: IResolvable) {
         cdkBuilder.customFileSystemConfigs(customFileSystemConfigs.let(IResolvable.Companion::unwrap))
@@ -5854,6 +6025,9 @@ public open class CfnDomain(
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
        * Permitted users can access this file system in Amazon SageMaker Studio.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun customFileSystemConfigs(customFileSystemConfigs: List<Any>) {
         cdkBuilder.customFileSystemConfigs(customFileSystemConfigs.map{CdkObjectWrappers.unwrap(it)})
@@ -5863,6 +6037,9 @@ public open class CfnDomain(
        * @param customFileSystemConfigs The settings for assigning a custom file system to a user
        * profile.
        * Permitted users can access this file system in Amazon SageMaker Studio.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun customFileSystemConfigs(vararg customFileSystemConfigs: Any): Unit =
           customFileSystemConfigs(customFileSystemConfigs.toList())
@@ -5870,6 +6047,8 @@ public open class CfnDomain(
       /**
        * @param customPosixUserConfig Details about the POSIX identity that is used for file system
        * operations.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun customPosixUserConfig(customPosixUserConfig: IResolvable) {
         cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(IResolvable.Companion::unwrap))
@@ -5878,6 +6057,8 @@ public open class CfnDomain(
       /**
        * @param customPosixUserConfig Details about the POSIX identity that is used for file system
        * operations.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun customPosixUserConfig(customPosixUserConfig: CustomPosixUserConfigProperty) {
         cdkBuilder.customPosixUserConfig(customPosixUserConfig.let(CustomPosixUserConfigProperty.Companion::unwrap))
@@ -5886,6 +6067,8 @@ public open class CfnDomain(
       /**
        * @param customPosixUserConfig Details about the POSIX identity that is used for file system
        * operations.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7bee93cda65afaeafe67b14506c41615fd81e0789bb79e798e5b9288ffc9fa40")
@@ -5906,6 +6089,8 @@ public open class CfnDomain(
 
       /**
        * @param executionRole The execution role for the user. 
+       * SageMaker applies this setting only to private spaces that the user creates in the domain.
+       * SageMaker doesn't apply this setting to shared spaces.
        */
       override fun executionRole(executionRole: String) {
         cdkBuilder.executionRole(executionRole)
@@ -5913,6 +6098,8 @@ public open class CfnDomain(
 
       /**
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun jupyterLabAppSettings(jupyterLabAppSettings: IResolvable) {
         cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(IResolvable.Companion::unwrap))
@@ -5920,6 +6107,8 @@ public open class CfnDomain(
 
       /**
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun jupyterLabAppSettings(jupyterLabAppSettings: JupyterLabAppSettingsProperty) {
         cdkBuilder.jupyterLabAppSettings(jupyterLabAppSettings.let(JupyterLabAppSettingsProperty.Companion::unwrap))
@@ -5927,6 +6116,8 @@ public open class CfnDomain(
 
       /**
        * @param jupyterLabAppSettings The settings for the JupyterLab application.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2f3b69c867059c09728cf81b6b719b840463a94d379ae6f52619fa454c24c7d4")
@@ -6050,6 +6241,9 @@ public open class CfnDomain(
        * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
        * Therefore, the number of security groups that you can specify is one less than the maximum
        * number shown.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun securityGroups(securityGroups: List<String>) {
         cdkBuilder.securityGroups(securityGroups)
@@ -6067,6 +6261,9 @@ public open class CfnDomain(
        * Amazon SageMaker adds a security group to allow NFS traffic from Amazon SageMaker Studio.
        * Therefore, the number of security groups that you can specify is one less than the maximum
        * number shown.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun securityGroups(vararg securityGroups: String): Unit =
           securityGroups(securityGroups.toList())
@@ -6095,6 +6292,8 @@ public open class CfnDomain(
 
       /**
        * @param spaceStorageSettings The storage settings for a space.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun spaceStorageSettings(spaceStorageSettings: IResolvable) {
         cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(IResolvable.Companion::unwrap))
@@ -6102,6 +6301,8 @@ public open class CfnDomain(
 
       /**
        * @param spaceStorageSettings The storage settings for a space.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       override fun spaceStorageSettings(spaceStorageSettings: DefaultSpaceStorageSettingsProperty) {
         cdkBuilder.spaceStorageSettings(spaceStorageSettings.let(DefaultSpaceStorageSettingsProperty.Companion::unwrap))
@@ -6109,6 +6310,8 @@ public open class CfnDomain(
 
       /**
        * @param spaceStorageSettings The storage settings for a space.
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2a3aae4112a7de18e3c56555dbe10493634a6f69dfe8f103aab3796ca359b6f1")
@@ -6166,6 +6369,9 @@ public open class CfnDomain(
       /**
        * The Code Editor application settings.
        *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-codeeditorappsettings)
        */
       override fun codeEditorAppSettings(): Any? = unwrap(this).getCodeEditorAppSettings()
@@ -6175,12 +6381,18 @@ public open class CfnDomain(
        *
        * Permitted users can access this file system in Amazon SageMaker Studio.
        *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-customfilesystemconfigs)
        */
       override fun customFileSystemConfigs(): Any? = unwrap(this).getCustomFileSystemConfigs()
 
       /**
        * Details about the POSIX identity that is used for file system operations.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-customposixuserconfig)
        */
@@ -6201,12 +6413,18 @@ public open class CfnDomain(
       /**
        * The execution role for the user.
        *
+       * SageMaker applies this setting only to private spaces that the user creates in the domain.
+       * SageMaker doesn't apply this setting to shared spaces.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-executionrole)
        */
       override fun executionRole(): String = unwrap(this).getExecutionRole()
 
       /**
        * The settings for the JupyterLab application.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-jupyterlabappsettings)
        */
@@ -6255,6 +6473,9 @@ public open class CfnDomain(
        * Therefore, the number of security groups that you can specify is one less than the maximum
        * number shown.
        *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-securitygroups)
        */
       override fun securityGroups(): List<String> = unwrap(this).getSecurityGroups() ?: emptyList()
@@ -6268,6 +6489,9 @@ public open class CfnDomain(
 
       /**
        * The storage settings for a space.
+       *
+       * SageMaker applies these settings only to private spaces that the user creates in the
+       * domain. SageMaker doesn't apply these settings to shared spaces.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-domain-usersettings.html#cfn-sagemaker-domain-usersettings-spacestoragesettings)
        */

@@ -21,9 +21,8 @@ import kotlin.jvm.JvmName
  * .vpc(vpc)
  * .service(new
  * InterfaceVpcEndpointService("com.amazonaws.vpce.us-east-1.vpce-svc-uuddlrlrbastrtsvc", 443))
- * // Choose which availability zones to place the VPC endpoint in, based on
- * // available AZs
  * .subnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PRIVATE_ISOLATED)
  * .availabilityZones(List.of("us-east-1a", "us-east-1c"))
  * .build())
  * .build();

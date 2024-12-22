@@ -25,8 +25,22 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.codebuild.*;
  * CfnFleetProps cfnFleetProps = CfnFleetProps.builder()
  * .baseCapacity(123)
+ * .computeConfiguration(ComputeConfigurationProperty.builder()
+ * .disk(123)
+ * .machineType("machineType")
+ * .memory(123)
+ * .vCpu(123)
+ * .build())
  * .computeType("computeType")
  * .environmentType("environmentType")
+ * .fleetProxyConfiguration(ProxyConfigurationProperty.builder()
+ * .defaultBehavior("defaultBehavior")
+ * .orderedProxyRules(List.of(FleetProxyRuleProperty.builder()
+ * .effect("effect")
+ * .entities(List.of("entities"))
+ * .type("type")
+ * .build()))
+ * .build())
  * .fleetServiceRole("fleetServiceRole")
  * .fleetVpcConfig(VpcConfigProperty.builder()
  * .securityGroupIds(List.of("securityGroupIds"))
@@ -36,6 +50,14 @@ import kotlin.jvm.JvmName
  * .imageId("imageId")
  * .name("name")
  * .overflowBehavior("overflowBehavior")
+ * .scalingConfiguration(ScalingConfigurationInputProperty.builder()
+ * .maxCapacity(123)
+ * .scalingType("scalingType")
+ * .targetTrackingScalingConfigs(List.of(TargetTrackingScalingConfigurationProperty.builder()
+ * .metricType("metricType")
+ * .targetValue(123)
+ * .build()))
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -55,59 +77,96 @@ public interface CfnFleetProps {
   public fun baseCapacity(): Number? = unwrap(this).getBaseCapacity()
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
+   * The compute configuration of the compute fleet.
    *
-   * Information about the compute resources the compute fleet uses. Available values include:
+   * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
    *
-   * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
-   * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-   * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
+   */
+  public fun computeConfiguration(): Any? = unwrap(this).getComputeConfiguration()
+
+  /**
+   * Information about the compute resources the compute fleet uses. Available values include:.
+   *
+   * * `ATTRIBUTE_BASED_COMPUTE` : Specify the amount of vCPUs, memory, disk space, and the type of
+   * machine.
+   *
+   *
+   * If you use `ATTRIBUTE_BASED_COMPUTE` , you must define your attributes by using
+   * `computeConfiguration` . AWS CodeBuild will select the cheapest instance that satisfies your
+   * specified attributes. For more information, see [Reserved capacity environment
+   * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+   * in the *AWS CodeBuild User Guide* .
+   *
+   *
+   * * `BUILD_GENERAL1_SMALL` : Use up to 4 GiB memory and 2 vCPUs for builds.
+   * * `BUILD_GENERAL1_MEDIUM` : Use up to 8 GiB memory and 4 vCPUs for builds.
+   * * `BUILD_GENERAL1_LARGE` : Use up to 16 GiB memory and 8 vCPUs for builds, depending on your
    * environment type.
-   * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on your
+   * * `BUILD_GENERAL1_XLARGE` : Use up to 72 GiB memory and 36 vCPUs for builds, depending on your
    * environment type.
-   * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage for
+   * * `BUILD_GENERAL1_2XLARGE` : Use up to 144 GiB memory, 72 vCPUs, and 824 GB of SSD storage for
    * builds. This compute type supports Docker images up to 100 GB uncompressed.
+   * * `BUILD_LAMBDA_1GB` : Use up to 1 GiB memory for builds. Only available for environment type
+   * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+   * * `BUILD_LAMBDA_2GB` : Use up to 2 GiB memory for builds. Only available for environment type
+   * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+   * * `BUILD_LAMBDA_4GB` : Use up to 4 GiB memory for builds. Only available for environment type
+   * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+   * * `BUILD_LAMBDA_8GB` : Use up to 8 GiB memory for builds. Only available for environment type
+   * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+   * * `BUILD_LAMBDA_10GB` : Use up to 10 GiB memory for builds. Only available for environment type
+   * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
    *
    * If you use `BUILD_GENERAL1_SMALL` :
    *
-   * * For environment type `LINUX_CONTAINER` , you can use up to 3 GB memory and 2 vCPUs for
+   * * For environment type `LINUX_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs for
    * builds.
-   * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GB memory, 4 vCPUs, and 1
+   * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GiB memory, 4 vCPUs, and 1
    * NVIDIA A10G Tensor Core GPU for builds.
-   * * For environment type `ARM_CONTAINER` , you can use up to 4 GB memory and 2 vCPUs on ARM-based
-   * processors for builds.
+   * * For environment type `ARM_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs on
+   * ARM-based processors for builds.
    *
    * If you use `BUILD_GENERAL1_LARGE` :
    *
-   * * For environment type `LINUX_CONTAINER` , you can use up to 15 GB memory and 8 vCPUs for
+   * * For environment type `LINUX_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs for
    * builds.
-   * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GB memory, 32 vCPUs, and 4
-   * NVIDIA Tesla V100 GPUs for builds.
-   * * For environment type `ARM_CONTAINER` , you can use up to 16 GB memory and 8 vCPUs on
+   * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GiB memory, 32 vCPUs, and
+   * 4 NVIDIA Tesla V100 GPUs for builds.
+   * * For environment type `ARM_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs on
    * ARM-based processors for builds.
    *
-   * For more information, see [Build environment compute
-   * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html) in
-   * the *AWS CodeBuild User Guide.*
+   * For more information, see [On-demand environment
+   * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment.types)
+   * in the *AWS CodeBuild User Guide.*
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computetype)
    */
   public fun computeType(): String? = unwrap(this).getComputeType()
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
-   *
    * The environment type of the compute fleet.
    *
    * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
    * East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia
    * Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).
+   * * The environment type `ARM_EC2` is available only in regions US East (N. Virginia), US East
+   * (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+   * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
    * * The environment type `LINUX_CONTAINER` is available only in regions US East (N. Virginia), US
    * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+   * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
+   * * The environment type `LINUX_EC2` is available only in regions US East (N. Virginia), US East
+   * (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
    * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
    * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
    * Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo),
    * and Asia Pacific (Sydney).
+   * * The environment type `MAC_ARM` is available only in regions US East (Ohio), US East (N.
+   * Virginia), US West (Oregon), Europe (Frankfurt), and Asia Pacific (Sydney).
+   * * The environment type `WINDOWS_EC2` is available only in regions US East (N. Virginia), US
+   * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+   * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
    * * The environment type `WINDOWS_SERVER_2019_CONTAINER` is available only in regions US East (N.
    * Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo), Asia
    * Pacific (Mumbai) and EU (Ireland).
@@ -125,6 +184,14 @@ public interface CfnFleetProps {
   public fun environmentType(): String? = unwrap(this).getEnvironmentType()
 
   /**
+   * Information about the proxy configurations that apply network access control to your reserved
+   * capacity instances.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetproxyconfiguration)
+   */
+  public fun fleetProxyConfiguration(): Any? = unwrap(this).getFleetProxyConfiguration()
+
+  /**
    * The service role associated with the compute fleet.
    *
    * For more information, see [Allow a user to add a permission policy for a fleet service
@@ -136,8 +203,6 @@ public interface CfnFleetProps {
   public fun fleetServiceRole(): String? = unwrap(this).getFleetServiceRole()
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
-   *
    * Information about the VPC configuration that AWS CodeBuild accesses.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
@@ -145,8 +210,6 @@ public interface CfnFleetProps {
   public fun fleetVpcConfig(): Any? = unwrap(this).getFleetVpcConfig()
 
   /**
-   * Updating this field is not allowed for `MAC_ARM` .
-   *
    * The Amazon Machine Image (AMI) of the compute fleet.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-imageid)
@@ -181,6 +244,13 @@ public interface CfnFleetProps {
   public fun overflowBehavior(): String? = unwrap(this).getOverflowBehavior()
 
   /**
+   * The scaling configuration of the compute fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-scalingconfiguration)
+   */
+  public fun scalingConfiguration(): Any? = unwrap(this).getScalingConfiguration()
+
+  /**
    * A list of tag key and value pairs associated with this compute fleet.
    *
    * These tags are available for use by AWS services that support AWS CodeBuild compute fleet tags.
@@ -201,56 +271,106 @@ public interface CfnFleetProps {
     public fun baseCapacity(baseCapacity: Number)
 
     /**
-     * @param computeType Updating this field is not allowed for `MAC_ARM` .
-     * Information about the compute resources the compute fleet uses. Available values include:
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     */
+    public fun computeConfiguration(computeConfiguration: IResolvable)
+
+    /**
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     */
+    public fun computeConfiguration(computeConfiguration: CfnFleet.ComputeConfigurationProperty)
+
+    /**
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eef64696e9e535b61b2ca5b72ad98eff19cde3053d2afa5324d2b74b708e5ce3")
+    public
+        fun computeConfiguration(computeConfiguration: CfnFleet.ComputeConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param computeType Information about the compute resources the compute fleet uses. Available
+     * values include:.
+     * * `ATTRIBUTE_BASED_COMPUTE` : Specify the amount of vCPUs, memory, disk space, and the type
+     * of machine.
      *
-     * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
-     * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+     *
+     * If you use `ATTRIBUTE_BASED_COMPUTE` , you must define your attributes by using
+     * `computeConfiguration` . AWS CodeBuild will select the cheapest instance that satisfies your
+     * specified attributes. For more information, see [Reserved capacity environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     * in the *AWS CodeBuild User Guide* .
+     *
+     *
+     * * `BUILD_GENERAL1_SMALL` : Use up to 4 GiB memory and 2 vCPUs for builds.
+     * * `BUILD_GENERAL1_MEDIUM` : Use up to 8 GiB memory and 4 vCPUs for builds.
+     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GiB memory and 8 vCPUs for builds, depending on your
      * environment type.
-     * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on your
-     * environment type.
-     * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage for
-     * builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_GENERAL1_XLARGE` : Use up to 72 GiB memory and 36 vCPUs for builds, depending on
+     * your environment type.
+     * * `BUILD_GENERAL1_2XLARGE` : Use up to 144 GiB memory, 72 vCPUs, and 824 GB of SSD storage
+     * for builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_LAMBDA_1GB` : Use up to 1 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_2GB` : Use up to 2 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_4GB` : Use up to 4 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_8GB` : Use up to 8 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_10GB` : Use up to 10 GiB memory for builds. Only available for environment
+     * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
      *
      * If you use `BUILD_GENERAL1_SMALL` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 3 GB memory and 2 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GB memory, 4 vCPUs, and 1
-     * NVIDIA A10G Tensor Core GPU for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 4 GB memory and 2 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GiB memory, 4 vCPUs, and
+     * 1 NVIDIA A10G Tensor Core GPU for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs on
      * ARM-based processors for builds.
      *
      * If you use `BUILD_GENERAL1_LARGE` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 15 GB memory and 8 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GB memory, 32 vCPUs, and
-     * 4 NVIDIA Tesla V100 GPUs for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 16 GB memory and 8 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GiB memory, 32 vCPUs,
+     * and 4 NVIDIA Tesla V100 GPUs for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs on
      * ARM-based processors for builds.
      *
-     * For more information, see [Build environment compute
-     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+     * For more information, see [On-demand environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment.types)
      * in the *AWS CodeBuild User Guide.*
      */
     public fun computeType(computeType: String)
 
     /**
-     * @param environmentType Updating this field is not allowed for `MAC_ARM` .
-     * The environment type of the compute fleet.
-     *
+     * @param environmentType The environment type of the compute fleet.
      * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
      * East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).
+     * * The environment type `ARM_EC2` is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_CONTAINER` is available only in regions US East (N. Virginia),
      * US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific
      * (Mumbai).
+     * * The environment type `LINUX_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
      * Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo),
      * and Asia Pacific (Sydney).
+     * * The environment type `MAC_ARM` is available only in regions US East (Ohio), US East (N.
+     * Virginia), US West (Oregon), Europe (Frankfurt), and Asia Pacific (Sydney).
+     * * The environment type `WINDOWS_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `WINDOWS_SERVER_2019_CONTAINER` is available only in regions US East
      * (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo),
      * Asia Pacific (Mumbai) and EU (Ireland).
@@ -266,6 +386,27 @@ public interface CfnFleetProps {
     public fun environmentType(environmentType: String)
 
     /**
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances.
+     */
+    public fun fleetProxyConfiguration(fleetProxyConfiguration: IResolvable)
+
+    /**
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances.
+     */
+    public fun fleetProxyConfiguration(fleetProxyConfiguration: CfnFleet.ProxyConfigurationProperty)
+
+    /**
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4411483786b1ab46d2a83e0409335743763f573c1a4d016eb9bc44fc0c2d8c2a")
+    public
+        fun fleetProxyConfiguration(fleetProxyConfiguration: CfnFleet.ProxyConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param fleetServiceRole The service role associated with the compute fleet.
      * For more information, see [Allow a user to add a permission policy for a fleet service
      * role](https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html)
@@ -274,28 +415,24 @@ public interface CfnFleetProps {
     public fun fleetServiceRole(fleetServiceRole: String)
 
     /**
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` .
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses.
      */
     public fun fleetVpcConfig(fleetVpcConfig: IResolvable)
 
     /**
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` .
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses.
      */
     public fun fleetVpcConfig(fleetVpcConfig: CfnFleet.VpcConfigProperty)
 
     /**
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` .
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96864873899211179322b87b275320a614a489c634c0f5bb1179b4e38eb01619")
     public fun fleetVpcConfig(fleetVpcConfig: CfnFleet.VpcConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param imageId Updating this field is not allowed for `MAC_ARM` .
-     * The Amazon Machine Image (AMI) of the compute fleet.
+     * @param imageId The Amazon Machine Image (AMI) of the compute fleet.
      */
     public fun imageId(imageId: String)
 
@@ -319,6 +456,25 @@ public interface CfnFleetProps {
      * .
      */
     public fun overflowBehavior(overflowBehavior: String)
+
+    /**
+     * @param scalingConfiguration The scaling configuration of the compute fleet.
+     */
+    public fun scalingConfiguration(scalingConfiguration: IResolvable)
+
+    /**
+     * @param scalingConfiguration The scaling configuration of the compute fleet.
+     */
+    public
+        fun scalingConfiguration(scalingConfiguration: CfnFleet.ScalingConfigurationInputProperty)
+
+    /**
+     * @param scalingConfiguration The scaling configuration of the compute fleet.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("34a97e69de5a6087977ada5768cf0bd9e4650196f1e22952b2df0bff82b9ee46")
+    public
+        fun scalingConfiguration(scalingConfiguration: CfnFleet.ScalingConfigurationInputProperty.Builder.() -> Unit)
 
     /**
      * @param tags A list of tag key and value pairs associated with this compute fleet.
@@ -348,38 +504,84 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param computeType Updating this field is not allowed for `MAC_ARM` .
-     * Information about the compute resources the compute fleet uses. Available values include:
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     */
+    override fun computeConfiguration(computeConfiguration: IResolvable) {
+      cdkBuilder.computeConfiguration(computeConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     */
+    override fun computeConfiguration(computeConfiguration: CfnFleet.ComputeConfigurationProperty) {
+      cdkBuilder.computeConfiguration(computeConfiguration.let(CfnFleet.ComputeConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param computeConfiguration The compute configuration of the compute fleet.
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eef64696e9e535b61b2ca5b72ad98eff19cde3053d2afa5324d2b74b708e5ce3")
+    override
+        fun computeConfiguration(computeConfiguration: CfnFleet.ComputeConfigurationProperty.Builder.() -> Unit):
+        Unit = computeConfiguration(CfnFleet.ComputeConfigurationProperty(computeConfiguration))
+
+    /**
+     * @param computeType Information about the compute resources the compute fleet uses. Available
+     * values include:.
+     * * `ATTRIBUTE_BASED_COMPUTE` : Specify the amount of vCPUs, memory, disk space, and the type
+     * of machine.
      *
-     * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
-     * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+     *
+     * If you use `ATTRIBUTE_BASED_COMPUTE` , you must define your attributes by using
+     * `computeConfiguration` . AWS CodeBuild will select the cheapest instance that satisfies your
+     * specified attributes. For more information, see [Reserved capacity environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     * in the *AWS CodeBuild User Guide* .
+     *
+     *
+     * * `BUILD_GENERAL1_SMALL` : Use up to 4 GiB memory and 2 vCPUs for builds.
+     * * `BUILD_GENERAL1_MEDIUM` : Use up to 8 GiB memory and 4 vCPUs for builds.
+     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GiB memory and 8 vCPUs for builds, depending on your
      * environment type.
-     * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on your
-     * environment type.
-     * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage for
-     * builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_GENERAL1_XLARGE` : Use up to 72 GiB memory and 36 vCPUs for builds, depending on
+     * your environment type.
+     * * `BUILD_GENERAL1_2XLARGE` : Use up to 144 GiB memory, 72 vCPUs, and 824 GB of SSD storage
+     * for builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_LAMBDA_1GB` : Use up to 1 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_2GB` : Use up to 2 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_4GB` : Use up to 4 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_8GB` : Use up to 8 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_10GB` : Use up to 10 GiB memory for builds. Only available for environment
+     * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
      *
      * If you use `BUILD_GENERAL1_SMALL` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 3 GB memory and 2 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GB memory, 4 vCPUs, and 1
-     * NVIDIA A10G Tensor Core GPU for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 4 GB memory and 2 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GiB memory, 4 vCPUs, and
+     * 1 NVIDIA A10G Tensor Core GPU for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs on
      * ARM-based processors for builds.
      *
      * If you use `BUILD_GENERAL1_LARGE` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 15 GB memory and 8 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GB memory, 32 vCPUs, and
-     * 4 NVIDIA Tesla V100 GPUs for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 16 GB memory and 8 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GiB memory, 32 vCPUs,
+     * and 4 NVIDIA Tesla V100 GPUs for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs on
      * ARM-based processors for builds.
      *
-     * For more information, see [Build environment compute
-     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+     * For more information, see [On-demand environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment.types)
      * in the *AWS CodeBuild User Guide.*
      */
     override fun computeType(computeType: String) {
@@ -387,19 +589,28 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param environmentType Updating this field is not allowed for `MAC_ARM` .
-     * The environment type of the compute fleet.
-     *
+     * @param environmentType The environment type of the compute fleet.
      * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
      * East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).
+     * * The environment type `ARM_EC2` is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_CONTAINER` is available only in regions US East (N. Virginia),
      * US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific
      * (Mumbai).
+     * * The environment type `LINUX_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
      * Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo),
      * and Asia Pacific (Sydney).
+     * * The environment type `MAC_ARM` is available only in regions US East (Ohio), US East (N.
+     * Virginia), US West (Oregon), Europe (Frankfurt), and Asia Pacific (Sydney).
+     * * The environment type `WINDOWS_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `WINDOWS_SERVER_2019_CONTAINER` is available only in regions US East
      * (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo),
      * Asia Pacific (Mumbai) and EU (Ireland).
@@ -417,6 +628,33 @@ public interface CfnFleetProps {
     }
 
     /**
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances.
+     */
+    override fun fleetProxyConfiguration(fleetProxyConfiguration: IResolvable) {
+      cdkBuilder.fleetProxyConfiguration(fleetProxyConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances.
+     */
+    override
+        fun fleetProxyConfiguration(fleetProxyConfiguration: CfnFleet.ProxyConfigurationProperty) {
+      cdkBuilder.fleetProxyConfiguration(fleetProxyConfiguration.let(CfnFleet.ProxyConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param fleetProxyConfiguration Information about the proxy configurations that apply network
+     * access control to your reserved capacity instances.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4411483786b1ab46d2a83e0409335743763f573c1a4d016eb9bc44fc0c2d8c2a")
+    override
+        fun fleetProxyConfiguration(fleetProxyConfiguration: CfnFleet.ProxyConfigurationProperty.Builder.() -> Unit):
+        Unit = fleetProxyConfiguration(CfnFleet.ProxyConfigurationProperty(fleetProxyConfiguration))
+
+    /**
      * @param fleetServiceRole The service role associated with the compute fleet.
      * For more information, see [Allow a user to add a permission policy for a fleet service
      * role](https://docs.aws.amazon.com/codebuild/latest/userguide/auth-and-access-control-iam-identity-based-access-control.html#customer-managed-policies-example-permission-policy-fleet-service-role.html)
@@ -427,24 +665,21 @@ public interface CfnFleetProps {
     }
 
     /**
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` .
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses.
      */
     override fun fleetVpcConfig(fleetVpcConfig: IResolvable) {
       cdkBuilder.fleetVpcConfig(fleetVpcConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` .
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses.
      */
     override fun fleetVpcConfig(fleetVpcConfig: CfnFleet.VpcConfigProperty) {
       cdkBuilder.fleetVpcConfig(fleetVpcConfig.let(CfnFleet.VpcConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param fleetVpcConfig Updating this field is not allowed for `MAC_ARM` .
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * @param fleetVpcConfig Information about the VPC configuration that AWS CodeBuild accesses.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96864873899211179322b87b275320a614a489c634c0f5bb1179b4e38eb01619")
@@ -452,8 +687,7 @@ public interface CfnFleetProps {
         = fleetVpcConfig(CfnFleet.VpcConfigProperty(fleetVpcConfig))
 
     /**
-     * @param imageId Updating this field is not allowed for `MAC_ARM` .
-     * The Amazon Machine Image (AMI) of the compute fleet.
+     * @param imageId The Amazon Machine Image (AMI) of the compute fleet.
      */
     override fun imageId(imageId: String) {
       cdkBuilder.imageId(imageId)
@@ -483,6 +717,31 @@ public interface CfnFleetProps {
     override fun overflowBehavior(overflowBehavior: String) {
       cdkBuilder.overflowBehavior(overflowBehavior)
     }
+
+    /**
+     * @param scalingConfiguration The scaling configuration of the compute fleet.
+     */
+    override fun scalingConfiguration(scalingConfiguration: IResolvable) {
+      cdkBuilder.scalingConfiguration(scalingConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param scalingConfiguration The scaling configuration of the compute fleet.
+     */
+    override
+        fun scalingConfiguration(scalingConfiguration: CfnFleet.ScalingConfigurationInputProperty) {
+      cdkBuilder.scalingConfiguration(scalingConfiguration.let(CfnFleet.ScalingConfigurationInputProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param scalingConfiguration The scaling configuration of the compute fleet.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("34a97e69de5a6087977ada5768cf0bd9e4650196f1e22952b2df0bff82b9ee46")
+    override
+        fun scalingConfiguration(scalingConfiguration: CfnFleet.ScalingConfigurationInputProperty.Builder.() -> Unit):
+        Unit =
+        scalingConfiguration(CfnFleet.ScalingConfigurationInputProperty(scalingConfiguration))
 
     /**
      * @param tags A list of tag key and value pairs associated with this compute fleet.
@@ -516,39 +775,67 @@ public interface CfnFleetProps {
     override fun baseCapacity(): Number? = unwrap(this).getBaseCapacity()
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
+     * The compute configuration of the compute fleet.
      *
-     * Information about the compute resources the compute fleet uses. Available values include:
+     * This is only required if `computeType` is set to `ATTRIBUTE_BASED_COMPUTE` .
      *
-     * * `BUILD_GENERAL1_SMALL` : Use up to 3 GB memory and 2 vCPUs for builds.
-     * * `BUILD_GENERAL1_MEDIUM` : Use up to 7 GB memory and 4 vCPUs for builds.
-     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GB memory and 8 vCPUs for builds, depending on your
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computeconfiguration)
+     */
+    override fun computeConfiguration(): Any? = unwrap(this).getComputeConfiguration()
+
+    /**
+     * Information about the compute resources the compute fleet uses. Available values include:.
+     *
+     * * `ATTRIBUTE_BASED_COMPUTE` : Specify the amount of vCPUs, memory, disk space, and the type
+     * of machine.
+     *
+     *
+     * If you use `ATTRIBUTE_BASED_COMPUTE` , you must define your attributes by using
+     * `computeConfiguration` . AWS CodeBuild will select the cheapest instance that satisfies your
+     * specified attributes. For more information, see [Reserved capacity environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment-reserved-capacity.types)
+     * in the *AWS CodeBuild User Guide* .
+     *
+     *
+     * * `BUILD_GENERAL1_SMALL` : Use up to 4 GiB memory and 2 vCPUs for builds.
+     * * `BUILD_GENERAL1_MEDIUM` : Use up to 8 GiB memory and 4 vCPUs for builds.
+     * * `BUILD_GENERAL1_LARGE` : Use up to 16 GiB memory and 8 vCPUs for builds, depending on your
      * environment type.
-     * * `BUILD_GENERAL1_XLARGE` : Use up to 70 GB memory and 36 vCPUs for builds, depending on your
-     * environment type.
-     * * `BUILD_GENERAL1_2XLARGE` : Use up to 145 GB memory, 72 vCPUs, and 824 GB of SSD storage for
-     * builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_GENERAL1_XLARGE` : Use up to 72 GiB memory and 36 vCPUs for builds, depending on
+     * your environment type.
+     * * `BUILD_GENERAL1_2XLARGE` : Use up to 144 GiB memory, 72 vCPUs, and 824 GB of SSD storage
+     * for builds. This compute type supports Docker images up to 100 GB uncompressed.
+     * * `BUILD_LAMBDA_1GB` : Use up to 1 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_2GB` : Use up to 2 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_4GB` : Use up to 4 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_8GB` : Use up to 8 GiB memory for builds. Only available for environment type
+     * `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
+     * * `BUILD_LAMBDA_10GB` : Use up to 10 GiB memory for builds. Only available for environment
+     * type `LINUX_LAMBDA_CONTAINER` and `ARM_LAMBDA_CONTAINER` .
      *
      * If you use `BUILD_GENERAL1_SMALL` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 3 GB memory and 2 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GB memory, 4 vCPUs, and 1
-     * NVIDIA A10G Tensor Core GPU for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 4 GB memory and 2 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 16 GiB memory, 4 vCPUs, and
+     * 1 NVIDIA A10G Tensor Core GPU for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 4 GiB memory and 2 vCPUs on
      * ARM-based processors for builds.
      *
      * If you use `BUILD_GENERAL1_LARGE` :
      *
-     * * For environment type `LINUX_CONTAINER` , you can use up to 15 GB memory and 8 vCPUs for
+     * * For environment type `LINUX_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs for
      * builds.
-     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GB memory, 32 vCPUs, and
-     * 4 NVIDIA Tesla V100 GPUs for builds.
-     * * For environment type `ARM_CONTAINER` , you can use up to 16 GB memory and 8 vCPUs on
+     * * For environment type `LINUX_GPU_CONTAINER` , you can use up to 255 GiB memory, 32 vCPUs,
+     * and 4 NVIDIA Tesla V100 GPUs for builds.
+     * * For environment type `ARM_CONTAINER` , you can use up to 16 GiB memory and 8 vCPUs on
      * ARM-based processors for builds.
      *
-     * For more information, see [Build environment compute
-     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html)
+     * For more information, see [On-demand environment
+     * types](https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html#environment.types)
      * in the *AWS CodeBuild User Guide.*
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-computetype)
@@ -556,20 +843,29 @@ public interface CfnFleetProps {
     override fun computeType(): String? = unwrap(this).getComputeType()
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * The environment type of the compute fleet.
      *
      * * The environment type `ARM_CONTAINER` is available only in regions US East (N. Virginia), US
      * East (Ohio), US West (Oregon), EU (Ireland), Asia Pacific (Mumbai), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), EU (Frankfurt), and South America (São Paulo).
+     * * The environment type `ARM_EC2` is available only in regions US East (N. Virginia), US East
+     * (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_CONTAINER` is available only in regions US East (N. Virginia),
      * US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia
      * Pacific (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific
      * (Mumbai).
+     * * The environment type `LINUX_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `LINUX_GPU_CONTAINER` is available only in regions US East (N.
      * Virginia), US East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo),
      * and Asia Pacific (Sydney).
+     * * The environment type `MAC_ARM` is available only in regions US East (Ohio), US East (N.
+     * Virginia), US West (Oregon), Europe (Frankfurt), and Asia Pacific (Sydney).
+     * * The environment type `WINDOWS_EC2` is available only in regions US East (N. Virginia), US
+     * East (Ohio), US West (Oregon), EU (Ireland), EU (Frankfurt), Asia Pacific (Tokyo), Asia Pacific
+     * (Singapore), Asia Pacific (Sydney), South America (São Paulo), and Asia Pacific (Mumbai).
      * * The environment type `WINDOWS_SERVER_2019_CONTAINER` is available only in regions US East
      * (N. Virginia), US East (Ohio), US West (Oregon), Asia Pacific (Sydney), Asia Pacific (Tokyo),
      * Asia Pacific (Mumbai) and EU (Ireland).
@@ -587,6 +883,14 @@ public interface CfnFleetProps {
     override fun environmentType(): String? = unwrap(this).getEnvironmentType()
 
     /**
+     * Information about the proxy configurations that apply network access control to your reserved
+     * capacity instances.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetproxyconfiguration)
+     */
+    override fun fleetProxyConfiguration(): Any? = unwrap(this).getFleetProxyConfiguration()
+
+    /**
      * The service role associated with the compute fleet.
      *
      * For more information, see [Allow a user to add a permission policy for a fleet service
@@ -598,8 +902,6 @@ public interface CfnFleetProps {
     override fun fleetServiceRole(): String? = unwrap(this).getFleetServiceRole()
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * Information about the VPC configuration that AWS CodeBuild accesses.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-fleetvpcconfig)
@@ -607,8 +909,6 @@ public interface CfnFleetProps {
     override fun fleetVpcConfig(): Any? = unwrap(this).getFleetVpcConfig()
 
     /**
-     * Updating this field is not allowed for `MAC_ARM` .
-     *
      * The Amazon Machine Image (AMI) of the compute fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-imageid)
@@ -641,6 +941,13 @@ public interface CfnFleetProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-overflowbehavior)
      */
     override fun overflowBehavior(): String? = unwrap(this).getOverflowBehavior()
+
+    /**
+     * The scaling configuration of the compute fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-codebuild-fleet.html#cfn-codebuild-fleet-scalingconfiguration)
+     */
+    override fun scalingConfiguration(): Any? = unwrap(this).getScalingConfiguration()
 
     /**
      * A list of tag key and value pairs associated with this compute fleet.

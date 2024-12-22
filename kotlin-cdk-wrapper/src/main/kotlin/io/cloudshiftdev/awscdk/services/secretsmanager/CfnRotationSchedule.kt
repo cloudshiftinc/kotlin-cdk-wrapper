@@ -44,6 +44,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * resource to populate the secret with the connection details of the database or service before you
  * attempt to configure rotation.
  *
+ * For a single secret, you can only define one rotation schedule with it.
+ *
  * Example:
  *
  * ```
@@ -101,7 +103,7 @@ public open class CfnRotationSchedule(
   )
 
   /**
-   *
+   * The ARN of the secret.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -212,11 +214,15 @@ public open class CfnRotationSchedule(
 
   /**
    * The ARN or name of the secret to rotate.
+   *
+   * This is unique for each rotation schedule definition.
    */
   public open fun secretId(): String = unwrap(this).getSecretId()
 
   /**
    * The ARN or name of the secret to rotate.
+   *
+   * This is unique for each rotation schedule definition.
    */
   public open fun secretId(`value`: String) {
     unwrap(this).setSecretId(`value`)
@@ -231,6 +237,15 @@ public open class CfnRotationSchedule(
      * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     *
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
      *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
@@ -253,6 +268,15 @@ public open class CfnRotationSchedule(
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
      *
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
+     *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
@@ -273,6 +297,15 @@ public open class CfnRotationSchedule(
      * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     *
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
      *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
@@ -392,14 +425,16 @@ public open class CfnRotationSchedule(
     public fun rotationRules(rotationRules: RotationRulesProperty.Builder.() -> Unit)
 
     /**
-     * The ARN or name of the secret to rotate.
+     * The ARN or name of the secret to rotate. This is unique for each rotation schedule
+     * definition.
      *
      * To reference a secret also created in this template, use the
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
      * function with the secret's logical ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-secretid)
-     * @param secretId The ARN or name of the secret to rotate. 
+     * @param secretId The ARN or name of the secret to rotate. This is unique for each rotation
+     * schedule definition. 
      */
     public fun secretId(secretId: String)
   }
@@ -416,6 +451,15 @@ public open class CfnRotationSchedule(
      * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     *
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
      *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
@@ -440,6 +484,15 @@ public open class CfnRotationSchedule(
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
      *
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
+     *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
@@ -462,6 +515,15 @@ public open class CfnRotationSchedule(
      * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     *
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
      *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
@@ -593,14 +655,16 @@ public open class CfnRotationSchedule(
         rotationRules(RotationRulesProperty(rotationRules))
 
     /**
-     * The ARN or name of the secret to rotate.
+     * The ARN or name of the secret to rotate. This is unique for each rotation schedule
+     * definition.
      *
      * To reference a secret also created in this template, use the
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
      * function with the secret's logical ID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-secretsmanager-rotationschedule.html#cfn-secretsmanager-rotationschedule-secretid)
-     * @param secretId The ARN or name of the secret to rotate. 
+     * @param secretId The ARN or name of the secret to rotate. This is unique for each rotation
+     * schedule definition. 
      */
     override fun secretId(secretId: String) {
       cdkBuilder.secretId(secretId)
@@ -637,7 +701,7 @@ public open class CfnRotationSchedule(
    * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
    * .
    *
-   * You must specify `Transform: AWS::SecretsManager-2020-07-23` at the beginning of the
+   * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
    * CloudFormation template.
    *
    * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
@@ -800,11 +864,25 @@ public open class CfnRotationSchedule(
     public fun rotationType(): String
 
     /**
-     * By default, CloudFormation deploys Python 3.9 binaries for the rotation function. To use a
-     * different version of Python, you must do the following two steps:.
+     * Do not set this value if you are using `Transform: AWS::SecretsManager-2024-09-16` .
+     *
+     * Over time, the updated rotation lambda artifacts vended by AWS may not be compatible with the
+     * code or shared object files defined in the rotation function deployment package.
+     *
+     *
+     * Only define the `Runtime` key if:
+     *
+     * * You are using `Transform: AWS::SecretsManager-2020-07-23` .
+     * * The code or shared object files defined in the rotation function deployment package are
+     * incompatible with Python 3.9.
+     *
+     *
+     * The Python Runtime version for with the rotation function. By default, CloudFormation deploys
+     * Python 3.9 binaries for the rotation function. To use a different version of Python, you must do
+     * the following two steps:
      *
      * * Deploy the matching version Python binaries with your rotation function.
-     * * Set the version number in this field. For example, for Python 3.7, enter *python3.7*
+     * * Set the version number in this field. For example, for Python 3.7, enter *python3.7* .
      *
      * If you only do one of the steps, your rotation function will be incompatible with the
      * binaries. For more information, see [Why did my Lambda rotation function fail with a "pg module
@@ -996,10 +1074,25 @@ public open class CfnRotationSchedule(
       public fun rotationType(rotationType: String)
 
       /**
-       * @param runtime By default, CloudFormation deploys Python 3.9 binaries for the rotation
-       * function. To use a different version of Python, you must do the following two steps:.
+       * @param runtime Do not set this value if you are using `Transform:
+       * AWS::SecretsManager-2024-09-16` .
+       * Over time, the updated rotation lambda artifacts vended by AWS may not be compatible with
+       * the code or shared object files defined in the rotation function deployment package.
+       *
+       *
+       * Only define the `Runtime` key if:
+       *
+       * * You are using `Transform: AWS::SecretsManager-2020-07-23` .
+       * * The code or shared object files defined in the rotation function deployment package are
+       * incompatible with Python 3.9.
+       *
+       *
+       * The Python Runtime version for with the rotation function. By default, CloudFormation
+       * deploys Python 3.9 binaries for the rotation function. To use a different version of Python,
+       * you must do the following two steps:
+       *
        * * Deploy the matching version Python binaries with your rotation function.
-       * * Set the version number in this field. For example, for Python 3.7, enter *python3.7*
+       * * Set the version number in this field. For example, for Python 3.7, enter *python3.7* .
        *
        * If you only do one of the steps, your rotation function will be incompatible with the
        * binaries. For more information, see [Why did my Lambda rotation function fail with a "pg
@@ -1193,10 +1286,25 @@ public open class CfnRotationSchedule(
       }
 
       /**
-       * @param runtime By default, CloudFormation deploys Python 3.9 binaries for the rotation
-       * function. To use a different version of Python, you must do the following two steps:.
+       * @param runtime Do not set this value if you are using `Transform:
+       * AWS::SecretsManager-2024-09-16` .
+       * Over time, the updated rotation lambda artifacts vended by AWS may not be compatible with
+       * the code or shared object files defined in the rotation function deployment package.
+       *
+       *
+       * Only define the `Runtime` key if:
+       *
+       * * You are using `Transform: AWS::SecretsManager-2020-07-23` .
+       * * The code or shared object files defined in the rotation function deployment package are
+       * incompatible with Python 3.9.
+       *
+       *
+       * The Python Runtime version for with the rotation function. By default, CloudFormation
+       * deploys Python 3.9 binaries for the rotation function. To use a different version of Python,
+       * you must do the following two steps:
+       *
        * * Deploy the matching version Python binaries with your rotation function.
-       * * Set the version number in this field. For example, for Python 3.7, enter *python3.7*
+       * * Set the version number in this field. For example, for Python 3.7, enter *python3.7* .
        *
        * If you only do one of the steps, your rotation function will be incompatible with the
        * binaries. For more information, see [Why did my Lambda rotation function fail with a "pg
@@ -1405,11 +1513,25 @@ public open class CfnRotationSchedule(
       override fun rotationType(): String = unwrap(this).getRotationType()
 
       /**
-       * By default, CloudFormation deploys Python 3.9 binaries for the rotation function. To use a
-       * different version of Python, you must do the following two steps:.
+       * Do not set this value if you are using `Transform: AWS::SecretsManager-2024-09-16` .
+       *
+       * Over time, the updated rotation lambda artifacts vended by AWS may not be compatible with
+       * the code or shared object files defined in the rotation function deployment package.
+       *
+       *
+       * Only define the `Runtime` key if:
+       *
+       * * You are using `Transform: AWS::SecretsManager-2020-07-23` .
+       * * The code or shared object files defined in the rotation function deployment package are
+       * incompatible with Python 3.9.
+       *
+       *
+       * The Python Runtime version for with the rotation function. By default, CloudFormation
+       * deploys Python 3.9 binaries for the rotation function. To use a different version of Python,
+       * you must do the following two steps:
        *
        * * Deploy the matching version Python binaries with your rotation function.
-       * * Set the version number in this field. For example, for Python 3.7, enter *python3.7*
+       * * Set the version number in this field. For example, for Python 3.7, enter *python3.7* .
        *
        * If you only do one of the steps, your rotation function will be incompatible with the
        * binaries. For more information, see [Why did my Lambda rotation function fail with a "pg

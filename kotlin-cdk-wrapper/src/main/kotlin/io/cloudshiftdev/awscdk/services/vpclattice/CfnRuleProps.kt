@@ -82,7 +82,7 @@ public interface CfnRuleProps {
   public fun action(): Any
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the listener.
+   * The ID or ARN of the listener.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-rule.html#cfn-vpclattice-rule-listeneridentifier)
    */
@@ -119,7 +119,7 @@ public interface CfnRuleProps {
   public fun priority(): Number
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service.
+   * The ID or ARN of the service.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-rule.html#cfn-vpclattice-rule-serviceidentifier)
    */
@@ -155,7 +155,7 @@ public interface CfnRuleProps {
     public fun action(action: CfnRule.ActionProperty.Builder.() -> Unit)
 
     /**
-     * @param listenerIdentifier The ID or Amazon Resource Name (ARN) of the listener.
+     * @param listenerIdentifier The ID or ARN of the listener.
      */
     public fun listenerIdentifier(listenerIdentifier: String)
 
@@ -194,7 +194,7 @@ public interface CfnRuleProps {
     public fun priority(priority: Number)
 
     /**
-     * @param serviceIdentifier The ID or Amazon Resource Name (ARN) of the service.
+     * @param serviceIdentifier The ID or ARN of the service.
      */
     public fun serviceIdentifier(serviceIdentifier: String)
 
@@ -236,7 +236,7 @@ public interface CfnRuleProps {
         action(CfnRule.ActionProperty(action))
 
     /**
-     * @param listenerIdentifier The ID or Amazon Resource Name (ARN) of the listener.
+     * @param listenerIdentifier The ID or ARN of the listener.
      */
     override fun listenerIdentifier(listenerIdentifier: String) {
       cdkBuilder.listenerIdentifier(listenerIdentifier)
@@ -286,7 +286,7 @@ public interface CfnRuleProps {
     }
 
     /**
-     * @param serviceIdentifier The ID or Amazon Resource Name (ARN) of the service.
+     * @param serviceIdentifier The ID or ARN of the service.
      */
     override fun serviceIdentifier(serviceIdentifier: String) {
       cdkBuilder.serviceIdentifier(serviceIdentifier)
@@ -319,7 +319,7 @@ public interface CfnRuleProps {
     override fun action(): Any = unwrap(this).getAction()
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the listener.
+     * The ID or ARN of the listener.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-rule.html#cfn-vpclattice-rule-listeneridentifier)
      */
@@ -356,7 +356,7 @@ public interface CfnRuleProps {
     override fun priority(): Number = unwrap(this).getPriority()
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or ARN of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-rule.html#cfn-vpclattice-rule-serviceidentifier)
      */

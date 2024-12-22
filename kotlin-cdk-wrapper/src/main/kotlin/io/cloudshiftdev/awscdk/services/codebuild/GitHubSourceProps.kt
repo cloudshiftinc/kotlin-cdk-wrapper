@@ -17,13 +17,11 @@ import kotlin.collections.List
  * Example:
  *
  * ```
- * Project project = Project.Builder.create(this, "MyProject")
- * .buildSpec(BuildSpec.fromSourceFilename("my-buildspec.yml"))
- * .source(Source.gitHub(GitHubSourceProps.builder()
- * .owner("awslabs")
- * .repo("aws-cdk")
- * .build()))
- * .build();
+ * ISource gitHubSource = Source.gitHub(GitHubSourceProps.builder()
+ * .owner("aws")
+ * .webhookTriggersBatchBuild(true) // optional, default is false
+ * .webhookFilters(List.of(FilterGroup.inEventOf(EventAction.WORKFLOW_JOB_QUEUED).andRepositoryNameIs("aws-.*").andRepositoryNameIsNot("aws-cdk-lib")))
+ * .build());
  * ```
  */
 public interface GitHubSourceProps : SourceProps {
@@ -92,7 +90,7 @@ public interface GitHubSourceProps : SourceProps {
   public fun fetchSubmodules(): Boolean? = unwrap(this).getFetchSubmodules()
 
   /**
-   * The GitHub account/user that owns the repo.
+   * The GitHub Organization/user that owns the repo.
    *
    * Example:
    *
@@ -105,13 +103,15 @@ public interface GitHubSourceProps : SourceProps {
   /**
    * The name of the repo (without the username).
    *
+   * Default: undefined will create an organization webhook
+   *
    * Example:
    *
    * ```
    * "aws-cdk";
    * ```
    */
-  public fun repo(): String
+  public fun repo(): String? = unwrap(this).getRepo()
 
   /**
    * Whether to send notifications on your build's start and end.
@@ -193,12 +193,12 @@ public interface GitHubSourceProps : SourceProps {
     public fun identifier(identifier: String)
 
     /**
-     * @param owner The GitHub account/user that owns the repo. 
+     * @param owner The GitHub Organization/user that owns the repo. 
      */
     public fun owner(owner: String)
 
     /**
-     * @param repo The name of the repo (without the username). 
+     * @param repo The name of the repo (without the username).
      */
     public fun repo(repo: String)
 
@@ -292,14 +292,14 @@ public interface GitHubSourceProps : SourceProps {
     }
 
     /**
-     * @param owner The GitHub account/user that owns the repo. 
+     * @param owner The GitHub Organization/user that owns the repo. 
      */
     override fun owner(owner: String) {
       cdkBuilder.owner(owner)
     }
 
     /**
-     * @param repo The name of the repo (without the username). 
+     * @param repo The name of the repo (without the username).
      */
     override fun repo(repo: String) {
       cdkBuilder.repo(repo)
@@ -428,7 +428,7 @@ public interface GitHubSourceProps : SourceProps {
     override fun identifier(): String? = unwrap(this).getIdentifier()
 
     /**
-     * The GitHub account/user that owns the repo.
+     * The GitHub Organization/user that owns the repo.
      *
      * Example:
      *
@@ -441,13 +441,15 @@ public interface GitHubSourceProps : SourceProps {
     /**
      * The name of the repo (without the username).
      *
+     * Default: undefined will create an organization webhook
+     *
      * Example:
      *
      * ```
      * "aws-cdk";
      * ```
      */
-    override fun repo(): String = unwrap(this).getRepo()
+    override fun repo(): String? = unwrap(this).getRepo()
 
     /**
      * Whether to send notifications on your build's start and end.

@@ -38,6 +38,25 @@ import kotlin.collections.List
  * .timeZone("timeZone")
  * // the properties below are optional
  * .description("description")
+ * .hoursOfOperationOverrides(List.of(HoursOfOperationOverrideProperty.builder()
+ * .effectiveFrom("effectiveFrom")
+ * .effectiveTill("effectiveTill")
+ * .overrideConfig(List.of(HoursOfOperationOverrideConfigProperty.builder()
+ * .day("day")
+ * .endTime(OverrideTimeSliceProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build())
+ * .startTime(OverrideTimeSliceProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build())
+ * .build()))
+ * .overrideName("overrideName")
+ * // the properties below are optional
+ * .hoursOfOperationOverrideId("hoursOfOperationOverrideId")
+ * .overrideDescription("overrideDescription")
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -61,6 +80,13 @@ public interface CfnHoursOfOperationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * One or more hours of operation overrides assigned to an hour of operation.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-hoursofoperationoverrides)
+   */
+  public fun hoursOfOperationOverrides(): Any? = unwrap(this).getHoursOfOperationOverrides()
 
   /**
    * The Amazon Resource Name (ARN) of the instance.
@@ -116,6 +142,24 @@ public interface CfnHoursOfOperationProps {
      * @param description The description for the hours of operation.
      */
     public fun description(description: String)
+
+    /**
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation.
+     */
+    public fun hoursOfOperationOverrides(hoursOfOperationOverrides: IResolvable)
+
+    /**
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation.
+     */
+    public fun hoursOfOperationOverrides(hoursOfOperationOverrides: List<Any>)
+
+    /**
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation.
+     */
+    public fun hoursOfOperationOverrides(vararg hoursOfOperationOverrides: Any)
 
     /**
      * @param instanceArn The Amazon Resource Name (ARN) of the instance. 
@@ -176,6 +220,29 @@ public interface CfnHoursOfOperationProps {
     }
 
     /**
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation.
+     */
+    override fun hoursOfOperationOverrides(hoursOfOperationOverrides: IResolvable) {
+      cdkBuilder.hoursOfOperationOverrides(hoursOfOperationOverrides.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation.
+     */
+    override fun hoursOfOperationOverrides(hoursOfOperationOverrides: List<Any>) {
+      cdkBuilder.hoursOfOperationOverrides(hoursOfOperationOverrides.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation.
+     */
+    override fun hoursOfOperationOverrides(vararg hoursOfOperationOverrides: Any): Unit =
+        hoursOfOperationOverrides(hoursOfOperationOverrides.toList())
+
+    /**
      * @param instanceArn The Amazon Resource Name (ARN) of the instance. 
      */
     override fun instanceArn(instanceArn: String) {
@@ -231,6 +298,13 @@ public interface CfnHoursOfOperationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * One or more hours of operation overrides assigned to an hour of operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-hoursofoperationoverrides)
+     */
+    override fun hoursOfOperationOverrides(): Any? = unwrap(this).getHoursOfOperationOverrides()
 
     /**
      * The Amazon Resource Name (ARN) of the instance.

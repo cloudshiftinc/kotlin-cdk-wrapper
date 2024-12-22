@@ -55,7 +55,7 @@ public interface CfnResiliencyPolicyProps {
   public fun policy(): Any
 
   /**
-   * The description for the policy.
+   * Description of the resiliency policy.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-policydescription)
    */
@@ -107,7 +107,7 @@ public interface CfnResiliencyPolicyProps {
     public fun policy(policy: Map<String, Any>)
 
     /**
-     * @param policyDescription The description for the policy.
+     * @param policyDescription Description of the resiliency policy.
      */
     public fun policyDescription(policyDescription: String)
 
@@ -157,7 +157,7 @@ public interface CfnResiliencyPolicyProps {
     }
 
     /**
-     * @param policyDescription The description for the policy.
+     * @param policyDescription Description of the resiliency policy.
      */
     override fun policyDescription(policyDescription: String) {
       cdkBuilder.policyDescription(policyDescription)
@@ -210,7 +210,7 @@ public interface CfnResiliencyPolicyProps {
     override fun policy(): Any = unwrap(this).getPolicy()
 
     /**
-     * The description for the policy.
+     * Description of the resiliency policy.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-resiliencehub-resiliencypolicy.html#cfn-resiliencehub-resiliencypolicy-policydescription)
      */

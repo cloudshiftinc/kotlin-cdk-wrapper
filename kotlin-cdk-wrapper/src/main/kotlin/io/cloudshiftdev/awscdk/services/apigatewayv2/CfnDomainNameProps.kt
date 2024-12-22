@@ -47,7 +47,7 @@ public interface CfnDomainNameProps {
   /**
    * The custom domain name for your API in Amazon API Gateway.
    *
-   * Uppercase letters are not supported.
+   * Uppercase letters and the underscore ( `_` ) character are not supported.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname)
    */
@@ -81,7 +81,7 @@ public interface CfnDomainNameProps {
   public interface Builder {
     /**
      * @param domainName The custom domain name for your API in Amazon API Gateway. 
-     * Uppercase letters are not supported.
+     * Uppercase letters and the underscore ( `_` ) character are not supported.
      */
     public fun domainName(domainName: String)
 
@@ -134,7 +134,7 @@ public interface CfnDomainNameProps {
 
     /**
      * @param domainName The custom domain name for your API in Amazon API Gateway. 
-     * Uppercase letters are not supported.
+     * Uppercase letters and the underscore ( `_` ) character are not supported.
      */
     override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
@@ -206,7 +206,7 @@ public interface CfnDomainNameProps {
     /**
      * The custom domain name for your API in Amazon API Gateway.
      *
-     * Uppercase letters are not supported.
+     * Uppercase letters and the underscore ( `_` ) character are not supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname)
      */

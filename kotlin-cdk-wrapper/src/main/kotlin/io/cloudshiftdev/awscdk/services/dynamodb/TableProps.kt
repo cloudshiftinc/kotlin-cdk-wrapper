@@ -46,6 +46,14 @@ import kotlin.jvm.JvmName
  */
 public interface TableProps : TableOptions {
   /**
+   * Kinesis Data Stream approximate creation timestamp prescision.
+   *
+   * Default: ApproximateCreationDateTimePrecision.MICROSECOND
+   */
+  public fun kinesisPrecisionTimestamp(): ApproximateCreationDateTimePrecision? =
+      unwrap(this).getKinesisPrecisionTimestamp()?.let(ApproximateCreationDateTimePrecision::wrap)
+
+  /**
    * Kinesis Data Stream to capture item-level changes for the table.
    *
    * Default: - no Kinesis Data Stream
@@ -114,6 +122,13 @@ public interface TableProps : TableOptions {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("5f8517643ffb45a77b00bfbdbb86dc821ffd60acfdbb7dabdc914910c6886bec")
     public fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit)
+
+    /**
+     * @param kinesisPrecisionTimestamp Kinesis Data Stream approximate creation timestamp
+     * prescision.
+     */
+    public
+        fun kinesisPrecisionTimestamp(kinesisPrecisionTimestamp: ApproximateCreationDateTimePrecision)
 
     /**
      * @param kinesisStream Kinesis Data Stream to capture item-level changes for the table.
@@ -252,6 +267,22 @@ public interface TableProps : TableOptions {
     public fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean)
 
     /**
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct.
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     */
+    public fun warmThroughput(warmThroughput: WarmThroughput)
+
+    /**
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct.
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ac7623232256b7268b19e3a4a0d2c42a52418a700ca088e8d1f82f395f1b31a9")
+    public fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit)
+
+    /**
      * @param writeCapacity The write capacity for the table.
      * Careful if you add Global Secondary Indexes, as
      * those will share the table's provisioned throughput.
@@ -328,6 +359,15 @@ public interface TableProps : TableOptions {
     @JvmName("5f8517643ffb45a77b00bfbdbb86dc821ffd60acfdbb7dabdc914910c6886bec")
     override fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit): Unit =
         importSource(ImportSourceSpecification(importSource))
+
+    /**
+     * @param kinesisPrecisionTimestamp Kinesis Data Stream approximate creation timestamp
+     * prescision.
+     */
+    override
+        fun kinesisPrecisionTimestamp(kinesisPrecisionTimestamp: ApproximateCreationDateTimePrecision) {
+      cdkBuilder.kinesisPrecisionTimestamp(kinesisPrecisionTimestamp.let(ApproximateCreationDateTimePrecision.Companion::unwrap))
+    }
 
     /**
      * @param kinesisStream Kinesis Data Stream to capture item-level changes for the table.
@@ -501,6 +541,25 @@ public interface TableProps : TableOptions {
     }
 
     /**
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct.
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     */
+    override fun warmThroughput(warmThroughput: WarmThroughput) {
+      cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughput.Companion::unwrap))
+    }
+
+    /**
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct.
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ac7623232256b7268b19e3a4a0d2c42a52418a700ca088e8d1f82f395f1b31a9")
+    override fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit): Unit =
+        warmThroughput(WarmThroughput(warmThroughput))
+
+    /**
      * @param writeCapacity The write capacity for the table.
      * Careful if you add Global Secondary Indexes, as
      * those will share the table's provisioned throughput.
@@ -579,6 +638,14 @@ public interface TableProps : TableOptions {
      */
     override fun importSource(): ImportSourceSpecification? =
         unwrap(this).getImportSource()?.let(ImportSourceSpecification::wrap)
+
+    /**
+     * Kinesis Data Stream approximate creation timestamp prescision.
+     *
+     * Default: ApproximateCreationDateTimePrecision.MICROSECOND
+     */
+    override fun kinesisPrecisionTimestamp(): ApproximateCreationDateTimePrecision? =
+        unwrap(this).getKinesisPrecisionTimestamp()?.let(ApproximateCreationDateTimePrecision::wrap)
 
     /**
      * Kinesis Data Stream to capture item-level changes for the table.
@@ -732,6 +799,19 @@ public interface TableProps : TableOptions {
      */
     override fun waitForReplicationToFinish(): Boolean? =
         unwrap(this).getWaitForReplicationToFinish()
+
+    /**
+     * Specify values to pre-warm you DynamoDB Table Warm Throughput feature is not available for
+     * Global Table replicas using the `Table` construct.
+     *
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     *
+     * Default: - warm throughput is not configured
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     */
+    override fun warmThroughput(): WarmThroughput? =
+        unwrap(this).getWarmThroughput()?.let(WarmThroughput::wrap)
 
     /**
      * The write capacity for the table.

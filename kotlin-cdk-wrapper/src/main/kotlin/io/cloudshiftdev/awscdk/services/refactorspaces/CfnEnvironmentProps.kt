@@ -20,10 +20,9 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.refactorspaces.*;
  * CfnEnvironmentProps cfnEnvironmentProps = CfnEnvironmentProps.builder()
+ * .description("description")
  * .name("name")
  * .networkFabricType("networkFabricType")
- * // the properties below are optional
- * .description("description")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -46,14 +45,14 @@ public interface CfnEnvironmentProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-environment.html#cfn-refactorspaces-environment-name)
    */
-  public fun name(): String
+  public fun name(): String? = unwrap(this).getName()
 
   /**
    * The network fabric type of the environment.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-environment.html#cfn-refactorspaces-environment-networkfabrictype)
    */
-  public fun networkFabricType(): String
+  public fun networkFabricType(): String? = unwrap(this).getNetworkFabricType()
 
   /**
    * The tags assigned to the environment.
@@ -73,12 +72,12 @@ public interface CfnEnvironmentProps {
     public fun description(description: String)
 
     /**
-     * @param name The name of the environment. 
+     * @param name The name of the environment.
      */
     public fun name(name: String)
 
     /**
-     * @param networkFabricType The network fabric type of the environment. 
+     * @param networkFabricType The network fabric type of the environment.
      */
     public fun networkFabricType(networkFabricType: String)
 
@@ -106,14 +105,14 @@ public interface CfnEnvironmentProps {
     }
 
     /**
-     * @param name The name of the environment. 
+     * @param name The name of the environment.
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * @param networkFabricType The network fabric type of the environment. 
+     * @param networkFabricType The network fabric type of the environment.
      */
     override fun networkFabricType(networkFabricType: String) {
       cdkBuilder.networkFabricType(networkFabricType)
@@ -151,14 +150,14 @@ public interface CfnEnvironmentProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-environment.html#cfn-refactorspaces-environment-name)
      */
-    override fun name(): String = unwrap(this).getName()
+    override fun name(): String? = unwrap(this).getName()
 
     /**
      * The network fabric type of the environment.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-refactorspaces-environment.html#cfn-refactorspaces-environment-networkfabrictype)
      */
-    override fun networkFabricType(): String = unwrap(this).getNetworkFabricType()
+    override fun networkFabricType(): String? = unwrap(this).getNetworkFabricType()
 
     /**
      * The tags assigned to the environment.

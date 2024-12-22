@@ -21,24 +21,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // Define a state machine with one Pass state
- * StateMachine child = StateMachine.Builder.create(this, "ChildStateMachine")
- * .definition(Chain.start(new Pass(this, "PassState")))
+ * StateMachine stateMachine = StateMachine.Builder.create(this, "MyStateMachine")
+ * .stateMachineType(StateMachineType.EXPRESS)
+ * .definition(Chain.start(new Pass(this, "Pass")))
  * .build();
- * // Include the state machine in a Task state with callback pattern
- * StepFunctionsStartExecution task = StepFunctionsStartExecution.Builder.create(this, "ChildTask")
- * .stateMachine(child)
- * .integrationPattern(IntegrationPattern.WAIT_FOR_TASK_TOKEN)
- * .input(TaskInput.fromObject(Map.of(
- * "token", JsonPath.getTaskToken(),
- * "foo", "bar")))
- * .name("MyExecutionName")
+ * RestApi api = RestApi.Builder.create(this, "Api")
+ * .restApiName("MyApi")
  * .build();
- * // Define a second state machine with the Task state above
- * // Define a second state machine with the Task state above
- * StateMachine.Builder.create(this, "ParentStateMachine")
- * .definition(task)
- * .build();
+ * api.root.addMethod("GET", StepFunctionsIntegration.startExecution(stateMachine));
  * ```
  */
 public open class Pass(

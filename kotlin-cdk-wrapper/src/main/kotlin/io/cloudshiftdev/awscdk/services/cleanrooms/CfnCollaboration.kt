@@ -48,6 +48,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .name("name")
  * .queryLogStatus("queryLogStatus")
  * // the properties below are optional
+ * .analyticsEngine("analyticsEngine")
  * .creatorPaymentConfiguration(PaymentConfigurationProperty.builder()
  * .queryCompute(QueryComputePaymentConfigProperty.builder()
  * .isResponsible(false)
@@ -88,6 +89,18 @@ public open class CfnCollaboration(
     props: CfnCollaborationProps.Builder.() -> Unit,
   ) : this(scope, id, CfnCollaborationProps(props)
   )
+
+  /**
+   * The analytics engine for the collaboration.
+   */
+  public open fun analyticsEngine(): String? = unwrap(this).getAnalyticsEngine()
+
+  /**
+   * The analytics engine for the collaboration.
+   */
+  public open fun analyticsEngine(`value`: String) {
+    unwrap(this).setAnalyticsEngine(`value`)
+  }
 
   /**
    * Returns the Amazon Resource Name (ARN) of the specified collaboration.
@@ -294,6 +307,14 @@ public open class CfnCollaboration(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The analytics engine for the collaboration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-analyticsengine)
+     * @param analyticsEngine The analytics engine for the collaboration. 
+     */
+    public fun analyticsEngine(analyticsEngine: String)
+
+    /**
      * A display name of the collaboration creator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-creatordisplayname)
@@ -473,6 +494,16 @@ public open class CfnCollaboration(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.cleanrooms.CfnCollaboration.Builder =
         software.amazon.awscdk.services.cleanrooms.CfnCollaboration.Builder.create(scope, id)
+
+    /**
+     * The analytics engine for the collaboration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-collaboration.html#cfn-cleanrooms-collaboration-analyticsengine)
+     * @param analyticsEngine The analytics engine for the collaboration. 
+     */
+    override fun analyticsEngine(analyticsEngine: String) {
+      cdkBuilder.analyticsEngine(analyticsEngine)
+    }
 
     /**
      * A display name of the collaboration creator.

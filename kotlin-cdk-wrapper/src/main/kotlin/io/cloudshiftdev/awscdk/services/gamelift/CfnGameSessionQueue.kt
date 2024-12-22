@@ -200,26 +200,30 @@ public open class CfnGameSessionQueue(
   }
 
   /**
-   * A set of policies that act as a sliding cap on player latency.
+   * A set of policies that enforce a sliding cap on player latency when processing game sessions
+   * placement requests.
    */
   public open fun playerLatencyPolicies(): Any? = unwrap(this).getPlayerLatencyPolicies()
 
   /**
-   * A set of policies that act as a sliding cap on player latency.
+   * A set of policies that enforce a sliding cap on player latency when processing game sessions
+   * placement requests.
    */
   public open fun playerLatencyPolicies(`value`: IResolvable) {
     unwrap(this).setPlayerLatencyPolicies(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * A set of policies that act as a sliding cap on player latency.
+   * A set of policies that enforce a sliding cap on player latency when processing game sessions
+   * placement requests.
    */
   public open fun playerLatencyPolicies(`value`: List<Any>) {
     unwrap(this).setPlayerLatencyPolicies(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * A set of policies that act as a sliding cap on player latency.
+   * A set of policies that enforce a sliding cap on player latency when processing game sessions
+   * placement requests.
    */
   public open fun playerLatencyPolicies(vararg `value`: Any): Unit =
       playerLatencyPolicies(`value`.toList())
@@ -405,41 +409,41 @@ public open class CfnGameSessionQueue(
     public fun notificationTarget(notificationTarget: String)
 
     /**
-     * A set of policies that act as a sliding cap on player latency.
+     * A set of policies that enforce a sliding cap on player latency when processing game sessions
+     * placement requests.
      *
-     * FleetIQ works to deliver low latency for most players in a game session. These policies
-     * ensure that no individual player can be placed into a game with unreasonably high latency. Use
-     * multiple policies to gradually relax latency requirements a step at a time. Multiple policies
-     * are applied based on their maximum allowed latency, starting with the lowest value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
+     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
-     * @param playerLatencyPolicies A set of policies that act as a sliding cap on player latency. 
+     * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
+     * when processing game sessions placement requests. 
      */
     public fun playerLatencyPolicies(playerLatencyPolicies: IResolvable)
 
     /**
-     * A set of policies that act as a sliding cap on player latency.
+     * A set of policies that enforce a sliding cap on player latency when processing game sessions
+     * placement requests.
      *
-     * FleetIQ works to deliver low latency for most players in a game session. These policies
-     * ensure that no individual player can be placed into a game with unreasonably high latency. Use
-     * multiple policies to gradually relax latency requirements a step at a time. Multiple policies
-     * are applied based on their maximum allowed latency, starting with the lowest value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
+     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
-     * @param playerLatencyPolicies A set of policies that act as a sliding cap on player latency. 
+     * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
+     * when processing game sessions placement requests. 
      */
     public fun playerLatencyPolicies(playerLatencyPolicies: List<Any>)
 
     /**
-     * A set of policies that act as a sliding cap on player latency.
+     * A set of policies that enforce a sliding cap on player latency when processing game sessions
+     * placement requests.
      *
-     * FleetIQ works to deliver low latency for most players in a game session. These policies
-     * ensure that no individual player can be placed into a game with unreasonably high latency. Use
-     * multiple policies to gradually relax latency requirements a step at a time. Multiple policies
-     * are applied based on their maximum allowed latency, starting with the lowest value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
+     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
-     * @param playerLatencyPolicies A set of policies that act as a sliding cap on player latency. 
+     * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
+     * when processing game sessions placement requests. 
      */
     public fun playerLatencyPolicies(vararg playerLatencyPolicies: Any)
 
@@ -519,7 +523,6 @@ public open class CfnGameSessionQueue(
      * The maximum time, in seconds, that a new game session placement request remains in the queue.
      *
      * When a request exceeds this time, the game session placement changes to a `TIMED_OUT` status.
-     * By default, this property is set to `600` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-timeoutinseconds)
      * @param timeoutInSeconds The maximum time, in seconds, that a new game session placement
@@ -660,45 +663,45 @@ public open class CfnGameSessionQueue(
     }
 
     /**
-     * A set of policies that act as a sliding cap on player latency.
+     * A set of policies that enforce a sliding cap on player latency when processing game sessions
+     * placement requests.
      *
-     * FleetIQ works to deliver low latency for most players in a game session. These policies
-     * ensure that no individual player can be placed into a game with unreasonably high latency. Use
-     * multiple policies to gradually relax latency requirements a step at a time. Multiple policies
-     * are applied based on their maximum allowed latency, starting with the lowest value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
+     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
-     * @param playerLatencyPolicies A set of policies that act as a sliding cap on player latency. 
+     * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
+     * when processing game sessions placement requests. 
      */
     override fun playerLatencyPolicies(playerLatencyPolicies: IResolvable) {
       cdkBuilder.playerLatencyPolicies(playerLatencyPolicies.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * A set of policies that act as a sliding cap on player latency.
+     * A set of policies that enforce a sliding cap on player latency when processing game sessions
+     * placement requests.
      *
-     * FleetIQ works to deliver low latency for most players in a game session. These policies
-     * ensure that no individual player can be placed into a game with unreasonably high latency. Use
-     * multiple policies to gradually relax latency requirements a step at a time. Multiple policies
-     * are applied based on their maximum allowed latency, starting with the lowest value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
+     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
-     * @param playerLatencyPolicies A set of policies that act as a sliding cap on player latency. 
+     * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
+     * when processing game sessions placement requests. 
      */
     override fun playerLatencyPolicies(playerLatencyPolicies: List<Any>) {
       cdkBuilder.playerLatencyPolicies(playerLatencyPolicies.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * A set of policies that act as a sliding cap on player latency.
+     * A set of policies that enforce a sliding cap on player latency when processing game sessions
+     * placement requests.
      *
-     * FleetIQ works to deliver low latency for most players in a game session. These policies
-     * ensure that no individual player can be placed into a game with unreasonably high latency. Use
-     * multiple policies to gradually relax latency requirements a step at a time. Multiple policies
-     * are applied based on their maximum allowed latency, starting with the lowest value.
+     * Use multiple policies to gradually relax the cap over time if Amazon GameLift can't make a
+     * placement. Policies are evaluated in order starting with the lowest maximum latency value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-playerlatencypolicies)
-     * @param playerLatencyPolicies A set of policies that act as a sliding cap on player latency. 
+     * @param playerLatencyPolicies A set of policies that enforce a sliding cap on player latency
+     * when processing game sessions placement requests. 
      */
     override fun playerLatencyPolicies(vararg playerLatencyPolicies: Any): Unit =
         playerLatencyPolicies(playerLatencyPolicies.toList())
@@ -786,7 +789,6 @@ public open class CfnGameSessionQueue(
      * The maximum time, in seconds, that a new game session placement request remains in the queue.
      *
      * When a request exceeds this time, the game session placement changes to a `TIMED_OUT` status.
-     * By default, this property is set to `600` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-gamesessionqueue.html#cfn-gamelift-gamesessionqueue-timeoutinseconds)
      * @param timeoutInSeconds The maximum time, in seconds, that a new game session placement

@@ -33,6 +33,7 @@ import kotlin.collections.List
  * .automaticFailoverEnabled(false)
  * .cacheNodeType("cacheNodeType")
  * .cacheParameterGroupName("cacheParameterGroupName")
+ * .engine("engine")
  * .engineVersion("engineVersion")
  * .globalNodeGroupCount(123)
  * .globalReplicationGroupDescription("globalReplicationGroupDescription")
@@ -55,8 +56,8 @@ public interface CfnGlobalReplicationGroupProps {
    * Specifies whether a read-only replica is automatically promoted to read/write primary if the
    * existing primary fails.
    *
-   * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-   * groups.
+   * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+   * replication groups.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled)
    */
@@ -79,7 +80,16 @@ public interface CfnGlobalReplicationGroupProps {
   public fun cacheParameterGroupName(): String? = unwrap(this).getCacheParameterGroupName()
 
   /**
-   * The Elasticache Redis OSS engine version.
+   * The ElastiCache engine.
+   *
+   * For Valkey or Redis OSS only.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-engine)
+   */
+  public fun engine(): String? = unwrap(this).getEngine()
+
+  /**
+   * The Elasticache Valkey or Redis OSS engine version.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-engineversion)
    */
@@ -132,16 +142,16 @@ public interface CfnGlobalReplicationGroupProps {
     /**
      * @param automaticFailoverEnabled Specifies whether a read-only replica is automatically
      * promoted to read/write primary if the existing primary fails.
-     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-     * groups.
+     * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+     * replication groups.
      */
     public fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean)
 
     /**
      * @param automaticFailoverEnabled Specifies whether a read-only replica is automatically
      * promoted to read/write primary if the existing primary fails.
-     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-     * groups.
+     * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+     * replication groups.
      */
     public fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable)
 
@@ -158,7 +168,13 @@ public interface CfnGlobalReplicationGroupProps {
     public fun cacheParameterGroupName(cacheParameterGroupName: String)
 
     /**
-     * @param engineVersion The Elasticache Redis OSS engine version.
+     * @param engine The ElastiCache engine.
+     * For Valkey or Redis OSS only.
+     */
+    public fun engine(engine: String)
+
+    /**
+     * @param engineVersion The Elasticache Valkey or Redis OSS engine version.
      */
     public fun engineVersion(engineVersion: String)
 
@@ -217,8 +233,8 @@ public interface CfnGlobalReplicationGroupProps {
     /**
      * @param automaticFailoverEnabled Specifies whether a read-only replica is automatically
      * promoted to read/write primary if the existing primary fails.
-     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-     * groups.
+     * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+     * replication groups.
      */
     override fun automaticFailoverEnabled(automaticFailoverEnabled: Boolean) {
       cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled)
@@ -227,8 +243,8 @@ public interface CfnGlobalReplicationGroupProps {
     /**
      * @param automaticFailoverEnabled Specifies whether a read-only replica is automatically
      * promoted to read/write primary if the existing primary fails.
-     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-     * groups.
+     * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+     * replication groups.
      */
     override fun automaticFailoverEnabled(automaticFailoverEnabled: IResolvable) {
       cdkBuilder.automaticFailoverEnabled(automaticFailoverEnabled.let(IResolvable.Companion::unwrap))
@@ -251,7 +267,15 @@ public interface CfnGlobalReplicationGroupProps {
     }
 
     /**
-     * @param engineVersion The Elasticache Redis OSS engine version.
+     * @param engine The ElastiCache engine.
+     * For Valkey or Redis OSS only.
+     */
+    override fun engine(engine: String) {
+      cdkBuilder.engine(engine)
+    }
+
+    /**
+     * @param engineVersion The Elasticache Valkey or Redis OSS engine version.
      */
     override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
@@ -330,8 +354,8 @@ public interface CfnGlobalReplicationGroupProps {
      * Specifies whether a read-only replica is automatically promoted to read/write primary if the
      * existing primary fails.
      *
-     * `AutomaticFailoverEnabled` must be enabled for Redis OSS (cluster mode enabled) replication
-     * groups.
+     * `AutomaticFailoverEnabled` must be enabled for Valkey or Redis OSS (cluster mode enabled)
+     * replication groups.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-automaticfailoverenabled)
      */
@@ -354,7 +378,16 @@ public interface CfnGlobalReplicationGroupProps {
     override fun cacheParameterGroupName(): String? = unwrap(this).getCacheParameterGroupName()
 
     /**
-     * The Elasticache Redis OSS engine version.
+     * The ElastiCache engine.
+     *
+     * For Valkey or Redis OSS only.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-engine)
+     */
+    override fun engine(): String? = unwrap(this).getEngine()
+
+    /**
+     * The Elasticache Valkey or Redis OSS engine version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-globalreplicationgroup.html#cfn-elasticache-globalreplicationgroup-engineversion)
      */

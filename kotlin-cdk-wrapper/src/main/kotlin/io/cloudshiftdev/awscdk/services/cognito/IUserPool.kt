@@ -72,6 +72,26 @@ public interface IUserPool : IResource {
       UserPoolDomain
 
   /**
+   * Add a new group to this user pool.
+   *
+   * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-user-groups.html)
+   * @param id 
+   * @param options 
+   */
+  public fun addGroup(id: String, options: UserPoolGroupOptions): UserPoolGroup
+
+  /**
+   * Add a new group to this user pool.
+   *
+   * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-user-groups.html)
+   * @param id 
+   * @param options 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("ed60659e1cd7a9eaf786d6b5c28d91b9f35ff91fa1d394660d954ba05aa25f09")
+  public fun addGroup(id: String, options: UserPoolGroupOptions.Builder.() -> Unit): UserPoolGroup
+
+  /**
    * Add a new resource server to this user pool.
    *
    * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-resource-servers.html)
@@ -187,6 +207,29 @@ public interface IUserPool : IResource {
     @JvmName("8ec5f0dfd81190c1f527b75d6573c8eecb7722a4724cfee3c560b8e67d4e8e51")
     override fun addDomain(id: String, options: UserPoolDomainOptions.Builder.() -> Unit):
         UserPoolDomain = addDomain(id, UserPoolDomainOptions(options))
+
+    /**
+     * Add a new group to this user pool.
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-user-groups.html)
+     * @param id 
+     * @param options 
+     */
+    override fun addGroup(id: String, options: UserPoolGroupOptions): UserPoolGroup =
+        unwrap(this).addGroup(id,
+        options.let(UserPoolGroupOptions.Companion::unwrap)).let(UserPoolGroup::wrap)
+
+    /**
+     * Add a new group to this user pool.
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-user-groups.html)
+     * @param id 
+     * @param options 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ed60659e1cd7a9eaf786d6b5c28d91b9f35ff91fa1d394660d954ba05aa25f09")
+    override fun addGroup(id: String, options: UserPoolGroupOptions.Builder.() -> Unit):
+        UserPoolGroup = addGroup(id, UserPoolGroupOptions(options))
 
     /**
      * Add a new resource server to this user pool.

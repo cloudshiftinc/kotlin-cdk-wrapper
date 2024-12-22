@@ -1358,9 +1358,7 @@ public open class CfnInstance(
      * An elastic inference accelerator to associate with the instance.
      *
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -1373,9 +1371,7 @@ public open class CfnInstance(
      * An elastic inference accelerator to associate with the instance.
      *
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -1388,9 +1384,7 @@ public open class CfnInstance(
      * An elastic inference accelerator to associate with the instance.
      *
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -2493,9 +2487,7 @@ public open class CfnInstance(
      * An elastic inference accelerator to associate with the instance.
      *
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -2510,9 +2502,7 @@ public open class CfnInstance(
      * An elastic inference accelerator to associate with the instance.
      *
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -2527,9 +2517,7 @@ public open class CfnInstance(
      * An elastic inference accelerator to associate with the instance.
      *
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)

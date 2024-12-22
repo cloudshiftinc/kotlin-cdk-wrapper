@@ -134,30 +134,30 @@ public open class CfnContainer(
   }
 
   /**
-   * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-   * container can service cross-origin requests.
+   * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+   * MediaStore.
    */
   public open fun corsPolicy(): Any? = unwrap(this).getCorsPolicy()
 
   /**
-   * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-   * container can service cross-origin requests.
+   * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+   * MediaStore.
    */
   public open fun corsPolicy(`value`: IResolvable) {
     unwrap(this).setCorsPolicy(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-   * container can service cross-origin requests.
+   * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+   * MediaStore.
    */
   public open fun corsPolicy(`value`: List<Any>) {
     unwrap(this).setCorsPolicy(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-   * container can service cross-origin requests.
+   * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+   * MediaStore.
    */
   public open fun corsPolicy(vararg `value`: Any): Unit = corsPolicy(`value`.toList())
 
@@ -171,12 +171,14 @@ public open class CfnContainer(
   }
 
   /**
-   * Writes an object lifecycle policy to a container.
+   * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+   * MediaStore.
    */
   public open fun lifecyclePolicy(): String? = unwrap(this).getLifecyclePolicy()
 
   /**
-   * Writes an object lifecycle policy to a container.
+   * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+   * MediaStore.
    */
   public open fun lifecyclePolicy(`value`: String) {
     unwrap(this).setLifecyclePolicy(`value`)
@@ -290,12 +292,17 @@ public open class CfnContainer(
     public fun containerName(containerName: String)
 
     /**
-     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-     * container can service cross-origin requests.
+     * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+     * MediaStore.
      *
-     * For example, you might want to enable a request whose origin is http://www.example.com to
-     * access your AWS Elemental MediaStore container at my.example.container.com by using the
-     * browser's XMLHttpRequest capability.
+     * After November 13, 2025, you will no longer be able to access the AWS Elemental MediaStore
+     * console or AWS Elemental MediaStore resources. For more information, visit this [blog
+     * post](https://docs.aws.amazon.com/media/support-for-aws-elemental-mediastore-ending-soon/) .
+     *
+     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
+     * container can service cross-origin requests. For example, you might want to enable a request
+     * whose origin is http://www.example.com to access your AWS Elemental MediaStore container at
+     * my.example.container.com by using the browser's XMLHttpRequest capability.
      *
      * To enable CORS on a container, you attach a CORS policy to the container. In the CORS policy,
      * you configure rules that identify origins and the HTTP methods that can be executed on your
@@ -306,18 +313,23 @@ public open class CfnContainer(
      * MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-corspolicy)
-     * @param corsPolicy Sets the cross-origin resource sharing (CORS) configuration on a container
-     * so that the container can service cross-origin requests. 
+     * @param corsPolicy End of support notice: On November 13, 2025, AWS will discontinue support
+     * for AWS Elemental MediaStore. 
      */
     public fun corsPolicy(corsPolicy: IResolvable)
 
     /**
-     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-     * container can service cross-origin requests.
+     * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+     * MediaStore.
      *
-     * For example, you might want to enable a request whose origin is http://www.example.com to
-     * access your AWS Elemental MediaStore container at my.example.container.com by using the
-     * browser's XMLHttpRequest capability.
+     * After November 13, 2025, you will no longer be able to access the AWS Elemental MediaStore
+     * console or AWS Elemental MediaStore resources. For more information, visit this [blog
+     * post](https://docs.aws.amazon.com/media/support-for-aws-elemental-mediastore-ending-soon/) .
+     *
+     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
+     * container can service cross-origin requests. For example, you might want to enable a request
+     * whose origin is http://www.example.com to access your AWS Elemental MediaStore container at
+     * my.example.container.com by using the browser's XMLHttpRequest capability.
      *
      * To enable CORS on a container, you attach a CORS policy to the container. In the CORS policy,
      * you configure rules that identify origins and the HTTP methods that can be executed on your
@@ -328,18 +340,23 @@ public open class CfnContainer(
      * MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-corspolicy)
-     * @param corsPolicy Sets the cross-origin resource sharing (CORS) configuration on a container
-     * so that the container can service cross-origin requests. 
+     * @param corsPolicy End of support notice: On November 13, 2025, AWS will discontinue support
+     * for AWS Elemental MediaStore. 
      */
     public fun corsPolicy(corsPolicy: List<Any>)
 
     /**
-     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-     * container can service cross-origin requests.
+     * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+     * MediaStore.
      *
-     * For example, you might want to enable a request whose origin is http://www.example.com to
-     * access your AWS Elemental MediaStore container at my.example.container.com by using the
-     * browser's XMLHttpRequest capability.
+     * After November 13, 2025, you will no longer be able to access the AWS Elemental MediaStore
+     * console or AWS Elemental MediaStore resources. For more information, visit this [blog
+     * post](https://docs.aws.amazon.com/media/support-for-aws-elemental-mediastore-ending-soon/) .
+     *
+     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
+     * container can service cross-origin requests. For example, you might want to enable a request
+     * whose origin is http://www.example.com to access your AWS Elemental MediaStore container at
+     * my.example.container.com by using the browser's XMLHttpRequest capability.
      *
      * To enable CORS on a container, you attach a CORS policy to the container. In the CORS policy,
      * you configure rules that identify origins and the HTTP methods that can be executed on your
@@ -350,16 +367,22 @@ public open class CfnContainer(
      * MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-corspolicy)
-     * @param corsPolicy Sets the cross-origin resource sharing (CORS) configuration on a container
-     * so that the container can service cross-origin requests. 
+     * @param corsPolicy End of support notice: On November 13, 2025, AWS will discontinue support
+     * for AWS Elemental MediaStore. 
      */
     public fun corsPolicy(vararg corsPolicy: Any)
 
     /**
-     * Writes an object lifecycle policy to a container.
+     * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+     * MediaStore.
      *
-     * If the container already has an object lifecycle policy, the service replaces the existing
-     * policy with the new policy. It takes up to 20 minutes for the change to take effect.
+     * After November 13, 2025, you will no longer be able to access the AWS Elemental MediaStore
+     * console or AWS Elemental MediaStore resources. For more information, visit this [blog
+     * post](https://docs.aws.amazon.com/media/support-for-aws-elemental-mediastore-ending-soon/) .
+     *
+     * Writes an object lifecycle policy to a container. If the container already has an object
+     * lifecycle policy, the service replaces the existing policy with the new policy. It takes up to
+     * 20 minutes for the change to take effect.
      *
      * For information about how to construct an object lifecycle policy, see [Components of an
      * Object Lifecycle
@@ -367,7 +390,8 @@ public open class CfnContainer(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-lifecyclepolicy)
-     * @param lifecyclePolicy Writes an object lifecycle policy to a container. 
+     * @param lifecyclePolicy End of support notice: On November 13, 2025, AWS will discontinue
+     * support for AWS Elemental MediaStore. 
      */
     public fun lifecyclePolicy(lifecyclePolicy: String)
 
@@ -502,12 +526,17 @@ public open class CfnContainer(
     }
 
     /**
-     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-     * container can service cross-origin requests.
+     * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+     * MediaStore.
      *
-     * For example, you might want to enable a request whose origin is http://www.example.com to
-     * access your AWS Elemental MediaStore container at my.example.container.com by using the
-     * browser's XMLHttpRequest capability.
+     * After November 13, 2025, you will no longer be able to access the AWS Elemental MediaStore
+     * console or AWS Elemental MediaStore resources. For more information, visit this [blog
+     * post](https://docs.aws.amazon.com/media/support-for-aws-elemental-mediastore-ending-soon/) .
+     *
+     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
+     * container can service cross-origin requests. For example, you might want to enable a request
+     * whose origin is http://www.example.com to access your AWS Elemental MediaStore container at
+     * my.example.container.com by using the browser's XMLHttpRequest capability.
      *
      * To enable CORS on a container, you attach a CORS policy to the container. In the CORS policy,
      * you configure rules that identify origins and the HTTP methods that can be executed on your
@@ -518,20 +547,25 @@ public open class CfnContainer(
      * MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-corspolicy)
-     * @param corsPolicy Sets the cross-origin resource sharing (CORS) configuration on a container
-     * so that the container can service cross-origin requests. 
+     * @param corsPolicy End of support notice: On November 13, 2025, AWS will discontinue support
+     * for AWS Elemental MediaStore. 
      */
     override fun corsPolicy(corsPolicy: IResolvable) {
       cdkBuilder.corsPolicy(corsPolicy.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-     * container can service cross-origin requests.
+     * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+     * MediaStore.
      *
-     * For example, you might want to enable a request whose origin is http://www.example.com to
-     * access your AWS Elemental MediaStore container at my.example.container.com by using the
-     * browser's XMLHttpRequest capability.
+     * After November 13, 2025, you will no longer be able to access the AWS Elemental MediaStore
+     * console or AWS Elemental MediaStore resources. For more information, visit this [blog
+     * post](https://docs.aws.amazon.com/media/support-for-aws-elemental-mediastore-ending-soon/) .
+     *
+     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
+     * container can service cross-origin requests. For example, you might want to enable a request
+     * whose origin is http://www.example.com to access your AWS Elemental MediaStore container at
+     * my.example.container.com by using the browser's XMLHttpRequest capability.
      *
      * To enable CORS on a container, you attach a CORS policy to the container. In the CORS policy,
      * you configure rules that identify origins and the HTTP methods that can be executed on your
@@ -542,20 +576,25 @@ public open class CfnContainer(
      * MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-corspolicy)
-     * @param corsPolicy Sets the cross-origin resource sharing (CORS) configuration on a container
-     * so that the container can service cross-origin requests. 
+     * @param corsPolicy End of support notice: On November 13, 2025, AWS will discontinue support
+     * for AWS Elemental MediaStore. 
      */
     override fun corsPolicy(corsPolicy: List<Any>) {
       cdkBuilder.corsPolicy(corsPolicy.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
-     * container can service cross-origin requests.
+     * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+     * MediaStore.
      *
-     * For example, you might want to enable a request whose origin is http://www.example.com to
-     * access your AWS Elemental MediaStore container at my.example.container.com by using the
-     * browser's XMLHttpRequest capability.
+     * After November 13, 2025, you will no longer be able to access the AWS Elemental MediaStore
+     * console or AWS Elemental MediaStore resources. For more information, visit this [blog
+     * post](https://docs.aws.amazon.com/media/support-for-aws-elemental-mediastore-ending-soon/) .
+     *
+     * Sets the cross-origin resource sharing (CORS) configuration on a container so that the
+     * container can service cross-origin requests. For example, you might want to enable a request
+     * whose origin is http://www.example.com to access your AWS Elemental MediaStore container at
+     * my.example.container.com by using the browser's XMLHttpRequest capability.
      *
      * To enable CORS on a container, you attach a CORS policy to the container. In the CORS policy,
      * you configure rules that identify origins and the HTTP methods that can be executed on your
@@ -566,16 +605,22 @@ public open class CfnContainer(
      * MediaStore](https://docs.aws.amazon.com/mediastore/latest/ug/cors-policy.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-corspolicy)
-     * @param corsPolicy Sets the cross-origin resource sharing (CORS) configuration on a container
-     * so that the container can service cross-origin requests. 
+     * @param corsPolicy End of support notice: On November 13, 2025, AWS will discontinue support
+     * for AWS Elemental MediaStore. 
      */
     override fun corsPolicy(vararg corsPolicy: Any): Unit = corsPolicy(corsPolicy.toList())
 
     /**
-     * Writes an object lifecycle policy to a container.
+     * End of support notice: On November 13, 2025, AWS will discontinue support for AWS Elemental
+     * MediaStore.
      *
-     * If the container already has an object lifecycle policy, the service replaces the existing
-     * policy with the new policy. It takes up to 20 minutes for the change to take effect.
+     * After November 13, 2025, you will no longer be able to access the AWS Elemental MediaStore
+     * console or AWS Elemental MediaStore resources. For more information, visit this [blog
+     * post](https://docs.aws.amazon.com/media/support-for-aws-elemental-mediastore-ending-soon/) .
+     *
+     * Writes an object lifecycle policy to a container. If the container already has an object
+     * lifecycle policy, the service replaces the existing policy with the new policy. It takes up to
+     * 20 minutes for the change to take effect.
      *
      * For information about how to construct an object lifecycle policy, see [Components of an
      * Object Lifecycle
@@ -583,7 +628,8 @@ public open class CfnContainer(
      * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediastore-container.html#cfn-mediastore-container-lifecyclepolicy)
-     * @param lifecyclePolicy Writes an object lifecycle policy to a container. 
+     * @param lifecyclePolicy End of support notice: On November 13, 2025, AWS will discontinue
+     * support for AWS Elemental MediaStore. 
      */
     override fun lifecyclePolicy(lifecyclePolicy: String) {
       cdkBuilder.lifecyclePolicy(lifecyclePolicy)

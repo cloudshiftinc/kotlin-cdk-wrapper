@@ -40,6 +40,10 @@ import kotlin.jvm.JvmName
  * .build())
  * .build()))
  * .onStartDeepHealthChecks(List.of("onStartDeepHealthChecks"))
+ * .overrideVpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
  * .threadsPerCore(123)
  * .build()))
  * // the properties below are optional

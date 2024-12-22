@@ -68,6 +68,7 @@ import kotlin.jvm.JvmName
  * .maintenanceTrackName("maintenanceTrackName")
  * .manageMasterPassword(false)
  * .manualSnapshotRetentionPeriod(123)
+ * .masterPasswordSecretKmsKeyId("masterPasswordSecretKmsKeyId")
  * .masterUserPassword("masterUserPassword")
  * .multiAz(false)
  * .namespaceResourcePolicy(namespaceResourcePolicy)
@@ -452,6 +453,17 @@ public interface CfnClusterProps {
       unwrap(this).getManualSnapshotRetentionPeriod()
 
   /**
+   * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
+   * admin credentials secret.
+   *
+   * You can only use this parameter if `ManageMasterPassword` is true.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterpasswordsecretkmskeyid)
+   */
+  public fun masterPasswordSecretKmsKeyId(): String? =
+      unwrap(this).getMasterPasswordSecretKmsKeyId()
+
+  /**
    * The password associated with the admin user account for the cluster that is being created.
    *
    * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -511,7 +523,8 @@ public interface CfnClusterProps {
    * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
    * in the *Amazon Redshift Cluster Management Guide* .
    *
-   * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+   * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.large` | `ra3.xlplus` | `ra3.4xlarge` |
+   * `ra3.16xlarge`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
    */
@@ -1087,6 +1100,13 @@ public interface CfnClusterProps {
     public fun manualSnapshotRetentionPeriod(manualSnapshotRetentionPeriod: Number)
 
     /**
+     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
+     * to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if `ManageMasterPassword` is true.
+     */
+    public fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String)
+
+    /**
      * @param masterUserPassword The password associated with the admin user account for the cluster
      * that is being created.
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -1143,7 +1163,8 @@ public interface CfnClusterProps {
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.large` | `ra3.xlplus` | `ra3.4xlarge` |
+     * `ra3.16xlarge`
      */
     public fun nodeType(nodeType: String)
 
@@ -1792,6 +1813,15 @@ public interface CfnClusterProps {
     }
 
     /**
+     * @param masterPasswordSecretKmsKeyId The ID of the AWS Key Management Service (KMS) key used
+     * to encrypt and store the cluster's admin credentials secret.
+     * You can only use this parameter if `ManageMasterPassword` is true.
+     */
+    override fun masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId: String) {
+      cdkBuilder.masterPasswordSecretKmsKeyId(masterPasswordSecretKmsKeyId)
+    }
+
+    /**
      * @param masterUserPassword The password associated with the admin user account for the cluster
      * that is being created.
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -1858,7 +1888,8 @@ public interface CfnClusterProps {
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.large` | `ra3.xlplus` | `ra3.4xlarge` |
+     * `ra3.16xlarge`
      */
     override fun nodeType(nodeType: String) {
       cdkBuilder.nodeType(nodeType)
@@ -2437,6 +2468,17 @@ public interface CfnClusterProps {
         unwrap(this).getManualSnapshotRetentionPeriod()
 
     /**
+     * The ID of the AWS Key Management Service (KMS) key used to encrypt and store the cluster's
+     * admin credentials secret.
+     *
+     * You can only use this parameter if `ManageMasterPassword` is true.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-masterpasswordsecretkmskeyid)
+     */
+    override fun masterPasswordSecretKmsKeyId(): String? =
+        unwrap(this).getMasterPasswordSecretKmsKeyId()
+
+    /**
      * The password associated with the admin user account for the cluster that is being created.
      *
      * You can't use `MasterUserPassword` if `ManageMasterPassword` is `true` .
@@ -2496,7 +2538,8 @@ public interface CfnClusterProps {
      * Clusters](https://docs.aws.amazon.com/redshift/latest/mgmt/working-with-clusters.html#how-many-nodes)
      * in the *Amazon Redshift Cluster Management Guide* .
      *
-     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.xlplus` | `ra3.4xlarge` | `ra3.16xlarge`
+     * Valid Values: `dc2.large` | `dc2.8xlarge` | `ra3.large` | `ra3.xlplus` | `ra3.4xlarge` |
+     * `ra3.16xlarge`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-redshift-cluster.html#cfn-redshift-cluster-nodetype)
      */

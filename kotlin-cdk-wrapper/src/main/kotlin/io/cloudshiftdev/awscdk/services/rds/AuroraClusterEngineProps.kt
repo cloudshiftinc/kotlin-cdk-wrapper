@@ -5,10 +5,11 @@ package io.cloudshiftdev.awscdk.services.rds
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Deprecated
 import kotlin.Unit
 
 /**
- * Creation properties of the plain Aurora database cluster engine.
+ * (deprecated) Creation properties of the plain Aurora database cluster engine.
  *
  * Used in `DatabaseClusterEngine.aurora`.
  *
@@ -23,21 +24,26 @@ import kotlin.Unit
  * .snapshotIdentifier("mySnapshot")
  * .build();
  * ```
+ *
+ * @deprecated use `AuroraMysqlClusterEngineProps` instead
  */
 public interface AuroraClusterEngineProps {
   /**
-   * The version of the Aurora cluster engine.
+   * (deprecated) The version of the Aurora cluster engine.
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun version(): AuroraEngineVersion
 
   /**
    * A builder for [AuroraClusterEngineProps]
    */
   @CdkDslMarker
+  @Deprecated(message = "deprecated in CDK")
   public interface Builder {
     /**
      * @param version The version of the Aurora cluster engine. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun version(version: AuroraEngineVersion)
   }
 
@@ -48,6 +54,7 @@ public interface AuroraClusterEngineProps {
     /**
      * @param version The version of the Aurora cluster engine. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun version(version: AuroraEngineVersion) {
       cdkBuilder.version(version.let(AuroraEngineVersion.Companion::unwrap))
     }
@@ -61,8 +68,9 @@ public interface AuroraClusterEngineProps {
   ) : CdkObject(cdkObject),
       AuroraClusterEngineProps {
     /**
-     * The version of the Aurora cluster engine.
+     * (deprecated) The version of the Aurora cluster engine.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun version(): AuroraEngineVersion =
         unwrap(this).getVersion().let(AuroraEngineVersion::wrap)
   }

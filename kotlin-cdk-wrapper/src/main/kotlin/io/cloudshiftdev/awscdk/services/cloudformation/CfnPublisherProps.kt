@@ -46,7 +46,7 @@ public interface CfnPublisherProps {
    * If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource
    * Name (ARN) for your connection to that account.
    *
-   * For more information, see [Registering your account to publish CloudFormation
+   * For more information, see [Prerequisite: Registering your account to publish CloudFormation
    * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
    * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
    *
@@ -80,7 +80,7 @@ public interface CfnPublisherProps {
     /**
      * @param connectionArn If you are using a Bitbucket or GitHub account for identity
      * verification, the Amazon Resource Name (ARN) for your connection to that account.
-     * For more information, see [Registering your account to publish CloudFormation
+     * For more information, see [Prerequisite: Registering your account to publish CloudFormation
      * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
      * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      */
@@ -116,7 +116,7 @@ public interface CfnPublisherProps {
     /**
      * @param connectionArn If you are using a Bitbucket or GitHub account for identity
      * verification, the Amazon Resource Name (ARN) for your connection to that account.
-     * For more information, see [Registering your account to publish CloudFormation
+     * For more information, see [Prerequisite: Registering your account to publish CloudFormation
      * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
      * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      */
@@ -148,7 +148,7 @@ public interface CfnPublisherProps {
      * If you are using a Bitbucket or GitHub account for identity verification, the Amazon Resource
      * Name (ARN) for your connection to that account.
      *
-     * For more information, see [Registering your account to publish CloudFormation
+     * For more information, see [Prerequisite: Registering your account to publish CloudFormation
      * extensions](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/publish-extension.html#publish-extension-prereqs)
      * in the *AWS CloudFormation Command Line Interface (CLI) User Guide* .
      *

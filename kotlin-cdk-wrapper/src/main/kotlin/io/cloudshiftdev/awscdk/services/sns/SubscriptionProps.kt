@@ -10,6 +10,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Properties for creating a new subscription.
@@ -44,6 +45,18 @@ public interface SubscriptionProps : SubscriptionOptions {
      * If not passed no dead letter queue is enabled.
      */
     public fun deadLetterQueue(deadLetterQueue: IQueue)
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy)
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("160c362a1b333bbfee7593ec52211ac172ae59af71060ddd68c8e8921bb69fc8")
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit)
 
     /**
      * @param endpoint The subscription endpoint. 
@@ -105,6 +118,21 @@ public interface SubscriptionProps : SubscriptionOptions {
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
       cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy) {
+      cdkBuilder.deliveryPolicy(deliveryPolicy.let(DeliveryPolicy.Companion::unwrap))
+    }
+
+    /**
+     * @param deliveryPolicy The delivery policy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("160c362a1b333bbfee7593ec52211ac172ae59af71060ddd68c8e8921bb69fc8")
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit): Unit =
+        deliveryPolicy(DeliveryPolicy(deliveryPolicy))
 
     /**
      * @param endpoint The subscription endpoint. 
@@ -186,6 +214,15 @@ public interface SubscriptionProps : SubscriptionOptions {
      * Default: - No dead letter queue enabled.
      */
     override fun deadLetterQueue(): IQueue? = unwrap(this).getDeadLetterQueue()?.let(IQueue::wrap)
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     */
+    override fun deliveryPolicy(): DeliveryPolicy? =
+        unwrap(this).getDeliveryPolicy()?.let(DeliveryPolicy::wrap)
 
     /**
      * The subscription endpoint.

@@ -108,16 +108,17 @@ public interface NodejsFunctionProps : FunctionOptions {
   public fun code(): Code? = unwrap(this).getCode()?.let(Code::wrap)
 
   /**
-   * The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml` or `package-lock.json`).
+   * The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml`, `bun.lockb` or
+   * `package-lock.json`).
    *
    * This will be used as the source for the volume mounted in the Docker
    * container.
    *
    * Modules specified in `nodeModules` will be installed using the right
-   * installer (`yarn`, `pnpm` or `npm`) along with this lock file.
+   * installer (`yarn`, `pnpm`, `bun` or `npm`) along with this lock file.
    *
    * Default: - the path is found by walking up parent directories searching for
-   * a `yarn.lock`, `pnpm-lock.yaml` or `package-lock.json` file
+   * a `yarn.lock`, `pnpm-lock.yaml`, `bun.lockb` or `package-lock.json` file
    */
   public fun depsLockFilePath(): String? = unwrap(this).getDepsLockFilePath()
 
@@ -310,13 +311,13 @@ public interface NodejsFunctionProps : FunctionOptions {
     public fun deadLetterTopic(deadLetterTopic: ITopic)
 
     /**
-     * @param depsLockFilePath The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml`
-     * or `package-lock.json`).
+     * @param depsLockFilePath The path to the dependencies lock file (`yarn.lock`,
+     * `pnpm-lock.yaml`, `bun.lockb` or `package-lock.json`).
      * This will be used as the source for the volume mounted in the Docker
      * container.
      *
      * Modules specified in `nodeModules` will be installed using the right
-     * installer (`yarn`, `pnpm` or `npm`) along with this lock file.
+     * installer (`yarn`, `pnpm`, `bun` or `npm`) along with this lock file.
      */
     public fun depsLockFilePath(depsLockFilePath: String)
 
@@ -564,7 +565,7 @@ public interface NodejsFunctionProps : FunctionOptions {
 
     /**
      * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function.
-     * It lets Lambda detect and terminate unintended recusrive loops.
+     * It lets Lambda detect and terminate unintended recursive loops.
      */
     public fun recursiveLoop(recursiveLoop: RecursiveLoop)
 
@@ -624,7 +625,8 @@ public interface NodejsFunctionProps : FunctionOptions {
 
     /**
      * @param snapStart Enable SnapStart for Lambda Function.
-     * SnapStart is currently supported only for Java 11, 17 runtime
+     * SnapStart is currently supported for Java 11, Java 17, Python 3.12, Python 3.13, and .NET 8
+     * runtime
      */
     public fun snapStart(snapStart: SnapStartConf)
 
@@ -860,13 +862,13 @@ public interface NodejsFunctionProps : FunctionOptions {
     }
 
     /**
-     * @param depsLockFilePath The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml`
-     * or `package-lock.json`).
+     * @param depsLockFilePath The path to the dependencies lock file (`yarn.lock`,
+     * `pnpm-lock.yaml`, `bun.lockb` or `package-lock.json`).
      * This will be used as the source for the volume mounted in the Docker
      * container.
      *
      * Modules specified in `nodeModules` will be installed using the right
-     * installer (`yarn`, `pnpm` or `npm`) along with this lock file.
+     * installer (`yarn`, `pnpm`, `bun` or `npm`) along with this lock file.
      */
     override fun depsLockFilePath(depsLockFilePath: String) {
       cdkBuilder.depsLockFilePath(depsLockFilePath)
@@ -1172,7 +1174,7 @@ public interface NodejsFunctionProps : FunctionOptions {
 
     /**
      * @param recursiveLoop Sets the Recursive Loop Protection for Lambda Function.
-     * It lets Lambda detect and terminate unintended recusrive loops.
+     * It lets Lambda detect and terminate unintended recursive loops.
      */
     override fun recursiveLoop(recursiveLoop: RecursiveLoop) {
       cdkBuilder.recursiveLoop(recursiveLoop.let(RecursiveLoop.Companion::unwrap))
@@ -1247,7 +1249,8 @@ public interface NodejsFunctionProps : FunctionOptions {
 
     /**
      * @param snapStart Enable SnapStart for Lambda Function.
-     * SnapStart is currently supported only for Java 11, 17 runtime
+     * SnapStart is currently supported for Java 11, Java 17, Python 3.12, Python 3.13, and .NET 8
+     * runtime
      */
     override fun snapStart(snapStart: SnapStartConf) {
       cdkBuilder.snapStart(snapStart.let(SnapStartConf.Companion::unwrap))
@@ -1493,17 +1496,17 @@ public interface NodejsFunctionProps : FunctionOptions {
     override fun deadLetterTopic(): ITopic? = unwrap(this).getDeadLetterTopic()?.let(ITopic::wrap)
 
     /**
-     * The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml` or
+     * The path to the dependencies lock file (`yarn.lock`, `pnpm-lock.yaml`, `bun.lockb` or
      * `package-lock.json`).
      *
      * This will be used as the source for the volume mounted in the Docker
      * container.
      *
      * Modules specified in `nodeModules` will be installed using the right
-     * installer (`yarn`, `pnpm` or `npm`) along with this lock file.
+     * installer (`yarn`, `pnpm`, `bun` or `npm`) along with this lock file.
      *
      * Default: - the path is found by walking up parent directories searching for
-     * a `yarn.lock`, `pnpm-lock.yaml` or `package-lock.json` file
+     * a `yarn.lock`, `pnpm-lock.yaml`, `bun.lockb` or `package-lock.json` file
      */
     override fun depsLockFilePath(): String? = unwrap(this).getDepsLockFilePath()
 
@@ -1800,7 +1803,7 @@ public interface NodejsFunctionProps : FunctionOptions {
     /**
      * Sets the Recursive Loop Protection for Lambda Function.
      *
-     * It lets Lambda detect and terminate unintended recusrive loops.
+     * It lets Lambda detect and terminate unintended recursive loops.
      *
      * Default: RecursiveLoop.Terminate
      */
@@ -1879,7 +1882,8 @@ public interface NodejsFunctionProps : FunctionOptions {
     /**
      * Enable SnapStart for Lambda Function.
      *
-     * SnapStart is currently supported only for Java 11, 17 runtime
+     * SnapStart is currently supported for Java 11, Java 17, Python 3.12, Python 3.13, and .NET 8
+     * runtime
      *
      * Default: - No snapstart
      */

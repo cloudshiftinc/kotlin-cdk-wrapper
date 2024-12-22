@@ -103,6 +103,14 @@ import kotlin.jvm.JvmName
  * .kmsKeyId("kmsKeyId")
  * .build())
  * .engineVersion("engineVersion")
+ * .identityCenterOptions(IdentityCenterOptionsProperty.builder()
+ * .enabledApiAccess(false)
+ * .identityCenterApplicationArn("identityCenterApplicationArn")
+ * .identityCenterInstanceArn("identityCenterInstanceArn")
+ * .identityStoreId("identityStoreId")
+ * .rolesKey("rolesKey")
+ * .subjectKey("subjectKey")
+ * .build())
  * .ipAddressType("ipAddressType")
  * .logPublishingOptions(Map.of(
  * "logPublishingOptionsKey", LogPublishingOptionProperty.builder()
@@ -275,6 +283,13 @@ public interface CfnDomainProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-engineversion)
    */
   public fun engineVersion(): String? = unwrap(this).getEngineVersion()
+
+  /**
+   * Container for IAM Identity Center Option control for the domain.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
+   */
+  public fun identityCenterOptions(): Any? = unwrap(this).getIdentityCenterOptions()
 
   /**
    * Choose either dual stack or IPv4 as your IP address type.
@@ -607,6 +622,24 @@ public interface CfnDomainProps {
      * .
      */
     public fun engineVersion(engineVersion: String)
+
+    /**
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     */
+    public fun identityCenterOptions(identityCenterOptions: IResolvable)
+
+    /**
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     */
+    public fun identityCenterOptions(identityCenterOptions: CfnDomain.IdentityCenterOptionsProperty)
+
+    /**
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("797d8ae1a4efba3bf25f23355d9fd502f832bf20fab7b514afa3d5dfb23e27c6")
+    public
+        fun identityCenterOptions(identityCenterOptions: CfnDomain.IdentityCenterOptionsProperty.Builder.() -> Unit)
 
     /**
      * @param ipAddressType Choose either dual stack or IPv4 as your IP address type.
@@ -1079,6 +1112,30 @@ public interface CfnDomainProps {
     }
 
     /**
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     */
+    override fun identityCenterOptions(identityCenterOptions: IResolvable) {
+      cdkBuilder.identityCenterOptions(identityCenterOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     */
+    override
+        fun identityCenterOptions(identityCenterOptions: CfnDomain.IdentityCenterOptionsProperty) {
+      cdkBuilder.identityCenterOptions(identityCenterOptions.let(CfnDomain.IdentityCenterOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("797d8ae1a4efba3bf25f23355d9fd502f832bf20fab7b514afa3d5dfb23e27c6")
+    override
+        fun identityCenterOptions(identityCenterOptions: CfnDomain.IdentityCenterOptionsProperty.Builder.() -> Unit):
+        Unit = identityCenterOptions(CfnDomain.IdentityCenterOptionsProperty(identityCenterOptions))
+
+    /**
      * @param ipAddressType Choose either dual stack or IPv4 as your IP address type.
      * Dual stack allows you to share domain resources across IPv4 and IPv6 address types, and is
      * the recommended option. If you set your IP address type to dual stack, you can't change your
@@ -1435,6 +1492,13 @@ public interface CfnDomainProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-engineversion)
      */
     override fun engineVersion(): String? = unwrap(this).getEngineVersion()
+
+    /**
+     * Container for IAM Identity Center Option control for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
+     */
+    override fun identityCenterOptions(): Any? = unwrap(this).getIdentityCenterOptions()
 
     /**
      * Choose either dual stack or IPv4 as your IP address type.

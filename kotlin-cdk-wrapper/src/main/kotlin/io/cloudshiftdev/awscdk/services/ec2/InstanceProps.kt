@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.iam.IInstanceProfile
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.Boolean
 import kotlin.Deprecated
@@ -108,6 +109,22 @@ public interface InstanceProps {
   public fun detailedMonitoring(): Boolean? = unwrap(this).getDetailedMonitoring()
 
   /**
+   * If true, the instance will not be able to be terminated using the Amazon EC2 console, CLI, or
+   * API.
+   *
+   * To change this attribute after launch, use
+   * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html).
+   * Alternatively, if you set InstanceInitiatedShutdownBehavior to terminate, you can terminate the
+   * instance
+   * by running the shutdown command from the instance.
+   *
+   * Default: false
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-disableapitermination)
+   */
+  public fun disableApiTermination(): Boolean? = unwrap(this).getDisableApiTermination()
+
+  /**
    * Indicates whether the instance is optimized for Amazon EBS I/O.
    *
    * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
@@ -180,6 +197,16 @@ public interface InstanceProps {
    * Default: - CDK generated name
    */
   public fun instanceName(): String? = unwrap(this).getInstanceName()
+
+  /**
+   * The instance profile used to pass role information to EC2 instances.
+   *
+   * Note: You can provide an instanceProfile or a role, but not both.
+   *
+   * Default: - No instance profile
+   */
+  public fun instanceProfile(): IInstanceProfile? =
+      unwrap(this).getInstanceProfile()?.let(IInstanceProfile::wrap)
 
   /**
    * Type of instance to launch.
@@ -266,6 +293,7 @@ public interface InstanceProps {
    * An IAM role to associate with the instance profile assigned to this Auto Scaling Group.
    *
    * The role must be assumable by the service principal `ec2.amazonaws.com`:
+   * Note: You can provide an instanceProfile or a role, but not both.
    *
    * Default: - A role will automatically be created, it can be accessed via the `role` property
    *
@@ -424,6 +452,17 @@ public interface InstanceProps {
     public fun detailedMonitoring(detailedMonitoring: Boolean)
 
     /**
+     * @param disableApiTermination If true, the instance will not be able to be terminated using
+     * the Amazon EC2 console, CLI, or API.
+     * To change this attribute after launch, use
+     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html).
+     * Alternatively, if you set InstanceInitiatedShutdownBehavior to terminate, you can terminate
+     * the instance
+     * by running the shutdown command from the instance.
+     */
+    public fun disableApiTermination(disableApiTermination: Boolean)
+
+    /**
      * @param ebsOptimized Indicates whether the instance is optimized for Amazon EBS I/O.
      * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
      * stack to provide optimal Amazon EBS I/O performance.
@@ -480,6 +519,12 @@ public interface InstanceProps {
      * @param instanceName The name of the instance.
      */
     public fun instanceName(instanceName: String)
+
+    /**
+     * @param instanceProfile The instance profile used to pass role information to EC2 instances.
+     * Note: You can provide an instanceProfile or a role, but not both.
+     */
+    public fun instanceProfile(instanceProfile: IInstanceProfile)
 
     /**
      * @param instanceType Type of instance to launch. 
@@ -544,6 +589,7 @@ public interface InstanceProps {
      * @param role An IAM role to associate with the instance profile assigned to this Auto Scaling
      * Group.
      * The role must be assumable by the service principal `ec2.amazonaws.com`:
+     * Note: You can provide an instanceProfile or a role, but not both.
      */
     public fun role(role: IRole)
 
@@ -696,6 +742,19 @@ public interface InstanceProps {
     }
 
     /**
+     * @param disableApiTermination If true, the instance will not be able to be terminated using
+     * the Amazon EC2 console, CLI, or API.
+     * To change this attribute after launch, use
+     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html).
+     * Alternatively, if you set InstanceInitiatedShutdownBehavior to terminate, you can terminate
+     * the instance
+     * by running the shutdown command from the instance.
+     */
+    override fun disableApiTermination(disableApiTermination: Boolean) {
+      cdkBuilder.disableApiTermination(disableApiTermination)
+    }
+
+    /**
      * @param ebsOptimized Indicates whether the instance is optimized for Amazon EBS I/O.
      * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
      * stack to provide optimal Amazon EBS I/O performance.
@@ -766,6 +825,14 @@ public interface InstanceProps {
      */
     override fun instanceName(instanceName: String) {
       cdkBuilder.instanceName(instanceName)
+    }
+
+    /**
+     * @param instanceProfile The instance profile used to pass role information to EC2 instances.
+     * Note: You can provide an instanceProfile or a role, but not both.
+     */
+    override fun instanceProfile(instanceProfile: IInstanceProfile) {
+      cdkBuilder.instanceProfile(instanceProfile.let(IInstanceProfile.Companion::unwrap))
     }
 
     /**
@@ -851,6 +918,7 @@ public interface InstanceProps {
      * @param role An IAM role to associate with the instance profile assigned to this Auto Scaling
      * Group.
      * The role must be assumable by the service principal `ec2.amazonaws.com`:
+     * Note: You can provide an instanceProfile or a role, but not both.
      */
     override fun role(role: IRole) {
       cdkBuilder.role(role.let(IRole.Companion::unwrap))
@@ -1019,6 +1087,22 @@ public interface InstanceProps {
     override fun detailedMonitoring(): Boolean? = unwrap(this).getDetailedMonitoring()
 
     /**
+     * If true, the instance will not be able to be terminated using the Amazon EC2 console, CLI, or
+     * API.
+     *
+     * To change this attribute after launch, use
+     * [ModifyInstanceAttribute](https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyInstanceAttribute.html).
+     * Alternatively, if you set InstanceInitiatedShutdownBehavior to terminate, you can terminate
+     * the instance
+     * by running the shutdown command from the instance.
+     *
+     * Default: false
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-disableapitermination)
+     */
+    override fun disableApiTermination(): Boolean? = unwrap(this).getDisableApiTermination()
+
+    /**
      * Indicates whether the instance is optimized for Amazon EBS I/O.
      *
      * This optimization provides dedicated throughput to Amazon EBS and an optimized configuration
@@ -1092,6 +1176,16 @@ public interface InstanceProps {
      * Default: - CDK generated name
      */
     override fun instanceName(): String? = unwrap(this).getInstanceName()
+
+    /**
+     * The instance profile used to pass role information to EC2 instances.
+     *
+     * Note: You can provide an instanceProfile or a role, but not both.
+     *
+     * Default: - No instance profile
+     */
+    override fun instanceProfile(): IInstanceProfile? =
+        unwrap(this).getInstanceProfile()?.let(IInstanceProfile::wrap)
 
     /**
      * Type of instance to launch.
@@ -1180,6 +1274,7 @@ public interface InstanceProps {
      * An IAM role to associate with the instance profile assigned to this Auto Scaling Group.
      *
      * The role must be assumable by the service principal `ec2.amazonaws.com`:
+     * Note: You can provide an instanceProfile or a role, but not both.
      *
      * Default: - A role will automatically be created, it can be accessed via the `role` property
      *

@@ -38,11 +38,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .
  *
  *
- * Our guidance is to use the latest schema documented here for your AWS CloudFormation templates.
- * This schema supports the provisioning of all table settings below. When using this schema in your
- * AWS CloudFormation templates, please ensure that your Identity and Access Management ( IAM )
- * policies are updated with appropriate permissions to allow for the authorization of these setting
- * changes.
+ * Our guidance is to use the latest schema documented for your AWS CloudFormation templates. This
+ * schema supports the provisioning of all table settings below. When using this schema in your AWS
+ * CloudFormation templates, please ensure that your Identity and Access Management ( IAM ) policies
+ * are updated with appropriate permissions to allow for the authorization of these setting changes.
  *
  *
  * Example:
@@ -88,6 +87,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .provisionedThroughput(ProvisionedThroughputProperty.builder()
  * .readCapacityUnits(123)
  * .writeCapacityUnits(123)
+ * .build())
+ * .warmThroughput(WarmThroughputProperty.builder()
+ * .readUnitsPerSecond(123)
+ * .writeUnitsPerSecond(123)
  * .build())
  * .build()))
  * .importSourceSpecification(ImportSourceSpecificationProperty.builder()
@@ -160,6 +163,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .enabled(false)
  * // the properties below are optional
  * .attributeName("attributeName")
+ * .build())
+ * .warmThroughput(WarmThroughputProperty.builder()
+ * .readUnitsPerSecond(123)
+ * .writeUnitsPerSecond(123)
  * .build())
  * .build();
  * ```
@@ -323,26 +330,26 @@ public open class CfnTable(
       globalSecondaryIndexes(`value`.toList())
 
   /**
-   * Specifies the properties of data being imported from the S3 bucket source to the table.
+   * Specifies the properties of data being imported from the S3 bucket source to the" table.
    */
   public open fun importSourceSpecification(): Any? = unwrap(this).getImportSourceSpecification()
 
   /**
-   * Specifies the properties of data being imported from the S3 bucket source to the table.
+   * Specifies the properties of data being imported from the S3 bucket source to the" table.
    */
   public open fun importSourceSpecification(`value`: IResolvable) {
     unwrap(this).setImportSourceSpecification(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies the properties of data being imported from the S3 bucket source to the table.
+   * Specifies the properties of data being imported from the S3 bucket source to the" table.
    */
   public open fun importSourceSpecification(`value`: ImportSourceSpecificationProperty) {
     unwrap(this).setImportSourceSpecification(`value`.let(ImportSourceSpecificationProperty.Companion::unwrap))
   }
 
   /**
-   * Specifies the properties of data being imported from the S3 bucket source to the table.
+   * Specifies the properties of data being imported from the S3 bucket source to the" table.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("884ed0605874e87b65400a7af7d40744c9719400be4c548fcd07b2bd0d39cfa5")
@@ -681,6 +688,37 @@ public open class CfnTable(
       = timeToLiveSpecification(TimeToLiveSpecificationProperty(`value`))
 
   /**
+   * Represents the warm throughput (in read units per second and write units per second) for
+   * creating a table.
+   */
+  public open fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
+
+  /**
+   * Represents the warm throughput (in read units per second and write units per second) for
+   * creating a table.
+   */
+  public open fun warmThroughput(`value`: IResolvable) {
+    unwrap(this).setWarmThroughput(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Represents the warm throughput (in read units per second and write units per second) for
+   * creating a table.
+   */
+  public open fun warmThroughput(`value`: WarmThroughputProperty) {
+    unwrap(this).setWarmThroughput(`value`.let(WarmThroughputProperty.Companion::unwrap))
+  }
+
+  /**
+   * Represents the warm throughput (in read units per second and write units per second) for
+   * creating a table.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("7df6694dec6aa92950559d4fde05cc858574619a66267b796a1b59b51f87c74b")
+  public open fun warmThroughput(`value`: WarmThroughputProperty.Builder.() -> Unit): Unit =
+      warmThroughput(WarmThroughputProperty(`value`))
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.dynamodb.CfnTable].
    */
   @CdkDslMarker
@@ -906,48 +944,51 @@ public open class CfnTable(
     public fun globalSecondaryIndexes(vararg globalSecondaryIndexes: Any)
 
     /**
-     * Specifies the properties of data being imported from the S3 bucket source to the table.
+     * Specifies the properties of data being imported from the S3 bucket source to the" table.
      *
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-importsourcespecification)
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table. 
+     * bucket source to the" table. 
      */
     public fun importSourceSpecification(importSourceSpecification: IResolvable)
 
     /**
-     * Specifies the properties of data being imported from the S3 bucket source to the table.
+     * Specifies the properties of data being imported from the S3 bucket source to the" table.
      *
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-importsourcespecification)
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table. 
+     * bucket source to the" table. 
      */
     public
         fun importSourceSpecification(importSourceSpecification: ImportSourceSpecificationProperty)
 
     /**
-     * Specifies the properties of data being imported from the S3 bucket source to the table.
+     * Specifies the properties of data being imported from the S3 bucket source to the" table.
      *
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-importsourcespecification)
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table. 
+     * bucket source to the" table. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7642cd516d9ff1a9255c21eb0837bc31f5a39045d847d7ce3d17a9c10a93b988")
@@ -1397,6 +1438,38 @@ public open class CfnTable(
     @JvmName("b40800600d9946bf6a3b0916179f54c5a80b8ebcfda7b6263fda607a3883cb87")
     public
         fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty.Builder.() -> Unit)
+
+    /**
+     * Represents the warm throughput (in read units per second and write units per second) for
+     * creating a table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table. 
+     */
+    public fun warmThroughput(warmThroughput: IResolvable)
+
+    /**
+     * Represents the warm throughput (in read units per second and write units per second) for
+     * creating a table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table. 
+     */
+    public fun warmThroughput(warmThroughput: WarmThroughputProperty)
+
+    /**
+     * Represents the warm throughput (in read units per second and write units per second) for
+     * creating a table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9e4a77fe7e39f7892310dbf51586f21a609a3d60a29e6984aadca7c1a883428c")
+    public fun warmThroughput(warmThroughput: WarmThroughputProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -1649,34 +1722,36 @@ public open class CfnTable(
         globalSecondaryIndexes(globalSecondaryIndexes.toList())
 
     /**
-     * Specifies the properties of data being imported from the S3 bucket source to the table.
+     * Specifies the properties of data being imported from the S3 bucket source to the" table.
      *
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-importsourcespecification)
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table. 
+     * bucket source to the" table. 
      */
     override fun importSourceSpecification(importSourceSpecification: IResolvable) {
       cdkBuilder.importSourceSpecification(importSourceSpecification.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Specifies the properties of data being imported from the S3 bucket source to the table.
+     * Specifies the properties of data being imported from the S3 bucket source to the" table.
      *
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-importsourcespecification)
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table. 
+     * bucket source to the" table. 
      */
     override
         fun importSourceSpecification(importSourceSpecification: ImportSourceSpecificationProperty) {
@@ -1684,17 +1759,18 @@ public open class CfnTable(
     }
 
     /**
-     * Specifies the properties of data being imported from the S3 bucket source to the table.
+     * Specifies the properties of data being imported from the S3 bucket source to the" table.
      *
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-importsourcespecification)
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table. 
+     * bucket source to the" table. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7642cd516d9ff1a9255c21eb0837bc31f5a39045d847d7ce3d17a9c10a93b988")
@@ -2205,6 +2281,43 @@ public open class CfnTable(
         fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty.Builder.() -> Unit):
         Unit = timeToLiveSpecification(TimeToLiveSpecificationProperty(timeToLiveSpecification))
 
+    /**
+     * Represents the warm throughput (in read units per second and write units per second) for
+     * creating a table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table. 
+     */
+    override fun warmThroughput(warmThroughput: IResolvable) {
+      cdkBuilder.warmThroughput(warmThroughput.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Represents the warm throughput (in read units per second and write units per second) for
+     * creating a table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table. 
+     */
+    override fun warmThroughput(warmThroughput: WarmThroughputProperty) {
+      cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughputProperty.Companion::unwrap))
+    }
+
+    /**
+     * Represents the warm throughput (in read units per second and write units per second) for
+     * creating a table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9e4a77fe7e39f7892310dbf51586f21a609a3d60a29e6984aadca7c1a883428c")
+    override fun warmThroughput(warmThroughput: WarmThroughputProperty.Builder.() -> Unit): Unit =
+        warmThroughput(WarmThroughputProperty(warmThroughput))
+
     public fun build(): software.amazon.awscdk.services.dynamodb.CfnTable = cdkBuilder.build()
   }
 
@@ -2627,6 +2740,10 @@ public open class CfnTable(
    * .readCapacityUnits(123)
    * .writeCapacityUnits(123)
    * .build())
+   * .warmThroughput(WarmThroughputProperty.builder()
+   * .readUnitsPerSecond(123)
+   * .writeUnitsPerSecond(123)
+   * .build())
    * .build();
    * ```
    *
@@ -2700,6 +2817,17 @@ public open class CfnTable(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-provisionedthroughput)
      */
     public fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
+
+    /**
+     * Represents the warm throughput value (in read units per second and write units per second)
+     * for the specified secondary index.
+     *
+     * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` , or
+     * both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-warmthroughput)
+     */
+    public fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
 
     /**
      * A builder for [GlobalSecondaryIndexProperty]
@@ -2858,6 +2986,32 @@ public open class CfnTable(
       @JvmName("8c7b56ca1f0d8c0ead31155d94c0a7ac4c420ab8569c28acb313b53298c9d4a4")
       public
           fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit)
+
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      public fun warmThroughput(warmThroughput: IResolvable)
+
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      public fun warmThroughput(warmThroughput: WarmThroughputProperty)
+
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("25558c6e56afa87db70600bdd8c7898e6785e5084b08acdb3ed586d2935636ab")
+      public fun warmThroughput(warmThroughput: WarmThroughputProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -3045,6 +3199,37 @@ public open class CfnTable(
           fun provisionedThroughput(provisionedThroughput: ProvisionedThroughputProperty.Builder.() -> Unit):
           Unit = provisionedThroughput(ProvisionedThroughputProperty(provisionedThroughput))
 
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      override fun warmThroughput(warmThroughput: IResolvable) {
+        cdkBuilder.warmThroughput(warmThroughput.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      override fun warmThroughput(warmThroughput: WarmThroughputProperty) {
+        cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughputProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("25558c6e56afa87db70600bdd8c7898e6785e5084b08acdb3ed586d2935636ab")
+      override fun warmThroughput(warmThroughput: WarmThroughputProperty.Builder.() -> Unit): Unit =
+          warmThroughput(WarmThroughputProperty(warmThroughput))
+
       public fun build():
           software.amazon.awscdk.services.dynamodb.CfnTable.GlobalSecondaryIndexProperty =
           cdkBuilder.build()
@@ -3121,6 +3306,17 @@ public open class CfnTable(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-provisionedthroughput)
        */
       override fun provisionedThroughput(): Any? = unwrap(this).getProvisionedThroughput()
+
+      /**
+       * Represents the warm throughput value (in read units per second and write units per second)
+       * for the specified secondary index.
+       *
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-globalsecondaryindex.html#cfn-dynamodb-table-globalsecondaryindex-warmthroughput)
+       */
+      override fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
     }
 
     public companion object {
@@ -5601,6 +5797,122 @@ public open class CfnTable(
           software.amazon.awscdk.services.dynamodb.CfnTable.TimeToLiveSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.dynamodb.CfnTable.TimeToLiveSpecificationProperty
+    }
+  }
+
+  /**
+   * Provides visibility into the number of read and write operations your table or secondary index
+   * can instantaneously support.
+   *
+   * The settings can be modified using the `UpdateTable` operation to meet the throughput
+   * requirements of an upcoming peak event.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * WarmThroughputProperty warmThroughputProperty = WarmThroughputProperty.builder()
+   * .readUnitsPerSecond(123)
+   * .writeUnitsPerSecond(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-warmthroughput.html)
+   */
+  public interface WarmThroughputProperty {
+    /**
+     * Represents the number of read operations your base table can instantaneously support.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-warmthroughput.html#cfn-dynamodb-table-warmthroughput-readunitspersecond)
+     */
+    public fun readUnitsPerSecond(): Number? = unwrap(this).getReadUnitsPerSecond()
+
+    /**
+     * Represents the number of write operations your base table can instantaneously support.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-warmthroughput.html#cfn-dynamodb-table-warmthroughput-writeunitspersecond)
+     */
+    public fun writeUnitsPerSecond(): Number? = unwrap(this).getWriteUnitsPerSecond()
+
+    /**
+     * A builder for [WarmThroughputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param readUnitsPerSecond Represents the number of read operations your base table can
+       * instantaneously support.
+       */
+      public fun readUnitsPerSecond(readUnitsPerSecond: Number)
+
+      /**
+       * @param writeUnitsPerSecond Represents the number of write operations your base table can
+       * instantaneously support.
+       */
+      public fun writeUnitsPerSecond(writeUnitsPerSecond: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnTable.WarmThroughputProperty.Builder =
+          software.amazon.awscdk.services.dynamodb.CfnTable.WarmThroughputProperty.builder()
+
+      /**
+       * @param readUnitsPerSecond Represents the number of read operations your base table can
+       * instantaneously support.
+       */
+      override fun readUnitsPerSecond(readUnitsPerSecond: Number) {
+        cdkBuilder.readUnitsPerSecond(readUnitsPerSecond)
+      }
+
+      /**
+       * @param writeUnitsPerSecond Represents the number of write operations your base table can
+       * instantaneously support.
+       */
+      override fun writeUnitsPerSecond(writeUnitsPerSecond: Number) {
+        cdkBuilder.writeUnitsPerSecond(writeUnitsPerSecond)
+      }
+
+      public fun build(): software.amazon.awscdk.services.dynamodb.CfnTable.WarmThroughputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.WarmThroughputProperty,
+    ) : CdkObject(cdkObject),
+        WarmThroughputProperty {
+      /**
+       * Represents the number of read operations your base table can instantaneously support.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-warmthroughput.html#cfn-dynamodb-table-warmthroughput-readunitspersecond)
+       */
+      override fun readUnitsPerSecond(): Number? = unwrap(this).getReadUnitsPerSecond()
+
+      /**
+       * Represents the number of write operations your base table can instantaneously support.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-table-warmthroughput.html#cfn-dynamodb-table-warmthroughput-writeunitspersecond)
+       */
+      override fun writeUnitsPerSecond(): Number? = unwrap(this).getWriteUnitsPerSecond()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WarmThroughputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnTable.WarmThroughputProperty):
+          WarmThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as? WarmThroughputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WarmThroughputProperty):
+          software.amazon.awscdk.services.dynamodb.CfnTable.WarmThroughputProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnTable.WarmThroughputProperty
     }
   }
 }

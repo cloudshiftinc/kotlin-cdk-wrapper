@@ -176,12 +176,12 @@ public open class CfnListener(
   }
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service.
+   * The ID or ARN of the service.
    */
   public open fun serviceIdentifier(): String? = unwrap(this).getServiceIdentifier()
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service.
+   * The ID or ARN of the service.
    */
   public open fun serviceIdentifier(`value`: String) {
     unwrap(this).setServiceIdentifier(`value`)
@@ -282,10 +282,10 @@ public open class CfnListener(
     public fun protocol(protocol: String)
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or ARN of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-listener.html#cfn-vpclattice-listener-serviceidentifier)
-     * @param serviceIdentifier The ID or Amazon Resource Name (ARN) of the service. 
+     * @param serviceIdentifier The ID or ARN of the service. 
      */
     public fun serviceIdentifier(serviceIdentifier: String)
 
@@ -391,10 +391,10 @@ public open class CfnListener(
     }
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or ARN of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-listener.html#cfn-vpclattice-listener-serviceidentifier)
-     * @param serviceIdentifier The ID or Amazon Resource Name (ARN) of the service. 
+     * @param serviceIdentifier The ID or ARN of the service. 
      */
     override fun serviceIdentifier(serviceIdentifier: String) {
       cdkBuilder.serviceIdentifier(serviceIdentifier)

@@ -16,17 +16,29 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.s3.*;
- * import io.cloudshiftdev.awscdk.services.stepfunctions.*;
- * Bucket bucket;
- * S3ObjectsItemReaderProps s3ObjectsItemReaderProps = S3ObjectsItemReaderProps.builder()
- * .bucket(bucket)
- * // the properties below are optional
- * .maxItems(123)
- * .prefix("prefix")
+ * / **
+ * * Tree view of bucket:
+ * *  my-bucket
+ * *  |
+ * *  +--item1
+ * *  |
+ * *  +--otherItem
+ * *  |
+ * *  +--item2
+ * *  |
+ * *  ...
+ * *&#47;
+ * Bucket bucket = Bucket.Builder.create(this, "Bucket")
+ * .bucketName("my-bucket")
  * .build();
+ * DistributedMap distributedMap = DistributedMap.Builder.create(this, "DistributedMap")
+ * .itemReader(S3ObjectsItemReader.Builder.create()
+ * .bucket(bucket)
+ * .prefix("item")
+ * .build())
+ * .build();
+ * distributedMap.itemProcessor(new Pass(this, "Pass"));
  * ```
  */
 public interface S3ObjectsItemReaderProps : ItemReaderProps {
@@ -44,9 +56,15 @@ public interface S3ObjectsItemReaderProps : ItemReaderProps {
   public interface Builder {
     /**
      * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
-     * over. 
+     * over.
      */
     public fun bucket(bucket: IBucket)
+
+    /**
+     * @param bucketNamePath S3 bucket name containing objects to iterate over or a file with a list
+     * to iterate over, as JsonPath.
+     */
+    public fun bucketNamePath(bucketNamePath: String)
 
     /**
      * @param maxItems Limits the number of items passed to the Distributed Map state.
@@ -66,10 +84,18 @@ public interface S3ObjectsItemReaderProps : ItemReaderProps {
 
     /**
      * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
-     * over. 
+     * over.
      */
     override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
+    }
+
+    /**
+     * @param bucketNamePath S3 bucket name containing objects to iterate over or a file with a list
+     * to iterate over, as JsonPath.
+     */
+    override fun bucketNamePath(bucketNamePath: String) {
+      cdkBuilder.bucketNamePath(bucketNamePath)
     }
 
     /**
@@ -96,8 +122,22 @@ public interface S3ObjectsItemReaderProps : ItemReaderProps {
       S3ObjectsItemReaderProps {
     /**
      * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
+     *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucketNamePath)
      */
-    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket? = unwrap(this).getBucket()?.let(IBucket::wrap)
+
+    /**
+     * S3 bucket name containing objects to iterate over or a file with a list to iterate over, as
+     * JsonPath.
+     *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucket)
+     */
+    override fun bucketNamePath(): String? = unwrap(this).getBucketNamePath()
 
     /**
      * Limits the number of items passed to the Distributed Map state.

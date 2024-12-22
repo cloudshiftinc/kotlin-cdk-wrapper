@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IEventSource
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
+import io.cloudshiftdev.awscdk.services.lambda.MetricsConfig
 import kotlin.Any
 import kotlin.Boolean
 import kotlin.Number
@@ -15,6 +16,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.awscdk.services.sqs.IQueue as CloudshiftdevAwscdkServicesSqsIQueue
 import software.amazon.awscdk.services.sqs.IQueue as AmazonAwscdkServicesSqsIQueue
 
@@ -162,6 +164,30 @@ public open class SqsEventSource(
     public fun maxConcurrency(maxConcurrency: Number)
 
     /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     *
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source. 
+     */
+    public fun metricsConfig(metricsConfig: MetricsConfig)
+
+    /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     *
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9d1c91a829ccb08b9fed9a9b724e1977271154decb83374afd627d93c56a931a")
+    public fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit)
+
+    /**
      * Allow functions to return partially successful responses for a batch of records.
      *
      * Default: false
@@ -274,6 +300,33 @@ public open class SqsEventSource(
     override fun maxConcurrency(maxConcurrency: Number) {
       cdkBuilder.maxConcurrency(maxConcurrency)
     }
+
+    /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     *
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source. 
+     */
+    override fun metricsConfig(metricsConfig: MetricsConfig) {
+      cdkBuilder.metricsConfig(metricsConfig.let(MetricsConfig.Companion::unwrap))
+    }
+
+    /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     *
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9d1c91a829ccb08b9fed9a9b724e1977271154decb83374afd627d93c56a931a")
+    override fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit): Unit =
+        metricsConfig(MetricsConfig(metricsConfig))
 
     /**
      * Allow functions to return partially successful responses for a batch of records.

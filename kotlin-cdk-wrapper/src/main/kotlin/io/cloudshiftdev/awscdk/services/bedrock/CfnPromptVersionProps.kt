@@ -45,7 +45,7 @@ public interface CfnPromptVersionProps {
   public fun promptArn(): String
 
   /**
-   * A map of tag keys and values.
+   * A map of tags attached to the prompt version and their values.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-promptversion.html#cfn-bedrock-promptversion-tags)
    */
@@ -67,7 +67,7 @@ public interface CfnPromptVersionProps {
     public fun promptArn(promptArn: String)
 
     /**
-     * @param tags A map of tag keys and values.
+     * @param tags A map of tags attached to the prompt version and their values.
      */
     public fun tags(tags: Map<String, String>)
   }
@@ -91,7 +91,7 @@ public interface CfnPromptVersionProps {
     }
 
     /**
-     * @param tags A map of tag keys and values.
+     * @param tags A map of tags attached to the prompt version and their values.
      */
     override fun tags(tags: Map<String, String>) {
       cdkBuilder.tags(tags)
@@ -120,7 +120,7 @@ public interface CfnPromptVersionProps {
     override fun promptArn(): String = unwrap(this).getPromptArn()
 
     /**
-     * A map of tag keys and values.
+     * A map of tags attached to the prompt version and their values.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-promptversion.html#cfn-bedrock-promptversion-tags)
      */

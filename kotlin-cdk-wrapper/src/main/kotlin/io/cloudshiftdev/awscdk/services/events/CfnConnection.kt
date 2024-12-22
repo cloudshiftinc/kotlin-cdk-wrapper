@@ -24,6 +24,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * A connection defines the authorization type and credentials to use for authorization with an API
  * destination HTTP endpoint.
  *
+ * For more information, see [Connections for endpoint
+ * targets](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-target-connection.html) in the
+ * *Amazon EventBridge User Guide* .
+ *
  * Example:
  *
  * ```
@@ -40,6 +44,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .basicAuthParameters(BasicAuthParametersProperty.builder()
  * .password("password")
  * .username("username")
+ * .build())
+ * .connectivityParameters(ConnectivityParametersProperty.builder()
+ * .resourceParameters(ResourceParametersProperty.builder()
+ * .resourceConfigurationArn("resourceConfigurationArn")
+ * // the properties below are optional
+ * .resourceAssociationArn("resourceAssociationArn")
+ * .build())
  * .build())
  * .invocationHttpParameters(ConnectionHttpParametersProperty.builder()
  * .bodyParameters(List.of(ParameterProperty.builder()
@@ -91,8 +102,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .build())
- * // the properties below are optional
  * .description("description")
+ * .invocationConnectivityParameters(InvocationConnectivityParametersProperty.builder()
+ * .resourceParameters(ResourceParametersProperty.builder()
+ * .resourceConfigurationArn("resourceConfigurationArn")
+ * // the properties below are optional
+ * .resourceAssociationArn("resourceAssociationArn")
+ * .build())
+ * .build())
  * .name("name")
  * .build();
  * ```
@@ -103,6 +120,11 @@ public open class CfnConnection(
   cdkObject: software.amazon.awscdk.services.events.CfnConnection,
 ) : CfnResource(cdkObject),
     IInspectable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.events.CfnConnection(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id)
+  )
+
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -125,35 +147,56 @@ public open class CfnConnection(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
+   * For connections to private APIs, the Amazon Resource Name (ARN) of the resource association
+   * EventBridge created between the connection and the private API's resource configuration.
+   *
+   * For more information, see [Managing service network resource associations for
+   * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
+   * in the **Amazon EventBridge User Guide** .
+   */
+  public open
+      fun attrAuthParametersConnectivityParametersResourceParametersResourceAssociationArn(): String
+      =
+      unwrap(this).getAttrAuthParametersConnectivityParametersResourceParametersResourceAssociationArn()
+
+  /**
+   * For connections to private APIs, the Amazon Resource Name (ARN) of the resource association
+   * EventBridge created between the connection and the private API's resource configuration.
+   *
+   * For more information, see [Managing service network resource associations for
+   * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
+   * in the **Amazon EventBridge User Guide** .
+   */
+  public open fun attrInvocationConnectivityParametersResourceParametersResourceAssociationArn():
+      String =
+      unwrap(this).getAttrInvocationConnectivityParametersResourceParametersResourceAssociationArn()
+
+  /**
    * The ARN for the secret created for the connection.
    */
   public open fun attrSecretArn(): String = unwrap(this).getAttrSecretArn()
 
   /**
-   * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to
-   * use to authorize with the endpoint.
+   * The authorization parameters to use to authorize with the endpoint.
    */
-  public open fun authParameters(): Any = unwrap(this).getAuthParameters()
+  public open fun authParameters(): Any? = unwrap(this).getAuthParameters()
 
   /**
-   * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to
-   * use to authorize with the endpoint.
+   * The authorization parameters to use to authorize with the endpoint.
    */
   public open fun authParameters(`value`: IResolvable) {
     unwrap(this).setAuthParameters(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to
-   * use to authorize with the endpoint.
+   * The authorization parameters to use to authorize with the endpoint.
    */
   public open fun authParameters(`value`: AuthParametersProperty) {
     unwrap(this).setAuthParameters(`value`.let(AuthParametersProperty.Companion::unwrap))
   }
 
   /**
-   * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to
-   * use to authorize with the endpoint.
+   * The authorization parameters to use to authorize with the endpoint.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("ec5f6b852a44a1435db3f6d1f7c0a6b8f7fbc35da4d12cb8215710bee5e0daa4")
@@ -163,7 +206,7 @@ public open class CfnConnection(
   /**
    * The type of authorization to use for the connection.
    */
-  public open fun authorizationType(): String = unwrap(this).getAuthorizationType()
+  public open fun authorizationType(): String? = unwrap(this).getAuthorizationType()
 
   /**
    * The type of authorization to use for the connection.
@@ -194,6 +237,36 @@ public open class CfnConnection(
   }
 
   /**
+   * The private resource the HTTP request will be sent to.
+   */
+  public open fun invocationConnectivityParameters(): Any? =
+      unwrap(this).getInvocationConnectivityParameters()
+
+  /**
+   * The private resource the HTTP request will be sent to.
+   */
+  public open fun invocationConnectivityParameters(`value`: IResolvable) {
+    unwrap(this).setInvocationConnectivityParameters(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The private resource the HTTP request will be sent to.
+   */
+  public open
+      fun invocationConnectivityParameters(`value`: InvocationConnectivityParametersProperty) {
+    unwrap(this).setInvocationConnectivityParameters(`value`.let(InvocationConnectivityParametersProperty.Companion::unwrap))
+  }
+
+  /**
+   * The private resource the HTTP request will be sent to.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("38adfdd7face237c5f007ca55f16e6508595048c2eaf41b1a0a60c42985d2355")
+  public open
+      fun invocationConnectivityParameters(`value`: InvocationConnectivityParametersProperty.Builder.() -> Unit):
+      Unit = invocationConnectivityParameters(InvocationConnectivityParametersProperty(`value`))
+
+  /**
    * The name for the connection to create.
    */
   public open fun name(): String? = unwrap(this).getName()
@@ -211,32 +284,32 @@ public open class CfnConnection(
   @CdkDslMarker
   public interface Builder {
     /**
-     * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters
-     * to use to authorize with the endpoint.
+     * The authorization parameters to use to authorize with the endpoint.
+     *
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint. 
      */
     public fun authParameters(authParameters: IResolvable)
 
     /**
-     * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters
-     * to use to authorize with the endpoint.
+     * The authorization parameters to use to authorize with the endpoint.
+     *
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint. 
      */
     public fun authParameters(authParameters: AuthParametersProperty)
 
     /**
-     * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters
-     * to use to authorize with the endpoint.
+     * The authorization parameters to use to authorize with the endpoint.
+     *
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94678fbe23b8920d06561e2226c4cfaf721f1b3ec79ed52a301a0ffc478061ed")
@@ -263,6 +336,37 @@ public open class CfnConnection(
     public fun description(description: String)
 
     /**
+     * The private resource the HTTP request will be sent to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to. 
+     */
+    public fun invocationConnectivityParameters(invocationConnectivityParameters: IResolvable)
+
+    /**
+     * The private resource the HTTP request will be sent to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to. 
+     */
+    public
+        fun invocationConnectivityParameters(invocationConnectivityParameters: InvocationConnectivityParametersProperty)
+
+    /**
+     * The private resource the HTTP request will be sent to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3a337166580c9555a2a5aca7237263c17e3d8648807a680d1da4c884c851b7b2")
+    public
+        fun invocationConnectivityParameters(invocationConnectivityParameters: InvocationConnectivityParametersProperty.Builder.() -> Unit)
+
+    /**
      * The name for the connection to create.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-name)
@@ -279,36 +383,36 @@ public open class CfnConnection(
         software.amazon.awscdk.services.events.CfnConnection.Builder.create(scope, id)
 
     /**
-     * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters
-     * to use to authorize with the endpoint.
+     * The authorization parameters to use to authorize with the endpoint.
+     *
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint. 
      */
     override fun authParameters(authParameters: IResolvable) {
       cdkBuilder.authParameters(authParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters
-     * to use to authorize with the endpoint.
+     * The authorization parameters to use to authorize with the endpoint.
+     *
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint. 
      */
     override fun authParameters(authParameters: AuthParametersProperty) {
       cdkBuilder.authParameters(authParameters.let(AuthParametersProperty.Companion::unwrap))
     }
 
     /**
-     * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters
-     * to use to authorize with the endpoint.
+     * The authorization parameters to use to authorize with the endpoint.
+     *
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("94678fbe23b8920d06561e2226c4cfaf721f1b3ec79ed52a301a0ffc478061ed")
@@ -338,6 +442,43 @@ public open class CfnConnection(
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * The private resource the HTTP request will be sent to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to. 
+     */
+    override fun invocationConnectivityParameters(invocationConnectivityParameters: IResolvable) {
+      cdkBuilder.invocationConnectivityParameters(invocationConnectivityParameters.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The private resource the HTTP request will be sent to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to. 
+     */
+    override
+        fun invocationConnectivityParameters(invocationConnectivityParameters: InvocationConnectivityParametersProperty) {
+      cdkBuilder.invocationConnectivityParameters(invocationConnectivityParameters.let(InvocationConnectivityParametersProperty.Companion::unwrap))
+    }
+
+    /**
+     * The private resource the HTTP request will be sent to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3a337166580c9555a2a5aca7237263c17e3d8648807a680d1da4c884c851b7b2")
+    override
+        fun invocationConnectivityParameters(invocationConnectivityParameters: InvocationConnectivityParametersProperty.Builder.() -> Unit):
+        Unit =
+        invocationConnectivityParameters(InvocationConnectivityParametersProperty(invocationConnectivityParameters))
 
     /**
      * The name for the connection to create.
@@ -374,7 +515,7 @@ public open class CfnConnection(
   }
 
   /**
-   * Contains the API key authorization parameters for the connection.
+   * The API key authorization parameters for the connection.
    *
    * Example:
    *
@@ -485,7 +626,7 @@ public open class CfnConnection(
   }
 
   /**
-   * Contains the authorization parameters to use for the connection.
+   * Tthe authorization parameters to use for the connection.
    *
    * Example:
    *
@@ -501,6 +642,13 @@ public open class CfnConnection(
    * .basicAuthParameters(BasicAuthParametersProperty.builder()
    * .password("password")
    * .username("username")
+   * .build())
+   * .connectivityParameters(ConnectivityParametersProperty.builder()
+   * .resourceParameters(ResourceParametersProperty.builder()
+   * .resourceConfigurationArn("resourceConfigurationArn")
+   * // the properties below are optional
+   * .resourceAssociationArn("resourceAssociationArn")
+   * .build())
    * .build())
    * .invocationHttpParameters(ConnectionHttpParametersProperty.builder()
    * .bodyParameters(List.of(ParameterProperty.builder()
@@ -572,6 +720,11 @@ public open class CfnConnection(
     public fun basicAuthParameters(): Any? = unwrap(this).getBasicAuthParameters()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-authparameters.html#cfn-events-connection-authparameters-connectivityparameters)
+     */
+    public fun connectivityParameters(): Any? = unwrap(this).getConnectivityParameters()
+
+    /**
      * Additional parameters for the connection that are passed through with every invocation to the
      * HTTP endpoint.
      *
@@ -626,6 +779,24 @@ public open class CfnConnection(
       @JvmName("e8391c04181ee307d13f27c4c07e9b7cb8da421d5c7083f0daa00b60cb0c742c")
       public
           fun basicAuthParameters(basicAuthParameters: BasicAuthParametersProperty.Builder.() -> Unit)
+
+      /**
+       * @param connectivityParameters the value to be set.
+       */
+      public fun connectivityParameters(connectivityParameters: IResolvable)
+
+      /**
+       * @param connectivityParameters the value to be set.
+       */
+      public fun connectivityParameters(connectivityParameters: ConnectivityParametersProperty)
+
+      /**
+       * @param connectivityParameters the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d0e0f26d10f7d57c423e97f54284633e5b6539da6e8946f125b45ee272ca6735")
+      public
+          fun connectivityParameters(connectivityParameters: ConnectivityParametersProperty.Builder.() -> Unit)
 
       /**
        * @param invocationHttpParameters Additional parameters for the connection that are passed
@@ -719,6 +890,29 @@ public open class CfnConnection(
           Unit = basicAuthParameters(BasicAuthParametersProperty(basicAuthParameters))
 
       /**
+       * @param connectivityParameters the value to be set.
+       */
+      override fun connectivityParameters(connectivityParameters: IResolvable) {
+        cdkBuilder.connectivityParameters(connectivityParameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param connectivityParameters the value to be set.
+       */
+      override fun connectivityParameters(connectivityParameters: ConnectivityParametersProperty) {
+        cdkBuilder.connectivityParameters(connectivityParameters.let(ConnectivityParametersProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param connectivityParameters the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d0e0f26d10f7d57c423e97f54284633e5b6539da6e8946f125b45ee272ca6735")
+      override
+          fun connectivityParameters(connectivityParameters: ConnectivityParametersProperty.Builder.() -> Unit):
+          Unit = connectivityParameters(ConnectivityParametersProperty(connectivityParameters))
+
+      /**
        * @param invocationHttpParameters Additional parameters for the connection that are passed
        * through with every invocation to the HTTP endpoint.
        */
@@ -792,6 +986,11 @@ public open class CfnConnection(
       override fun basicAuthParameters(): Any? = unwrap(this).getBasicAuthParameters()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-authparameters.html#cfn-events-connection-authparameters-connectivityparameters)
+       */
+      override fun connectivityParameters(): Any? = unwrap(this).getConnectivityParameters()
+
+      /**
        * Additional parameters for the connection that are passed through with every invocation to
        * the HTTP endpoint.
        *
@@ -826,7 +1025,7 @@ public open class CfnConnection(
   }
 
   /**
-   * Contains the Basic authorization parameters for the connection.
+   * The Basic authorization parameters for the connection.
    *
    * Example:
    *
@@ -935,7 +1134,7 @@ public open class CfnConnection(
   }
 
   /**
-   * Contains the OAuth authorization parameters to use for the connection.
+   * The OAuth authorization parameters to use for the connection.
    *
    * Example:
    *
@@ -1046,7 +1245,7 @@ public open class CfnConnection(
   }
 
   /**
-   * Contains additional parameters for the connection.
+   * Any additional parameters for the connection.
    *
    * Example:
    *
@@ -1081,21 +1280,21 @@ public open class CfnConnection(
    */
   public interface ConnectionHttpParametersProperty {
     /**
-     * Contains additional body string parameters for the connection.
+     * Any additional body string parameters for the connection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-bodyparameters)
      */
     public fun bodyParameters(): Any? = unwrap(this).getBodyParameters()
 
     /**
-     * Contains additional header parameters for the connection.
+     * Any additional header parameters for the connection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-headerparameters)
      */
     public fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
 
     /**
-     * Contains additional query string parameters for the connection.
+     * Any additional query string parameters for the connection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-querystringparameters)
      */
@@ -1107,50 +1306,47 @@ public open class CfnConnection(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
+       * @param bodyParameters Any additional body string parameters for the connection.
        */
       public fun bodyParameters(bodyParameters: IResolvable)
 
       /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
+       * @param bodyParameters Any additional body string parameters for the connection.
        */
       public fun bodyParameters(bodyParameters: List<Any>)
 
       /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
+       * @param bodyParameters Any additional body string parameters for the connection.
        */
       public fun bodyParameters(vararg bodyParameters: Any)
 
       /**
-       * @param headerParameters Contains additional header parameters for the connection.
+       * @param headerParameters Any additional header parameters for the connection.
        */
       public fun headerParameters(headerParameters: IResolvable)
 
       /**
-       * @param headerParameters Contains additional header parameters for the connection.
+       * @param headerParameters Any additional header parameters for the connection.
        */
       public fun headerParameters(headerParameters: List<Any>)
 
       /**
-       * @param headerParameters Contains additional header parameters for the connection.
+       * @param headerParameters Any additional header parameters for the connection.
        */
       public fun headerParameters(vararg headerParameters: Any)
 
       /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
+       * @param queryStringParameters Any additional query string parameters for the connection.
        */
       public fun queryStringParameters(queryStringParameters: IResolvable)
 
       /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
+       * @param queryStringParameters Any additional query string parameters for the connection.
        */
       public fun queryStringParameters(queryStringParameters: List<Any>)
 
       /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
+       * @param queryStringParameters Any additional query string parameters for the connection.
        */
       public fun queryStringParameters(vararg queryStringParameters: Any)
     }
@@ -1162,64 +1358,61 @@ public open class CfnConnection(
           software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty.builder()
 
       /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
+       * @param bodyParameters Any additional body string parameters for the connection.
        */
       override fun bodyParameters(bodyParameters: IResolvable) {
         cdkBuilder.bodyParameters(bodyParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
+       * @param bodyParameters Any additional body string parameters for the connection.
        */
       override fun bodyParameters(bodyParameters: List<Any>) {
         cdkBuilder.bodyParameters(bodyParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param bodyParameters Contains additional body string parameters for the connection.
+       * @param bodyParameters Any additional body string parameters for the connection.
        */
       override fun bodyParameters(vararg bodyParameters: Any): Unit =
           bodyParameters(bodyParameters.toList())
 
       /**
-       * @param headerParameters Contains additional header parameters for the connection.
+       * @param headerParameters Any additional header parameters for the connection.
        */
       override fun headerParameters(headerParameters: IResolvable) {
         cdkBuilder.headerParameters(headerParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param headerParameters Contains additional header parameters for the connection.
+       * @param headerParameters Any additional header parameters for the connection.
        */
       override fun headerParameters(headerParameters: List<Any>) {
         cdkBuilder.headerParameters(headerParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param headerParameters Contains additional header parameters for the connection.
+       * @param headerParameters Any additional header parameters for the connection.
        */
       override fun headerParameters(vararg headerParameters: Any): Unit =
           headerParameters(headerParameters.toList())
 
       /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
+       * @param queryStringParameters Any additional query string parameters for the connection.
        */
       override fun queryStringParameters(queryStringParameters: IResolvable) {
         cdkBuilder.queryStringParameters(queryStringParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
+       * @param queryStringParameters Any additional query string parameters for the connection.
        */
       override fun queryStringParameters(queryStringParameters: List<Any>) {
         cdkBuilder.queryStringParameters(queryStringParameters.map{CdkObjectWrappers.unwrap(it)})
       }
 
       /**
-       * @param queryStringParameters Contains additional query string parameters for the
-       * connection.
+       * @param queryStringParameters Any additional query string parameters for the connection.
        */
       override fun queryStringParameters(vararg queryStringParameters: Any): Unit =
           queryStringParameters(queryStringParameters.toList())
@@ -1234,21 +1427,21 @@ public open class CfnConnection(
     ) : CdkObject(cdkObject),
         ConnectionHttpParametersProperty {
       /**
-       * Contains additional body string parameters for the connection.
+       * Any additional body string parameters for the connection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-bodyparameters)
        */
       override fun bodyParameters(): Any? = unwrap(this).getBodyParameters()
 
       /**
-       * Contains additional header parameters for the connection.
+       * Any additional header parameters for the connection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-headerparameters)
        */
       override fun headerParameters(): Any? = unwrap(this).getHeaderParameters()
 
       /**
-       * Contains additional query string parameters for the connection.
+       * Any additional query string parameters for the connection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectionhttpparameters.html#cfn-events-connection-connectionhttpparameters-querystringparameters)
        */
@@ -1270,6 +1463,231 @@ public open class CfnConnection(
           software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.events.CfnConnection.ConnectionHttpParametersProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * ConnectivityParametersProperty connectivityParametersProperty =
+   * ConnectivityParametersProperty.builder()
+   * .resourceParameters(ResourceParametersProperty.builder()
+   * .resourceConfigurationArn("resourceConfigurationArn")
+   * // the properties below are optional
+   * .resourceAssociationArn("resourceAssociationArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectivityparameters.html)
+   */
+  public interface ConnectivityParametersProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectivityparameters.html#cfn-events-connection-connectivityparameters-resourceparameters)
+     */
+    public fun resourceParameters(): Any
+
+    /**
+     * A builder for [ConnectivityParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      public fun resourceParameters(resourceParameters: IResolvable)
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      public fun resourceParameters(resourceParameters: ResourceParametersProperty)
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("631a05aeda854718ad91124394a4b0540fae4efae6a438dd9d5f0773dcbb8d2c")
+      public
+          fun resourceParameters(resourceParameters: ResourceParametersProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnConnection.ConnectivityParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.events.CfnConnection.ConnectivityParametersProperty.builder()
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      override fun resourceParameters(resourceParameters: IResolvable) {
+        cdkBuilder.resourceParameters(resourceParameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      override fun resourceParameters(resourceParameters: ResourceParametersProperty) {
+        cdkBuilder.resourceParameters(resourceParameters.let(ResourceParametersProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("631a05aeda854718ad91124394a4b0540fae4efae6a438dd9d5f0773dcbb8d2c")
+      override
+          fun resourceParameters(resourceParameters: ResourceParametersProperty.Builder.() -> Unit):
+          Unit = resourceParameters(ResourceParametersProperty(resourceParameters))
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnConnection.ConnectivityParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.ConnectivityParametersProperty,
+    ) : CdkObject(cdkObject),
+        ConnectivityParametersProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-connectivityparameters.html#cfn-events-connection-connectivityparameters-resourceparameters)
+       */
+      override fun resourceParameters(): Any = unwrap(this).getResourceParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ConnectivityParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ConnectivityParametersProperty):
+          ConnectivityParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ConnectivityParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ConnectivityParametersProperty):
+          software.amazon.awscdk.services.events.CfnConnection.ConnectivityParametersProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnConnection.ConnectivityParametersProperty
+    }
+  }
+
+  /**
+   * The private resource the HTTP request will be sent to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * InvocationConnectivityParametersProperty invocationConnectivityParametersProperty =
+   * InvocationConnectivityParametersProperty.builder()
+   * .resourceParameters(ResourceParametersProperty.builder()
+   * .resourceConfigurationArn("resourceConfigurationArn")
+   * // the properties below are optional
+   * .resourceAssociationArn("resourceAssociationArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-invocationconnectivityparameters.html)
+   */
+  public interface InvocationConnectivityParametersProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-invocationconnectivityparameters.html#cfn-events-connection-invocationconnectivityparameters-resourceparameters)
+     */
+    public fun resourceParameters(): Any
+
+    /**
+     * A builder for [InvocationConnectivityParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      public fun resourceParameters(resourceParameters: IResolvable)
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      public fun resourceParameters(resourceParameters: ResourceParametersProperty)
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e019e752ea951abb6e5cc43613ddb0ea299ecb1685bab19de5e6655f1e5ba4c2")
+      public
+          fun resourceParameters(resourceParameters: ResourceParametersProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnConnection.InvocationConnectivityParametersProperty.Builder
+          =
+          software.amazon.awscdk.services.events.CfnConnection.InvocationConnectivityParametersProperty.builder()
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      override fun resourceParameters(resourceParameters: IResolvable) {
+        cdkBuilder.resourceParameters(resourceParameters.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      override fun resourceParameters(resourceParameters: ResourceParametersProperty) {
+        cdkBuilder.resourceParameters(resourceParameters.let(ResourceParametersProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param resourceParameters the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e019e752ea951abb6e5cc43613ddb0ea299ecb1685bab19de5e6655f1e5ba4c2")
+      override
+          fun resourceParameters(resourceParameters: ResourceParametersProperty.Builder.() -> Unit):
+          Unit = resourceParameters(ResourceParametersProperty(resourceParameters))
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnConnection.InvocationConnectivityParametersProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.InvocationConnectivityParametersProperty,
+    ) : CdkObject(cdkObject),
+        InvocationConnectivityParametersProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-invocationconnectivityparameters.html#cfn-events-connection-invocationconnectivityparameters-resourceparameters)
+       */
+      override fun resourceParameters(): Any = unwrap(this).getResourceParameters()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InvocationConnectivityParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.InvocationConnectivityParametersProperty):
+          InvocationConnectivityParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InvocationConnectivityParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InvocationConnectivityParametersProperty):
+          software.amazon.awscdk.services.events.CfnConnection.InvocationConnectivityParametersProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnConnection.InvocationConnectivityParametersProperty
     }
   }
 
@@ -1324,8 +1742,7 @@ public open class CfnConnection(
     public fun authorizationEndpoint(): String
 
     /**
-     * A `CreateConnectionOAuthClientRequestParameters` object that contains the client parameters
-     * for OAuth authorization.
+     * The client parameters for OAuth authorization.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-oauthparameters.html#cfn-events-connection-oauthparameters-clientparameters)
      */
@@ -1339,8 +1756,7 @@ public open class CfnConnection(
     public fun httpMethod(): String
 
     /**
-     * A `ConnectionHttpParameters` object that contains details about the additional parameters to
-     * use for the connection.
+     * Details about the additional parameters to use for the connection.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-oauthparameters.html#cfn-events-connection-oauthparameters-oauthhttpparameters)
      */
@@ -1358,20 +1774,17 @@ public open class CfnConnection(
       public fun authorizationEndpoint(authorizationEndpoint: String)
 
       /**
-       * @param clientParameters A `CreateConnectionOAuthClientRequestParameters` object that
-       * contains the client parameters for OAuth authorization. 
+       * @param clientParameters The client parameters for OAuth authorization. 
        */
       public fun clientParameters(clientParameters: IResolvable)
 
       /**
-       * @param clientParameters A `CreateConnectionOAuthClientRequestParameters` object that
-       * contains the client parameters for OAuth authorization. 
+       * @param clientParameters The client parameters for OAuth authorization. 
        */
       public fun clientParameters(clientParameters: ClientParametersProperty)
 
       /**
-       * @param clientParameters A `CreateConnectionOAuthClientRequestParameters` object that
-       * contains the client parameters for OAuth authorization. 
+       * @param clientParameters The client parameters for OAuth authorization. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69449c8ef7149b345eee5d7a1b69718c7908ca77a8c2da1131b583a13753e758")
@@ -1383,20 +1796,20 @@ public open class CfnConnection(
       public fun httpMethod(httpMethod: String)
 
       /**
-       * @param oAuthHttpParameters A `ConnectionHttpParameters` object that contains details about
-       * the additional parameters to use for the connection.
+       * @param oAuthHttpParameters Details about the additional parameters to use for the
+       * connection.
        */
       public fun oAuthHttpParameters(oAuthHttpParameters: IResolvable)
 
       /**
-       * @param oAuthHttpParameters A `ConnectionHttpParameters` object that contains details about
-       * the additional parameters to use for the connection.
+       * @param oAuthHttpParameters Details about the additional parameters to use for the
+       * connection.
        */
       public fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty)
 
       /**
-       * @param oAuthHttpParameters A `ConnectionHttpParameters` object that contains details about
-       * the additional parameters to use for the connection.
+       * @param oAuthHttpParameters Details about the additional parameters to use for the
+       * connection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e35f666f3d23291168480c694ab8d9cc79dd9dbbce39449a8b35b7755a6e1fb")
@@ -1418,24 +1831,21 @@ public open class CfnConnection(
       }
 
       /**
-       * @param clientParameters A `CreateConnectionOAuthClientRequestParameters` object that
-       * contains the client parameters for OAuth authorization. 
+       * @param clientParameters The client parameters for OAuth authorization. 
        */
       override fun clientParameters(clientParameters: IResolvable) {
         cdkBuilder.clientParameters(clientParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param clientParameters A `CreateConnectionOAuthClientRequestParameters` object that
-       * contains the client parameters for OAuth authorization. 
+       * @param clientParameters The client parameters for OAuth authorization. 
        */
       override fun clientParameters(clientParameters: ClientParametersProperty) {
         cdkBuilder.clientParameters(clientParameters.let(ClientParametersProperty.Companion::unwrap))
       }
 
       /**
-       * @param clientParameters A `CreateConnectionOAuthClientRequestParameters` object that
-       * contains the client parameters for OAuth authorization. 
+       * @param clientParameters The client parameters for OAuth authorization. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("69449c8ef7149b345eee5d7a1b69718c7908ca77a8c2da1131b583a13753e758")
@@ -1450,24 +1860,24 @@ public open class CfnConnection(
       }
 
       /**
-       * @param oAuthHttpParameters A `ConnectionHttpParameters` object that contains details about
-       * the additional parameters to use for the connection.
+       * @param oAuthHttpParameters Details about the additional parameters to use for the
+       * connection.
        */
       override fun oAuthHttpParameters(oAuthHttpParameters: IResolvable) {
         cdkBuilder.oAuthHttpParameters(oAuthHttpParameters.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param oAuthHttpParameters A `ConnectionHttpParameters` object that contains details about
-       * the additional parameters to use for the connection.
+       * @param oAuthHttpParameters Details about the additional parameters to use for the
+       * connection.
        */
       override fun oAuthHttpParameters(oAuthHttpParameters: ConnectionHttpParametersProperty) {
         cdkBuilder.oAuthHttpParameters(oAuthHttpParameters.let(ConnectionHttpParametersProperty.Companion::unwrap))
       }
 
       /**
-       * @param oAuthHttpParameters A `ConnectionHttpParameters` object that contains details about
-       * the additional parameters to use for the connection.
+       * @param oAuthHttpParameters Details about the additional parameters to use for the
+       * connection.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4e35f666f3d23291168480c694ab8d9cc79dd9dbbce39449a8b35b7755a6e1fb")
@@ -1492,8 +1902,7 @@ public open class CfnConnection(
       override fun authorizationEndpoint(): String = unwrap(this).getAuthorizationEndpoint()
 
       /**
-       * A `CreateConnectionOAuthClientRequestParameters` object that contains the client parameters
-       * for OAuth authorization.
+       * The client parameters for OAuth authorization.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-oauthparameters.html#cfn-events-connection-oauthparameters-clientparameters)
        */
@@ -1507,8 +1916,7 @@ public open class CfnConnection(
       override fun httpMethod(): String = unwrap(this).getHttpMethod()
 
       /**
-       * A `ConnectionHttpParameters` object that contains details about the additional parameters
-       * to use for the connection.
+       * Details about the additional parameters to use for the connection.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-oauthparameters.html#cfn-events-connection-oauthparameters-oauthhttpparameters)
        */
@@ -1534,7 +1942,7 @@ public open class CfnConnection(
   }
 
   /**
-   * Additional query string parameter for the connection.
+   * Any additional query string parameter for the connection.
    *
    * You can include up to 100 additional query string parameters per request. Each additional
    * parameter counts towards the event payload size, which cannot exceed 64 KB.
@@ -1685,6 +2093,130 @@ public open class CfnConnection(
           software.amazon.awscdk.services.events.CfnConnection.ParameterProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.events.CfnConnection.ParameterProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.events.*;
+   * ResourceParametersProperty resourceParametersProperty = ResourceParametersProperty.builder()
+   * .resourceConfigurationArn("resourceConfigurationArn")
+   * // the properties below are optional
+   * .resourceAssociationArn("resourceAssociationArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-resourceparameters.html)
+   */
+  public interface ResourceParametersProperty {
+    /**
+     * For connections to private APIs, the Amazon Resource Name (ARN) of the resource association
+     * EventBridge created between the connection and the private API's resource configuration.
+     *
+     * For more information, see [Managing service network resource associations for
+     * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
+     * in the **Amazon EventBridge User Guide** .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-resourceparameters.html#cfn-events-connection-resourceparameters-resourceassociationarn)
+     */
+    public fun resourceAssociationArn(): String? = unwrap(this).getResourceAssociationArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-resourceparameters.html#cfn-events-connection-resourceparameters-resourceconfigurationarn)
+     */
+    public fun resourceConfigurationArn(): String
+
+    /**
+     * A builder for [ResourceParametersProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param resourceAssociationArn For connections to private APIs, the Amazon Resource Name
+       * (ARN) of the resource association EventBridge created between the connection and the private
+       * API's resource configuration.
+       * For more information, see [Managing service network resource associations for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
+       * in the **Amazon EventBridge User Guide** .
+       */
+      public fun resourceAssociationArn(resourceAssociationArn: String)
+
+      /**
+       * @param resourceConfigurationArn the value to be set. 
+       */
+      public fun resourceConfigurationArn(resourceConfigurationArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.events.CfnConnection.ResourceParametersProperty.Builder =
+          software.amazon.awscdk.services.events.CfnConnection.ResourceParametersProperty.builder()
+
+      /**
+       * @param resourceAssociationArn For connections to private APIs, the Amazon Resource Name
+       * (ARN) of the resource association EventBridge created between the connection and the private
+       * API's resource configuration.
+       * For more information, see [Managing service network resource associations for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
+       * in the **Amazon EventBridge User Guide** .
+       */
+      override fun resourceAssociationArn(resourceAssociationArn: String) {
+        cdkBuilder.resourceAssociationArn(resourceAssociationArn)
+      }
+
+      /**
+       * @param resourceConfigurationArn the value to be set. 
+       */
+      override fun resourceConfigurationArn(resourceConfigurationArn: String) {
+        cdkBuilder.resourceConfigurationArn(resourceConfigurationArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.events.CfnConnection.ResourceParametersProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.events.CfnConnection.ResourceParametersProperty,
+    ) : CdkObject(cdkObject),
+        ResourceParametersProperty {
+      /**
+       * For connections to private APIs, the Amazon Resource Name (ARN) of the resource association
+       * EventBridge created between the connection and the private API's resource configuration.
+       *
+       * For more information, see [Managing service network resource associations for
+       * connections](https://docs.aws.amazon.com/eventbridge/latest/userguide/connection-private.html#connection-private-snra)
+       * in the **Amazon EventBridge User Guide** .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-resourceparameters.html#cfn-events-connection-resourceparameters-resourceassociationarn)
+       */
+      override fun resourceAssociationArn(): String? = unwrap(this).getResourceAssociationArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-connection-resourceparameters.html#cfn-events-connection-resourceparameters-resourceconfigurationarn)
+       */
+      override fun resourceConfigurationArn(): String = unwrap(this).getResourceConfigurationArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ResourceParametersProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.events.CfnConnection.ResourceParametersProperty):
+          ResourceParametersProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ResourceParametersProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ResourceParametersProperty):
+          software.amazon.awscdk.services.events.CfnConnection.ResourceParametersProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.events.CfnConnection.ResourceParametersProperty
     }
   }
 }

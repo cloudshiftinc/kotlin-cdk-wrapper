@@ -114,7 +114,7 @@ public interface CfnFlowOutputProps {
   /**
    * The maximum latency in milliseconds.
    *
-   * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+   * This parameter applies only to RIST-based and Zixi-based streams.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-maxlatency)
    */
@@ -149,7 +149,9 @@ public interface CfnFlowOutputProps {
   public fun name(): String? = unwrap(this).getName()
 
   /**
-   * An indication of whether the output should transmit data or not.
+   * An indication of whether the new output should be enabled or disabled as soon as it is created.
+   *
+   * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-outputstatus)
    */
@@ -164,6 +166,11 @@ public interface CfnFlowOutputProps {
 
   /**
    * The protocol to use for the output.
+   *
+   *
+   * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+   * maintained for legacy purposes only.
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-protocol)
    */
@@ -258,7 +265,7 @@ public interface CfnFlowOutputProps {
 
     /**
      * @param maxLatency The maximum latency in milliseconds.
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      */
     public fun maxLatency(maxLatency: Number)
 
@@ -296,7 +303,9 @@ public interface CfnFlowOutputProps {
     public fun name(name: String)
 
     /**
-     * @param outputStatus An indication of whether the output should transmit data or not.
+     * @param outputStatus An indication of whether the new output should be enabled or disabled as
+     * soon as it is created.
+     * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
      */
     public fun outputStatus(outputStatus: String)
 
@@ -307,6 +316,9 @@ public interface CfnFlowOutputProps {
 
     /**
      * @param protocol The protocol to use for the output. 
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
      */
     public fun protocol(protocol: String)
 
@@ -418,7 +430,7 @@ public interface CfnFlowOutputProps {
 
     /**
      * @param maxLatency The maximum latency in milliseconds.
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      */
     override fun maxLatency(maxLatency: Number) {
       cdkBuilder.maxLatency(maxLatency)
@@ -467,7 +479,9 @@ public interface CfnFlowOutputProps {
     }
 
     /**
-     * @param outputStatus An indication of whether the output should transmit data or not.
+     * @param outputStatus An indication of whether the new output should be enabled or disabled as
+     * soon as it is created.
+     * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
      */
     override fun outputStatus(outputStatus: String) {
       cdkBuilder.outputStatus(outputStatus)
@@ -482,6 +496,9 @@ public interface CfnFlowOutputProps {
 
     /**
      * @param protocol The protocol to use for the output. 
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
      */
     override fun protocol(protocol: String) {
       cdkBuilder.protocol(protocol)
@@ -588,7 +605,7 @@ public interface CfnFlowOutputProps {
     /**
      * The maximum latency in milliseconds.
      *
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-maxlatency)
      */
@@ -624,7 +641,10 @@ public interface CfnFlowOutputProps {
     override fun name(): String? = unwrap(this).getName()
 
     /**
-     * An indication of whether the output should transmit data or not.
+     * An indication of whether the new output should be enabled or disabled as soon as it is
+     * created.
+     *
+     * If you don't specify the outputStatus field in your request, MediaConnect sets it to ENABLED.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-outputstatus)
      */
@@ -639,6 +659,11 @@ public interface CfnFlowOutputProps {
 
     /**
      * The protocol to use for the output.
+     *
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowoutput.html#cfn-mediaconnect-flowoutput-protocol)
      */

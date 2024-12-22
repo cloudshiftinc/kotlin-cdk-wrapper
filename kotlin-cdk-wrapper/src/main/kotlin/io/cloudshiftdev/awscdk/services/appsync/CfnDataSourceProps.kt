@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -106,14 +107,10 @@ public interface CfnDataSourceProps {
   public fun dynamoDbConfig(): Any? = unwrap(this).getDynamoDbConfig()
 
   /**
-   * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
-   *
-   * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This property
-   * is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an OpenSearch
-   * Service data source.
-   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig)
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun elasticsearchConfig(): Any? = unwrap(this).getElasticsearchConfig()
 
   /**
@@ -195,6 +192,7 @@ public interface CfnDataSourceProps {
    * * *AMAZON_ELASTICSEARCH* : The data source is an Amazon OpenSearch Service domain.
    * * *AMAZON_EVENTBRIDGE* : The data source is an Amazon EventBridge event bus.
    * * *AMAZON_OPENSEARCH_SERVICE* : The data source is an Amazon OpenSearch Service domain.
+   * * *AMAZON_BEDROCK_RUNTIME* : The data source is the Amazon Bedrock runtime.
    * * *NONE* : There is no data source. This type is used when you wish to invoke a GraphQL
    * operation without connecting to a data source, such as performing data transformation with
    * resolvers or triggering a subscription to be invoked from a mutation.
@@ -240,30 +238,24 @@ public interface CfnDataSourceProps {
         fun dynamoDbConfig(dynamoDbConfig: CfnDataSource.DynamoDBConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account.
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
+     * @param elasticsearchConfig the value to be set.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun elasticsearchConfig(elasticsearchConfig: IResolvable)
 
     /**
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account.
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
+     * @param elasticsearchConfig the value to be set.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun elasticsearchConfig(elasticsearchConfig: CfnDataSource.ElasticsearchConfigProperty)
 
     /**
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account.
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
+     * @param elasticsearchConfig the value to be set.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b97e3723e80a155fb931c4d1b50be94b9f029cd43eb14d0305ced2ff662e0e92")
     public
@@ -408,6 +400,7 @@ public interface CfnDataSourceProps {
      * * *AMAZON_ELASTICSEARCH* : The data source is an Amazon OpenSearch Service domain.
      * * *AMAZON_EVENTBRIDGE* : The data source is an Amazon EventBridge event bus.
      * * *AMAZON_OPENSEARCH_SERVICE* : The data source is an Amazon OpenSearch Service domain.
+     * * *AMAZON_BEDROCK_RUNTIME* : The data source is the Amazon Bedrock runtime.
      * * *NONE* : There is no data source. This type is used when you wish to invoke a GraphQL
      * operation without connecting to a data source, such as performing data transformation with
      * resolvers or triggering a subscription to be invoked from a mutation.
@@ -460,35 +453,29 @@ public interface CfnDataSourceProps {
         Unit = dynamoDbConfig(CfnDataSource.DynamoDBConfigProperty(dynamoDbConfig))
 
     /**
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account.
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
+     * @param elasticsearchConfig the value to be set.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun elasticsearchConfig(elasticsearchConfig: IResolvable) {
       cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account.
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
+     * @param elasticsearchConfig the value to be set.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override
         fun elasticsearchConfig(elasticsearchConfig: CfnDataSource.ElasticsearchConfigProperty) {
       cdkBuilder.elasticsearchConfig(elasticsearchConfig.let(CfnDataSource.ElasticsearchConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param elasticsearchConfig AWS Region and Endpoints for an Amazon OpenSearch Service domain
-     * in your account.
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
+     * @param elasticsearchConfig the value to be set.
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("b97e3723e80a155fb931c4d1b50be94b9f029cd43eb14d0305ced2ff662e0e92")
     override
@@ -667,6 +654,7 @@ public interface CfnDataSourceProps {
      * * *AMAZON_ELASTICSEARCH* : The data source is an Amazon OpenSearch Service domain.
      * * *AMAZON_EVENTBRIDGE* : The data source is an Amazon EventBridge event bus.
      * * *AMAZON_OPENSEARCH_SERVICE* : The data source is an Amazon OpenSearch Service domain.
+     * * *AMAZON_BEDROCK_RUNTIME* : The data source is the Amazon Bedrock runtime.
      * * *NONE* : There is no data source. This type is used when you wish to invoke a GraphQL
      * operation without connecting to a data source, such as performing data transformation with
      * resolvers or triggering a subscription to be invoked from a mutation.
@@ -707,14 +695,10 @@ public interface CfnDataSourceProps {
     override fun dynamoDbConfig(): Any? = unwrap(this).getDynamoDbConfig()
 
     /**
-     * AWS Region and Endpoints for an Amazon OpenSearch Service domain in your account.
-     *
-     * As of September 2021, Amazon Elasticsearch Service is Amazon OpenSearch Service . This
-     * property is deprecated. For new data sources, use *OpenSearchServiceConfig* to specify an
-     * OpenSearch Service data source.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-datasource.html#cfn-appsync-datasource-elasticsearchconfig)
+     * @deprecated this property has been deprecated
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun elasticsearchConfig(): Any? = unwrap(this).getElasticsearchConfig()
 
     /**
@@ -796,6 +780,7 @@ public interface CfnDataSourceProps {
      * * *AMAZON_ELASTICSEARCH* : The data source is an Amazon OpenSearch Service domain.
      * * *AMAZON_EVENTBRIDGE* : The data source is an Amazon EventBridge event bus.
      * * *AMAZON_OPENSEARCH_SERVICE* : The data source is an Amazon OpenSearch Service domain.
+     * * *AMAZON_BEDROCK_RUNTIME* : The data source is the Amazon Bedrock runtime.
      * * *NONE* : There is no data source. This type is used when you wish to invoke a GraphQL
      * operation without connecting to a data source, such as performing data transformation with
      * resolvers or triggering a subscription to be invoked from a mutation.

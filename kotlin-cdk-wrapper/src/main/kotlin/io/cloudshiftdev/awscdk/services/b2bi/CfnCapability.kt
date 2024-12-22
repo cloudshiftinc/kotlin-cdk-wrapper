@@ -50,6 +50,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .version("version")
  * .build())
  * .build())
+ * // the properties below are optional
+ * .capabilityDirection("capabilityDirection")
  * .build())
  * .build())
  * .name("name")
@@ -521,6 +523,8 @@ public open class CfnCapability(
    * .version("version")
    * .build())
    * .build())
+   * // the properties below are optional
+   * .capabilityDirection("capabilityDirection")
    * .build())
    * .build();
    * ```
@@ -646,12 +650,21 @@ public open class CfnCapability(
    * .version("version")
    * .build())
    * .build())
+   * // the properties below are optional
+   * .capabilityDirection("capabilityDirection")
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-ediconfiguration.html)
    */
   public interface EdiConfigurationProperty {
+    /**
+     * Specifies whether this is capability is for inbound or outbound transformations.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-ediconfiguration.html#cfn-b2bi-capability-ediconfiguration-capabilitydirection)
+     */
+    public fun capabilityDirection(): String? = unwrap(this).getCapabilityDirection()
+
     /**
      * Contains the Amazon S3 bucket and prefix for the location of the input file, which is
      * contained in an `S3Location` object.
@@ -689,6 +702,12 @@ public open class CfnCapability(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param capabilityDirection Specifies whether this is capability is for inbound or outbound
+       * transformations.
+       */
+      public fun capabilityDirection(capabilityDirection: String)
+
       /**
        * @param inputLocation Contains the Amazon S3 bucket and prefix for the location of the input
        * file, which is contained in an `S3Location` object. 
@@ -759,6 +778,14 @@ public open class CfnCapability(
       private val cdkBuilder:
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty.Builder =
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiConfigurationProperty.builder()
+
+      /**
+       * @param capabilityDirection Specifies whether this is capability is for inbound or outbound
+       * transformations.
+       */
+      override fun capabilityDirection(capabilityDirection: String) {
+        cdkBuilder.capabilityDirection(capabilityDirection)
+      }
 
       /**
        * @param inputLocation Contains the Amazon S3 bucket and prefix for the location of the input
@@ -852,6 +879,13 @@ public open class CfnCapability(
     ) : CdkObject(cdkObject),
         EdiConfigurationProperty {
       /**
+       * Specifies whether this is capability is for inbound or outbound transformations.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-ediconfiguration.html#cfn-b2bi-capability-ediconfiguration-capabilitydirection)
+       */
+      override fun capabilityDirection(): String? = unwrap(this).getCapabilityDirection()
+
+      /**
        * Contains the Amazon S3 bucket and prefix for the location of the input file, which is
        * contained in an `S3Location` object.
        *
@@ -903,11 +937,6 @@ public open class CfnCapability(
   }
 
   /**
-   * Specifies the details for the EDI standard that is being used for the transformer.
-   *
-   * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-   * define specific business documents.
-   *
    * Example:
    *
    * ```
@@ -926,11 +955,6 @@ public open class CfnCapability(
    */
   public interface EdiTypeProperty {
     /**
-     * Returns the details for the EDI standard that is being used for the transformer.
-     *
-     * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-     * define specific business documents.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-editype.html#cfn-b2bi-capability-editype-x12details)
      */
     public fun x12Details(): Any
@@ -941,26 +965,17 @@ public open class CfnCapability(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       public fun x12Details(x12Details: IResolvable)
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       public fun x12Details(x12Details: X12DetailsProperty)
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a23b4587c8e9ebabd3a19d1f1afbff5ed1f74627cc0c6a1bd285efac39369168")
@@ -973,30 +988,21 @@ public open class CfnCapability(
           software.amazon.awscdk.services.b2bi.CfnCapability.EdiTypeProperty.builder()
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       override fun x12Details(x12Details: IResolvable) {
         cdkBuilder.x12Details(x12Details.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       override fun x12Details(x12Details: X12DetailsProperty) {
         cdkBuilder.x12Details(x12Details.let(X12DetailsProperty.Companion::unwrap))
       }
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("a23b4587c8e9ebabd3a19d1f1afbff5ed1f74627cc0c6a1bd285efac39369168")
@@ -1012,11 +1018,6 @@ public open class CfnCapability(
     ) : CdkObject(cdkObject),
         EdiTypeProperty {
       /**
-       * Returns the details for the EDI standard that is being used for the transformer.
-       *
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-capability-editype.html#cfn-b2bi-capability-editype-x12details)
        */
       override fun x12Details(): Any = unwrap(this).getX12Details()
@@ -1040,7 +1041,7 @@ public open class CfnCapability(
   }
 
   /**
-   * Specifies the details for the Amazon S3 file location that is being used with AWS B2BI Data
+   * Specifies the details for the Amazon S3 file location that is being used with AWS B2B Data
    * Interchange.
    *
    * File locations in Amazon S3 are identified using a combination of the bucket and key.

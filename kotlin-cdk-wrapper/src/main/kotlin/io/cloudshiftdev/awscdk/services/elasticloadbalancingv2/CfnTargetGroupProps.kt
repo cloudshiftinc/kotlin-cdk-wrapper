@@ -68,7 +68,7 @@ public interface CfnTargetGroupProps {
    * Indicates whether health checks are enabled.
    *
    * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-   * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+   * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
    * disabled.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled)
@@ -146,10 +146,9 @@ public interface CfnTargetGroupProps {
   public fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
 
   /**
-   * The type of IP address used for this target group.
+   * The IP address type.
    *
-   * The possible values are `ipv4` and `ipv6` . This is an optional parameter. If not specified,
-   * the IP address type defaults to `ipv4` .
+   * The default value is `ipv4` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-ipaddresstype)
    */
@@ -276,7 +275,7 @@ public interface CfnTargetGroupProps {
     /**
      * @param healthCheckEnabled Indicates whether health checks are enabled.
      * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
      * disabled.
      */
     public fun healthCheckEnabled(healthCheckEnabled: Boolean)
@@ -284,7 +283,7 @@ public interface CfnTargetGroupProps {
     /**
      * @param healthCheckEnabled Indicates whether health checks are enabled.
      * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
      * disabled.
      */
     public fun healthCheckEnabled(healthCheckEnabled: IResolvable)
@@ -347,9 +346,8 @@ public interface CfnTargetGroupProps {
     public fun healthyThresholdCount(healthyThresholdCount: Number)
 
     /**
-     * @param ipAddressType The type of IP address used for this target group.
-     * The possible values are `ipv4` and `ipv6` . This is an optional parameter. If not specified,
-     * the IP address type defaults to `ipv4` .
+     * @param ipAddressType The IP address type.
+     * The default value is `ipv4` .
      */
     public fun ipAddressType(ipAddressType: String)
 
@@ -492,7 +490,7 @@ public interface CfnTargetGroupProps {
     /**
      * @param healthCheckEnabled Indicates whether health checks are enabled.
      * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
      * disabled.
      */
     override fun healthCheckEnabled(healthCheckEnabled: Boolean) {
@@ -502,7 +500,7 @@ public interface CfnTargetGroupProps {
     /**
      * @param healthCheckEnabled Indicates whether health checks are enabled.
      * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
      * disabled.
      */
     override fun healthCheckEnabled(healthCheckEnabled: IResolvable) {
@@ -579,9 +577,8 @@ public interface CfnTargetGroupProps {
     }
 
     /**
-     * @param ipAddressType The type of IP address used for this target group.
-     * The possible values are `ipv4` and `ipv6` . This is an optional parameter. If not specified,
-     * the IP address type defaults to `ipv4` .
+     * @param ipAddressType The IP address type.
+     * The default value is `ipv4` .
      */
     override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
@@ -759,7 +756,7 @@ public interface CfnTargetGroupProps {
      * Indicates whether health checks are enabled.
      *
      * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
      * disabled.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled)
@@ -839,10 +836,9 @@ public interface CfnTargetGroupProps {
     override fun healthyThresholdCount(): Number? = unwrap(this).getHealthyThresholdCount()
 
     /**
-     * The type of IP address used for this target group.
+     * The IP address type.
      *
-     * The possible values are `ipv4` and `ipv6` . This is an optional parameter. If not specified,
-     * the IP address type defaults to `ipv4` .
+     * The default value is `ipv4` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-ipaddresstype)
      */

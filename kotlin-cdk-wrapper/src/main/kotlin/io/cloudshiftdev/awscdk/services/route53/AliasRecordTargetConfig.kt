@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.route53
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
@@ -20,6 +21,8 @@ import kotlin.Unit
  * AliasRecordTargetConfig aliasRecordTargetConfig = AliasRecordTargetConfig.builder()
  * .dnsName("dnsName")
  * .hostedZoneId("hostedZoneId")
+ * // the properties below are optional
+ * .evaluateTargetHealth(false)
  * .build();
  * ```
  */
@@ -28,6 +31,13 @@ public interface AliasRecordTargetConfig {
    * DNS name of the target.
    */
   public fun dnsName(): String
+
+  /**
+   * Evaluate the target health.
+   *
+   * Default: - no health check configuration
+   */
+  public fun evaluateTargetHealth(): Boolean? = unwrap(this).getEvaluateTargetHealth()
 
   /**
    * Hosted zone ID of the target.
@@ -45,6 +55,11 @@ public interface AliasRecordTargetConfig {
     public fun dnsName(dnsName: String)
 
     /**
+     * @param evaluateTargetHealth Evaluate the target health.
+     */
+    public fun evaluateTargetHealth(evaluateTargetHealth: Boolean)
+
+    /**
      * @param hostedZoneId Hosted zone ID of the target. 
      */
     public fun hostedZoneId(hostedZoneId: String)
@@ -59,6 +74,13 @@ public interface AliasRecordTargetConfig {
      */
     override fun dnsName(dnsName: String) {
       cdkBuilder.dnsName(dnsName)
+    }
+
+    /**
+     * @param evaluateTargetHealth Evaluate the target health.
+     */
+    override fun evaluateTargetHealth(evaluateTargetHealth: Boolean) {
+      cdkBuilder.evaluateTargetHealth(evaluateTargetHealth)
     }
 
     /**
@@ -80,6 +102,13 @@ public interface AliasRecordTargetConfig {
      * DNS name of the target.
      */
     override fun dnsName(): String = unwrap(this).getDnsName()
+
+    /**
+     * Evaluate the target health.
+     *
+     * Default: - no health check configuration
+     */
+    override fun evaluateTargetHealth(): Boolean? = unwrap(this).getEvaluateTargetHealth()
 
     /**
      * Hosted zone ID of the target.

@@ -54,6 +54,7 @@ import kotlin.jvm.JvmName
  * .dockerLabels(Map.of(
  * "dockerLabelsKey", "dockerLabels"))
  * .dockerSecurityOptions(List.of("dockerSecurityOptions"))
+ * .enableRestartPolicy(false)
  * .entryPoint(List.of("entryPoint"))
  * .environment(Map.of(
  * "environmentKey", "environment"))
@@ -89,6 +90,8 @@ import kotlin.jvm.JvmName
  * .privileged(false)
  * .pseudoTerminal(false)
  * .readonlyRootFilesystem(false)
+ * .restartAttemptPeriod(Duration.minutes(30))
+ * .restartIgnoredExitCodes(List.of(123))
  * .secrets(Map.of(
  * "secretsKey", secret))
  * .startTimeout(Duration.minutes(30))
@@ -200,6 +203,13 @@ public interface FirelensLogRouterDefinitionOptions : ContainerDefinitionOptions
      * AppArmor multi-level security systems.
      */
     public fun dockerSecurityOptions(vararg dockerSecurityOptions: String)
+
+    /**
+     * @param enableRestartPolicy Enable a restart policy for a container.
+     * When you set up a restart policy, Amazon ECS can restart the container without needing to
+     * replace the task.
+     */
+    public fun enableRestartPolicy(enableRestartPolicy: Boolean)
 
     /**
      * @param entryPoint The ENTRYPOINT value to pass to the container.
@@ -371,6 +381,39 @@ public interface FirelensLogRouterDefinitionOptions : ContainerDefinitionOptions
     public fun readonlyRootFilesystem(readonlyRootFilesystem: Boolean)
 
     /**
+     * @param restartAttemptPeriod A period of time that the container must run for before a restart
+     * can be attempted.
+     * A container can be restarted only once every `restartAttemptPeriod` seconds.
+     * If a container isn't able to run for this time period and exits early, it will not be
+     * restarted.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can set a minimum `restartAttemptPeriod` of 60 seconds and a maximum
+     * `restartAttemptPeriod`
+     * of 1800 seconds.
+     */
+    public fun restartAttemptPeriod(restartAttemptPeriod: Duration)
+
+    /**
+     * @param restartIgnoredExitCodes A list of exit codes that Amazon ECS will ignore and not
+     * attempt a restart on.
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can specify a maximum of 50 container exit codes.
+     */
+    public fun restartIgnoredExitCodes(restartIgnoredExitCodes: List<Number>)
+
+    /**
+     * @param restartIgnoredExitCodes A list of exit codes that Amazon ECS will ignore and not
+     * attempt a restart on.
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can specify a maximum of 50 container exit codes.
+     */
+    public fun restartIgnoredExitCodes(vararg restartIgnoredExitCodes: Number)
+
+    /**
      * @param secrets The secret environment variables to pass to the container.
      */
     public fun secrets(secrets: Map<String, Secret>)
@@ -528,6 +571,15 @@ public interface FirelensLogRouterDefinitionOptions : ContainerDefinitionOptions
      */
     override fun dockerSecurityOptions(vararg dockerSecurityOptions: String): Unit =
         dockerSecurityOptions(dockerSecurityOptions.toList())
+
+    /**
+     * @param enableRestartPolicy Enable a restart policy for a container.
+     * When you set up a restart policy, Amazon ECS can restart the container without needing to
+     * replace the task.
+     */
+    override fun enableRestartPolicy(enableRestartPolicy: Boolean) {
+      cdkBuilder.enableRestartPolicy(enableRestartPolicy)
+    }
 
     /**
      * @param entryPoint The ENTRYPOINT value to pass to the container.
@@ -744,6 +796,44 @@ public interface FirelensLogRouterDefinitionOptions : ContainerDefinitionOptions
     }
 
     /**
+     * @param restartAttemptPeriod A period of time that the container must run for before a restart
+     * can be attempted.
+     * A container can be restarted only once every `restartAttemptPeriod` seconds.
+     * If a container isn't able to run for this time period and exits early, it will not be
+     * restarted.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can set a minimum `restartAttemptPeriod` of 60 seconds and a maximum
+     * `restartAttemptPeriod`
+     * of 1800 seconds.
+     */
+    override fun restartAttemptPeriod(restartAttemptPeriod: Duration) {
+      cdkBuilder.restartAttemptPeriod(restartAttemptPeriod.let(Duration.Companion::unwrap))
+    }
+
+    /**
+     * @param restartIgnoredExitCodes A list of exit codes that Amazon ECS will ignore and not
+     * attempt a restart on.
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can specify a maximum of 50 container exit codes.
+     */
+    override fun restartIgnoredExitCodes(restartIgnoredExitCodes: List<Number>) {
+      cdkBuilder.restartIgnoredExitCodes(restartIgnoredExitCodes)
+    }
+
+    /**
+     * @param restartIgnoredExitCodes A list of exit codes that Amazon ECS will ignore and not
+     * attempt a restart on.
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can specify a maximum of 50 container exit codes.
+     */
+    override fun restartIgnoredExitCodes(vararg restartIgnoredExitCodes: Number): Unit =
+        restartIgnoredExitCodes(restartIgnoredExitCodes.toList())
+
+    /**
      * @param secrets The secret environment variables to pass to the container.
      */
     override fun secrets(secrets: Map<String, Secret>) {
@@ -890,6 +980,18 @@ public interface FirelensLogRouterDefinitionOptions : ContainerDefinitionOptions
      */
     override fun dockerSecurityOptions(): List<String> = unwrap(this).getDockerSecurityOptions() ?:
         emptyList()
+
+    /**
+     * Enable a restart policy for a container.
+     *
+     * When you set up a restart policy, Amazon ECS can restart the container without needing to
+     * replace the task.
+     *
+     * Default: - false unless `restartIgnoredExitCodes` or `restartAttemptPeriod` is set.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/container-restart-policy.html)
+     */
+    override fun enableRestartPolicy(): Boolean? = unwrap(this).getEnableRestartPolicy()
 
     /**
      * The ENTRYPOINT value to pass to the container.
@@ -1078,6 +1180,36 @@ public interface FirelensLogRouterDefinitionOptions : ContainerDefinitionOptions
      * Default: false
      */
     override fun readonlyRootFilesystem(): Boolean? = unwrap(this).getReadonlyRootFilesystem()
+
+    /**
+     * A period of time that the container must run for before a restart can be attempted.
+     *
+     * A container can be restarted only once every `restartAttemptPeriod` seconds.
+     * If a container isn't able to run for this time period and exits early, it will not be
+     * restarted.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can set a minimum `restartAttemptPeriod` of 60 seconds and a maximum
+     * `restartAttemptPeriod`
+     * of 1800 seconds.
+     *
+     * Default: - Duration.seconds(300) if `enableRestartPolicy` is true, otherwise no period.
+     */
+    override fun restartAttemptPeriod(): Duration? =
+        unwrap(this).getRestartAttemptPeriod()?.let(Duration::wrap)
+
+    /**
+     * A list of exit codes that Amazon ECS will ignore and not attempt a restart on.
+     *
+     * This property can't be used if `enableRestartPolicy` is set to false.
+     *
+     * You can specify a maximum of 50 container exit codes.
+     *
+     * Default: - No exit codes are ignored.
+     */
+    override fun restartIgnoredExitCodes(): List<Number> = unwrap(this).getRestartIgnoredExitCodes()
+        ?: emptyList()
 
     /**
      * The secret environment variables to pass to the container.

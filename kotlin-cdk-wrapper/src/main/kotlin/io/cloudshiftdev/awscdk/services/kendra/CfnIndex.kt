@@ -2346,6 +2346,12 @@ public open class CfnIndex(
   /**
    * Provides the configuration information for a token.
    *
+   *
+   * If you're using an Amazon Kendra Gen AI Enterprise Edition index and you try to use
+   * `UserTokenConfigurations` to configure user context policy, Amazon Kendra returns a
+   * `ValidationException` error.
+   *
+   *
    * Example:
    *
    * ```

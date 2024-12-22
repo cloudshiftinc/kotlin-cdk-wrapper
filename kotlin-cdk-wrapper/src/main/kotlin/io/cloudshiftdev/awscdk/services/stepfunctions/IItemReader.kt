@@ -21,6 +21,12 @@ public interface IItemReader {
   public fun bucket(): IBucket
 
   /**
+   * S3 bucket name containing objects to iterate over or a file with a list to iterate over, as
+   * JsonPath.
+   */
+  public fun bucketNamePath(): String? = unwrap(this).getBucketNamePath()
+
+  /**
    * Limits the number of items passed to the Distributed Map state.
    *
    * Default: - Distributed Map state will iterate over all items provided by the ItemReader
@@ -42,6 +48,13 @@ public interface IItemReader {
    */
   public fun resource(): String
 
+  /**
+   * Validate that ItemReader contains exactly either.
+   *
+   * [Documentation](bucketNamePath)
+   */
+  public fun validateItemReader(): List<String>
+
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.stepfunctions.IItemReader,
   ) : CdkObject(cdkObject),
@@ -50,6 +63,12 @@ public interface IItemReader {
      * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
      */
     override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+
+    /**
+     * S3 bucket name containing objects to iterate over or a file with a list to iterate over, as
+     * JsonPath.
+     */
+    override fun bucketNamePath(): String? = unwrap(this).getBucketNamePath()
 
     /**
      * Limits the number of items passed to the Distributed Map state.
@@ -73,6 +92,13 @@ public interface IItemReader {
      * The Amazon S3 API action that Step Functions must invoke depending on the specified dataset.
      */
     override fun resource(): String = unwrap(this).getResource()
+
+    /**
+     * Validate that ItemReader contains exactly either.
+     *
+     * [Documentation](bucketNamePath)
+     */
+    override fun validateItemReader(): List<String> = unwrap(this).validateItemReader()
   }
 
   public companion object {

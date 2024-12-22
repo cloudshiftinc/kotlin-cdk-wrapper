@@ -4,12 +4,14 @@ package io.cloudshiftdev.awscdk.services.cloudfront.origins
 
 import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.services.cloudfront.IOrigin
 import io.cloudshiftdev.awscdk.services.cloudfront.OriginBase
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.awscdk.services.lambda.IFunctionUrl as CloudshiftdevAwscdkServicesLambdaIFunctionUrl
 import software.amazon.awscdk.services.lambda.IFunctionUrl as AmazonAwscdkServicesLambdaIFunctionUrl
 
@@ -21,10 +23,13 @@ import software.amazon.awscdk.services.lambda.IFunctionUrl as AmazonAwscdkServic
  * ```
  * import io.cloudshiftdev.awscdk.services.lambda.*;
  * Function fn;
- * FunctionUrl fnUrl =
- * fn.addFunctionUrl(FunctionUrlOptions.builder().authType(FunctionUrlAuthType.NONE).build());
- * Distribution.Builder.create(this, "Distribution")
- * .defaultBehavior(BehaviorOptions.builder().origin(new FunctionUrlOrigin(fnUrl)).build())
+ * FunctionUrl fnUrl = fn.addFunctionUrl(FunctionUrlOptions.builder()
+ * .authType(FunctionUrlAuthType.AWS_IAM)
+ * .build());
+ * Distribution.Builder.create(this, "MyDistribution")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(FunctionUrlOrigin.withOriginAccessControl(fnUrl))
+ * .build())
  * .build();
  * ```
  */
@@ -338,6 +343,24 @@ public open class FunctionUrlOrigin(
   }
 
   public companion object {
+    public
+        fun withOriginAccessControl(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl):
+        IOrigin =
+        software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin.withOriginAccessControl(lambdaFunctionUrl.let(CloudshiftdevAwscdkServicesLambdaIFunctionUrl.Companion::unwrap)).let(IOrigin::wrap)
+
+    public
+        fun withOriginAccessControl(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl,
+        props: FunctionUrlOriginWithOACProps): IOrigin =
+        software.amazon.awscdk.services.cloudfront.origins.FunctionUrlOrigin.withOriginAccessControl(lambdaFunctionUrl.let(CloudshiftdevAwscdkServicesLambdaIFunctionUrl.Companion::unwrap),
+        props.let(FunctionUrlOriginWithOACProps.Companion::unwrap)).let(IOrigin::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c79cbadf50fb9302c1b2c05ebba71261136bd44b7be1fae00a6a6c5db8222c4b")
+    public
+        fun withOriginAccessControl(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl,
+        props: FunctionUrlOriginWithOACProps.Builder.() -> Unit): IOrigin =
+        withOriginAccessControl(lambdaFunctionUrl, FunctionUrlOriginWithOACProps(props))
+
     public operator fun invoke(lambdaFunctionUrl: CloudshiftdevAwscdkServicesLambdaIFunctionUrl,
         block: Builder.() -> Unit = {}): FunctionUrlOrigin {
       val builderImpl =

@@ -41,6 +41,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .resultFormat("resultFormat")
  * // the properties below are optional
  * .keyPrefix("keyPrefix")
+ * .singleFileOutput(false)
  * .build())
  * .build())
  * // the properties below are optional
@@ -635,6 +636,7 @@ public open class CfnMembership(
    * .resultFormat("resultFormat")
    * // the properties below are optional
    * .keyPrefix("keyPrefix")
+   * .singleFileOutput(false)
    * .build())
    * .build();
    * ```
@@ -754,6 +756,7 @@ public open class CfnMembership(
    * .resultFormat("resultFormat")
    * // the properties below are optional
    * .keyPrefix("keyPrefix")
+   * .singleFileOutput(false)
    * .build())
    * .build())
    * // the properties below are optional
@@ -1065,6 +1068,7 @@ public open class CfnMembership(
    * .resultFormat("resultFormat")
    * // the properties below are optional
    * .keyPrefix("keyPrefix")
+   * .singleFileOutput(false)
    * .build();
    * ```
    *
@@ -1093,6 +1097,16 @@ public open class CfnMembership(
     public fun resultFormat(): String
 
     /**
+     * Indicates whether files should be output as a single file ( `TRUE` ) or output as multiple
+     * files ( `FALSE` ).
+     *
+     * This parameter is only supported for analyses with the Spark analytics engine.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-singlefileoutput)
+     */
+    public fun singleFileOutput(): Any? = unwrap(this).getSingleFileOutput()
+
+    /**
      * A builder for [ProtectedQueryS3OutputConfigurationProperty]
      */
     @CdkDslMarker
@@ -1111,6 +1125,20 @@ public open class CfnMembership(
        * @param resultFormat Intended file format of the result. 
        */
       public fun resultFormat(resultFormat: String)
+
+      /**
+       * @param singleFileOutput Indicates whether files should be output as a single file ( `TRUE`
+       * ) or output as multiple files ( `FALSE` ).
+       * This parameter is only supported for analyses with the Spark analytics engine.
+       */
+      public fun singleFileOutput(singleFileOutput: Boolean)
+
+      /**
+       * @param singleFileOutput Indicates whether files should be output as a single file ( `TRUE`
+       * ) or output as multiple files ( `FALSE` ).
+       * This parameter is only supported for analyses with the Spark analytics engine.
+       */
+      public fun singleFileOutput(singleFileOutput: IResolvable)
     }
 
     private class BuilderImpl : Builder {
@@ -1138,6 +1166,24 @@ public open class CfnMembership(
        */
       override fun resultFormat(resultFormat: String) {
         cdkBuilder.resultFormat(resultFormat)
+      }
+
+      /**
+       * @param singleFileOutput Indicates whether files should be output as a single file ( `TRUE`
+       * ) or output as multiple files ( `FALSE` ).
+       * This parameter is only supported for analyses with the Spark analytics engine.
+       */
+      override fun singleFileOutput(singleFileOutput: Boolean) {
+        cdkBuilder.singleFileOutput(singleFileOutput)
+      }
+
+      /**
+       * @param singleFileOutput Indicates whether files should be output as a single file ( `TRUE`
+       * ) or output as multiple files ( `FALSE` ).
+       * This parameter is only supported for analyses with the Spark analytics engine.
+       */
+      override fun singleFileOutput(singleFileOutput: IResolvable) {
+        cdkBuilder.singleFileOutput(singleFileOutput.let(IResolvable.Companion::unwrap))
       }
 
       public fun build():
@@ -1169,6 +1215,16 @@ public open class CfnMembership(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-resultformat)
        */
       override fun resultFormat(): String = unwrap(this).getResultFormat()
+
+      /**
+       * Indicates whether files should be output as a single file ( `TRUE` ) or output as multiple
+       * files ( `FALSE` ).
+       *
+       * This parameter is only supported for analyses with the Spark analytics engine.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cleanrooms-membership-protectedquerys3outputconfiguration.html#cfn-cleanrooms-membership-protectedquerys3outputconfiguration-singlefileoutput)
+       */
+      override fun singleFileOutput(): Any? = unwrap(this).getSingleFileOutput()
     }
 
     public companion object {

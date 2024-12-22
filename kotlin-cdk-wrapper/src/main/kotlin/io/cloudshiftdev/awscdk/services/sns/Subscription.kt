@@ -9,6 +9,7 @@ import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -71,6 +72,28 @@ public open class Subscription(
      * @param deadLetterQueue Queue to be used as dead letter queue. 
      */
     public fun deadLetterQueue(deadLetterQueue: IQueue)
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     *
+     * @param deliveryPolicy The delivery policy. 
+     */
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy)
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     *
+     * @param deliveryPolicy The delivery policy. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2234cf77756bc0d3136250fca9f38c58b891772d2c1047dc38e92b677a4ea0ea")
+    public fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit)
 
     /**
      * The subscription endpoint.
@@ -170,6 +193,31 @@ public open class Subscription(
     override fun deadLetterQueue(deadLetterQueue: IQueue) {
       cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
     }
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     *
+     * @param deliveryPolicy The delivery policy. 
+     */
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy) {
+      cdkBuilder.deliveryPolicy(deliveryPolicy.let(DeliveryPolicy.Companion::unwrap))
+    }
+
+    /**
+     * The delivery policy.
+     *
+     * Default: - if the initial delivery of the message fails, three retries with a delay between
+     * failed attempts set at 20 seconds
+     *
+     * @param deliveryPolicy The delivery policy. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2234cf77756bc0d3136250fca9f38c58b891772d2c1047dc38e92b677a4ea0ea")
+    override fun deliveryPolicy(deliveryPolicy: DeliveryPolicy.Builder.() -> Unit): Unit =
+        deliveryPolicy(DeliveryPolicy(deliveryPolicy))
 
     /**
      * The subscription endpoint.

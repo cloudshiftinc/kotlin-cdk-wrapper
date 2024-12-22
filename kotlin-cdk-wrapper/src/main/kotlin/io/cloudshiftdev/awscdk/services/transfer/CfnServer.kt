@@ -121,6 +121,17 @@ public open class CfnServer(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
+   * The list of egress IP addresses of this server.
+   *
+   * These IP addresses are only relevant for servers that use the AS2 protocol. They are used for
+   * sending asynchronous MDNs. These IP addresses are assigned automatically when you create an AS2
+   * server. Additionally, if you update an existing server and add the AS2 protocol, static IP
+   * addresses are assigned as well.
+   */
+  public open fun attrAs2ServiceManagedEgressIpAddresses(): List<String> =
+      unwrap(this).getAttrAs2ServiceManagedEgressIpAddresses()
+
+  /**
    * The service-assigned ID of the server that is created.
    *
    * An example `ServerId` is `s-01234567890abcdef` .
@@ -586,7 +597,7 @@ public open class CfnServer(
      *
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-identityproviderdetails)
      * @param identityProviderDetails Required when `IdentityProviderType` is set to
@@ -600,7 +611,7 @@ public open class CfnServer(
      *
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-identityproviderdetails)
      * @param identityProviderDetails Required when `IdentityProviderType` is set to
@@ -614,7 +625,7 @@ public open class CfnServer(
      *
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-identityproviderdetails)
      * @param identityProviderDetails Required when `IdentityProviderType` is set to
@@ -1146,7 +1157,7 @@ public open class CfnServer(
      *
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-identityproviderdetails)
      * @param identityProviderDetails Required when `IdentityProviderType` is set to
@@ -1162,7 +1173,7 @@ public open class CfnServer(
      *
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-identityproviderdetails)
      * @param identityProviderDetails Required when `IdentityProviderType` is set to
@@ -1178,7 +1189,7 @@ public open class CfnServer(
      *
      * Accepts an array containing all of the information required to use a directory in
      * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-     * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+     * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-transfer-server.html#cfn-transfer-server-identityproviderdetails)
      * @param identityProviderDetails Required when `IdentityProviderType` is set to
@@ -2121,7 +2132,7 @@ public open class CfnServer(
    *
    * Accepts an array containing all of the information required to use a directory in
    * `AWS_DIRECTORY_SERVICE` or invoke a customer-supplied authentication API, including the API
-   * Gateway URL. Not required when `IdentityProviderType` is set to `SERVICE_MANAGED` .
+   * Gateway URL. Cannot be specified when `IdentityProviderType` is set to `SERVICE_MANAGED` .
    *
    * Example:
    *

@@ -14,6 +14,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Example:
@@ -42,8 +43,15 @@ import kotlin.collections.Map
  * .maxBatchingWindow(Duration.minutes(30))
  * .maxConcurrency(123)
  * .maxRecordAge(Duration.minutes(30))
+ * .metricsConfig(MetricsConfig.builder()
+ * .metrics(List.of(MetricType.EVENT_COUNT))
+ * .build())
  * .onFailure(eventSourceDlq)
  * .parallelizationFactor(123)
+ * .provisionedPollerConfig(ProvisionedPollerConfig.builder()
+ * .maximumPollers(123)
+ * .minimumPollers(123)
+ * .build())
  * .reportBatchItemFailures(false)
  * .retryAttempts(123)
  * .sourceAccessConfigurations(List.of(SourceAccessConfiguration.builder()
@@ -185,6 +193,15 @@ public interface EventSourceMappingOptions {
   public fun maxRecordAge(): Duration? = unwrap(this).getMaxRecordAge()?.let(Duration::wrap)
 
   /**
+   * Configuration for enhanced monitoring metrics collection When specified, enables collection of
+   * additional metrics for the stream event source.
+   *
+   * Default: - Enhanced monitoring is disabled
+   */
+  public fun metricsConfig(): MetricsConfig? =
+      unwrap(this).getMetricsConfig()?.let(MetricsConfig::wrap)
+
+  /**
    * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
    *
    * Default: discarded records are ignored
@@ -202,6 +219,17 @@ public interface EventSourceMappingOptions {
    * Default: 1
    */
   public fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
+
+  /**
+   * Configuration for provisioned pollers that read from the event source.
+   *
+   * When specified, allows control over the minimum and maximum number of pollers
+   * that can be provisioned to process events from the source.
+   *
+   * Default: - no provisioned pollers
+   */
+  public fun provisionedPollerConfig(): ProvisionedPollerConfig? =
+      unwrap(this).getProvisionedPollerConfig()?.let(ProvisionedPollerConfig::wrap)
 
   /**
    * Allow functions to return partially successful responses for a batch of records.
@@ -380,6 +408,20 @@ public interface EventSourceMappingOptions {
     public fun maxRecordAge(maxRecordAge: Duration)
 
     /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    public fun metricsConfig(metricsConfig: MetricsConfig)
+
+    /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c8739c363bd130784bc7b751530581db1a64b22e44a6ddc21ed8ec33d958c577")
+    public fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit)
+
+    /**
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      */
     public fun onFailure(onFailure: IEventSourceDlq)
@@ -392,6 +434,25 @@ public interface EventSourceMappingOptions {
      * * Maximum value of 10
      */
     public fun parallelizationFactor(parallelizationFactor: Number)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    public fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("afd25386c8761feb439ef614b79cadde77027bbda765cbbd8fc3310aab37e4cb")
+    public
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit)
 
     /**
      * @param reportBatchItemFailures Allow functions to return partially successful responses for a
@@ -575,6 +636,23 @@ public interface EventSourceMappingOptions {
     }
 
     /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    override fun metricsConfig(metricsConfig: MetricsConfig) {
+      cdkBuilder.metricsConfig(metricsConfig.let(MetricsConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c8739c363bd130784bc7b751530581db1a64b22e44a6ddc21ed8ec33d958c577")
+    override fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit): Unit =
+        metricsConfig(MetricsConfig(metricsConfig))
+
+    /**
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
@@ -591,6 +669,28 @@ public interface EventSourceMappingOptions {
     override fun parallelizationFactor(parallelizationFactor: Number) {
       cdkBuilder.parallelizationFactor(parallelizationFactor)
     }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    override fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig) {
+      cdkBuilder.provisionedPollerConfig(provisionedPollerConfig.let(ProvisionedPollerConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("afd25386c8761feb439ef614b79cadde77027bbda765cbbd8fc3310aab37e4cb")
+    override
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit):
+        Unit = provisionedPollerConfig(ProvisionedPollerConfig(provisionedPollerConfig))
 
     /**
      * @param reportBatchItemFailures Allow functions to return partially successful responses for a
@@ -797,6 +897,15 @@ public interface EventSourceMappingOptions {
     override fun maxRecordAge(): Duration? = unwrap(this).getMaxRecordAge()?.let(Duration::wrap)
 
     /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     */
+    override fun metricsConfig(): MetricsConfig? =
+        unwrap(this).getMetricsConfig()?.let(MetricsConfig::wrap)
+
+    /**
      * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      *
      * Default: discarded records are ignored
@@ -815,6 +924,17 @@ public interface EventSourceMappingOptions {
      * Default: 1
      */
     override fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     */
+    override fun provisionedPollerConfig(): ProvisionedPollerConfig? =
+        unwrap(this).getProvisionedPollerConfig()?.let(ProvisionedPollerConfig::wrap)
 
     /**
      * Allow functions to return partially successful responses for a batch of records.

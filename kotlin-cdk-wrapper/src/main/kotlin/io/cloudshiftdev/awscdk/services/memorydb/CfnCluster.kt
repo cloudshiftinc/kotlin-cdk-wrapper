@@ -45,10 +45,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .dataTiering("dataTiering")
  * .description("description")
+ * .engine("engine")
  * .engineVersion("engineVersion")
  * .finalSnapshotName("finalSnapshotName")
  * .kmsKeyId("kmsKeyId")
  * .maintenanceWindow("maintenanceWindow")
+ * .multiRegionClusterName("multiRegionClusterName")
  * .numReplicasPerShard(123)
  * .numShards(123)
  * .parameterGroupName("parameterGroupName")
@@ -219,12 +221,24 @@ public open class CfnCluster(
   }
 
   /**
-   * The Redis engine version used by the cluster .
+   * The name of the engine used by the cluster.
+   */
+  public open fun engine(): String? = unwrap(this).getEngine()
+
+  /**
+   * The name of the engine used by the cluster.
+   */
+  public open fun engine(`value`: String) {
+    unwrap(this).setEngine(`value`)
+  }
+
+  /**
+   * The Valkey or Redis OSS engine version used by the cluster .
    */
   public open fun engineVersion(): String? = unwrap(this).getEngineVersion()
 
   /**
-   * The Redis engine version used by the cluster .
+   * The Valkey or Redis OSS engine version used by the cluster .
    */
   public open fun engineVersion(`value`: String) {
     unwrap(this).setEngineVersion(`value`)
@@ -273,6 +287,18 @@ public open class CfnCluster(
    */
   public open fun maintenanceWindow(`value`: String) {
     unwrap(this).setMaintenanceWindow(`value`)
+  }
+
+  /**
+   * The name of the multi-Region cluster that this cluster belongs to.
+   */
+  public open fun multiRegionClusterName(): String? = unwrap(this).getMultiRegionClusterName()
+
+  /**
+   * The name of the multi-Region cluster that this cluster belongs to.
+   */
+  public open fun multiRegionClusterName(`value`: String) {
+    unwrap(this).setMultiRegionClusterName(`value`)
   }
 
   /**
@@ -562,8 +588,8 @@ public open class CfnCluster(
     /**
      * Enables data tiering.
      *
-     * Data tiering is only supported for replication groups using the r6gd node type. This
-     * parameter must be set to true when using r6gd nodes. For more information, see [Data
+     * Data tiering is only supported for clusters using the r6gd node type. This parameter must be
+     * set when using r6gd nodes. For more information, see [Data
      * tiering](https://docs.aws.amazon.com/memorydb/latest/devguide/data-tiering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-datatiering)
@@ -580,10 +606,18 @@ public open class CfnCluster(
     public fun description(description: String)
 
     /**
-     * The Redis engine version used by the cluster .
+     * The name of the engine used by the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-engine)
+     * @param engine The name of the engine used by the cluster. 
+     */
+    public fun engine(engine: String)
+
+    /**
+     * The Valkey or Redis OSS engine version used by the cluster .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-engineversion)
-     * @param engineVersion The Redis engine version used by the cluster . 
+     * @param engineVersion The Valkey or Redis OSS engine version used by the cluster . 
      */
     public fun engineVersion(engineVersion: String)
 
@@ -619,6 +653,15 @@ public open class CfnCluster(
      * cluster is performed. 
      */
     public fun maintenanceWindow(maintenanceWindow: String)
+
+    /**
+     * The name of the multi-Region cluster that this cluster belongs to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-multiregionclustername)
+     * @param multiRegionClusterName The name of the multi-Region cluster that this cluster belongs
+     * to. 
+     */
+    public fun multiRegionClusterName(multiRegionClusterName: String)
 
     /**
      * The cluster 's node type.
@@ -894,8 +937,8 @@ public open class CfnCluster(
     /**
      * Enables data tiering.
      *
-     * Data tiering is only supported for replication groups using the r6gd node type. This
-     * parameter must be set to true when using r6gd nodes. For more information, see [Data
+     * Data tiering is only supported for clusters using the r6gd node type. This parameter must be
+     * set when using r6gd nodes. For more information, see [Data
      * tiering](https://docs.aws.amazon.com/memorydb/latest/devguide/data-tiering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-datatiering)
@@ -916,10 +959,20 @@ public open class CfnCluster(
     }
 
     /**
-     * The Redis engine version used by the cluster .
+     * The name of the engine used by the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-engine)
+     * @param engine The name of the engine used by the cluster. 
+     */
+    override fun engine(engine: String) {
+      cdkBuilder.engine(engine)
+    }
+
+    /**
+     * The Valkey or Redis OSS engine version used by the cluster .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-engineversion)
-     * @param engineVersion The Redis engine version used by the cluster . 
+     * @param engineVersion The Valkey or Redis OSS engine version used by the cluster . 
      */
     override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
@@ -962,6 +1015,17 @@ public open class CfnCluster(
      */
     override fun maintenanceWindow(maintenanceWindow: String) {
       cdkBuilder.maintenanceWindow(maintenanceWindow)
+    }
+
+    /**
+     * The name of the multi-Region cluster that this cluster belongs to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-memorydb-cluster.html#cfn-memorydb-cluster-multiregionclustername)
+     * @param multiRegionClusterName The name of the multi-Region cluster that this cluster belongs
+     * to. 
+     */
+    override fun multiRegionClusterName(multiRegionClusterName: String) {
+      cdkBuilder.multiRegionClusterName(multiRegionClusterName)
     }
 
     /**

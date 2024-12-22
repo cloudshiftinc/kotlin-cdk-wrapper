@@ -15,6 +15,7 @@ import io.cloudshiftdev.awscdk.services.ecs.ICluster
 import io.cloudshiftdev.awscdk.services.ecs.PlacementConstraint
 import io.cloudshiftdev.awscdk.services.ecs.PlacementStrategy
 import io.cloudshiftdev.awscdk.services.ecs.PropagatedTagSource
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IListenerCertificate
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IpAddressType
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
@@ -33,13 +34,23 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.services.certificatemanager.Certificate;
  * Cluster cluster;
+ * ICertificate certificate = Certificate.fromCertificateArn(this, "Cert",
+ * "arn:aws:acm:us-east-1:123456:certificate/abcdefg");
  * NetworkLoadBalancedEc2Service loadBalancedEcsService =
  * NetworkLoadBalancedEc2Service.Builder.create(this, "Service")
  * .cluster(cluster)
  * .memoryLimitMiB(1024)
+ * // The default value of listenerPort is 443 if you pass in listenerCertificate
+ * // It is configured to port 4443 here
+ * .listenerPort(4443)
+ * .listenerCertificate(certificate)
  * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("test"))
+ * // The default value of containerPort is 443 if you pass in listenerCertificate
+ * // It is configured to port 8443 here
+ * .containerPort(8443)
  * .environment(Map.of(
  * "TEST_ENVIRONMENT_VARIABLE1", "test environment variable 1 value",
  * "TEST_ENVIRONMENT_VARIABLE2", "test environment variable 2 value"))
@@ -305,9 +316,21 @@ public open class NetworkLoadBalancedEc2Service(
     public fun ipAddressType(ipAddressType: IpAddressType)
 
     /**
+     * Listener certificate list of ACM cert ARNs.
+     *
+     * If you provide a certificate, the listener's protocol will be TLS.
+     * If not, the listener's protocol will be TCP.
+     *
+     * Default: - none
+     *
+     * @param listenerCertificate Listener certificate list of ACM cert ARNs. 
+     */
+    public fun listenerCertificate(listenerCertificate: IListenerCertificate)
+
+    /**
      * Listener port of the network load balancer that will serve traffic to the service.
      *
-     * Default: 80
+     * Default: 80 or 443 with listenerCertificate provided
      *
      * @param listenerPort Listener port of the network load balancer that will serve traffic to the
      * service. 
@@ -786,9 +809,23 @@ public open class NetworkLoadBalancedEc2Service(
     }
 
     /**
+     * Listener certificate list of ACM cert ARNs.
+     *
+     * If you provide a certificate, the listener's protocol will be TLS.
+     * If not, the listener's protocol will be TCP.
+     *
+     * Default: - none
+     *
+     * @param listenerCertificate Listener certificate list of ACM cert ARNs. 
+     */
+    override fun listenerCertificate(listenerCertificate: IListenerCertificate) {
+      cdkBuilder.listenerCertificate(listenerCertificate.let(IListenerCertificate.Companion::unwrap))
+    }
+
+    /**
      * Listener port of the network load balancer that will serve traffic to the service.
      *
-     * Default: 80
+     * Default: 80 or 443 with listenerCertificate provided
      *
      * @param listenerPort Listener port of the network load balancer that will serve traffic to the
      * service. 

@@ -37,7 +37,7 @@ import kotlin.collections.List
  */
 public interface CfnModelManifestProps {
   /**
-   * (Optional) A brief description of the vehicle model.
+   * A brief description of the vehicle model.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-description)
    */
@@ -51,7 +51,7 @@ public interface CfnModelManifestProps {
   public fun name(): String
 
   /**
-   * (Optional) A list of nodes, which are a general abstraction of signals.
+   * A list of nodes, which are a general abstraction of signals.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-nodes)
    */
@@ -65,7 +65,7 @@ public interface CfnModelManifestProps {
   public fun signalCatalogArn(): String
 
   /**
-   * (Optional) The state of the vehicle model.
+   * The state of the vehicle model.
    *
    * If the status is `ACTIVE` , the vehicle model can't be edited. If the status is `DRAFT` , you
    * can edit the vehicle model.
@@ -77,7 +77,7 @@ public interface CfnModelManifestProps {
   public fun status(): String? = unwrap(this).getStatus()
 
   /**
-   * (Optional) Metadata that can be used to manage the vehicle model.
+   * Metadata that can be used to manage the vehicle model.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-tags)
    */
@@ -89,7 +89,7 @@ public interface CfnModelManifestProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param description (Optional) A brief description of the vehicle model.
+     * @param description A brief description of the vehicle model.
      */
     public fun description(description: String)
 
@@ -99,12 +99,12 @@ public interface CfnModelManifestProps {
     public fun name(name: String)
 
     /**
-     * @param nodes (Optional) A list of nodes, which are a general abstraction of signals.
+     * @param nodes A list of nodes, which are a general abstraction of signals.
      */
     public fun nodes(nodes: List<String>)
 
     /**
-     * @param nodes (Optional) A list of nodes, which are a general abstraction of signals.
+     * @param nodes A list of nodes, which are a general abstraction of signals.
      */
     public fun nodes(vararg nodes: String)
 
@@ -115,19 +115,19 @@ public interface CfnModelManifestProps {
     public fun signalCatalogArn(signalCatalogArn: String)
 
     /**
-     * @param status (Optional) The state of the vehicle model.
+     * @param status The state of the vehicle model.
      * If the status is `ACTIVE` , the vehicle model can't be edited. If the status is `DRAFT` , you
      * can edit the vehicle model.
      */
     public fun status(status: String)
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the vehicle model.
+     * @param tags Metadata that can be used to manage the vehicle model.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the vehicle model.
+     * @param tags Metadata that can be used to manage the vehicle model.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -138,7 +138,7 @@ public interface CfnModelManifestProps {
         software.amazon.awscdk.services.iotfleetwise.CfnModelManifestProps.builder()
 
     /**
-     * @param description (Optional) A brief description of the vehicle model.
+     * @param description A brief description of the vehicle model.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -152,14 +152,14 @@ public interface CfnModelManifestProps {
     }
 
     /**
-     * @param nodes (Optional) A list of nodes, which are a general abstraction of signals.
+     * @param nodes A list of nodes, which are a general abstraction of signals.
      */
     override fun nodes(nodes: List<String>) {
       cdkBuilder.nodes(nodes)
     }
 
     /**
-     * @param nodes (Optional) A list of nodes, which are a general abstraction of signals.
+     * @param nodes A list of nodes, which are a general abstraction of signals.
      */
     override fun nodes(vararg nodes: String): Unit = nodes(nodes.toList())
 
@@ -172,7 +172,7 @@ public interface CfnModelManifestProps {
     }
 
     /**
-     * @param status (Optional) The state of the vehicle model.
+     * @param status The state of the vehicle model.
      * If the status is `ACTIVE` , the vehicle model can't be edited. If the status is `DRAFT` , you
      * can edit the vehicle model.
      */
@@ -181,14 +181,14 @@ public interface CfnModelManifestProps {
     }
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the vehicle model.
+     * @param tags Metadata that can be used to manage the vehicle model.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the vehicle model.
+     * @param tags Metadata that can be used to manage the vehicle model.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -201,7 +201,7 @@ public interface CfnModelManifestProps {
   ) : CdkObject(cdkObject),
       CfnModelManifestProps {
     /**
-     * (Optional) A brief description of the vehicle model.
+     * A brief description of the vehicle model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-description)
      */
@@ -215,7 +215,7 @@ public interface CfnModelManifestProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * (Optional) A list of nodes, which are a general abstraction of signals.
+     * A list of nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-nodes)
      */
@@ -229,7 +229,7 @@ public interface CfnModelManifestProps {
     override fun signalCatalogArn(): String = unwrap(this).getSignalCatalogArn()
 
     /**
-     * (Optional) The state of the vehicle model.
+     * The state of the vehicle model.
      *
      * If the status is `ACTIVE` , the vehicle model can't be edited. If the status is `DRAFT` , you
      * can edit the vehicle model.
@@ -241,7 +241,7 @@ public interface CfnModelManifestProps {
     override fun status(): String? = unwrap(this).getStatus()
 
     /**
-     * (Optional) Metadata that can be used to manage the vehicle model.
+     * Metadata that can be used to manage the vehicle model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-tags)
      */

@@ -21,11 +21,15 @@ import kotlin.jvm.JvmName
  *
  * ```
  * Vpc vpc;
- * // Target group with slow start mode enabled
  * ApplicationTargetGroup tg = ApplicationTargetGroup.Builder.create(this, "TG")
- * .targetType(TargetType.INSTANCE)
- * .slowStart(Duration.seconds(60))
- * .port(80)
+ * .targetType(TargetType.IP)
+ * .port(50051)
+ * .protocol(ApplicationProtocol.HTTP)
+ * .protocolVersion(ApplicationProtocolVersion.GRPC)
+ * .healthCheck(HealthCheck.builder()
+ * .enabled(true)
+ * .healthyGrpcCodes("0-99")
+ * .build())
  * .vpc(vpc)
  * .build();
  * ```
@@ -136,6 +140,11 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param crossZoneEnabled Indicates whether cross zone load balancing is enabled.
+     */
+    public fun crossZoneEnabled(crossZoneEnabled: Boolean)
+
+    /**
      * @param deregistrationDelay The amount of time for Elastic Load Balancing to wait before
      * deregistering a target.
      * The range is 0-3600 seconds.
@@ -160,6 +169,12 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("c2f995ba5117b9a831a822de8f1aeeb5b308203b530fc36a5e89ae1795c1671a")
     public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
+
+    /**
+     * @param ipAddressType The type of IP addresses of the targets registered with the target
+     * group.
+     */
+    public fun ipAddressType(ipAddressType: TargetGroupIpAddressType)
 
     /**
      * @param loadBalancingAlgorithmType The load balancing algorithm to select targets for routing
@@ -257,6 +272,13 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.ApplicationTargetGroupProps.builder()
 
     /**
+     * @param crossZoneEnabled Indicates whether cross zone load balancing is enabled.
+     */
+    override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
+      cdkBuilder.crossZoneEnabled(crossZoneEnabled)
+    }
+
+    /**
      * @param deregistrationDelay The amount of time for Elastic Load Balancing to wait before
      * deregistering a target.
      * The range is 0-3600 seconds.
@@ -288,6 +310,14 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
     @JvmName("c2f995ba5117b9a831a822de8f1aeeb5b308203b530fc36a5e89ae1795c1671a")
     override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
+
+    /**
+     * @param ipAddressType The type of IP addresses of the targets registered with the target
+     * group.
+     */
+    override fun ipAddressType(ipAddressType: TargetGroupIpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(TargetGroupIpAddressType.Companion::unwrap))
+    }
 
     /**
      * @param loadBalancingAlgorithmType The load balancing algorithm to select targets for routing
@@ -411,6 +441,15 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
   ) : CdkObject(cdkObject),
       ApplicationTargetGroupProps {
     /**
+     * Indicates whether cross zone load balancing is enabled.
+     *
+     * Default: - use load balancer configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html)
+     */
+    override fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
+
+    /**
      * The amount of time for Elastic Load Balancing to wait before deregistering a target.
      *
      * The range is 0-3600 seconds.
@@ -441,6 +480,14 @@ public interface ApplicationTargetGroupProps : BaseTargetGroupProps {
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#aws-resource-elasticloadbalancingv2-targetgroup-properties)
      */
     override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+
+    /**
+     * The type of IP addresses of the targets registered with the target group.
+     *
+     * Default: undefined - ELB defaults to IPv4
+     */
+    override fun ipAddressType(): TargetGroupIpAddressType? =
+        unwrap(this).getIpAddressType()?.let(TargetGroupIpAddressType::wrap)
 
     /**
      * The load balancing algorithm to select targets for routing requests.

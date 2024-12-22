@@ -296,8 +296,8 @@ public open class CfnNatGateway(
      * Secondary EIP allocation IDs.
      *
      * For more information, see [Create a NAT
-     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-     * in the *Amazon VPC User Guide* .
+     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+     * *Amazon VPC User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-secondaryallocationids)
      * @param secondaryAllocationIds Secondary EIP allocation IDs. 
@@ -308,8 +308,8 @@ public open class CfnNatGateway(
      * Secondary EIP allocation IDs.
      *
      * For more information, see [Create a NAT
-     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-     * in the *Amazon VPC User Guide* .
+     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+     * *Amazon VPC User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-secondaryallocationids)
      * @param secondaryAllocationIds Secondary EIP allocation IDs. 
@@ -453,8 +453,8 @@ public open class CfnNatGateway(
      * Secondary EIP allocation IDs.
      *
      * For more information, see [Create a NAT
-     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-     * in the *Amazon VPC User Guide* .
+     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+     * *Amazon VPC User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-secondaryallocationids)
      * @param secondaryAllocationIds Secondary EIP allocation IDs. 
@@ -467,8 +467,8 @@ public open class CfnNatGateway(
      * Secondary EIP allocation IDs.
      *
      * For more information, see [Create a NAT
-     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-nat-gateway.html#nat-gateway-creating)
-     * in the *Amazon VPC User Guide* .
+     * gateway](https://docs.aws.amazon.com/vpc/latest/userguide/nat-gateway-working-with.html) in the
+     * *Amazon VPC User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-natgateway.html#cfn-ec2-natgateway-secondaryallocationids)
      * @param secondaryAllocationIds Secondary EIP allocation IDs. 

@@ -17,6 +17,8 @@ public enum class NodegroupAmiType(
   WINDOWS_FULL_2019_X86_64(software.amazon.awscdk.services.eks.NodegroupAmiType.WINDOWS_FULL_2019_X86_64),
   WINDOWS_FULL_2022_X86_64(software.amazon.awscdk.services.eks.NodegroupAmiType.WINDOWS_FULL_2022_X86_64),
   AL2023_X86_64_STANDARD(software.amazon.awscdk.services.eks.NodegroupAmiType.AL2023_X86_64_STANDARD),
+  AL2023_X86_64_NEURON(software.amazon.awscdk.services.eks.NodegroupAmiType.AL2023_X86_64_NEURON),
+  AL2023_X86_64_NVIDIA(software.amazon.awscdk.services.eks.NodegroupAmiType.AL2023_X86_64_NVIDIA),
   AL2023_ARM_64_STANDARD(software.amazon.awscdk.services.eks.NodegroupAmiType.AL2023_ARM_64_STANDARD),
   ;
 
@@ -45,6 +47,10 @@ public enum class NodegroupAmiType(
           NodegroupAmiType.WINDOWS_FULL_2022_X86_64
       software.amazon.awscdk.services.eks.NodegroupAmiType.AL2023_X86_64_STANDARD ->
           NodegroupAmiType.AL2023_X86_64_STANDARD
+      software.amazon.awscdk.services.eks.NodegroupAmiType.AL2023_X86_64_NEURON ->
+          NodegroupAmiType.AL2023_X86_64_NEURON
+      software.amazon.awscdk.services.eks.NodegroupAmiType.AL2023_X86_64_NVIDIA ->
+          NodegroupAmiType.AL2023_X86_64_NVIDIA
       software.amazon.awscdk.services.eks.NodegroupAmiType.AL2023_ARM_64_STANDARD ->
           NodegroupAmiType.AL2023_ARM_64_STANDARD
     }

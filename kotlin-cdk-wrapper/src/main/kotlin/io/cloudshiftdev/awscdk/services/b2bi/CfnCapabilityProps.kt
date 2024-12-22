@@ -40,6 +40,8 @@ import kotlin.jvm.JvmName
  * .version("version")
  * .build())
  * .build())
+ * // the properties below are optional
+ * .capabilityDirection("capabilityDirection")
  * .build())
  * .build())
  * .name("name")

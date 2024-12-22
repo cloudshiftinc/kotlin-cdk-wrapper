@@ -169,12 +169,12 @@ public open class CfnRestoreTestingPlan(
   }
 
   /**
-   *
+   * This parameter is not currently supported.
    */
   public open fun scheduleStatus(): String? = unwrap(this).getScheduleStatus()
 
   /**
-   *
+   * This parameter is not currently supported.
    */
   public open fun scheduleStatus(`value`: String) {
     unwrap(this).setScheduleStatus(`value`)
@@ -281,8 +281,10 @@ public open class CfnRestoreTestingPlan(
     public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String)
 
     /**
+     * This parameter is not currently supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
-     * @param scheduleStatus 
+     * @param scheduleStatus This parameter is not currently supported. 
      */
     public fun scheduleStatus(scheduleStatus: String)
 
@@ -409,8 +411,10 @@ public open class CfnRestoreTestingPlan(
     }
 
     /**
+     * This parameter is not currently supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
-     * @param scheduleStatus 
+     * @param scheduleStatus This parameter is not currently supported. 
      */
     override fun scheduleStatus(scheduleStatus: String) {
       cdkBuilder.scheduleStatus(scheduleStatus)

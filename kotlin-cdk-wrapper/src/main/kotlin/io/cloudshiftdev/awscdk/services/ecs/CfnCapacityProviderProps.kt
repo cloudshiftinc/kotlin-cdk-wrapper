@@ -36,7 +36,6 @@ import kotlin.jvm.JvmName
  * .build())
  * .managedTerminationProtection("managedTerminationProtection")
  * .build())
- * // the properties below are optional
  * .name("name")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -53,7 +52,7 @@ public interface CfnCapacityProviderProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html#cfn-ecs-capacityprovider-autoscalinggroupprovider)
    */
-  public fun autoScalingGroupProvider(): Any
+  public fun autoScalingGroupProvider(): Any? = unwrap(this).getAutoScalingGroupProvider()
 
   /**
    * The name of the capacity provider.
@@ -90,18 +89,18 @@ public interface CfnCapacityProviderProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider. 
+     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider.
      */
     public fun autoScalingGroupProvider(autoScalingGroupProvider: IResolvable)
 
     /**
-     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider. 
+     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider.
      */
     public
         fun autoScalingGroupProvider(autoScalingGroupProvider: CfnCapacityProvider.AutoScalingGroupProviderProperty)
 
     /**
-     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider. 
+     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7fc44dc003eac75329c00cde7b7197884272f4d231cfb1a2efc6554d839cd80f")
@@ -155,14 +154,14 @@ public interface CfnCapacityProviderProps {
         software.amazon.awscdk.services.ecs.CfnCapacityProviderProps.builder()
 
     /**
-     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider. 
+     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider.
      */
     override fun autoScalingGroupProvider(autoScalingGroupProvider: IResolvable) {
       cdkBuilder.autoScalingGroupProvider(autoScalingGroupProvider.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider. 
+     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider.
      */
     override
         fun autoScalingGroupProvider(autoScalingGroupProvider: CfnCapacityProvider.AutoScalingGroupProviderProperty) {
@@ -170,7 +169,7 @@ public interface CfnCapacityProviderProps {
     }
 
     /**
-     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider. 
+     * @param autoScalingGroupProvider The Auto Scaling group settings for the capacity provider.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7fc44dc003eac75329c00cde7b7197884272f4d231cfb1a2efc6554d839cd80f")
@@ -237,7 +236,7 @@ public interface CfnCapacityProviderProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-capacityprovider.html#cfn-ecs-capacityprovider-autoscalinggroupprovider)
      */
-    override fun autoScalingGroupProvider(): Any = unwrap(this).getAutoScalingGroupProvider()
+    override fun autoScalingGroupProvider(): Any? = unwrap(this).getAutoScalingGroupProvider()
 
     /**
      * The name of the capacity provider.

@@ -3227,7 +3227,7 @@ public open class CfnListenerRule(
      * The protocol.
      *
      * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
-     * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
+     * and HTTPS to HTTPS. You can't redirect HTTPS to HTTP.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-protocol)
      */
@@ -3278,7 +3278,7 @@ public open class CfnListenerRule(
       /**
        * @param protocol The protocol.
        * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
-       * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
+       * and HTTPS to HTTPS. You can't redirect HTTPS to HTTP.
        */
       public fun protocol(protocol: String)
 
@@ -3329,7 +3329,7 @@ public open class CfnListenerRule(
       /**
        * @param protocol The protocol.
        * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
-       * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
+       * and HTTPS to HTTPS. You can't redirect HTTPS to HTTP.
        */
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
@@ -3392,7 +3392,7 @@ public open class CfnListenerRule(
        * The protocol.
        *
        * You can specify HTTP, HTTPS, or #{protocol}. You can redirect HTTP to HTTP, HTTP to HTTPS,
-       * and HTTPS to HTTPS. You cannot redirect HTTPS to HTTP.
+       * and HTTPS to HTTPS. You can't redirect HTTPS to HTTP.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listenerrule-redirectconfig.html#cfn-elasticloadbalancingv2-listenerrule-redirectconfig-protocol)
        */

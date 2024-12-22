@@ -18,7 +18,8 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The AWS::MediaConnect::FlowSource resource is used to add additional sources to an existing flow.
+ * The AWS::MediaConnect::FlowSource resource is usedt to add additional sources to an existing
+ * flow.
  *
  * Adding an additional source requires Failover to be enabled. When you enable Failover, the
  * additional source must use the same protocol as the existing source. A source is the external video
@@ -482,7 +483,7 @@ public open class CfnFlowSource(
     /**
      * The maximum latency in milliseconds.
      *
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxlatency)
      * @param maxLatency The maximum latency in milliseconds. 
@@ -730,7 +731,7 @@ public open class CfnFlowSource(
     /**
      * The maximum latency in milliseconds.
      *
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxlatency)
      * @param maxLatency The maximum latency in milliseconds. 

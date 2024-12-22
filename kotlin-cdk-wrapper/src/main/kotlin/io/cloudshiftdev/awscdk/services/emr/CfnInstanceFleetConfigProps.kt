@@ -53,11 +53,18 @@ import kotlin.jvm.JvmName
  * .build()))
  * .ebsOptimized(false)
  * .build())
+ * .priority(123)
  * .weightedCapacity(123)
  * .build()))
  * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
  * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
  * .allocationStrategy("allocationStrategy")
+ * // the properties below are optional
+ * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+ * .capacityReservationPreference("capacityReservationPreference")
+ * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+ * .usageStrategy("usageStrategy")
+ * .build())
  * .build())
  * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
  * .timeoutAction("timeoutAction")
@@ -68,6 +75,21 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .name("name")
+ * .resizeSpecifications(InstanceFleetResizingSpecificationsProperty.builder()
+ * .onDemandResizeSpecification(OnDemandResizingSpecificationProperty.builder()
+ * .allocationStrategy("allocationStrategy")
+ * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+ * .capacityReservationPreference("capacityReservationPreference")
+ * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+ * .usageStrategy("usageStrategy")
+ * .build())
+ * .timeoutDurationMinutes(123)
+ * .build())
+ * .spotResizeSpecification(SpotResizingSpecificationProperty.builder()
+ * .allocationStrategy("allocationStrategy")
+ * .timeoutDurationMinutes(123)
+ * .build())
+ * .build())
  * .targetOnDemandCapacity(123)
  * .targetSpotCapacity(123)
  * .build();
@@ -118,6 +140,13 @@ public interface CfnInstanceFleetConfigProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancefleetconfig.html#cfn-emr-instancefleetconfig-name)
    */
   public fun name(): String? = unwrap(this).getName()
+
+  /**
+   * The resize specification for the instance fleet.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancefleetconfig.html#cfn-emr-instancefleetconfig-resizespecifications)
+   */
+  public fun resizeSpecifications(): Any? = unwrap(this).getResizeSpecifications()
 
   /**
    * The target capacity of On-Demand units for the instance fleet, which determines how many
@@ -231,6 +260,25 @@ public interface CfnInstanceFleetConfigProps {
      * @param name The friendly name of the instance fleet.
      */
     public fun name(name: String)
+
+    /**
+     * @param resizeSpecifications The resize specification for the instance fleet.
+     */
+    public fun resizeSpecifications(resizeSpecifications: IResolvable)
+
+    /**
+     * @param resizeSpecifications The resize specification for the instance fleet.
+     */
+    public
+        fun resizeSpecifications(resizeSpecifications: CfnInstanceFleetConfig.InstanceFleetResizingSpecificationsProperty)
+
+    /**
+     * @param resizeSpecifications The resize specification for the instance fleet.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7110ffec62df52ac5c1737f17cce8b67824394a08d982415dc36b9a358d28f14")
+    public
+        fun resizeSpecifications(resizeSpecifications: CfnInstanceFleetConfig.InstanceFleetResizingSpecificationsProperty.Builder.() -> Unit)
 
     /**
      * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance fleet,
@@ -356,6 +404,31 @@ public interface CfnInstanceFleetConfigProps {
     }
 
     /**
+     * @param resizeSpecifications The resize specification for the instance fleet.
+     */
+    override fun resizeSpecifications(resizeSpecifications: IResolvable) {
+      cdkBuilder.resizeSpecifications(resizeSpecifications.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param resizeSpecifications The resize specification for the instance fleet.
+     */
+    override
+        fun resizeSpecifications(resizeSpecifications: CfnInstanceFleetConfig.InstanceFleetResizingSpecificationsProperty) {
+      cdkBuilder.resizeSpecifications(resizeSpecifications.let(CfnInstanceFleetConfig.InstanceFleetResizingSpecificationsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param resizeSpecifications The resize specification for the instance fleet.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7110ffec62df52ac5c1737f17cce8b67824394a08d982415dc36b9a358d28f14")
+    override
+        fun resizeSpecifications(resizeSpecifications: CfnInstanceFleetConfig.InstanceFleetResizingSpecificationsProperty.Builder.() -> Unit):
+        Unit =
+        resizeSpecifications(CfnInstanceFleetConfig.InstanceFleetResizingSpecificationsProperty(resizeSpecifications))
+
+    /**
      * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance fleet,
      * which determines how many On-Demand instances to provision.
      * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
@@ -448,6 +521,13 @@ public interface CfnInstanceFleetConfigProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancefleetconfig.html#cfn-emr-instancefleetconfig-name)
      */
     override fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The resize specification for the instance fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-instancefleetconfig.html#cfn-emr-instancefleetconfig-resizespecifications)
+     */
+    override fun resizeSpecifications(): Any? = unwrap(this).getResizeSpecifications()
 
     /**
      * The target capacity of On-Demand units for the instance fleet, which determines how many

@@ -146,6 +146,7 @@ import kotlin.jvm.JvmName
  * .softLimit(123)
  * .build()))
  * .user("user")
+ * .versionConsistency("versionConsistency")
  * .volumesFrom(List.of(VolumeFromProperty.builder()
  * .readOnly(false)
  * .sourceContainer("sourceContainer")

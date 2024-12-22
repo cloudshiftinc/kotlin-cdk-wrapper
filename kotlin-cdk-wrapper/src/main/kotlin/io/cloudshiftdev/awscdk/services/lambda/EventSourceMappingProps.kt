@@ -14,6 +14,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Properties for declaring a new event source mapping.
@@ -47,8 +48,15 @@ import kotlin.collections.Map
  * .maxBatchingWindow(Duration.minutes(30))
  * .maxConcurrency(123)
  * .maxRecordAge(Duration.minutes(30))
+ * .metricsConfig(MetricsConfig.builder()
+ * .metrics(List.of(MetricType.EVENT_COUNT))
+ * .build())
  * .onFailure(eventSourceDlq)
  * .parallelizationFactor(123)
+ * .provisionedPollerConfig(ProvisionedPollerConfig.builder()
+ * .maximumPollers(123)
+ * .minimumPollers(123)
+ * .build())
  * .reportBatchItemFailures(false)
  * .retryAttempts(123)
  * .sourceAccessConfigurations(List.of(SourceAccessConfiguration.builder()
@@ -170,6 +178,20 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     public fun maxRecordAge(maxRecordAge: Duration)
 
     /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    public fun metricsConfig(metricsConfig: MetricsConfig)
+
+    /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0716c021b042582442ff002288795a2af91885160ba31e96858d0cb9702fecde")
+    public fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit)
+
+    /**
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      */
     public fun onFailure(onFailure: IEventSourceDlq)
@@ -182,6 +204,25 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
      * * Maximum value of 10
      */
     public fun parallelizationFactor(parallelizationFactor: Number)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    public fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("46b1bc5e1ed1847276c7fe0bb7cbb6ecc35cac39c2d9f140ff18bb01ef68358f")
+    public
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit)
 
     /**
      * @param reportBatchItemFailures Allow functions to return partially successful responses for a
@@ -370,6 +411,23 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     }
 
     /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    override fun metricsConfig(metricsConfig: MetricsConfig) {
+      cdkBuilder.metricsConfig(metricsConfig.let(MetricsConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param metricsConfig Configuration for enhanced monitoring metrics collection When specified,
+     * enables collection of additional metrics for the stream event source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0716c021b042582442ff002288795a2af91885160ba31e96858d0cb9702fecde")
+    override fun metricsConfig(metricsConfig: MetricsConfig.Builder.() -> Unit): Unit =
+        metricsConfig(MetricsConfig(metricsConfig))
+
+    /**
      * @param onFailure An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      */
     override fun onFailure(onFailure: IEventSourceDlq) {
@@ -386,6 +444,28 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     override fun parallelizationFactor(parallelizationFactor: Number) {
       cdkBuilder.parallelizationFactor(parallelizationFactor)
     }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    override fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig) {
+      cdkBuilder.provisionedPollerConfig(provisionedPollerConfig.let(ProvisionedPollerConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("46b1bc5e1ed1847276c7fe0bb7cbb6ecc35cac39c2d9f140ff18bb01ef68358f")
+    override
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit):
+        Unit = provisionedPollerConfig(ProvisionedPollerConfig(provisionedPollerConfig))
 
     /**
      * @param reportBatchItemFailures Allow functions to return partially successful responses for a
@@ -599,6 +679,15 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
     override fun maxRecordAge(): Duration? = unwrap(this).getMaxRecordAge()?.let(Duration::wrap)
 
     /**
+     * Configuration for enhanced monitoring metrics collection When specified, enables collection
+     * of additional metrics for the stream event source.
+     *
+     * Default: - Enhanced monitoring is disabled
+     */
+    override fun metricsConfig(): MetricsConfig? =
+        unwrap(this).getMetricsConfig()?.let(MetricsConfig::wrap)
+
+    /**
      * An Amazon SQS queue or Amazon SNS topic destination for discarded records.
      *
      * Default: discarded records are ignored
@@ -617,6 +706,17 @@ public interface EventSourceMappingProps : EventSourceMappingOptions {
      * Default: 1
      */
     override fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     */
+    override fun provisionedPollerConfig(): ProvisionedPollerConfig? =
+        unwrap(this).getProvisionedPollerConfig()?.let(ProvisionedPollerConfig::wrap)
 
     /**
      * Allow functions to return partially successful responses for a batch of records.

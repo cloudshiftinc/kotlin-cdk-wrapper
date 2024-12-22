@@ -33,6 +33,7 @@ import kotlin.jvm.JvmName
  * .resultFormat("resultFormat")
  * // the properties below are optional
  * .keyPrefix("keyPrefix")
+ * .singleFileOutput(false)
  * .build())
  * .build())
  * // the properties below are optional

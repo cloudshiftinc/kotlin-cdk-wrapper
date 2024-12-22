@@ -12,23 +12,11 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The `AWS::Cognito::UserPoolUICustomizationAttachment` resource sets the UI customization
- * information for a user pool's built-in app UI.
+ * A container for the UI customization information for the hosted UI in a user pool.
  *
- * You can specify app UI customization settings for a single client (with a specific `clientId` )
- * or for all clients (by setting the `clientId` to `ALL` ). If you specify `ALL` , the default
- * configuration is used for every client that has had no UI customization set previously. If you
- * specify UI customization settings for a particular client, it no longer falls back to the `ALL`
- * configuration.
- *
- *
- * Before you create this resource, your user pool must have a domain associated with it. You can
- * create an `AWS::Cognito::UserPoolDomain` resource first in this user pool.
- *
- *
- * Setting a logo image isn't supported from AWS CloudFormation . Use the Amazon Cognito
- * [SetUICustomization](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUICustomization.html#API_SetUICustomization_RequestSyntax)
- * API operation to set the image.
+ * This data type is a response parameter of
+ * [GetUICustomization](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeUserPoolClient.html)
+ * .
  *
  * Example:
  *
@@ -68,12 +56,12 @@ public open class CfnUserPoolUICustomizationAttachment(
   )
 
   /**
-   * The client ID for the client app.
+   * The app client ID for your UI customization.
    */
   public open fun clientId(): String = unwrap(this).getClientId()
 
   /**
-   * The client ID for the client app.
+   * The app client ID for your UI customization.
    */
   public open fun clientId(`value`: String) {
     unwrap(this).setClientId(`value`)
@@ -119,13 +107,13 @@ public open class CfnUserPoolUICustomizationAttachment(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The client ID for the client app.
+     * The app client ID for your UI customization.
      *
-     * You can specify the UI customization settings for a single client (with a specific clientId)
-     * or for all clients (by setting the clientId to `ALL` ).
+     * When this value isn't present, the customization applies to all user pool app clients that
+     * don't have client-level settings..
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-clientid)
-     * @param clientId The client ID for the client app. 
+     * @param clientId The app client ID for your UI customization. 
      */
     public fun clientId(clientId: String)
 
@@ -156,13 +144,13 @@ public open class CfnUserPoolUICustomizationAttachment(
         id)
 
     /**
-     * The client ID for the client app.
+     * The app client ID for your UI customization.
      *
-     * You can specify the UI customization settings for a single client (with a specific clientId)
-     * or for all clients (by setting the clientId to `ALL` ).
+     * When this value isn't present, the customization applies to all user pool app clients that
+     * don't have client-level settings..
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-clientid)
-     * @param clientId The client ID for the client app. 
+     * @param clientId The app client ID for your UI customization. 
      */
     override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)

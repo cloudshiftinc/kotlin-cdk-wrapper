@@ -90,11 +90,6 @@ public open class CfnIntegration(
   }
 
   /**
-   * The identifier.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * The integration ID.
    */
   public open fun attrIntegrationId(): String = unwrap(this).getAttrIntegrationId()
@@ -1222,7 +1217,18 @@ public open class CfnIntegration(
   }
 
   /**
-   * response parameter.
+   * Supported only for HTTP APIs.
+   *
+   * You use response parameters to transform the HTTP response from a backend integration before
+   * returning the response to clients. Specify a key-value map from a selection key to response
+   * parameters. The selection key must be a valid HTTP status code within the range of 200-599.
+   * Response parameters are a key-value map. The key must match the pattern
+   * `&lt;action&gt;:&lt;header&gt;.&lt;location&gt;` or `overwrite.statuscode` . The action can be
+   * `append` , `overwrite` or `remove` . The value can be a static value, or map to response data,
+   * stage variables, or context variables that are evaluated at runtime. To learn more, see
+   * [Transforming API requests and
+   * responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+   * .
    *
    * Example:
    *
@@ -1240,11 +1246,23 @@ public open class CfnIntegration(
    */
   public interface ResponseParameterProperty {
     /**
+     * Specifies the location of the response to modify, and how to modify it.
+     *
+     * To learn more, see [Transforming API requests and
+     * responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameter.html#cfn-apigatewayv2-integration-responseparameter-destination)
      */
     public fun destination(): String? = unwrap(this).getDestination()
 
     /**
+     * Specifies the data to update the parameter with.
+     *
+     * To learn more, see [Transforming API requests and
+     * responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+     * .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameter.html#cfn-apigatewayv2-integration-responseparameter-source)
      */
     public fun source(): String? = unwrap(this).getSource()
@@ -1255,12 +1273,18 @@ public open class CfnIntegration(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param destination the value to be set.
+       * @param destination Specifies the location of the response to modify, and how to modify it.
+       * To learn more, see [Transforming API requests and
+       * responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+       * .
        */
       public fun destination(destination: String)
 
       /**
-       * @param source the value to be set.
+       * @param source Specifies the data to update the parameter with.
+       * To learn more, see [Transforming API requests and
+       * responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+       * .
        */
       public fun source(source: String)
     }
@@ -1272,14 +1296,20 @@ public open class CfnIntegration(
           software.amazon.awscdk.services.apigatewayv2.CfnIntegration.ResponseParameterProperty.builder()
 
       /**
-       * @param destination the value to be set.
+       * @param destination Specifies the location of the response to modify, and how to modify it.
+       * To learn more, see [Transforming API requests and
+       * responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+       * .
        */
       override fun destination(destination: String) {
         cdkBuilder.destination(destination)
       }
 
       /**
-       * @param source the value to be set.
+       * @param source Specifies the data to update the parameter with.
+       * To learn more, see [Transforming API requests and
+       * responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+       * .
        */
       override fun source(source: String) {
         cdkBuilder.source(source)
@@ -1295,11 +1325,23 @@ public open class CfnIntegration(
     ) : CdkObject(cdkObject),
         ResponseParameterProperty {
       /**
+       * Specifies the location of the response to modify, and how to modify it.
+       *
+       * To learn more, see [Transforming API requests and
+       * responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+       * .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameter.html#cfn-apigatewayv2-integration-responseparameter-destination)
        */
       override fun destination(): String? = unwrap(this).getDestination()
 
       /**
+       * Specifies the data to update the parameter with.
+       *
+       * To learn more, see [Transforming API requests and
+       * responses](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-parameter-mapping.html)
+       * .
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-apigatewayv2-integration-responseparameter.html#cfn-apigatewayv2-integration-responseparameter-source)
        */
       override fun source(): String? = unwrap(this).getSource()

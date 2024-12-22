@@ -74,6 +74,7 @@ import kotlin.jvm.JvmName
  * .key("key")
  * .value("value")
  * .build()))
+ * .taskMode("taskMode")
  * .taskReportConfig(TaskReportConfigProperty.builder()
  * .destination(DestinationProperty.builder()
  * .s3(S3Property.builder()
@@ -111,8 +112,11 @@ public interface CfnTaskProps {
    * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring your
    * task.
    *
-   * For more information, see [Monitoring DataSync with Amazon
-   * CloudWatch](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html) .
+   * For Enhanced mode tasks, you don't need to specify anything. DataSync automatically sends logs
+   * to a CloudWatch log group named `/aws/datasync` .
+   *
+   * For more information, see [Monitoring data transfers with CloudWatch
+   * Logs](https://docs.aws.amazon.com/datasync/latest/userguide/configure-logging.html) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-cloudwatchloggrouparn)
    */
@@ -137,8 +141,8 @@ public interface CfnTaskProps {
   public fun excludes(): Any? = unwrap(this).getExcludes()
 
   /**
-   * Specifies include filters define the files, objects, and folders in your source location that
-   * you want DataSync to transfer.
+   * Specifies include filters that define the files, objects, and folders in your source location
+   * that you want DataSync to transfer.
    *
    * For more information and examples, see [Specifying what DataSync transfers by using
    * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
@@ -201,6 +205,33 @@ public interface CfnTaskProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
+   * Specifies one of the following task modes for your data transfer:.
+   *
+   * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
+   * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
+   * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
+   * between Amazon S3 locations.
+   *
+   *
+   * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
+   * must have the `iam:CreateServiceLinkedRole` permission.
+   *
+   *
+   * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
+   * DataSync locations. Basic mode tasks are subject to
+   * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the number
+   * of files, objects, and directories in a dataset. Basic mode sequentially prepares, transfers, and
+   * verifies data, making it slower than Enhanced mode for most workloads.
+   *
+   * For more information, see [Understanding task mode
+   * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskmode)
+   */
+  public fun taskMode(): String? = unwrap(this).getTaskMode()
+
+  /**
    * Specifies how you want to configure a task report, which provides detailed information about
    * your DataSync transfer.
    *
@@ -224,8 +255,11 @@ public interface CfnTaskProps {
     /**
      * @param cloudWatchLogGroupArn Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch
      * log group for monitoring your task.
-     * For more information, see [Monitoring DataSync with Amazon
-     * CloudWatch](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html) .
+     * For Enhanced mode tasks, you don't need to specify anything. DataSync automatically sends
+     * logs to a CloudWatch log group named `/aws/datasync` .
+     *
+     * For more information, see [Monitoring data transfers with CloudWatch
+     * Logs](https://docs.aws.amazon.com/datasync/latest/userguide/configure-logging.html) .
      */
     public fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String)
 
@@ -260,7 +294,7 @@ public interface CfnTaskProps {
     public fun excludes(vararg excludes: Any)
 
     /**
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer.
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
@@ -268,7 +302,7 @@ public interface CfnTaskProps {
     public fun includes(includes: IResolvable)
 
     /**
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer.
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
@@ -276,7 +310,7 @@ public interface CfnTaskProps {
     public fun includes(includes: List<Any>)
 
     /**
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer.
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
@@ -380,6 +414,30 @@ public interface CfnTaskProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
+     * @param taskMode Specifies one of the following task modes for your data transfer:.
+     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
+     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
+     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
+     * between Amazon S3 locations.
+     *
+     *
+     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
+     * must have the `iam:CreateServiceLinkedRole` permission.
+     *
+     *
+     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
+     * DataSync locations. Basic mode tasks are subject to
+     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
+     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
+     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
+     *
+     * For more information, see [Understanding task mode
+     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
+     * .
+     */
+    public fun taskMode(taskMode: String)
+
+    /**
      * @param taskReportConfig Specifies how you want to configure a task report, which provides
      * detailed information about your DataSync transfer.
      * For more information, see [Monitoring your DataSync transfers with task
@@ -429,8 +487,11 @@ public interface CfnTaskProps {
     /**
      * @param cloudWatchLogGroupArn Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch
      * log group for monitoring your task.
-     * For more information, see [Monitoring DataSync with Amazon
-     * CloudWatch](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html) .
+     * For Enhanced mode tasks, you don't need to specify anything. DataSync automatically sends
+     * logs to a CloudWatch log group named `/aws/datasync` .
+     *
+     * For more information, see [Monitoring data transfers with CloudWatch
+     * Logs](https://docs.aws.amazon.com/datasync/latest/userguide/configure-logging.html) .
      */
     override fun cloudWatchLogGroupArn(cloudWatchLogGroupArn: String) {
       cdkBuilder.cloudWatchLogGroupArn(cloudWatchLogGroupArn)
@@ -473,7 +534,7 @@ public interface CfnTaskProps {
     override fun excludes(vararg excludes: Any): Unit = excludes(excludes.toList())
 
     /**
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer.
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
@@ -483,7 +544,7 @@ public interface CfnTaskProps {
     }
 
     /**
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer.
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
@@ -493,7 +554,7 @@ public interface CfnTaskProps {
     }
 
     /**
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer.
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
@@ -618,6 +679,32 @@ public interface CfnTaskProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
+     * @param taskMode Specifies one of the following task modes for your data transfer:.
+     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
+     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
+     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
+     * between Amazon S3 locations.
+     *
+     *
+     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
+     * must have the `iam:CreateServiceLinkedRole` permission.
+     *
+     *
+     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
+     * DataSync locations. Basic mode tasks are subject to
+     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
+     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
+     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
+     *
+     * For more information, see [Understanding task mode
+     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
+     * .
+     */
+    override fun taskMode(taskMode: String) {
+      cdkBuilder.taskMode(taskMode)
+    }
+
+    /**
      * @param taskReportConfig Specifies how you want to configure a task report, which provides
      * detailed information about your DataSync transfer.
      * For more information, see [Monitoring your DataSync transfers with task
@@ -675,8 +762,11 @@ public interface CfnTaskProps {
      * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring
      * your task.
      *
-     * For more information, see [Monitoring DataSync with Amazon
-     * CloudWatch](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html) .
+     * For Enhanced mode tasks, you don't need to specify anything. DataSync automatically sends
+     * logs to a CloudWatch log group named `/aws/datasync` .
+     *
+     * For more information, see [Monitoring data transfers with CloudWatch
+     * Logs](https://docs.aws.amazon.com/datasync/latest/userguide/configure-logging.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-cloudwatchloggrouparn)
      */
@@ -701,8 +791,8 @@ public interface CfnTaskProps {
     override fun excludes(): Any? = unwrap(this).getExcludes()
 
     /**
-     * Specifies include filters define the files, objects, and folders in your source location that
-     * you want DataSync to transfer.
+     * Specifies include filters that define the files, objects, and folders in your source location
+     * that you want DataSync to transfer.
      *
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
@@ -764,6 +854,33 @@ public interface CfnTaskProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
+
+    /**
+     * Specifies one of the following task modes for your data transfer:.
+     *
+     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
+     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
+     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
+     * between Amazon S3 locations.
+     *
+     *
+     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
+     * must have the `iam:CreateServiceLinkedRole` permission.
+     *
+     *
+     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
+     * DataSync locations. Basic mode tasks are subject to
+     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
+     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
+     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
+     *
+     * For more information, see [Understanding task mode
+     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskmode)
+     */
+    override fun taskMode(): String? = unwrap(this).getTaskMode()
 
     /**
      * Specifies how you want to configure a task report, which provides detailed information about

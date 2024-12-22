@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.kms
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 
@@ -32,6 +33,20 @@ public interface KeyLookupOptions {
   public fun aliasName(): String
 
   /**
+   * Whether to return a dummy key if the key was not found.
+   *
+   * If it is set to `true` and the key was not found, a dummy
+   * key with a key id '1234abcd-12ab-34cd-56ef-1234567890ab'
+   * will be returned. The value of the dummy key id can also
+   * be referenced using the `Key.DEFAULT_DUMMY_KEY_ID` variable,
+   * and you can check if the key is a dummy key by using the
+   * `Key.isLookupDummy()` method.
+   *
+   * Default: false
+   */
+  public fun returnDummyKeyOnMissing(): Boolean? = unwrap(this).getReturnDummyKeyOnMissing()
+
+  /**
    * A builder for [KeyLookupOptions]
    */
   @CdkDslMarker
@@ -41,6 +56,17 @@ public interface KeyLookupOptions {
      * Must be in the format `alias/&lt;AliasName&gt;`.
      */
     public fun aliasName(aliasName: String)
+
+    /**
+     * @param returnDummyKeyOnMissing Whether to return a dummy key if the key was not found.
+     * If it is set to `true` and the key was not found, a dummy
+     * key with a key id '1234abcd-12ab-34cd-56ef-1234567890ab'
+     * will be returned. The value of the dummy key id can also
+     * be referenced using the `Key.DEFAULT_DUMMY_KEY_ID` variable,
+     * and you can check if the key is a dummy key by using the
+     * `Key.isLookupDummy()` method.
+     */
+    public fun returnDummyKeyOnMissing(returnDummyKeyOnMissing: Boolean)
   }
 
   private class BuilderImpl : Builder {
@@ -53,6 +79,19 @@ public interface KeyLookupOptions {
      */
     override fun aliasName(aliasName: String) {
       cdkBuilder.aliasName(aliasName)
+    }
+
+    /**
+     * @param returnDummyKeyOnMissing Whether to return a dummy key if the key was not found.
+     * If it is set to `true` and the key was not found, a dummy
+     * key with a key id '1234abcd-12ab-34cd-56ef-1234567890ab'
+     * will be returned. The value of the dummy key id can also
+     * be referenced using the `Key.DEFAULT_DUMMY_KEY_ID` variable,
+     * and you can check if the key is a dummy key by using the
+     * `Key.isLookupDummy()` method.
+     */
+    override fun returnDummyKeyOnMissing(returnDummyKeyOnMissing: Boolean) {
+      cdkBuilder.returnDummyKeyOnMissing(returnDummyKeyOnMissing)
     }
 
     public fun build(): software.amazon.awscdk.services.kms.KeyLookupOptions = cdkBuilder.build()
@@ -68,6 +107,20 @@ public interface KeyLookupOptions {
      * Must be in the format `alias/&lt;AliasName&gt;`.
      */
     override fun aliasName(): String = unwrap(this).getAliasName()
+
+    /**
+     * Whether to return a dummy key if the key was not found.
+     *
+     * If it is set to `true` and the key was not found, a dummy
+     * key with a key id '1234abcd-12ab-34cd-56ef-1234567890ab'
+     * will be returned. The value of the dummy key id can also
+     * be referenced using the `Key.DEFAULT_DUMMY_KEY_ID` variable,
+     * and you can check if the key is a dummy key by using the
+     * `Key.isLookupDummy()` method.
+     *
+     * Default: false
+     */
+    override fun returnDummyKeyOnMissing(): Boolean? = unwrap(this).getReturnDummyKeyOnMissing()
   }
 
   public companion object {

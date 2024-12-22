@@ -634,11 +634,15 @@ public open class CfnBucket(
    */
   public interface FilterAndOperatorProperty {
     /**
+     * Prefix identifies one or more objects to which the rule applies.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-prefix)
      */
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     /**
+     * All of these tags must exist in the object's tag set in order for the rule to apply.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-tags)
      */
     public fun tags(): List<FilterTagProperty>
@@ -649,17 +653,19 @@ public open class CfnBucket(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param prefix the value to be set.
+       * @param prefix Prefix identifies one or more objects to which the rule applies.
        */
       public fun prefix(prefix: String)
 
       /**
-       * @param tags the value to be set. 
+       * @param tags All of these tags must exist in the object's tag set in order for the rule to
+       * apply. 
        */
       public fun tags(tags: List<FilterTagProperty>)
 
       /**
-       * @param tags the value to be set. 
+       * @param tags All of these tags must exist in the object's tag set in order for the rule to
+       * apply. 
        */
       public fun tags(vararg tags: FilterTagProperty)
     }
@@ -670,21 +676,23 @@ public open class CfnBucket(
           software.amazon.awscdk.services.s3outposts.CfnBucket.FilterAndOperatorProperty.builder()
 
       /**
-       * @param prefix the value to be set.
+       * @param prefix Prefix identifies one or more objects to which the rule applies.
        */
       override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
       /**
-       * @param tags the value to be set. 
+       * @param tags All of these tags must exist in the object's tag set in order for the rule to
+       * apply. 
        */
       override fun tags(tags: List<FilterTagProperty>) {
         cdkBuilder.tags(tags.map(FilterTagProperty.Companion::unwrap))
       }
 
       /**
-       * @param tags the value to be set. 
+       * @param tags All of these tags must exist in the object's tag set in order for the rule to
+       * apply. 
        */
       override fun tags(vararg tags: FilterTagProperty): Unit = tags(tags.toList())
 
@@ -698,11 +706,15 @@ public open class CfnBucket(
     ) : CdkObject(cdkObject),
         FilterAndOperatorProperty {
       /**
+       * Prefix identifies one or more objects to which the rule applies.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-prefix)
        */
       override fun prefix(): String? = unwrap(this).getPrefix()
 
       /**
+       * All of these tags must exist in the object's tag set in order for the rule to apply.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filterandoperator.html#cfn-s3outposts-bucket-filterandoperator-tags)
        */
       override fun tags(): List<FilterTagProperty> =
@@ -728,6 +740,8 @@ public open class CfnBucket(
   }
 
   /**
+   * The container for the filter of the lifecycle rule.
+   *
    * Example:
    *
    * ```
@@ -760,11 +774,15 @@ public open class CfnBucket(
     public fun andOperator(): Any? = unwrap(this).getAndOperator()
 
     /**
+     * Prefix identifies one or more objects to which the rule applies.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-prefix)
      */
     public fun prefix(): String? = unwrap(this).getPrefix()
 
     /**
+     * Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-tag)
      */
     public fun tag(): Any? = unwrap(this).getTag()
@@ -792,22 +810,22 @@ public open class CfnBucket(
       public fun andOperator(andOperator: FilterAndOperatorProperty.Builder.() -> Unit)
 
       /**
-       * @param prefix the value to be set.
+       * @param prefix Prefix identifies one or more objects to which the rule applies.
        */
       public fun prefix(prefix: String)
 
       /**
-       * @param tag the value to be set.
+       * @param tag Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
        */
       public fun tag(tag: IResolvable)
 
       /**
-       * @param tag the value to be set.
+       * @param tag Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
        */
       public fun tag(tag: FilterTagProperty)
 
       /**
-       * @param tag the value to be set.
+       * @param tag Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("80d2ebc5a1b3d60f9f0c23045a9ce9c9a2ea11ba9bdebca176c617a4bdae06e8")
@@ -842,28 +860,28 @@ public open class CfnBucket(
           andOperator(FilterAndOperatorProperty(andOperator))
 
       /**
-       * @param prefix the value to be set.
+       * @param prefix Prefix identifies one or more objects to which the rule applies.
        */
       override fun prefix(prefix: String) {
         cdkBuilder.prefix(prefix)
       }
 
       /**
-       * @param tag the value to be set.
+       * @param tag Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
        */
       override fun tag(tag: IResolvable) {
         cdkBuilder.tag(tag.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param tag the value to be set.
+       * @param tag Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
        */
       override fun tag(tag: FilterTagProperty) {
         cdkBuilder.tag(tag.let(FilterTagProperty.Companion::unwrap))
       }
 
       /**
-       * @param tag the value to be set.
+       * @param tag Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("80d2ebc5a1b3d60f9f0c23045a9ce9c9a2ea11ba9bdebca176c617a4bdae06e8")
@@ -884,11 +902,15 @@ public open class CfnBucket(
       override fun andOperator(): Any? = unwrap(this).getAndOperator()
 
       /**
+       * Prefix identifies one or more objects to which the rule applies.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-prefix)
        */
       override fun prefix(): String? = unwrap(this).getPrefix()
 
       /**
+       * Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-filter.html#cfn-s3outposts-bucket-filter-tag)
        */
       override fun tag(): Any? = unwrap(this).getTag()
@@ -913,6 +935,8 @@ public open class CfnBucket(
   }
 
   /**
+   * Tag used to identify a subset of objects for an Amazon S3Outposts bucket.
+   *
    * Example:
    *
    * ```
@@ -1193,6 +1217,10 @@ public open class CfnBucket(
     public fun filter(): Any? = unwrap(this).getFilter()
 
     /**
+     * Unique identifier for the lifecycle rule.
+     *
+     * The value can't be longer than 255 characters.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-id)
      */
     public fun id(): String? = unwrap(this).getId()
@@ -1251,7 +1279,8 @@ public open class CfnBucket(
       public fun filter(filter: Any)
 
       /**
-       * @param id the value to be set.
+       * @param id Unique identifier for the lifecycle rule.
+       * The value can't be longer than 255 characters.
        */
       public fun id(id: String)
 
@@ -1319,7 +1348,8 @@ public open class CfnBucket(
       }
 
       /**
-       * @param id the value to be set.
+       * @param id Unique identifier for the lifecycle rule.
+       * The value can't be longer than 255 characters.
        */
       override fun id(id: String) {
         cdkBuilder.id(id)
@@ -1372,6 +1402,10 @@ public open class CfnBucket(
       override fun filter(): Any? = unwrap(this).getFilter()
 
       /**
+       * Unique identifier for the lifecycle rule.
+       *
+       * The value can't be longer than 255 characters.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-s3outposts-bucket-rule.html#cfn-s3outposts-bucket-rule-id)
        */
       override fun id(): String? = unwrap(this).getId()

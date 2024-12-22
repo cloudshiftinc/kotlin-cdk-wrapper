@@ -22,6 +22,15 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.opensearchserverless.*;
  * CfnSecurityConfigProps cfnSecurityConfigProps = CfnSecurityConfigProps.builder()
  * .description("description")
+ * .iamIdentityCenterOptions(IamIdentityCenterConfigOptionsProperty.builder()
+ * .instanceArn("instanceArn")
+ * // the properties below are optional
+ * .applicationArn("applicationArn")
+ * .applicationDescription("applicationDescription")
+ * .applicationName("applicationName")
+ * .groupAttribute("groupAttribute")
+ * .userAttribute("userAttribute")
+ * .build())
  * .name("name")
  * .samlOptions(SamlConfigOptionsProperty.builder()
  * .metadata("metadata")
@@ -43,6 +52,14 @@ public interface CfnSecurityConfigProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
+   * the form of a key-value map.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-iamidentitycenteroptions)
+   */
+  public fun iamIdentityCenterOptions(): Any? = unwrap(this).getIamIdentityCenterOptions()
 
   /**
    * The name of the security configuration.
@@ -76,6 +93,28 @@ public interface CfnSecurityConfigProps {
      * @param description The description of the security configuration.
      */
     public fun description(description: String)
+
+    /**
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
+     * Serverless security configuration in the form of a key-value map.
+     */
+    public fun iamIdentityCenterOptions(iamIdentityCenterOptions: IResolvable)
+
+    /**
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
+     * Serverless security configuration in the form of a key-value map.
+     */
+    public
+        fun iamIdentityCenterOptions(iamIdentityCenterOptions: CfnSecurityConfig.IamIdentityCenterConfigOptionsProperty)
+
+    /**
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
+     * Serverless security configuration in the form of a key-value map.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b6cc9c1c94b656fcc13e1f8d0f6bbf2b52eb6ac06a67a9465f56992d7fbb5dd0")
+    public
+        fun iamIdentityCenterOptions(iamIdentityCenterOptions: CfnSecurityConfig.IamIdentityCenterConfigOptionsProperty.Builder.() -> Unit)
 
     /**
      * @param name The name of the security configuration.
@@ -121,6 +160,34 @@ public interface CfnSecurityConfigProps {
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
+     * Serverless security configuration in the form of a key-value map.
+     */
+    override fun iamIdentityCenterOptions(iamIdentityCenterOptions: IResolvable) {
+      cdkBuilder.iamIdentityCenterOptions(iamIdentityCenterOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
+     * Serverless security configuration in the form of a key-value map.
+     */
+    override
+        fun iamIdentityCenterOptions(iamIdentityCenterOptions: CfnSecurityConfig.IamIdentityCenterConfigOptionsProperty) {
+      cdkBuilder.iamIdentityCenterOptions(iamIdentityCenterOptions.let(CfnSecurityConfig.IamIdentityCenterConfigOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param iamIdentityCenterOptions Describes IAM Identity Center options for an OpenSearch
+     * Serverless security configuration in the form of a key-value map.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b6cc9c1c94b656fcc13e1f8d0f6bbf2b52eb6ac06a67a9465f56992d7fbb5dd0")
+    override
+        fun iamIdentityCenterOptions(iamIdentityCenterOptions: CfnSecurityConfig.IamIdentityCenterConfigOptionsProperty.Builder.() -> Unit):
+        Unit =
+        iamIdentityCenterOptions(CfnSecurityConfig.IamIdentityCenterConfigOptionsProperty(iamIdentityCenterOptions))
 
     /**
      * @param name The name of the security configuration.
@@ -177,6 +244,14 @@ public interface CfnSecurityConfigProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * Describes IAM Identity Center options for an OpenSearch Serverless security configuration in
+     * the form of a key-value map.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchserverless-securityconfig.html#cfn-opensearchserverless-securityconfig-iamidentitycenteroptions)
+     */
+    override fun iamIdentityCenterOptions(): Any? = unwrap(this).getIamIdentityCenterOptions()
 
     /**
      * The name of the security configuration.

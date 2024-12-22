@@ -24,7 +24,6 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.iotfleetwise.*;
  * CfnCampaignProps cfnCampaignProps = CfnCampaignProps.builder()
- * .action("action")
  * .collectionScheme(CollectionSchemeProperty.builder()
  * .conditionBasedCollectionScheme(ConditionBasedCollectionSchemeProperty.builder()
  * .expression("expression")
@@ -41,6 +40,7 @@ import kotlin.jvm.JvmName
  * .signalCatalogArn("signalCatalogArn")
  * .targetArn("targetArn")
  * // the properties below are optional
+ * .action("action")
  * .compression("compression")
  * .dataDestinationConfigs(List.of(DataDestinationConfigProperty.builder()
  * .mqttTopicConfig(MqttTopicConfigProperty.builder()
@@ -60,6 +60,26 @@ import kotlin.jvm.JvmName
  * .build())
  * .build()))
  * .dataExtraDimensions(List.of("dataExtraDimensions"))
+ * .dataPartitions(List.of(DataPartitionProperty.builder()
+ * .id("id")
+ * .storageOptions(DataPartitionStorageOptionsProperty.builder()
+ * .maximumSize(StorageMaximumSizeProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .minimumTimeToLive(StorageMinimumTimeToLiveProperty.builder()
+ * .unit("unit")
+ * .value(123)
+ * .build())
+ * .storageLocation("storageLocation")
+ * .build())
+ * // the properties below are optional
+ * .uploadOptions(DataPartitionUploadOptionsProperty.builder()
+ * .expression("expression")
+ * // the properties below are optional
+ * .conditionLanguageVersion(123)
+ * .build())
+ * .build()))
  * .description("description")
  * .diagnosticsMode("diagnosticsMode")
  * .expiryTime("expiryTime")
@@ -68,6 +88,7 @@ import kotlin.jvm.JvmName
  * .signalsToCollect(List.of(SignalInformationProperty.builder()
  * .name("name")
  * // the properties below are optional
+ * .dataPartitionId("dataPartitionId")
  * .maxSampleCount(123)
  * .minimumSamplingIntervalMs(123)
  * .build()))
@@ -110,7 +131,7 @@ public interface CfnCampaignProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-action)
    */
-  public fun action(): String
+  public fun action(): String? = unwrap(this).getAction()
 
   /**
    * The data collection scheme associated with the campaign.
@@ -122,7 +143,7 @@ public interface CfnCampaignProps {
   public fun collectionScheme(): Any
 
   /**
-   * (Optional) Whether to compress signals before transmitting data to AWS IoT FleetWise .
+   * Whether to compress signals before transmitting data to AWS IoT FleetWise .
    *
    * If you don't want to compress the signals, use `OFF` . If it's not specified, `SNAPPY` is used.
    *
@@ -135,7 +156,7 @@ public interface CfnCampaignProps {
   public fun compression(): String? = unwrap(this).getCompression()
 
   /**
-   * (Optional) The destination where the campaign sends data.
+   * The destination where the campaign sends data.
    *
    * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
    *
@@ -152,7 +173,7 @@ public interface CfnCampaignProps {
   public fun dataDestinationConfigs(): Any? = unwrap(this).getDataDestinationConfigs()
 
   /**
-   * (Optional) A list of vehicle attributes to associate with a campaign.
+   * A list of vehicle attributes to associate with a campaign.
    *
    * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
    * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
@@ -166,14 +187,21 @@ public interface CfnCampaignProps {
       emptyList()
 
   /**
-   * (Optional) The description of the campaign.
+   * The data partitions associated with the signals collected from the vehicle.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datapartitions)
+   */
+  public fun dataPartitions(): Any? = unwrap(this).getDataPartitions()
+
+  /**
+   * The description of the campaign.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * (Optional) Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
+   * Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
    *
    * If you want to send diagnostic trouble codes, use `SEND_ACTIVE_DTCS` . If it's not specified,
    * `OFF` is used.
@@ -187,8 +215,7 @@ public interface CfnCampaignProps {
   public fun diagnosticsMode(): String? = unwrap(this).getDiagnosticsMode()
 
   /**
-   * (Optional) The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight
-   * UTC time).
+   * The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight UTC time).
    *
    * Vehicle data isn't collected after the campaign expires.
    *
@@ -208,8 +235,8 @@ public interface CfnCampaignProps {
   public fun name(): String
 
   /**
-   * (Optional) How long (in milliseconds) to collect raw data after a triggering event initiates
-   * the collection.
+   * How long (in milliseconds) to collect raw data after a triggering event initiates the
+   * collection.
    *
    * If it's not specified, `0` is used.
    *
@@ -223,8 +250,8 @@ public interface CfnCampaignProps {
       unwrap(this).getPostTriggerCollectionDuration()
 
   /**
-   * (Optional) A number indicating the priority of one campaign over another campaign for a certain
-   * vehicle or fleet.
+   * A number indicating the priority of one campaign over another campaign for a certain vehicle or
+   * fleet.
    *
    * A campaign with the lowest value is deployed to vehicles before any other campaigns. If it's
    * not specified, `0` is used.
@@ -245,19 +272,21 @@ public interface CfnCampaignProps {
   public fun signalCatalogArn(): String
 
   /**
-   * (Optional) A list of information about signals to collect.
+   * A list of information about signals to collect.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
    */
   public fun signalsToCollect(): Any? = unwrap(this).getSignalsToCollect()
 
   /**
+   * A list of information about signals to fetch.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
    */
   public fun signalsToFetch(): Any? = unwrap(this).getSignalsToFetch()
 
   /**
-   * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
+   * Whether to store collected data after a vehicle lost a connection with the cloud.
    *
    * After a connection is re-established, the data is automatically forwarded to AWS IoT FleetWise
    * . If you want to store collected data when a vehicle loses connection with the cloud, use
@@ -272,9 +301,8 @@ public interface CfnCampaignProps {
   public fun spoolingMode(): String? = unwrap(this).getSpoolingMode()
 
   /**
-   * (Optional) The time, in milliseconds, to deliver a campaign after it was approved.
-   *
-   * If it's not specified, `0` is used.
+   * The time, in milliseconds, to deliver a campaign after it was approved. If it's not specified,
+   * `0` is used.
    *
    * Default: `0`
    *
@@ -285,7 +313,7 @@ public interface CfnCampaignProps {
   public fun startTime(): String? = unwrap(this).getStartTime()
 
   /**
-   * (Optional) Metadata that can be used to manage the campaign.
+   * Metadata that can be used to manage the campaign.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-tags)
    */
@@ -304,7 +332,7 @@ public interface CfnCampaignProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param action Specifies how to update a campaign. The action can be one of the following:. 
+     * @param action Specifies how to update a campaign. The action can be one of the following:.
      * * `APPROVE` - To approve delivering a data collection scheme to vehicles.
      * * `SUSPEND` - To suspend collecting signal data. The campaign is deleted from vehicles and
      * all vehicles in the suspended campaign will stop sending data.
@@ -336,8 +364,8 @@ public interface CfnCampaignProps {
         fun collectionScheme(collectionScheme: CfnCampaign.CollectionSchemeProperty.Builder.() -> Unit)
 
     /**
-     * @param compression (Optional) Whether to compress signals before transmitting data to AWS IoT
-     * FleetWise .
+     * @param compression Whether to compress signals before transmitting data to AWS IoT FleetWise
+     * .
      * If you don't want to compress the signals, use `OFF` . If it's not specified, `SNAPPY` is
      * used.
      *
@@ -346,7 +374,7 @@ public interface CfnCampaignProps {
     public fun compression(compression: String)
 
     /**
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data.
+     * @param dataDestinationConfigs The destination where the campaign sends data.
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
      * Amazon S3 optimizes the cost of data storage and provides additional mechanisms to use
@@ -360,7 +388,7 @@ public interface CfnCampaignProps {
     public fun dataDestinationConfigs(dataDestinationConfigs: IResolvable)
 
     /**
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data.
+     * @param dataDestinationConfigs The destination where the campaign sends data.
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
      * Amazon S3 optimizes the cost of data storage and provides additional mechanisms to use
@@ -374,7 +402,7 @@ public interface CfnCampaignProps {
     public fun dataDestinationConfigs(dataDestinationConfigs: List<Any>)
 
     /**
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data.
+     * @param dataDestinationConfigs The destination where the campaign sends data.
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
      * Amazon S3 optimizes the cost of data storage and provides additional mechanisms to use
@@ -388,8 +416,7 @@ public interface CfnCampaignProps {
     public fun dataDestinationConfigs(vararg dataDestinationConfigs: Any)
 
     /**
-     * @param dataExtraDimensions (Optional) A list of vehicle attributes to associate with a
-     * campaign.
+     * @param dataExtraDimensions A list of vehicle attributes to associate with a campaign.
      * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
      * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
      * Amazon Timestream . You can then query the data against `make` and `model` .
@@ -399,8 +426,7 @@ public interface CfnCampaignProps {
     public fun dataExtraDimensions(dataExtraDimensions: List<String>)
 
     /**
-     * @param dataExtraDimensions (Optional) A list of vehicle attributes to associate with a
-     * campaign.
+     * @param dataExtraDimensions A list of vehicle attributes to associate with a campaign.
      * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
      * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
      * Amazon Timestream . You can then query the data against `make` and `model` .
@@ -410,13 +436,31 @@ public interface CfnCampaignProps {
     public fun dataExtraDimensions(vararg dataExtraDimensions: String)
 
     /**
-     * @param description (Optional) The description of the campaign.
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle.
+     */
+    public fun dataPartitions(dataPartitions: IResolvable)
+
+    /**
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle.
+     */
+    public fun dataPartitions(dataPartitions: List<Any>)
+
+    /**
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle.
+     */
+    public fun dataPartitions(vararg dataPartitions: Any)
+
+    /**
+     * @param description The description of the campaign.
      */
     public fun description(description: String)
 
     /**
-     * @param diagnosticsMode (Optional) Option for a vehicle to send diagnostic trouble codes to
-     * AWS IoT FleetWise .
+     * @param diagnosticsMode Option for a vehicle to send diagnostic trouble codes to AWS IoT
+     * FleetWise .
      * If you want to send diagnostic trouble codes, use `SEND_ACTIVE_DTCS` . If it's not specified,
      * `OFF` is used.
      *
@@ -425,8 +469,8 @@ public interface CfnCampaignProps {
     public fun diagnosticsMode(diagnosticsMode: String)
 
     /**
-     * @param expiryTime (Optional) The time the campaign expires, in seconds since epoch (January
-     * 1, 1970 at midnight UTC time).
+     * @param expiryTime The time the campaign expires, in seconds since epoch (January 1, 1970 at
+     * midnight UTC time).
      * Vehicle data isn't collected after the campaign expires.
      *
      * Default: 253402214400 (December 31, 9999, 00:00:00 UTC)
@@ -439,8 +483,8 @@ public interface CfnCampaignProps {
     public fun name(name: String)
 
     /**
-     * @param postTriggerCollectionDuration (Optional) How long (in milliseconds) to collect raw
-     * data after a triggering event initiates the collection.
+     * @param postTriggerCollectionDuration How long (in milliseconds) to collect raw data after a
+     * triggering event initiates the collection.
      * If it's not specified, `0` is used.
      *
      * Default: `0`
@@ -448,8 +492,8 @@ public interface CfnCampaignProps {
     public fun postTriggerCollectionDuration(postTriggerCollectionDuration: Number)
 
     /**
-     * @param priority (Optional) A number indicating the priority of one campaign over another
-     * campaign for a certain vehicle or fleet.
+     * @param priority A number indicating the priority of one campaign over another campaign for a
+     * certain vehicle or fleet.
      * A campaign with the lowest value is deployed to vehicles before any other campaigns. If it's
      * not specified, `0` is used.
      *
@@ -464,38 +508,38 @@ public interface CfnCampaignProps {
     public fun signalCatalogArn(signalCatalogArn: String)
 
     /**
-     * @param signalsToCollect (Optional) A list of information about signals to collect.
+     * @param signalsToCollect A list of information about signals to collect.
      */
     public fun signalsToCollect(signalsToCollect: IResolvable)
 
     /**
-     * @param signalsToCollect (Optional) A list of information about signals to collect.
+     * @param signalsToCollect A list of information about signals to collect.
      */
     public fun signalsToCollect(signalsToCollect: List<Any>)
 
     /**
-     * @param signalsToCollect (Optional) A list of information about signals to collect.
+     * @param signalsToCollect A list of information about signals to collect.
      */
     public fun signalsToCollect(vararg signalsToCollect: Any)
 
     /**
-     * @param signalsToFetch the value to be set.
+     * @param signalsToFetch A list of information about signals to fetch.
      */
     public fun signalsToFetch(signalsToFetch: IResolvable)
 
     /**
-     * @param signalsToFetch the value to be set.
+     * @param signalsToFetch A list of information about signals to fetch.
      */
     public fun signalsToFetch(signalsToFetch: List<Any>)
 
     /**
-     * @param signalsToFetch the value to be set.
+     * @param signalsToFetch A list of information about signals to fetch.
      */
     public fun signalsToFetch(vararg signalsToFetch: Any)
 
     /**
-     * @param spoolingMode (Optional) Whether to store collected data after a vehicle lost a
-     * connection with the cloud.
+     * @param spoolingMode Whether to store collected data after a vehicle lost a connection with
+     * the cloud.
      * After a connection is re-established, the data is automatically forwarded to AWS IoT
      * FleetWise . If you want to store collected data when a vehicle loses connection with the cloud,
      * use `TO_DISK` . If it's not specified, `OFF` is used.
@@ -505,21 +549,19 @@ public interface CfnCampaignProps {
     public fun spoolingMode(spoolingMode: String)
 
     /**
-     * @param startTime (Optional) The time, in milliseconds, to deliver a campaign after it was
-     * approved.
-     * If it's not specified, `0` is used.
-     *
+     * @param startTime The time, in milliseconds, to deliver a campaign after it was approved. If
+     * it's not specified, `0` is used.
      * Default: `0`
      */
     public fun startTime(startTime: String)
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the campaign.
+     * @param tags Metadata that can be used to manage the campaign.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the campaign.
+     * @param tags Metadata that can be used to manage the campaign.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -535,7 +577,7 @@ public interface CfnCampaignProps {
         software.amazon.awscdk.services.iotfleetwise.CfnCampaignProps.builder()
 
     /**
-     * @param action Specifies how to update a campaign. The action can be one of the following:. 
+     * @param action Specifies how to update a campaign. The action can be one of the following:.
      * * `APPROVE` - To approve delivering a data collection scheme to vehicles.
      * * `SUSPEND` - To suspend collecting signal data. The campaign is deleted from vehicles and
      * all vehicles in the suspended campaign will stop sending data.
@@ -574,8 +616,8 @@ public interface CfnCampaignProps {
         Unit = collectionScheme(CfnCampaign.CollectionSchemeProperty(collectionScheme))
 
     /**
-     * @param compression (Optional) Whether to compress signals before transmitting data to AWS IoT
-     * FleetWise .
+     * @param compression Whether to compress signals before transmitting data to AWS IoT FleetWise
+     * .
      * If you don't want to compress the signals, use `OFF` . If it's not specified, `SNAPPY` is
      * used.
      *
@@ -586,7 +628,7 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data.
+     * @param dataDestinationConfigs The destination where the campaign sends data.
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
      * Amazon S3 optimizes the cost of data storage and provides additional mechanisms to use
@@ -602,7 +644,7 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data.
+     * @param dataDestinationConfigs The destination where the campaign sends data.
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
      * Amazon S3 optimizes the cost of data storage and provides additional mechanisms to use
@@ -618,7 +660,7 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param dataDestinationConfigs (Optional) The destination where the campaign sends data.
+     * @param dataDestinationConfigs The destination where the campaign sends data.
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
      * Amazon S3 optimizes the cost of data storage and provides additional mechanisms to use
@@ -633,8 +675,7 @@ public interface CfnCampaignProps {
         dataDestinationConfigs(dataDestinationConfigs.toList())
 
     /**
-     * @param dataExtraDimensions (Optional) A list of vehicle attributes to associate with a
-     * campaign.
+     * @param dataExtraDimensions A list of vehicle attributes to associate with a campaign.
      * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
      * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
      * Amazon Timestream . You can then query the data against `make` and `model` .
@@ -646,8 +687,7 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param dataExtraDimensions (Optional) A list of vehicle attributes to associate with a
-     * campaign.
+     * @param dataExtraDimensions A list of vehicle attributes to associate with a campaign.
      * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
      * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
      * Amazon Timestream . You can then query the data against `make` and `model` .
@@ -658,15 +698,38 @@ public interface CfnCampaignProps {
         dataExtraDimensions(dataExtraDimensions.toList())
 
     /**
-     * @param description (Optional) The description of the campaign.
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle.
+     */
+    override fun dataPartitions(dataPartitions: IResolvable) {
+      cdkBuilder.dataPartitions(dataPartitions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle.
+     */
+    override fun dataPartitions(dataPartitions: List<Any>) {
+      cdkBuilder.dataPartitions(dataPartitions.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param dataPartitions The data partitions associated with the signals collected from the
+     * vehicle.
+     */
+    override fun dataPartitions(vararg dataPartitions: Any): Unit =
+        dataPartitions(dataPartitions.toList())
+
+    /**
+     * @param description The description of the campaign.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * @param diagnosticsMode (Optional) Option for a vehicle to send diagnostic trouble codes to
-     * AWS IoT FleetWise .
+     * @param diagnosticsMode Option for a vehicle to send diagnostic trouble codes to AWS IoT
+     * FleetWise .
      * If you want to send diagnostic trouble codes, use `SEND_ACTIVE_DTCS` . If it's not specified,
      * `OFF` is used.
      *
@@ -677,8 +740,8 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param expiryTime (Optional) The time the campaign expires, in seconds since epoch (January
-     * 1, 1970 at midnight UTC time).
+     * @param expiryTime The time the campaign expires, in seconds since epoch (January 1, 1970 at
+     * midnight UTC time).
      * Vehicle data isn't collected after the campaign expires.
      *
      * Default: 253402214400 (December 31, 9999, 00:00:00 UTC)
@@ -695,8 +758,8 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param postTriggerCollectionDuration (Optional) How long (in milliseconds) to collect raw
-     * data after a triggering event initiates the collection.
+     * @param postTriggerCollectionDuration How long (in milliseconds) to collect raw data after a
+     * triggering event initiates the collection.
      * If it's not specified, `0` is used.
      *
      * Default: `0`
@@ -706,8 +769,8 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param priority (Optional) A number indicating the priority of one campaign over another
-     * campaign for a certain vehicle or fleet.
+     * @param priority A number indicating the priority of one campaign over another campaign for a
+     * certain vehicle or fleet.
      * A campaign with the lowest value is deployed to vehicles before any other campaigns. If it's
      * not specified, `0` is used.
      *
@@ -726,48 +789,48 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param signalsToCollect (Optional) A list of information about signals to collect.
+     * @param signalsToCollect A list of information about signals to collect.
      */
     override fun signalsToCollect(signalsToCollect: IResolvable) {
       cdkBuilder.signalsToCollect(signalsToCollect.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param signalsToCollect (Optional) A list of information about signals to collect.
+     * @param signalsToCollect A list of information about signals to collect.
      */
     override fun signalsToCollect(signalsToCollect: List<Any>) {
       cdkBuilder.signalsToCollect(signalsToCollect.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param signalsToCollect (Optional) A list of information about signals to collect.
+     * @param signalsToCollect A list of information about signals to collect.
      */
     override fun signalsToCollect(vararg signalsToCollect: Any): Unit =
         signalsToCollect(signalsToCollect.toList())
 
     /**
-     * @param signalsToFetch the value to be set.
+     * @param signalsToFetch A list of information about signals to fetch.
      */
     override fun signalsToFetch(signalsToFetch: IResolvable) {
       cdkBuilder.signalsToFetch(signalsToFetch.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param signalsToFetch the value to be set.
+     * @param signalsToFetch A list of information about signals to fetch.
      */
     override fun signalsToFetch(signalsToFetch: List<Any>) {
       cdkBuilder.signalsToFetch(signalsToFetch.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param signalsToFetch the value to be set.
+     * @param signalsToFetch A list of information about signals to fetch.
      */
     override fun signalsToFetch(vararg signalsToFetch: Any): Unit =
         signalsToFetch(signalsToFetch.toList())
 
     /**
-     * @param spoolingMode (Optional) Whether to store collected data after a vehicle lost a
-     * connection with the cloud.
+     * @param spoolingMode Whether to store collected data after a vehicle lost a connection with
+     * the cloud.
      * After a connection is re-established, the data is automatically forwarded to AWS IoT
      * FleetWise . If you want to store collected data when a vehicle loses connection with the cloud,
      * use `TO_DISK` . If it's not specified, `OFF` is used.
@@ -779,10 +842,8 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param startTime (Optional) The time, in milliseconds, to deliver a campaign after it was
-     * approved.
-     * If it's not specified, `0` is used.
-     *
+     * @param startTime The time, in milliseconds, to deliver a campaign after it was approved. If
+     * it's not specified, `0` is used.
      * Default: `0`
      */
     override fun startTime(startTime: String) {
@@ -790,14 +851,14 @@ public interface CfnCampaignProps {
     }
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the campaign.
+     * @param tags Metadata that can be used to manage the campaign.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags (Optional) Metadata that can be used to manage the campaign.
+     * @param tags Metadata that can be used to manage the campaign.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -829,7 +890,7 @@ public interface CfnCampaignProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-action)
      */
-    override fun action(): String = unwrap(this).getAction()
+    override fun action(): String? = unwrap(this).getAction()
 
     /**
      * The data collection scheme associated with the campaign.
@@ -841,7 +902,7 @@ public interface CfnCampaignProps {
     override fun collectionScheme(): Any = unwrap(this).getCollectionScheme()
 
     /**
-     * (Optional) Whether to compress signals before transmitting data to AWS IoT FleetWise .
+     * Whether to compress signals before transmitting data to AWS IoT FleetWise .
      *
      * If you don't want to compress the signals, use `OFF` . If it's not specified, `SNAPPY` is
      * used.
@@ -855,7 +916,7 @@ public interface CfnCampaignProps {
     override fun compression(): String? = unwrap(this).getCompression()
 
     /**
-     * (Optional) The destination where the campaign sends data.
+     * The destination where the campaign sends data.
      *
      * You can choose to send data to be stored in Amazon S3 or Amazon Timestream .
      *
@@ -872,7 +933,7 @@ public interface CfnCampaignProps {
     override fun dataDestinationConfigs(): Any? = unwrap(this).getDataDestinationConfigs()
 
     /**
-     * (Optional) A list of vehicle attributes to associate with a campaign.
+     * A list of vehicle attributes to associate with a campaign.
      *
      * Enrich the data with specified vehicle attributes. For example, add `make` and `model` to the
      * campaign, and AWS IoT FleetWise will associate the data with those attributes as dimensions in
@@ -886,14 +947,21 @@ public interface CfnCampaignProps {
         emptyList()
 
     /**
-     * (Optional) The description of the campaign.
+     * The data partitions associated with the signals collected from the vehicle.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-datapartitions)
+     */
+    override fun dataPartitions(): Any? = unwrap(this).getDataPartitions()
+
+    /**
+     * The description of the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * (Optional) Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
+     * Option for a vehicle to send diagnostic trouble codes to AWS IoT FleetWise .
      *
      * If you want to send diagnostic trouble codes, use `SEND_ACTIVE_DTCS` . If it's not specified,
      * `OFF` is used.
@@ -907,8 +975,7 @@ public interface CfnCampaignProps {
     override fun diagnosticsMode(): String? = unwrap(this).getDiagnosticsMode()
 
     /**
-     * (Optional) The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight
-     * UTC time).
+     * The time the campaign expires, in seconds since epoch (January 1, 1970 at midnight UTC time).
      *
      * Vehicle data isn't collected after the campaign expires.
      *
@@ -928,8 +995,8 @@ public interface CfnCampaignProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * (Optional) How long (in milliseconds) to collect raw data after a triggering event initiates
-     * the collection.
+     * How long (in milliseconds) to collect raw data after a triggering event initiates the
+     * collection.
      *
      * If it's not specified, `0` is used.
      *
@@ -943,8 +1010,8 @@ public interface CfnCampaignProps {
         unwrap(this).getPostTriggerCollectionDuration()
 
     /**
-     * (Optional) A number indicating the priority of one campaign over another campaign for a
-     * certain vehicle or fleet.
+     * A number indicating the priority of one campaign over another campaign for a certain vehicle
+     * or fleet.
      *
      * A campaign with the lowest value is deployed to vehicles before any other campaigns. If it's
      * not specified, `0` is used.
@@ -965,19 +1032,21 @@ public interface CfnCampaignProps {
     override fun signalCatalogArn(): String = unwrap(this).getSignalCatalogArn()
 
     /**
-     * (Optional) A list of information about signals to collect.
+     * A list of information about signals to collect.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstocollect)
      */
     override fun signalsToCollect(): Any? = unwrap(this).getSignalsToCollect()
 
     /**
+     * A list of information about signals to fetch.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-signalstofetch)
      */
     override fun signalsToFetch(): Any? = unwrap(this).getSignalsToFetch()
 
     /**
-     * (Optional) Whether to store collected data after a vehicle lost a connection with the cloud.
+     * Whether to store collected data after a vehicle lost a connection with the cloud.
      *
      * After a connection is re-established, the data is automatically forwarded to AWS IoT
      * FleetWise . If you want to store collected data when a vehicle loses connection with the cloud,
@@ -992,9 +1061,8 @@ public interface CfnCampaignProps {
     override fun spoolingMode(): String? = unwrap(this).getSpoolingMode()
 
     /**
-     * (Optional) The time, in milliseconds, to deliver a campaign after it was approved.
-     *
-     * If it's not specified, `0` is used.
+     * The time, in milliseconds, to deliver a campaign after it was approved. If it's not
+     * specified, `0` is used.
      *
      * Default: `0`
      *
@@ -1005,7 +1073,7 @@ public interface CfnCampaignProps {
     override fun startTime(): String? = unwrap(this).getStartTime()
 
     /**
-     * (Optional) Metadata that can be used to manage the campaign.
+     * Metadata that can be used to manage the campaign.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-campaign.html#cfn-iotfleetwise-campaign-tags)
      */

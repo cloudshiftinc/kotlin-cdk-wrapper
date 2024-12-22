@@ -61,6 +61,9 @@ public abstract class LambdaInsightsVersion(
     public val VERSION_1_0_317_0: LambdaInsightsVersion =
         LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_317_0)
 
+    public val VERSION_1_0_333_0: LambdaInsightsVersion =
+        LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_333_0)
+
     public val VERSION_1_0_54_0: LambdaInsightsVersion =
         LambdaInsightsVersion.wrap(software.amazon.awscdk.services.lambda.LambdaInsightsVersion.VERSION_1_0_54_0)
 

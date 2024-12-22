@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
 import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.kms.IKey
+import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -142,6 +143,16 @@ public open class EventBus(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Dead-letter queue for the event bus.
+     *
+     * Default: - no dead-letter queue
+     *
+     * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rule-event-delivery.html#eb-rule-dlq)
+     * @param deadLetterQueue Dead-letter queue for the event bus. 
+     */
+    public fun deadLetterQueue(deadLetterQueue: IQueue)
+
+    /**
      * The event bus description.
      *
      * The description can be up to 512 characters long.
@@ -191,6 +202,18 @@ public open class EventBus(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.EventBus.Builder =
         software.amazon.awscdk.services.events.EventBus.Builder.create(scope, id)
+
+    /**
+     * Dead-letter queue for the event bus.
+     *
+     * Default: - no dead-letter queue
+     *
+     * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rule-event-delivery.html#eb-rule-dlq)
+     * @param deadLetterQueue Dead-letter queue for the event bus. 
+     */
+    override fun deadLetterQueue(deadLetterQueue: IQueue) {
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
+    }
 
     /**
      * The event bus description.

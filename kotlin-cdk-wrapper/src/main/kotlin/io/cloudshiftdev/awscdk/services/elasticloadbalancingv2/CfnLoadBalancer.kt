@@ -13,9 +13,11 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -29,12 +31,16 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
  * CfnLoadBalancer cfnLoadBalancer = CfnLoadBalancer.Builder.create(this, "MyCfnLoadBalancer")
+ * .enablePrefixForIpv6SourceNat("enablePrefixForIpv6SourceNat")
  * .enforceSecurityGroupInboundRulesOnPrivateLinkTraffic("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")
  * .ipAddressType("ipAddressType")
  * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .minimumLoadBalancerCapacity(MinimumLoadBalancerCapacityProperty.builder()
+ * .capacityUnits(123)
+ * .build())
  * .name("name")
  * .scheme("scheme")
  * .securityGroups(List.of("securityGroups"))
@@ -44,6 +50,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .allocationId("allocationId")
  * .iPv6Address("iPv6Address")
  * .privateIPv4Address("privateIPv4Address")
+ * .sourceNatIpv6Prefix("sourceNatIpv6Prefix")
  * .build()))
  * .subnets(List.of("subnets"))
  * .tags(List.of(CfnTag.builder()
@@ -121,6 +128,21 @@ public open class CfnLoadBalancer(
   public open fun attrSecurityGroups(): List<String> = unwrap(this).getAttrSecurityGroups()
 
   /**
+   * [Network Load Balancers with UDP listeners] Indicates whether to use an IPv6 prefix from each
+   * subnet for source NAT.
+   */
+  public open fun enablePrefixForIpv6SourceNat(): String? =
+      unwrap(this).getEnablePrefixForIpv6SourceNat()
+
+  /**
+   * [Network Load Balancers with UDP listeners] Indicates whether to use an IPv6 prefix from each
+   * subnet for source NAT.
+   */
+  public open fun enablePrefixForIpv6SourceNat(`value`: String) {
+    unwrap(this).setEnablePrefixForIpv6SourceNat(`value`)
+  }
+
+  /**
    * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
    * Balancer through AWS PrivateLink .
    */
@@ -145,12 +167,16 @@ public open class CfnLoadBalancer(
   }
 
   /**
-   * Note: Internal load balancers must use the `ipv4` IP address type.
+   * The IP address type.
+   *
+   * Internal load balancers must use `ipv4` .
    */
   public open fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
   /**
-   * Note: Internal load balancers must use the `ipv4` IP address type.
+   * The IP address type.
+   *
+   * Internal load balancers must use `ipv4` .
    */
   public open fun ipAddressType(`value`: String) {
     unwrap(this).setIpAddressType(`value`)
@@ -180,6 +206,35 @@ public open class CfnLoadBalancer(
    */
   public open fun loadBalancerAttributes(vararg `value`: Any): Unit =
       loadBalancerAttributes(`value`.toList())
+
+  /**
+   * The minimum capacity for a load balancer.
+   */
+  public open fun minimumLoadBalancerCapacity(): Any? =
+      unwrap(this).getMinimumLoadBalancerCapacity()
+
+  /**
+   * The minimum capacity for a load balancer.
+   */
+  public open fun minimumLoadBalancerCapacity(`value`: IResolvable) {
+    unwrap(this).setMinimumLoadBalancerCapacity(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The minimum capacity for a load balancer.
+   */
+  public open fun minimumLoadBalancerCapacity(`value`: MinimumLoadBalancerCapacityProperty) {
+    unwrap(this).setMinimumLoadBalancerCapacity(`value`.let(MinimumLoadBalancerCapacityProperty.Companion::unwrap))
+  }
+
+  /**
+   * The minimum capacity for a load balancer.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("45db5029a3d8c9c6da32184def7149be7c01bc7473c79637baa4e1bbc60fdaf1")
+  public open
+      fun minimumLoadBalancerCapacity(`value`: MinimumLoadBalancerCapacityProperty.Builder.() -> Unit):
+      Unit = minimumLoadBalancerCapacity(MinimumLoadBalancerCapacityProperty(`value`))
 
   /**
    * The name of the load balancer.
@@ -307,6 +362,18 @@ public open class CfnLoadBalancer(
   @CdkDslMarker
   public interface Builder {
     /**
+     * [Network Load Balancers with UDP listeners] Indicates whether to use an IPv6 prefix from each
+     * subnet for source NAT.
+     *
+     * The IP address type must be `dualstack` . The default value is `off` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-enableprefixforipv6sourcenat)
+     * @param enablePrefixForIpv6SourceNat [Network Load Balancers with UDP listeners] Indicates
+     * whether to use an IPv6 prefix from each subnet for source NAT. 
+     */
+    public fun enablePrefixForIpv6SourceNat(enablePrefixForIpv6SourceNat: String)
+
+    /**
      * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
      * Balancer through AWS PrivateLink .
      *
@@ -319,25 +386,21 @@ public open class CfnLoadBalancer(
         fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String)
 
     /**
-     * Note: Internal load balancers must use the `ipv4` IP address type.
+     * The IP address type. Internal load balancers must use `ipv4` .
      *
-     * [Application Load Balancers] The IP address type. The possible values are `ipv4` (for only
-     * IPv4 addresses), `dualstack` (for IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4`
-     * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
+     * [Application Load Balancers] The possible values are `ipv4` (IPv4 addresses), `dualstack`
+     * (IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4` (public IPv6 addresses and
+     * private IPv4 and IPv6 addresses).
      *
-     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting
-     * to an Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
-     * balancer cannot complete the authentication process, resulting in HTTP 500 errors.
+     * Application Load Balancer authentication supports IPv4 addresses only when connecting to an
+     * Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
+     * balancer can't complete the authentication process, resulting in HTTP 500 errors.
      *
-     * [Network Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses). You can’t specify `dualstack` for a
-     * load balancer with a UDP or TCP_UDP listener.
-     *
-     * [Gateway Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses).
+     * [Network Load Balancers and Gateway Load Balancers] The possible values are `ipv4` (IPv4
+     * addresses) and `dualstack` (IPv4 and IPv6 addresses).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype)
-     * @param ipAddressType Note: Internal load balancers must use the `ipv4` IP address type. 
+     * @param ipAddressType The IP address type. Internal load balancers must use `ipv4` . 
      */
     public fun ipAddressType(ipAddressType: String)
 
@@ -364,6 +427,34 @@ public open class CfnLoadBalancer(
      * @param loadBalancerAttributes The load balancer attributes. 
      */
     public fun loadBalancerAttributes(vararg loadBalancerAttributes: Any)
+
+    /**
+     * The minimum capacity for a load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity)
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer. 
+     */
+    public fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: IResolvable)
+
+    /**
+     * The minimum capacity for a load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity)
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer. 
+     */
+    public
+        fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: MinimumLoadBalancerCapacityProperty)
+
+    /**
+     * The minimum capacity for a load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity)
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0baba8a5a9a66df31b4bc9803662449abeaab417e9920abd2098233d6af34aaa")
+    public
+        fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: MinimumLoadBalancerCapacityProperty.Builder.() -> Unit)
 
     /**
      * The name of the load balancer.
@@ -395,7 +486,7 @@ public open class CfnLoadBalancer(
      *
      * The default is an Internet-facing load balancer.
      *
-     * You cannot specify a scheme for a Gateway Load Balancer.
+     * You can't specify a scheme for a Gateway Load Balancer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-scheme)
      * @param scheme The nodes of an Internet-facing load balancer have public IP addresses. 
@@ -429,7 +520,7 @@ public open class CfnLoadBalancer(
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -443,7 +534,7 @@ public open class CfnLoadBalancer(
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      * @param subnetMappings The IDs of the subnets. 
@@ -457,7 +548,7 @@ public open class CfnLoadBalancer(
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -471,7 +562,7 @@ public open class CfnLoadBalancer(
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      * @param subnetMappings The IDs of the subnets. 
@@ -485,7 +576,7 @@ public open class CfnLoadBalancer(
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -499,7 +590,7 @@ public open class CfnLoadBalancer(
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      * @param subnetMappings The IDs of the subnets. 
@@ -520,9 +611,8 @@ public open class CfnLoadBalancer(
      * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
      * Zones.
      *
-     * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-     *
-     * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+     * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+     * Availability Zones.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets)
      * @param subnets The IDs of the subnets. 
@@ -543,9 +633,8 @@ public open class CfnLoadBalancer(
      * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
      * Zones.
      *
-     * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-     *
-     * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+     * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+     * Availability Zones.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets)
      * @param subnets The IDs of the subnets. 
@@ -589,6 +678,20 @@ public open class CfnLoadBalancer(
         id)
 
     /**
+     * [Network Load Balancers with UDP listeners] Indicates whether to use an IPv6 prefix from each
+     * subnet for source NAT.
+     *
+     * The IP address type must be `dualstack` . The default value is `off` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-enableprefixforipv6sourcenat)
+     * @param enablePrefixForIpv6SourceNat [Network Load Balancers with UDP listeners] Indicates
+     * whether to use an IPv6 prefix from each subnet for source NAT. 
+     */
+    override fun enablePrefixForIpv6SourceNat(enablePrefixForIpv6SourceNat: String) {
+      cdkBuilder.enablePrefixForIpv6SourceNat(enablePrefixForIpv6SourceNat)
+    }
+
+    /**
      * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
      * Balancer through AWS PrivateLink .
      *
@@ -603,25 +706,21 @@ public open class CfnLoadBalancer(
     }
 
     /**
-     * Note: Internal load balancers must use the `ipv4` IP address type.
+     * The IP address type. Internal load balancers must use `ipv4` .
      *
-     * [Application Load Balancers] The IP address type. The possible values are `ipv4` (for only
-     * IPv4 addresses), `dualstack` (for IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4`
-     * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
+     * [Application Load Balancers] The possible values are `ipv4` (IPv4 addresses), `dualstack`
+     * (IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4` (public IPv6 addresses and
+     * private IPv4 and IPv6 addresses).
      *
-     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting
-     * to an Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
-     * balancer cannot complete the authentication process, resulting in HTTP 500 errors.
+     * Application Load Balancer authentication supports IPv4 addresses only when connecting to an
+     * Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
+     * balancer can't complete the authentication process, resulting in HTTP 500 errors.
      *
-     * [Network Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses). You can’t specify `dualstack` for a
-     * load balancer with a UDP or TCP_UDP listener.
-     *
-     * [Gateway Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses).
+     * [Network Load Balancers and Gateway Load Balancers] The possible values are `ipv4` (IPv4
+     * addresses) and `dualstack` (IPv4 and IPv6 addresses).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype)
-     * @param ipAddressType Note: Internal load balancers must use the `ipv4` IP address type. 
+     * @param ipAddressType The IP address type. Internal load balancers must use `ipv4` . 
      */
     override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
@@ -657,6 +756,40 @@ public open class CfnLoadBalancer(
         loadBalancerAttributes(loadBalancerAttributes.toList())
 
     /**
+     * The minimum capacity for a load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity)
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer. 
+     */
+    override fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: IResolvable) {
+      cdkBuilder.minimumLoadBalancerCapacity(minimumLoadBalancerCapacity.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The minimum capacity for a load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity)
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer. 
+     */
+    override
+        fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: MinimumLoadBalancerCapacityProperty) {
+      cdkBuilder.minimumLoadBalancerCapacity(minimumLoadBalancerCapacity.let(MinimumLoadBalancerCapacityProperty.Companion::unwrap))
+    }
+
+    /**
+     * The minimum capacity for a load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity)
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0baba8a5a9a66df31b4bc9803662449abeaab417e9920abd2098233d6af34aaa")
+    override
+        fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: MinimumLoadBalancerCapacityProperty.Builder.() -> Unit):
+        Unit =
+        minimumLoadBalancerCapacity(MinimumLoadBalancerCapacityProperty(minimumLoadBalancerCapacity))
+
+    /**
      * The name of the load balancer.
      *
      * This name must be unique per region per account, can have a maximum of 32 characters, must
@@ -688,7 +821,7 @@ public open class CfnLoadBalancer(
      *
      * The default is an Internet-facing load balancer.
      *
-     * You cannot specify a scheme for a Gateway Load Balancer.
+     * You can't specify a scheme for a Gateway Load Balancer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-scheme)
      * @param scheme The nodes of an Internet-facing load balancer have public IP addresses. 
@@ -727,7 +860,7 @@ public open class CfnLoadBalancer(
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -741,7 +874,7 @@ public open class CfnLoadBalancer(
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      * @param subnetMappings The IDs of the subnets. 
@@ -757,7 +890,7 @@ public open class CfnLoadBalancer(
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -771,7 +904,7 @@ public open class CfnLoadBalancer(
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      * @param subnetMappings The IDs of the subnets. 
@@ -787,7 +920,7 @@ public open class CfnLoadBalancer(
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -801,7 +934,7 @@ public open class CfnLoadBalancer(
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      * @param subnetMappings The IDs of the subnets. 
@@ -823,9 +956,8 @@ public open class CfnLoadBalancer(
      * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
      * Zones.
      *
-     * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-     *
-     * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+     * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+     * Availability Zones.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets)
      * @param subnets The IDs of the subnets. 
@@ -848,9 +980,8 @@ public open class CfnLoadBalancer(
      * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
      * Zones.
      *
-     * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-     *
-     * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+     * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+     * Availability Zones.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets)
      * @param subnets The IDs of the subnets. 
@@ -943,7 +1074,7 @@ public open class CfnLoadBalancer(
      * * `load_balancing.cross_zone.enabled` - Indicates whether cross-zone load balancing is
      * enabled. The possible values are `true` and `false` . The default for Network Load Balancers and
      * Gateway Load Balancers is `false` . The default for Application Load Balancers is `true` , and
-     * cannot be changed.
+     * can't be changed.
      *
      * The following attributes are supported by both Application Load Balancers and Network Load
      * Balancers:
@@ -958,6 +1089,8 @@ public open class CfnLoadBalancer(
      * * `ipv6.deny_all_igw_traffic` - Blocks internet gateway (IGW) access to the load balancer. It
      * is set to `false` for internet-facing load balancers and `true` for internal load balancers,
      * preventing unintended access to your internal load balancer through an internet gateway.
+     * * `zonal_shift.config.enabled` - Indicates whether zonal shift is enabled. The possible
+     * values are `true` and `false` . The default is `false` .
      *
      * The following attributes are supported by only Application Load Balancers:
      *
@@ -1041,7 +1174,7 @@ public open class CfnLoadBalancer(
        * * `load_balancing.cross_zone.enabled` - Indicates whether cross-zone load balancing is
        * enabled. The possible values are `true` and `false` . The default for Network Load Balancers
        * and Gateway Load Balancers is `false` . The default for Application Load Balancers is `true` ,
-       * and cannot be changed.
+       * and can't be changed.
        *
        * The following attributes are supported by both Application Load Balancers and Network Load
        * Balancers:
@@ -1058,6 +1191,8 @@ public open class CfnLoadBalancer(
        * It is set to `false` for internet-facing load balancers and `true` for internal load
        * balancers, preventing unintended access to your internal load balancer through an internet
        * gateway.
+       * * `zonal_shift.config.enabled` - Indicates whether zonal shift is enabled. The possible
+       * values are `true` and `false` . The default is `false` .
        *
        * The following attributes are supported by only Application Load Balancers:
        *
@@ -1141,7 +1276,7 @@ public open class CfnLoadBalancer(
        * * `load_balancing.cross_zone.enabled` - Indicates whether cross-zone load balancing is
        * enabled. The possible values are `true` and `false` . The default for Network Load Balancers
        * and Gateway Load Balancers is `false` . The default for Application Load Balancers is `true` ,
-       * and cannot be changed.
+       * and can't be changed.
        *
        * The following attributes are supported by both Application Load Balancers and Network Load
        * Balancers:
@@ -1158,6 +1293,8 @@ public open class CfnLoadBalancer(
        * It is set to `false` for internet-facing load balancers and `true` for internal load
        * balancers, preventing unintended access to your internal load balancer through an internet
        * gateway.
+       * * `zonal_shift.config.enabled` - Indicates whether zonal shift is enabled. The possible
+       * values are `true` and `false` . The default is `false` .
        *
        * The following attributes are supported by only Application Load Balancers:
        *
@@ -1248,7 +1385,7 @@ public open class CfnLoadBalancer(
        * * `load_balancing.cross_zone.enabled` - Indicates whether cross-zone load balancing is
        * enabled. The possible values are `true` and `false` . The default for Network Load Balancers
        * and Gateway Load Balancers is `false` . The default for Application Load Balancers is `true` ,
-       * and cannot be changed.
+       * and can't be changed.
        *
        * The following attributes are supported by both Application Load Balancers and Network Load
        * Balancers:
@@ -1265,6 +1402,8 @@ public open class CfnLoadBalancer(
        * It is set to `false` for internet-facing load balancers and `true` for internal load
        * balancers, preventing unintended access to your internal load balancer through an internet
        * gateway.
+       * * `zonal_shift.config.enabled` - Indicates whether zonal shift is enabled. The possible
+       * values are `true` and `false` . The default is `false` .
        *
        * The following attributes are supported by only Application Load Balancers:
        *
@@ -1356,6 +1495,91 @@ public open class CfnLoadBalancer(
   }
 
   /**
+   * The minimum capacity for a load balancer.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
+   * MinimumLoadBalancerCapacityProperty minimumLoadBalancerCapacityProperty =
+   * MinimumLoadBalancerCapacityProperty.builder()
+   * .capacityUnits(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity.html)
+   */
+  public interface MinimumLoadBalancerCapacityProperty {
+    /**
+     * The number of capacity units.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity-capacityunits)
+     */
+    public fun capacityUnits(): Number
+
+    /**
+     * A builder for [MinimumLoadBalancerCapacityProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param capacityUnits The number of capacity units. 
+       */
+      public fun capacityUnits(capacityUnits: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.MinimumLoadBalancerCapacityProperty.Builder
+          =
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.MinimumLoadBalancerCapacityProperty.builder()
+
+      /**
+       * @param capacityUnits The number of capacity units. 
+       */
+      override fun capacityUnits(capacityUnits: Number) {
+        cdkBuilder.capacityUnits(capacityUnits)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.MinimumLoadBalancerCapacityProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.MinimumLoadBalancerCapacityProperty,
+    ) : CdkObject(cdkObject),
+        MinimumLoadBalancerCapacityProperty {
+      /**
+       * The number of capacity units.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity-capacityunits)
+       */
+      override fun capacityUnits(): Number = unwrap(this).getCapacityUnits()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MinimumLoadBalancerCapacityProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.MinimumLoadBalancerCapacityProperty):
+          MinimumLoadBalancerCapacityProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MinimumLoadBalancerCapacityProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MinimumLoadBalancerCapacityProperty):
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.MinimumLoadBalancerCapacityProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancer.MinimumLoadBalancerCapacityProperty
+    }
+  }
+
+  /**
    * Specifies a subnet for a load balancer.
    *
    * Example:
@@ -1370,6 +1594,7 @@ public open class CfnLoadBalancer(
    * .allocationId("allocationId")
    * .iPv6Address("iPv6Address")
    * .privateIPv4Address("privateIPv4Address")
+   * .sourceNatIpv6Prefix("sourceNatIpv6Prefix")
    * .build();
    * ```
    *
@@ -1399,6 +1624,16 @@ public open class CfnLoadBalancer(
     public fun privateIPv4Address(): String? = unwrap(this).getPrivateIPv4Address()
 
     /**
+     * [Network Load Balancers with UDP listeners] The IPv6 prefix to use for source NAT.
+     *
+     * Specify an IPv6 prefix (/80 netmask) from the subnet CIDR block or `auto_assigned` to use an
+     * IPv6 prefix selected at random from the subnet CIDR block.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-sourcenatipv6prefix)
+     */
+    public fun sourceNatIpv6Prefix(): String? = unwrap(this).getSourceNatIpv6Prefix()
+
+    /**
      * The ID of the subnet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-subnetid)
@@ -1426,6 +1661,14 @@ public open class CfnLoadBalancer(
        * load balancer.
        */
       public fun privateIPv4Address(privateIPv4Address: String)
+
+      /**
+       * @param sourceNatIpv6Prefix [Network Load Balancers with UDP listeners] The IPv6 prefix to
+       * use for source NAT.
+       * Specify an IPv6 prefix (/80 netmask) from the subnet CIDR block or `auto_assigned` to use
+       * an IPv6 prefix selected at random from the subnet CIDR block.
+       */
+      public fun sourceNatIpv6Prefix(sourceNatIpv6Prefix: String)
 
       /**
        * @param subnetId The ID of the subnet. 
@@ -1460,6 +1703,16 @@ public open class CfnLoadBalancer(
        */
       override fun privateIPv4Address(privateIPv4Address: String) {
         cdkBuilder.privateIPv4Address(privateIPv4Address)
+      }
+
+      /**
+       * @param sourceNatIpv6Prefix [Network Load Balancers with UDP listeners] The IPv6 prefix to
+       * use for source NAT.
+       * Specify an IPv6 prefix (/80 netmask) from the subnet CIDR block or `auto_assigned` to use
+       * an IPv6 prefix selected at random from the subnet CIDR block.
+       */
+      override fun sourceNatIpv6Prefix(sourceNatIpv6Prefix: String) {
+        cdkBuilder.sourceNatIpv6Prefix(sourceNatIpv6Prefix)
       }
 
       /**
@@ -1499,6 +1752,16 @@ public open class CfnLoadBalancer(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-privateipv4address)
        */
       override fun privateIPv4Address(): String? = unwrap(this).getPrivateIPv4Address()
+
+      /**
+       * [Network Load Balancers with UDP listeners] The IPv6 prefix to use for source NAT.
+       *
+       * Specify an IPv6 prefix (/80 netmask) from the subnet CIDR block or `auto_assigned` to use
+       * an IPv6 prefix selected at random from the subnet CIDR block.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-loadbalancer-subnetmapping.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmapping-sourcenatipv6prefix)
+       */
+      override fun sourceNatIpv6Prefix(): String? = unwrap(this).getSourceNatIpv6Prefix()
 
       /**
        * The ID of the subnet.

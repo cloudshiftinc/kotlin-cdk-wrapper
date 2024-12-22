@@ -1144,9 +1144,9 @@ public open class CfnAgent(
    * Contains details about the OpenAPI schema for the action group.
    *
    * For more information, see [Action group OpenAPI
-   * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) . You can
-   * either include the schema directly in the `payload` field or you can upload it to an S3 bucket and
-   * specify the S3 bucket location in the `s3` field.
+   * schemas](https://docs.aws.amazon.com//bedrock/latest/userguide/agents-api-schema.html) . You can
+   * either include the schema directly in the payload field or you can upload it to an S3 bucket and
+   * specify the S3 bucket location in the s3 field.
    *
    * Example:
    *
@@ -1169,18 +1169,12 @@ public open class CfnAgent(
     /**
      * The JSON or YAML-formatted payload defining the OpenAPI schema for the action group.
      *
-     * For more information, see [Action group OpenAPI
-     * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-apischema.html#cfn-bedrock-agent-apischema-payload)
      */
     public fun payload(): String? = unwrap(this).getPayload()
 
     /**
      * Contains details about the S3 object containing the OpenAPI schema for the action group.
-     *
-     * For more information, see [Action group OpenAPI
-     * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-apischema.html#cfn-bedrock-agent-apischema-s3)
      */
@@ -1194,32 +1188,24 @@ public open class CfnAgent(
       /**
        * @param payload The JSON or YAML-formatted payload defining the OpenAPI schema for the
        * action group.
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       public fun payload(payload: String)
 
       /**
        * @param s3 Contains details about the S3 object containing the OpenAPI schema for the action
        * group.
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       public fun s3(s3: IResolvable)
 
       /**
        * @param s3 Contains details about the S3 object containing the OpenAPI schema for the action
        * group.
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       public fun s3(s3: S3IdentifierProperty)
 
       /**
        * @param s3 Contains details about the S3 object containing the OpenAPI schema for the action
        * group.
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d3709b0a16a0ad1e7693d74f1a146d5aebd11b63fb28f127c1b77deddbd4e974")
@@ -1234,8 +1220,6 @@ public open class CfnAgent(
       /**
        * @param payload The JSON or YAML-formatted payload defining the OpenAPI schema for the
        * action group.
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       override fun payload(payload: String) {
         cdkBuilder.payload(payload)
@@ -1244,8 +1228,6 @@ public open class CfnAgent(
       /**
        * @param s3 Contains details about the S3 object containing the OpenAPI schema for the action
        * group.
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       override fun s3(s3: IResolvable) {
         cdkBuilder.s3(s3.let(IResolvable.Companion::unwrap))
@@ -1254,8 +1236,6 @@ public open class CfnAgent(
       /**
        * @param s3 Contains details about the S3 object containing the OpenAPI schema for the action
        * group.
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       override fun s3(s3: S3IdentifierProperty) {
         cdkBuilder.s3(s3.let(S3IdentifierProperty.Companion::unwrap))
@@ -1264,8 +1244,6 @@ public open class CfnAgent(
       /**
        * @param s3 Contains details about the S3 object containing the OpenAPI schema for the action
        * group.
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("d3709b0a16a0ad1e7693d74f1a146d5aebd11b63fb28f127c1b77deddbd4e974")
@@ -1283,18 +1261,12 @@ public open class CfnAgent(
       /**
        * The JSON or YAML-formatted payload defining the OpenAPI schema for the action group.
        *
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-apischema.html#cfn-bedrock-agent-apischema-payload)
        */
       override fun payload(): String? = unwrap(this).getPayload()
 
       /**
        * Contains details about the S3 object containing the OpenAPI schema for the action group.
-       *
-       * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-apischema.html#cfn-bedrock-agent-apischema-s3)
        */
@@ -1339,8 +1311,8 @@ public open class CfnAgent(
    */
   public interface ActionGroupExecutorProperty {
     /**
-     * To return the action group invocation results directly in the `InvokeAgent` response, specify
-     * `RETURN_CONTROL` .
+     * To return the action group invocation results directly in the `InvokeInlineAgent` response,
+     * specify `RETURN_CONTROL` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-actiongroupexecutor.html#cfn-bedrock-agent-actiongroupexecutor-customcontrol)
      */
@@ -1361,7 +1333,7 @@ public open class CfnAgent(
     public interface Builder {
       /**
        * @param customControl To return the action group invocation results directly in the
-       * `InvokeAgent` response, specify `RETURN_CONTROL` .
+       * `InvokeInlineAgent` response, specify `RETURN_CONTROL` .
        */
       public fun customControl(customControl: String)
 
@@ -1379,7 +1351,7 @@ public open class CfnAgent(
 
       /**
        * @param customControl To return the action group invocation results directly in the
-       * `InvokeAgent` response, specify `RETURN_CONTROL` .
+       * `InvokeInlineAgent` response, specify `RETURN_CONTROL` .
        */
       override fun customControl(customControl: String) {
         cdkBuilder.customControl(customControl)
@@ -1403,7 +1375,7 @@ public open class CfnAgent(
     ) : CdkObject(cdkObject),
         ActionGroupExecutorProperty {
       /**
-       * To return the action group invocation results directly in the `InvokeAgent` response,
+       * To return the action group invocation results directly in the `InvokeInlineAgent` response,
        * specify `RETURN_CONTROL` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-actiongroupexecutor.html#cfn-bedrock-agent-actiongroupexecutor-customcontrol)
@@ -1438,7 +1410,7 @@ public open class CfnAgent(
   }
 
   /**
-   * Contains details about an action group.
+   * Contains details of the inline agent's action group.
    *
    * Example:
    *
@@ -1515,23 +1487,22 @@ public open class CfnAgent(
      * group or the JSON or YAML-formatted payload defining the schema.
      *
      * For more information, see [Action group OpenAPI
-     * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
+     * schemas](https://docs.aws.amazon.com//bedrock/latest/userguide/agents-api-schema.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-apischema)
      */
     public fun apiSchema(): Any? = unwrap(this).getApiSchema()
 
     /**
-     * The description of the action group.
+     * A description of the action group.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-description)
      */
     public fun description(): String? = unwrap(this).getDescription()
 
     /**
-     * Defines functions that each define parameters that the agent needs to invoke from the user.
-     *
-     * Each function represents an action in an action group.
+     * Contains details about the function schema for the action group or the JSON or YAML-formatted
+     * payload defining the schema.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-functionschema)
      */
@@ -1610,7 +1581,7 @@ public open class CfnAgent(
        * @param apiSchema Contains either details about the S3 object containing the OpenAPI schema
        * for the action group or the JSON or YAML-formatted payload defining the schema.
        * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
+       * schemas](https://docs.aws.amazon.com//bedrock/latest/userguide/agents-api-schema.html) .
        */
       public fun apiSchema(apiSchema: IResolvable)
 
@@ -1618,7 +1589,7 @@ public open class CfnAgent(
        * @param apiSchema Contains either details about the S3 object containing the OpenAPI schema
        * for the action group or the JSON or YAML-formatted payload defining the schema.
        * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
+       * schemas](https://docs.aws.amazon.com//bedrock/latest/userguide/agents-api-schema.html) .
        */
       public fun apiSchema(apiSchema: APISchemaProperty)
 
@@ -1626,35 +1597,32 @@ public open class CfnAgent(
        * @param apiSchema Contains either details about the S3 object containing the OpenAPI schema
        * for the action group or the JSON or YAML-formatted payload defining the schema.
        * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
+       * schemas](https://docs.aws.amazon.com//bedrock/latest/userguide/agents-api-schema.html) .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("be49a66ceb426740b8b0779f6110b585a64c809f1c0de64db0220e4424b031e9")
       public fun apiSchema(apiSchema: APISchemaProperty.Builder.() -> Unit)
 
       /**
-       * @param description The description of the action group.
+       * @param description A description of the action group.
        */
       public fun description(description: String)
 
       /**
-       * @param functionSchema Defines functions that each define parameters that the agent needs to
-       * invoke from the user.
-       * Each function represents an action in an action group.
+       * @param functionSchema Contains details about the function schema for the action group or
+       * the JSON or YAML-formatted payload defining the schema.
        */
       public fun functionSchema(functionSchema: IResolvable)
 
       /**
-       * @param functionSchema Defines functions that each define parameters that the agent needs to
-       * invoke from the user.
-       * Each function represents an action in an action group.
+       * @param functionSchema Contains details about the function schema for the action group or
+       * the JSON or YAML-formatted payload defining the schema.
        */
       public fun functionSchema(functionSchema: FunctionSchemaProperty)
 
       /**
-       * @param functionSchema Defines functions that each define parameters that the agent needs to
-       * invoke from the user.
-       * Each function represents an action in an action group.
+       * @param functionSchema Contains details about the function schema for the action group or
+       * the JSON or YAML-formatted payload defining the schema.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ae6a932602ba614adb804ec413d8870487556f1dcdb132b461d7ab5eee1a9c6")
@@ -1743,7 +1711,7 @@ public open class CfnAgent(
        * @param apiSchema Contains either details about the S3 object containing the OpenAPI schema
        * for the action group or the JSON or YAML-formatted payload defining the schema.
        * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
+       * schemas](https://docs.aws.amazon.com//bedrock/latest/userguide/agents-api-schema.html) .
        */
       override fun apiSchema(apiSchema: IResolvable) {
         cdkBuilder.apiSchema(apiSchema.let(IResolvable.Companion::unwrap))
@@ -1753,7 +1721,7 @@ public open class CfnAgent(
        * @param apiSchema Contains either details about the S3 object containing the OpenAPI schema
        * for the action group or the JSON or YAML-formatted payload defining the schema.
        * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
+       * schemas](https://docs.aws.amazon.com//bedrock/latest/userguide/agents-api-schema.html) .
        */
       override fun apiSchema(apiSchema: APISchemaProperty) {
         cdkBuilder.apiSchema(apiSchema.let(APISchemaProperty.Companion::unwrap))
@@ -1763,7 +1731,7 @@ public open class CfnAgent(
        * @param apiSchema Contains either details about the S3 object containing the OpenAPI schema
        * for the action group or the JSON or YAML-formatted payload defining the schema.
        * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
+       * schemas](https://docs.aws.amazon.com//bedrock/latest/userguide/agents-api-schema.html) .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("be49a66ceb426740b8b0779f6110b585a64c809f1c0de64db0220e4424b031e9")
@@ -1771,34 +1739,31 @@ public open class CfnAgent(
           apiSchema(APISchemaProperty(apiSchema))
 
       /**
-       * @param description The description of the action group.
+       * @param description A description of the action group.
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
       }
 
       /**
-       * @param functionSchema Defines functions that each define parameters that the agent needs to
-       * invoke from the user.
-       * Each function represents an action in an action group.
+       * @param functionSchema Contains details about the function schema for the action group or
+       * the JSON or YAML-formatted payload defining the schema.
        */
       override fun functionSchema(functionSchema: IResolvable) {
         cdkBuilder.functionSchema(functionSchema.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param functionSchema Defines functions that each define parameters that the agent needs to
-       * invoke from the user.
-       * Each function represents an action in an action group.
+       * @param functionSchema Contains details about the function schema for the action group or
+       * the JSON or YAML-formatted payload defining the schema.
        */
       override fun functionSchema(functionSchema: FunctionSchemaProperty) {
         cdkBuilder.functionSchema(functionSchema.let(FunctionSchemaProperty.Companion::unwrap))
       }
 
       /**
-       * @param functionSchema Defines functions that each define parameters that the agent needs to
-       * invoke from the user.
-       * Each function represents an action in an action group.
+       * @param functionSchema Contains details about the function schema for the action group or
+       * the JSON or YAML-formatted payload defining the schema.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("8ae6a932602ba614adb804ec413d8870487556f1dcdb132b461d7ab5eee1a9c6")
@@ -1877,23 +1842,22 @@ public open class CfnAgent(
        * group or the JSON or YAML-formatted payload defining the schema.
        *
        * For more information, see [Action group OpenAPI
-       * schemas](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-api-schema.html) .
+       * schemas](https://docs.aws.amazon.com//bedrock/latest/userguide/agents-api-schema.html) .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-apischema)
        */
       override fun apiSchema(): Any? = unwrap(this).getApiSchema()
 
       /**
-       * The description of the action group.
+       * A description of the action group.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-description)
        */
       override fun description(): String? = unwrap(this).getDescription()
 
       /**
-       * Defines functions that each define parameters that the agent needs to invoke from the user.
-       *
-       * Each function represents an action in an action group.
+       * Contains details about the function schema for the action group or the JSON or
+       * YAML-formatted payload defining the schema.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-agent-agentactiongroup.html#cfn-bedrock-agent-agentactiongroup-functionschema)
        */
@@ -2270,22 +2234,8 @@ public open class CfnAgent(
   }
 
   /**
-   * Defines functions that each define parameters that the agent needs to invoke from the user.
-   *
-   * Each function represents an action in an action group.
-   *
-   * This data type is used in the following API operations:
-   *
-   * * [CreateAgentActionGroup
-   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_RequestSyntax)
-   * * [CreateAgentActionGroup
-   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_ResponseSyntax)
-   * * [UpdateAgentActionGroup
-   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_RequestSyntax)
-   * * [UpdateAgentActionGroup
-   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_ResponseSyntax)
-   * * [GetAgentActionGroup
-   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_GetAgentActionGroup.html#API_agent_GetAgentActionGroup_ResponseSyntax)
+   * Contains details about the function schema for the action group or the JSON or YAML-formatted
+   * payload defining the schema.
    *
    * Example:
    *
@@ -2813,19 +2763,6 @@ public open class CfnAgent(
   /**
    * Contains details about a parameter in a function for an action group.
    *
-   * This data type is used in the following API operations:
-   *
-   * * [CreateAgentActionGroup
-   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_RequestSyntax)
-   * * [CreateAgentActionGroup
-   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateAgentActionGroup.html#API_agent_CreateAgentActionGroup_ResponseSyntax)
-   * * [UpdateAgentActionGroup
-   * request](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_RequestSyntax)
-   * * [UpdateAgentActionGroup
-   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateAgentActionGroup.html#API_agent_UpdateAgentActionGroup_ResponseSyntax)
-   * * [GetAgentActionGroup
-   * response](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_GetAgentActionGroup.html#API_agent_GetAgentActionGroup_ResponseSyntax)
-   *
    * Example:
    *
    * ```
@@ -3062,7 +2999,8 @@ public open class CfnAgent(
     public fun promptCreationMode(): String? = unwrap(this).getPromptCreationMode()
 
     /**
-     * Specifies whether to allow the agent to carry out the step specified in the `promptType` .
+     * Specifies whether to allow the inline agent to carry out the step specified in the
+     * `promptType` .
      *
      * If you set this value to `DISABLED` , the agent skips that step. The default state for each
      * `promptType` is as follows.
@@ -3147,8 +3085,8 @@ public open class CfnAgent(
       public fun promptCreationMode(promptCreationMode: String)
 
       /**
-       * @param promptState Specifies whether to allow the agent to carry out the step specified in
-       * the `promptType` .
+       * @param promptState Specifies whether to allow the inline agent to carry out the step
+       * specified in the `promptType` .
        * If you set this value to `DISABLED` , the agent skips that step. The default state for each
        * `promptType` is as follows.
        *
@@ -3240,8 +3178,8 @@ public open class CfnAgent(
       }
 
       /**
-       * @param promptState Specifies whether to allow the agent to carry out the step specified in
-       * the `promptType` .
+       * @param promptState Specifies whether to allow the inline agent to carry out the step
+       * specified in the `promptType` .
        * If you set this value to `DISABLED` , the agent skips that step. The default state for each
        * `promptType` is as follows.
        *
@@ -3319,7 +3257,8 @@ public open class CfnAgent(
       override fun promptCreationMode(): String? = unwrap(this).getPromptCreationMode()
 
       /**
-       * Specifies whether to allow the agent to carry out the step specified in the `promptType` .
+       * Specifies whether to allow the inline agent to carry out the step specified in the
+       * `promptType` .
        *
        * If you set this value to `DISABLED` , the agent skips that step. The default state for each
        * `promptType` is as follows.

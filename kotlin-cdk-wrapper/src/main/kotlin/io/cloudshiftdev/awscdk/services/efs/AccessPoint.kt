@@ -67,6 +67,16 @@ public open class AccessPoint(
   @CdkDslMarker
   public interface Builder {
     /**
+     * The opaque string specified in the request to ensure idempotent creation.
+     *
+     * Default: - No client token
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html#cfn-efs-accesspoint-clienttoken)
+     * @param clientToken The opaque string specified in the request to ensure idempotent creation. 
+     */
+    public fun clientToken(clientToken: String)
+
+    /**
      * Specifies the POSIX IDs and permissions to apply when creating the access point's root
      * directory.
      *
@@ -163,6 +173,18 @@ public open class AccessPoint(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.efs.AccessPoint.Builder =
         software.amazon.awscdk.services.efs.AccessPoint.Builder.create(scope, id)
+
+    /**
+     * The opaque string specified in the request to ensure idempotent creation.
+     *
+     * Default: - No client token
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html#cfn-efs-accesspoint-clienttoken)
+     * @param clientToken The opaque string specified in the request to ensure idempotent creation. 
+     */
+    override fun clientToken(clientToken: String) {
+      cdkBuilder.clientToken(clientToken)
+    }
 
     /**
      * Specifies the POSIX IDs and permissions to apply when creating the access point's root

@@ -19,14 +19,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.kinesisfirehose.alpha.DeliveryStream;
- * DeliveryStream stream;
- * Topic topic = new Topic(this, "Topic");
- * Subscription.Builder.create(this, "Subscription")
- * .topic(topic)
- * .endpoint(stream.getDeliveryStreamArn())
- * .protocol(SubscriptionProtocol.FIREHOSE)
- * .subscriptionRoleArn("SAMPLE_ARN")
+ * import io.cloudshiftdev.awscdk.services.sns.*;
+ * Topic topic = new Topic(this, "MyTopic");
+ * TopicRule topicRule = TopicRule.Builder.create(this, "TopicRule")
+ * .sql(IotSql.fromStringAsVer20160323("SELECT topic(2) as device_id, year, month, day FROM
+ * 'device/+/data'"))
+ * .actions(List.of(
+ * SnsTopicAction.Builder.create(topic)
+ * .messageFormat(SnsActionMessageFormat.JSON)
+ * .build()))
  * .build();
  * ```
  */

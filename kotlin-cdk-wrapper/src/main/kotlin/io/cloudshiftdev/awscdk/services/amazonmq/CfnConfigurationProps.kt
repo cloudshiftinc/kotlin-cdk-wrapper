@@ -19,11 +19,11 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.amazonmq.*;
  * CfnConfigurationProps cfnConfigurationProps = CfnConfigurationProps.builder()
- * .data("data")
  * .engineType("engineType")
  * .name("name")
  * // the properties below are optional
  * .authenticationStrategy("authenticationStrategy")
+ * .data("data")
  * .description("description")
  * .engineVersion("engineVersion")
  * .tags(List.of(TagsEntryProperty.builder()
@@ -50,7 +50,7 @@ public interface CfnConfigurationProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-data)
    */
-  public fun `data`(): String
+  public fun `data`(): String? = unwrap(this).getData()
 
   /**
    * The description of the configuration.
@@ -109,7 +109,7 @@ public interface CfnConfigurationProps {
     public fun authenticationStrategy(authenticationStrategy: String)
 
     /**
-     * @param data The base64-encoded XML configuration. 
+     * @param data The base64-encoded XML configuration.
      */
     public fun `data`(`data`: String)
 
@@ -163,7 +163,7 @@ public interface CfnConfigurationProps {
     }
 
     /**
-     * @param data The base64-encoded XML configuration. 
+     * @param data The base64-encoded XML configuration.
      */
     override fun `data`(`data`: String) {
       cdkBuilder.`data`(`data`)
@@ -237,7 +237,7 @@ public interface CfnConfigurationProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-amazonmq-configuration.html#cfn-amazonmq-configuration-data)
      */
-    override fun `data`(): String = unwrap(this).getData()
+    override fun `data`(): String? = unwrap(this).getData()
 
     /**
      * The description of the configuration.

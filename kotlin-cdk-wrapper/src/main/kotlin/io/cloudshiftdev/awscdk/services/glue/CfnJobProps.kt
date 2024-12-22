@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -44,6 +45,8 @@ import kotlin.jvm.JvmName
  * .maxConcurrentRuns(123)
  * .build())
  * .glueVersion("glueVersion")
+ * .jobMode("jobMode")
+ * .jobRunQueuingEnabled(false)
  * .logUri("logUri")
  * .maintenanceWindow("maintenanceWindow")
  * .maxCapacity(123)
@@ -152,6 +155,32 @@ public interface CfnJobProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-glueversion)
    */
   public fun glueVersion(): String? = unwrap(this).getGlueVersion()
+
+  /**
+   * A mode that describes how a job was created. Valid values are:.
+   *
+   * * `SCRIPT` - The job was created using the AWS Glue Studio script editor.
+   * * `VISUAL` - The job was created using the AWS Glue Studio visual editor.
+   * * `NOTEBOOK` - The job was created using an interactive sessions notebook.
+   *
+   * When the `JobMode` field is missing or null, `SCRIPT` is assigned as the default value.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobmode)
+   */
+  public fun jobMode(): String? = unwrap(this).getJobMode()
+
+  /**
+   * Specifies whether job run queuing is enabled for the job runs for this job.
+   *
+   * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+   * the job runs will not be considered for queueing.
+   *
+   * If this field does not match the value set in the job run, then the value from the job run
+   * field will be used.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobrunqueuingenabled)
+   */
+  public fun jobRunQueuingEnabled(): Any? = unwrap(this).getJobRunQueuingEnabled()
 
   /**
    * This field is reserved for future use.
@@ -411,6 +440,38 @@ public interface CfnJobProps {
      * available.
      */
     public fun glueVersion(glueVersion: String)
+
+    /**
+     * @param jobMode A mode that describes how a job was created. Valid values are:.
+     * * `SCRIPT` - The job was created using the AWS Glue Studio script editor.
+     * * `VISUAL` - The job was created using the AWS Glue Studio visual editor.
+     * * `NOTEBOOK` - The job was created using an interactive sessions notebook.
+     *
+     * When the `JobMode` field is missing or null, `SCRIPT` is assigned as the default value.
+     */
+    public fun jobMode(jobMode: String)
+
+    /**
+     * @param jobRunQueuingEnabled Specifies whether job run queuing is enabled for the job runs for
+     * this job.
+     * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+     * the job runs will not be considered for queueing.
+     *
+     * If this field does not match the value set in the job run, then the value from the job run
+     * field will be used.
+     */
+    public fun jobRunQueuingEnabled(jobRunQueuingEnabled: Boolean)
+
+    /**
+     * @param jobRunQueuingEnabled Specifies whether job run queuing is enabled for the job runs for
+     * this job.
+     * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+     * the job runs will not be considered for queueing.
+     *
+     * If this field does not match the value set in the job run, then the value from the job run
+     * field will be used.
+     */
+    public fun jobRunQueuingEnabled(jobRunQueuingEnabled: IResolvable)
 
     /**
      * @param logUri This field is reserved for future use.
@@ -685,6 +746,44 @@ public interface CfnJobProps {
     }
 
     /**
+     * @param jobMode A mode that describes how a job was created. Valid values are:.
+     * * `SCRIPT` - The job was created using the AWS Glue Studio script editor.
+     * * `VISUAL` - The job was created using the AWS Glue Studio visual editor.
+     * * `NOTEBOOK` - The job was created using an interactive sessions notebook.
+     *
+     * When the `JobMode` field is missing or null, `SCRIPT` is assigned as the default value.
+     */
+    override fun jobMode(jobMode: String) {
+      cdkBuilder.jobMode(jobMode)
+    }
+
+    /**
+     * @param jobRunQueuingEnabled Specifies whether job run queuing is enabled for the job runs for
+     * this job.
+     * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+     * the job runs will not be considered for queueing.
+     *
+     * If this field does not match the value set in the job run, then the value from the job run
+     * field will be used.
+     */
+    override fun jobRunQueuingEnabled(jobRunQueuingEnabled: Boolean) {
+      cdkBuilder.jobRunQueuingEnabled(jobRunQueuingEnabled)
+    }
+
+    /**
+     * @param jobRunQueuingEnabled Specifies whether job run queuing is enabled for the job runs for
+     * this job.
+     * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+     * the job runs will not be considered for queueing.
+     *
+     * If this field does not match the value set in the job run, then the value from the job run
+     * field will be used.
+     */
+    override fun jobRunQueuingEnabled(jobRunQueuingEnabled: IResolvable) {
+      cdkBuilder.jobRunQueuingEnabled(jobRunQueuingEnabled.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * @param logUri This field is reserved for future use.
      */
     override fun logUri(logUri: String) {
@@ -942,6 +1041,32 @@ public interface CfnJobProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-glueversion)
      */
     override fun glueVersion(): String? = unwrap(this).getGlueVersion()
+
+    /**
+     * A mode that describes how a job was created. Valid values are:.
+     *
+     * * `SCRIPT` - The job was created using the AWS Glue Studio script editor.
+     * * `VISUAL` - The job was created using the AWS Glue Studio visual editor.
+     * * `NOTEBOOK` - The job was created using an interactive sessions notebook.
+     *
+     * When the `JobMode` field is missing or null, `SCRIPT` is assigned as the default value.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobmode)
+     */
+    override fun jobMode(): String? = unwrap(this).getJobMode()
+
+    /**
+     * Specifies whether job run queuing is enabled for the job runs for this job.
+     *
+     * A value of true means job run queuing is enabled for the job runs. If false or not populated,
+     * the job runs will not be considered for queueing.
+     *
+     * If this field does not match the value set in the job run, then the value from the job run
+     * field will be used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-job.html#cfn-glue-job-jobrunqueuingenabled)
+     */
+    override fun jobRunQueuingEnabled(): Any? = unwrap(this).getJobRunQueuingEnabled()
 
     /**
      * This field is reserved for future use.

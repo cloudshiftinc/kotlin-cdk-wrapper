@@ -54,6 +54,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build()))
  * .onStartDeepHealthChecks(List.of("onStartDeepHealthChecks"))
+ * .overrideVpcConfig(VpcConfigProperty.builder()
+ * .securityGroupIds(List.of("securityGroupIds"))
+ * .subnets(List.of("subnets"))
+ * .build())
  * .threadsPerCore(123)
  * .build()))
  * // the properties below are optional
@@ -776,6 +780,10 @@ public open class CfnCluster(
    * .build())
    * .build()))
    * .onStartDeepHealthChecks(List.of("onStartDeepHealthChecks"))
+   * .overrideVpcConfig(VpcConfigProperty.builder()
+   * .securityGroupIds(List.of("securityGroupIds"))
+   * .subnets(List.of("subnets"))
+   * .build())
    * .threadsPerCore(123)
    * .build();
    * ```
@@ -845,6 +853,14 @@ public open class CfnCluster(
      */
     public fun onStartDeepHealthChecks(): List<String> = unwrap(this).getOnStartDeepHealthChecks()
         ?: emptyList()
+
+    /**
+     * When specified, overrides the subnet and security group configuration for a specific instance
+     * group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-overridevpcconfig)
+     */
+    public fun overrideVpcConfig(): Any? = unwrap(this).getOverrideVpcConfig()
 
     /**
      * The number of threads per CPU core you specified under `CreateCluster` .
@@ -936,6 +952,26 @@ public open class CfnCluster(
        * underlying hardware and infrastructure components.
        */
       public fun onStartDeepHealthChecks(vararg onStartDeepHealthChecks: String)
+
+      /**
+       * @param overrideVpcConfig When specified, overrides the subnet and security group
+       * configuration for a specific instance group.
+       */
+      public fun overrideVpcConfig(overrideVpcConfig: IResolvable)
+
+      /**
+       * @param overrideVpcConfig When specified, overrides the subnet and security group
+       * configuration for a specific instance group.
+       */
+      public fun overrideVpcConfig(overrideVpcConfig: VpcConfigProperty)
+
+      /**
+       * @param overrideVpcConfig When specified, overrides the subnet and security group
+       * configuration for a specific instance group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b416f9fd133f1986ef43fa82905739c2ebe85b30fdce1d407dbfd2f730f3cb5")
+      public fun overrideVpcConfig(overrideVpcConfig: VpcConfigProperty.Builder.() -> Unit)
 
       /**
        * @param threadsPerCore The number of threads per CPU core you specified under
@@ -1054,6 +1090,31 @@ public open class CfnCluster(
           onStartDeepHealthChecks(onStartDeepHealthChecks.toList())
 
       /**
+       * @param overrideVpcConfig When specified, overrides the subnet and security group
+       * configuration for a specific instance group.
+       */
+      override fun overrideVpcConfig(overrideVpcConfig: IResolvable) {
+        cdkBuilder.overrideVpcConfig(overrideVpcConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param overrideVpcConfig When specified, overrides the subnet and security group
+       * configuration for a specific instance group.
+       */
+      override fun overrideVpcConfig(overrideVpcConfig: VpcConfigProperty) {
+        cdkBuilder.overrideVpcConfig(overrideVpcConfig.let(VpcConfigProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param overrideVpcConfig When specified, overrides the subnet and security group
+       * configuration for a specific instance group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9b416f9fd133f1986ef43fa82905739c2ebe85b30fdce1d407dbfd2f730f3cb5")
+      override fun overrideVpcConfig(overrideVpcConfig: VpcConfigProperty.Builder.() -> Unit): Unit
+          = overrideVpcConfig(VpcConfigProperty(overrideVpcConfig))
+
+      /**
        * @param threadsPerCore The number of threads per CPU core you specified under
        * `CreateCluster` .
        */
@@ -1132,6 +1193,14 @@ public open class CfnCluster(
        */
       override fun onStartDeepHealthChecks(): List<String> =
           unwrap(this).getOnStartDeepHealthChecks() ?: emptyList()
+
+      /**
+       * When specified, overrides the subnet and security group configuration for a specific
+       * instance group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-cluster-clusterinstancegroup.html#cfn-sagemaker-cluster-clusterinstancegroup-overridevpcconfig)
+       */
+      override fun overrideVpcConfig(): Any? = unwrap(this).getOverrideVpcConfig()
 
       /**
        * The number of threads per CPU core you specified under `CreateCluster` .

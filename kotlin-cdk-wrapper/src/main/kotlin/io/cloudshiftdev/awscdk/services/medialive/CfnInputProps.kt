@@ -24,15 +24,28 @@ import kotlin.jvm.JvmName
  * Object tags;
  * CfnInputProps cfnInputProps = CfnInputProps.builder()
  * .destinations(List.of(InputDestinationRequestProperty.builder()
+ * .network("network")
+ * .networkRoutes(List.of(InputRequestDestinationRouteProperty.builder()
+ * .cidr("cidr")
+ * .gateway("gateway")
+ * .build()))
+ * .staticIpAddress("staticIpAddress")
  * .streamName("streamName")
  * .build()))
  * .inputDevices(List.of(InputDeviceSettingsProperty.builder()
  * .id("id")
  * .build()))
+ * .inputNetworkLocation("inputNetworkLocation")
  * .inputSecurityGroups(List.of("inputSecurityGroups"))
  * .mediaConnectFlows(List.of(MediaConnectFlowRequestProperty.builder()
  * .flowArn("flowArn")
  * .build()))
+ * .multicastSettings(MulticastSettingsCreateRequestProperty.builder()
+ * .sources(List.of(MulticastSourceCreateRequestProperty.builder()
+ * .sourceIp("sourceIp")
+ * .url("url")
+ * .build()))
+ * .build())
  * .name("name")
  * .roleArn("roleArn")
  * .sources(List.of(InputSourceRequestProperty.builder()
@@ -79,6 +92,11 @@ public interface CfnInputProps {
   public fun inputDevices(): Any? = unwrap(this).getInputDevices()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-inputnetworklocation)
+   */
+  public fun inputNetworkLocation(): String? = unwrap(this).getInputNetworkLocation()
+
+  /**
    * The list of input security groups (referenced by IDs) to attach to the input if the input is a
    * push type.
    *
@@ -93,6 +111,11 @@ public interface CfnInputProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-mediaconnectflows)
    */
   public fun mediaConnectFlows(): Any? = unwrap(this).getMediaConnectFlows()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-multicastsettings)
+   */
+  public fun multicastSettings(): Any? = unwrap(this).getMulticastSettings()
 
   /**
    * A name for the input.
@@ -181,6 +204,11 @@ public interface CfnInputProps {
     public fun inputDevices(vararg inputDevices: Any)
 
     /**
+     * @param inputNetworkLocation the value to be set.
+     */
+    public fun inputNetworkLocation(inputNetworkLocation: String)
+
+    /**
      * @param inputSecurityGroups The list of input security groups (referenced by IDs) to attach to
      * the input if the input is a push type.
      */
@@ -206,6 +234,24 @@ public interface CfnInputProps {
      * @param mediaConnectFlows Settings that apply only if the input is a MediaConnect input.
      */
     public fun mediaConnectFlows(vararg mediaConnectFlows: Any)
+
+    /**
+     * @param multicastSettings the value to be set.
+     */
+    public fun multicastSettings(multicastSettings: IResolvable)
+
+    /**
+     * @param multicastSettings the value to be set.
+     */
+    public fun multicastSettings(multicastSettings: CfnInput.MulticastSettingsCreateRequestProperty)
+
+    /**
+     * @param multicastSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("75e7f49848501bf93f2120e10b20932265bc0d824fca3406e1bacf4f118496a1")
+    public
+        fun multicastSettings(multicastSettings: CfnInput.MulticastSettingsCreateRequestProperty.Builder.() -> Unit)
 
     /**
      * @param name A name for the input.
@@ -326,6 +372,13 @@ public interface CfnInputProps {
     override fun inputDevices(vararg inputDevices: Any): Unit = inputDevices(inputDevices.toList())
 
     /**
+     * @param inputNetworkLocation the value to be set.
+     */
+    override fun inputNetworkLocation(inputNetworkLocation: String) {
+      cdkBuilder.inputNetworkLocation(inputNetworkLocation)
+    }
+
+    /**
      * @param inputSecurityGroups The list of input security groups (referenced by IDs) to attach to
      * the input if the input is a push type.
      */
@@ -359,6 +412,30 @@ public interface CfnInputProps {
      */
     override fun mediaConnectFlows(vararg mediaConnectFlows: Any): Unit =
         mediaConnectFlows(mediaConnectFlows.toList())
+
+    /**
+     * @param multicastSettings the value to be set.
+     */
+    override fun multicastSettings(multicastSettings: IResolvable) {
+      cdkBuilder.multicastSettings(multicastSettings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param multicastSettings the value to be set.
+     */
+    override
+        fun multicastSettings(multicastSettings: CfnInput.MulticastSettingsCreateRequestProperty) {
+      cdkBuilder.multicastSettings(multicastSettings.let(CfnInput.MulticastSettingsCreateRequestProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param multicastSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("75e7f49848501bf93f2120e10b20932265bc0d824fca3406e1bacf4f118496a1")
+    override
+        fun multicastSettings(multicastSettings: CfnInput.MulticastSettingsCreateRequestProperty.Builder.() -> Unit):
+        Unit = multicastSettings(CfnInput.MulticastSettingsCreateRequestProperty(multicastSettings))
 
     /**
      * @param name A name for the input.
@@ -479,6 +556,11 @@ public interface CfnInputProps {
     override fun inputDevices(): Any? = unwrap(this).getInputDevices()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-inputnetworklocation)
+     */
+    override fun inputNetworkLocation(): String? = unwrap(this).getInputNetworkLocation()
+
+    /**
      * The list of input security groups (referenced by IDs) to attach to the input if the input is
      * a push type.
      *
@@ -493,6 +575,11 @@ public interface CfnInputProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-mediaconnectflows)
      */
     override fun mediaConnectFlows(): Any? = unwrap(this).getMediaConnectFlows()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-multicastsettings)
+     */
+    override fun multicastSettings(): Any? = unwrap(this).getMulticastSettings()
 
     /**
      * A name for the input.

@@ -65,6 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .fileSystemId("fileSystemId")
  * .kmsKeyId("kmsKeyId")
  * .region("region")
+ * .roleArn("roleArn")
+ * .status("status")
+ * .statusMessage("statusMessage")
  * .build()))
  * .build())
  * .throughputMode("throughputMode")
@@ -1713,6 +1716,9 @@ public open class CfnFileSystem(
    * .fileSystemId("fileSystemId")
    * .kmsKeyId("kmsKeyId")
    * .region("region")
+   * .roleArn("roleArn")
+   * .status("status")
+   * .statusMessage("statusMessage")
    * .build()))
    * .build();
    * ```
@@ -1834,6 +1840,9 @@ public open class CfnFileSystem(
    * .fileSystemId("fileSystemId")
    * .kmsKeyId("kmsKeyId")
    * .region("region")
+   * .roleArn("roleArn")
+   * .status("status")
+   * .statusMessage("statusMessage")
    * .build();
    * ```
    *
@@ -1885,6 +1894,21 @@ public open class CfnFileSystem(
     public fun region(): String? = unwrap(this).getRegion()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-rolearn)
+     */
+    public fun roleArn(): String? = unwrap(this).getRoleArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-status)
+     */
+    public fun status(): String? = unwrap(this).getStatus()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-statusmessage)
+     */
+    public fun statusMessage(): String? = unwrap(this).getStatusMessage()
+
+    /**
      * A builder for [ReplicationDestinationProperty]
      */
     @CdkDslMarker
@@ -1920,6 +1944,21 @@ public open class CfnFileSystem(
        * which the destination file system is located.
        */
       public fun region(region: String)
+
+      /**
+       * @param roleArn the value to be set.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param status the value to be set.
+       */
+      public fun status(status: String)
+
+      /**
+       * @param statusMessage the value to be set.
+       */
+      public fun statusMessage(statusMessage: String)
     }
 
     private class BuilderImpl : Builder {
@@ -1965,6 +2004,27 @@ public open class CfnFileSystem(
        */
       override fun region(region: String) {
         cdkBuilder.region(region)
+      }
+
+      /**
+       * @param roleArn the value to be set.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param status the value to be set.
+       */
+      override fun status(status: String) {
+        cdkBuilder.status(status)
+      }
+
+      /**
+       * @param statusMessage the value to be set.
+       */
+      override fun statusMessage(statusMessage: String) {
+        cdkBuilder.statusMessage(statusMessage)
       }
 
       public fun build():
@@ -2019,6 +2079,21 @@ public open class CfnFileSystem(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-region)
        */
       override fun region(): String? = unwrap(this).getRegion()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-rolearn)
+       */
+      override fun roleArn(): String? = unwrap(this).getRoleArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-status)
+       */
+      override fun status(): String? = unwrap(this).getStatus()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-efs-filesystem-replicationdestination.html#cfn-efs-filesystem-replicationdestination-statusmessage)
+       */
+      override fun statusMessage(): String? = unwrap(this).getStatusMessage()
     }
 
     public companion object {

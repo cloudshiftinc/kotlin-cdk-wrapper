@@ -13,7 +13,23 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * A user pool group that you can add a user to.
+ * A user pool group.
+ *
+ * Contains details about the group and the way that it contributes to IAM role decisions with
+ * identity pools. Identity pools can make decisions about the IAM role to assign based on groups:
+ * users get credentials for the role associated with their highest-priority group.
+ *
+ * This data type is a response parameter of
+ * [AdminListGroupsForUser](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminListGroupsForUser.html)
+ * ,
+ * [CreateGroup](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateGroup.html)
+ * ,
+ * [GetGroup](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetGroup.html)
+ * ,
+ * [ListGroups](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ListGroups.html)
+ * , and
+ * [UpdateGroup](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateGroup.html)
+ * .
  *
  * Example:
  *

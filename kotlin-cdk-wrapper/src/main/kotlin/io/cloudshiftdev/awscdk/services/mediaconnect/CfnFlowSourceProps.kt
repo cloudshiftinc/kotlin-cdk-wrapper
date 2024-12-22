@@ -125,7 +125,7 @@ public interface CfnFlowSourceProps {
   /**
    * The maximum latency in milliseconds.
    *
-   * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+   * This parameter applies only to RIST-based and Zixi-based streams.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxlatency)
    */
@@ -297,7 +297,7 @@ public interface CfnFlowSourceProps {
 
     /**
      * @param maxLatency The maximum latency in milliseconds.
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      */
     public fun maxLatency(maxLatency: Number)
 
@@ -468,7 +468,7 @@ public interface CfnFlowSourceProps {
 
     /**
      * @param maxLatency The maximum latency in milliseconds.
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      */
     override fun maxLatency(maxLatency: Number) {
       cdkBuilder.maxLatency(maxLatency)
@@ -631,7 +631,7 @@ public interface CfnFlowSourceProps {
     /**
      * The maximum latency in milliseconds.
      *
-     * This parameter applies only to RIST-based, Zixi-based, and Fujitsu-based streams.
+     * This parameter applies only to RIST-based and Zixi-based streams.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediaconnect-flowsource.html#cfn-mediaconnect-flowsource-maxlatency)
      */

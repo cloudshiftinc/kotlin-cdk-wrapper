@@ -51,7 +51,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * subnetcount = subnetcount + 1;
  * }
  * Cluster cluster = Cluster.Builder.create(this, "hello-eks")
- * .version(KubernetesVersion.V1_30)
+ * .version(KubernetesVersion.V1_31)
  * .vpc(vpc)
  * .ipFamily(IpFamily.IP_V6)
  * .vpcSubnets(List.of(SubnetSelection.builder().subnets(vpc.getPublicSubnets()).build()))

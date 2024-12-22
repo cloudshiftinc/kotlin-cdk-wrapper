@@ -19,13 +19,23 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
+ * import io.cloudshiftdev.awscdk.services.certificatemanager.Certificate;
  * Cluster cluster;
+ * ICertificate certificate = Certificate.fromCertificateArn(this, "Cert",
+ * "arn:aws:acm:us-east-1:123456:certificate/abcdefg");
  * NetworkLoadBalancedEc2Service loadBalancedEcsService =
  * NetworkLoadBalancedEc2Service.Builder.create(this, "Service")
  * .cluster(cluster)
  * .memoryLimitMiB(1024)
+ * // The default value of listenerPort is 443 if you pass in listenerCertificate
+ * // It is configured to port 4443 here
+ * .listenerPort(4443)
+ * .listenerCertificate(certificate)
  * .taskImageOptions(NetworkLoadBalancedTaskImageOptions.builder()
  * .image(ContainerImage.fromRegistry("test"))
+ * // The default value of containerPort is 443 if you pass in listenerCertificate
+ * // It is configured to port 8443 here
+ * .containerPort(8443)
  * .environment(Map.of(
  * "TEST_ENVIRONMENT_VARIABLE1", "test environment variable 1 value",
  * "TEST_ENVIRONMENT_VARIABLE2", "test environment variable 2 value"))
@@ -58,7 +68,7 @@ public interface NetworkLoadBalancedTaskImageOptions {
    * For more information, see
    * [hostPort](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PortMapping.html#ECS-Type-PortMapping-hostPort).
    *
-   * Default: 80
+   * Default: 80 or 443 with listenerCertificate provided
    */
   public fun containerPort(): Number? = unwrap(this).getContainerPort()
 
@@ -339,7 +349,7 @@ public interface NetworkLoadBalancedTaskImageOptions {
      * For more information, see
      * [hostPort](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PortMapping.html#ECS-Type-PortMapping-hostPort).
      *
-     * Default: 80
+     * Default: 80 or 443 with listenerCertificate provided
      */
     override fun containerPort(): Number? = unwrap(this).getContainerPort()
 

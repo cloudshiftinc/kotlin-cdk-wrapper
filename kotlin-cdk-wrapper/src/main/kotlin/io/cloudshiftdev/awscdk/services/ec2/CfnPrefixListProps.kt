@@ -61,6 +61,8 @@ public interface CfnPrefixListProps {
   /**
    * The maximum number of entries for the prefix list.
    *
+   * You can't modify the entries and the size of a prefix list at the same time.
+   *
    * This property is required when you create a prefix list.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-prefixlist.html#cfn-ec2-prefixlist-maxentries)
@@ -111,6 +113,8 @@ public interface CfnPrefixListProps {
 
     /**
      * @param maxEntries The maximum number of entries for the prefix list.
+     * You can't modify the entries and the size of a prefix list at the same time.
+     *
      * This property is required when you create a prefix list.
      */
     public fun maxEntries(maxEntries: Number)
@@ -165,6 +169,8 @@ public interface CfnPrefixListProps {
 
     /**
      * @param maxEntries The maximum number of entries for the prefix list.
+     * You can't modify the entries and the size of a prefix list at the same time.
+     *
      * This property is required when you create a prefix list.
      */
     override fun maxEntries(maxEntries: Number) {
@@ -216,6 +222,8 @@ public interface CfnPrefixListProps {
 
     /**
      * The maximum number of entries for the prefix list.
+     *
+     * You can't modify the entries and the size of a prefix list at the same time.
      *
      * This property is required when you create a prefix list.
      *

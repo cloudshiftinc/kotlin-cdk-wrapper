@@ -249,6 +249,17 @@ public open class GraphqlApi(
     public fun name(name: String)
 
     /**
+     * The owner contact information for an API resource.
+     *
+     * This field accepts any string input with a length of 0 - 256 characters.
+     *
+     * Default: - No owner contact.
+     *
+     * @param ownerContact The owner contact information for an API resource. 
+     */
+    public fun ownerContact(ownerContact: String)
+
+    /**
      * A number indicating the maximum depth resolvers should be accepted when handling queries.
      *
      * Value must be withing range of 0 to 75
@@ -440,6 +451,19 @@ public open class GraphqlApi(
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * The owner contact information for an API resource.
+     *
+     * This field accepts any string input with a length of 0 - 256 characters.
+     *
+     * Default: - No owner contact.
+     *
+     * @param ownerContact The owner contact information for an API resource. 
+     */
+    override fun ownerContact(ownerContact: String) {
+      cdkBuilder.ownerContact(ownerContact)
     }
 
     /**

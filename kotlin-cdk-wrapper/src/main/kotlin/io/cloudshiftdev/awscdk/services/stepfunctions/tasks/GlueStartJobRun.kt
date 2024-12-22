@@ -31,7 +31,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * GlueStartJobRun.Builder.create(this, "Task")
  * .glueJobName("my-glue-job")
  * .workerConfiguration(WorkerConfigurationProperty.builder()
- * .workerType(WorkerType.G_1X) // Worker type
+ * .workerTypeV2(WorkerTypeV2.G_1X) // Worker type
  * .numberOfWorkers(2)
  * .build())
  * .build();

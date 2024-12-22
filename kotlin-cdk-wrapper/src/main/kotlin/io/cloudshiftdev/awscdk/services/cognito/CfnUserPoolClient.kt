@@ -403,17 +403,15 @@ public open class CfnUserPoolClient(
   public open fun logoutUrLs(vararg `value`: String): Unit = logoutUrLs(`value`.toList())
 
   /**
-   * Use this setting to choose which errors and responses are returned by Cognito APIs during
-   * authentication, account confirmation, and password recovery when the user does not exist in the
-   * user pool.
+   * Errors and responses that you want Amazon Cognito APIs to return during authentication, account
+   * confirmation, and password recovery when the user doesn't exist in the user pool.
    */
   public open fun preventUserExistenceErrors(): String? =
       unwrap(this).getPreventUserExistenceErrors()
 
   /**
-   * Use this setting to choose which errors and responses are returned by Cognito APIs during
-   * authentication, account confirmation, and password recovery when the user does not exist in the
-   * user pool.
+   * Errors and responses that you want Amazon Cognito APIs to return during authentication, account
+   * confirmation, and password recovery when the user doesn't exist in the user pool.
    */
   public open fun preventUserExistenceErrors(`value`: String) {
     unwrap(this).setPreventUserExistenceErrors(`value`)
@@ -536,9 +534,14 @@ public open class CfnUserPoolClient(
      * `TokenValidityUnits` value in your API request.
      *
      * For example, when you set `AccessTokenValidity` to `10` and `TokenValidityUnits` to `hours` ,
-     * your user can authorize access with their access token for 10 hours.
+     * your user can authorize access with
+     * their access token for 10 hours.
      *
-     * The default time unit for `AccessTokenValidity` in an API request is hours.
+     * The default time unit for `AccessTokenValidity` in an API request is hours. *Valid range* is
+     * displayed below in seconds.
+     *
+     * If you don't specify otherwise in the configuration of your app client, your access
+     * tokens are valid for one hour.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-accesstokenvalidity)
      * @param accessTokenValidity The access token time limit. 
@@ -802,7 +805,7 @@ public open class CfnUserPoolClient(
      *
      * For more information about propagation of user context data, see [Adding advanced security to
      * a user
-     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-threat-protection.html)
      * . If you don’t include this parameter, you can't send device fingerprint information, including
      * source IP address, to Amazon Cognito advanced security. You can only activate
      * `EnablePropagateAdditionalUserContextData` in an app client that has a client secret.
@@ -819,7 +822,7 @@ public open class CfnUserPoolClient(
      *
      * For more information about propagation of user context data, see [Adding advanced security to
      * a user
-     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-threat-protection.html)
      * . If you don’t include this parameter, you can't send device fingerprint information, including
      * source IP address, to Amazon Cognito advanced security. You can only activate
      * `EnablePropagateAdditionalUserContextData` in an app client that has a client secret.
@@ -877,6 +880,12 @@ public open class CfnUserPoolClient(
      *
      * Valid values include:
      *
+     * * `ALLOW_USER_AUTH` : Enable selection-based sign-in with `USER_AUTH` . This setting covers
+     * username-password, secure remote password (SRP), passwordless, and passkey authentication. This
+     * authentiation flow can do username-password and SRP authentication without other
+     * `ExplicitAuthFlows` permitting them. For example users can complete an SRP challenge through
+     * `USER_AUTH` without the flow `USER_SRP_AUTH` being active for the app client. This flow doesn't
+     * include `CUSTOM_AUTH` .
      * * `ALLOW_ADMIN_USER_PASSWORD_AUTH` : Enable admin based user password authentication flow
      * `ADMIN_USER_PASSWORD_AUTH` . This setting replaces the `ADMIN_NO_SRP_AUTH` setting. With this
      * authentication flow, your app passes a user name and password to Amazon Cognito in the request,
@@ -913,6 +922,12 @@ public open class CfnUserPoolClient(
      *
      * Valid values include:
      *
+     * * `ALLOW_USER_AUTH` : Enable selection-based sign-in with `USER_AUTH` . This setting covers
+     * username-password, secure remote password (SRP), passwordless, and passkey authentication. This
+     * authentiation flow can do username-password and SRP authentication without other
+     * `ExplicitAuthFlows` permitting them. For example users can complete an SRP challenge through
+     * `USER_AUTH` without the flow `USER_SRP_AUTH` being active for the app client. This flow doesn't
+     * include `CUSTOM_AUTH` .
      * * `ALLOW_ADMIN_USER_PASSWORD_AUTH` : Enable admin based user password authentication flow
      * `ADMIN_USER_PASSWORD_AUTH` . This setting replaces the `ADMIN_NO_SRP_AUTH` setting. With this
      * authentication flow, your app passes a user name and password to Amazon Cognito in the request,
@@ -965,7 +980,11 @@ public open class CfnUserPoolClient(
      * For example, when you set `IdTokenValidity` as `10` and `TokenValidityUnits` as `hours` ,
      * your user can authenticate their session with their ID token for 10 hours.
      *
-     * The default time unit for `IdTokenValidity` in an API request is hours.
+     * The default time unit for `IdTokenValidity` in an API request is hours. *Valid range* is
+     * displayed below in seconds.
+     *
+     * If you don't specify otherwise in the configuration of your app client, your ID
+     * tokens are valid for one hour.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-idtokenvalidity)
      * @param idTokenValidity The ID token time limit. 
@@ -989,20 +1008,26 @@ public open class CfnUserPoolClient(
     public fun logoutUrLs(vararg logoutUrLs: String)
 
     /**
-     * Use this setting to choose which errors and responses are returned by Cognito APIs during
-     * authentication, account confirmation, and password recovery when the user does not exist in the
-     * user pool.
+     * Errors and responses that you want Amazon Cognito APIs to return during authentication,
+     * account confirmation, and password recovery when the user doesn't exist in the user pool.
      *
-     * When set to `ENABLED` and the user does not exist, authentication returns an error indicating
-     * either the username or password was incorrect, and account confirmation and password recovery
-     * return a response indicating a code was sent to a simulated destination. When set to `LEGACY` ,
-     * those APIs will return a `UserNotFoundException` exception if the user does not exist in the
-     * user pool.
+     * When set to `ENABLED` and the user doesn't exist, authentication returns an error indicating
+     * either the username or password was incorrect. Account confirmation and password recovery return
+     * a response indicating a code was sent to a simulated destination. When set to `LEGACY` , those
+     * APIs return a `UserNotFoundException` exception if the user doesn't exist in the user pool.
+     *
+     * Valid values include:
+     *
+     * * `ENABLED` - This prevents user existence-related errors.
+     * * `LEGACY` - This represents the early behavior of Amazon Cognito where user existence
+     * related errors aren't prevented.
+     *
+     * Defaults to `LEGACY` when you don't provide a value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-preventuserexistenceerrors)
-     * @param preventUserExistenceErrors Use this setting to choose which errors and responses are
-     * returned by Cognito APIs during authentication, account confirmation, and password recovery when
-     * the user does not exist in the user pool. 
+     * @param preventUserExistenceErrors Errors and responses that you want Amazon Cognito APIs to
+     * return during authentication, account confirmation, and password recovery when the user doesn't
+     * exist in the user pool. 
      */
     public fun preventUserExistenceErrors(preventUserExistenceErrors: String)
 
@@ -1056,11 +1081,15 @@ public open class CfnUserPoolClient(
      * `TokenValidityUnits` value in your API request.
      *
      * For example, when you set `RefreshTokenValidity` as `10` and `TokenValidityUnits` as `days` ,
-     * your user can refresh their session and retrieve new access and ID tokens for 10 days.
+     * your user can refresh their session
+     * and retrieve new access and ID tokens for 10 days.
      *
      * The default time unit for `RefreshTokenValidity` in an API request is days. You can't set
      * `RefreshTokenValidity` to 0. If you do, Amazon Cognito overrides the value with the default
-     * value of 30 days.
+     * value of 30 days. *Valid range* is displayed below in seconds.
+     *
+     * If you don't specify otherwise in the configuration of your app client, your refresh
+     * tokens are valid for 30 days.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenvalidity)
      * @param refreshTokenValidity The refresh token time limit. 
@@ -1074,6 +1103,14 @@ public open class CfnUserPoolClient(
      * `LoginWithAmazon` . You can also specify the names that you configured for the SAML and OIDC
      * IdPs in your user pool, for example `MySAMLIdP` or `MyOIDCIdP` .
      *
+     * This setting applies to providers that you can access with the [hosted UI and OAuth 2.0
+     * authorization
+     * server](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-integration.html)
+     * . The removal of `COGNITO` from this list doesn't prevent authentication operations for local
+     * users with the user pools API in an AWS SDK. The only way to prevent API-based authentication is
+     * to block access with a [AWS WAF
+     * rule](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html) .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders)
      * @param supportedIdentityProviders A list of provider names for the identity providers (IdPs)
      * that are supported on this client. 
@@ -1086,6 +1123,14 @@ public open class CfnUserPoolClient(
      * The following are supported: `COGNITO` , `Facebook` , `Google` , `SignInWithApple` , and
      * `LoginWithAmazon` . You can also specify the names that you configured for the SAML and OIDC
      * IdPs in your user pool, for example `MySAMLIdP` or `MyOIDCIdP` .
+     *
+     * This setting applies to providers that you can access with the [hosted UI and OAuth 2.0
+     * authorization
+     * server](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-integration.html)
+     * . The removal of `COGNITO` from this list doesn't prevent authentication operations for local
+     * users with the user pools API in an AWS SDK. The only way to prevent API-based authentication is
+     * to block access with a [AWS WAF
+     * rule](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders)
      * @param supportedIdentityProviders A list of provider names for the identity providers (IdPs)
@@ -1210,9 +1255,14 @@ public open class CfnUserPoolClient(
      * `TokenValidityUnits` value in your API request.
      *
      * For example, when you set `AccessTokenValidity` to `10` and `TokenValidityUnits` to `hours` ,
-     * your user can authorize access with their access token for 10 hours.
+     * your user can authorize access with
+     * their access token for 10 hours.
      *
-     * The default time unit for `AccessTokenValidity` in an API request is hours.
+     * The default time unit for `AccessTokenValidity` in an API request is hours. *Valid range* is
+     * displayed below in seconds.
+     *
+     * If you don't specify otherwise in the configuration of your app client, your access
+     * tokens are valid for one hour.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-accesstokenvalidity)
      * @param accessTokenValidity The access token time limit. 
@@ -1502,7 +1552,7 @@ public open class CfnUserPoolClient(
      *
      * For more information about propagation of user context data, see [Adding advanced security to
      * a user
-     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-threat-protection.html)
      * . If you don’t include this parameter, you can't send device fingerprint information, including
      * source IP address, to Amazon Cognito advanced security. You can only activate
      * `EnablePropagateAdditionalUserContextData` in an app client that has a client secret.
@@ -1521,7 +1571,7 @@ public open class CfnUserPoolClient(
      *
      * For more information about propagation of user context data, see [Adding advanced security to
      * a user
-     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-advanced-security.html)
+     * pool](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pool-settings-threat-protection.html)
      * . If you don’t include this parameter, you can't send device fingerprint information, including
      * source IP address, to Amazon Cognito advanced security. You can only activate
      * `EnablePropagateAdditionalUserContextData` in an app client that has a client secret.
@@ -1585,6 +1635,12 @@ public open class CfnUserPoolClient(
      *
      * Valid values include:
      *
+     * * `ALLOW_USER_AUTH` : Enable selection-based sign-in with `USER_AUTH` . This setting covers
+     * username-password, secure remote password (SRP), passwordless, and passkey authentication. This
+     * authentiation flow can do username-password and SRP authentication without other
+     * `ExplicitAuthFlows` permitting them. For example users can complete an SRP challenge through
+     * `USER_AUTH` without the flow `USER_SRP_AUTH` being active for the app client. This flow doesn't
+     * include `CUSTOM_AUTH` .
      * * `ALLOW_ADMIN_USER_PASSWORD_AUTH` : Enable admin based user password authentication flow
      * `ADMIN_USER_PASSWORD_AUTH` . This setting replaces the `ADMIN_NO_SRP_AUTH` setting. With this
      * authentication flow, your app passes a user name and password to Amazon Cognito in the request,
@@ -1623,6 +1679,12 @@ public open class CfnUserPoolClient(
      *
      * Valid values include:
      *
+     * * `ALLOW_USER_AUTH` : Enable selection-based sign-in with `USER_AUTH` . This setting covers
+     * username-password, secure remote password (SRP), passwordless, and passkey authentication. This
+     * authentiation flow can do username-password and SRP authentication without other
+     * `ExplicitAuthFlows` permitting them. For example users can complete an SRP challenge through
+     * `USER_AUTH` without the flow `USER_SRP_AUTH` being active for the app client. This flow doesn't
+     * include `CUSTOM_AUTH` .
      * * `ALLOW_ADMIN_USER_PASSWORD_AUTH` : Enable admin based user password authentication flow
      * `ADMIN_USER_PASSWORD_AUTH` . This setting replaces the `ADMIN_NO_SRP_AUTH` setting. With this
      * authentication flow, your app passes a user name and password to Amazon Cognito in the request,
@@ -1680,7 +1742,11 @@ public open class CfnUserPoolClient(
      * For example, when you set `IdTokenValidity` as `10` and `TokenValidityUnits` as `hours` ,
      * your user can authenticate their session with their ID token for 10 hours.
      *
-     * The default time unit for `IdTokenValidity` in an API request is hours.
+     * The default time unit for `IdTokenValidity` in an API request is hours. *Valid range* is
+     * displayed below in seconds.
+     *
+     * If you don't specify otherwise in the configuration of your app client, your ID
+     * tokens are valid for one hour.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-idtokenvalidity)
      * @param idTokenValidity The ID token time limit. 
@@ -1708,20 +1774,26 @@ public open class CfnUserPoolClient(
     override fun logoutUrLs(vararg logoutUrLs: String): Unit = logoutUrLs(logoutUrLs.toList())
 
     /**
-     * Use this setting to choose which errors and responses are returned by Cognito APIs during
-     * authentication, account confirmation, and password recovery when the user does not exist in the
-     * user pool.
+     * Errors and responses that you want Amazon Cognito APIs to return during authentication,
+     * account confirmation, and password recovery when the user doesn't exist in the user pool.
      *
-     * When set to `ENABLED` and the user does not exist, authentication returns an error indicating
-     * either the username or password was incorrect, and account confirmation and password recovery
-     * return a response indicating a code was sent to a simulated destination. When set to `LEGACY` ,
-     * those APIs will return a `UserNotFoundException` exception if the user does not exist in the
-     * user pool.
+     * When set to `ENABLED` and the user doesn't exist, authentication returns an error indicating
+     * either the username or password was incorrect. Account confirmation and password recovery return
+     * a response indicating a code was sent to a simulated destination. When set to `LEGACY` , those
+     * APIs return a `UserNotFoundException` exception if the user doesn't exist in the user pool.
+     *
+     * Valid values include:
+     *
+     * * `ENABLED` - This prevents user existence-related errors.
+     * * `LEGACY` - This represents the early behavior of Amazon Cognito where user existence
+     * related errors aren't prevented.
+     *
+     * Defaults to `LEGACY` when you don't provide a value.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-preventuserexistenceerrors)
-     * @param preventUserExistenceErrors Use this setting to choose which errors and responses are
-     * returned by Cognito APIs during authentication, account confirmation, and password recovery when
-     * the user does not exist in the user pool. 
+     * @param preventUserExistenceErrors Errors and responses that you want Amazon Cognito APIs to
+     * return during authentication, account confirmation, and password recovery when the user doesn't
+     * exist in the user pool. 
      */
     override fun preventUserExistenceErrors(preventUserExistenceErrors: String) {
       cdkBuilder.preventUserExistenceErrors(preventUserExistenceErrors)
@@ -1780,11 +1852,15 @@ public open class CfnUserPoolClient(
      * `TokenValidityUnits` value in your API request.
      *
      * For example, when you set `RefreshTokenValidity` as `10` and `TokenValidityUnits` as `days` ,
-     * your user can refresh their session and retrieve new access and ID tokens for 10 days.
+     * your user can refresh their session
+     * and retrieve new access and ID tokens for 10 days.
      *
      * The default time unit for `RefreshTokenValidity` in an API request is days. You can't set
      * `RefreshTokenValidity` to 0. If you do, Amazon Cognito overrides the value with the default
-     * value of 30 days.
+     * value of 30 days. *Valid range* is displayed below in seconds.
+     *
+     * If you don't specify otherwise in the configuration of your app client, your refresh
+     * tokens are valid for 30 days.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-refreshtokenvalidity)
      * @param refreshTokenValidity The refresh token time limit. 
@@ -1800,6 +1876,14 @@ public open class CfnUserPoolClient(
      * `LoginWithAmazon` . You can also specify the names that you configured for the SAML and OIDC
      * IdPs in your user pool, for example `MySAMLIdP` or `MyOIDCIdP` .
      *
+     * This setting applies to providers that you can access with the [hosted UI and OAuth 2.0
+     * authorization
+     * server](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-integration.html)
+     * . The removal of `COGNITO` from this list doesn't prevent authentication operations for local
+     * users with the user pools API in an AWS SDK. The only way to prevent API-based authentication is
+     * to block access with a [AWS WAF
+     * rule](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html) .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders)
      * @param supportedIdentityProviders A list of provider names for the identity providers (IdPs)
      * that are supported on this client. 
@@ -1814,6 +1898,14 @@ public open class CfnUserPoolClient(
      * The following are supported: `COGNITO` , `Facebook` , `Google` , `SignInWithApple` , and
      * `LoginWithAmazon` . You can also specify the names that you configured for the SAML and OIDC
      * IdPs in your user pool, for example `MySAMLIdP` or `MyOIDCIdP` .
+     *
+     * This setting applies to providers that you can access with the [hosted UI and OAuth 2.0
+     * authorization
+     * server](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-app-integration.html)
+     * . The removal of `COGNITO` from this list doesn't prevent authentication operations for local
+     * users with the user pools API in an AWS SDK. The only way to prevent API-based authentication is
+     * to block access with a [AWS WAF
+     * rule](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pool-waf.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolclient.html#cfn-cognito-userpoolclient-supportedidentityproviders)
      * @param supportedIdentityProviders A list of provider names for the identity providers (IdPs)
@@ -1998,10 +2090,13 @@ public open class CfnUserPoolClient(
    */
   public interface AnalyticsConfigurationProperty {
     /**
-     * The Amazon Resource Name (ARN) of an Amazon Pinpoint project.
+     * The Amazon Resource Name (ARN) of an Amazon Pinpoint project that you want to connect to your
+     * user pool app client.
      *
-     * You can use the Amazon Pinpoint project for integration with the chosen user pool client.
-     * Amazon Cognito publishes events to the Amazon Pinpoint project that the app ARN declares.
+     * Amazon Cognito publishes events to the Amazon Pinpoint project that `ApplicationArn`
+     * declares. You can also configure your application to pass an endpoint ID in the
+     * `AnalyticsMetadata` parameter of sign-in operations. The endpoint ID is information about the
+     * destination for push notifications
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-applicationarn)
      */
@@ -2045,9 +2140,12 @@ public open class CfnUserPoolClient(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param applicationArn The Amazon Resource Name (ARN) of an Amazon Pinpoint project.
-       * You can use the Amazon Pinpoint project for integration with the chosen user pool client.
-       * Amazon Cognito publishes events to the Amazon Pinpoint project that the app ARN declares.
+       * @param applicationArn The Amazon Resource Name (ARN) of an Amazon Pinpoint project that you
+       * want to connect to your user pool app client.
+       * Amazon Cognito publishes events to the Amazon Pinpoint project that `ApplicationArn`
+       * declares. You can also configure your application to pass an endpoint ID in the
+       * `AnalyticsMetadata` parameter of sign-in operations. The endpoint ID is information about the
+       * destination for push notifications
        */
       public fun applicationArn(applicationArn: String)
 
@@ -2089,9 +2187,12 @@ public open class CfnUserPoolClient(
           software.amazon.awscdk.services.cognito.CfnUserPoolClient.AnalyticsConfigurationProperty.builder()
 
       /**
-       * @param applicationArn The Amazon Resource Name (ARN) of an Amazon Pinpoint project.
-       * You can use the Amazon Pinpoint project for integration with the chosen user pool client.
-       * Amazon Cognito publishes events to the Amazon Pinpoint project that the app ARN declares.
+       * @param applicationArn The Amazon Resource Name (ARN) of an Amazon Pinpoint project that you
+       * want to connect to your user pool app client.
+       * Amazon Cognito publishes events to the Amazon Pinpoint project that `ApplicationArn`
+       * declares. You can also configure your application to pass an endpoint ID in the
+       * `AnalyticsMetadata` parameter of sign-in operations. The endpoint ID is information about the
+       * destination for push notifications
        */
       override fun applicationArn(applicationArn: String) {
         cdkBuilder.applicationArn(applicationArn)
@@ -2147,10 +2248,13 @@ public open class CfnUserPoolClient(
     ) : CdkObject(cdkObject),
         AnalyticsConfigurationProperty {
       /**
-       * The Amazon Resource Name (ARN) of an Amazon Pinpoint project.
+       * The Amazon Resource Name (ARN) of an Amazon Pinpoint project that you want to connect to
+       * your user pool app client.
        *
-       * You can use the Amazon Pinpoint project for integration with the chosen user pool client.
-       * Amazon Cognito publishes events to the Amazon Pinpoint project that the app ARN declares.
+       * Amazon Cognito publishes events to the Amazon Pinpoint project that `ApplicationArn`
+       * declares. You can also configure your application to pass an endpoint ID in the
+       * `AnalyticsMetadata` parameter of sign-in operations. The endpoint ID is information about the
+       * destination for push notifications
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cognito-userpoolclient-analyticsconfiguration.html#cfn-cognito-userpoolclient-analyticsconfiguration-applicationarn)
        */

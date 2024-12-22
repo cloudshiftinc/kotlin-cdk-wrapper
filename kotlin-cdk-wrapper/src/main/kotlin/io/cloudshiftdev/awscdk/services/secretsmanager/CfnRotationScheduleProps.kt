@@ -56,6 +56,15 @@ public interface CfnRotationScheduleProps {
    * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
    * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
    *
+   * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+   * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+   * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+   * automatically extends the CloudFormation stack to include a nested stack (of type
+   * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+   * stack operations, the appropriate rotation Lambda function for your database or service. For
+   * general information on transforms, see the [AWS CloudFormation
+   * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
+   *
    * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
    * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
    * .
@@ -121,7 +130,7 @@ public interface CfnRotationScheduleProps {
   public fun rotationRules(): Any? = unwrap(this).getRotationRules()
 
   /**
-   * The ARN or name of the secret to rotate.
+   * The ARN or name of the secret to rotate. This is unique for each rotation schedule definition.
    *
    * To reference a secret also created in this template, use the
    * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
@@ -141,6 +150,15 @@ public interface CfnRotationScheduleProps {
      * [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
+     *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
@@ -156,6 +174,15 @@ public interface CfnRotationScheduleProps {
      * [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
+     *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
@@ -172,6 +199,15 @@ public interface CfnRotationScheduleProps {
      * [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
+     *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
@@ -262,7 +298,8 @@ public interface CfnRotationScheduleProps {
         fun rotationRules(rotationRules: CfnRotationSchedule.RotationRulesProperty.Builder.() -> Unit)
 
     /**
-     * @param secretId The ARN or name of the secret to rotate. 
+     * @param secretId The ARN or name of the secret to rotate. This is unique for each rotation
+     * schedule definition. 
      * To reference a secret also created in this template, use the
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
      * function with the secret's logical ID.
@@ -280,6 +317,15 @@ public interface CfnRotationScheduleProps {
      * [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
+     *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
@@ -297,6 +343,15 @@ public interface CfnRotationScheduleProps {
      * [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
+     *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
@@ -315,6 +370,15 @@ public interface CfnRotationScheduleProps {
      * [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
+     *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
      * .
@@ -418,7 +482,8 @@ public interface CfnRotationScheduleProps {
         Unit = rotationRules(CfnRotationSchedule.RotationRulesProperty(rotationRules))
 
     /**
-     * @param secretId The ARN or name of the secret to rotate. 
+     * @param secretId The ARN or name of the secret to rotate. This is unique for each rotation
+     * schedule definition. 
      * To reference a secret also created in this template, use the
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)
      * function with the secret's logical ID.
@@ -439,6 +504,15 @@ public interface CfnRotationScheduleProps {
      * Creates a new Lambda rotation function based on one of the [Secrets Manager rotation function
      * templates](https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_available-rotation-templates.html)
      * . To use a rotation function that already exists, specify `RotationLambdaARN` instead.
+     *
+     * You must specify `Transform: AWS::SecretsManager-2024-09-16` at the beginning of the
+     * CloudFormation template. Transforms are macros hosted by AWS CloudFormation that help you create
+     * and manage complex infrastructure. The `Transform: AWS::SecretsManager-2024-09-16` transform
+     * automatically extends the CloudFormation stack to include a nested stack (of type
+     * `AWS::CloudFormation::Stack` ), which then creates and updates on your behalf during subsequent
+     * stack operations, the appropriate rotation Lambda function for your database or service. For
+     * general information on transforms, see the [AWS CloudFormation
+     * documentation.](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-reference.html)
      *
      * For Amazon RDS master user credentials, see [AWS::RDS::DBCluster
      * MasterUserSecret](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-masterusersecret.html)
@@ -505,7 +579,8 @@ public interface CfnRotationScheduleProps {
     override fun rotationRules(): Any? = unwrap(this).getRotationRules()
 
     /**
-     * The ARN or name of the secret to rotate.
+     * The ARN or name of the secret to rotate. This is unique for each rotation schedule
+     * definition.
      *
      * To reference a secret also created in this template, use the
      * [Ref](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/intrinsic-function-reference-ref.html)

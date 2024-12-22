@@ -18,6 +18,8 @@ import kotlin.Unit
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
  * StageSynthesisOptions stageSynthesisOptions = StageSynthesisOptions.builder()
+ * .aspectStabilization(false)
+ * .errorOnDuplicateSynth(false)
  * .force(false)
  * .skipValidation(false)
  * .validateOnSynthesis(false)
@@ -25,6 +27,26 @@ import kotlin.Unit
  * ```
  */
 public interface StageSynthesisOptions {
+  /**
+   * Whether or not run the stabilization loop while invoking Aspects.
+   *
+   * The stabilization loop runs multiple passes of the construct tree when invoking
+   * Aspects. Without the stabilization loop, Aspects that are created by other Aspects
+   * are not run and new nodes that are created at higher points on the construct tree by
+   * an Aspect will not inherit their parent aspects.
+   *
+   * Default: false
+   */
+  public fun aspectStabilization(): Boolean? = unwrap(this).getAspectStabilization()
+
+  /**
+   * Whether or not to throw a warning instead of an error if the construct tree has been mutated
+   * since the last synth.
+   *
+   * Default: true
+   */
+  public fun errorOnDuplicateSynth(): Boolean? = unwrap(this).getErrorOnDuplicateSynth()
+
   /**
    * Force a re-synth, even if the stage has already been synthesized.
    *
@@ -55,6 +77,21 @@ public interface StageSynthesisOptions {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param aspectStabilization Whether or not run the stabilization loop while invoking Aspects.
+     * The stabilization loop runs multiple passes of the construct tree when invoking
+     * Aspects. Without the stabilization loop, Aspects that are created by other Aspects
+     * are not run and new nodes that are created at higher points on the construct tree by
+     * an Aspect will not inherit their parent aspects.
+     */
+    public fun aspectStabilization(aspectStabilization: Boolean)
+
+    /**
+     * @param errorOnDuplicateSynth Whether or not to throw a warning instead of an error if the
+     * construct tree has been mutated since the last synth.
+     */
+    public fun errorOnDuplicateSynth(errorOnDuplicateSynth: Boolean)
+
+    /**
      * @param force Force a re-synth, even if the stage has already been synthesized.
      * This is used by tests to allow for incremental verification of the output.
      * Do not use in production.
@@ -76,6 +113,25 @@ public interface StageSynthesisOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.StageSynthesisOptions.Builder =
         software.amazon.awscdk.StageSynthesisOptions.builder()
+
+    /**
+     * @param aspectStabilization Whether or not run the stabilization loop while invoking Aspects.
+     * The stabilization loop runs multiple passes of the construct tree when invoking
+     * Aspects. Without the stabilization loop, Aspects that are created by other Aspects
+     * are not run and new nodes that are created at higher points on the construct tree by
+     * an Aspect will not inherit their parent aspects.
+     */
+    override fun aspectStabilization(aspectStabilization: Boolean) {
+      cdkBuilder.aspectStabilization(aspectStabilization)
+    }
+
+    /**
+     * @param errorOnDuplicateSynth Whether or not to throw a warning instead of an error if the
+     * construct tree has been mutated since the last synth.
+     */
+    override fun errorOnDuplicateSynth(errorOnDuplicateSynth: Boolean) {
+      cdkBuilder.errorOnDuplicateSynth(errorOnDuplicateSynth)
+    }
 
     /**
      * @param force Force a re-synth, even if the stage has already been synthesized.
@@ -108,6 +164,26 @@ public interface StageSynthesisOptions {
     cdkObject: software.amazon.awscdk.StageSynthesisOptions,
   ) : CdkObject(cdkObject),
       StageSynthesisOptions {
+    /**
+     * Whether or not run the stabilization loop while invoking Aspects.
+     *
+     * The stabilization loop runs multiple passes of the construct tree when invoking
+     * Aspects. Without the stabilization loop, Aspects that are created by other Aspects
+     * are not run and new nodes that are created at higher points on the construct tree by
+     * an Aspect will not inherit their parent aspects.
+     *
+     * Default: false
+     */
+    override fun aspectStabilization(): Boolean? = unwrap(this).getAspectStabilization()
+
+    /**
+     * Whether or not to throw a warning instead of an error if the construct tree has been mutated
+     * since the last synth.
+     *
+     * Default: true
+     */
+    override fun errorOnDuplicateSynth(): Boolean? = unwrap(this).getErrorOnDuplicateSynth()
+
     /**
      * Force a re-synth, even if the stage has already been synthesized.
      *

@@ -93,6 +93,7 @@ import kotlin.jvm.JvmName
  * .value("value")
  * .build()))
  * .mutualAuthentication(MutualAuthenticationProperty.builder()
+ * .advertiseTrustStoreCaNames("advertiseTrustStoreCaNames")
  * .ignoreClientCertificateExpiry(false)
  * .mode("mode")
  * .trustStoreArn("trustStoreArn")
@@ -138,6 +139,8 @@ public interface CfnListenerProps {
   public fun defaultActions(): Any
 
   /**
+   * The listener attributes.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
    */
   public fun listenerAttributes(): Any? = unwrap(this).getListenerAttributes()
@@ -159,7 +162,7 @@ public interface CfnListenerProps {
   /**
    * The port on which the load balancer is listening.
    *
-   * You cannot specify a port for a Gateway Load Balancer.
+   * You can't specify a port for a Gateway Load Balancer.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-port)
    */
@@ -170,7 +173,7 @@ public interface CfnListenerProps {
    *
    * For Application Load Balancers, the supported protocols are HTTP and HTTPS. For Network Load
    * Balancers, the supported protocols are TCP, TLS, UDP, and TCP_UDP. You can’t specify the UDP or
-   * TCP_UDP protocol if dual-stack mode is enabled. You cannot specify a protocol for a Gateway Load
+   * TCP_UDP protocol if dual-stack mode is enabled. You can't specify a protocol for a Gateway Load
    * Balancer.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-protocol)
@@ -269,17 +272,17 @@ public interface CfnListenerProps {
     public fun defaultActions(vararg defaultActions: Any)
 
     /**
-     * @param listenerAttributes the value to be set.
+     * @param listenerAttributes The listener attributes.
      */
     public fun listenerAttributes(listenerAttributes: IResolvable)
 
     /**
-     * @param listenerAttributes the value to be set.
+     * @param listenerAttributes The listener attributes.
      */
     public fun listenerAttributes(listenerAttributes: List<Any>)
 
     /**
-     * @param listenerAttributes the value to be set.
+     * @param listenerAttributes The listener attributes.
      */
     public fun listenerAttributes(vararg listenerAttributes: Any)
 
@@ -308,7 +311,7 @@ public interface CfnListenerProps {
 
     /**
      * @param port The port on which the load balancer is listening.
-     * You cannot specify a port for a Gateway Load Balancer.
+     * You can't specify a port for a Gateway Load Balancer.
      */
     public fun port(port: Number)
 
@@ -316,7 +319,7 @@ public interface CfnListenerProps {
      * @param protocol The protocol for connections from clients to the load balancer.
      * For Application Load Balancers, the supported protocols are HTTP and HTTPS. For Network Load
      * Balancers, the supported protocols are TCP, TLS, UDP, and TCP_UDP. You can’t specify the UDP or
-     * TCP_UDP protocol if dual-stack mode is enabled. You cannot specify a protocol for a Gateway Load
+     * TCP_UDP protocol if dual-stack mode is enabled. You can't specify a protocol for a Gateway Load
      * Balancer.
      */
     public fun protocol(protocol: String)
@@ -422,21 +425,21 @@ public interface CfnListenerProps {
         defaultActions(defaultActions.toList())
 
     /**
-     * @param listenerAttributes the value to be set.
+     * @param listenerAttributes The listener attributes.
      */
     override fun listenerAttributes(listenerAttributes: IResolvable) {
       cdkBuilder.listenerAttributes(listenerAttributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param listenerAttributes the value to be set.
+     * @param listenerAttributes The listener attributes.
      */
     override fun listenerAttributes(listenerAttributes: List<Any>) {
       cdkBuilder.listenerAttributes(listenerAttributes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param listenerAttributes the value to be set.
+     * @param listenerAttributes The listener attributes.
      */
     override fun listenerAttributes(vararg listenerAttributes: Any): Unit =
         listenerAttributes(listenerAttributes.toList())
@@ -474,7 +477,7 @@ public interface CfnListenerProps {
 
     /**
      * @param port The port on which the load balancer is listening.
-     * You cannot specify a port for a Gateway Load Balancer.
+     * You can't specify a port for a Gateway Load Balancer.
      */
     override fun port(port: Number) {
       cdkBuilder.port(port)
@@ -484,7 +487,7 @@ public interface CfnListenerProps {
      * @param protocol The protocol for connections from clients to the load balancer.
      * For Application Load Balancers, the supported protocols are HTTP and HTTPS. For Network Load
      * Balancers, the supported protocols are TCP, TLS, UDP, and TCP_UDP. You can’t specify the UDP or
-     * TCP_UDP protocol if dual-stack mode is enabled. You cannot specify a protocol for a Gateway Load
+     * TCP_UDP protocol if dual-stack mode is enabled. You can't specify a protocol for a Gateway Load
      * Balancer.
      */
     override fun protocol(protocol: String) {
@@ -547,6 +550,8 @@ public interface CfnListenerProps {
     override fun defaultActions(): Any = unwrap(this).getDefaultActions()
 
     /**
+     * The listener attributes.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-listenerattributes)
      */
     override fun listenerAttributes(): Any? = unwrap(this).getListenerAttributes()
@@ -568,7 +573,7 @@ public interface CfnListenerProps {
     /**
      * The port on which the load balancer is listening.
      *
-     * You cannot specify a port for a Gateway Load Balancer.
+     * You can't specify a port for a Gateway Load Balancer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-port)
      */
@@ -579,7 +584,7 @@ public interface CfnListenerProps {
      *
      * For Application Load Balancers, the supported protocols are HTTP and HTTPS. For Network Load
      * Balancers, the supported protocols are TCP, TLS, UDP, and TCP_UDP. You can’t specify the UDP or
-     * TCP_UDP protocol if dual-stack mode is enabled. You cannot specify a protocol for a Gateway Load
+     * TCP_UDP protocol if dual-stack mode is enabled. You can't specify a protocol for a Gateway Load
      * Balancer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-listener.html#cfn-elasticloadbalancingv2-listener-protocol)

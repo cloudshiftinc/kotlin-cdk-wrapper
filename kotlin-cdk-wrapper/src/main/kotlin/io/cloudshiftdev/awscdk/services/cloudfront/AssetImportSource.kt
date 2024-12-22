@@ -8,6 +8,7 @@ import io.cloudshiftdev.awscdk.IgnoreMode
 import io.cloudshiftdev.awscdk.SymlinkFollowMode
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.s3.assets.AssetOptions
 import kotlin.Boolean
 import kotlin.String
@@ -26,8 +27,10 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.cloudfront.*;
  * import io.cloudshiftdev.awscdk.services.iam.*;
+ * import io.cloudshiftdev.awscdk.services.kms.*;
  * DockerImage dockerImage;
  * IGrantable grantable;
+ * Key key;
  * ILocalBundling localBundling;
  * ImportSource assetImportSource = AssetImportSource.fromAsset("path", AssetOptions.builder()
  * .assetHash("assetHash")
@@ -60,6 +63,7 @@ import kotlin.jvm.JvmName
  * .followSymlinks(SymlinkFollowMode.NEVER)
  * .ignoreMode(IgnoreMode.GLOB)
  * .readers(List.of(grantable))
+ * .sourceKMSKey(key)
  * .build());
  * ```
  */
@@ -238,6 +242,16 @@ public open class AssetImportSource(
      * @param readers A list of principals that should be able to read this asset from S3. 
      */
     public fun readers(vararg readers: IGrantable)
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     *
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code. 
+     */
+    public fun sourceKmsKey(sourceKmsKey: IKey)
   }
 
   private class BuilderImpl(
@@ -412,6 +426,18 @@ public open class AssetImportSource(
      * @param readers A list of principals that should be able to read this asset from S3. 
      */
     override fun readers(vararg readers: IGrantable): Unit = readers(readers.toList())
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     *
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code. 
+     */
+    override fun sourceKmsKey(sourceKmsKey: IKey) {
+      cdkBuilder.sourceKmsKey(sourceKmsKey.let(IKey.Companion::unwrap))
+    }
 
     public fun build(): software.amazon.awscdk.services.cloudfront.AssetImportSource =
         cdkBuilder.build()

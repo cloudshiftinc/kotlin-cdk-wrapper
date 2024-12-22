@@ -16,16 +16,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Activates a public third-party extension, making it available for use in stack templates.
  *
- * For more information, see [Using public
- * extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html) in
- * the *AWS CloudFormation User Guide* .
- *
  * Once you have activated a public third-party extension in your account and Region, use
  * [SetTypeConfiguration](https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetTypeConfiguration.html)
- * to specify configuration properties for the extension. For more information, see [Configuring
- * extensions at the account
- * level](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-private.html#registry-set-configuration)
- * in the *AWS CloudFormation User Guide* .
+ * to specify configuration properties for the extension. For more information, see [Using public
+ * extensions](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/registry-public.html) in
+ * the *AWS CloudFormation User Guide* .
  *
  * Example:
  *

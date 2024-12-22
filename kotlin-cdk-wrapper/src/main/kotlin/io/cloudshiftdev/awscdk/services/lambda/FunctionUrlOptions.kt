@@ -14,13 +14,12 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // Can be a Function or an Alias
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
  * Function fn;
- * FunctionUrl fnUrl = fn.addFunctionUrl(FunctionUrlOptions.builder()
- * .authType(FunctionUrlAuthType.NONE)
- * .build());
- * CfnOutput.Builder.create(this, "TheUrl")
- * .value(fnUrl.getUrl())
+ * FunctionUrl fnUrl =
+ * fn.addFunctionUrl(FunctionUrlOptions.builder().authType(FunctionUrlAuthType.NONE).build());
+ * Distribution.Builder.create(this, "Distribution")
+ * .defaultBehavior(BehaviorOptions.builder().origin(new FunctionUrlOrigin(fnUrl)).build())
  * .build();
  * ```
  */

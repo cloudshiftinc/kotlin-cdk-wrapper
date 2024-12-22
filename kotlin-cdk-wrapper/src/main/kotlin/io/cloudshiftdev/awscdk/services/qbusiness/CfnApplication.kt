@@ -30,6 +30,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * tiers](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/tiers.html#user-sub-tiers) . You must
  * use the Amazon Q Business console to assign subscription tiers to users.
  *
+ * An Amazon Q Apps service linked role will be created if it's absent in the AWS account when
+ * `QAppsConfiguration` is enabled in the request. For more information, see [Using service-linked
+ * roles for Q
+ * Apps](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/using-service-linked-roles-qapps.html)
+ * .
+ *
+ * When you create an application, Amazon Q Business may securely transmit data for processing from
+ * your selected AWS region, but within your geography. For more information, see [Cross region
+ * inference in Amazon Q
+ * Business](https://docs.aws.amazon.com/amazonq/latest/qbusiness-ug/cross-region-inference.html) .
+ *
  *
  * Example:
  *
@@ -61,6 +72,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .qAppsConfiguration(QAppsConfigurationProperty.builder()
  * .qAppsControlMode("qAppsControlMode")
+ * .build())
+ * .quickSightConfiguration(QuickSightConfigurationProperty.builder()
+ * .clientNamespace("clientNamespace")
  * .build())
  * .roleArn("roleArn")
  * .tags(List.of(CfnTag.builder()
@@ -371,6 +385,34 @@ public open class CfnApplication(
       qAppsConfiguration(QAppsConfigurationProperty(`value`))
 
   /**
+   *
+   */
+  public open fun quickSightConfiguration(): Any? = unwrap(this).getQuickSightConfiguration()
+
+  /**
+   *
+   */
+  public open fun quickSightConfiguration(`value`: IResolvable) {
+    unwrap(this).setQuickSightConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun quickSightConfiguration(`value`: QuickSightConfigurationProperty) {
+    unwrap(this).setQuickSightConfiguration(`value`.let(QuickSightConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("6b7a1e15751a3e4289984a687a250f865c4e2c84e8d2f45a890924b2671389ff")
+  public open
+      fun quickSightConfiguration(`value`: QuickSightConfigurationProperty.Builder.() -> Unit): Unit
+      = quickSightConfiguration(QuickSightConfigurationProperty(`value`))
+
+  /**
    * The Amazon Resource Name (ARN) of an IAM role with permissions to access your Amazon CloudWatch
    * logs and metrics.
    */
@@ -632,6 +674,27 @@ public open class CfnApplication(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("18c33300a4beb62d94a4640db416caae57f9a57dcf8f63c04decb4be4270a95f")
     public fun qAppsConfiguration(qAppsConfiguration: QAppsConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
+     * @param quickSightConfiguration 
+     */
+    public fun quickSightConfiguration(quickSightConfiguration: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
+     * @param quickSightConfiguration 
+     */
+    public fun quickSightConfiguration(quickSightConfiguration: QuickSightConfigurationProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
+     * @param quickSightConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("06005c56037ea7a26e8925e5697032f5549ca20d64282947266875d4932a90c7")
+    public
+        fun quickSightConfiguration(quickSightConfiguration: QuickSightConfigurationProperty.Builder.() -> Unit)
 
     /**
      * The Amazon Resource Name (ARN) of an IAM role with permissions to access your Amazon
@@ -947,6 +1010,32 @@ public open class CfnApplication(
     override
         fun qAppsConfiguration(qAppsConfiguration: QAppsConfigurationProperty.Builder.() -> Unit):
         Unit = qAppsConfiguration(QAppsConfigurationProperty(qAppsConfiguration))
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
+     * @param quickSightConfiguration 
+     */
+    override fun quickSightConfiguration(quickSightConfiguration: IResolvable) {
+      cdkBuilder.quickSightConfiguration(quickSightConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
+     * @param quickSightConfiguration 
+     */
+    override fun quickSightConfiguration(quickSightConfiguration: QuickSightConfigurationProperty) {
+      cdkBuilder.quickSightConfiguration(quickSightConfiguration.let(QuickSightConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
+     * @param quickSightConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("06005c56037ea7a26e8925e5697032f5549ca20d64282947266875d4932a90c7")
+    override
+        fun quickSightConfiguration(quickSightConfiguration: QuickSightConfigurationProperty.Builder.() -> Unit):
+        Unit = quickSightConfiguration(QuickSightConfigurationProperty(quickSightConfiguration))
 
     /**
      * The Amazon Resource Name (ARN) of an IAM role with permissions to access your Amazon
@@ -1506,6 +1595,84 @@ public open class CfnApplication(
           software.amazon.awscdk.services.qbusiness.CfnApplication.QAppsConfigurationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.qbusiness.CfnApplication.QAppsConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * QuickSightConfigurationProperty quickSightConfigurationProperty =
+   * QuickSightConfigurationProperty.builder()
+   * .clientNamespace("clientNamespace")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-application-quicksightconfiguration.html)
+   */
+  public interface QuickSightConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-application-quicksightconfiguration.html#cfn-qbusiness-application-quicksightconfiguration-clientnamespace)
+     */
+    public fun clientNamespace(): String
+
+    /**
+     * A builder for [QuickSightConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientNamespace the value to be set. 
+       */
+      public fun clientNamespace(clientNamespace: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnApplication.QuickSightConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnApplication.QuickSightConfigurationProperty.builder()
+
+      /**
+       * @param clientNamespace the value to be set. 
+       */
+      override fun clientNamespace(clientNamespace: String) {
+        cdkBuilder.clientNamespace(clientNamespace)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnApplication.QuickSightConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnApplication.QuickSightConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        QuickSightConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-application-quicksightconfiguration.html#cfn-qbusiness-application-quicksightconfiguration-clientnamespace)
+       */
+      override fun clientNamespace(): String = unwrap(this).getClientNamespace()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): QuickSightConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnApplication.QuickSightConfigurationProperty):
+          QuickSightConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          QuickSightConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: QuickSightConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnApplication.QuickSightConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnApplication.QuickSightConfigurationProperty
     }
   }
 }

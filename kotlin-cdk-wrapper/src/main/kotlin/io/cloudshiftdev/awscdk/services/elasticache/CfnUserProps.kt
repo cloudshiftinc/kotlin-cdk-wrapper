@@ -62,7 +62,7 @@ public interface CfnUserProps {
   public fun authenticationMode(): Any? = unwrap(this).getAuthenticationMode()
 
   /**
-   * The current supported value is redis.
+   * The current supported values are valkey and redis.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-engine)
    */
@@ -126,7 +126,7 @@ public interface CfnUserProps {
     public fun authenticationMode(authenticationMode: Any)
 
     /**
-     * @param engine The current supported value is redis. 
+     * @param engine The current supported values are valkey and redis. 
      */
     public fun engine(engine: String)
 
@@ -197,7 +197,7 @@ public interface CfnUserProps {
     }
 
     /**
-     * @param engine The current supported value is redis. 
+     * @param engine The current supported values are valkey and redis. 
      */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)
@@ -285,7 +285,7 @@ public interface CfnUserProps {
     override fun authenticationMode(): Any? = unwrap(this).getAuthenticationMode()
 
     /**
-     * The current supported value is redis.
+     * The current supported values are valkey and redis.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-user.html#cfn-elasticache-user-engine)
      */

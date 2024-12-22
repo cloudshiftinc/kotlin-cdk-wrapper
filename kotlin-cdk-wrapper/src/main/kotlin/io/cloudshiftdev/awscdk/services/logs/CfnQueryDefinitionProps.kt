@@ -41,8 +41,8 @@ public interface CfnQueryDefinitionProps {
    *
    *
    * You can use the name to create a folder structure for your queries. To create a folder, use a
-   * forward slash (/) to prefix your desired query name with your desired folder name. For example, `/
-   * *folder-name* / *query-name*` .
+   * forward slash (/) to prefix your desired query name with your desired folder name. For example,
+   * `*folder-name* / *query-name*` .
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-querydefinition.html#cfn-logs-querydefinition-name)
@@ -81,7 +81,7 @@ public interface CfnQueryDefinitionProps {
      *
      * You can use the name to create a folder structure for your queries. To create a folder, use a
      * forward slash (/) to prefix your desired query name with your desired folder name. For example,
-     * `/ *folder-name* / *query-name*` .
+     * `*folder-name* / *query-name*` .
      */
     public fun name(name: String)
 
@@ -117,7 +117,7 @@ public interface CfnQueryDefinitionProps {
      *
      * You can use the name to create a folder structure for your queries. To create a folder, use a
      * forward slash (/) to prefix your desired query name with your desired folder name. For example,
-     * `/ *folder-name* / *query-name*` .
+     * `*folder-name* / *query-name*` .
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
@@ -153,7 +153,7 @@ public interface CfnQueryDefinitionProps {
      *
      * You can use the name to create a folder structure for your queries. To create a folder, use a
      * forward slash (/) to prefix your desired query name with your desired folder name. For example,
-     * `/ *folder-name* / *query-name*` .
+     * `*folder-name* / *query-name*` .
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-querydefinition.html#cfn-logs-querydefinition-name)

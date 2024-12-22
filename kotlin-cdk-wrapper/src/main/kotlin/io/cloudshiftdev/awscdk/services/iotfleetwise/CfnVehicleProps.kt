@@ -41,15 +41,15 @@ import kotlin.collections.Map
  */
 public interface CfnVehicleProps {
   /**
-   * (Optional) An option to create a new AWS IoT thing when creating a vehicle, or to validate an
-   * existing thing as a vehicle.
+   * An option to create a new AWS IoT thing when creating a vehicle, or to validate an existing
+   * thing as a vehicle.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html#cfn-iotfleetwise-vehicle-associationbehavior)
    */
   public fun associationBehavior(): String? = unwrap(this).getAssociationBehavior()
 
   /**
-   * (Optional) Static information about a vehicle in a key-value pair.
+   * Static information about a vehicle in a key-value pair.
    *
    * For example: `"engine Type"` : `"v6"`
    *
@@ -80,7 +80,7 @@ public interface CfnVehicleProps {
   public fun name(): String
 
   /**
-   * (Optional) Metadata which can be used to manage the vehicle.
+   * Metadata which can be used to manage the vehicle.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html#cfn-iotfleetwise-vehicle-tags)
    */
@@ -92,19 +92,19 @@ public interface CfnVehicleProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param associationBehavior (Optional) An option to create a new AWS IoT thing when creating a
-     * vehicle, or to validate an existing thing as a vehicle.
+     * @param associationBehavior An option to create a new AWS IoT thing when creating a vehicle,
+     * or to validate an existing thing as a vehicle.
      */
     public fun associationBehavior(associationBehavior: String)
 
     /**
-     * @param attributes (Optional) Static information about a vehicle in a key-value pair.
+     * @param attributes Static information about a vehicle in a key-value pair.
      * For example: `"engine Type"` : `"v6"`
      */
     public fun attributes(attributes: IResolvable)
 
     /**
-     * @param attributes (Optional) Static information about a vehicle in a key-value pair.
+     * @param attributes Static information about a vehicle in a key-value pair.
      * For example: `"engine Type"` : `"v6"`
      */
     public fun attributes(attributes: Map<String, String>)
@@ -127,12 +127,12 @@ public interface CfnVehicleProps {
     public fun name(name: String)
 
     /**
-     * @param tags (Optional) Metadata which can be used to manage the vehicle.
+     * @param tags Metadata which can be used to manage the vehicle.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags (Optional) Metadata which can be used to manage the vehicle.
+     * @param tags Metadata which can be used to manage the vehicle.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -142,15 +142,15 @@ public interface CfnVehicleProps {
         software.amazon.awscdk.services.iotfleetwise.CfnVehicleProps.builder()
 
     /**
-     * @param associationBehavior (Optional) An option to create a new AWS IoT thing when creating a
-     * vehicle, or to validate an existing thing as a vehicle.
+     * @param associationBehavior An option to create a new AWS IoT thing when creating a vehicle,
+     * or to validate an existing thing as a vehicle.
      */
     override fun associationBehavior(associationBehavior: String) {
       cdkBuilder.associationBehavior(associationBehavior)
     }
 
     /**
-     * @param attributes (Optional) Static information about a vehicle in a key-value pair.
+     * @param attributes Static information about a vehicle in a key-value pair.
      * For example: `"engine Type"` : `"v6"`
      */
     override fun attributes(attributes: IResolvable) {
@@ -158,7 +158,7 @@ public interface CfnVehicleProps {
     }
 
     /**
-     * @param attributes (Optional) Static information about a vehicle in a key-value pair.
+     * @param attributes Static information about a vehicle in a key-value pair.
      * For example: `"engine Type"` : `"v6"`
      */
     override fun attributes(attributes: Map<String, String>) {
@@ -189,14 +189,14 @@ public interface CfnVehicleProps {
     }
 
     /**
-     * @param tags (Optional) Metadata which can be used to manage the vehicle.
+     * @param tags Metadata which can be used to manage the vehicle.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags (Optional) Metadata which can be used to manage the vehicle.
+     * @param tags Metadata which can be used to manage the vehicle.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -209,15 +209,15 @@ public interface CfnVehicleProps {
   ) : CdkObject(cdkObject),
       CfnVehicleProps {
     /**
-     * (Optional) An option to create a new AWS IoT thing when creating a vehicle, or to validate an
-     * existing thing as a vehicle.
+     * An option to create a new AWS IoT thing when creating a vehicle, or to validate an existing
+     * thing as a vehicle.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html#cfn-iotfleetwise-vehicle-associationbehavior)
      */
     override fun associationBehavior(): String? = unwrap(this).getAssociationBehavior()
 
     /**
-     * (Optional) Static information about a vehicle in a key-value pair.
+     * Static information about a vehicle in a key-value pair.
      *
      * For example: `"engine Type"` : `"v6"`
      *
@@ -248,7 +248,7 @@ public interface CfnVehicleProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * (Optional) Metadata which can be used to manage the vehicle.
+     * Metadata which can be used to manage the vehicle.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-vehicle.html#cfn-iotfleetwise-vehicle-tags)
      */

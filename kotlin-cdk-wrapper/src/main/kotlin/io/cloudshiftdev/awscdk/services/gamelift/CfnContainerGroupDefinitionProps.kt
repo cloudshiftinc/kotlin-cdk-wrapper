@@ -12,6 +12,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnContainerGroupDefinition`.
@@ -24,18 +25,50 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.services.gamelift.*;
  * CfnContainerGroupDefinitionProps cfnContainerGroupDefinitionProps =
  * CfnContainerGroupDefinitionProps.builder()
- * .containerDefinitions(List.of(ContainerDefinitionProperty.builder()
+ * .name("name")
+ * .operatingSystem("operatingSystem")
+ * .totalMemoryLimitMebibytes(123)
+ * .totalVcpuLimit(123)
+ * // the properties below are optional
+ * .containerGroupType("containerGroupType")
+ * .gameServerContainerDefinition(GameServerContainerDefinitionProperty.builder()
  * .containerName("containerName")
  * .imageUri("imageUri")
+ * .serverSdkVersion("serverSdkVersion")
  * // the properties below are optional
- * .command(List.of("command"))
- * .cpu(123)
  * .dependsOn(List.of(ContainerDependencyProperty.builder()
  * .condition("condition")
  * .containerName("containerName")
  * .build()))
- * .entryPoint(List.of("entryPoint"))
- * .environment(List.of(ContainerEnvironmentProperty.builder()
+ * .environmentOverride(List.of(ContainerEnvironmentProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .mountPoints(List.of(ContainerMountPointProperty.builder()
+ * .instancePath("instancePath")
+ * // the properties below are optional
+ * .accessLevel("accessLevel")
+ * .containerPath("containerPath")
+ * .build()))
+ * .portConfiguration(PortConfigurationProperty.builder()
+ * .containerPortRanges(List.of(ContainerPortRangeProperty.builder()
+ * .fromPort(123)
+ * .protocol("protocol")
+ * .toPort(123)
+ * .build()))
+ * .build())
+ * .resolvedImageDigest("resolvedImageDigest")
+ * .build())
+ * .sourceVersionNumber(123)
+ * .supportContainerDefinitions(List.of(SupportContainerDefinitionProperty.builder()
+ * .containerName("containerName")
+ * .imageUri("imageUri")
+ * // the properties below are optional
+ * .dependsOn(List.of(ContainerDependencyProperty.builder()
+ * .condition("condition")
+ * .containerName("containerName")
+ * .build()))
+ * .environmentOverride(List.of(ContainerEnvironmentProperty.builder()
  * .name("name")
  * .value("value")
  * .build()))
@@ -48,10 +81,13 @@ import kotlin.collections.List
  * .startPeriod(123)
  * .timeout(123)
  * .build())
- * .memoryLimits(MemoryLimitsProperty.builder()
- * .hardLimit(123)
- * .softLimit(123)
- * .build())
+ * .memoryHardLimitMebibytes(123)
+ * .mountPoints(List.of(ContainerMountPointProperty.builder()
+ * .instancePath("instancePath")
+ * // the properties below are optional
+ * .accessLevel("accessLevel")
+ * .containerPath("containerPath")
+ * .build()))
  * .portConfiguration(PortConfigurationProperty.builder()
  * .containerPortRanges(List.of(ContainerPortRangeProperty.builder()
  * .fromPort(123)
@@ -60,18 +96,13 @@ import kotlin.collections.List
  * .build()))
  * .build())
  * .resolvedImageDigest("resolvedImageDigest")
- * .workingDirectory("workingDirectory")
+ * .vcpu(123)
  * .build()))
- * .name("name")
- * .operatingSystem("operatingSystem")
- * .totalCpuLimit(123)
- * .totalMemoryLimit(123)
- * // the properties below are optional
- * .schedulingStrategy("schedulingStrategy")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .versionDescription("versionDescription")
  * .build();
  * ```
  *
@@ -79,11 +110,24 @@ import kotlin.collections.List
  */
 public interface CfnContainerGroupDefinitionProps {
   /**
-   * The set of container definitions that are included in the container group.
+   * The type of container group.
    *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-containerdefinitions)
+   * Container group type determines how Amazon GameLift deploys the container group on each fleet
+   * instance.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-containergrouptype)
    */
-  public fun containerDefinitions(): Any
+  public fun containerGroupType(): String? = unwrap(this).getContainerGroupType()
+
+  /**
+   * The definition for the game server container in this group.
+   *
+   * This property is used only when the container group type is `GAME_SERVER` . This container
+   * definition specifies a container image with the game server build.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-gameservercontainerdefinition)
+   */
+  public fun gameServerContainerDefinition(): Any? = unwrap(this).getGameServerContainerDefinition()
 
   /**
    * A descriptive identifier for the container group definition.
@@ -95,12 +139,12 @@ public interface CfnContainerGroupDefinitionProps {
   public fun name(): String
 
   /**
-   * The platform required for all containers in the container group definition.
+   * The platform that all containers in the container group definition run on.
    *
    *
    * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
    * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For game
-   * servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the game
+   * servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x, first update the game
    * server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
    * GameLift server SDK version
    * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
@@ -111,14 +155,21 @@ public interface CfnContainerGroupDefinitionProps {
   public fun operatingSystem(): String
 
   /**
-   * The method for deploying the container group across fleet instances.
+   * A specific ContainerGroupDefinition version to be updated.
    *
-   * A replica container group might have multiple copies on each fleet instance. A daemon container
-   * group maintains only one copy per fleet instance.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-schedulingstrategy)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-sourceversionnumber)
    */
-  public fun schedulingStrategy(): String? = unwrap(this).getSchedulingStrategy()
+  public fun sourceVersionNumber(): Number? = unwrap(this).getSourceVersionNumber()
+
+  /**
+   * The set of definitions for support containers in this group.
+   *
+   * A container group definition might have zero support container definitions. Support container
+   * can be used in any type of container group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-supportcontainerdefinitions)
+   */
+  public fun supportContainerDefinitions(): Any? = unwrap(this).getSupportContainerDefinitions()
 
   /**
    * An array of key-value pairs to apply to this resource.
@@ -128,39 +179,37 @@ public interface CfnContainerGroupDefinitionProps {
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * The amount of CPU units on a fleet instance to allocate for the container group.
-   *
-   * All containers in the group share these resources. This property is an integer value in CPU
-   * units (1 vCPU is equal to 1024 CPU units).
-   *
-   * You can set additional limits for each `ContainerDefinition` in the group. If individual
-   * containers have limits, this value must be equal to or greater than the sum of all
-   * container-specific CPU limits in the group.
-   *
-   * For more details on memory allocation, see the [Container fleet design
-   * guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/containers-design-fleet) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalcpulimit)
-   */
-  public fun totalCpuLimit(): Number
-
-  /**
    * The amount of memory (in MiB) on a fleet instance to allocate for the container group.
    *
    * All containers in the group share these resources.
    *
-   * You can set additional limits for each `ContainerDefinition` in the group. If individual
-   * containers have limits, this value must meet the following requirements:
+   * You can set a limit for each container definition in the group. If individual containers have
+   * limits, this total value must be greater than any individual container's memory limit.
    *
-   * * Equal to or greater than the sum of all container-specific soft memory limits in the group.
-   * * Equal to or greater than any container-specific hard limits in the group.
-   *
-   * For more details on memory allocation, see the [Container fleet design
-   * guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/containers-design-fleet) .
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalmemorylimit)
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalmemorylimitmebibytes)
    */
-  public fun totalMemoryLimit(): Number
+  public fun totalMemoryLimitMebibytes(): Number
+
+  /**
+   * The amount of vCPU units on a fleet instance to allocate for the container group (1 vCPU is
+   * equal to 1024 CPU units).
+   *
+   * All containers in the group share these resources. You can set a limit for each container
+   * definition in the group. If individual containers have limits, this total value must be equal to
+   * or greater than the sum of the limits for each container in the group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalvcpulimit)
+   */
+  public fun totalVcpuLimit(): Number
+
+  /**
+   * An optional description that was provided for a container group definition update.
+   *
+   * Each version can have a unique description.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-versiondescription)
+   */
+  public fun versionDescription(): String? = unwrap(this).getVersionDescription()
 
   /**
    * A builder for [CfnContainerGroupDefinitionProps]
@@ -168,22 +217,39 @@ public interface CfnContainerGroupDefinitionProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param containerDefinitions The set of container definitions that are included in the
-     * container group. 
+     * @param containerGroupType The type of container group.
+     * Container group type determines how Amazon GameLift deploys the container group on each fleet
+     * instance.
      */
-    public fun containerDefinitions(containerDefinitions: IResolvable)
+    public fun containerGroupType(containerGroupType: String)
 
     /**
-     * @param containerDefinitions The set of container definitions that are included in the
-     * container group. 
+     * @param gameServerContainerDefinition The definition for the game server container in this
+     * group.
+     * This property is used only when the container group type is `GAME_SERVER` . This container
+     * definition specifies a container image with the game server build.
      */
-    public fun containerDefinitions(containerDefinitions: List<Any>)
+    public fun gameServerContainerDefinition(gameServerContainerDefinition: IResolvable)
 
     /**
-     * @param containerDefinitions The set of container definitions that are included in the
-     * container group. 
+     * @param gameServerContainerDefinition The definition for the game server container in this
+     * group.
+     * This property is used only when the container group type is `GAME_SERVER` . This container
+     * definition specifies a container image with the game server build.
      */
-    public fun containerDefinitions(vararg containerDefinitions: Any)
+    public
+        fun gameServerContainerDefinition(gameServerContainerDefinition: CfnContainerGroupDefinition.GameServerContainerDefinitionProperty)
+
+    /**
+     * @param gameServerContainerDefinition The definition for the game server container in this
+     * group.
+     * This property is used only when the container group type is `GAME_SERVER` . This container
+     * definition specifies a container image with the game server build.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3cf7546d1b262c380d1d87329314b91139b26f392e21caf28b685aca186ec6d2")
+    public
+        fun gameServerContainerDefinition(gameServerContainerDefinition: CfnContainerGroupDefinition.GameServerContainerDefinitionProperty.Builder.() -> Unit)
 
     /**
      * @param name A descriptive identifier for the container group definition. 
@@ -192,12 +258,12 @@ public interface CfnContainerGroupDefinitionProps {
     public fun name(name: String)
 
     /**
-     * @param operatingSystem The platform required for all containers in the container group
-     * definition. 
+     * @param operatingSystem The platform that all containers in the container group definition run
+     * on. 
      *
      * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
      * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
-     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x, first update the
      * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
      * GameLift server SDK version
      * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
@@ -205,12 +271,33 @@ public interface CfnContainerGroupDefinitionProps {
     public fun operatingSystem(operatingSystem: String)
 
     /**
-     * @param schedulingStrategy The method for deploying the container group across fleet
-     * instances.
-     * A replica container group might have multiple copies on each fleet instance. A daemon
-     * container group maintains only one copy per fleet instance.
+     * @param sourceVersionNumber A specific ContainerGroupDefinition version to be updated.
      */
-    public fun schedulingStrategy(schedulingStrategy: String)
+    public fun sourceVersionNumber(sourceVersionNumber: Number)
+
+    /**
+     * @param supportContainerDefinitions The set of definitions for support containers in this
+     * group.
+     * A container group definition might have zero support container definitions. Support container
+     * can be used in any type of container group.
+     */
+    public fun supportContainerDefinitions(supportContainerDefinitions: IResolvable)
+
+    /**
+     * @param supportContainerDefinitions The set of definitions for support containers in this
+     * group.
+     * A container group definition might have zero support container definitions. Support container
+     * can be used in any type of container group.
+     */
+    public fun supportContainerDefinitions(supportContainerDefinitions: List<Any>)
+
+    /**
+     * @param supportContainerDefinitions The set of definitions for support containers in this
+     * group.
+     * A container group definition might have zero support container definitions. Support container
+     * can be used in any type of container group.
+     */
+    public fun supportContainerDefinitions(vararg supportContainerDefinitions: Any)
 
     /**
      * @param tags An array of key-value pairs to apply to this resource.
@@ -223,35 +310,30 @@ public interface CfnContainerGroupDefinitionProps {
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param totalCpuLimit The amount of CPU units on a fleet instance to allocate for the
-     * container group. 
-     * All containers in the group share these resources. This property is an integer value in CPU
-     * units (1 vCPU is equal to 1024 CPU units).
-     *
-     * You can set additional limits for each `ContainerDefinition` in the group. If individual
-     * containers have limits, this value must be equal to or greater than the sum of all
-     * container-specific CPU limits in the group.
-     *
-     * For more details on memory allocation, see the [Container fleet design
-     * guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/containers-design-fleet) .
-     */
-    public fun totalCpuLimit(totalCpuLimit: Number)
-
-    /**
-     * @param totalMemoryLimit The amount of memory (in MiB) on a fleet instance to allocate for the
-     * container group. 
+     * @param totalMemoryLimitMebibytes The amount of memory (in MiB) on a fleet instance to
+     * allocate for the container group. 
      * All containers in the group share these resources.
      *
-     * You can set additional limits for each `ContainerDefinition` in the group. If individual
-     * containers have limits, this value must meet the following requirements:
-     *
-     * * Equal to or greater than the sum of all container-specific soft memory limits in the group.
-     * * Equal to or greater than any container-specific hard limits in the group.
-     *
-     * For more details on memory allocation, see the [Container fleet design
-     * guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/containers-design-fleet) .
+     * You can set a limit for each container definition in the group. If individual containers have
+     * limits, this total value must be greater than any individual container's memory limit.
      */
-    public fun totalMemoryLimit(totalMemoryLimit: Number)
+    public fun totalMemoryLimitMebibytes(totalMemoryLimitMebibytes: Number)
+
+    /**
+     * @param totalVcpuLimit The amount of vCPU units on a fleet instance to allocate for the
+     * container group (1 vCPU is equal to 1024 CPU units). 
+     * All containers in the group share these resources. You can set a limit for each container
+     * definition in the group. If individual containers have limits, this total value must be equal to
+     * or greater than the sum of the limits for each container in the group.
+     */
+    public fun totalVcpuLimit(totalVcpuLimit: Number)
+
+    /**
+     * @param versionDescription An optional description that was provided for a container group
+     * definition update.
+     * Each version can have a unique description.
+     */
+    public fun versionDescription(versionDescription: String)
   }
 
   private class BuilderImpl : Builder {
@@ -260,27 +342,47 @@ public interface CfnContainerGroupDefinitionProps {
         software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinitionProps.builder()
 
     /**
-     * @param containerDefinitions The set of container definitions that are included in the
-     * container group. 
+     * @param containerGroupType The type of container group.
+     * Container group type determines how Amazon GameLift deploys the container group on each fleet
+     * instance.
      */
-    override fun containerDefinitions(containerDefinitions: IResolvable) {
-      cdkBuilder.containerDefinitions(containerDefinitions.let(IResolvable.Companion::unwrap))
+    override fun containerGroupType(containerGroupType: String) {
+      cdkBuilder.containerGroupType(containerGroupType)
     }
 
     /**
-     * @param containerDefinitions The set of container definitions that are included in the
-     * container group. 
+     * @param gameServerContainerDefinition The definition for the game server container in this
+     * group.
+     * This property is used only when the container group type is `GAME_SERVER` . This container
+     * definition specifies a container image with the game server build.
      */
-    override fun containerDefinitions(containerDefinitions: List<Any>) {
-      cdkBuilder.containerDefinitions(containerDefinitions.map{CdkObjectWrappers.unwrap(it)})
+    override fun gameServerContainerDefinition(gameServerContainerDefinition: IResolvable) {
+      cdkBuilder.gameServerContainerDefinition(gameServerContainerDefinition.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param containerDefinitions The set of container definitions that are included in the
-     * container group. 
+     * @param gameServerContainerDefinition The definition for the game server container in this
+     * group.
+     * This property is used only when the container group type is `GAME_SERVER` . This container
+     * definition specifies a container image with the game server build.
      */
-    override fun containerDefinitions(vararg containerDefinitions: Any): Unit =
-        containerDefinitions(containerDefinitions.toList())
+    override
+        fun gameServerContainerDefinition(gameServerContainerDefinition: CfnContainerGroupDefinition.GameServerContainerDefinitionProperty) {
+      cdkBuilder.gameServerContainerDefinition(gameServerContainerDefinition.let(CfnContainerGroupDefinition.GameServerContainerDefinitionProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param gameServerContainerDefinition The definition for the game server container in this
+     * group.
+     * This property is used only when the container group type is `GAME_SERVER` . This container
+     * definition specifies a container image with the game server build.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3cf7546d1b262c380d1d87329314b91139b26f392e21caf28b685aca186ec6d2")
+    override
+        fun gameServerContainerDefinition(gameServerContainerDefinition: CfnContainerGroupDefinition.GameServerContainerDefinitionProperty.Builder.() -> Unit):
+        Unit =
+        gameServerContainerDefinition(CfnContainerGroupDefinition.GameServerContainerDefinitionProperty(gameServerContainerDefinition))
 
     /**
      * @param name A descriptive identifier for the container group definition. 
@@ -291,12 +393,12 @@ public interface CfnContainerGroupDefinitionProps {
     }
 
     /**
-     * @param operatingSystem The platform required for all containers in the container group
-     * definition. 
+     * @param operatingSystem The platform that all containers in the container group definition run
+     * on. 
      *
      * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
      * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
-     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x, first update the
      * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
      * GameLift server SDK version
      * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
@@ -306,14 +408,40 @@ public interface CfnContainerGroupDefinitionProps {
     }
 
     /**
-     * @param schedulingStrategy The method for deploying the container group across fleet
-     * instances.
-     * A replica container group might have multiple copies on each fleet instance. A daemon
-     * container group maintains only one copy per fleet instance.
+     * @param sourceVersionNumber A specific ContainerGroupDefinition version to be updated.
      */
-    override fun schedulingStrategy(schedulingStrategy: String) {
-      cdkBuilder.schedulingStrategy(schedulingStrategy)
+    override fun sourceVersionNumber(sourceVersionNumber: Number) {
+      cdkBuilder.sourceVersionNumber(sourceVersionNumber)
     }
+
+    /**
+     * @param supportContainerDefinitions The set of definitions for support containers in this
+     * group.
+     * A container group definition might have zero support container definitions. Support container
+     * can be used in any type of container group.
+     */
+    override fun supportContainerDefinitions(supportContainerDefinitions: IResolvable) {
+      cdkBuilder.supportContainerDefinitions(supportContainerDefinitions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param supportContainerDefinitions The set of definitions for support containers in this
+     * group.
+     * A container group definition might have zero support container definitions. Support container
+     * can be used in any type of container group.
+     */
+    override fun supportContainerDefinitions(supportContainerDefinitions: List<Any>) {
+      cdkBuilder.supportContainerDefinitions(supportContainerDefinitions.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param supportContainerDefinitions The set of definitions for support containers in this
+     * group.
+     * A container group definition might have zero support container definitions. Support container
+     * can be used in any type of container group.
+     */
+    override fun supportContainerDefinitions(vararg supportContainerDefinitions: Any): Unit =
+        supportContainerDefinitions(supportContainerDefinitions.toList())
 
     /**
      * @param tags An array of key-value pairs to apply to this resource.
@@ -328,38 +456,35 @@ public interface CfnContainerGroupDefinitionProps {
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param totalCpuLimit The amount of CPU units on a fleet instance to allocate for the
-     * container group. 
-     * All containers in the group share these resources. This property is an integer value in CPU
-     * units (1 vCPU is equal to 1024 CPU units).
+     * @param totalMemoryLimitMebibytes The amount of memory (in MiB) on a fleet instance to
+     * allocate for the container group. 
+     * All containers in the group share these resources.
      *
-     * You can set additional limits for each `ContainerDefinition` in the group. If individual
-     * containers have limits, this value must be equal to or greater than the sum of all
-     * container-specific CPU limits in the group.
-     *
-     * For more details on memory allocation, see the [Container fleet design
-     * guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/containers-design-fleet) .
+     * You can set a limit for each container definition in the group. If individual containers have
+     * limits, this total value must be greater than any individual container's memory limit.
      */
-    override fun totalCpuLimit(totalCpuLimit: Number) {
-      cdkBuilder.totalCpuLimit(totalCpuLimit)
+    override fun totalMemoryLimitMebibytes(totalMemoryLimitMebibytes: Number) {
+      cdkBuilder.totalMemoryLimitMebibytes(totalMemoryLimitMebibytes)
     }
 
     /**
-     * @param totalMemoryLimit The amount of memory (in MiB) on a fleet instance to allocate for the
-     * container group. 
-     * All containers in the group share these resources.
-     *
-     * You can set additional limits for each `ContainerDefinition` in the group. If individual
-     * containers have limits, this value must meet the following requirements:
-     *
-     * * Equal to or greater than the sum of all container-specific soft memory limits in the group.
-     * * Equal to or greater than any container-specific hard limits in the group.
-     *
-     * For more details on memory allocation, see the [Container fleet design
-     * guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/containers-design-fleet) .
+     * @param totalVcpuLimit The amount of vCPU units on a fleet instance to allocate for the
+     * container group (1 vCPU is equal to 1024 CPU units). 
+     * All containers in the group share these resources. You can set a limit for each container
+     * definition in the group. If individual containers have limits, this total value must be equal to
+     * or greater than the sum of the limits for each container in the group.
      */
-    override fun totalMemoryLimit(totalMemoryLimit: Number) {
-      cdkBuilder.totalMemoryLimit(totalMemoryLimit)
+    override fun totalVcpuLimit(totalVcpuLimit: Number) {
+      cdkBuilder.totalVcpuLimit(totalVcpuLimit)
+    }
+
+    /**
+     * @param versionDescription An optional description that was provided for a container group
+     * definition update.
+     * Each version can have a unique description.
+     */
+    override fun versionDescription(versionDescription: String) {
+      cdkBuilder.versionDescription(versionDescription)
     }
 
     public fun build(): software.amazon.awscdk.services.gamelift.CfnContainerGroupDefinitionProps =
@@ -371,11 +496,25 @@ public interface CfnContainerGroupDefinitionProps {
   ) : CdkObject(cdkObject),
       CfnContainerGroupDefinitionProps {
     /**
-     * The set of container definitions that are included in the container group.
+     * The type of container group.
      *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-containerdefinitions)
+     * Container group type determines how Amazon GameLift deploys the container group on each fleet
+     * instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-containergrouptype)
      */
-    override fun containerDefinitions(): Any = unwrap(this).getContainerDefinitions()
+    override fun containerGroupType(): String? = unwrap(this).getContainerGroupType()
+
+    /**
+     * The definition for the game server container in this group.
+     *
+     * This property is used only when the container group type is `GAME_SERVER` . This container
+     * definition specifies a container image with the game server build.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-gameservercontainerdefinition)
+     */
+    override fun gameServerContainerDefinition(): Any? =
+        unwrap(this).getGameServerContainerDefinition()
 
     /**
      * A descriptive identifier for the container group definition.
@@ -387,12 +526,12 @@ public interface CfnContainerGroupDefinitionProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
-     * The platform required for all containers in the container group definition.
+     * The platform that all containers in the container group definition run on.
      *
      *
      * Amazon Linux 2 (AL2) will reach end of support on 6/30/2025. See more details in the [Amazon
      * Linux 2 FAQs](https://docs.aws.amazon.com/https://aws.amazon.com/amazon-linux-2/faqs/) . For
-     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x., first update the
+     * game servers that are hosted on AL2 and use Amazon GameLift server SDK 4.x, first update the
      * game server build to server SDK 5.x, and then deploy to AL2023 instances. See [Migrate to Amazon
      * GameLift server SDK version
      * 5.](https://docs.aws.amazon.com/gamelift/latest/developerguide/reference-serversdk5-migration.html)
@@ -403,14 +542,21 @@ public interface CfnContainerGroupDefinitionProps {
     override fun operatingSystem(): String = unwrap(this).getOperatingSystem()
 
     /**
-     * The method for deploying the container group across fleet instances.
+     * A specific ContainerGroupDefinition version to be updated.
      *
-     * A replica container group might have multiple copies on each fleet instance. A daemon
-     * container group maintains only one copy per fleet instance.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-schedulingstrategy)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-sourceversionnumber)
      */
-    override fun schedulingStrategy(): String? = unwrap(this).getSchedulingStrategy()
+    override fun sourceVersionNumber(): Number? = unwrap(this).getSourceVersionNumber()
+
+    /**
+     * The set of definitions for support containers in this group.
+     *
+     * A container group definition might have zero support container definitions. Support container
+     * can be used in any type of container group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-supportcontainerdefinitions)
+     */
+    override fun supportContainerDefinitions(): Any? = unwrap(this).getSupportContainerDefinitions()
 
     /**
      * An array of key-value pairs to apply to this resource.
@@ -420,39 +566,37 @@ public interface CfnContainerGroupDefinitionProps {
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * The amount of CPU units on a fleet instance to allocate for the container group.
-     *
-     * All containers in the group share these resources. This property is an integer value in CPU
-     * units (1 vCPU is equal to 1024 CPU units).
-     *
-     * You can set additional limits for each `ContainerDefinition` in the group. If individual
-     * containers have limits, this value must be equal to or greater than the sum of all
-     * container-specific CPU limits in the group.
-     *
-     * For more details on memory allocation, see the [Container fleet design
-     * guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/containers-design-fleet) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalcpulimit)
-     */
-    override fun totalCpuLimit(): Number = unwrap(this).getTotalCpuLimit()
-
-    /**
      * The amount of memory (in MiB) on a fleet instance to allocate for the container group.
      *
      * All containers in the group share these resources.
      *
-     * You can set additional limits for each `ContainerDefinition` in the group. If individual
-     * containers have limits, this value must meet the following requirements:
+     * You can set a limit for each container definition in the group. If individual containers have
+     * limits, this total value must be greater than any individual container's memory limit.
      *
-     * * Equal to or greater than the sum of all container-specific soft memory limits in the group.
-     * * Equal to or greater than any container-specific hard limits in the group.
-     *
-     * For more details on memory allocation, see the [Container fleet design
-     * guide](https://docs.aws.amazon.com/gamelift/latest/developerguide/containers-design-fleet) .
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalmemorylimit)
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalmemorylimitmebibytes)
      */
-    override fun totalMemoryLimit(): Number = unwrap(this).getTotalMemoryLimit()
+    override fun totalMemoryLimitMebibytes(): Number = unwrap(this).getTotalMemoryLimitMebibytes()
+
+    /**
+     * The amount of vCPU units on a fleet instance to allocate for the container group (1 vCPU is
+     * equal to 1024 CPU units).
+     *
+     * All containers in the group share these resources. You can set a limit for each container
+     * definition in the group. If individual containers have limits, this total value must be equal to
+     * or greater than the sum of the limits for each container in the group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-totalvcpulimit)
+     */
+    override fun totalVcpuLimit(): Number = unwrap(this).getTotalVcpuLimit()
+
+    /**
+     * An optional description that was provided for a container group definition update.
+     *
+     * Each version can have a unique description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-gamelift-containergroupdefinition.html#cfn-gamelift-containergroupdefinition-versiondescription)
+     */
+    override fun versionDescription(): String? = unwrap(this).getVersionDescription()
   }
 
   public companion object {

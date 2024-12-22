@@ -85,6 +85,23 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .accountTargeting("accountTargeting")
  * .emptyTargetResolutionMode("emptyTargetResolutionMode")
  * .build())
+ * .experimentReportConfiguration(ExperimentTemplateExperimentReportConfigurationProperty.builder()
+ * .dataSources(DataSourcesProperty.builder()
+ * .cloudWatchDashboards(List.of(CloudWatchDashboardProperty.builder()
+ * .dashboardIdentifier("dashboardIdentifier")
+ * .build()))
+ * .build())
+ * .outputs(OutputsProperty.builder()
+ * .experimentReportS3Configuration(ExperimentReportS3ConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .postExperimentDuration("postExperimentDuration")
+ * .preExperimentDuration("preExperimentDuration")
+ * .build())
  * .logConfiguration(ExperimentTemplateLogConfigurationProperty.builder()
  * .logSchemaVersion(123)
  * // the properties below are optional
@@ -182,6 +199,37 @@ public open class CfnExperimentTemplate(
   public open
       fun experimentOptions(`value`: ExperimentTemplateExperimentOptionsProperty.Builder.() -> Unit):
       Unit = experimentOptions(ExperimentTemplateExperimentOptionsProperty(`value`))
+
+  /**
+   * Describes the report configuration for the experiment template.
+   */
+  public open fun experimentReportConfiguration(): Any? =
+      unwrap(this).getExperimentReportConfiguration()
+
+  /**
+   * Describes the report configuration for the experiment template.
+   */
+  public open fun experimentReportConfiguration(`value`: IResolvable) {
+    unwrap(this).setExperimentReportConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Describes the report configuration for the experiment template.
+   */
+  public open
+      fun experimentReportConfiguration(`value`: ExperimentTemplateExperimentReportConfigurationProperty) {
+    unwrap(this).setExperimentReportConfiguration(`value`.let(ExperimentTemplateExperimentReportConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * Describes the report configuration for the experiment template.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("2a9dfa5f8b2b175cd231cd9ce3cba74d0de95bc0a29008bde5ec6addffec2df7")
+  public open
+      fun experimentReportConfiguration(`value`: ExperimentTemplateExperimentReportConfigurationProperty.Builder.() -> Unit):
+      Unit =
+      experimentReportConfiguration(ExperimentTemplateExperimentReportConfigurationProperty(`value`))
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -349,6 +397,37 @@ public open class CfnExperimentTemplate(
         fun experimentOptions(experimentOptions: ExperimentTemplateExperimentOptionsProperty.Builder.() -> Unit)
 
     /**
+     * Describes the report configuration for the experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentreportconfiguration)
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template. 
+     */
+    public fun experimentReportConfiguration(experimentReportConfiguration: IResolvable)
+
+    /**
+     * Describes the report configuration for the experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentreportconfiguration)
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template. 
+     */
+    public
+        fun experimentReportConfiguration(experimentReportConfiguration: ExperimentTemplateExperimentReportConfigurationProperty)
+
+    /**
+     * Describes the report configuration for the experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentreportconfiguration)
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("40ef95e0f5f0afcfecc59984e1d723f37ebec959484a96717b4282a71f8d04f3")
+    public
+        fun experimentReportConfiguration(experimentReportConfiguration: ExperimentTemplateExperimentReportConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * The configuration for experiment logging.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-logconfiguration)
@@ -502,6 +581,43 @@ public open class CfnExperimentTemplate(
         Unit = experimentOptions(ExperimentTemplateExperimentOptionsProperty(experimentOptions))
 
     /**
+     * Describes the report configuration for the experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentreportconfiguration)
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template. 
+     */
+    override fun experimentReportConfiguration(experimentReportConfiguration: IResolvable) {
+      cdkBuilder.experimentReportConfiguration(experimentReportConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Describes the report configuration for the experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentreportconfiguration)
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template. 
+     */
+    override
+        fun experimentReportConfiguration(experimentReportConfiguration: ExperimentTemplateExperimentReportConfigurationProperty) {
+      cdkBuilder.experimentReportConfiguration(experimentReportConfiguration.let(ExperimentTemplateExperimentReportConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * Describes the report configuration for the experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentreportconfiguration)
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("40ef95e0f5f0afcfecc59984e1d723f37ebec959484a96717b4282a71f8d04f3")
+    override
+        fun experimentReportConfiguration(experimentReportConfiguration: ExperimentTemplateExperimentReportConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        experimentReportConfiguration(ExperimentTemplateExperimentReportConfigurationProperty(experimentReportConfiguration))
+
+    /**
      * The configuration for experiment logging.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-logconfiguration)
@@ -628,6 +744,93 @@ public open class CfnExperimentTemplate(
   }
 
   /**
+   * The CloudWatch dashboards to include as data sources in the experiment report.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * CloudWatchDashboardProperty cloudWatchDashboardProperty = CloudWatchDashboardProperty.builder()
+   * .dashboardIdentifier("dashboardIdentifier")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-cloudwatchdashboard.html)
+   */
+  public interface CloudWatchDashboardProperty {
+    /**
+     * The Amazon Resource Name (ARN) of the CloudWatch dashboard to include in the experiment
+     * report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-cloudwatchdashboard.html#cfn-fis-experimenttemplate-cloudwatchdashboard-dashboardidentifier)
+     */
+    public fun dashboardIdentifier(): String
+
+    /**
+     * A builder for [CloudWatchDashboardProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dashboardIdentifier The Amazon Resource Name (ARN) of the CloudWatch dashboard to
+       * include in the experiment report. 
+       */
+      public fun dashboardIdentifier(dashboardIdentifier: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchDashboardProperty.Builder
+          =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchDashboardProperty.builder()
+
+      /**
+       * @param dashboardIdentifier The Amazon Resource Name (ARN) of the CloudWatch dashboard to
+       * include in the experiment report. 
+       */
+      override fun dashboardIdentifier(dashboardIdentifier: String) {
+        cdkBuilder.dashboardIdentifier(dashboardIdentifier)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchDashboardProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchDashboardProperty,
+    ) : CdkObject(cdkObject),
+        CloudWatchDashboardProperty {
+      /**
+       * The Amazon Resource Name (ARN) of the CloudWatch dashboard to include in the experiment
+       * report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-cloudwatchdashboard.html#cfn-fis-experimenttemplate-cloudwatchdashboard-dashboardidentifier)
+       */
+      override fun dashboardIdentifier(): String = unwrap(this).getDashboardIdentifier()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CloudWatchDashboardProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchDashboardProperty):
+          CloudWatchDashboardProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CloudWatchDashboardProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CloudWatchDashboardProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchDashboardProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchDashboardProperty
+    }
+  }
+
+  /**
    * Specifies the configuration for experiment logging to CloudWatch Logs .
    *
    * Example:
@@ -711,6 +914,232 @@ public open class CfnExperimentTemplate(
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.CloudWatchLogsConfigurationProperty
+    }
+  }
+
+  /**
+   * Describes the data sources for the experiment report.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * DataSourcesProperty dataSourcesProperty = DataSourcesProperty.builder()
+   * .cloudWatchDashboards(List.of(CloudWatchDashboardProperty.builder()
+   * .dashboardIdentifier("dashboardIdentifier")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-datasources.html)
+   */
+  public interface DataSourcesProperty {
+    /**
+     * The CloudWatch dashboards to include as data sources in the experiment report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-datasources.html#cfn-fis-experimenttemplate-datasources-cloudwatchdashboards)
+     */
+    public fun cloudWatchDashboards(): Any? = unwrap(this).getCloudWatchDashboards()
+
+    /**
+     * A builder for [DataSourcesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cloudWatchDashboards The CloudWatch dashboards to include as data sources in the
+       * experiment report.
+       */
+      public fun cloudWatchDashboards(cloudWatchDashboards: IResolvable)
+
+      /**
+       * @param cloudWatchDashboards The CloudWatch dashboards to include as data sources in the
+       * experiment report.
+       */
+      public fun cloudWatchDashboards(cloudWatchDashboards: List<Any>)
+
+      /**
+       * @param cloudWatchDashboards The CloudWatch dashboards to include as data sources in the
+       * experiment report.
+       */
+      public fun cloudWatchDashboards(vararg cloudWatchDashboards: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.DataSourcesProperty.Builder =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.DataSourcesProperty.builder()
+
+      /**
+       * @param cloudWatchDashboards The CloudWatch dashboards to include as data sources in the
+       * experiment report.
+       */
+      override fun cloudWatchDashboards(cloudWatchDashboards: IResolvable) {
+        cdkBuilder.cloudWatchDashboards(cloudWatchDashboards.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cloudWatchDashboards The CloudWatch dashboards to include as data sources in the
+       * experiment report.
+       */
+      override fun cloudWatchDashboards(cloudWatchDashboards: List<Any>) {
+        cdkBuilder.cloudWatchDashboards(cloudWatchDashboards.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param cloudWatchDashboards The CloudWatch dashboards to include as data sources in the
+       * experiment report.
+       */
+      override fun cloudWatchDashboards(vararg cloudWatchDashboards: Any): Unit =
+          cloudWatchDashboards(cloudWatchDashboards.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.DataSourcesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.DataSourcesProperty,
+    ) : CdkObject(cdkObject),
+        DataSourcesProperty {
+      /**
+       * The CloudWatch dashboards to include as data sources in the experiment report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-datasources.html#cfn-fis-experimenttemplate-datasources-cloudwatchdashboards)
+       */
+      override fun cloudWatchDashboards(): Any? = unwrap(this).getCloudWatchDashboards()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DataSourcesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.DataSourcesProperty):
+          DataSourcesProperty = CdkObjectWrappers.wrap(cdkObject) as? DataSourcesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DataSourcesProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.DataSourcesProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.DataSourcesProperty
+    }
+  }
+
+  /**
+   * The S3 destination for the experiment report.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * ExperimentReportS3ConfigurationProperty experimentReportS3ConfigurationProperty =
+   * ExperimentReportS3ConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * // the properties below are optional
+   * .prefix("prefix")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimentreports3configuration.html)
+   */
+  public interface ExperimentReportS3ConfigurationProperty {
+    /**
+     * The name of the S3 bucket where the experiment report will be stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimentreports3configuration.html#cfn-fis-experimenttemplate-experimentreports3configuration-bucketname)
+     */
+    public fun bucketName(): String
+
+    /**
+     * The prefix of the S3 bucket where the experiment report will be stored.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimentreports3configuration.html#cfn-fis-experimenttemplate-experimentreports3configuration-prefix)
+     */
+    public fun prefix(): String? = unwrap(this).getPrefix()
+
+    /**
+     * A builder for [ExperimentReportS3ConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName The name of the S3 bucket where the experiment report will be stored. 
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param prefix The prefix of the S3 bucket where the experiment report will be stored.
+       */
+      public fun prefix(prefix: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentReportS3ConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentReportS3ConfigurationProperty.builder()
+
+      /**
+       * @param bucketName The name of the S3 bucket where the experiment report will be stored. 
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param prefix The prefix of the S3 bucket where the experiment report will be stored.
+       */
+      override fun prefix(prefix: String) {
+        cdkBuilder.prefix(prefix)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentReportS3ConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentReportS3ConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ExperimentReportS3ConfigurationProperty {
+      /**
+       * The name of the S3 bucket where the experiment report will be stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimentreports3configuration.html#cfn-fis-experimenttemplate-experimentreports3configuration-bucketname)
+       */
+      override fun bucketName(): String = unwrap(this).getBucketName()
+
+      /**
+       * The prefix of the S3 bucket where the experiment report will be stored.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimentreports3configuration.html#cfn-fis-experimenttemplate-experimentreports3configuration-prefix)
+       */
+      override fun prefix(): String? = unwrap(this).getPrefix()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ExperimentReportS3ConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentReportS3ConfigurationProperty):
+          ExperimentReportS3ConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ExperimentReportS3ConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExperimentReportS3ConfigurationProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentReportS3ConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentReportS3ConfigurationProperty
     }
   }
 
@@ -1063,6 +1492,244 @@ public open class CfnExperimentTemplate(
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty
+    }
+  }
+
+  /**
+   * Describes the report configuration for the experiment template.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * ExperimentTemplateExperimentReportConfigurationProperty
+   * experimentTemplateExperimentReportConfigurationProperty =
+   * ExperimentTemplateExperimentReportConfigurationProperty.builder()
+   * .dataSources(DataSourcesProperty.builder()
+   * .cloudWatchDashboards(List.of(CloudWatchDashboardProperty.builder()
+   * .dashboardIdentifier("dashboardIdentifier")
+   * .build()))
+   * .build())
+   * .outputs(OutputsProperty.builder()
+   * .experimentReportS3Configuration(ExperimentReportS3ConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * // the properties below are optional
+   * .prefix("prefix")
+   * .build())
+   * .build())
+   * // the properties below are optional
+   * .postExperimentDuration("postExperimentDuration")
+   * .preExperimentDuration("preExperimentDuration")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html)
+   */
+  public interface ExperimentTemplateExperimentReportConfigurationProperty {
+    /**
+     * The data sources for the experiment report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-datasources)
+     */
+    public fun dataSources(): Any
+
+    /**
+     * The output destinations of the experiment report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-outputs)
+     */
+    public fun outputs(): Any
+
+    /**
+     * The duration after the experiment end time for the data sources to include in the report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-postexperimentduration)
+     */
+    public fun postExperimentDuration(): String? = unwrap(this).getPostExperimentDuration()
+
+    /**
+     * The duration before the experiment start time for the data sources to include in the report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-preexperimentduration)
+     */
+    public fun preExperimentDuration(): String? = unwrap(this).getPreExperimentDuration()
+
+    /**
+     * A builder for [ExperimentTemplateExperimentReportConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param dataSources The data sources for the experiment report. 
+       */
+      public fun dataSources(dataSources: IResolvable)
+
+      /**
+       * @param dataSources The data sources for the experiment report. 
+       */
+      public fun dataSources(dataSources: DataSourcesProperty)
+
+      /**
+       * @param dataSources The data sources for the experiment report. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ced1ac539fa3a2d4676980970bb0151a18e16ccbbfc47024d65e8a097c8fcfef")
+      public fun dataSources(dataSources: DataSourcesProperty.Builder.() -> Unit)
+
+      /**
+       * @param outputs The output destinations of the experiment report. 
+       */
+      public fun outputs(outputs: IResolvable)
+
+      /**
+       * @param outputs The output destinations of the experiment report. 
+       */
+      public fun outputs(outputs: OutputsProperty)
+
+      /**
+       * @param outputs The output destinations of the experiment report. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0afcd54f92f1a5f7ac930e475c6d9b2b2723b20dbdb85833d012b78f104a9c93")
+      public fun outputs(outputs: OutputsProperty.Builder.() -> Unit)
+
+      /**
+       * @param postExperimentDuration The duration after the experiment end time for the data
+       * sources to include in the report.
+       */
+      public fun postExperimentDuration(postExperimentDuration: String)
+
+      /**
+       * @param preExperimentDuration The duration before the experiment start time for the data
+       * sources to include in the report.
+       */
+      public fun preExperimentDuration(preExperimentDuration: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty.builder()
+
+      /**
+       * @param dataSources The data sources for the experiment report. 
+       */
+      override fun dataSources(dataSources: IResolvable) {
+        cdkBuilder.dataSources(dataSources.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param dataSources The data sources for the experiment report. 
+       */
+      override fun dataSources(dataSources: DataSourcesProperty) {
+        cdkBuilder.dataSources(dataSources.let(DataSourcesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param dataSources The data sources for the experiment report. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ced1ac539fa3a2d4676980970bb0151a18e16ccbbfc47024d65e8a097c8fcfef")
+      override fun dataSources(dataSources: DataSourcesProperty.Builder.() -> Unit): Unit =
+          dataSources(DataSourcesProperty(dataSources))
+
+      /**
+       * @param outputs The output destinations of the experiment report. 
+       */
+      override fun outputs(outputs: IResolvable) {
+        cdkBuilder.outputs(outputs.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param outputs The output destinations of the experiment report. 
+       */
+      override fun outputs(outputs: OutputsProperty) {
+        cdkBuilder.outputs(outputs.let(OutputsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param outputs The output destinations of the experiment report. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("0afcd54f92f1a5f7ac930e475c6d9b2b2723b20dbdb85833d012b78f104a9c93")
+      override fun outputs(outputs: OutputsProperty.Builder.() -> Unit): Unit =
+          outputs(OutputsProperty(outputs))
+
+      /**
+       * @param postExperimentDuration The duration after the experiment end time for the data
+       * sources to include in the report.
+       */
+      override fun postExperimentDuration(postExperimentDuration: String) {
+        cdkBuilder.postExperimentDuration(postExperimentDuration)
+      }
+
+      /**
+       * @param preExperimentDuration The duration before the experiment start time for the data
+       * sources to include in the report.
+       */
+      override fun preExperimentDuration(preExperimentDuration: String) {
+        cdkBuilder.preExperimentDuration(preExperimentDuration)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ExperimentTemplateExperimentReportConfigurationProperty {
+      /**
+       * The data sources for the experiment report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-datasources)
+       */
+      override fun dataSources(): Any = unwrap(this).getDataSources()
+
+      /**
+       * The output destinations of the experiment report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-outputs)
+       */
+      override fun outputs(): Any = unwrap(this).getOutputs()
+
+      /**
+       * The duration after the experiment end time for the data sources to include in the report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-postexperimentduration)
+       */
+      override fun postExperimentDuration(): String? = unwrap(this).getPostExperimentDuration()
+
+      /**
+       * The duration before the experiment start time for the data sources to include in the
+       * report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration.html#cfn-fis-experimenttemplate-experimenttemplateexperimentreportconfiguration-preexperimentduration)
+       */
+      override fun preExperimentDuration(): String? = unwrap(this).getPreExperimentDuration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          ExperimentTemplateExperimentReportConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty):
+          ExperimentTemplateExperimentReportConfigurationProperty =
+          CdkObjectWrappers.wrap(cdkObject) as?
+          ExperimentTemplateExperimentReportConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ExperimentTemplateExperimentReportConfigurationProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty
     }
   }
 
@@ -1744,6 +2411,124 @@ public open class CfnExperimentTemplate(
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.fis.CfnExperimentTemplate.ExperimentTemplateTargetProperty
+    }
+  }
+
+  /**
+   * Describes the output destinations of the experiment report.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fis.*;
+   * OutputsProperty outputsProperty = OutputsProperty.builder()
+   * .experimentReportS3Configuration(ExperimentReportS3ConfigurationProperty.builder()
+   * .bucketName("bucketName")
+   * // the properties below are optional
+   * .prefix("prefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-outputs.html)
+   */
+  public interface OutputsProperty {
+    /**
+     * The S3 destination for the experiment report.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-outputs.html#cfn-fis-experimenttemplate-outputs-experimentreports3configuration)
+     */
+    public fun experimentReportS3Configuration(): Any
+
+    /**
+     * A builder for [OutputsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param experimentReportS3Configuration The S3 destination for the experiment report. 
+       */
+      public fun experimentReportS3Configuration(experimentReportS3Configuration: IResolvable)
+
+      /**
+       * @param experimentReportS3Configuration The S3 destination for the experiment report. 
+       */
+      public
+          fun experimentReportS3Configuration(experimentReportS3Configuration: ExperimentReportS3ConfigurationProperty)
+
+      /**
+       * @param experimentReportS3Configuration The S3 destination for the experiment report. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b65a100dc7ffdad2c1be47dde630f4ff313be1eb33b57d918ebf9e5ffcd948e0")
+      public
+          fun experimentReportS3Configuration(experimentReportS3Configuration: ExperimentReportS3ConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.OutputsProperty.Builder =
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.OutputsProperty.builder()
+
+      /**
+       * @param experimentReportS3Configuration The S3 destination for the experiment report. 
+       */
+      override fun experimentReportS3Configuration(experimentReportS3Configuration: IResolvable) {
+        cdkBuilder.experimentReportS3Configuration(experimentReportS3Configuration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param experimentReportS3Configuration The S3 destination for the experiment report. 
+       */
+      override
+          fun experimentReportS3Configuration(experimentReportS3Configuration: ExperimentReportS3ConfigurationProperty) {
+        cdkBuilder.experimentReportS3Configuration(experimentReportS3Configuration.let(ExperimentReportS3ConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param experimentReportS3Configuration The S3 destination for the experiment report. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b65a100dc7ffdad2c1be47dde630f4ff313be1eb33b57d918ebf9e5ffcd948e0")
+      override
+          fun experimentReportS3Configuration(experimentReportS3Configuration: ExperimentReportS3ConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          experimentReportS3Configuration(ExperimentReportS3ConfigurationProperty(experimentReportS3Configuration))
+
+      public fun build(): software.amazon.awscdk.services.fis.CfnExperimentTemplate.OutputsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.OutputsProperty,
+    ) : CdkObject(cdkObject),
+        OutputsProperty {
+      /**
+       * The S3 destination for the experiment report.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fis-experimenttemplate-outputs.html#cfn-fis-experimenttemplate-outputs-experimentreports3configuration)
+       */
+      override fun experimentReportS3Configuration(): Any =
+          unwrap(this).getExperimentReportS3Configuration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OutputsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fis.CfnExperimentTemplate.OutputsProperty):
+          OutputsProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OutputsProperty):
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.OutputsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.fis.CfnExperimentTemplate.OutputsProperty
     }
   }
 

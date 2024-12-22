@@ -65,6 +65,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .version("version")
  * .build())
  * .nodegroupName("nodegroupName")
+ * .nodeRepairConfig(NodeRepairConfigProperty.builder()
+ * .enabled(false)
+ * .build())
  * .releaseVersion("releaseVersion")
  * .remoteAccess(RemoteAccessProperty.builder()
  * .ec2SshKey("ec2SshKey")
@@ -275,6 +278,33 @@ public open class CfnNodegroup(
   @JvmName("4a5f66481a02aaf3745dcc97639fe91048324fa5a66dbd712c77907fb65a95a4")
   public open fun launchTemplate(`value`: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
       Unit = launchTemplate(LaunchTemplateSpecificationProperty(`value`))
+
+  /**
+   * The node auto repair configuration for node group.
+   */
+  public open fun nodeRepairConfig(): Any? = unwrap(this).getNodeRepairConfig()
+
+  /**
+   * The node auto repair configuration for node group.
+   */
+  public open fun nodeRepairConfig(`value`: IResolvable) {
+    unwrap(this).setNodeRepairConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The node auto repair configuration for node group.
+   */
+  public open fun nodeRepairConfig(`value`: NodeRepairConfigProperty) {
+    unwrap(this).setNodeRepairConfig(`value`.let(NodeRepairConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * The node auto repair configuration for node group.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("8303069d159346ef14a49116c4799cc0bf76790c7435d281e56cbda94743c619")
+  public open fun nodeRepairConfig(`value`: NodeRepairConfigProperty.Builder.() -> Unit): Unit =
+      nodeRepairConfig(NodeRepairConfigProperty(`value`))
 
   /**
    * The Amazon Resource Name (ARN) of the IAM role to associate with your node group.
@@ -669,6 +699,32 @@ public open class CfnNodegroup(
     @JvmName("5068e50e47e72b3ca242878b66224aab505a0ee1fd81a4c5f18f7fa09be6ffbb")
     public
         fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit)
+
+    /**
+     * The node auto repair configuration for node group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
+     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     */
+    public fun nodeRepairConfig(nodeRepairConfig: IResolvable)
+
+    /**
+     * The node auto repair configuration for node group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
+     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     */
+    public fun nodeRepairConfig(nodeRepairConfig: NodeRepairConfigProperty)
+
+    /**
+     * The node auto repair configuration for node group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
+     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("98eeaf534285a101e573e3f4e28bada2c222425d6030d59241c33a13d085c41b")
+    public fun nodeRepairConfig(nodeRepairConfig: NodeRepairConfigProperty.Builder.() -> Unit)
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role to associate with your node group.
@@ -1151,6 +1207,37 @@ public open class CfnNodegroup(
     override
         fun launchTemplate(launchTemplate: LaunchTemplateSpecificationProperty.Builder.() -> Unit):
         Unit = launchTemplate(LaunchTemplateSpecificationProperty(launchTemplate))
+
+    /**
+     * The node auto repair configuration for node group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
+     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     */
+    override fun nodeRepairConfig(nodeRepairConfig: IResolvable) {
+      cdkBuilder.nodeRepairConfig(nodeRepairConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The node auto repair configuration for node group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
+     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     */
+    override fun nodeRepairConfig(nodeRepairConfig: NodeRepairConfigProperty) {
+      cdkBuilder.nodeRepairConfig(nodeRepairConfig.let(NodeRepairConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * The node auto repair configuration for node group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
+     * @param nodeRepairConfig The node auto repair configuration for node group. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("98eeaf534285a101e573e3f4e28bada2c222425d6030d59241c33a13d085c41b")
+    override fun nodeRepairConfig(nodeRepairConfig: NodeRepairConfigProperty.Builder.() -> Unit):
+        Unit = nodeRepairConfig(NodeRepairConfigProperty(nodeRepairConfig))
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role to associate with your node group.
@@ -1649,6 +1736,99 @@ public open class CfnNodegroup(
           software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnNodegroup.LaunchTemplateSpecificationProperty
+    }
+  }
+
+  /**
+   * The node auto repair configuration for node group.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * NodeRepairConfigProperty nodeRepairConfigProperty = NodeRepairConfigProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html)
+   */
+  public interface NodeRepairConfigProperty {
+    /**
+     * Set this value to true to enable node auto repair for the node group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [NodeRepairConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Set this value to true to enable node auto repair for the node group.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Set this value to true to enable node auto repair for the node group.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnNodegroup.NodeRepairConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnNodegroup.NodeRepairConfigProperty.builder()
+
+      /**
+       * @param enabled Set this value to true to enable node auto repair for the node group.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Set this value to true to enable node auto repair for the node group.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnNodegroup.NodeRepairConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.NodeRepairConfigProperty,
+    ) : CdkObject(cdkObject),
+        NodeRepairConfigProperty {
+      /**
+       * Set this value to true to enable node auto repair for the node group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-nodegroup-noderepairconfig.html#cfn-eks-nodegroup-noderepairconfig-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): NodeRepairConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnNodegroup.NodeRepairConfigProperty):
+          NodeRepairConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? NodeRepairConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: NodeRepairConfigProperty):
+          software.amazon.awscdk.services.eks.CfnNodegroup.NodeRepairConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnNodegroup.NodeRepairConfigProperty
     }
   }
 

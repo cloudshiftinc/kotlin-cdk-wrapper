@@ -1605,6 +1605,8 @@ public open class CfnTheme(
     public fun sheet(): Any? = unwrap(this).getSheet()
 
     /**
+     * Determines the typography options.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeconfiguration.html#cfn-quicksight-theme-themeconfiguration-typography)
      */
     public fun typography(): Any? = unwrap(this).getTypography()
@@ -1656,17 +1658,17 @@ public open class CfnTheme(
       public fun sheet(sheet: SheetStyleProperty.Builder.() -> Unit)
 
       /**
-       * @param typography the value to be set.
+       * @param typography Determines the typography options.
        */
       public fun typography(typography: IResolvable)
 
       /**
-       * @param typography the value to be set.
+       * @param typography Determines the typography options.
        */
       public fun typography(typography: TypographyProperty)
 
       /**
-       * @param typography the value to be set.
+       * @param typography Determines the typography options.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d3fa9b0d5a5a433eb0dd0028cb9f5669c133201c3eb4ef5fcd2d22d9446447d")
@@ -1743,21 +1745,21 @@ public open class CfnTheme(
           sheet(SheetStyleProperty(sheet))
 
       /**
-       * @param typography the value to be set.
+       * @param typography Determines the typography options.
        */
       override fun typography(typography: IResolvable) {
         cdkBuilder.typography(typography.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param typography the value to be set.
+       * @param typography Determines the typography options.
        */
       override fun typography(typography: TypographyProperty) {
         cdkBuilder.typography(typography.let(TypographyProperty.Companion::unwrap))
       }
 
       /**
-       * @param typography the value to be set.
+       * @param typography Determines the typography options.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("2d3fa9b0d5a5a433eb0dd0028cb9f5669c133201c3eb4ef5fcd2d22d9446447d")
@@ -1813,6 +1815,8 @@ public open class CfnTheme(
       override fun sheet(): Any? = unwrap(this).getSheet()
 
       /**
+       * Determines the typography options.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-quicksight-theme-themeconfiguration.html#cfn-quicksight-theme-themeconfiguration-typography)
        */
       override fun typography(): Any? = unwrap(this).getTypography()

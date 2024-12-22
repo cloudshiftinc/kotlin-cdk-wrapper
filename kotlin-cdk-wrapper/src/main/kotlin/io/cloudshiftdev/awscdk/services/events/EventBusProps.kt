@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.kms.IKey
+import io.cloudshiftdev.awscdk.services.sqs.IQueue
 import kotlin.String
 import kotlin.Unit
 
@@ -31,6 +32,15 @@ import kotlin.Unit
  * ```
  */
 public interface EventBusProps {
+  /**
+   * Dead-letter queue for the event bus.
+   *
+   * Default: - no dead-letter queue
+   *
+   * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rule-event-delivery.html#eb-rule-dlq)
+   */
+  public fun deadLetterQueue(): IQueue? = unwrap(this).getDeadLetterQueue()?.let(IQueue::wrap)
+
   /**
    * The event bus description.
    *
@@ -71,6 +81,11 @@ public interface EventBusProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param deadLetterQueue Dead-letter queue for the event bus.
+     */
+    public fun deadLetterQueue(deadLetterQueue: IQueue)
+
+    /**
      * @param description The event bus description.
      * The description can be up to 512 characters long.
      */
@@ -97,6 +112,13 @@ public interface EventBusProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.events.EventBusProps.Builder =
         software.amazon.awscdk.services.events.EventBusProps.builder()
+
+    /**
+     * @param deadLetterQueue Dead-letter queue for the event bus.
+     */
+    override fun deadLetterQueue(deadLetterQueue: IQueue) {
+      cdkBuilder.deadLetterQueue(deadLetterQueue.let(IQueue.Companion::unwrap))
+    }
 
     /**
      * @param description The event bus description.
@@ -136,6 +158,15 @@ public interface EventBusProps {
     cdkObject: software.amazon.awscdk.services.events.EventBusProps,
   ) : CdkObject(cdkObject),
       EventBusProps {
+    /**
+     * Dead-letter queue for the event bus.
+     *
+     * Default: - no dead-letter queue
+     *
+     * [Documentation](https://docs.aws.amazon.com/eventbridge/latest/userguide/eb-rule-event-delivery.html#eb-rule-dlq)
+     */
+    override fun deadLetterQueue(): IQueue? = unwrap(this).getDeadLetterQueue()?.let(IQueue::wrap)
+
     /**
      * The event bus description.
      *

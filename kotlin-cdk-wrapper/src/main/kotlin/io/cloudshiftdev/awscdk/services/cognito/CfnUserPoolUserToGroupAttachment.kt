@@ -12,7 +12,22 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Adds the specified user to the specified group.
+ * Adds a user to a group.
+ *
+ * A user who is in a group can present a preferred-role claim to an identity pool, and populates a
+ * `cognito:groups` claim to their access and identity tokens.
+ *
+ *
+ * Amazon Cognito evaluates AWS Identity and Access Management (IAM) policies in requests for this
+ * API operation. For this operation, you must use IAM credentials to authorize requests, and you must
+ * grant yourself the corresponding IAM permission in a policy.
+ *
+ * **Learn more** - [Signing AWS API
+ * Requests](https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_aws-signing.html)
+ *
+ * * [Using the Amazon Cognito user pools API and user pool
+ * endpoints](https://docs.aws.amazon.com/cognito/latest/developerguide/user-pools-API-operations.html)
+ *
  *
  * Example:
  *
@@ -84,12 +99,12 @@ public open class CfnUserPoolUserToGroupAttachment(
   }
 
   /**
-   *
+   * The user's username.
    */
   public open fun username(): String = unwrap(this).getUsername()
 
   /**
-   *
+   * The user's username.
    */
   public open fun username(`value`: String) {
     unwrap(this).setUsername(`value`)
@@ -118,8 +133,10 @@ public open class CfnUserPoolUserToGroupAttachment(
     public fun userPoolId(userPoolId: String)
 
     /**
+     * The user's username.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username)
-     * @param username 
+     * @param username The user's username. 
      */
     public fun username(username: String)
   }
@@ -154,8 +171,10 @@ public open class CfnUserPoolUserToGroupAttachment(
     }
 
     /**
+     * The user's username.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username)
-     * @param username 
+     * @param username The user's username. 
      */
     override fun username(username: String) {
       cdkBuilder.username(username)

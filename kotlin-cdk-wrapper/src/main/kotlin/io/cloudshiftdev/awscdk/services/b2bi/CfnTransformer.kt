@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Any
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -21,10 +22,25 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Creates a transformer.
+ * Creates a transformer. AWS B2B Data Interchange currently supports two scenarios:.
  *
- * A transformer describes how to process the incoming EDI documents and extract the necessary
- * information to the output file.
+ * * *Inbound EDI* : the AWS customer receives an EDI file from their trading partner. AWS B2B Data
+ * Interchange converts this EDI file into a JSON or XML file with a service-defined structure. A
+ * mapping template provided by the customer, in JSONata or XSLT format, is optionally applied to this
+ * file to produce a JSON or XML file with the structure the customer requires.
+ * * *Outbound EDI* : the AWS customer has a JSON or XML file containing data that they wish to use
+ * in an EDI file. A mapping template, provided by the customer (in either JSONata or XSLT format) is
+ * applied to this file to generate a JSON or XML file in the service-defined structure. This file is
+ * then converted to an EDI file.
+ *
+ *
+ * The following fields are provided for backwards compatibility only: `fileFormat` ,
+ * `mappingTemplate` , `ediType` , and `sampleDocument` .
+ *
+ * * Use the `mapping` data type in place of `mappingTemplate` and `fileFormat`
+ * * Use the `sampleDocuments` data type in place of `sampleDocument`
+ * * Use either the `inputConversion` or `outputConversion` in place of `ediType`
+ *
  *
  * Example:
  *
@@ -33,6 +49,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.b2bi.*;
  * CfnTransformer cfnTransformer = CfnTransformer.Builder.create(this, "MyCfnTransformer")
+ * .name("name")
+ * .status("status")
+ * // the properties below are optional
  * .ediType(EdiTypeProperty.builder()
  * .x12Details(X12DetailsProperty.builder()
  * .transactionSet("transactionSet")
@@ -40,11 +59,40 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build())
  * .fileFormat("fileFormat")
- * .mappingTemplate("mappingTemplate")
- * .name("name")
- * .status("status")
+ * .inputConversion(InputConversionProperty.builder()
+ * .fromFormat("fromFormat")
  * // the properties below are optional
+ * .formatOptions(FormatOptionsProperty.builder()
+ * .x12(X12DetailsProperty.builder()
+ * .transactionSet("transactionSet")
+ * .version("version")
+ * .build())
+ * .build())
+ * .build())
+ * .mapping(MappingProperty.builder()
+ * .templateLanguage("templateLanguage")
+ * // the properties below are optional
+ * .template("template")
+ * .build())
+ * .mappingTemplate("mappingTemplate")
+ * .outputConversion(OutputConversionProperty.builder()
+ * .toFormat("toFormat")
+ * // the properties below are optional
+ * .formatOptions(FormatOptionsProperty.builder()
+ * .x12(X12DetailsProperty.builder()
+ * .transactionSet("transactionSet")
+ * .version("version")
+ * .build())
+ * .build())
+ * .build())
  * .sampleDocument("sampleDocument")
+ * .sampleDocuments(SampleDocumentsProperty.builder()
+ * .bucketName("bucketName")
+ * .keys(List.of(SampleDocumentKeysProperty.builder()
+ * .input("input")
+ * .output("output")
+ * .build()))
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -105,45 +153,76 @@ public open class CfnTransformer(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   * Returns the details for the EDI standard that is being used for the transformer.
+   * @deprecated this property has been deprecated
    */
-  public open fun ediType(): Any = unwrap(this).getEdiType()
+  @Deprecated(message = "deprecated in CDK")
+  public open fun ediType(): Any? = unwrap(this).getEdiType()
 
   /**
-   * Returns the details for the EDI standard that is being used for the transformer.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun ediType(`value`: IResolvable) {
     unwrap(this).setEdiType(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Returns the details for the EDI standard that is being used for the transformer.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun ediType(`value`: EdiTypeProperty) {
     unwrap(this).setEdiType(`value`.let(EdiTypeProperty.Companion::unwrap))
   }
 
   /**
-   * Returns the details for the EDI standard that is being used for the transformer.
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("29258a7ce16a2d224867c8765eb0a3ee84d47c152f097310fd6e8b6ac2af3c9e")
   public open fun ediType(`value`: EdiTypeProperty.Builder.() -> Unit): Unit =
       ediType(EdiTypeProperty(`value`))
 
   /**
-   * Returns that the currently supported file formats for EDI transformations are `JSON` and `XML`
-   * .
+   * @deprecated this property has been deprecated
    */
-  public open fun fileFormat(): String = unwrap(this).getFileFormat()
+  @Deprecated(message = "deprecated in CDK")
+  public open fun fileFormat(): String? = unwrap(this).getFileFormat()
 
   /**
-   * Returns that the currently supported file formats for EDI transformations are `JSON` and `XML`
-   * .
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun fileFormat(`value`: String) {
     unwrap(this).setFileFormat(`value`)
   }
+
+  /**
+   * Returns a structure that contains the format options for the transformation.
+   */
+  public open fun inputConversion(): Any? = unwrap(this).getInputConversion()
+
+  /**
+   * Returns a structure that contains the format options for the transformation.
+   */
+  public open fun inputConversion(`value`: IResolvable) {
+    unwrap(this).setInputConversion(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Returns a structure that contains the format options for the transformation.
+   */
+  public open fun inputConversion(`value`: InputConversionProperty) {
+    unwrap(this).setInputConversion(`value`.let(InputConversionProperty.Companion::unwrap))
+  }
+
+  /**
+   * Returns a structure that contains the format options for the transformation.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("aff916af23914b3044967a42f8af0e9ab89fe77a6f7e91b33728a62a087fd3c7")
+  public open fun inputConversion(`value`: InputConversionProperty.Builder.() -> Unit): Unit =
+      inputConversion(InputConversionProperty(`value`))
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -155,15 +234,50 @@ public open class CfnTransformer(
   }
 
   /**
-   * Returns a sample EDI document that is used by a transformer as a guide for processing the EDI
-   * data.
+   * Returns the structure that contains the mapping template and its language (either XSLT or
+   * JSONATA).
    */
-  public open fun mappingTemplate(): String = unwrap(this).getMappingTemplate()
+  public open fun mapping(): Any? = unwrap(this).getMapping()
 
   /**
-   * Returns a sample EDI document that is used by a transformer as a guide for processing the EDI
-   * data.
+   * Returns the structure that contains the mapping template and its language (either XSLT or
+   * JSONATA).
    */
+  public open fun mapping(`value`: IResolvable) {
+    unwrap(this).setMapping(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Returns the structure that contains the mapping template and its language (either XSLT or
+   * JSONATA).
+   */
+  public open fun mapping(`value`: MappingProperty) {
+    unwrap(this).setMapping(`value`.let(MappingProperty.Companion::unwrap))
+  }
+
+  /**
+   * Returns the structure that contains the mapping template and its language (either XSLT or
+   * JSONATA).
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("c27bef8114ef2c4f3913c10061e42e6d90aca7930fb605f963ae284894175147")
+  public open fun mapping(`value`: MappingProperty.Builder.() -> Unit): Unit =
+      mapping(MappingProperty(`value`))
+
+  /**
+   * (deprecated) This shape is deprecated: This is a legacy trait.
+   *
+   * @deprecated this property has been deprecated
+   */
+  @Deprecated(message = "deprecated in CDK")
+  public open fun mappingTemplate(): String? = unwrap(this).getMappingTemplate()
+
+  /**
+   * (deprecated) This shape is deprecated: This is a legacy trait.
+   *
+   * @deprecated this property has been deprecated
+   */
+  @Deprecated(message = "deprecated in CDK")
   public open fun mappingTemplate(`value`: String) {
     unwrap(this).setMappingTemplate(`value`)
   }
@@ -181,18 +295,84 @@ public open class CfnTransformer(
   }
 
   /**
-   * Returns a sample EDI document that is used by a transformer as a guide for processing the EDI
-   * data.
+   * Returns the `OutputConversion` object, which contains the format options for the outbound
+   * transformation.
    */
+  public open fun outputConversion(): Any? = unwrap(this).getOutputConversion()
+
+  /**
+   * Returns the `OutputConversion` object, which contains the format options for the outbound
+   * transformation.
+   */
+  public open fun outputConversion(`value`: IResolvable) {
+    unwrap(this).setOutputConversion(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Returns the `OutputConversion` object, which contains the format options for the outbound
+   * transformation.
+   */
+  public open fun outputConversion(`value`: OutputConversionProperty) {
+    unwrap(this).setOutputConversion(`value`.let(OutputConversionProperty.Companion::unwrap))
+  }
+
+  /**
+   * Returns the `OutputConversion` object, which contains the format options for the outbound
+   * transformation.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("80c1cb4fa04ebc72d3264cb07576806b2aa70a004385e83c866bf8da28273463")
+  public open fun outputConversion(`value`: OutputConversionProperty.Builder.() -> Unit): Unit =
+      outputConversion(OutputConversionProperty(`value`))
+
+  /**
+   * (deprecated) This shape is deprecated: This is a legacy trait.
+   *
+   * @deprecated this property has been deprecated
+   */
+  @Deprecated(message = "deprecated in CDK")
   public open fun sampleDocument(): String? = unwrap(this).getSampleDocument()
 
   /**
-   * Returns a sample EDI document that is used by a transformer as a guide for processing the EDI
-   * data.
+   * (deprecated) This shape is deprecated: This is a legacy trait.
+   *
+   * @deprecated this property has been deprecated
    */
+  @Deprecated(message = "deprecated in CDK")
   public open fun sampleDocument(`value`: String) {
     unwrap(this).setSampleDocument(`value`)
   }
+
+  /**
+   * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+   * used to identify the location for your sample documents.
+   */
+  public open fun sampleDocuments(): Any? = unwrap(this).getSampleDocuments()
+
+  /**
+   * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+   * used to identify the location for your sample documents.
+   */
+  public open fun sampleDocuments(`value`: IResolvable) {
+    unwrap(this).setSampleDocuments(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+   * used to identify the location for your sample documents.
+   */
+  public open fun sampleDocuments(`value`: SampleDocumentsProperty) {
+    unwrap(this).setSampleDocuments(`value`.let(SampleDocumentsProperty.Companion::unwrap))
+  }
+
+  /**
+   * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+   * used to identify the location for your sample documents.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("dfe43b0f18d858d51eecb17e82d31a8d39d2cb7f5bb5e3a44a3caa9ce77d0967")
+  public open fun sampleDocuments(`value`: SampleDocumentsProperty.Builder.() -> Unit): Unit =
+      sampleDocuments(SampleDocumentsProperty(`value`))
 
   /**
    * Returns the state of the newly created transformer.
@@ -229,61 +409,110 @@ public open class CfnTransformer(
   @CdkDslMarker
   public interface Builder {
     /**
-     * Returns the details for the EDI standard that is being used for the transformer.
-     *
-     * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-     * define specific business documents.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-editype)
-     * @param ediType Returns the details for the EDI standard that is being used for the
-     * transformer. 
+     * @deprecated this property has been deprecated
+     * @param ediType 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun ediType(ediType: IResolvable)
 
     /**
-     * Returns the details for the EDI standard that is being used for the transformer.
-     *
-     * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-     * define specific business documents.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-editype)
-     * @param ediType Returns the details for the EDI standard that is being used for the
-     * transformer. 
+     * @deprecated this property has been deprecated
+     * @param ediType 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun ediType(ediType: EdiTypeProperty)
 
     /**
-     * Returns the details for the EDI standard that is being used for the transformer.
-     *
-     * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-     * define specific business documents.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-editype)
-     * @param ediType Returns the details for the EDI standard that is being used for the
-     * transformer. 
+     * @deprecated this property has been deprecated
+     * @param ediType 
      */
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("656a19a9bb53086dd23f8198400500ac9d17071d7bf257e96ea303635530af67")
     public fun ediType(ediType: EdiTypeProperty.Builder.() -> Unit)
 
     /**
-     * Returns that the currently supported file formats for EDI transformations are `JSON` and
-     * `XML` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-fileformat)
-     * @param fileFormat Returns that the currently supported file formats for EDI transformations
-     * are `JSON` and `XML` . 
+     * @deprecated this property has been deprecated
+     * @param fileFormat 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun fileFormat(fileFormat: String)
 
     /**
-     * Returns a sample EDI document that is used by a transformer as a guide for processing the EDI
-     * data.
+     * Returns a structure that contains the format options for the transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-inputconversion)
+     * @param inputConversion Returns a structure that contains the format options for the
+     * transformation. 
+     */
+    public fun inputConversion(inputConversion: IResolvable)
+
+    /**
+     * Returns a structure that contains the format options for the transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-inputconversion)
+     * @param inputConversion Returns a structure that contains the format options for the
+     * transformation. 
+     */
+    public fun inputConversion(inputConversion: InputConversionProperty)
+
+    /**
+     * Returns a structure that contains the format options for the transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-inputconversion)
+     * @param inputConversion Returns a structure that contains the format options for the
+     * transformation. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("cc3e8bd6e38cc9022beaef3df9d2acb573948911a6fd5a9fd04bba588464dc95")
+    public fun inputConversion(inputConversion: InputConversionProperty.Builder.() -> Unit)
+
+    /**
+     * Returns the structure that contains the mapping template and its language (either XSLT or
+     * JSONATA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mapping)
+     * @param mapping Returns the structure that contains the mapping template and its language
+     * (either XSLT or JSONATA). 
+     */
+    public fun mapping(mapping: IResolvable)
+
+    /**
+     * Returns the structure that contains the mapping template and its language (either XSLT or
+     * JSONATA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mapping)
+     * @param mapping Returns the structure that contains the mapping template and its language
+     * (either XSLT or JSONATA). 
+     */
+    public fun mapping(mapping: MappingProperty)
+
+    /**
+     * Returns the structure that contains the mapping template and its language (either XSLT or
+     * JSONATA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mapping)
+     * @param mapping Returns the structure that contains the mapping template and its language
+     * (either XSLT or JSONATA). 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("809e19db38e67706fdd6d35fe601d05d83e805291f35999f32757051c0fbb17e")
+    public fun mapping(mapping: MappingProperty.Builder.() -> Unit)
+
+    /**
+     * (deprecated) This shape is deprecated: This is a legacy trait.
+     *
+     * Please use input-conversion or output-conversion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mappingtemplate)
-     * @param mappingTemplate Returns a sample EDI document that is used by a transformer as a guide
-     * for processing the EDI data. 
+     * @deprecated this property has been deprecated
+     * @param mappingTemplate This shape is deprecated: This is a legacy trait. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun mappingTemplate(mappingTemplate: String)
 
     /**
@@ -295,14 +524,80 @@ public open class CfnTransformer(
     public fun name(name: String)
 
     /**
-     * Returns a sample EDI document that is used by a transformer as a guide for processing the EDI
-     * data.
+     * Returns the `OutputConversion` object, which contains the format options for the outbound
+     * transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-outputconversion)
+     * @param outputConversion Returns the `OutputConversion` object, which contains the format
+     * options for the outbound transformation. 
+     */
+    public fun outputConversion(outputConversion: IResolvable)
+
+    /**
+     * Returns the `OutputConversion` object, which contains the format options for the outbound
+     * transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-outputconversion)
+     * @param outputConversion Returns the `OutputConversion` object, which contains the format
+     * options for the outbound transformation. 
+     */
+    public fun outputConversion(outputConversion: OutputConversionProperty)
+
+    /**
+     * Returns the `OutputConversion` object, which contains the format options for the outbound
+     * transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-outputconversion)
+     * @param outputConversion Returns the `OutputConversion` object, which contains the format
+     * options for the outbound transformation. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d31daf070413a2ccf9a65911b3fc96173ffa161ce7c2500b71c87f66360fb9af")
+    public fun outputConversion(outputConversion: OutputConversionProperty.Builder.() -> Unit)
+
+    /**
+     * (deprecated) This shape is deprecated: This is a legacy trait.
+     *
+     * Please use input-conversion or output-conversion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-sampledocument)
-     * @param sampleDocument Returns a sample EDI document that is used by a transformer as a guide
-     * for processing the EDI data. 
+     * @deprecated this property has been deprecated
+     * @param sampleDocument This shape is deprecated: This is a legacy trait. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun sampleDocument(sampleDocument: String)
+
+    /**
+     * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+     * used to identify the location for your sample documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-sampledocuments)
+     * @param sampleDocuments Returns a structure that contains the Amazon S3 bucket and an array of
+     * the corresponding keys used to identify the location for your sample documents. 
+     */
+    public fun sampleDocuments(sampleDocuments: IResolvable)
+
+    /**
+     * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+     * used to identify the location for your sample documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-sampledocuments)
+     * @param sampleDocuments Returns a structure that contains the Amazon S3 bucket and an array of
+     * the corresponding keys used to identify the location for your sample documents. 
+     */
+    public fun sampleDocuments(sampleDocuments: SampleDocumentsProperty)
+
+    /**
+     * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+     * used to identify the location for your sample documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-sampledocuments)
+     * @param sampleDocuments Returns a structure that contains the Amazon S3 bucket and an array of
+     * the corresponding keys used to identify the location for your sample documents. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("126d67e33fc6de29b1c4e26c8b49d10eed029e7b1b1acf56925fb0ed85abd10e")
+    public fun sampleDocuments(sampleDocuments: SampleDocumentsProperty.Builder.() -> Unit)
 
     /**
      * Returns the state of the newly created transformer.
@@ -344,68 +639,127 @@ public open class CfnTransformer(
         software.amazon.awscdk.services.b2bi.CfnTransformer.Builder.create(scope, id)
 
     /**
-     * Returns the details for the EDI standard that is being used for the transformer.
-     *
-     * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-     * define specific business documents.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-editype)
-     * @param ediType Returns the details for the EDI standard that is being used for the
-     * transformer. 
+     * @deprecated this property has been deprecated
+     * @param ediType 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun ediType(ediType: IResolvable) {
       cdkBuilder.ediType(ediType.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * Returns the details for the EDI standard that is being used for the transformer.
-     *
-     * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-     * define specific business documents.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-editype)
-     * @param ediType Returns the details for the EDI standard that is being used for the
-     * transformer. 
+     * @deprecated this property has been deprecated
+     * @param ediType 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun ediType(ediType: EdiTypeProperty) {
       cdkBuilder.ediType(ediType.let(EdiTypeProperty.Companion::unwrap))
     }
 
     /**
-     * Returns the details for the EDI standard that is being used for the transformer.
-     *
-     * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-     * define specific business documents.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-editype)
-     * @param ediType Returns the details for the EDI standard that is being used for the
-     * transformer. 
+     * @deprecated this property has been deprecated
+     * @param ediType 
      */
+    @Deprecated(message = "deprecated in CDK")
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("656a19a9bb53086dd23f8198400500ac9d17071d7bf257e96ea303635530af67")
     override fun ediType(ediType: EdiTypeProperty.Builder.() -> Unit): Unit =
         ediType(EdiTypeProperty(ediType))
 
     /**
-     * Returns that the currently supported file formats for EDI transformations are `JSON` and
-     * `XML` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-fileformat)
-     * @param fileFormat Returns that the currently supported file formats for EDI transformations
-     * are `JSON` and `XML` . 
+     * @deprecated this property has been deprecated
+     * @param fileFormat 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun fileFormat(fileFormat: String) {
       cdkBuilder.fileFormat(fileFormat)
     }
 
     /**
-     * Returns a sample EDI document that is used by a transformer as a guide for processing the EDI
-     * data.
+     * Returns a structure that contains the format options for the transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-inputconversion)
+     * @param inputConversion Returns a structure that contains the format options for the
+     * transformation. 
+     */
+    override fun inputConversion(inputConversion: IResolvable) {
+      cdkBuilder.inputConversion(inputConversion.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Returns a structure that contains the format options for the transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-inputconversion)
+     * @param inputConversion Returns a structure that contains the format options for the
+     * transformation. 
+     */
+    override fun inputConversion(inputConversion: InputConversionProperty) {
+      cdkBuilder.inputConversion(inputConversion.let(InputConversionProperty.Companion::unwrap))
+    }
+
+    /**
+     * Returns a structure that contains the format options for the transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-inputconversion)
+     * @param inputConversion Returns a structure that contains the format options for the
+     * transformation. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("cc3e8bd6e38cc9022beaef3df9d2acb573948911a6fd5a9fd04bba588464dc95")
+    override fun inputConversion(inputConversion: InputConversionProperty.Builder.() -> Unit): Unit
+        = inputConversion(InputConversionProperty(inputConversion))
+
+    /**
+     * Returns the structure that contains the mapping template and its language (either XSLT or
+     * JSONATA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mapping)
+     * @param mapping Returns the structure that contains the mapping template and its language
+     * (either XSLT or JSONATA). 
+     */
+    override fun mapping(mapping: IResolvable) {
+      cdkBuilder.mapping(mapping.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Returns the structure that contains the mapping template and its language (either XSLT or
+     * JSONATA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mapping)
+     * @param mapping Returns the structure that contains the mapping template and its language
+     * (either XSLT or JSONATA). 
+     */
+    override fun mapping(mapping: MappingProperty) {
+      cdkBuilder.mapping(mapping.let(MappingProperty.Companion::unwrap))
+    }
+
+    /**
+     * Returns the structure that contains the mapping template and its language (either XSLT or
+     * JSONATA).
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mapping)
+     * @param mapping Returns the structure that contains the mapping template and its language
+     * (either XSLT or JSONATA). 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("809e19db38e67706fdd6d35fe601d05d83e805291f35999f32757051c0fbb17e")
+    override fun mapping(mapping: MappingProperty.Builder.() -> Unit): Unit =
+        mapping(MappingProperty(mapping))
+
+    /**
+     * (deprecated) This shape is deprecated: This is a legacy trait.
+     *
+     * Please use input-conversion or output-conversion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-mappingtemplate)
-     * @param mappingTemplate Returns a sample EDI document that is used by a transformer as a guide
-     * for processing the EDI data. 
+     * @deprecated this property has been deprecated
+     * @param mappingTemplate This shape is deprecated: This is a legacy trait. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun mappingTemplate(mappingTemplate: String) {
       cdkBuilder.mappingTemplate(mappingTemplate)
     }
@@ -421,16 +775,92 @@ public open class CfnTransformer(
     }
 
     /**
-     * Returns a sample EDI document that is used by a transformer as a guide for processing the EDI
-     * data.
+     * Returns the `OutputConversion` object, which contains the format options for the outbound
+     * transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-outputconversion)
+     * @param outputConversion Returns the `OutputConversion` object, which contains the format
+     * options for the outbound transformation. 
+     */
+    override fun outputConversion(outputConversion: IResolvable) {
+      cdkBuilder.outputConversion(outputConversion.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Returns the `OutputConversion` object, which contains the format options for the outbound
+     * transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-outputconversion)
+     * @param outputConversion Returns the `OutputConversion` object, which contains the format
+     * options for the outbound transformation. 
+     */
+    override fun outputConversion(outputConversion: OutputConversionProperty) {
+      cdkBuilder.outputConversion(outputConversion.let(OutputConversionProperty.Companion::unwrap))
+    }
+
+    /**
+     * Returns the `OutputConversion` object, which contains the format options for the outbound
+     * transformation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-outputconversion)
+     * @param outputConversion Returns the `OutputConversion` object, which contains the format
+     * options for the outbound transformation. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d31daf070413a2ccf9a65911b3fc96173ffa161ce7c2500b71c87f66360fb9af")
+    override fun outputConversion(outputConversion: OutputConversionProperty.Builder.() -> Unit):
+        Unit = outputConversion(OutputConversionProperty(outputConversion))
+
+    /**
+     * (deprecated) This shape is deprecated: This is a legacy trait.
+     *
+     * Please use input-conversion or output-conversion.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-sampledocument)
-     * @param sampleDocument Returns a sample EDI document that is used by a transformer as a guide
-     * for processing the EDI data. 
+     * @deprecated this property has been deprecated
+     * @param sampleDocument This shape is deprecated: This is a legacy trait. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun sampleDocument(sampleDocument: String) {
       cdkBuilder.sampleDocument(sampleDocument)
     }
+
+    /**
+     * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+     * used to identify the location for your sample documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-sampledocuments)
+     * @param sampleDocuments Returns a structure that contains the Amazon S3 bucket and an array of
+     * the corresponding keys used to identify the location for your sample documents. 
+     */
+    override fun sampleDocuments(sampleDocuments: IResolvable) {
+      cdkBuilder.sampleDocuments(sampleDocuments.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+     * used to identify the location for your sample documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-sampledocuments)
+     * @param sampleDocuments Returns a structure that contains the Amazon S3 bucket and an array of
+     * the corresponding keys used to identify the location for your sample documents. 
+     */
+    override fun sampleDocuments(sampleDocuments: SampleDocumentsProperty) {
+      cdkBuilder.sampleDocuments(sampleDocuments.let(SampleDocumentsProperty.Companion::unwrap))
+    }
+
+    /**
+     * Returns a structure that contains the Amazon S3 bucket and an array of the corresponding keys
+     * used to identify the location for your sample documents.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-transformer.html#cfn-b2bi-transformer-sampledocuments)
+     * @param sampleDocuments Returns a structure that contains the Amazon S3 bucket and an array of
+     * the corresponding keys used to identify the location for your sample documents. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("126d67e33fc6de29b1c4e26c8b49d10eed029e7b1b1acf56925fb0ed85abd10e")
+    override fun sampleDocuments(sampleDocuments: SampleDocumentsProperty.Builder.() -> Unit): Unit
+        = sampleDocuments(SampleDocumentsProperty(sampleDocuments))
 
     /**
      * Returns the state of the newly created transformer.
@@ -492,11 +922,6 @@ public open class CfnTransformer(
   }
 
   /**
-   * Specifies the details for the EDI standard that is being used for the transformer.
-   *
-   * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-   * define specific business documents.
-   *
    * Example:
    *
    * ```
@@ -515,11 +940,6 @@ public open class CfnTransformer(
    */
   public interface EdiTypeProperty {
     /**
-     * Returns the details for the EDI standard that is being used for the transformer.
-     *
-     * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-     * define specific business documents.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-editype.html#cfn-b2bi-transformer-editype-x12details)
      */
     public fun x12Details(): Any
@@ -530,26 +950,17 @@ public open class CfnTransformer(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       public fun x12Details(x12Details: IResolvable)
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       public fun x12Details(x12Details: X12DetailsProperty)
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0e7f53f7c8b93292a1154273d61bb66f75775193f21594f4971c63075e5ebc9a")
@@ -562,30 +973,21 @@ public open class CfnTransformer(
           software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty.builder()
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       override fun x12Details(x12Details: IResolvable) {
         cdkBuilder.x12Details(x12Details.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       override fun x12Details(x12Details: X12DetailsProperty) {
         cdkBuilder.x12Details(x12Details.let(X12DetailsProperty.Companion::unwrap))
       }
 
       /**
-       * @param x12Details Returns the details for the EDI standard that is being used for the
-       * transformer. 
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
+       * @param x12Details the value to be set. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0e7f53f7c8b93292a1154273d61bb66f75775193f21594f4971c63075e5ebc9a")
@@ -601,11 +1003,6 @@ public open class CfnTransformer(
     ) : CdkObject(cdkObject),
         EdiTypeProperty {
       /**
-       * Returns the details for the EDI standard that is being used for the transformer.
-       *
-       * Currently, only X12 is supported. X12 is a set of standards and corresponding messages that
-       * define specific business documents.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-editype.html#cfn-b2bi-transformer-editype-x12details)
        */
       override fun x12Details(): Any = unwrap(this).getX12Details()
@@ -626,6 +1023,697 @@ public open class CfnTransformer(
           software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.b2bi.CfnTransformer.EdiTypeProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * FormatOptionsProperty formatOptionsProperty = FormatOptionsProperty.builder()
+   * .x12(X12DetailsProperty.builder()
+   * .transactionSet("transactionSet")
+   * .version("version")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-formatoptions.html)
+   */
+  public interface FormatOptionsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-formatoptions.html#cfn-b2bi-transformer-formatoptions-x12)
+     */
+    public fun x12(): Any
+
+    /**
+     * A builder for [FormatOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param x12 the value to be set. 
+       */
+      public fun x12(x12: IResolvable)
+
+      /**
+       * @param x12 the value to be set. 
+       */
+      public fun x12(x12: X12DetailsProperty)
+
+      /**
+       * @param x12 the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d3448a33127b836f888128060e1f12322173657ab7e0b9031b88fdacc254bb29")
+      public fun x12(x12: X12DetailsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.FormatOptionsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.FormatOptionsProperty.builder()
+
+      /**
+       * @param x12 the value to be set. 
+       */
+      override fun x12(x12: IResolvable) {
+        cdkBuilder.x12(x12.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param x12 the value to be set. 
+       */
+      override fun x12(x12: X12DetailsProperty) {
+        cdkBuilder.x12(x12.let(X12DetailsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param x12 the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("d3448a33127b836f888128060e1f12322173657ab7e0b9031b88fdacc254bb29")
+      override fun x12(x12: X12DetailsProperty.Builder.() -> Unit): Unit =
+          x12(X12DetailsProperty(x12))
+
+      public fun build(): software.amazon.awscdk.services.b2bi.CfnTransformer.FormatOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.FormatOptionsProperty,
+    ) : CdkObject(cdkObject),
+        FormatOptionsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-formatoptions.html#cfn-b2bi-transformer-formatoptions-x12)
+       */
+      override fun x12(): Any = unwrap(this).getX12()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FormatOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.FormatOptionsProperty):
+          FormatOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as? FormatOptionsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FormatOptionsProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.FormatOptionsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.FormatOptionsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * InputConversionProperty inputConversionProperty = InputConversionProperty.builder()
+   * .fromFormat("fromFormat")
+   * // the properties below are optional
+   * .formatOptions(FormatOptionsProperty.builder()
+   * .x12(X12DetailsProperty.builder()
+   * .transactionSet("transactionSet")
+   * .version("version")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html)
+   */
+  public interface InputConversionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html#cfn-b2bi-transformer-inputconversion-formatoptions)
+     */
+    public fun formatOptions(): Any? = unwrap(this).getFormatOptions()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html#cfn-b2bi-transformer-inputconversion-fromformat)
+     */
+    public fun fromFormat(): String
+
+    /**
+     * A builder for [InputConversionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param formatOptions the value to be set.
+       */
+      public fun formatOptions(formatOptions: IResolvable)
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      public fun formatOptions(formatOptions: FormatOptionsProperty)
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9adb574088f5ed3a6520793c99145bdf8075552dbc3d35ed8d29b4cb48c3db0e")
+      public fun formatOptions(formatOptions: FormatOptionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param fromFormat the value to be set. 
+       */
+      public fun fromFormat(fromFormat: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty.builder()
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      override fun formatOptions(formatOptions: IResolvable) {
+        cdkBuilder.formatOptions(formatOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      override fun formatOptions(formatOptions: FormatOptionsProperty) {
+        cdkBuilder.formatOptions(formatOptions.let(FormatOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9adb574088f5ed3a6520793c99145bdf8075552dbc3d35ed8d29b4cb48c3db0e")
+      override fun formatOptions(formatOptions: FormatOptionsProperty.Builder.() -> Unit): Unit =
+          formatOptions(FormatOptionsProperty(formatOptions))
+
+      /**
+       * @param fromFormat the value to be set. 
+       */
+      override fun fromFormat(fromFormat: String) {
+        cdkBuilder.fromFormat(fromFormat)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty,
+    ) : CdkObject(cdkObject),
+        InputConversionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html#cfn-b2bi-transformer-inputconversion-formatoptions)
+       */
+      override fun formatOptions(): Any? = unwrap(this).getFormatOptions()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-inputconversion.html#cfn-b2bi-transformer-inputconversion-fromformat)
+       */
+      override fun fromFormat(): String = unwrap(this).getFromFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): InputConversionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty):
+          InputConversionProperty = CdkObjectWrappers.wrap(cdkObject) as? InputConversionProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputConversionProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.InputConversionProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * MappingProperty mappingProperty = MappingProperty.builder()
+   * .templateLanguage("templateLanguage")
+   * // the properties below are optional
+   * .template("template")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-mapping.html)
+   */
+  public interface MappingProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-mapping.html#cfn-b2bi-transformer-mapping-template)
+     */
+    public fun template(): String? = unwrap(this).getTemplate()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-mapping.html#cfn-b2bi-transformer-mapping-templatelanguage)
+     */
+    public fun templateLanguage(): String
+
+    /**
+     * A builder for [MappingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param template the value to be set.
+       */
+      public fun template(template: String)
+
+      /**
+       * @param templateLanguage the value to be set. 
+       */
+      public fun templateLanguage(templateLanguage: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.MappingProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.MappingProperty.builder()
+
+      /**
+       * @param template the value to be set.
+       */
+      override fun template(template: String) {
+        cdkBuilder.template(template)
+      }
+
+      /**
+       * @param templateLanguage the value to be set. 
+       */
+      override fun templateLanguage(templateLanguage: String) {
+        cdkBuilder.templateLanguage(templateLanguage)
+      }
+
+      public fun build(): software.amazon.awscdk.services.b2bi.CfnTransformer.MappingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.MappingProperty,
+    ) : CdkObject(cdkObject),
+        MappingProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-mapping.html#cfn-b2bi-transformer-mapping-template)
+       */
+      override fun template(): String? = unwrap(this).getTemplate()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-mapping.html#cfn-b2bi-transformer-mapping-templatelanguage)
+       */
+      override fun templateLanguage(): String = unwrap(this).getTemplateLanguage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MappingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.MappingProperty):
+          MappingProperty = CdkObjectWrappers.wrap(cdkObject) as? MappingProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MappingProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.MappingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.MappingProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * OutputConversionProperty outputConversionProperty = OutputConversionProperty.builder()
+   * .toFormat("toFormat")
+   * // the properties below are optional
+   * .formatOptions(FormatOptionsProperty.builder()
+   * .x12(X12DetailsProperty.builder()
+   * .transactionSet("transactionSet")
+   * .version("version")
+   * .build())
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-outputconversion.html)
+   */
+  public interface OutputConversionProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-outputconversion.html#cfn-b2bi-transformer-outputconversion-formatoptions)
+     */
+    public fun formatOptions(): Any? = unwrap(this).getFormatOptions()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-outputconversion.html#cfn-b2bi-transformer-outputconversion-toformat)
+     */
+    public fun toFormat(): String
+
+    /**
+     * A builder for [OutputConversionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param formatOptions the value to be set.
+       */
+      public fun formatOptions(formatOptions: IResolvable)
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      public fun formatOptions(formatOptions: FormatOptionsProperty)
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("628430e93ba46295b973557bd696f9361bc127a816ff4b1cdcd7ec2d4aa31a19")
+      public fun formatOptions(formatOptions: FormatOptionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param toFormat the value to be set. 
+       */
+      public fun toFormat(toFormat: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.OutputConversionProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.OutputConversionProperty.builder()
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      override fun formatOptions(formatOptions: IResolvable) {
+        cdkBuilder.formatOptions(formatOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      override fun formatOptions(formatOptions: FormatOptionsProperty) {
+        cdkBuilder.formatOptions(formatOptions.let(FormatOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param formatOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("628430e93ba46295b973557bd696f9361bc127a816ff4b1cdcd7ec2d4aa31a19")
+      override fun formatOptions(formatOptions: FormatOptionsProperty.Builder.() -> Unit): Unit =
+          formatOptions(FormatOptionsProperty(formatOptions))
+
+      /**
+       * @param toFormat the value to be set. 
+       */
+      override fun toFormat(toFormat: String) {
+        cdkBuilder.toFormat(toFormat)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnTransformer.OutputConversionProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.OutputConversionProperty,
+    ) : CdkObject(cdkObject),
+        OutputConversionProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-outputconversion.html#cfn-b2bi-transformer-outputconversion-formatoptions)
+       */
+      override fun formatOptions(): Any? = unwrap(this).getFormatOptions()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-outputconversion.html#cfn-b2bi-transformer-outputconversion-toformat)
+       */
+      override fun toFormat(): String = unwrap(this).getToFormat()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OutputConversionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.OutputConversionProperty):
+          OutputConversionProperty = CdkObjectWrappers.wrap(cdkObject) as? OutputConversionProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OutputConversionProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.OutputConversionProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.OutputConversionProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * SampleDocumentKeysProperty sampleDocumentKeysProperty = SampleDocumentKeysProperty.builder()
+   * .input("input")
+   * .output("output")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocumentkeys.html)
+   */
+  public interface SampleDocumentKeysProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocumentkeys.html#cfn-b2bi-transformer-sampledocumentkeys-input)
+     */
+    public fun input(): String? = unwrap(this).getInput()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocumentkeys.html#cfn-b2bi-transformer-sampledocumentkeys-output)
+     */
+    public fun output(): String? = unwrap(this).getOutput()
+
+    /**
+     * A builder for [SampleDocumentKeysProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param input the value to be set.
+       */
+      public fun input(input: String)
+
+      /**
+       * @param output the value to be set.
+       */
+      public fun output(output: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentKeysProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentKeysProperty.builder()
+
+      /**
+       * @param input the value to be set.
+       */
+      override fun input(input: String) {
+        cdkBuilder.input(input)
+      }
+
+      /**
+       * @param output the value to be set.
+       */
+      override fun output(output: String) {
+        cdkBuilder.output(output)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentKeysProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentKeysProperty,
+    ) : CdkObject(cdkObject),
+        SampleDocumentKeysProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocumentkeys.html#cfn-b2bi-transformer-sampledocumentkeys-input)
+       */
+      override fun input(): String? = unwrap(this).getInput()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocumentkeys.html#cfn-b2bi-transformer-sampledocumentkeys-output)
+       */
+      override fun output(): String? = unwrap(this).getOutput()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SampleDocumentKeysProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentKeysProperty):
+          SampleDocumentKeysProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SampleDocumentKeysProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SampleDocumentKeysProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentKeysProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentKeysProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.b2bi.*;
+   * SampleDocumentsProperty sampleDocumentsProperty = SampleDocumentsProperty.builder()
+   * .bucketName("bucketName")
+   * .keys(List.of(SampleDocumentKeysProperty.builder()
+   * .input("input")
+   * .output("output")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocuments.html)
+   */
+  public interface SampleDocumentsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocuments.html#cfn-b2bi-transformer-sampledocuments-bucketname)
+     */
+    public fun bucketName(): String
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocuments.html#cfn-b2bi-transformer-sampledocuments-keys)
+     */
+    public fun keys(): Any
+
+    /**
+     * A builder for [SampleDocumentsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bucketName the value to be set. 
+       */
+      public fun bucketName(bucketName: String)
+
+      /**
+       * @param keys the value to be set. 
+       */
+      public fun keys(keys: IResolvable)
+
+      /**
+       * @param keys the value to be set. 
+       */
+      public fun keys(keys: List<Any>)
+
+      /**
+       * @param keys the value to be set. 
+       */
+      public fun keys(vararg keys: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentsProperty.Builder =
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentsProperty.builder()
+
+      /**
+       * @param bucketName the value to be set. 
+       */
+      override fun bucketName(bucketName: String) {
+        cdkBuilder.bucketName(bucketName)
+      }
+
+      /**
+       * @param keys the value to be set. 
+       */
+      override fun keys(keys: IResolvable) {
+        cdkBuilder.keys(keys.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param keys the value to be set. 
+       */
+      override fun keys(keys: List<Any>) {
+        cdkBuilder.keys(keys.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param keys the value to be set. 
+       */
+      override fun keys(vararg keys: Any): Unit = keys(keys.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentsProperty,
+    ) : CdkObject(cdkObject),
+        SampleDocumentsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocuments.html#cfn-b2bi-transformer-sampledocuments-bucketname)
+       */
+      override fun bucketName(): String = unwrap(this).getBucketName()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-b2bi-transformer-sampledocuments.html#cfn-b2bi-transformer-sampledocuments-keys)
+       */
+      override fun keys(): Any = unwrap(this).getKeys()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SampleDocumentsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentsProperty):
+          SampleDocumentsProperty = CdkObjectWrappers.wrap(cdkObject) as? SampleDocumentsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SampleDocumentsProperty):
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.b2bi.CfnTransformer.SampleDocumentsProperty
     }
   }
 

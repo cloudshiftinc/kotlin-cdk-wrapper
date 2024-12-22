@@ -17,7 +17,7 @@ import io.cloudshiftdev.constructs.Construct
  * ```
  * Function myLambda;
  * IBucket bucket = Bucket.fromBucketAttributes(this, "ImportedBucket", BucketAttributes.builder()
- * .bucketArn("arn:aws:s3:::my-bucket")
+ * .bucketArn("arn:aws:s3:::amzn-s3-demo-bucket")
  * .build());
  * // now you can just call methods on the bucket
  * bucket.addEventNotification(EventType.OBJECT_CREATED, new LambdaDestination(myLambda),

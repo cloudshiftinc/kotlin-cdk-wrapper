@@ -38,6 +38,7 @@ import kotlin.jvm.JvmName
  * .dataCompressionType("dataCompressionType")
  * .deploymentType("deploymentType")
  * .driveCacheType("driveCacheType")
+ * .efaEnabled(false)
  * .exportPath("exportPath")
  * .importedFileChunkSize(123)
  * .importPath("importPath")
@@ -80,6 +81,10 @@ import kotlin.jvm.JvmName
  * .endpointIpAddressRange("endpointIpAddressRange")
  * .options(List.of("options"))
  * .preferredSubnetId("preferredSubnetId")
+ * .readCacheConfiguration(ReadCacheConfigurationProperty.builder()
+ * .sizeGiB(123)
+ * .sizingMode("sizingMode")
+ * .build())
  * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
  * .copyTagsToSnapshots(false)
  * .dataCompressionType("dataCompressionType")
@@ -287,20 +292,25 @@ public interface CfnFileSystemProps {
   public fun storageCapacity(): Number? = unwrap(this).getStorageCapacity()
 
   /**
-   * Sets the storage type for the file system that you're creating. Valid values are `SSD` and
-   * `HDD` .
+   * Sets the storage class for the file system that you're creating.
+   *
+   * Valid values are `SSD` , `HDD` , and `INTELLIGENT_TIERING` .
    *
    * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
    * ONTAP, and OpenZFS deployment types.
    * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
    * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
    * deployment types.
+   * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
+   * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment type.
    *
    * Default value is `SSD` . For more information, see [Storage type
    * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-   * in the *FSx for Windows File Server User Guide* and [Multiple storage
+   * in the *FSx for Windows File Server User Guide* , [Multiple storage
    * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-   * *FSx for Lustre User Guide* .
+   * *FSx for Lustre User Guide* , and [Working with
+   * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
+   * in the *Amazon FSx for OpenZFS User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-storagetype)
    */
@@ -542,19 +552,25 @@ public interface CfnFileSystemProps {
     public fun storageCapacity(storageCapacity: Number)
 
     /**
-     * @param storageType Sets the storage type for the file system that you're creating. Valid
-     * values are `SSD` and `HDD` .
+     * @param storageType Sets the storage class for the file system that you're creating.
+     * Valid values are `SSD` , `HDD` , and `INTELLIGENT_TIERING` .
+     *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
      * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
+     * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
+     * type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* and [Multiple storage
+     * in the *FSx for Windows File Server User Guide* , [Multiple storage
      * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* .
+     * *FSx for Lustre User Guide* , and [Working with
+     * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
+     * in the *Amazon FSx for OpenZFS User Guide* .
      */
     public fun storageType(storageType: String)
 
@@ -861,19 +877,25 @@ public interface CfnFileSystemProps {
     }
 
     /**
-     * @param storageType Sets the storage type for the file system that you're creating. Valid
-     * values are `SSD` and `HDD` .
+     * @param storageType Sets the storage class for the file system that you're creating.
+     * Valid values are `SSD` , `HDD` , and `INTELLIGENT_TIERING` .
+     *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
      * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
+     * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
+     * type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* and [Multiple storage
+     * in the *FSx for Windows File Server User Guide* , [Multiple storage
      * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* .
+     * *FSx for Lustre User Guide* , and [Working with
+     * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
+     * in the *Amazon FSx for OpenZFS User Guide* .
      */
     override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
@@ -1119,20 +1141,26 @@ public interface CfnFileSystemProps {
     override fun storageCapacity(): Number? = unwrap(this).getStorageCapacity()
 
     /**
-     * Sets the storage type for the file system that you're creating. Valid values are `SSD` and
-     * `HDD` .
+     * Sets the storage class for the file system that you're creating.
+     *
+     * Valid values are `SSD` , `HDD` , and `INTELLIGENT_TIERING` .
      *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
      * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
+     * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
+     * type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* and [Multiple storage
+     * in the *FSx for Windows File Server User Guide* , [Multiple storage
      * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* .
+     * *FSx for Lustre User Guide* , and [Working with
+     * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
+     * in the *Amazon FSx for OpenZFS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-storagetype)
      */

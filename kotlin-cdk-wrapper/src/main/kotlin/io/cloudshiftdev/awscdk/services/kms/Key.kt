@@ -622,6 +622,9 @@ public open class Key(
   }
 
   public companion object {
+    public val DEFAULT_DUMMY_KEY_ID: String =
+        software.amazon.awscdk.services.kms.Key.DEFAULT_DUMMY_KEY_ID
+
     public fun fromCfnKey(cfnKey: CfnKey): IKey =
         software.amazon.awscdk.services.kms.Key.fromCfnKey(cfnKey.let(CfnKey.Companion::unwrap)).let(IKey::wrap)
 
@@ -648,6 +651,9 @@ public open class Key(
       id: String,
       options: KeyLookupOptions.Builder.() -> Unit,
     ): IKey = fromLookup(scope, id, KeyLookupOptions(options))
+
+    public fun isLookupDummy(key: IKey): Boolean =
+        software.amazon.awscdk.services.kms.Key.isLookupDummy(key.let(IKey.Companion::unwrap))
 
     public operator fun invoke(
       scope: CloudshiftdevConstructsConstruct,

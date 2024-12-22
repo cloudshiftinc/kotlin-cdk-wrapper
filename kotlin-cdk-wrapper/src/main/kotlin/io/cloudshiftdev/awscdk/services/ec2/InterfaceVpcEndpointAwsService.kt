@@ -15,28 +15,28 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // Add gateway endpoints when creating the VPC
- * Vpc vpc = Vpc.Builder.create(this, "MyVpc")
- * .gatewayEndpoints(Map.of(
- * "S3", GatewayVpcEndpointOptions.builder()
- * .service(GatewayVpcEndpointAwsService.S3)
- * .build()))
+ * import io.cloudshiftdev.awscdk.services.ec2.*;
+ * Vpc vpc;
+ * InterfaceVpcEndpoint interfaceVpcEndpoint = InterfaceVpcEndpoint.Builder.create(this,
+ * "MyVpcEndpoint")
+ * .vpc(vpc)
+ * .service(InterfaceVpcEndpointAwsService.APP_RUNNER_REQUESTS)
+ * .privateDnsEnabled(false)
  * .build();
- * // Alternatively gateway endpoints can be added on the VPC
- * GatewayVpcEndpoint dynamoDbEndpoint = vpc.addGatewayEndpoint("DynamoDbEndpoint",
- * GatewayVpcEndpointOptions.builder()
- * .service(GatewayVpcEndpointAwsService.DYNAMODB)
- * .build());
- * // This allows to customize the endpoint policy
- * dynamoDbEndpoint.addToPolicy(
- * PolicyStatement.Builder.create() // Restrict to listing and describing tables
- * .principals(List.of(new AnyPrincipal()))
- * .actions(List.of("dynamodb:DescribeTable", "dynamodb:ListTables"))
- * .resources(List.of("*")).build());
- * // Add an interface endpoint
- * vpc.addInterfaceEndpoint("EcrDockerEndpoint", InterfaceVpcEndpointOptions.builder()
- * .service(InterfaceVpcEndpointAwsService.ECR_DOCKER)
- * .build());
+ * Service service = Service.Builder.create(this, "Service")
+ * .source(Source.fromEcrPublic(EcrPublicProps.builder()
+ * .imageConfiguration(ImageConfiguration.builder()
+ * .port(8000)
+ * .build())
+ * .imageIdentifier("public.ecr.aws/aws-containers/hello-app-runner:latest")
+ * .build()))
+ * .isPubliclyAccessible(false)
+ * .build();
+ * VpcIngressConnection.Builder.create(this, "VpcIngressConnection")
+ * .vpc(vpc)
+ * .interfaceVpcEndpoint(interfaceVpcEndpoint)
+ * .service(service)
+ * .build();
  * ```
  */
 public open class InterfaceVpcEndpointAwsService(
@@ -195,6 +195,12 @@ public open class InterfaceVpcEndpointAwsService(
     public val APPLICATION_AUTOSCALING: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.APPLICATION_AUTOSCALING)
 
+    public val APPLICATION_DISCOVERY_ARSENAL: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.APPLICATION_DISCOVERY_ARSENAL)
+
+    public val APPLICATION_DISCOVERY_SERVICE: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.APPLICATION_DISCOVERY_SERVICE)
+
     public val APPLICATION_MIGRATION_SERVICE: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.APPLICATION_MIGRATION_SERVICE)
 
@@ -239,6 +245,9 @@ public open class InterfaceVpcEndpointAwsService(
 
     public val BEDROCK_RUNTIME: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.BEDROCK_RUNTIME)
+
+    public val BILLING: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.BILLING)
 
     public val BILLING_AND_COST_MANAGEMENT_FREETIER: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.BILLING_AND_COST_MANAGEMENT_FREETIER)
@@ -323,6 +332,9 @@ public open class InterfaceVpcEndpointAwsService(
 
     public val CLOUDWATCH_SYNTHETICS: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.CLOUDWATCH_SYNTHETICS)
+
+    public val CLOUDWATCH_SYNTHETICS_FIPS: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.CLOUDWATCH_SYNTHETICS_FIPS)
 
     public val CODE_CONNECTIONS: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.CODE_CONNECTIONS)
@@ -417,6 +429,9 @@ public open class InterfaceVpcEndpointAwsService(
     public val COST_EXPLORER: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.COST_EXPLORER)
 
+    public val COST_OPTIMIZATION_HUB: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.COST_OPTIMIZATION_HUB)
+
     public val DATA_EXCHANGE: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.DATA_EXCHANGE)
 
@@ -446,6 +461,9 @@ public open class InterfaceVpcEndpointAwsService(
 
     public val DIRECTORY_SERVICE: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.DIRECTORY_SERVICE)
+
+    public val DYNAMODB: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.DYNAMODB)
 
     public val EBS_DIRECT: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.EBS_DIRECT)
@@ -525,6 +543,9 @@ public open class InterfaceVpcEndpointAwsService(
     public val EMR_WAL: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.EMR_WAL)
 
+    public val END_USER_MESSAGING_SOCIAL: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.END_USER_MESSAGING_SOCIAL)
+
     public val ENTITY_RESOLUTION: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.ENTITY_RESOLUTION)
 
@@ -566,6 +587,9 @@ public open class InterfaceVpcEndpointAwsService(
 
     public val GLUE: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.GLUE)
+
+    public val GLUE_DASHBOARD: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.GLUE_DASHBOARD)
 
     public val GLUE_DATABREW: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.GLUE_DATABREW)
@@ -621,6 +645,9 @@ public open class InterfaceVpcEndpointAwsService(
     public val INSPECTOR_SCAN: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.INSPECTOR_SCAN)
 
+    public val INVOICING: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.INVOICING)
+
     public val IOT_CORE: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.IOT_CORE)
 
@@ -662,6 +689,12 @@ public open class InterfaceVpcEndpointAwsService(
 
     public val IOT_TWINMAKER_DATA: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.IOT_TWINMAKER_DATA)
+
+    public val KAFKA: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.KAFKA)
+
+    public val KAFKA_FIPS: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.KAFKA_FIPS)
 
     public val KENDRA: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.KENDRA)
@@ -768,8 +801,17 @@ public open class InterfaceVpcEndpointAwsService(
     public val MIGRATIONHUB_STRATEGY: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.MIGRATIONHUB_STRATEGY)
 
+    public val MQ: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.MQ)
+
     public val NEPTUNE_ANALYTICS: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.NEPTUNE_ANALYTICS)
+
+    public val NEPTUNE_ANALYTICS_DATA: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.NEPTUNE_ANALYTICS_DATA)
+
+    public val NEPTUNE_ANALYTICS_FIPS: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.NEPTUNE_ANALYTICS_FIPS)
 
     public val NETWORK_FIREWALL: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.NETWORK_FIREWALL)
@@ -848,6 +890,12 @@ public open class InterfaceVpcEndpointAwsService(
 
     public val POLLY: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.POLLY)
+
+    public val PRICE_LIST: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.PRICE_LIST)
+
+    public val PRICING_CALCULATOR: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.PRICING_CALCULATOR)
 
     public val PRIVATE_5_G: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.PRIVATE_5_G)
@@ -942,6 +990,12 @@ public open class InterfaceVpcEndpointAwsService(
     public val RESOURCE_ACCESS_MANAGER: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.RESOURCE_ACCESS_MANAGER)
 
+    public val RESOURCE_GROUPS: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.RESOURCE_GROUPS)
+
+    public val RESOURCE_GROUPS_FIPS: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.RESOURCE_GROUPS_FIPS)
+
     public val ROBOMAKER: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.ROBOMAKER)
 
@@ -954,8 +1008,17 @@ public open class InterfaceVpcEndpointAwsService(
     public val S3_OUTPOSTS: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.S3_OUTPOSTS)
 
+    public val S3_TABLES: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.S3_TABLES)
+
     public val SAGEMAKER_API: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SAGEMAKER_API)
+
+    public val SAGEMAKER_DATA_SCIENCE_ASSISTANT: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SAGEMAKER_DATA_SCIENCE_ASSISTANT)
+
+    public val SAGEMAKER_EXPERIMENTS: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SAGEMAKER_EXPERIMENTS)
 
     public val SAGEMAKER_FEATURESTORE_RUNTIME: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SAGEMAKER_FEATURESTORE_RUNTIME)
@@ -969,6 +1032,9 @@ public open class InterfaceVpcEndpointAwsService(
     public val SAGEMAKER_NOTEBOOK: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SAGEMAKER_NOTEBOOK)
 
+    public val SAGEMAKER_PARTNER_APP: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SAGEMAKER_PARTNER_APP)
+
     public val SAGEMAKER_RUNTIME: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SAGEMAKER_RUNTIME)
 
@@ -977,6 +1043,9 @@ public open class InterfaceVpcEndpointAwsService(
 
     public val SAGEMAKER_STUDIO: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SAGEMAKER_STUDIO)
+
+    public val SAVINGS_PLANS: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SAVINGS_PLANS)
 
     public val SECRETS_MANAGER: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SECRETS_MANAGER)
@@ -1056,6 +1125,9 @@ public open class InterfaceVpcEndpointAwsService(
     public val SWF_FIPS: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.SWF_FIPS)
 
+    public val TAGGING: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.TAGGING)
+
     public val TELCO_NETWORK_BUILDER: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.TELCO_NETWORK_BUILDER)
 
@@ -1097,6 +1169,9 @@ public open class InterfaceVpcEndpointAwsService(
 
     public val WELL_ARCHITECTED_TOOL: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.WELL_ARCHITECTED_TOOL)
+
+    public val WORKMAIL: InterfaceVpcEndpointAwsService =
+        InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.WORKMAIL)
 
     public val WORKSPACES: InterfaceVpcEndpointAwsService =
         InterfaceVpcEndpointAwsService.wrap(software.amazon.awscdk.services.ec2.InterfaceVpcEndpointAwsService.WORKSPACES)

@@ -12,6 +12,7 @@ import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.lambda.IFunction
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -114,6 +115,27 @@ public open class UserPool(
   @JvmName("8ec5f0dfd81190c1f527b75d6573c8eecb7722a4724cfee3c560b8e67d4e8e51")
   public override fun addDomain(id: String, options: UserPoolDomainOptions.Builder.() -> Unit):
       UserPoolDomain = addDomain(id, UserPoolDomainOptions(options))
+
+  /**
+   * Add a new group to this user pool.
+   *
+   * @param id 
+   * @param options 
+   */
+  public override fun addGroup(id: String, options: UserPoolGroupOptions): UserPoolGroup =
+      unwrap(this).addGroup(id,
+      options.let(UserPoolGroupOptions.Companion::unwrap)).let(UserPoolGroup::wrap)
+
+  /**
+   * Add a new group to this user pool.
+   *
+   * @param id 
+   * @param options 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("ed60659e1cd7a9eaf786d6b5c28d91b9f35ff91fa1d394660d954ba05aa25f09")
+  public override fun addGroup(id: String, options: UserPoolGroupOptions.Builder.() -> Unit):
+      UserPoolGroup = addGroup(id, UserPoolGroupOptions(options))
 
   /**
    * Add a new resource server to this user pool.
@@ -227,12 +249,14 @@ public open class UserPool(
     public fun accountRecovery(accountRecovery: AccountRecovery)
 
     /**
-     * The user pool's Advanced Security Mode.
+     * (deprecated) The user pool's Advanced Security Mode.
      *
      * Default: - no value
      *
+     * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
      * @param advancedSecurityMode The user pool's Advanced Security Mode. 
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun advancedSecurityMode(advancedSecurityMode: AdvancedSecurityMode)
 
     /**
@@ -340,6 +364,19 @@ public open class UserPool(
     public fun enableSmsRole(enableSmsRole: Boolean)
 
     /**
+     * The user pool feature plan, or tier.
+     *
+     * This parameter determines the eligibility of the user pool for features like managed login,
+     * access-token customization, and threat protection.
+     *
+     * Default: - FeaturePlan.ESSENTIALS for a newly created user pool; FeaturePlan.LITE otherwise
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-sign-in-feature-plans.html)
+     * @param featurePlan The user pool feature plan, or tier. 
+     */
+    public fun featurePlan(featurePlan: FeaturePlan)
+
+    /**
      * Attributes which Cognito will look to handle changes to the value of your users' email
      * address and phone number attributes.
      *
@@ -414,8 +451,9 @@ public open class UserPool(
      *
      * Ignored if `mfa` is set to `OFF`.
      *
-     * Default: - { sms: true, otp: false }, if `mfa` is set to `OPTIONAL` or `REQUIRED`.
-     * { sms: false, otp: false }, otherwise
+     * Default: - { sms: true, otp: false, email: false }, if `mfa` is set to `OPTIONAL` or
+     * `REQUIRED`.
+     * { sms: false, otp: false, email:false }, otherwise
      *
      * @param mfaSecondFactor Configure the MFA types that users can use in this user pool. 
      */
@@ -426,8 +464,9 @@ public open class UserPool(
      *
      * Ignored if `mfa` is set to `OFF`.
      *
-     * Default: - { sms: true, otp: false }, if `mfa` is set to `OPTIONAL` or `REQUIRED`.
-     * { sms: false, otp: false }, otherwise
+     * Default: - { sms: true, otp: false, email: false }, if `mfa` is set to `OPTIONAL` or
+     * `REQUIRED`.
+     * { sms: false, otp: false, email:false }, otherwise
      *
      * @param mfaSecondFactor Configure the MFA types that users can use in this user pool. 
      */
@@ -668,12 +707,14 @@ public open class UserPool(
     }
 
     /**
-     * The user pool's Advanced Security Mode.
+     * (deprecated) The user pool's Advanced Security Mode.
      *
      * Default: - no value
      *
+     * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
      * @param advancedSecurityMode The user pool's Advanced Security Mode. 
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun advancedSecurityMode(advancedSecurityMode: AdvancedSecurityMode) {
       cdkBuilder.advancedSecurityMode(advancedSecurityMode.let(AdvancedSecurityMode.Companion::unwrap))
     }
@@ -799,6 +840,21 @@ public open class UserPool(
     }
 
     /**
+     * The user pool feature plan, or tier.
+     *
+     * This parameter determines the eligibility of the user pool for features like managed login,
+     * access-token customization, and threat protection.
+     *
+     * Default: - FeaturePlan.ESSENTIALS for a newly created user pool; FeaturePlan.LITE otherwise
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-sign-in-feature-plans.html)
+     * @param featurePlan The user pool feature plan, or tier. 
+     */
+    override fun featurePlan(featurePlan: FeaturePlan) {
+      cdkBuilder.featurePlan(featurePlan.let(FeaturePlan.Companion::unwrap))
+    }
+
+    /**
      * Attributes which Cognito will look to handle changes to the value of your users' email
      * address and phone number attributes.
      *
@@ -883,8 +939,9 @@ public open class UserPool(
      *
      * Ignored if `mfa` is set to `OFF`.
      *
-     * Default: - { sms: true, otp: false }, if `mfa` is set to `OPTIONAL` or `REQUIRED`.
-     * { sms: false, otp: false }, otherwise
+     * Default: - { sms: true, otp: false, email: false }, if `mfa` is set to `OPTIONAL` or
+     * `REQUIRED`.
+     * { sms: false, otp: false, email:false }, otherwise
      *
      * @param mfaSecondFactor Configure the MFA types that users can use in this user pool. 
      */
@@ -897,8 +954,9 @@ public open class UserPool(
      *
      * Ignored if `mfa` is set to `OFF`.
      *
-     * Default: - { sms: true, otp: false }, if `mfa` is set to `OPTIONAL` or `REQUIRED`.
-     * { sms: false, otp: false }, otherwise
+     * Default: - { sms: true, otp: false, email: false }, if `mfa` is set to `OPTIONAL` or
+     * `REQUIRED`.
+     * { sms: false, otp: false, email:false }, otherwise
      *
      * @param mfaSecondFactor Configure the MFA types that users can use in this user pool. 
      */

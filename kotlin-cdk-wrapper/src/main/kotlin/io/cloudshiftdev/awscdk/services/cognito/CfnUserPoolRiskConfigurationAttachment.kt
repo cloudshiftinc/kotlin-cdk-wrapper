@@ -151,12 +151,12 @@ public open class CfnUserPoolRiskConfigurationAttachment(
       Unit = accountTakeoverRiskConfiguration(AccountTakeoverRiskConfigurationTypeProperty(`value`))
 
   /**
-   * The app client ID.
+   * The app client where this configuration is applied.
    */
   public open fun clientId(): String = unwrap(this).getClientId()
 
   /**
-   * The app client ID.
+   * The app client where this configuration is applied.
    */
   public open fun clientId(`value`: String) {
     unwrap(this).setClientId(`value`)
@@ -291,13 +291,13 @@ public open class CfnUserPoolRiskConfigurationAttachment(
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: AccountTakeoverRiskConfigurationTypeProperty.Builder.() -> Unit)
 
     /**
-     * The app client ID.
+     * The app client where this configuration is applied.
      *
-     * You can specify the risk configuration for a single client (with a specific ClientId) or for
-     * all clients (by setting the ClientId to `ALL` ).
+     * When this parameter isn't present, the risk configuration applies to all user pool app
+     * clients that don't have client-level settings.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-clientid)
-     * @param clientId The app client ID. 
+     * @param clientId The app client where this configuration is applied. 
      */
     public fun clientId(clientId: String)
 
@@ -429,13 +429,13 @@ public open class CfnUserPoolRiskConfigurationAttachment(
         accountTakeoverRiskConfiguration(AccountTakeoverRiskConfigurationTypeProperty(accountTakeoverRiskConfiguration))
 
     /**
-     * The app client ID.
+     * The app client where this configuration is applied.
      *
-     * You can specify the risk configuration for a single client (with a specific ClientId) or for
-     * all clients (by setting the ClientId to `ALL` ).
+     * When this parameter isn't present, the risk configuration applies to all user pool app
+     * clients that don't have client-level settings.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-clientid)
-     * @param clientId The app client ID. 
+     * @param clientId The app client where this configuration is applied. 
      */
     override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)

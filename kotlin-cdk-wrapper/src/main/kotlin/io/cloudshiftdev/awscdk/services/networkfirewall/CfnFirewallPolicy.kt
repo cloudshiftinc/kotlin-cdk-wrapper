@@ -47,6 +47,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .statefulDefaultActions(List.of("statefulDefaultActions"))
  * .statefulEngineOptions(StatefulEngineOptionsProperty.builder()
+ * .flowTimeouts(FlowTimeoutsProperty.builder()
+ * .tcpIdleTimeoutSeconds(123)
+ * .build())
  * .ruleOrder("ruleOrder")
  * .streamExceptionPolicy("streamExceptionPolicy")
  * .build())
@@ -856,6 +859,9 @@ public open class CfnFirewallPolicy(
    * .build())
    * .statefulDefaultActions(List.of("statefulDefaultActions"))
    * .statefulEngineOptions(StatefulEngineOptionsProperty.builder()
+   * .flowTimeouts(FlowTimeoutsProperty.builder()
+   * .tcpIdleTimeoutSeconds(123)
+   * .build())
    * .ruleOrder("ruleOrder")
    * .streamExceptionPolicy("streamExceptionPolicy")
    * .build())
@@ -1637,6 +1643,124 @@ public open class CfnFirewallPolicy(
   }
 
   /**
+   * Describes the amount of time that can pass without any traffic sent through the firewall before
+   * the firewall determines that the connection is idle and Network Firewall removes the flow entry
+   * from its flow table.
+   *
+   * Existing connections and flows are not impacted when you update this value. Only new
+   * connections after you update this value are impacted.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
+   * FlowTimeoutsProperty flowTimeoutsProperty = FlowTimeoutsProperty.builder()
+   * .tcpIdleTimeoutSeconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-flowtimeouts.html)
+   */
+  public interface FlowTimeoutsProperty {
+    /**
+     * The number of seconds that can pass without any TCP traffic sent through the firewall before
+     * the firewall determines that the connection is idle.
+     *
+     * After the idle timeout passes, data packets are dropped, however, the next TCP SYN packet is
+     * considered a new flow and is processed by the firewall. Clients or targets can use TCP keepalive
+     * packets to reset the idle timeout.
+     *
+     * You can define the `TcpIdleTimeoutSeconds` value to be between 60 and 6000 seconds. If no
+     * value is provided, it defaults to 350 seconds.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-flowtimeouts.html#cfn-networkfirewall-firewallpolicy-flowtimeouts-tcpidletimeoutseconds)
+     */
+    public fun tcpIdleTimeoutSeconds(): Number? = unwrap(this).getTcpIdleTimeoutSeconds()
+
+    /**
+     * A builder for [FlowTimeoutsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param tcpIdleTimeoutSeconds The number of seconds that can pass without any TCP traffic
+       * sent through the firewall before the firewall determines that the connection is idle.
+       * After the idle timeout passes, data packets are dropped, however, the next TCP SYN packet
+       * is considered a new flow and is processed by the firewall. Clients or targets can use TCP
+       * keepalive packets to reset the idle timeout.
+       *
+       * You can define the `TcpIdleTimeoutSeconds` value to be between 60 and 6000 seconds. If no
+       * value is provided, it defaults to 350 seconds.
+       */
+      public fun tcpIdleTimeoutSeconds(tcpIdleTimeoutSeconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FlowTimeoutsProperty.Builder
+          =
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FlowTimeoutsProperty.builder()
+
+      /**
+       * @param tcpIdleTimeoutSeconds The number of seconds that can pass without any TCP traffic
+       * sent through the firewall before the firewall determines that the connection is idle.
+       * After the idle timeout passes, data packets are dropped, however, the next TCP SYN packet
+       * is considered a new flow and is processed by the firewall. Clients or targets can use TCP
+       * keepalive packets to reset the idle timeout.
+       *
+       * You can define the `TcpIdleTimeoutSeconds` value to be between 60 and 6000 seconds. If no
+       * value is provided, it defaults to 350 seconds.
+       */
+      override fun tcpIdleTimeoutSeconds(tcpIdleTimeoutSeconds: Number) {
+        cdkBuilder.tcpIdleTimeoutSeconds(tcpIdleTimeoutSeconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FlowTimeoutsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FlowTimeoutsProperty,
+    ) : CdkObject(cdkObject),
+        FlowTimeoutsProperty {
+      /**
+       * The number of seconds that can pass without any TCP traffic sent through the firewall
+       * before the firewall determines that the connection is idle.
+       *
+       * After the idle timeout passes, data packets are dropped, however, the next TCP SYN packet
+       * is considered a new flow and is processed by the firewall. Clients or targets can use TCP
+       * keepalive packets to reset the idle timeout.
+       *
+       * You can define the `TcpIdleTimeoutSeconds` value to be between 60 and 6000 seconds. If no
+       * value is provided, it defaults to 350 seconds.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-flowtimeouts.html#cfn-networkfirewall-firewallpolicy-flowtimeouts-tcpidletimeoutseconds)
+       */
+      override fun tcpIdleTimeoutSeconds(): Number? = unwrap(this).getTcpIdleTimeoutSeconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): FlowTimeoutsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FlowTimeoutsProperty):
+          FlowTimeoutsProperty = CdkObjectWrappers.wrap(cdkObject) as? FlowTimeoutsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: FlowTimeoutsProperty):
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FlowTimeoutsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.FlowTimeoutsProperty
+    }
+  }
+
+  /**
    * A list of IP addresses and address ranges, in CIDR notation.
    *
    * This is part of a `RuleVariables` .
@@ -1967,6 +2091,9 @@ public open class CfnFirewallPolicy(
    * import io.cloudshiftdev.awscdk.services.networkfirewall.*;
    * StatefulEngineOptionsProperty statefulEngineOptionsProperty =
    * StatefulEngineOptionsProperty.builder()
+   * .flowTimeouts(FlowTimeoutsProperty.builder()
+   * .tcpIdleTimeoutSeconds(123)
+   * .build())
    * .ruleOrder("ruleOrder")
    * .streamExceptionPolicy("streamExceptionPolicy")
    * .build();
@@ -1975,6 +2102,14 @@ public open class CfnFirewallPolicy(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html)
    */
   public interface StatefulEngineOptionsProperty {
+    /**
+     * Configures the amount of time that can pass without any traffic sent through the firewall
+     * before the firewall determines that the connection is idle.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-flowtimeouts)
+     */
+    public fun flowTimeouts(): Any? = unwrap(this).getFlowTimeouts()
+
     /**
      * Indicates how to manage the order of stateful rule evaluation for the policy.
      *
@@ -2018,6 +2153,26 @@ public open class CfnFirewallPolicy(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param flowTimeouts Configures the amount of time that can pass without any traffic sent
+       * through the firewall before the firewall determines that the connection is idle.
+       */
+      public fun flowTimeouts(flowTimeouts: IResolvable)
+
+      /**
+       * @param flowTimeouts Configures the amount of time that can pass without any traffic sent
+       * through the firewall before the firewall determines that the connection is idle.
+       */
+      public fun flowTimeouts(flowTimeouts: FlowTimeoutsProperty)
+
+      /**
+       * @param flowTimeouts Configures the amount of time that can pass without any traffic sent
+       * through the firewall before the firewall determines that the connection is idle.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c78d747e18779975836c9697b9501b4de58e6cf9c9de3620fd76fe42c1059426")
+      public fun flowTimeouts(flowTimeouts: FlowTimeoutsProperty.Builder.() -> Unit)
+
+      /**
        * @param ruleOrder Indicates how to manage the order of stateful rule evaluation for the
        * policy.
        * `DEFAULT_ACTION_ORDER` is the default behavior. Stateful rules are provided to the rule
@@ -2056,6 +2211,31 @@ public open class CfnFirewallPolicy(
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty.Builder
           =
           software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty.builder()
+
+      /**
+       * @param flowTimeouts Configures the amount of time that can pass without any traffic sent
+       * through the firewall before the firewall determines that the connection is idle.
+       */
+      override fun flowTimeouts(flowTimeouts: IResolvable) {
+        cdkBuilder.flowTimeouts(flowTimeouts.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param flowTimeouts Configures the amount of time that can pass without any traffic sent
+       * through the firewall before the firewall determines that the connection is idle.
+       */
+      override fun flowTimeouts(flowTimeouts: FlowTimeoutsProperty) {
+        cdkBuilder.flowTimeouts(flowTimeouts.let(FlowTimeoutsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param flowTimeouts Configures the amount of time that can pass without any traffic sent
+       * through the firewall before the firewall determines that the connection is idle.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c78d747e18779975836c9697b9501b4de58e6cf9c9de3620fd76fe42c1059426")
+      override fun flowTimeouts(flowTimeouts: FlowTimeoutsProperty.Builder.() -> Unit): Unit =
+          flowTimeouts(FlowTimeoutsProperty(flowTimeouts))
 
       /**
        * @param ruleOrder Indicates how to manage the order of stateful rule evaluation for the
@@ -2103,6 +2283,14 @@ public open class CfnFirewallPolicy(
       cdkObject: software.amazon.awscdk.services.networkfirewall.CfnFirewallPolicy.StatefulEngineOptionsProperty,
     ) : CdkObject(cdkObject),
         StatefulEngineOptionsProperty {
+      /**
+       * Configures the amount of time that can pass without any traffic sent through the firewall
+       * before the firewall determines that the connection is idle.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-networkfirewall-firewallpolicy-statefulengineoptions.html#cfn-networkfirewall-firewallpolicy-statefulengineoptions-flowtimeouts)
+       */
+      override fun flowTimeouts(): Any? = unwrap(this).getFlowTimeouts()
+
       /**
        * Indicates how to manage the order of stateful rule evaluation for the policy.
        *

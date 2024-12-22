@@ -84,6 +84,8 @@ public interface CfnRestoreTestingPlanProps {
   public fun scheduleExpressionTimezone(): String? = unwrap(this).getScheduleExpressionTimezone()
 
   /**
+   * This parameter is not currently supported.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
    */
   public fun scheduleStatus(): String? = unwrap(this).getScheduleStatus()
@@ -158,7 +160,7 @@ public interface CfnRestoreTestingPlanProps {
     public fun scheduleExpressionTimezone(scheduleExpressionTimezone: String)
 
     /**
-     * @param scheduleStatus the value to be set.
+     * @param scheduleStatus This parameter is not currently supported.
      */
     public fun scheduleStatus(scheduleStatus: String)
 
@@ -248,7 +250,7 @@ public interface CfnRestoreTestingPlanProps {
     }
 
     /**
-     * @param scheduleStatus the value to be set.
+     * @param scheduleStatus This parameter is not currently supported.
      */
     override fun scheduleStatus(scheduleStatus: String) {
       cdkBuilder.scheduleStatus(scheduleStatus)
@@ -327,6 +329,8 @@ public interface CfnRestoreTestingPlanProps {
         unwrap(this).getScheduleExpressionTimezone()
 
     /**
+     * This parameter is not currently supported.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-backup-restoretestingplan.html#cfn-backup-restoretestingplan-schedulestatus)
      */
     override fun scheduleStatus(): String? = unwrap(this).getScheduleStatus()

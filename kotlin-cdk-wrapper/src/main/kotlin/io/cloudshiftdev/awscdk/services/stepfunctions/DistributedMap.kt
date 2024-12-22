@@ -32,13 +32,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * DistributedMap distributedMap = DistributedMap.Builder.create(this, "DistributedMap")
- * .mapExecutionType(StateMachineType.EXPRESS)
+ * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
+ * .maxConcurrency(1)
+ * .itemsPath(JsonPath.stringAt("$.inputForMap"))
  * .build();
- * distributedMap.itemProcessor(new Pass(this, "Pass"), ProcessorConfig.builder()
- * .mode(ProcessorMode.DISTRIBUTED)
- * .executionType(ProcessorType.STANDARD)
- * .build());
+ * distributedMap.itemProcessor(new Pass(this, "Pass State"));
  * ```
  *
  * [Documentation](https://docs.aws.amazon.com/step-functions/latest/dg/concepts-asl-use-map-state-distributed.html)

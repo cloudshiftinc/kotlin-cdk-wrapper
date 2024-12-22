@@ -33,7 +33,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnResolverRule cfnResolverRule = CfnResolverRule.Builder.create(this, "MyCfnResolverRule")
  * .ruleType("ruleType")
  * // the properties below are optional
- * .delegationRecord("delegationRecord")
  * .domainName("domainName")
  * .name("name")
  * .resolverEndpointId("resolverEndpointId")
@@ -46,6 +45,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .ipv6("ipv6")
  * .port("port")
  * .protocol("protocol")
+ * .serverNameIndication("serverNameIndication")
  * .build()))
  * .build();
  * ```
@@ -116,18 +116,6 @@ public open class CfnResolverRule(
    */
   public open fun attrTargetIps(): IResolvable =
       unwrap(this).getAttrTargetIps().let(IResolvable::wrap)
-
-  /**
-   * The name server domain for queries to be delegated to if a query matches the delegation record.
-   */
-  public open fun delegationRecord(): String? = unwrap(this).getDelegationRecord()
-
-  /**
-   * The name server domain for queries to be delegated to if a query matches the delegation record.
-   */
-  public open fun delegationRecord(`value`: String) {
-    unwrap(this).setDelegationRecord(`value`)
-  }
 
   /**
    * DNS queries for this domain name are forwarded to the IP addresses that are specified in
@@ -247,16 +235,6 @@ public open class CfnResolverRule(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The name server domain for queries to be delegated to if a query matches the delegation
-     * record.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-delegationrecord)
-     * @param delegationRecord The name server domain for queries to be delegated to if a query
-     * matches the delegation record. 
-     */
-    public fun delegationRecord(delegationRecord: String)
-
-    /**
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in
      * `TargetIps` .
      *
@@ -368,18 +346,6 @@ public open class CfnResolverRule(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.route53resolver.CfnResolverRule.Builder
         = software.amazon.awscdk.services.route53resolver.CfnResolverRule.Builder.create(scope, id)
-
-    /**
-     * The name server domain for queries to be delegated to if a query matches the delegation
-     * record.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-delegationrecord)
-     * @param delegationRecord The name server domain for queries to be delegated to if a query
-     * matches the delegation record. 
-     */
-    override fun delegationRecord(delegationRecord: String) {
-      cdkBuilder.delegationRecord(delegationRecord)
-    }
 
     /**
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in
@@ -541,6 +507,7 @@ public open class CfnResolverRule(
    * .ipv6("ipv6")
    * .port("port")
    * .protocol("protocol")
+   * .serverNameIndication("serverNameIndication")
    * .build();
    * ```
    *
@@ -569,27 +536,22 @@ public open class CfnResolverRule(
     public fun port(): String? = unwrap(this).getPort()
 
     /**
-     * The protocols for the Resolver endpoints. DoH-FIPS is applicable for inbound endpoints only.
+     * The protocols for the target address.
      *
-     * For an inbound endpoint you can apply the protocols as follows:
-     *
-     * * Do53 and DoH in combination.
-     * * Do53 and DoH-FIPS in combination.
-     * * Do53 alone.
-     * * DoH alone.
-     * * DoH-FIPS alone.
-     * * None, which is treated as Do53.
-     *
-     * For an outbound endpoint you can apply the protocols as follows:
-     *
-     * * Do53 and DoH in combination.
-     * * Do53 alone.
-     * * DoH alone.
-     * * None, which is treated as Do53.
+     * The protocol you choose needs to be supported by the outbound endpoint of the Resolver rule.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverrule-targetaddress.html#cfn-route53resolver-resolverrule-targetaddress-protocol)
      */
     public fun protocol(): String? = unwrap(this).getProtocol()
+
+    /**
+     * The Server Name Indication of the DoH server that you want to forward queries to.
+     *
+     * This is only used if the Protocol of the `TargetAddress` is `DoH` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverrule-targetaddress.html#cfn-route53resolver-resolverrule-targetaddress-servernameindication)
+     */
+    public fun serverNameIndication(): String? = unwrap(this).getServerNameIndication()
 
     /**
      * A builder for [TargetAddressProperty]
@@ -612,25 +574,18 @@ public open class CfnResolverRule(
       public fun port(port: String)
 
       /**
-       * @param protocol The protocols for the Resolver endpoints. DoH-FIPS is applicable for
-       * inbound endpoints only.
-       * For an inbound endpoint you can apply the protocols as follows:
-       *
-       * * Do53 and DoH in combination.
-       * * Do53 and DoH-FIPS in combination.
-       * * Do53 alone.
-       * * DoH alone.
-       * * DoH-FIPS alone.
-       * * None, which is treated as Do53.
-       *
-       * For an outbound endpoint you can apply the protocols as follows:
-       *
-       * * Do53 and DoH in combination.
-       * * Do53 alone.
-       * * DoH alone.
-       * * None, which is treated as Do53.
+       * @param protocol The protocols for the target address.
+       * The protocol you choose needs to be supported by the outbound endpoint of the Resolver
+       * rule.
        */
       public fun protocol(protocol: String)
+
+      /**
+       * @param serverNameIndication The Server Name Indication of the DoH server that you want to
+       * forward queries to.
+       * This is only used if the Protocol of the `TargetAddress` is `DoH` .
+       */
+      public fun serverNameIndication(serverNameIndication: String)
     }
 
     private class BuilderImpl : Builder {
@@ -661,26 +616,21 @@ public open class CfnResolverRule(
       }
 
       /**
-       * @param protocol The protocols for the Resolver endpoints. DoH-FIPS is applicable for
-       * inbound endpoints only.
-       * For an inbound endpoint you can apply the protocols as follows:
-       *
-       * * Do53 and DoH in combination.
-       * * Do53 and DoH-FIPS in combination.
-       * * Do53 alone.
-       * * DoH alone.
-       * * DoH-FIPS alone.
-       * * None, which is treated as Do53.
-       *
-       * For an outbound endpoint you can apply the protocols as follows:
-       *
-       * * Do53 and DoH in combination.
-       * * Do53 alone.
-       * * DoH alone.
-       * * None, which is treated as Do53.
+       * @param protocol The protocols for the target address.
+       * The protocol you choose needs to be supported by the outbound endpoint of the Resolver
+       * rule.
        */
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
+      }
+
+      /**
+       * @param serverNameIndication The Server Name Indication of the DoH server that you want to
+       * forward queries to.
+       * This is only used if the Protocol of the `TargetAddress` is `DoH` .
+       */
+      override fun serverNameIndication(serverNameIndication: String) {
+        cdkBuilder.serverNameIndication(serverNameIndication)
       }
 
       public fun build():
@@ -714,28 +664,23 @@ public open class CfnResolverRule(
       override fun port(): String? = unwrap(this).getPort()
 
       /**
-       * The protocols for the Resolver endpoints. DoH-FIPS is applicable for inbound endpoints
-       * only.
+       * The protocols for the target address.
        *
-       * For an inbound endpoint you can apply the protocols as follows:
-       *
-       * * Do53 and DoH in combination.
-       * * Do53 and DoH-FIPS in combination.
-       * * Do53 alone.
-       * * DoH alone.
-       * * DoH-FIPS alone.
-       * * None, which is treated as Do53.
-       *
-       * For an outbound endpoint you can apply the protocols as follows:
-       *
-       * * Do53 and DoH in combination.
-       * * Do53 alone.
-       * * DoH alone.
-       * * None, which is treated as Do53.
+       * The protocol you choose needs to be supported by the outbound endpoint of the Resolver
+       * rule.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverrule-targetaddress.html#cfn-route53resolver-resolverrule-targetaddress-protocol)
        */
       override fun protocol(): String? = unwrap(this).getProtocol()
+
+      /**
+       * The Server Name Indication of the DoH server that you want to forward queries to.
+       *
+       * This is only used if the Protocol of the `TargetAddress` is `DoH` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-route53resolver-resolverrule-targetaddress.html#cfn-route53resolver-resolverrule-targetaddress-servernameindication)
+       */
+      override fun serverNameIndication(): String? = unwrap(this).getServerNameIndication()
     }
 
     public companion object {

@@ -226,6 +226,7 @@ import kotlin.collections.List
  * .build()))
  * .opsCenterEnabled(false)
  * .opsItemSnsTopicArn("opsItemSnsTopicArn")
+ * .snsNotificationArn("snsNotificationArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -316,6 +317,13 @@ public interface CfnApplicationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-resourcegroupname)
    */
   public fun resourceGroupName(): String
+
+  /**
+   * The SNS topic ARN that is associated with SNS notifications for updates or issues.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-snsnotificationarn)
+   */
+  public fun snsNotificationArn(): String? = unwrap(this).getSnsNotificationArn()
 
   /**
    * An array of `Tags` .
@@ -451,6 +459,12 @@ public interface CfnApplicationProps {
      * @param resourceGroupName The name of the resource group used for the application. 
      */
     public fun resourceGroupName(resourceGroupName: String)
+
+    /**
+     * @param snsNotificationArn The SNS topic ARN that is associated with SNS notifications for
+     * updates or issues.
+     */
+    public fun snsNotificationArn(snsNotificationArn: String)
 
     /**
      * @param tags An array of `Tags` .
@@ -629,6 +643,14 @@ public interface CfnApplicationProps {
     }
 
     /**
+     * @param snsNotificationArn The SNS topic ARN that is associated with SNS notifications for
+     * updates or issues.
+     */
+    override fun snsNotificationArn(snsNotificationArn: String) {
+      cdkBuilder.snsNotificationArn(snsNotificationArn)
+    }
+
+    /**
      * @param tags An array of `Tags` .
      */
     override fun tags(tags: List<CfnTag>) {
@@ -728,6 +750,13 @@ public interface CfnApplicationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-resourcegroupname)
      */
     override fun resourceGroupName(): String = unwrap(this).getResourceGroupName()
+
+    /**
+     * The SNS topic ARN that is associated with SNS notifications for updates or issues.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-snsnotificationarn)
+     */
+    override fun snsNotificationArn(): String? = unwrap(this).getSnsNotificationArn()
 
     /**
      * An array of `Tags` .

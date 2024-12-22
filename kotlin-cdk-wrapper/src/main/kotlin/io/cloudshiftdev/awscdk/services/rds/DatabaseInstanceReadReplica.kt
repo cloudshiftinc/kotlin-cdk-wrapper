@@ -117,6 +117,8 @@ public open class DatabaseInstanceReadReplica(
    *
    * This identifier is found in AWS CloudTrail log entries whenever the AWS KMS key for the DB
    * instance is accessed.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbinstance.html#aws-resource-rds-dbinstance-return-values)
    */
   public override fun instanceResourceId(): String? = unwrap(this).getInstanceResourceId()
 

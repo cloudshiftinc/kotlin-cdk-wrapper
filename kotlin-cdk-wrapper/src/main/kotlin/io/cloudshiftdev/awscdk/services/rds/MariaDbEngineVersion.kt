@@ -275,6 +275,9 @@ public open class MariaDbEngineVersion(
     public val VER_10_6_8: MariaDbEngineVersion =
         MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_10_6_8)
 
+    public val VER_11_4_3: MariaDbEngineVersion =
+        MariaDbEngineVersion.wrap(software.amazon.awscdk.services.rds.MariaDbEngineVersion.VER_11_4_3)
+
     public fun of(mariaDbFullVersion: String, mariaDbMajorVersion: String): MariaDbEngineVersion =
         software.amazon.awscdk.services.rds.MariaDbEngineVersion.of(mariaDbFullVersion,
         mariaDbMajorVersion).let(MariaDbEngineVersion::wrap)

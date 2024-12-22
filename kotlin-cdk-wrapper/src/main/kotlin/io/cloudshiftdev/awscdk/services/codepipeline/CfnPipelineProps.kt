@@ -36,6 +36,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .name("name")
  * // the properties below are optional
+ * .commands(List.of("commands"))
  * .configuration(configuration)
  * .inputArtifacts(List.of(InputArtifactProperty.builder()
  * .name("name")
@@ -43,7 +44,10 @@ import kotlin.jvm.JvmName
  * .namespace("namespace")
  * .outputArtifacts(List.of(OutputArtifactProperty.builder()
  * .name("name")
+ * // the properties below are optional
+ * .files(List.of("files"))
  * .build()))
+ * .outputVariables(List.of("outputVariables"))
  * .region("region")
  * .roleArn("roleArn")
  * .runOrder(123)
@@ -95,6 +99,9 @@ import kotlin.jvm.JvmName
  * .build()))
  * .build()))
  * .result("result")
+ * .retryConfiguration(RetryConfigurationProperty.builder()
+ * .retryMode("retryMode")
+ * .build())
  * .build())
  * .onSuccess(SuccessConditionsProperty.builder()
  * .conditions(List.of(ConditionProperty.builder()

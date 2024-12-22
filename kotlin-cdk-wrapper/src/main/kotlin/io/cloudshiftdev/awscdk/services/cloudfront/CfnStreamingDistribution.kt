@@ -323,7 +323,7 @@ public open class CfnStreamingDistribution(
   public interface LoggingProperty {
     /**
      * The Amazon S3 bucket to store the access logs in, for example,
-     * `myawslogbucket.s3.amazonaws.com` .
+     * `amzn-s3-demo-bucket.s3.amazonaws.com` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-bucket)
      */
@@ -359,7 +359,7 @@ public open class CfnStreamingDistribution(
     public interface Builder {
       /**
        * @param bucket The Amazon S3 bucket to store the access logs in, for example,
-       * `myawslogbucket.s3.amazonaws.com` . 
+       * `amzn-s3-demo-bucket.s3.amazonaws.com` . 
        */
       public fun bucket(bucket: String)
 
@@ -400,7 +400,7 @@ public open class CfnStreamingDistribution(
 
       /**
        * @param bucket The Amazon S3 bucket to store the access logs in, for example,
-       * `myawslogbucket.s3.amazonaws.com` . 
+       * `amzn-s3-demo-bucket.s3.amazonaws.com` . 
        */
       override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
@@ -451,7 +451,7 @@ public open class CfnStreamingDistribution(
         LoggingProperty {
       /**
        * The Amazon S3 bucket to store the access logs in, for example,
-       * `myawslogbucket.s3.amazonaws.com` .
+       * `amzn-s3-demo-bucket.s3.amazonaws.com` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-streamingdistribution-logging.html#cfn-cloudfront-streamingdistribution-logging-bucket)
        */

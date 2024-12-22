@@ -87,6 +87,9 @@ public open class Runtime(
     public val SYNTHETICS_NODEJS_PUPPETEER_9_0: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PUPPETEER_9_0)
 
+    public val SYNTHETICS_NODEJS_PUPPETEER_9_1: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_NODEJS_PUPPETEER_9_1)
+
     public val SYNTHETICS_PYTHON_SELENIUM_1_0: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.synthetics.Runtime.SYNTHETICS_PYTHON_SELENIUM_1_0)
 

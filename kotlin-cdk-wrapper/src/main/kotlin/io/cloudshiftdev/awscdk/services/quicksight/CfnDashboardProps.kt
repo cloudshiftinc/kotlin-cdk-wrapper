@@ -61,6 +61,11 @@ public interface CfnDashboardProps {
   public fun definition(): Any? = unwrap(this).getDefinition()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-folderarns)
+   */
+  public fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
+
+  /**
    * A list of analysis Amazon Resource Names (ARNs) to be linked to the dashboard.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-linkentities)
@@ -231,6 +236,16 @@ public interface CfnDashboardProps {
     @JvmName("b0da9f3df5a8b6b57eb07e620534257232bd91095386fbebfd357f7eab1b2a8e")
     public
         fun definition(definition: CfnDashboard.DashboardVersionDefinitionProperty.Builder.() -> Unit)
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    public fun folderArns(folderArns: List<String>)
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    public fun folderArns(vararg folderArns: String)
 
     /**
      * @param linkEntities A list of analysis Amazon Resource Names (ARNs) to be linked to the
@@ -516,6 +531,18 @@ public interface CfnDashboardProps {
         Unit = definition(CfnDashboard.DashboardVersionDefinitionProperty(definition))
 
     /**
+     * @param folderArns the value to be set.
+     */
+    override fun folderArns(folderArns: List<String>) {
+      cdkBuilder.folderArns(folderArns)
+    }
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    override fun folderArns(vararg folderArns: String): Unit = folderArns(folderArns.toList())
+
+    /**
      * @param linkEntities A list of analysis Amazon Resource Names (ARNs) to be linked to the
      * dashboard.
      */
@@ -783,6 +810,11 @@ public interface CfnDashboardProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-definition)
      */
     override fun definition(): Any? = unwrap(this).getDefinition()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-dashboard.html#cfn-quicksight-dashboard-folderarns)
+     */
+    override fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
 
     /**
      * A list of analysis Amazon Resource Names (ARNs) to be linked to the dashboard.

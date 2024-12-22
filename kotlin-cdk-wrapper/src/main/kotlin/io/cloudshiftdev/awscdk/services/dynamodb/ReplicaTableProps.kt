@@ -133,12 +133,12 @@ public interface ReplicaTableProps : TableOptionsV2 {
     public fun tableClass(tableClass: TableClass)
 
     /**
-     * @param tags Tags to be applied to the table or replica table.
+     * @param tags Tags to be applied to the primary table (default replica table).
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags Tags to be applied to the table or replica table.
+     * @param tags Tags to be applied to the primary table (default replica table).
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -230,14 +230,14 @@ public interface ReplicaTableProps : TableOptionsV2 {
     }
 
     /**
-     * @param tags Tags to be applied to the table or replica table.
+     * @param tags Tags to be applied to the primary table (default replica table).
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags Tags to be applied to the table or replica table.
+     * @param tags Tags to be applied to the primary table (default replica table).
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -327,7 +327,7 @@ public interface ReplicaTableProps : TableOptionsV2 {
     override fun tableClass(): TableClass? = unwrap(this).getTableClass()?.let(TableClass::wrap)
 
     /**
-     * Tags to be applied to the table or replica table.
+     * Tags to be applied to the primary table (default replica table).
      *
      * Default: - no tags
      */

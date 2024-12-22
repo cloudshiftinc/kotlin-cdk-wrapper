@@ -229,12 +229,12 @@ public open class CfnTargetGroup(
   }
 
   /**
-   * The type of IP address used for this target group.
+   * The IP address type.
    */
   public open fun ipAddressType(): String? = unwrap(this).getIpAddressType()
 
   /**
-   * The type of IP address used for this target group.
+   * The IP address type.
    */
   public open fun ipAddressType(`value`: String) {
     unwrap(this).setIpAddressType(`value`)
@@ -436,7 +436,7 @@ public open class CfnTargetGroup(
      * Indicates whether health checks are enabled.
      *
      * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
      * disabled.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled)
@@ -448,7 +448,7 @@ public open class CfnTargetGroup(
      * Indicates whether health checks are enabled.
      *
      * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
      * disabled.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled)
@@ -540,13 +540,12 @@ public open class CfnTargetGroup(
     public fun healthyThresholdCount(healthyThresholdCount: Number)
 
     /**
-     * The type of IP address used for this target group.
+     * The IP address type.
      *
-     * The possible values are `ipv4` and `ipv6` . This is an optional parameter. If not specified,
-     * the IP address type defaults to `ipv4` .
+     * The default value is `ipv4` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-ipaddresstype)
-     * @param ipAddressType The type of IP address used for this target group. 
+     * @param ipAddressType The IP address type. 
      */
     public fun ipAddressType(ipAddressType: String)
 
@@ -762,7 +761,7 @@ public open class CfnTargetGroup(
      * Indicates whether health checks are enabled.
      *
      * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
      * disabled.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled)
@@ -776,7 +775,7 @@ public open class CfnTargetGroup(
      * Indicates whether health checks are enabled.
      *
      * If the target type is `lambda` , health checks are disabled by default but can be enabled. If
-     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and cannot be
+     * the target type is `instance` , `ip` , or `alb` , health checks are always enabled and can't be
      * disabled.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-healthcheckenabled)
@@ -882,13 +881,12 @@ public open class CfnTargetGroup(
     }
 
     /**
-     * The type of IP address used for this target group.
+     * The IP address type.
      *
-     * The possible values are `ipv4` and `ipv6` . This is an optional parameter. If not specified,
-     * the IP address type defaults to `ipv4` .
+     * The default value is `ipv4` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#cfn-elasticloadbalancingv2-targetgroup-ipaddresstype)
-     * @param ipAddressType The type of IP address used for this target group. 
+     * @param ipAddressType The IP address type. 
      */
     override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
@@ -1666,7 +1664,7 @@ public open class CfnTargetGroup(
      * * `preserve_client_ip.enabled` - Indicates whether client IP preservation is enabled. The
      * value is `true` or `false` . The default is disabled if the target group type is IP address and
      * the target group protocol is TCP or TLS. Otherwise, the default is enabled. Client IP
-     * preservation cannot be disabled for UDP and TCP_UDP target groups.
+     * preservation can't be disabled for UDP and TCP_UDP target groups.
      * * `proxy_protocol_v2.enabled` - Indicates whether Proxy Protocol version 2 is enabled. The
      * value is `true` or `false` . The default is `false` .
      * * `target_health_state.unhealthy.connection_termination.enabled` - Indicates whether the load
@@ -1690,7 +1688,7 @@ public open class CfnTargetGroup(
      * * `target_failover.on_unhealthy` - Indicates how the Gateway Load Balancer handles existing
      * flows when a target is unhealthy. The possible values are `rebalance` and `no_rebalance` . The
      * default is `no_rebalance` . The two attributes ( `target_failover.on_deregistration` and
-     * `target_failover.on_unhealthy` ) cannot be set independently. The value you set for both
+     * `target_failover.on_unhealthy` ) can't be set independently. The value you set for both
      * attributes must be the same.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-key)
@@ -1790,7 +1788,7 @@ public open class CfnTargetGroup(
        * * `preserve_client_ip.enabled` - Indicates whether client IP preservation is enabled. The
        * value is `true` or `false` . The default is disabled if the target group type is IP address
        * and the target group protocol is TCP or TLS. Otherwise, the default is enabled. Client IP
-       * preservation cannot be disabled for UDP and TCP_UDP target groups.
+       * preservation can't be disabled for UDP and TCP_UDP target groups.
        * * `proxy_protocol_v2.enabled` - Indicates whether Proxy Protocol version 2 is enabled. The
        * value is `true` or `false` . The default is `false` .
        * * `target_health_state.unhealthy.connection_termination.enabled` - Indicates whether the
@@ -1814,7 +1812,7 @@ public open class CfnTargetGroup(
        * * `target_failover.on_unhealthy` - Indicates how the Gateway Load Balancer handles existing
        * flows when a target is unhealthy. The possible values are `rebalance` and `no_rebalance` . The
        * default is `no_rebalance` . The two attributes ( `target_failover.on_deregistration` and
-       * `target_failover.on_unhealthy` ) cannot be set independently. The value you set for both
+       * `target_failover.on_unhealthy` ) can't be set independently. The value you set for both
        * attributes must be the same.
        */
       public fun key(key: String)
@@ -1912,7 +1910,7 @@ public open class CfnTargetGroup(
        * * `preserve_client_ip.enabled` - Indicates whether client IP preservation is enabled. The
        * value is `true` or `false` . The default is disabled if the target group type is IP address
        * and the target group protocol is TCP or TLS. Otherwise, the default is enabled. Client IP
-       * preservation cannot be disabled for UDP and TCP_UDP target groups.
+       * preservation can't be disabled for UDP and TCP_UDP target groups.
        * * `proxy_protocol_v2.enabled` - Indicates whether Proxy Protocol version 2 is enabled. The
        * value is `true` or `false` . The default is `false` .
        * * `target_health_state.unhealthy.connection_termination.enabled` - Indicates whether the
@@ -1936,7 +1934,7 @@ public open class CfnTargetGroup(
        * * `target_failover.on_unhealthy` - Indicates how the Gateway Load Balancer handles existing
        * flows when a target is unhealthy. The possible values are `rebalance` and `no_rebalance` . The
        * default is `no_rebalance` . The two attributes ( `target_failover.on_deregistration` and
-       * `target_failover.on_unhealthy` ) cannot be set independently. The value you set for both
+       * `target_failover.on_unhealthy` ) can't be set independently. The value you set for both
        * attributes must be the same.
        */
       override fun key(key: String) {
@@ -2041,7 +2039,7 @@ public open class CfnTargetGroup(
        * * `preserve_client_ip.enabled` - Indicates whether client IP preservation is enabled. The
        * value is `true` or `false` . The default is disabled if the target group type is IP address
        * and the target group protocol is TCP or TLS. Otherwise, the default is enabled. Client IP
-       * preservation cannot be disabled for UDP and TCP_UDP target groups.
+       * preservation can't be disabled for UDP and TCP_UDP target groups.
        * * `proxy_protocol_v2.enabled` - Indicates whether Proxy Protocol version 2 is enabled. The
        * value is `true` or `false` . The default is `false` .
        * * `target_health_state.unhealthy.connection_termination.enabled` - Indicates whether the
@@ -2065,7 +2063,7 @@ public open class CfnTargetGroup(
        * * `target_failover.on_unhealthy` - Indicates how the Gateway Load Balancer handles existing
        * flows when a target is unhealthy. The possible values are `rebalance` and `no_rebalance` . The
        * default is `no_rebalance` . The two attributes ( `target_failover.on_deregistration` and
-       * `target_failover.on_unhealthy` ) cannot be set independently. The value you set for both
+       * `target_failover.on_unhealthy` ) can't be set independently. The value you set for both
        * attributes must be the same.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html#cfn-elasticloadbalancingv2-targetgroup-targetgroupattribute-key)

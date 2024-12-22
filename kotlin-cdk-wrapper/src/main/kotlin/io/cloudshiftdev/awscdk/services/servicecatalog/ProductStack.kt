@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.Stack
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.deployment.ServerSideEncryption
+import kotlin.Boolean
 import kotlin.Number
 import kotlin.String
 import kotlin.Unit
@@ -81,6 +82,16 @@ public open class ProductStack(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Include runtime versioning information in this Stack.
+     *
+     * Default: - `analyticsReporting` setting of containing `App`, or value of
+     * 'aws:cdk:version-reporting' context key
+     *
+     * @param analyticsReporting Include runtime versioning information in this Stack. 
+     */
+    public fun analyticsReporting(analyticsReporting: Boolean)
+
+    /**
      * A Bucket can be passed to store assets, enabling ProductStack Asset support.
      *
      * Default: - No Bucket provided and Assets will not be supported.
@@ -89,6 +100,15 @@ public open class ProductStack(
      * support. 
      */
     public fun assetBucket(assetBucket: IBucket)
+
+    /**
+     * A description of the stack.
+     *
+     * Default: - No description.
+     *
+     * @param description A description of the stack. 
+     */
+    public fun description(description: String)
 
     /**
      * The amount of memory (in MiB) to allocate to the AWS Lambda function which replicates the
@@ -134,6 +154,18 @@ public open class ProductStack(
         software.amazon.awscdk.services.servicecatalog.ProductStack.Builder.create(scope, id)
 
     /**
+     * Include runtime versioning information in this Stack.
+     *
+     * Default: - `analyticsReporting` setting of containing `App`, or value of
+     * 'aws:cdk:version-reporting' context key
+     *
+     * @param analyticsReporting Include runtime versioning information in this Stack. 
+     */
+    override fun analyticsReporting(analyticsReporting: Boolean) {
+      cdkBuilder.analyticsReporting(analyticsReporting)
+    }
+
+    /**
      * A Bucket can be passed to store assets, enabling ProductStack Asset support.
      *
      * Default: - No Bucket provided and Assets will not be supported.
@@ -143,6 +175,17 @@ public open class ProductStack(
      */
     override fun assetBucket(assetBucket: IBucket) {
       cdkBuilder.assetBucket(assetBucket.let(IBucket.Companion::unwrap))
+    }
+
+    /**
+     * A description of the stack.
+     *
+     * Default: - No description.
+     *
+     * @param description A description of the stack. 
+     */
+    override fun description(description: String) {
+      cdkBuilder.description(description)
     }
 
     /**

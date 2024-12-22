@@ -121,6 +121,10 @@ import kotlin.jvm.JvmName
  * .projectionType("projectionType")
  * .build())
  * // the properties below are optional
+ * .warmThroughput(WarmThroughputProperty.builder()
+ * .readUnitsPerSecond(123)
+ * .writeUnitsPerSecond(123)
+ * .build())
  * .writeOnDemandThroughputSettings(WriteOnDemandThroughputSettingsProperty.builder()
  * .maxWriteRequestUnits(123)
  * .build())
@@ -164,6 +168,10 @@ import kotlin.jvm.JvmName
  * .enabled(false)
  * // the properties below are optional
  * .attributeName("attributeName")
+ * .build())
+ * .warmThroughput(WarmThroughputProperty.builder()
+ * .readUnitsPerSecond(123)
+ * .writeUnitsPerSecond(123)
  * .build())
  * .writeOnDemandThroughputSettings(WriteOnDemandThroughputSettingsProperty.builder()
  * .maxWriteRequestUnits(123)
@@ -321,9 +329,20 @@ public interface CfnGlobalTableProps {
   public fun timeToLiveSpecification(): Any? = unwrap(this).getTimeToLiveSpecification()
 
   /**
+   * Provides visibility into the number of read and write operations your table or secondary index
+   * can instantaneously support.
+   *
+   * The settings can be modified using the `UpdateTable` operation to meet the throughput
+   * requirements of an upcoming peak event.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-warmthroughput)
+   */
+  public fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
+
+  /**
    * Sets the write request settings for a global table or a global secondary index.
    *
-   * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+   * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
    */
@@ -611,16 +630,43 @@ public interface CfnGlobalTableProps {
         fun timeToLiveSpecification(timeToLiveSpecification: CfnGlobalTable.TimeToLiveSpecificationProperty.Builder.() -> Unit)
 
     /**
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support.
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     */
+    public fun warmThroughput(warmThroughput: IResolvable)
+
+    /**
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support.
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     */
+    public fun warmThroughput(warmThroughput: CfnGlobalTable.WarmThroughputProperty)
+
+    /**
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support.
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("babee557ec9b1ab69c4dd02700823ba02de27b267402943ae2619527c510a591")
+    public
+        fun warmThroughput(warmThroughput: CfnGlobalTable.WarmThroughputProperty.Builder.() -> Unit)
+
+    /**
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
      * a global secondary index.
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      */
     public fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable)
 
     /**
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
      * a global secondary index.
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      */
     public
         fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: CfnGlobalTable.WriteOnDemandThroughputSettingsProperty)
@@ -628,7 +674,7 @@ public interface CfnGlobalTableProps {
     /**
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
      * a global secondary index.
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("03ff940b187afcc4d415dbd175d3418a96cc698bd2755a5821b65ea8f65b9834")
@@ -977,9 +1023,41 @@ public interface CfnGlobalTableProps {
         timeToLiveSpecification(CfnGlobalTable.TimeToLiveSpecificationProperty(timeToLiveSpecification))
 
     /**
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support.
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     */
+    override fun warmThroughput(warmThroughput: IResolvable) {
+      cdkBuilder.warmThroughput(warmThroughput.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support.
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     */
+    override fun warmThroughput(warmThroughput: CfnGlobalTable.WarmThroughputProperty) {
+      cdkBuilder.warmThroughput(warmThroughput.let(CfnGlobalTable.WarmThroughputProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support.
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("babee557ec9b1ab69c4dd02700823ba02de27b267402943ae2619527c510a591")
+    override
+        fun warmThroughput(warmThroughput: CfnGlobalTable.WarmThroughputProperty.Builder.() -> Unit):
+        Unit = warmThroughput(CfnGlobalTable.WarmThroughputProperty(warmThroughput))
+
+    /**
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
      * a global secondary index.
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      */
     override fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable) {
       cdkBuilder.writeOnDemandThroughputSettings(writeOnDemandThroughputSettings.let(IResolvable.Companion::unwrap))
@@ -988,7 +1066,7 @@ public interface CfnGlobalTableProps {
     /**
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
      * a global secondary index.
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      */
     override
         fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: CfnGlobalTable.WriteOnDemandThroughputSettingsProperty) {
@@ -998,7 +1076,7 @@ public interface CfnGlobalTableProps {
     /**
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
      * a global secondary index.
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("03ff940b187afcc4d415dbd175d3418a96cc698bd2755a5821b65ea8f65b9834")
@@ -1182,9 +1260,20 @@ public interface CfnGlobalTableProps {
     override fun timeToLiveSpecification(): Any? = unwrap(this).getTimeToLiveSpecification()
 
     /**
+     * Provides visibility into the number of read and write operations your table or secondary
+     * index can instantaneously support.
+     *
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-warmthroughput)
+     */
+    override fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
+
+    /**
      * Sets the write request settings for a global table or a global secondary index.
      *
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
      */

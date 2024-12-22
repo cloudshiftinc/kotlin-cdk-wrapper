@@ -97,6 +97,17 @@ public open class LustreFileSystem(
     public fun backupId(backupId: String)
 
     /**
+     * The Lustre version for the file system.
+     *
+     * Default: - V_2_10, except for PERSISTENT_2 deployment type, where it is V_2_12 without
+     * metadata configuration mode and V_2_15 with metadata configuration mode.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-filesystemtypeversion)
+     * @param fileSystemTypeVersion The Lustre version for the file system. 
+     */
+    public fun fileSystemTypeVersion(fileSystemTypeVersion: FileSystemTypeVersion)
+
+    /**
      * The KMS key used for encryption to protect your data at rest.
      *
      * Default: - the aws/fsx default KMS key for the AWS account being deployed into.
@@ -145,12 +156,24 @@ public open class LustreFileSystem(
      * For Windows file systems, valid values are 32 GiB to 65,536 GiB.
      * For SCRATCH_1 deployment types, valid values are 1,200, 2,400, 3,600, then continuing in
      * increments of 3,600 GiB.
-     * For SCRATCH_2 and PERSISTENT_1 types, valid values are 1,200, 2,400, then continuing in
-     * increments of 2,400 GiB.
+     * For SCRATCH_2, PERSISTENT_2 and PERSISTENT_1 deployment types using SSD storage type, the
+     * valid values are 1200 GiB, 2400 GiB, and increments of 2400 GiB.
+     * For PERSISTENT_1 HDD file systems, valid values are increments of 6000 GiB for 12 MB/s/TiB
+     * file systems and increments of 1800 GiB for 40 MB/s/TiB file systems.
      *
      * @param storageCapacityGiB The storage capacity of the file system being created. 
      */
     public fun storageCapacityGiB(storageCapacityGiB: Number)
+
+    /**
+     * The storage type for the file system that you're creating.
+     *
+     * Default: StorageType.SSD
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-storagetype)
+     * @param storageType The storage type for the file system that you're creating. 
+     */
+    public fun storageType(storageType: StorageType)
 
     /**
      * The VPC to launch the file system in.
@@ -185,6 +208,19 @@ public open class LustreFileSystem(
      */
     override fun backupId(backupId: String) {
       cdkBuilder.backupId(backupId)
+    }
+
+    /**
+     * The Lustre version for the file system.
+     *
+     * Default: - V_2_10, except for PERSISTENT_2 deployment type, where it is V_2_12 without
+     * metadata configuration mode and V_2_15 with metadata configuration mode.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-filesystemtypeversion)
+     * @param fileSystemTypeVersion The Lustre version for the file system. 
+     */
+    override fun fileSystemTypeVersion(fileSystemTypeVersion: FileSystemTypeVersion) {
+      cdkBuilder.fileSystemTypeVersion(fileSystemTypeVersion.let(FileSystemTypeVersion.Companion::unwrap))
     }
 
     /**
@@ -245,13 +281,27 @@ public open class LustreFileSystem(
      * For Windows file systems, valid values are 32 GiB to 65,536 GiB.
      * For SCRATCH_1 deployment types, valid values are 1,200, 2,400, 3,600, then continuing in
      * increments of 3,600 GiB.
-     * For SCRATCH_2 and PERSISTENT_1 types, valid values are 1,200, 2,400, then continuing in
-     * increments of 2,400 GiB.
+     * For SCRATCH_2, PERSISTENT_2 and PERSISTENT_1 deployment types using SSD storage type, the
+     * valid values are 1200 GiB, 2400 GiB, and increments of 2400 GiB.
+     * For PERSISTENT_1 HDD file systems, valid values are increments of 6000 GiB for 12 MB/s/TiB
+     * file systems and increments of 1800 GiB for 40 MB/s/TiB file systems.
      *
      * @param storageCapacityGiB The storage capacity of the file system being created. 
      */
     override fun storageCapacityGiB(storageCapacityGiB: Number) {
       cdkBuilder.storageCapacityGiB(storageCapacityGiB)
+    }
+
+    /**
+     * The storage type for the file system that you're creating.
+     *
+     * Default: StorageType.SSD
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-storagetype)
+     * @param storageType The storage type for the file system that you're creating. 
+     */
+    override fun storageType(storageType: StorageType) {
+      cdkBuilder.storageType(storageType.let(StorageType.Companion::unwrap))
     }
 
     /**

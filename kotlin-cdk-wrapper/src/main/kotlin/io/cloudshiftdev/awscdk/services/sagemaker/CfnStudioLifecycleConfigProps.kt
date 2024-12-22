@@ -45,6 +45,8 @@ public interface CfnStudioLifecycleConfigProps {
   /**
    * The content of your Amazon SageMaker Studio Lifecycle Configuration script.
    *
+   * This content must be base64 encoded.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-studiolifecycleconfigcontent)
    */
   public fun studioLifecycleConfigContent(): String
@@ -58,6 +60,9 @@ public interface CfnStudioLifecycleConfigProps {
 
   /**
    * Tags to be associated with the Lifecycle Configuration.
+   *
+   * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+   * are searchable using the Search API.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-tags)
    */
@@ -77,6 +82,7 @@ public interface CfnStudioLifecycleConfigProps {
     /**
      * @param studioLifecycleConfigContent The content of your Amazon SageMaker Studio Lifecycle
      * Configuration script. 
+     * This content must be base64 encoded.
      */
     public fun studioLifecycleConfigContent(studioLifecycleConfigContent: String)
 
@@ -88,11 +94,15 @@ public interface CfnStudioLifecycleConfigProps {
 
     /**
      * @param tags Tags to be associated with the Lifecycle Configuration.
+     * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+     * are searchable using the Search API.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
      * @param tags Tags to be associated with the Lifecycle Configuration.
+     * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+     * are searchable using the Search API.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -113,6 +123,7 @@ public interface CfnStudioLifecycleConfigProps {
     /**
      * @param studioLifecycleConfigContent The content of your Amazon SageMaker Studio Lifecycle
      * Configuration script. 
+     * This content must be base64 encoded.
      */
     override fun studioLifecycleConfigContent(studioLifecycleConfigContent: String) {
       cdkBuilder.studioLifecycleConfigContent(studioLifecycleConfigContent)
@@ -128,6 +139,8 @@ public interface CfnStudioLifecycleConfigProps {
 
     /**
      * @param tags Tags to be associated with the Lifecycle Configuration.
+     * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+     * are searchable using the Search API.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
@@ -135,6 +148,8 @@ public interface CfnStudioLifecycleConfigProps {
 
     /**
      * @param tags Tags to be associated with the Lifecycle Configuration.
+     * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+     * are searchable using the Search API.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -157,6 +172,8 @@ public interface CfnStudioLifecycleConfigProps {
     /**
      * The content of your Amazon SageMaker Studio Lifecycle Configuration script.
      *
+     * This content must be base64 encoded.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-studiolifecycleconfigcontent)
      */
     override fun studioLifecycleConfigContent(): String =
@@ -171,6 +188,9 @@ public interface CfnStudioLifecycleConfigProps {
 
     /**
      * Tags to be associated with the Lifecycle Configuration.
+     *
+     * Each tag consists of a key and an optional value. Tag keys must be unique per resource. Tags
+     * are searchable using the Search API.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sagemaker-studiolifecycleconfig.html#cfn-sagemaker-studiolifecycleconfig-tags)
      */

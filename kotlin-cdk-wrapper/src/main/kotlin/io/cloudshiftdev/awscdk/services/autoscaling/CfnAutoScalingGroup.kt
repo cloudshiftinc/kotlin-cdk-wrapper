@@ -57,8 +57,23 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .minSize("minSize")
  * // the properties below are optional
  * .autoScalingGroupName("autoScalingGroupName")
+ * .availabilityZoneDistribution(AvailabilityZoneDistributionProperty.builder()
+ * .capacityDistributionStrategy("capacityDistributionStrategy")
+ * .build())
+ * .availabilityZoneImpairmentPolicy(AvailabilityZoneImpairmentPolicyProperty.builder()
+ * .impairedZoneHealthCheckBehavior("impairedZoneHealthCheckBehavior")
+ * .zonalShiftEnabled(false)
+ * .build())
  * .availabilityZones(List.of("availabilityZones"))
  * .capacityRebalance(false)
+ * .capacityReservationSpecification(CapacityReservationSpecificationProperty.builder()
+ * .capacityReservationPreference("capacityReservationPreference")
+ * // the properties below are optional
+ * .capacityReservationTarget(CapacityReservationTargetProperty.builder()
+ * .capacityReservationIds(List.of("capacityReservationIds"))
+ * .capacityReservationResourceGroupArns(List.of("capacityReservationResourceGroupArns"))
+ * .build())
+ * .build())
  * .context("context")
  * .cooldown("cooldown")
  * .defaultInstanceWarmup(123)
@@ -132,6 +147,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .max(123)
  * .min(123)
  * .build())
+ * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+ * .cpu(CpuPerformanceFactorRequestProperty.builder()
+ * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+ * .instanceFamily("instanceFamily")
+ * .build()))
+ * .build())
+ * .build())
  * .burstablePerformance("burstablePerformance")
  * .cpuManufacturers(List.of("cpuManufacturers"))
  * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
@@ -192,6 +214,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .placementGroup("placementGroup")
  * .serviceLinkedRoleArn("serviceLinkedRoleArn")
+ * .skipZonalShiftValidation(false)
  * .tags(List.of(TagPropertyProperty.builder()
  * .key("key")
  * .propagateAtLaunch(false)
@@ -199,6 +222,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .targetGroupArns(List.of("targetGroupArns"))
  * .terminationPolicies(List.of("terminationPolicies"))
+ * .trafficSources(List.of(TrafficSourceIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .type("type")
+ * .build()))
  * .vpcZoneIdentifier(List.of("vpcZoneIdentifier"))
  * .build();
  * ```
@@ -243,6 +270,65 @@ public open class CfnAutoScalingGroup(
   }
 
   /**
+   * The instance capacity distribution across Availability Zones.
+   */
+  public open fun availabilityZoneDistribution(): Any? =
+      unwrap(this).getAvailabilityZoneDistribution()
+
+  /**
+   * The instance capacity distribution across Availability Zones.
+   */
+  public open fun availabilityZoneDistribution(`value`: IResolvable) {
+    unwrap(this).setAvailabilityZoneDistribution(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The instance capacity distribution across Availability Zones.
+   */
+  public open fun availabilityZoneDistribution(`value`: AvailabilityZoneDistributionProperty) {
+    unwrap(this).setAvailabilityZoneDistribution(`value`.let(AvailabilityZoneDistributionProperty.Companion::unwrap))
+  }
+
+  /**
+   * The instance capacity distribution across Availability Zones.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("2062a67645d698177ff4306bd17e80da7adf2211d1a8ceeea9ec50db72218561")
+  public open
+      fun availabilityZoneDistribution(`value`: AvailabilityZoneDistributionProperty.Builder.() -> Unit):
+      Unit = availabilityZoneDistribution(AvailabilityZoneDistributionProperty(`value`))
+
+  /**
+   * The Availability Zone impairment policy.
+   */
+  public open fun availabilityZoneImpairmentPolicy(): Any? =
+      unwrap(this).getAvailabilityZoneImpairmentPolicy()
+
+  /**
+   * The Availability Zone impairment policy.
+   */
+  public open fun availabilityZoneImpairmentPolicy(`value`: IResolvable) {
+    unwrap(this).setAvailabilityZoneImpairmentPolicy(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The Availability Zone impairment policy.
+   */
+  public open
+      fun availabilityZoneImpairmentPolicy(`value`: AvailabilityZoneImpairmentPolicyProperty) {
+    unwrap(this).setAvailabilityZoneImpairmentPolicy(`value`.let(AvailabilityZoneImpairmentPolicyProperty.Companion::unwrap))
+  }
+
+  /**
+   * The Availability Zone impairment policy.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("72c38ec6e661aa054961dd262ca233b2df5ff5b07523edd1a64f93379d8ac459")
+  public open
+      fun availabilityZoneImpairmentPolicy(`value`: AvailabilityZoneImpairmentPolicyProperty.Builder.() -> Unit):
+      Unit = availabilityZoneImpairmentPolicy(AvailabilityZoneImpairmentPolicyProperty(`value`))
+
+  /**
    * A list of Availability Zones where instances in the Auto Scaling group can be created.
    */
   public open fun availabilityZones(): List<String> = unwrap(this).getAvailabilityZones() ?:
@@ -279,6 +365,36 @@ public open class CfnAutoScalingGroup(
   public open fun capacityRebalance(`value`: IResolvable) {
     unwrap(this).setCapacityRebalance(`value`.let(IResolvable.Companion::unwrap))
   }
+
+  /**
+   * The capacity reservation specification.
+   */
+  public open fun capacityReservationSpecification(): Any? =
+      unwrap(this).getCapacityReservationSpecification()
+
+  /**
+   * The capacity reservation specification.
+   */
+  public open fun capacityReservationSpecification(`value`: IResolvable) {
+    unwrap(this).setCapacityReservationSpecification(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The capacity reservation specification.
+   */
+  public open
+      fun capacityReservationSpecification(`value`: CapacityReservationSpecificationProperty) {
+    unwrap(this).setCapacityReservationSpecification(`value`.let(CapacityReservationSpecificationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The capacity reservation specification.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("e87a6553480638a4c44fb50fbda3508cdc53ac7d454d46d7d953faf0a907e192")
+  public open
+      fun capacityReservationSpecification(`value`: CapacityReservationSpecificationProperty.Builder.() -> Unit):
+      Unit = capacityReservationSpecification(CapacityReservationSpecificationProperty(`value`))
 
   /**
    * Reserved.
@@ -735,6 +851,25 @@ public open class CfnAutoScalingGroup(
   }
 
   /**
+   *
+   */
+  public open fun skipZonalShiftValidation(): Any? = unwrap(this).getSkipZonalShiftValidation()
+
+  /**
+   *
+   */
+  public open fun skipZonalShiftValidation(`value`: Boolean) {
+    unwrap(this).setSkipZonalShiftValidation(`value`)
+  }
+
+  /**
+   *
+   */
+  public open fun skipZonalShiftValidation(`value`: IResolvable) {
+    unwrap(this).setSkipZonalShiftValidation(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -797,6 +932,30 @@ public open class CfnAutoScalingGroup(
       terminationPolicies(`value`.toList())
 
   /**
+   * The traffic sources associated with this Auto Scaling group.
+   */
+  public open fun trafficSources(): Any? = unwrap(this).getTrafficSources()
+
+  /**
+   * The traffic sources associated with this Auto Scaling group.
+   */
+  public open fun trafficSources(`value`: IResolvable) {
+    unwrap(this).setTrafficSources(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The traffic sources associated with this Auto Scaling group.
+   */
+  public open fun trafficSources(`value`: List<Any>) {
+    unwrap(this).setTrafficSources(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The traffic sources associated with this Auto Scaling group.
+   */
+  public open fun trafficSources(vararg `value`: Any): Unit = trafficSources(`value`.toList())
+
+  /**
    * A list of subnet IDs for a virtual private cloud (VPC) where instances in the Auto Scaling
    * group can be created.
    */
@@ -838,6 +997,65 @@ public open class CfnAutoScalingGroup(
      * Region per account. 
      */
     public fun autoScalingGroupName(autoScalingGroupName: String)
+
+    /**
+     * The instance capacity distribution across Availability Zones.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution)
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones. 
+     */
+    public fun availabilityZoneDistribution(availabilityZoneDistribution: IResolvable)
+
+    /**
+     * The instance capacity distribution across Availability Zones.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution)
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones. 
+     */
+    public
+        fun availabilityZoneDistribution(availabilityZoneDistribution: AvailabilityZoneDistributionProperty)
+
+    /**
+     * The instance capacity distribution across Availability Zones.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution)
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7f0a3fd31761d8ad2281763b760be5c3856cdf5bf95685f5a888f71ed09a76ee")
+    public
+        fun availabilityZoneDistribution(availabilityZoneDistribution: AvailabilityZoneDistributionProperty.Builder.() -> Unit)
+
+    /**
+     * The Availability Zone impairment policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy)
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy. 
+     */
+    public fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: IResolvable)
+
+    /**
+     * The Availability Zone impairment policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy)
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy. 
+     */
+    public
+        fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: AvailabilityZoneImpairmentPolicyProperty)
+
+    /**
+     * The Availability Zone impairment policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy)
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d83f1169cec78c8dd03075b1f4f2955764ed74d8f8ce3d3be02028a16d4c7534")
+    public
+        fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: AvailabilityZoneImpairmentPolicyProperty.Builder.() -> Unit)
 
     /**
      * A list of Availability Zones where instances in the Auto Scaling group can be created.
@@ -896,6 +1114,34 @@ public open class CfnAutoScalingGroup(
      * @param capacityRebalance Indicates whether Capacity Rebalancing is enabled. 
      */
     public fun capacityRebalance(capacityRebalance: IResolvable)
+
+    /**
+     * The capacity reservation specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification)
+     * @param capacityReservationSpecification The capacity reservation specification. 
+     */
+    public fun capacityReservationSpecification(capacityReservationSpecification: IResolvable)
+
+    /**
+     * The capacity reservation specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification)
+     * @param capacityReservationSpecification The capacity reservation specification. 
+     */
+    public
+        fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty)
+
+    /**
+     * The capacity reservation specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification)
+     * @param capacityReservationSpecification The capacity reservation specification. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("91dd830d08176f3c6169200b5353d4313e5c3178cea949e4747d62c56bbec434")
+    public
+        fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty.Builder.() -> Unit)
 
     /**
      * Reserved.
@@ -1496,6 +1742,18 @@ public open class CfnAutoScalingGroup(
     public fun serviceLinkedRoleArn(serviceLinkedRoleArn: String)
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-skipzonalshiftvalidation)
+     * @param skipZonalShiftValidation 
+     */
+    public fun skipZonalShiftValidation(skipZonalShiftValidation: Boolean)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-skipzonalshiftvalidation)
+     * @param skipZonalShiftValidation 
+     */
+    public fun skipZonalShiftValidation(skipZonalShiftValidation: IResolvable)
+
+    /**
      * One or more tags.
      *
      * You can tag your Auto Scaling group and propagate the tags to the Amazon EC2 instances it
@@ -1598,6 +1856,30 @@ public open class CfnAutoScalingGroup(
     public fun terminationPolicies(vararg terminationPolicies: String)
 
     /**
+     * The traffic sources associated with this Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-trafficsources)
+     * @param trafficSources The traffic sources associated with this Auto Scaling group. 
+     */
+    public fun trafficSources(trafficSources: IResolvable)
+
+    /**
+     * The traffic sources associated with this Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-trafficsources)
+     * @param trafficSources The traffic sources associated with this Auto Scaling group. 
+     */
+    public fun trafficSources(trafficSources: List<Any>)
+
+    /**
+     * The traffic sources associated with this Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-trafficsources)
+     * @param trafficSources The traffic sources associated with this Auto Scaling group. 
+     */
+    public fun trafficSources(vararg trafficSources: Any)
+
+    /**
      * A list of subnet IDs for a virtual private cloud (VPC) where instances in the Auto Scaling
      * group can be created.
      *
@@ -1682,6 +1964,77 @@ public open class CfnAutoScalingGroup(
     }
 
     /**
+     * The instance capacity distribution across Availability Zones.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution)
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones. 
+     */
+    override fun availabilityZoneDistribution(availabilityZoneDistribution: IResolvable) {
+      cdkBuilder.availabilityZoneDistribution(availabilityZoneDistribution.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The instance capacity distribution across Availability Zones.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution)
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones. 
+     */
+    override
+        fun availabilityZoneDistribution(availabilityZoneDistribution: AvailabilityZoneDistributionProperty) {
+      cdkBuilder.availabilityZoneDistribution(availabilityZoneDistribution.let(AvailabilityZoneDistributionProperty.Companion::unwrap))
+    }
+
+    /**
+     * The instance capacity distribution across Availability Zones.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution)
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7f0a3fd31761d8ad2281763b760be5c3856cdf5bf95685f5a888f71ed09a76ee")
+    override
+        fun availabilityZoneDistribution(availabilityZoneDistribution: AvailabilityZoneDistributionProperty.Builder.() -> Unit):
+        Unit =
+        availabilityZoneDistribution(AvailabilityZoneDistributionProperty(availabilityZoneDistribution))
+
+    /**
+     * The Availability Zone impairment policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy)
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy. 
+     */
+    override fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: IResolvable) {
+      cdkBuilder.availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The Availability Zone impairment policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy)
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy. 
+     */
+    override
+        fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: AvailabilityZoneImpairmentPolicyProperty) {
+      cdkBuilder.availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy.let(AvailabilityZoneImpairmentPolicyProperty.Companion::unwrap))
+    }
+
+    /**
+     * The Availability Zone impairment policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy)
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d83f1169cec78c8dd03075b1f4f2955764ed74d8f8ce3d3be02028a16d4c7534")
+    override
+        fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: AvailabilityZoneImpairmentPolicyProperty.Builder.() -> Unit):
+        Unit =
+        availabilityZoneImpairmentPolicy(AvailabilityZoneImpairmentPolicyProperty(availabilityZoneImpairmentPolicy))
+
+    /**
      * A list of Availability Zones where instances in the Auto Scaling group can be created.
      *
      * Used for launching into the default VPC subnet in each Availability Zone when not using the
@@ -1745,6 +2098,40 @@ public open class CfnAutoScalingGroup(
     override fun capacityRebalance(capacityRebalance: IResolvable) {
       cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable.Companion::unwrap))
     }
+
+    /**
+     * The capacity reservation specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification)
+     * @param capacityReservationSpecification The capacity reservation specification. 
+     */
+    override fun capacityReservationSpecification(capacityReservationSpecification: IResolvable) {
+      cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The capacity reservation specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification)
+     * @param capacityReservationSpecification The capacity reservation specification. 
+     */
+    override
+        fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty) {
+      cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(CapacityReservationSpecificationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The capacity reservation specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification)
+     * @param capacityReservationSpecification The capacity reservation specification. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("91dd830d08176f3c6169200b5353d4313e5c3178cea949e4747d62c56bbec434")
+    override
+        fun capacityReservationSpecification(capacityReservationSpecification: CapacityReservationSpecificationProperty.Builder.() -> Unit):
+        Unit =
+        capacityReservationSpecification(CapacityReservationSpecificationProperty(capacityReservationSpecification))
 
     /**
      * Reserved.
@@ -2417,6 +2804,22 @@ public open class CfnAutoScalingGroup(
     }
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-skipzonalshiftvalidation)
+     * @param skipZonalShiftValidation 
+     */
+    override fun skipZonalShiftValidation(skipZonalShiftValidation: Boolean) {
+      cdkBuilder.skipZonalShiftValidation(skipZonalShiftValidation)
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-skipzonalshiftvalidation)
+     * @param skipZonalShiftValidation 
+     */
+    override fun skipZonalShiftValidation(skipZonalShiftValidation: IResolvable) {
+      cdkBuilder.skipZonalShiftValidation(skipZonalShiftValidation.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * One or more tags.
      *
      * You can tag your Auto Scaling group and propagate the tags to the Amazon EC2 instances it
@@ -2525,6 +2928,35 @@ public open class CfnAutoScalingGroup(
      */
     override fun terminationPolicies(vararg terminationPolicies: String): Unit =
         terminationPolicies(terminationPolicies.toList())
+
+    /**
+     * The traffic sources associated with this Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-trafficsources)
+     * @param trafficSources The traffic sources associated with this Auto Scaling group. 
+     */
+    override fun trafficSources(trafficSources: IResolvable) {
+      cdkBuilder.trafficSources(trafficSources.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The traffic sources associated with this Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-trafficsources)
+     * @param trafficSources The traffic sources associated with this Auto Scaling group. 
+     */
+    override fun trafficSources(trafficSources: List<Any>) {
+      cdkBuilder.trafficSources(trafficSources.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The traffic sources associated with this Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-trafficsources)
+     * @param trafficSources The traffic sources associated with this Auto Scaling group. 
+     */
+    override fun trafficSources(vararg trafficSources: Any): Unit =
+        trafficSources(trafficSources.toList())
 
     /**
      * A list of subnet IDs for a virtual private cloud (VPC) where instances in the Auto Scaling
@@ -2843,6 +3275,272 @@ public open class CfnAutoScalingGroup(
   }
 
   /**
+   * `AvailabilityZoneDistribution` is a property of the
+   * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
+   * resource.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * AvailabilityZoneDistributionProperty availabilityZoneDistributionProperty =
+   * AvailabilityZoneDistributionProperty.builder()
+   * .capacityDistributionStrategy("capacityDistributionStrategy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-availabilityzonedistribution.html)
+   */
+  public interface AvailabilityZoneDistributionProperty {
+    /**
+     * If launches fail in an Availability Zone, the following strategies are available. The default
+     * is `balanced-best-effort` .
+     *
+     * * `balanced-only` - If launches fail in an Availability Zone, Auto Scaling will continue to
+     * attempt to launch in the unhealthy zone to preserve a balanced distribution.
+     * * `balanced-best-effort` - If launches fail in an Availability Zone, Auto Scaling will
+     * attempt to launch in another healthy Availability Zone instead.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-availabilityzonedistribution.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution-capacitydistributionstrategy)
+     */
+    public fun capacityDistributionStrategy(): String? =
+        unwrap(this).getCapacityDistributionStrategy()
+
+    /**
+     * A builder for [AvailabilityZoneDistributionProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param capacityDistributionStrategy If launches fail in an Availability Zone, the following
+       * strategies are available. The default is `balanced-best-effort` .
+       * * `balanced-only` - If launches fail in an Availability Zone, Auto Scaling will continue to
+       * attempt to launch in the unhealthy zone to preserve a balanced distribution.
+       * * `balanced-best-effort` - If launches fail in an Availability Zone, Auto Scaling will
+       * attempt to launch in another healthy Availability Zone instead.
+       */
+      public fun capacityDistributionStrategy(capacityDistributionStrategy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneDistributionProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneDistributionProperty.builder()
+
+      /**
+       * @param capacityDistributionStrategy If launches fail in an Availability Zone, the following
+       * strategies are available. The default is `balanced-best-effort` .
+       * * `balanced-only` - If launches fail in an Availability Zone, Auto Scaling will continue to
+       * attempt to launch in the unhealthy zone to preserve a balanced distribution.
+       * * `balanced-best-effort` - If launches fail in an Availability Zone, Auto Scaling will
+       * attempt to launch in another healthy Availability Zone instead.
+       */
+      override fun capacityDistributionStrategy(capacityDistributionStrategy: String) {
+        cdkBuilder.capacityDistributionStrategy(capacityDistributionStrategy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneDistributionProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneDistributionProperty,
+    ) : CdkObject(cdkObject),
+        AvailabilityZoneDistributionProperty {
+      /**
+       * If launches fail in an Availability Zone, the following strategies are available. The
+       * default is `balanced-best-effort` .
+       *
+       * * `balanced-only` - If launches fail in an Availability Zone, Auto Scaling will continue to
+       * attempt to launch in the unhealthy zone to preserve a balanced distribution.
+       * * `balanced-best-effort` - If launches fail in an Availability Zone, Auto Scaling will
+       * attempt to launch in another healthy Availability Zone instead.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-availabilityzonedistribution.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution-capacitydistributionstrategy)
+       */
+      override fun capacityDistributionStrategy(): String? =
+          unwrap(this).getCapacityDistributionStrategy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AvailabilityZoneDistributionProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneDistributionProperty):
+          AvailabilityZoneDistributionProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AvailabilityZoneDistributionProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AvailabilityZoneDistributionProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneDistributionProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneDistributionProperty
+    }
+  }
+
+  /**
+   * Describes an Availability Zone impairment policy.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * AvailabilityZoneImpairmentPolicyProperty availabilityZoneImpairmentPolicyProperty =
+   * AvailabilityZoneImpairmentPolicyProperty.builder()
+   * .impairedZoneHealthCheckBehavior("impairedZoneHealthCheckBehavior")
+   * .zonalShiftEnabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy.html)
+   */
+  public interface AvailabilityZoneImpairmentPolicyProperty {
+    /**
+     * Specifies the health check behavior for the impaired Availability Zone in an active zonal
+     * shift.
+     *
+     * If you select `Replace unhealthy` , instances that appear unhealthy will be replaced in all
+     * Availability Zones. If you select `Ignore unhealthy` , instances will not be replaced in the
+     * Availability Zone with the active zonal shift. For more information, see [Auto Scaling group
+     * zonal
+     * shift](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-zonal-shift.html)
+     * in the *Amazon EC2 Auto Scaling User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy-impairedzonehealthcheckbehavior)
+     */
+    public fun impairedZoneHealthCheckBehavior(): String
+
+    /**
+     * If `true` , enable zonal shift for your Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy-zonalshiftenabled)
+     */
+    public fun zonalShiftEnabled(): Any
+
+    /**
+     * A builder for [AvailabilityZoneImpairmentPolicyProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param impairedZoneHealthCheckBehavior Specifies the health check behavior for the impaired
+       * Availability Zone in an active zonal shift. 
+       * If you select `Replace unhealthy` , instances that appear unhealthy will be replaced in all
+       * Availability Zones. If you select `Ignore unhealthy` , instances will not be replaced in the
+       * Availability Zone with the active zonal shift. For more information, see [Auto Scaling group
+       * zonal
+       * shift](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-zonal-shift.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       */
+      public fun impairedZoneHealthCheckBehavior(impairedZoneHealthCheckBehavior: String)
+
+      /**
+       * @param zonalShiftEnabled If `true` , enable zonal shift for your Auto Scaling group. 
+       */
+      public fun zonalShiftEnabled(zonalShiftEnabled: Boolean)
+
+      /**
+       * @param zonalShiftEnabled If `true` , enable zonal shift for your Auto Scaling group. 
+       */
+      public fun zonalShiftEnabled(zonalShiftEnabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty.builder()
+
+      /**
+       * @param impairedZoneHealthCheckBehavior Specifies the health check behavior for the impaired
+       * Availability Zone in an active zonal shift. 
+       * If you select `Replace unhealthy` , instances that appear unhealthy will be replaced in all
+       * Availability Zones. If you select `Ignore unhealthy` , instances will not be replaced in the
+       * Availability Zone with the active zonal shift. For more information, see [Auto Scaling group
+       * zonal
+       * shift](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-zonal-shift.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       */
+      override fun impairedZoneHealthCheckBehavior(impairedZoneHealthCheckBehavior: String) {
+        cdkBuilder.impairedZoneHealthCheckBehavior(impairedZoneHealthCheckBehavior)
+      }
+
+      /**
+       * @param zonalShiftEnabled If `true` , enable zonal shift for your Auto Scaling group. 
+       */
+      override fun zonalShiftEnabled(zonalShiftEnabled: Boolean) {
+        cdkBuilder.zonalShiftEnabled(zonalShiftEnabled)
+      }
+
+      /**
+       * @param zonalShiftEnabled If `true` , enable zonal shift for your Auto Scaling group. 
+       */
+      override fun zonalShiftEnabled(zonalShiftEnabled: IResolvable) {
+        cdkBuilder.zonalShiftEnabled(zonalShiftEnabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty,
+    ) : CdkObject(cdkObject),
+        AvailabilityZoneImpairmentPolicyProperty {
+      /**
+       * Specifies the health check behavior for the impaired Availability Zone in an active zonal
+       * shift.
+       *
+       * If you select `Replace unhealthy` , instances that appear unhealthy will be replaced in all
+       * Availability Zones. If you select `Ignore unhealthy` , instances will not be replaced in the
+       * Availability Zone with the active zonal shift. For more information, see [Auto Scaling group
+       * zonal
+       * shift](https://docs.aws.amazon.com/autoscaling/ec2/userguide/ec2-auto-scaling-zonal-shift.html)
+       * in the *Amazon EC2 Auto Scaling User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy-impairedzonehealthcheckbehavior)
+       */
+      override fun impairedZoneHealthCheckBehavior(): String =
+          unwrap(this).getImpairedZoneHealthCheckBehavior()
+
+      /**
+       * If `true` , enable zonal shift for your Auto Scaling group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy-zonalshiftenabled)
+       */
+      override fun zonalShiftEnabled(): Any = unwrap(this).getZonalShiftEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          AvailabilityZoneImpairmentPolicyProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty):
+          AvailabilityZoneImpairmentPolicyProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          AvailabilityZoneImpairmentPolicyProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AvailabilityZoneImpairmentPolicyProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty
+    }
+  }
+
+  /**
    * `BaselineEbsBandwidthMbpsRequest` is a property of the `InstanceRequirements` property of the
    * [AWS::AutoScaling::AutoScalingGroup
    * LaunchTemplateOverrides](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-launchtemplateoverrides.html)
@@ -2955,6 +3653,652 @@ public open class CfnAutoScalingGroup(
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselineEbsBandwidthMbpsRequestProperty
+    }
+  }
+
+  /**
+   * The baseline performance to consider, using an instance family as a baseline reference.
+   *
+   * The instance family establishes the lowest acceptable level of performance. Auto Scaling uses
+   * this baseline to guide instance type selection, but there is no guarantee that the selected
+   * instance types will always exceed the baseline for every application.
+   *
+   * Currently, this parameter only supports CPU performance as a baseline performance factor. For
+   * example, specifying `c6i` uses the CPU performance of the `c6i` family as the baseline reference.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * BaselinePerformanceFactorsRequestProperty baselinePerformanceFactorsRequestProperty =
+   * BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineperformancefactorsrequest.html)
+   */
+  public interface BaselinePerformanceFactorsRequestProperty {
+    /**
+     * The CPU performance to consider, using an instance family as the baseline reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineperformancefactorsrequest.html#cfn-autoscaling-autoscalinggroup-baselineperformancefactorsrequest-cpu)
+     */
+    public fun cpu(): Any? = unwrap(this).getCpu()
+
+    /**
+     * A builder for [BaselinePerformanceFactorsRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      public fun cpu(cpu: IResolvable)
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      public fun cpu(cpu: CpuPerformanceFactorRequestProperty)
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("87c5c2c28dc56b4abeb17da64a2e61d1559f7bc47d7df383ae7e93b8ae052031")
+      public fun cpu(cpu: CpuPerformanceFactorRequestProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselinePerformanceFactorsRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselinePerformanceFactorsRequestProperty.builder()
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      override fun cpu(cpu: IResolvable) {
+        cdkBuilder.cpu(cpu.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      override fun cpu(cpu: CpuPerformanceFactorRequestProperty) {
+        cdkBuilder.cpu(cpu.let(CpuPerformanceFactorRequestProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("87c5c2c28dc56b4abeb17da64a2e61d1559f7bc47d7df383ae7e93b8ae052031")
+      override fun cpu(cpu: CpuPerformanceFactorRequestProperty.Builder.() -> Unit): Unit =
+          cpu(CpuPerformanceFactorRequestProperty(cpu))
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselinePerformanceFactorsRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselinePerformanceFactorsRequestProperty,
+    ) : CdkObject(cdkObject),
+        BaselinePerformanceFactorsRequestProperty {
+      /**
+       * The CPU performance to consider, using an instance family as the baseline reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-baselineperformancefactorsrequest.html#cfn-autoscaling-autoscalinggroup-baselineperformancefactorsrequest-cpu)
+       */
+      override fun cpu(): Any? = unwrap(this).getCpu()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BaselinePerformanceFactorsRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselinePerformanceFactorsRequestProperty):
+          BaselinePerformanceFactorsRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BaselinePerformanceFactorsRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BaselinePerformanceFactorsRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselinePerformanceFactorsRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.BaselinePerformanceFactorsRequestProperty
+    }
+  }
+
+  /**
+   * Describes the Capacity Reservation preference and targeting options.
+   *
+   * If you specify `open` or `none` for `CapacityReservationPreference` , do not specify a
+   * `CapacityReservationTarget` .
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * CapacityReservationSpecificationProperty capacityReservationSpecificationProperty =
+   * CapacityReservationSpecificationProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * // the properties below are optional
+   * .capacityReservationTarget(CapacityReservationTargetProperty.builder()
+   * .capacityReservationIds(List.of("capacityReservationIds"))
+   * .capacityReservationResourceGroupArns(List.of("capacityReservationResourceGroupArns"))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationspecification.html)
+   */
+  public interface CapacityReservationSpecificationProperty {
+    /**
+     * The capacity reservation preference. The following options are available:.
+     *
+     * * `capacity-reservations-only` - Auto Scaling will only launch instances into a Capacity
+     * Reservation or Capacity Reservation resource group. If capacity isn't available, instances will
+     * fail to launch.
+     * * `capacity-reservations-first` - Auto Scaling will try to launch instances into a Capacity
+     * Reservation or Capacity Reservation resource group first. If capacity isn't available, instances
+     * will run in On-Demand capacity.
+     * * `none` - Auto Scaling will not launch instances into a Capacity Reservation. Instances will
+     * run in On-Demand capacity.
+     * * `default` - Auto Scaling uses the Capacity Reservation preference from your launch template
+     * or an open Capacity Reservation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationspecification.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification-capacityreservationpreference)
+     */
+    public fun capacityReservationPreference(): String
+
+    /**
+     * Describes a target Capacity Reservation or Capacity Reservation resource group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationspecification.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification-capacityreservationtarget)
+     */
+    public fun capacityReservationTarget(): Any? = unwrap(this).getCapacityReservationTarget()
+
+    /**
+     * A builder for [CapacityReservationSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param capacityReservationPreference The capacity reservation preference. The following
+       * options are available:. 
+       * * `capacity-reservations-only` - Auto Scaling will only launch instances into a Capacity
+       * Reservation or Capacity Reservation resource group. If capacity isn't available, instances
+       * will fail to launch.
+       * * `capacity-reservations-first` - Auto Scaling will try to launch instances into a Capacity
+       * Reservation or Capacity Reservation resource group first. If capacity isn't available,
+       * instances will run in On-Demand capacity.
+       * * `none` - Auto Scaling will not launch instances into a Capacity Reservation. Instances
+       * will run in On-Demand capacity.
+       * * `default` - Auto Scaling uses the Capacity Reservation preference from your launch
+       * template or an open Capacity Reservation.
+       */
+      public fun capacityReservationPreference(capacityReservationPreference: String)
+
+      /**
+       * @param capacityReservationTarget Describes a target Capacity Reservation or Capacity
+       * Reservation resource group.
+       */
+      public fun capacityReservationTarget(capacityReservationTarget: IResolvable)
+
+      /**
+       * @param capacityReservationTarget Describes a target Capacity Reservation or Capacity
+       * Reservation resource group.
+       */
+      public
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty)
+
+      /**
+       * @param capacityReservationTarget Describes a target Capacity Reservation or Capacity
+       * Reservation resource group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ee659895bf5b67b42c568a9c2632a8e88937ea85bc5cd1969f67b653652024dc")
+      public
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationSpecificationProperty.builder()
+
+      /**
+       * @param capacityReservationPreference The capacity reservation preference. The following
+       * options are available:. 
+       * * `capacity-reservations-only` - Auto Scaling will only launch instances into a Capacity
+       * Reservation or Capacity Reservation resource group. If capacity isn't available, instances
+       * will fail to launch.
+       * * `capacity-reservations-first` - Auto Scaling will try to launch instances into a Capacity
+       * Reservation or Capacity Reservation resource group first. If capacity isn't available,
+       * instances will run in On-Demand capacity.
+       * * `none` - Auto Scaling will not launch instances into a Capacity Reservation. Instances
+       * will run in On-Demand capacity.
+       * * `default` - Auto Scaling uses the Capacity Reservation preference from your launch
+       * template or an open Capacity Reservation.
+       */
+      override fun capacityReservationPreference(capacityReservationPreference: String) {
+        cdkBuilder.capacityReservationPreference(capacityReservationPreference)
+      }
+
+      /**
+       * @param capacityReservationTarget Describes a target Capacity Reservation or Capacity
+       * Reservation resource group.
+       */
+      override fun capacityReservationTarget(capacityReservationTarget: IResolvable) {
+        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param capacityReservationTarget Describes a target Capacity Reservation or Capacity
+       * Reservation resource group.
+       */
+      override
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty) {
+        cdkBuilder.capacityReservationTarget(capacityReservationTarget.let(CapacityReservationTargetProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param capacityReservationTarget Describes a target Capacity Reservation or Capacity
+       * Reservation resource group.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ee659895bf5b67b42c568a9c2632a8e88937ea85bc5cd1969f67b653652024dc")
+      override
+          fun capacityReservationTarget(capacityReservationTarget: CapacityReservationTargetProperty.Builder.() -> Unit):
+          Unit =
+          capacityReservationTarget(CapacityReservationTargetProperty(capacityReservationTarget))
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationSpecificationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        CapacityReservationSpecificationProperty {
+      /**
+       * The capacity reservation preference. The following options are available:.
+       *
+       * * `capacity-reservations-only` - Auto Scaling will only launch instances into a Capacity
+       * Reservation or Capacity Reservation resource group. If capacity isn't available, instances
+       * will fail to launch.
+       * * `capacity-reservations-first` - Auto Scaling will try to launch instances into a Capacity
+       * Reservation or Capacity Reservation resource group first. If capacity isn't available,
+       * instances will run in On-Demand capacity.
+       * * `none` - Auto Scaling will not launch instances into a Capacity Reservation. Instances
+       * will run in On-Demand capacity.
+       * * `default` - Auto Scaling uses the Capacity Reservation preference from your launch
+       * template or an open Capacity Reservation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationspecification.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification-capacityreservationpreference)
+       */
+      override fun capacityReservationPreference(): String =
+          unwrap(this).getCapacityReservationPreference()
+
+      /**
+       * Describes a target Capacity Reservation or Capacity Reservation resource group.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationspecification.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification-capacityreservationtarget)
+       */
+      override fun capacityReservationTarget(): Any? = unwrap(this).getCapacityReservationTarget()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityReservationSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationSpecificationProperty):
+          CapacityReservationSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityReservationSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityReservationSpecificationProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationSpecificationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationSpecificationProperty
+    }
+  }
+
+  /**
+   * The target for the Capacity Reservation.
+   *
+   * Specify Capacity Reservations IDs or Capacity Reservation resource group ARNs.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * CapacityReservationTargetProperty capacityReservationTargetProperty =
+   * CapacityReservationTargetProperty.builder()
+   * .capacityReservationIds(List.of("capacityReservationIds"))
+   * .capacityReservationResourceGroupArns(List.of("capacityReservationResourceGroupArns"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationtarget.html)
+   */
+  public interface CapacityReservationTargetProperty {
+    /**
+     * The Capacity Reservation IDs to launch instances into.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationtarget.html#cfn-autoscaling-autoscalinggroup-capacityreservationtarget-capacityreservationids)
+     */
+    public fun capacityReservationIds(): List<String> = unwrap(this).getCapacityReservationIds() ?:
+        emptyList()
+
+    /**
+     * The resource group ARNs of the Capacity Reservation to launch instances into.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationtarget.html#cfn-autoscaling-autoscalinggroup-capacityreservationtarget-capacityreservationresourcegrouparns)
+     */
+    public fun capacityReservationResourceGroupArns(): List<String> =
+        unwrap(this).getCapacityReservationResourceGroupArns() ?: emptyList()
+
+    /**
+     * A builder for [CapacityReservationTargetProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param capacityReservationIds The Capacity Reservation IDs to launch instances into.
+       */
+      public fun capacityReservationIds(capacityReservationIds: List<String>)
+
+      /**
+       * @param capacityReservationIds The Capacity Reservation IDs to launch instances into.
+       */
+      public fun capacityReservationIds(vararg capacityReservationIds: String)
+
+      /**
+       * @param capacityReservationResourceGroupArns The resource group ARNs of the Capacity
+       * Reservation to launch instances into.
+       */
+      public
+          fun capacityReservationResourceGroupArns(capacityReservationResourceGroupArns: List<String>)
+
+      /**
+       * @param capacityReservationResourceGroupArns The resource group ARNs of the Capacity
+       * Reservation to launch instances into.
+       */
+      public fun capacityReservationResourceGroupArns(vararg
+          capacityReservationResourceGroupArns: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationTargetProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationTargetProperty.builder()
+
+      /**
+       * @param capacityReservationIds The Capacity Reservation IDs to launch instances into.
+       */
+      override fun capacityReservationIds(capacityReservationIds: List<String>) {
+        cdkBuilder.capacityReservationIds(capacityReservationIds)
+      }
+
+      /**
+       * @param capacityReservationIds The Capacity Reservation IDs to launch instances into.
+       */
+      override fun capacityReservationIds(vararg capacityReservationIds: String): Unit =
+          capacityReservationIds(capacityReservationIds.toList())
+
+      /**
+       * @param capacityReservationResourceGroupArns The resource group ARNs of the Capacity
+       * Reservation to launch instances into.
+       */
+      override
+          fun capacityReservationResourceGroupArns(capacityReservationResourceGroupArns: List<String>) {
+        cdkBuilder.capacityReservationResourceGroupArns(capacityReservationResourceGroupArns)
+      }
+
+      /**
+       * @param capacityReservationResourceGroupArns The resource group ARNs of the Capacity
+       * Reservation to launch instances into.
+       */
+      override fun capacityReservationResourceGroupArns(vararg
+          capacityReservationResourceGroupArns: String): Unit =
+          capacityReservationResourceGroupArns(capacityReservationResourceGroupArns.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationTargetProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationTargetProperty,
+    ) : CdkObject(cdkObject),
+        CapacityReservationTargetProperty {
+      /**
+       * The Capacity Reservation IDs to launch instances into.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationtarget.html#cfn-autoscaling-autoscalinggroup-capacityreservationtarget-capacityreservationids)
+       */
+      override fun capacityReservationIds(): List<String> = unwrap(this).getCapacityReservationIds()
+          ?: emptyList()
+
+      /**
+       * The resource group ARNs of the Capacity Reservation to launch instances into.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-capacityreservationtarget.html#cfn-autoscaling-autoscalinggroup-capacityreservationtarget-capacityreservationresourcegrouparns)
+       */
+      override fun capacityReservationResourceGroupArns(): List<String> =
+          unwrap(this).getCapacityReservationResourceGroupArns() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityReservationTargetProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationTargetProperty):
+          CapacityReservationTargetProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityReservationTargetProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityReservationTargetProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationTargetProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CapacityReservationTargetProperty
+    }
+  }
+
+  /**
+   * The CPU performance to consider, using an instance family as the baseline reference.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * CpuPerformanceFactorRequestProperty cpuPerformanceFactorRequestProperty =
+   * CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-cpuperformancefactorrequest.html)
+   */
+  public interface CpuPerformanceFactorRequestProperty {
+    /**
+     * Specify an instance family to use as the baseline reference for CPU performance.
+     *
+     * All instance types that match your specified attributes will be compared against the CPU
+     * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+     * differences.
+     *
+     *
+     * Currently only one instance family can be specified in the list.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-cpuperformancefactorrequest.html#cfn-autoscaling-autoscalinggroup-cpuperformancefactorrequest-references)
+     */
+    public fun references(): Any? = unwrap(this).getReferences()
+
+    /**
+     * A builder for [CpuPerformanceFactorRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently only one instance family can be specified in the list.
+       */
+      public fun references(references: IResolvable)
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently only one instance family can be specified in the list.
+       */
+      public fun references(references: List<Any>)
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently only one instance family can be specified in the list.
+       */
+      public fun references(vararg references: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CpuPerformanceFactorRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CpuPerformanceFactorRequestProperty.builder()
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently only one instance family can be specified in the list.
+       */
+      override fun references(references: IResolvable) {
+        cdkBuilder.references(references.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently only one instance family can be specified in the list.
+       */
+      override fun references(references: List<Any>) {
+        cdkBuilder.references(references.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param references Specify an instance family to use as the baseline reference for CPU
+       * performance.
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently only one instance family can be specified in the list.
+       */
+      override fun references(vararg references: Any): Unit = references(references.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CpuPerformanceFactorRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CpuPerformanceFactorRequestProperty,
+    ) : CdkObject(cdkObject),
+        CpuPerformanceFactorRequestProperty {
+      /**
+       * Specify an instance family to use as the baseline reference for CPU performance.
+       *
+       * All instance types that match your specified attributes will be compared against the CPU
+       * performance of the referenced instance family, regardless of CPU manufacturer or architecture
+       * differences.
+       *
+       *
+       * Currently only one instance family can be specified in the list.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-cpuperformancefactorrequest.html#cfn-autoscaling-autoscalinggroup-cpuperformancefactorrequest-references)
+       */
+      override fun references(): Any? = unwrap(this).getReferences()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CpuPerformanceFactorRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CpuPerformanceFactorRequestProperty):
+          CpuPerformanceFactorRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CpuPerformanceFactorRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CpuPerformanceFactorRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CpuPerformanceFactorRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.CpuPerformanceFactorRequestProperty
     }
   }
 
@@ -3302,6 +4646,13 @@ public open class CfnAutoScalingGroup(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html#cfn-autoscaling-autoscalinggroup-instancerequirements-baselineebsbandwidthmbps)
      */
     public fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
+
+    /**
+     * The baseline performance factors for the instance requirements.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html#cfn-autoscaling-autoscalinggroup-instancerequirements-baselineperformancefactors)
+     */
+    public fun baselinePerformanceFactors(): Any? = unwrap(this).getBaselinePerformanceFactors()
 
     /**
      * Indicates whether burstable performance instance types are included, excluded, or required.
@@ -3760,6 +5111,28 @@ public open class CfnAutoScalingGroup(
       @JvmName("1630feddc0146d1229586f809df8dd5224c4da3d0a2f82b7464a3ec0839fc8d4")
       public
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsRequestProperty.Builder.() -> Unit)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance factors for the instance
+       * requirements.
+       */
+      public fun baselinePerformanceFactors(baselinePerformanceFactors: IResolvable)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance factors for the instance
+       * requirements.
+       */
+      public
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance factors for the instance
+       * requirements.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cd311b2b9a3820d888aa83bf56f68247b0d148a34fd5ea76eb2df14cc9bb98f7")
+      public
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty.Builder.() -> Unit)
 
       /**
        * @param burstablePerformance Indicates whether burstable performance instance types are
@@ -4371,6 +5744,34 @@ public open class CfnAutoScalingGroup(
           baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty(baselineEbsBandwidthMbps))
 
       /**
+       * @param baselinePerformanceFactors The baseline performance factors for the instance
+       * requirements.
+       */
+      override fun baselinePerformanceFactors(baselinePerformanceFactors: IResolvable) {
+        cdkBuilder.baselinePerformanceFactors(baselinePerformanceFactors.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance factors for the instance
+       * requirements.
+       */
+      override
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty) {
+        cdkBuilder.baselinePerformanceFactors(baselinePerformanceFactors.let(BaselinePerformanceFactorsRequestProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance factors for the instance
+       * requirements.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("cd311b2b9a3820d888aa83bf56f68247b0d148a34fd5ea76eb2df14cc9bb98f7")
+      override
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsRequestProperty.Builder.() -> Unit):
+          Unit =
+          baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty(baselinePerformanceFactors))
+
+      /**
        * @param burstablePerformance Indicates whether burstable performance instance types are
        * included, excluded, or required.
        * For more information, see [Burstable performance
@@ -4909,6 +6310,13 @@ public open class CfnAutoScalingGroup(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html#cfn-autoscaling-autoscalinggroup-instancerequirements-baselineebsbandwidthmbps)
        */
       override fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
+
+      /**
+       * The baseline performance factors for the instance requirements.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-instancerequirements.html#cfn-autoscaling-autoscalinggroup-instancerequirements-baselineperformancefactors)
+       */
+      override fun baselinePerformanceFactors(): Any? = unwrap(this).getBaselinePerformanceFactors()
 
       /**
        * Indicates whether burstable performance instance types are included, excluded, or required.
@@ -5799,6 +7207,13 @@ public open class CfnAutoScalingGroup(
    * .max(123)
    * .min(123)
    * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
    * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
@@ -6368,6 +7783,13 @@ public open class CfnAutoScalingGroup(
    * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsRequestProperty.builder()
    * .max(123)
    * .min(123)
+   * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
    * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
@@ -7741,6 +9163,13 @@ public open class CfnAutoScalingGroup(
    * .max(123)
    * .min(123)
    * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+   * .cpu(CpuPerformanceFactorRequestProperty.builder()
+   * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
    * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
@@ -8378,6 +9807,205 @@ public open class CfnAutoScalingGroup(
   }
 
   /**
+   * Specify an instance family to use as the baseline reference for CPU performance.
+   *
+   * All instance types that All instance types that match your specified attributes will be
+   * compared against the CPU performance of the referenced instance family, regardless of CPU
+   * manufacturer or architecture differences.
+   *
+   *
+   * Currently only one instance family can be specified in the list.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * PerformanceFactorReferenceRequestProperty performanceFactorReferenceRequestProperty =
+   * PerformanceFactorReferenceRequestProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-performancefactorreferencerequest.html)
+   */
+  public interface PerformanceFactorReferenceRequestProperty {
+    /**
+     * The instance family to use as a baseline reference.
+     *
+     *
+     * Make sure that you specify the correct value for the instance family. The instance family is
+     * everything before the period (.) in the instance type name. For example, in the instance
+     * `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon EC2
+     * instance type naming
+     * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+     * *Amazon EC2 Instance Types* .
+     *
+     *
+     * The following instance types are *not supported* for performance protection.
+     *
+     * * `c1`
+     * * `g3| g3s`
+     * * `hpc7g`
+     * * `m1| m2`
+     * * `mac1 | mac2 | mac2-m1ultra | mac2-m2 | mac2-m2pro`
+     * * `p3dn | p4d | p5`
+     * * `t1`
+     * * `u-12tb1 | u-18tb1 | u-24tb1 | u-3tb1 | u-6tb1 | u-9tb1 | u7i-12tb | u7in-16tb | u7in-24tb
+     * | u7in-32tb`
+     *
+     * If you performance protection by specifying a supported instance family, the returned
+     * instance types will exclude the preceding unsupported instance families.
+     *
+     * If you specify an unsupported instance family as a value for baseline performance, the API
+     * returns an empty response.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-performancefactorreferencerequest.html#cfn-autoscaling-autoscalinggroup-performancefactorreferencerequest-instancefamily)
+     */
+    public fun instanceFamily(): String? = unwrap(this).getInstanceFamily()
+
+    /**
+     * A builder for [PerformanceFactorReferenceRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceFamily The instance family to use as a baseline reference.
+       *
+       * Make sure that you specify the correct value for the instance family. The instance family
+       * is everything before the period (.) in the instance type name. For example, in the instance
+       * `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon EC2
+       * instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance types are *not supported* for performance protection.
+       *
+       * * `c1`
+       * * `g3| g3s`
+       * * `hpc7g`
+       * * `m1| m2`
+       * * `mac1 | mac2 | mac2-m1ultra | mac2-m2 | mac2-m2pro`
+       * * `p3dn | p4d | p5`
+       * * `t1`
+       * * `u-12tb1 | u-18tb1 | u-24tb1 | u-3tb1 | u-6tb1 | u-9tb1 | u7i-12tb | u7in-16tb |
+       * u7in-24tb | u7in-32tb`
+       *
+       * If you performance protection by specifying a supported instance family, the returned
+       * instance types will exclude the preceding unsupported instance families.
+       *
+       * If you specify an unsupported instance family as a value for baseline performance, the API
+       * returns an empty response.
+       */
+      public fun instanceFamily(instanceFamily: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.PerformanceFactorReferenceRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.PerformanceFactorReferenceRequestProperty.builder()
+
+      /**
+       * @param instanceFamily The instance family to use as a baseline reference.
+       *
+       * Make sure that you specify the correct value for the instance family. The instance family
+       * is everything before the period (.) in the instance type name. For example, in the instance
+       * `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon EC2
+       * instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance types are *not supported* for performance protection.
+       *
+       * * `c1`
+       * * `g3| g3s`
+       * * `hpc7g`
+       * * `m1| m2`
+       * * `mac1 | mac2 | mac2-m1ultra | mac2-m2 | mac2-m2pro`
+       * * `p3dn | p4d | p5`
+       * * `t1`
+       * * `u-12tb1 | u-18tb1 | u-24tb1 | u-3tb1 | u-6tb1 | u-9tb1 | u7i-12tb | u7in-16tb |
+       * u7in-24tb | u7in-32tb`
+       *
+       * If you performance protection by specifying a supported instance family, the returned
+       * instance types will exclude the preceding unsupported instance families.
+       *
+       * If you specify an unsupported instance family as a value for baseline performance, the API
+       * returns an empty response.
+       */
+      override fun instanceFamily(instanceFamily: String) {
+        cdkBuilder.instanceFamily(instanceFamily)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.PerformanceFactorReferenceRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.PerformanceFactorReferenceRequestProperty,
+    ) : CdkObject(cdkObject),
+        PerformanceFactorReferenceRequestProperty {
+      /**
+       * The instance family to use as a baseline reference.
+       *
+       *
+       * Make sure that you specify the correct value for the instance family. The instance family
+       * is everything before the period (.) in the instance type name. For example, in the instance
+       * `c6i.large` , the instance family is `c6i` , not `c6` . For more information, see [Amazon EC2
+       * instance type naming
+       * conventions](https://docs.aws.amazon.com/ec2/latest/instancetypes/instance-type-names.html) in
+       * *Amazon EC2 Instance Types* .
+       *
+       *
+       * The following instance types are *not supported* for performance protection.
+       *
+       * * `c1`
+       * * `g3| g3s`
+       * * `hpc7g`
+       * * `m1| m2`
+       * * `mac1 | mac2 | mac2-m1ultra | mac2-m2 | mac2-m2pro`
+       * * `p3dn | p4d | p5`
+       * * `t1`
+       * * `u-12tb1 | u-18tb1 | u-24tb1 | u-3tb1 | u-6tb1 | u-9tb1 | u7i-12tb | u7in-16tb |
+       * u7in-24tb | u7in-32tb`
+       *
+       * If you performance protection by specifying a supported instance family, the returned
+       * instance types will exclude the preceding unsupported instance families.
+       *
+       * If you specify an unsupported instance family as a value for baseline performance, the API
+       * returns an empty response.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-performancefactorreferencerequest.html#cfn-autoscaling-autoscalinggroup-performancefactorreferencerequest-instancefamily)
+       */
+      override fun instanceFamily(): String? = unwrap(this).getInstanceFamily()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          PerformanceFactorReferenceRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.PerformanceFactorReferenceRequestProperty):
+          PerformanceFactorReferenceRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          PerformanceFactorReferenceRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: PerformanceFactorReferenceRequestProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.PerformanceFactorReferenceRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.PerformanceFactorReferenceRequestProperty
+    }
+  }
+
+  /**
    * A structure that specifies a tag for the `Tags` property of
    * [AWS::AutoScaling::AutoScalingGroup](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html)
    * resource.
@@ -8673,6 +10301,245 @@ public open class CfnAutoScalingGroup(
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TotalLocalStorageGBRequestProperty
+    }
+  }
+
+  /**
+   * Identifying information for a traffic source.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.autoscaling.*;
+   * TrafficSourceIdentifierProperty trafficSourceIdentifierProperty =
+   * TrafficSourceIdentifierProperty.builder()
+   * .identifier("identifier")
+   * .type("type")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-trafficsourceidentifier.html)
+   */
+  public interface TrafficSourceIdentifierProperty {
+    /**
+     * Identifies the traffic source.
+     *
+     * For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC
+     * Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and
+     * Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this
+     * account and Region.
+     *
+     * For example:
+     *
+     * * Application Load Balancer ARN:
+     * `arn:aws:elasticloadbalancing:us-west-2:123456789012:targetgroup/my-targets/1234567890123456`
+     * * Classic Load Balancer name: `my-classic-load-balancer`
+     * * VPC Lattice ARN:
+     * `arn:aws:vpc-lattice:us-west-2:123456789012:targetgroup/tg-1234567890123456`
+     *
+     * To get the ARN of a target group for a Application Load Balancer, Gateway Load Balancer, or
+     * Network Load Balancer, or the name of a Classic Load Balancer, use the Elastic Load Balancing
+     * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+     * and
+     * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+     * API operations.
+     *
+     * To get the ARN of a target group for VPC Lattice, use the VPC Lattice
+     * [GetTargetGroup](https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/API_GetTargetGroup.html)
+     * API operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-trafficsourceidentifier.html#cfn-autoscaling-autoscalinggroup-trafficsourceidentifier-identifier)
+     */
+    public fun identifier(): String
+
+    /**
+     * Provides additional context for the value of `Identifier` .
+     *
+     * The following lists the valid values:
+     *
+     * * `elb` if `Identifier` is the name of a Classic Load Balancer.
+     * * `elbv2` if `Identifier` is the ARN of an Application Load Balancer, Gateway Load Balancer,
+     * or Network Load Balancer target group.
+     * * `vpc-lattice` if `Identifier` is the ARN of a VPC Lattice target group.
+     *
+     * Required if the identifier is the name of a Classic Load Balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-trafficsourceidentifier.html#cfn-autoscaling-autoscalinggroup-trafficsourceidentifier-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [TrafficSourceIdentifierProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param identifier Identifies the traffic source. 
+       * For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC
+       * Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and
+       * Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this
+       * account and Region.
+       *
+       * For example:
+       *
+       * * Application Load Balancer ARN:
+       * `arn:aws:elasticloadbalancing:us-west-2:123456789012:targetgroup/my-targets/1234567890123456`
+       * * Classic Load Balancer name: `my-classic-load-balancer`
+       * * VPC Lattice ARN:
+       * `arn:aws:vpc-lattice:us-west-2:123456789012:targetgroup/tg-1234567890123456`
+       *
+       * To get the ARN of a target group for a Application Load Balancer, Gateway Load Balancer, or
+       * Network Load Balancer, or the name of a Classic Load Balancer, use the Elastic Load Balancing
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * and
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operations.
+       *
+       * To get the ARN of a target group for VPC Lattice, use the VPC Lattice
+       * [GetTargetGroup](https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/API_GetTargetGroup.html)
+       * API operation.
+       */
+      public fun identifier(identifier: String)
+
+      /**
+       * @param type Provides additional context for the value of `Identifier` . 
+       * The following lists the valid values:
+       *
+       * * `elb` if `Identifier` is the name of a Classic Load Balancer.
+       * * `elbv2` if `Identifier` is the ARN of an Application Load Balancer, Gateway Load
+       * Balancer, or Network Load Balancer target group.
+       * * `vpc-lattice` if `Identifier` is the ARN of a VPC Lattice target group.
+       *
+       * Required if the identifier is the name of a Classic Load Balancer.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TrafficSourceIdentifierProperty.Builder
+          =
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TrafficSourceIdentifierProperty.builder()
+
+      /**
+       * @param identifier Identifies the traffic source. 
+       * For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC
+       * Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and
+       * Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this
+       * account and Region.
+       *
+       * For example:
+       *
+       * * Application Load Balancer ARN:
+       * `arn:aws:elasticloadbalancing:us-west-2:123456789012:targetgroup/my-targets/1234567890123456`
+       * * Classic Load Balancer name: `my-classic-load-balancer`
+       * * VPC Lattice ARN:
+       * `arn:aws:vpc-lattice:us-west-2:123456789012:targetgroup/tg-1234567890123456`
+       *
+       * To get the ARN of a target group for a Application Load Balancer, Gateway Load Balancer, or
+       * Network Load Balancer, or the name of a Classic Load Balancer, use the Elastic Load Balancing
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * and
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operations.
+       *
+       * To get the ARN of a target group for VPC Lattice, use the VPC Lattice
+       * [GetTargetGroup](https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/API_GetTargetGroup.html)
+       * API operation.
+       */
+      override fun identifier(identifier: String) {
+        cdkBuilder.identifier(identifier)
+      }
+
+      /**
+       * @param type Provides additional context for the value of `Identifier` . 
+       * The following lists the valid values:
+       *
+       * * `elb` if `Identifier` is the name of a Classic Load Balancer.
+       * * `elbv2` if `Identifier` is the ARN of an Application Load Balancer, Gateway Load
+       * Balancer, or Network Load Balancer target group.
+       * * `vpc-lattice` if `Identifier` is the ARN of a VPC Lattice target group.
+       *
+       * Required if the identifier is the name of a Classic Load Balancer.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TrafficSourceIdentifierProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TrafficSourceIdentifierProperty,
+    ) : CdkObject(cdkObject),
+        TrafficSourceIdentifierProperty {
+      /**
+       * Identifies the traffic source.
+       *
+       * For Application Load Balancers, Gateway Load Balancers, Network Load Balancers, and VPC
+       * Lattice, this will be the Amazon Resource Name (ARN) for a target group in this account and
+       * Region. For Classic Load Balancers, this will be the name of the Classic Load Balancer in this
+       * account and Region.
+       *
+       * For example:
+       *
+       * * Application Load Balancer ARN:
+       * `arn:aws:elasticloadbalancing:us-west-2:123456789012:targetgroup/my-targets/1234567890123456`
+       * * Classic Load Balancer name: `my-classic-load-balancer`
+       * * VPC Lattice ARN:
+       * `arn:aws:vpc-lattice:us-west-2:123456789012:targetgroup/tg-1234567890123456`
+       *
+       * To get the ARN of a target group for a Application Load Balancer, Gateway Load Balancer, or
+       * Network Load Balancer, or the name of a Classic Load Balancer, use the Elastic Load Balancing
+       * [DescribeTargetGroups](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTargetGroups.html)
+       * and
+       * [DescribeLoadBalancers](https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeLoadBalancers.html)
+       * API operations.
+       *
+       * To get the ARN of a target group for VPC Lattice, use the VPC Lattice
+       * [GetTargetGroup](https://docs.aws.amazon.com/vpc-lattice/latest/APIReference/API_GetTargetGroup.html)
+       * API operation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-trafficsourceidentifier.html#cfn-autoscaling-autoscalinggroup-trafficsourceidentifier-identifier)
+       */
+      override fun identifier(): String = unwrap(this).getIdentifier()
+
+      /**
+       * Provides additional context for the value of `Identifier` .
+       *
+       * The following lists the valid values:
+       *
+       * * `elb` if `Identifier` is the name of a Classic Load Balancer.
+       * * `elbv2` if `Identifier` is the ARN of an Application Load Balancer, Gateway Load
+       * Balancer, or Network Load Balancer target group.
+       * * `vpc-lattice` if `Identifier` is the ARN of a VPC Lattice target group.
+       *
+       * Required if the identifier is the name of a Classic Load Balancer.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-autoscalinggroup-trafficsourceidentifier.html#cfn-autoscaling-autoscalinggroup-trafficsourceidentifier-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): TrafficSourceIdentifierProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TrafficSourceIdentifierProperty):
+          TrafficSourceIdentifierProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          TrafficSourceIdentifierProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: TrafficSourceIdentifierProperty):
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TrafficSourceIdentifierProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.autoscaling.CfnAutoScalingGroup.TrafficSourceIdentifierProperty
     }
   }
 

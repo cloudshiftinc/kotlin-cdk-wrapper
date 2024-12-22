@@ -51,6 +51,12 @@ public open class FoundationModelIdentifier(
     public val AI21_J2_ULTRA: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AI21_J2_ULTRA)
 
+    public val AI21_JAMBA_1_5_LARGE_V_1_0: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AI21_JAMBA_1_5_LARGE_V_1_0)
+
+    public val AI21_JAMBA_1_5_MINI_V_1_0: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AI21_JAMBA_1_5_MINI_V_1_0)
+
     public val AI21_LABS_JURASSIC_2_MID_V1: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AI21_LABS_JURASSIC_2_MID_V1)
 
@@ -59,6 +65,33 @@ public open class FoundationModelIdentifier(
 
     public val AI21_LABS_JURASSIC_2_ULTRA_V1_0_8_K: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AI21_LABS_JURASSIC_2_ULTRA_V1_0_8_K)
+
+    public val AMAZON_NOVA_CANVAS_V1_0: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_NOVA_CANVAS_V1_0)
+
+    public val AMAZON_NOVA_LITE_V1_0: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_NOVA_LITE_V1_0)
+
+    public val AMAZON_NOVA_LITE_V1_0_300_K: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_NOVA_LITE_V1_0_300_K)
+
+    public val AMAZON_NOVA_MICRO_V1_0: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_NOVA_MICRO_V1_0)
+
+    public val AMAZON_NOVA_MICRO_V1_0_128_K: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_NOVA_MICRO_V1_0_128_K)
+
+    public val AMAZON_NOVA_PRO_V1_0: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_NOVA_PRO_V1_0)
+
+    public val AMAZON_NOVA_PRO_V1_0_300_K: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_NOVA_PRO_V1_0_300_K)
+
+    public val AMAZON_NOVA_REEL_V1_0: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_NOVA_REEL_V1_0)
+
+    public val AMAZON_RERANK_V1: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_RERANK_V1)
 
     public val AMAZON_TITAN_EMBED_G1_TEXT_02: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_TITAN_EMBED_G1_TEXT_02)
@@ -111,8 +144,14 @@ public open class FoundationModelIdentifier(
     public val AMAZON_TITAN_TG1_LARGE: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.AMAZON_TITAN_TG1_LARGE)
 
+    public val ANTHROPIC_CLAUDE_3_5_HAIKU_20241022_V1_0: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.ANTHROPIC_CLAUDE_3_5_HAIKU_20241022_V1_0)
+
     public val ANTHROPIC_CLAUDE_3_5_SONNET_20240620_V1_0: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.ANTHROPIC_CLAUDE_3_5_SONNET_20240620_V1_0)
+
+    public val ANTHROPIC_CLAUDE_3_5_SONNET_20241022_V2_0: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.ANTHROPIC_CLAUDE_3_5_SONNET_20241022_V2_0)
 
     public val ANTHROPIC_CLAUDE_3_HAIKU_20240307_V1_0: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.ANTHROPIC_CLAUDE_3_HAIKU_20240307_V1_0)
@@ -192,6 +231,9 @@ public open class FoundationModelIdentifier(
     public val COHERE_EMBED_MULTILINGUAL_V3_0_512: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.COHERE_EMBED_MULTILINGUAL_V3_0_512)
 
+    public val COHERE_RERANK_V3_5: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.COHERE_RERANK_V3_5)
+
     public val META_LLAMA_2_13_B_CHAT_V1_0_4_K: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.META_LLAMA_2_13_B_CHAT_V1_0_4_K)
 
@@ -224,6 +266,18 @@ public open class FoundationModelIdentifier(
 
     public val META_LLAMA_3_1_8_B_INSTRUCT_V1: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.META_LLAMA_3_1_8_B_INSTRUCT_V1)
+
+    public val META_LLAMA_3_2_11_B_INSTRUCT_V1: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.META_LLAMA_3_2_11_B_INSTRUCT_V1)
+
+    public val META_LLAMA_3_2_1_B_INSTRUCT_V1: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.META_LLAMA_3_2_1_B_INSTRUCT_V1)
+
+    public val META_LLAMA_3_2_3_B_INSTRUCT_V1: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.META_LLAMA_3_2_3_B_INSTRUCT_V1)
+
+    public val META_LLAMA_3_2_90_B_INSTRUCT_V1: FoundationModelIdentifier =
+        FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.META_LLAMA_3_2_90_B_INSTRUCT_V1)
 
     public val META_LLAMA_3_70_INSTRUCT_V1: FoundationModelIdentifier =
         FoundationModelIdentifier.wrap(software.amazon.awscdk.services.bedrock.FoundationModelIdentifier.META_LLAMA_3_70_INSTRUCT_V1)

@@ -15,7 +15,9 @@ import io.cloudshiftdev.awscdk.services.globalaccelerator.IAccelerator
  * Accelerator accelerator;
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
- * .target(RecordTarget.fromAlias(new GlobalAcceleratorTarget(accelerator)))
+ * .target(RecordTarget.fromAlias(
+ * new GlobalAcceleratorTarget(accelerator, Map.of(
+ * "evaluateTargetHealth", true))))
  * .build();
  * ```
  */
@@ -24,6 +26,11 @@ public open class GlobalAcceleratorTarget(
 ) : GlobalAcceleratorDomainTarget(cdkObject) {
   public constructor(accelerator: IAccelerator) :
       this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget(accelerator.let(IAccelerator.Companion::unwrap))
+  )
+
+  public constructor(accelerator: IAccelerator, props: IAliasRecordTargetProps) :
+      this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorTarget(accelerator.let(IAccelerator.Companion::unwrap),
+      props.let(IAliasRecordTargetProps.Companion::unwrap))
   )
 
   public companion object {

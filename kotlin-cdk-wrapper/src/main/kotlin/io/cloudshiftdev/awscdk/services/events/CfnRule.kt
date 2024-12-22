@@ -5555,8 +5555,7 @@ public open class CfnRule(
     public fun redshiftDataParameters(): Any? = unwrap(this).getRedshiftDataParameters()
 
     /**
-     * The `RetryPolicy` object that contains the retry policy configuration to use for the
-     * dead-letter queue.
+     * The retry policy configuration to use for the dead-letter queue.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-retrypolicy)
      */
@@ -5849,20 +5848,17 @@ public open class CfnRule(
           fun redshiftDataParameters(redshiftDataParameters: RedshiftDataParametersProperty.Builder.() -> Unit)
 
       /**
-       * @param retryPolicy The `RetryPolicy` object that contains the retry policy configuration to
-       * use for the dead-letter queue.
+       * @param retryPolicy The retry policy configuration to use for the dead-letter queue.
        */
       public fun retryPolicy(retryPolicy: IResolvable)
 
       /**
-       * @param retryPolicy The `RetryPolicy` object that contains the retry policy configuration to
-       * use for the dead-letter queue.
+       * @param retryPolicy The retry policy configuration to use for the dead-letter queue.
        */
       public fun retryPolicy(retryPolicy: RetryPolicyProperty)
 
       /**
-       * @param retryPolicy The `RetryPolicy` object that contains the retry policy configuration to
-       * use for the dead-letter queue.
+       * @param retryPolicy The retry policy configuration to use for the dead-letter queue.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4bca2780f3ad84539d066a093ecc5f07fbe50a541c0d9b592a7224ecf22ece1b")
@@ -6246,24 +6242,21 @@ public open class CfnRule(
           Unit = redshiftDataParameters(RedshiftDataParametersProperty(redshiftDataParameters))
 
       /**
-       * @param retryPolicy The `RetryPolicy` object that contains the retry policy configuration to
-       * use for the dead-letter queue.
+       * @param retryPolicy The retry policy configuration to use for the dead-letter queue.
        */
       override fun retryPolicy(retryPolicy: IResolvable) {
         cdkBuilder.retryPolicy(retryPolicy.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param retryPolicy The `RetryPolicy` object that contains the retry policy configuration to
-       * use for the dead-letter queue.
+       * @param retryPolicy The retry policy configuration to use for the dead-letter queue.
        */
       override fun retryPolicy(retryPolicy: RetryPolicyProperty) {
         cdkBuilder.retryPolicy(retryPolicy.let(RetryPolicyProperty.Companion::unwrap))
       }
 
       /**
-       * @param retryPolicy The `RetryPolicy` object that contains the retry policy configuration to
-       * use for the dead-letter queue.
+       * @param retryPolicy The retry policy configuration to use for the dead-letter queue.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("4bca2780f3ad84539d066a093ecc5f07fbe50a541c0d9b592a7224ecf22ece1b")
@@ -6501,8 +6494,7 @@ public open class CfnRule(
       override fun redshiftDataParameters(): Any? = unwrap(this).getRedshiftDataParameters()
 
       /**
-       * The `RetryPolicy` object that contains the retry policy configuration to use for the
-       * dead-letter queue.
+       * The retry policy configuration to use for the dead-letter queue.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-events-rule-target.html#cfn-events-rule-target-retrypolicy)
        */

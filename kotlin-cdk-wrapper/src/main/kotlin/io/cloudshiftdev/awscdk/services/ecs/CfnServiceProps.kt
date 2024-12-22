@@ -25,6 +25,7 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.ecs.*;
  * CfnServiceProps cfnServiceProps = CfnServiceProps.builder()
+ * .availabilityZoneRebalancing("availabilityZoneRebalancing")
  * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
  * .base(123)
  * .capacityProvider("capacityProvider")
@@ -153,12 +154,30 @@ import kotlin.jvm.JvmName
  * .volumeType("volumeType")
  * .build())
  * .build()))
+ * .vpcLatticeConfigurations(List.of(VpcLatticeConfigurationProperty.builder()
+ * .portName("portName")
+ * .roleArn("roleArn")
+ * .targetGroupArn("targetGroupArn")
+ * .build()))
  * .build();
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html)
  */
 public interface CfnServiceProps {
+  /**
+   * Indicates whether to use Availability Zone rebalancing for the service.
+   *
+   * For more information, see [Balancing an Amazon ECS service across Availability
+   * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
+   * the *Amazon Elastic Container Service Developer Guide* .
+   *
+   * Default: - "DISABLED"
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-availabilityzonerebalancing)
+   */
+  public fun availabilityZoneRebalancing(): String? = unwrap(this).getAvailabilityZoneRebalancing()
+
   /**
    * The capacity provider strategy to use for the service.
    *
@@ -236,21 +255,16 @@ public interface CfnServiceProps {
 
   /**
    * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy Elastic
-   * Load Balancing target health checks after a task has first started.
+   * Load Balancing, VPC Lattice, and container health checks after a task has first started.
    *
-   * This is only used when your service is configured to use a load balancer. If your service has a
-   * load balancer defined and you don't specify a health check grace period value, the default value
-   * of `0` is used.
+   * If you don't specify a health check grace period value, the default value of `0` is used. If
+   * you don't use any of the health checks, then `healthCheckGracePeriodSeconds` is unused.
    *
-   * If you do not use an Elastic Load Balancing, we recommend that you use the `startPeriod` in the
-   * task definition health check parameters. For more information, see [Health
-   * check](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html) .
-   *
-   * If your service's tasks take a while to start and respond to Elastic Load Balancing health
-   * checks, you can specify a health check grace period of up to 2,147,483,647 seconds (about 69
-   * years). During that time, the Amazon ECS service scheduler ignores health check status. This grace
-   * period can prevent the service scheduler from marking tasks as unhealthy and stopping them before
-   * they have time to come up.
+   * If your service's tasks take a while to start and respond to health checks, you can specify a
+   * health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the
+   * Amazon ECS service scheduler ignores health check status. This grace period can prevent the
+   * service scheduler from marking tasks as unhealthy and stopping them before they have time to come
+   * up.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds)
    */
@@ -496,10 +510,26 @@ public interface CfnServiceProps {
   public fun volumeConfigurations(): Any? = unwrap(this).getVolumeConfigurations()
 
   /**
+   * The VPC Lattice configuration for the service being created.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-vpclatticeconfigurations)
+   */
+  public fun vpcLatticeConfigurations(): Any? = unwrap(this).getVpcLatticeConfigurations()
+
+  /**
    * A builder for [CfnServiceProps]
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param availabilityZoneRebalancing Indicates whether to use Availability Zone rebalancing for
+     * the service.
+     * For more information, see [Balancing an Amazon ECS service across Availability
+     * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
+     * the *Amazon Elastic Container Service Developer Guide* .
+     */
+    public fun availabilityZoneRebalancing(availabilityZoneRebalancing: String)
+
     /**
      * @param capacityProviderStrategy The capacity provider strategy to use for the service.
      * If a `capacityProviderStrategy` is specified, the `launchType` parameter must be omitted. If
@@ -630,21 +660,16 @@ public interface CfnServiceProps {
 
     /**
      * @param healthCheckGracePeriodSeconds The period of time, in seconds, that the Amazon ECS
-     * service scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has
-     * first started.
-     * This is only used when your service is configured to use a load balancer. If your service has
-     * a load balancer defined and you don't specify a health check grace period value, the default
-     * value of `0` is used.
+     * service scheduler ignores unhealthy Elastic Load Balancing, VPC Lattice, and container health
+     * checks after a task has first started.
+     * If you don't specify a health check grace period value, the default value of `0` is used. If
+     * you don't use any of the health checks, then `healthCheckGracePeriodSeconds` is unused.
      *
-     * If you do not use an Elastic Load Balancing, we recommend that you use the `startPeriod` in
-     * the task definition health check parameters. For more information, see [Health
-     * check](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html) .
-     *
-     * If your service's tasks take a while to start and respond to Elastic Load Balancing health
-     * checks, you can specify a health check grace period of up to 2,147,483,647 seconds (about 69
-     * years). During that time, the Amazon ECS service scheduler ignores health check status. This
-     * grace period can prevent the service scheduler from marking tasks as unhealthy and stopping them
-     * before they have time to come up.
+     * If your service's tasks take a while to start and respond to health checks, you can specify a
+     * health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the
+     * Amazon ECS service scheduler ignores health check status. This grace period can prevent the
+     * service scheduler from marking tasks as unhealthy and stopping them before they have time to
+     * come up.
      */
     public fun healthCheckGracePeriodSeconds(healthCheckGracePeriodSeconds: Number)
 
@@ -994,11 +1019,37 @@ public interface CfnServiceProps {
      * Currently, the only supported volume type is an Amazon EBS volume.
      */
     public fun volumeConfigurations(vararg volumeConfigurations: Any)
+
+    /**
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created.
+     */
+    public fun vpcLatticeConfigurations(vpcLatticeConfigurations: IResolvable)
+
+    /**
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created.
+     */
+    public fun vpcLatticeConfigurations(vpcLatticeConfigurations: List<Any>)
+
+    /**
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created.
+     */
+    public fun vpcLatticeConfigurations(vararg vpcLatticeConfigurations: Any)
   }
 
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnServiceProps.Builder =
         software.amazon.awscdk.services.ecs.CfnServiceProps.builder()
+
+    /**
+     * @param availabilityZoneRebalancing Indicates whether to use Availability Zone rebalancing for
+     * the service.
+     * For more information, see [Balancing an Amazon ECS service across Availability
+     * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
+     * the *Amazon Elastic Container Service Developer Guide* .
+     */
+    override fun availabilityZoneRebalancing(availabilityZoneRebalancing: String) {
+      cdkBuilder.availabilityZoneRebalancing(availabilityZoneRebalancing)
+    }
 
     /**
      * @param capacityProviderStrategy The capacity provider strategy to use for the service.
@@ -1159,21 +1210,16 @@ public interface CfnServiceProps {
 
     /**
      * @param healthCheckGracePeriodSeconds The period of time, in seconds, that the Amazon ECS
-     * service scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has
-     * first started.
-     * This is only used when your service is configured to use a load balancer. If your service has
-     * a load balancer defined and you don't specify a health check grace period value, the default
-     * value of `0` is used.
+     * service scheduler ignores unhealthy Elastic Load Balancing, VPC Lattice, and container health
+     * checks after a task has first started.
+     * If you don't specify a health check grace period value, the default value of `0` is used. If
+     * you don't use any of the health checks, then `healthCheckGracePeriodSeconds` is unused.
      *
-     * If you do not use an Elastic Load Balancing, we recommend that you use the `startPeriod` in
-     * the task definition health check parameters. For more information, see [Health
-     * check](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html) .
-     *
-     * If your service's tasks take a while to start and respond to Elastic Load Balancing health
-     * checks, you can specify a health check grace period of up to 2,147,483,647 seconds (about 69
-     * years). During that time, the Amazon ECS service scheduler ignores health check status. This
-     * grace period can prevent the service scheduler from marking tasks as unhealthy and stopping them
-     * before they have time to come up.
+     * If your service's tasks take a while to start and respond to health checks, you can specify a
+     * health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the
+     * Amazon ECS service scheduler ignores health check status. This grace period can prevent the
+     * service scheduler from marking tasks as unhealthy and stopping them before they have time to
+     * come up.
      */
     override fun healthCheckGracePeriodSeconds(healthCheckGracePeriodSeconds: Number) {
       cdkBuilder.healthCheckGracePeriodSeconds(healthCheckGracePeriodSeconds)
@@ -1579,6 +1625,26 @@ public interface CfnServiceProps {
     override fun volumeConfigurations(vararg volumeConfigurations: Any): Unit =
         volumeConfigurations(volumeConfigurations.toList())
 
+    /**
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created.
+     */
+    override fun vpcLatticeConfigurations(vpcLatticeConfigurations: IResolvable) {
+      cdkBuilder.vpcLatticeConfigurations(vpcLatticeConfigurations.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created.
+     */
+    override fun vpcLatticeConfigurations(vpcLatticeConfigurations: List<Any>) {
+      cdkBuilder.vpcLatticeConfigurations(vpcLatticeConfigurations.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created.
+     */
+    override fun vpcLatticeConfigurations(vararg vpcLatticeConfigurations: Any): Unit =
+        vpcLatticeConfigurations(vpcLatticeConfigurations.toList())
+
     public fun build(): software.amazon.awscdk.services.ecs.CfnServiceProps = cdkBuilder.build()
   }
 
@@ -1586,6 +1652,20 @@ public interface CfnServiceProps {
     cdkObject: software.amazon.awscdk.services.ecs.CfnServiceProps,
   ) : CdkObject(cdkObject),
       CfnServiceProps {
+    /**
+     * Indicates whether to use Availability Zone rebalancing for the service.
+     *
+     * For more information, see [Balancing an Amazon ECS service across Availability
+     * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
+     * the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * Default: - "DISABLED"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-availabilityzonerebalancing)
+     */
+    override fun availabilityZoneRebalancing(): String? =
+        unwrap(this).getAvailabilityZoneRebalancing()
+
     /**
      * The capacity provider strategy to use for the service.
      *
@@ -1664,21 +1744,16 @@ public interface CfnServiceProps {
 
     /**
      * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy
-     * Elastic Load Balancing target health checks after a task has first started.
+     * Elastic Load Balancing, VPC Lattice, and container health checks after a task has first started.
      *
-     * This is only used when your service is configured to use a load balancer. If your service has
-     * a load balancer defined and you don't specify a health check grace period value, the default
-     * value of `0` is used.
+     * If you don't specify a health check grace period value, the default value of `0` is used. If
+     * you don't use any of the health checks, then `healthCheckGracePeriodSeconds` is unused.
      *
-     * If you do not use an Elastic Load Balancing, we recommend that you use the `startPeriod` in
-     * the task definition health check parameters. For more information, see [Health
-     * check](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html) .
-     *
-     * If your service's tasks take a while to start and respond to Elastic Load Balancing health
-     * checks, you can specify a health check grace period of up to 2,147,483,647 seconds (about 69
-     * years). During that time, the Amazon ECS service scheduler ignores health check status. This
-     * grace period can prevent the service scheduler from marking tasks as unhealthy and stopping them
-     * before they have time to come up.
+     * If your service's tasks take a while to start and respond to health checks, you can specify a
+     * health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the
+     * Amazon ECS service scheduler ignores health check status. This grace period can prevent the
+     * service scheduler from marking tasks as unhealthy and stopping them before they have time to
+     * come up.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds)
      */
@@ -1924,6 +1999,13 @@ public interface CfnServiceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-volumeconfigurations)
      */
     override fun volumeConfigurations(): Any? = unwrap(this).getVolumeConfigurations()
+
+    /**
+     * The VPC Lattice configuration for the service being created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-vpclatticeconfigurations)
+     */
+    override fun vpcLatticeConfigurations(): Any? = unwrap(this).getVpcLatticeConfigurations()
   }
 
   public companion object {

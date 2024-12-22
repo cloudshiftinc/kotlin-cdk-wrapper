@@ -54,7 +54,14 @@ import kotlin.jvm.JvmName
  * .maximumBatchingWindowInSeconds(123)
  * .maximumRecordAgeInSeconds(123)
  * .maximumRetryAttempts(123)
+ * .metricsConfig(MetricsConfigProperty.builder()
+ * .metrics(List.of("metrics"))
+ * .build())
  * .parallelizationFactor(123)
+ * .provisionedPollerConfig(ProvisionedPollerConfigProperty.builder()
+ * .maximumPollers(123)
+ * .minimumPollers(123)
+ * .build())
  * .queues(List.of("queues"))
  * .scalingConfig(ScalingConfigProperty.builder()
  * .maximumConcurrency(123)
@@ -86,7 +93,8 @@ import kotlin.jvm.JvmName
  */
 public interface CfnEventSourceMappingProps {
   /**
-   * Specific configuration settings for an MSK event source.
+   * Specific configuration settings for an Amazon Managed Streaming for Apache Kafka (Amazon MSK)
+   * event source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-amazonmanagedkafkaeventsourceconfig)
    */
@@ -94,35 +102,55 @@ public interface CfnEventSourceMappingProps {
       unwrap(this).getAmazonManagedKafkaEventSourceConfig()
 
   /**
-   * The maximum number of items to retrieve in a single batch.
+   * The maximum number of records in each batch that Lambda pulls from your stream or queue and
+   * sends to your function.
+   *
+   * Lambda passes all of the records in the batch to the function in a single call, up to the
+   * payload limit for synchronous invocation (6 MB).
+   *
+   * * *Amazon Kinesis* – Default 100. Max 10,000.
+   * * *Amazon DynamoDB Streams* – Default 100. Max 10,000.
+   * * *Amazon Simple Queue Service* – Default 10. For standard queues the max is 10,000. For FIFO
+   * queues the max is 10.
+   * * *Amazon Managed Streaming for Apache Kafka* – Default 100. Max 10,000.
+   * * *Self-managed Apache Kafka* – Default 100. Max 10,000.
+   * * *Amazon MQ (ActiveMQ and RabbitMQ)* – Default 100. Max 10,000.
+   * * *DocumentDB* – Default 100. Max 10,000.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-batchsize)
    */
   public fun batchSize(): Number? = unwrap(this).getBatchSize()
 
   /**
-   * (Streams) If the function returns an error, split the batch in two and retry.
+   * (Kinesis and DynamoDB Streams only) If the function returns an error, split the batch in two
+   * and retry.
+   *
+   * The default value is false.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)
    */
   public fun bisectBatchOnFunctionError(): Any? = unwrap(this).getBisectBatchOnFunctionError()
 
   /**
-   * A configuration object that specifies the destination of an event after Lambda processes it.
+   * (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A
+   * configuration object that specifies the destination of an event after Lambda processes it.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-destinationconfig)
    */
   public fun destinationConfig(): Any? = unwrap(this).getDestinationConfig()
 
   /**
-   * Document db event source config.
+   * Specific configuration settings for a DocumentDB event source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig)
    */
   public fun documentDbEventSourceConfig(): Any? = unwrap(this).getDocumentDbEventSourceConfig()
 
   /**
-   * Disables the event source mapping to pause polling and invocation.
+   * When true, the event source mapping is active. When false, Lambda pauses polling and
+   * invocation.
+   *
+   * Default: True
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-enabled)
    */
@@ -131,26 +159,51 @@ public interface CfnEventSourceMappingProps {
   /**
    * The Amazon Resource Name (ARN) of the event source.
    *
+   * * *Amazon Kinesis* – The ARN of the data stream or a stream consumer.
+   * * *Amazon DynamoDB Streams* – The ARN of the stream.
+   * * *Amazon Simple Queue Service* – The ARN of the queue.
+   * * *Amazon Managed Streaming for Apache Kafka* – The ARN of the cluster or the ARN of the VPC
+   * connection (for [cross-account event source
+   * mappings](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#msk-multi-vpc) ).
+   * * *Amazon MQ* – The ARN of the broker.
+   * * *Amazon DocumentDB* – The ARN of the DocumentDB change stream.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-eventsourcearn)
    */
   public fun eventSourceArn(): String? = unwrap(this).getEventSourceArn()
 
   /**
-   * The filter criteria to control event filtering.
+   * An object that defines the filter criteria that determine whether Lambda should process an
+   * event.
+   *
+   * For more information, see [Lambda event
+   * filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-filtercriteria)
    */
   public fun filterCriteria(): Any? = unwrap(this).getFilterCriteria()
 
   /**
-   * The name of the Lambda function.
+   * The name or ARN of the Lambda function.
+   *
+   * **Name formats** - *Function name* – `MyFunction` .
+   *
+   * * *Function ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
+   * * *Version or Alias ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD` .
+   * * *Partial ARN* – `123456789012:function:MyFunction` .
+   *
+   * The length constraint applies only to the full ARN. If you specify only the function name, it's
+   * limited to 64 characters in length.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname)
    */
   public fun functionName(): String
 
   /**
-   * (Streams) A list of response types supported by the function.
+   * (Kinesis, DynamoDB Streams, and SQS) A list of current response type enums applied to the event
+   * source mapping.
+   *
+   * Valid Values: `ReportBatchItemFailures`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionresponsetypes)
    */
@@ -158,15 +211,25 @@ public interface CfnEventSourceMappingProps {
       emptyList()
 
   /**
-   * The Amazon Resource Name (ARN) of the KMS key.
+   * The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key that Lambda uses to
+   * encrypt your function's [filter
+   * criteria](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-basics)
+   * .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-kmskeyarn)
    */
   public fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
   /**
-   * (Streams) The maximum amount of time to gather records before invoking the function, in
-   * seconds.
+   * The maximum amount of time, in seconds, that Lambda spends gathering records before invoking
+   * the function.
+   *
+   * *Default ( Kinesis , DynamoDB , Amazon SQS event sources)* : 0
+   *
+   * *Default ( Amazon MSK , Kafka, Amazon MQ , Amazon DocumentDB event sources)* : 500 ms
+   *
+   * *Related setting:* For Amazon SQS event sources, when you set `BatchSize` to a value greater
+   * than 10, you must set `MaximumBatchingWindowInSeconds` to at least 1.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds)
    */
@@ -174,49 +237,91 @@ public interface CfnEventSourceMappingProps {
       unwrap(this).getMaximumBatchingWindowInSeconds()
 
   /**
-   * (Streams) The maximum age of a record that Lambda sends to a function for processing.
+   * (Kinesis and DynamoDB Streams only) Discard records older than the specified age.
+   *
+   * The default value is -1,
+   * which sets the maximum age to infinite. When the value is set to infinite, Lambda never
+   * discards old records.
+   *
+   *
+   * The minimum valid value for maximum record age is 60s. Although values less than 60 and greater
+   * than -1 fall within the parameter's absolute range, they are not allowed
+   *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumrecordageinseconds)
    */
   public fun maximumRecordAgeInSeconds(): Number? = unwrap(this).getMaximumRecordAgeInSeconds()
 
   /**
-   * (Streams) The maximum number of times to retry when the function returns an error.
+   * (Kinesis and DynamoDB Streams only) Discard records after the specified number of retries.
+   *
+   * The default value is -1,
+   * which sets the maximum number of retries to infinite. When MaximumRetryAttempts is infinite,
+   * Lambda retries failed records until the record expires in the event source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumretryattempts)
    */
   public fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
 
   /**
-   * (Streams) The number of batches to process from each shard concurrently.
+   * The metrics configuration for your event source.
+   *
+   * For more information, see [Event source mapping
+   * metrics](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics-types.html#event-source-mapping-metrics)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-metricsconfig)
+   */
+  public fun metricsConfig(): Any? = unwrap(this).getMetricsConfig()
+
+  /**
+   * (Kinesis and DynamoDB Streams only) The number of batches to process concurrently from each
+   * shard.
+   *
+   * The default value is 1.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-parallelizationfactor)
    */
   public fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
 
   /**
-   * (ActiveMQ) A list of ActiveMQ queues.
+   * (Amazon MSK and self-managed Apache Kafka only) The provisioned mode configuration for the
+   * event source.
+   *
+   * For more information, see [provisioned
+   * mode](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#invocation-eventsourcemapping-provisioned-mode)
+   * .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-provisionedpollerconfig)
+   */
+  public fun provisionedPollerConfig(): Any? = unwrap(this).getProvisionedPollerConfig()
+
+  /**
+   * (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-queues)
    */
   public fun queues(): List<String> = unwrap(this).getQueues() ?: emptyList()
 
   /**
-   * The scaling configuration for the event source.
+   * (Amazon SQS only) The scaling configuration for the event source.
+   *
+   * For more information, see [Configuring maximum concurrency for Amazon SQS event
+   * sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency) .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-scalingconfig)
    */
   public fun scalingConfig(): Any? = unwrap(this).getScalingConfig()
 
   /**
-   * The configuration used by AWS Lambda to access a self-managed event source.
+   * The self-managed Apache Kafka cluster for your event source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource)
    */
   public fun selfManagedEventSource(): Any? = unwrap(this).getSelfManagedEventSource()
 
   /**
-   * Specific configuration settings for a Self-Managed Apache Kafka event source.
+   * Specific configuration settings for a self-managed Apache Kafka event source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig)
    */
@@ -224,43 +329,63 @@ public interface CfnEventSourceMappingProps {
       unwrap(this).getSelfManagedKafkaEventSourceConfig()
 
   /**
-   * A list of SourceAccessConfiguration.
+   * An array of the authentication protocol, VPC components, or virtual host to secure and define
+   * your event source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-sourceaccessconfigurations)
    */
   public fun sourceAccessConfigurations(): Any? = unwrap(this).getSourceAccessConfigurations()
 
   /**
-   * The position in a stream from which to start reading.
+   * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon
+   * DynamoDB.
    *
-   * Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
+   * * *LATEST* - Read only new records.
+   * * *TRIM_HORIZON* - Process all available records.
+   * * *AT_TIMESTAMP* - Specify a time from which to start reading records.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition)
    */
   public fun startingPosition(): String? = unwrap(this).getStartingPosition()
 
   /**
-   * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time
-   * seconds.
+   * With `StartingPosition` set to `AT_TIMESTAMP` , the time from which to start reading, in Unix
+   * time seconds.
+   *
+   * `StartingPositionTimestamp` cannot be in the future.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingpositiontimestamp)
    */
   public fun startingPositionTimestamp(): Number? = unwrap(this).getStartingPositionTimestamp()
 
   /**
+   * A list of tags to add to the event source mapping.
+   *
+   *
+   * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+   * permissions for your [IAM
+   * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+   * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+   * unexpected behavior with stack-level tags propagating to the resource during resource creation and
+   * update.
+   *
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * (Kafka) A list of Kafka topics.
+   * The name of the Kafka topic.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-topics)
    */
   public fun topics(): List<String> = unwrap(this).getTopics() ?: emptyList()
 
   /**
-   * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
+   * (Kinesis and DynamoDB Streams only) The duration in seconds of a processing window for DynamoDB
+   * and Kinesis Streams event sources.
+   *
+   * A value of 0 seconds indicates no tumbling window.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-tumblingwindowinseconds)
    */
@@ -272,21 +397,21 @@ public interface CfnEventSourceMappingProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an MSK event
-     * source.
+     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an Amazon
+     * Managed Streaming for Apache Kafka (Amazon MSK) event source.
      */
     public fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: IResolvable)
 
     /**
-     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an MSK event
-     * source.
+     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an Amazon
+     * Managed Streaming for Apache Kafka (Amazon MSK) event source.
      */
     public
         fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty)
 
     /**
-     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an MSK event
-     * source.
+     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an Amazon
+     * Managed Streaming for Apache Kafka (Amazon MSK) event source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aee9284c4da4983caa97612e7b01c42241967f360aa7dd95373593dc8311c6aa")
@@ -294,36 +419,53 @@ public interface CfnEventSourceMappingProps {
         fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param batchSize The maximum number of items to retrieve in a single batch.
+     * @param batchSize The maximum number of records in each batch that Lambda pulls from your
+     * stream or queue and sends to your function.
+     * Lambda passes all of the records in the batch to the function in a single call, up to the
+     * payload limit for synchronous invocation (6 MB).
+     *
+     * * *Amazon Kinesis* – Default 100. Max 10,000.
+     * * *Amazon DynamoDB Streams* – Default 100. Max 10,000.
+     * * *Amazon Simple Queue Service* – Default 10. For standard queues the max is 10,000. For FIFO
+     * queues the max is 10.
+     * * *Amazon Managed Streaming for Apache Kafka* – Default 100. Max 10,000.
+     * * *Self-managed Apache Kafka* – Default 100. Max 10,000.
+     * * *Amazon MQ (ActiveMQ and RabbitMQ)* – Default 100. Max 10,000.
+     * * *DocumentDB* – Default 100. Max 10,000.
      */
     public fun batchSize(batchSize: Number)
 
     /**
-     * @param bisectBatchOnFunctionError (Streams) If the function returns an error, split the batch
-     * in two and retry.
+     * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
+     * an error, split the batch in two and retry.
+     * The default value is false.
      */
     public fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: Boolean)
 
     /**
-     * @param bisectBatchOnFunctionError (Streams) If the function returns an error, split the batch
-     * in two and retry.
+     * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
+     * an error, split the batch in two and retry.
+     * The default value is false.
      */
     public fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable)
 
     /**
-     * @param destinationConfig A configuration object that specifies the destination of an event
+     * @param destinationConfig (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache
+     * Kafka event sources only) A configuration object that specifies the destination of an event
      * after Lambda processes it.
      */
     public fun destinationConfig(destinationConfig: IResolvable)
 
     /**
-     * @param destinationConfig A configuration object that specifies the destination of an event
+     * @param destinationConfig (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache
+     * Kafka event sources only) A configuration object that specifies the destination of an event
      * after Lambda processes it.
      */
     public fun destinationConfig(destinationConfig: CfnEventSourceMapping.DestinationConfigProperty)
 
     /**
-     * @param destinationConfig A configuration object that specifies the destination of an event
+     * @param destinationConfig (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache
+     * Kafka event sources only) A configuration object that specifies the destination of an event
      * after Lambda processes it.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -332,18 +474,21 @@ public interface CfnEventSourceMappingProps {
         fun destinationConfig(destinationConfig: CfnEventSourceMapping.DestinationConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param documentDbEventSourceConfig Document db event source config.
+     * @param documentDbEventSourceConfig Specific configuration settings for a DocumentDB event
+     * source.
      */
     public fun documentDbEventSourceConfig(documentDbEventSourceConfig: IResolvable)
 
     /**
-     * @param documentDbEventSourceConfig Document db event source config.
+     * @param documentDbEventSourceConfig Specific configuration settings for a DocumentDB event
+     * source.
      */
     public
         fun documentDbEventSourceConfig(documentDbEventSourceConfig: CfnEventSourceMapping.DocumentDBEventSourceConfigProperty)
 
     /**
-     * @param documentDbEventSourceConfig Document db event source config.
+     * @param documentDbEventSourceConfig Specific configuration settings for a DocumentDB event
+     * source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d09fb314ca9893c0049527cb14bf2c10d2ff9b3b75d94621775da00c0e2ba4e7")
@@ -351,32 +496,53 @@ public interface CfnEventSourceMappingProps {
         fun documentDbEventSourceConfig(documentDbEventSourceConfig: CfnEventSourceMapping.DocumentDBEventSourceConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param enabled Disables the event source mapping to pause polling and invocation.
+     * @param enabled When true, the event source mapping is active. When false, Lambda pauses
+     * polling and invocation.
+     * Default: True
      */
     public fun enabled(enabled: Boolean)
 
     /**
-     * @param enabled Disables the event source mapping to pause polling and invocation.
+     * @param enabled When true, the event source mapping is active. When false, Lambda pauses
+     * polling and invocation.
+     * Default: True
      */
     public fun enabled(enabled: IResolvable)
 
     /**
      * @param eventSourceArn The Amazon Resource Name (ARN) of the event source.
+     * * *Amazon Kinesis* – The ARN of the data stream or a stream consumer.
+     * * *Amazon DynamoDB Streams* – The ARN of the stream.
+     * * *Amazon Simple Queue Service* – The ARN of the queue.
+     * * *Amazon Managed Streaming for Apache Kafka* – The ARN of the cluster or the ARN of the VPC
+     * connection (for [cross-account event source
+     * mappings](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#msk-multi-vpc) ).
+     * * *Amazon MQ* – The ARN of the broker.
+     * * *Amazon DocumentDB* – The ARN of the DocumentDB change stream.
      */
     public fun eventSourceArn(eventSourceArn: String)
 
     /**
-     * @param filterCriteria The filter criteria to control event filtering.
+     * @param filterCriteria An object that defines the filter criteria that determine whether
+     * Lambda should process an event.
+     * For more information, see [Lambda event
+     * filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) .
      */
     public fun filterCriteria(filterCriteria: IResolvable)
 
     /**
-     * @param filterCriteria The filter criteria to control event filtering.
+     * @param filterCriteria An object that defines the filter criteria that determine whether
+     * Lambda should process an event.
+     * For more information, see [Lambda event
+     * filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) .
      */
     public fun filterCriteria(filterCriteria: CfnEventSourceMapping.FilterCriteriaProperty)
 
     /**
-     * @param filterCriteria The filter criteria to control event filtering.
+     * @param filterCriteria An object that defines the filter criteria that determine whether
+     * Lambda should process an event.
+     * For more information, see [Lambda event
+     * filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("64d63e409c55293cf7b59494387d9651b3d5c3761ad44584ecbc98ce165317b3")
@@ -384,71 +550,170 @@ public interface CfnEventSourceMappingProps {
         fun filterCriteria(filterCriteria: CfnEventSourceMapping.FilterCriteriaProperty.Builder.() -> Unit)
 
     /**
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
+     * **Name formats** - *Function name* – `MyFunction` .
+     *
+     * * *Function ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
+     * * *Version or Alias ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD` .
+     * * *Partial ARN* – `123456789012:function:MyFunction` .
+     *
+     * The length constraint applies only to the full ARN. If you specify only the function name,
+     * it's limited to 64 characters in length.
      */
     public fun functionName(functionName: String)
 
     /**
-     * @param functionResponseTypes (Streams) A list of response types supported by the function.
+     * @param functionResponseTypes (Kinesis, DynamoDB Streams, and SQS) A list of current response
+     * type enums applied to the event source mapping.
+     * Valid Values: `ReportBatchItemFailures`
      */
     public fun functionResponseTypes(functionResponseTypes: List<String>)
 
     /**
-     * @param functionResponseTypes (Streams) A list of response types supported by the function.
+     * @param functionResponseTypes (Kinesis, DynamoDB Streams, and SQS) A list of current response
+     * type enums applied to the event source mapping.
+     * Valid Values: `ReportBatchItemFailures`
      */
     public fun functionResponseTypes(vararg functionResponseTypes: String)
 
     /**
-     * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key.
+     * @param kmsKeyArn The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key
+     * that Lambda uses to encrypt your function's [filter
+     * criteria](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-basics)
+     * .
      */
     public fun kmsKeyArn(kmsKeyArn: String)
 
     /**
-     * @param maximumBatchingWindowInSeconds (Streams) The maximum amount of time to gather records
-     * before invoking the function, in seconds.
+     * @param maximumBatchingWindowInSeconds The maximum amount of time, in seconds, that Lambda
+     * spends gathering records before invoking the function.
+     * *Default ( Kinesis , DynamoDB , Amazon SQS event sources)* : 0
+     *
+     * *Default ( Amazon MSK , Kafka, Amazon MQ , Amazon DocumentDB event sources)* : 500 ms
+     *
+     * *Related setting:* For Amazon SQS event sources, when you set `BatchSize` to a value greater
+     * than 10, you must set `MaximumBatchingWindowInSeconds` to at least 1.
      */
     public fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number)
 
     /**
-     * @param maximumRecordAgeInSeconds (Streams) The maximum age of a record that Lambda sends to a
-     * function for processing.
+     * @param maximumRecordAgeInSeconds (Kinesis and DynamoDB Streams only) Discard records older
+     * than the specified age.
+     * The default value is -1,
+     * which sets the maximum age to infinite. When the value is set to infinite, Lambda never
+     * discards old records.
+     *
+     *
+     * The minimum valid value for maximum record age is 60s. Although values less than 60 and
+     * greater than -1 fall within the parameter's absolute range, they are not allowed
      */
     public fun maximumRecordAgeInSeconds(maximumRecordAgeInSeconds: Number)
 
     /**
-     * @param maximumRetryAttempts (Streams) The maximum number of times to retry when the function
-     * returns an error.
+     * @param maximumRetryAttempts (Kinesis and DynamoDB Streams only) Discard records after the
+     * specified number of retries.
+     * The default value is -1,
+     * which sets the maximum number of retries to infinite. When MaximumRetryAttempts is infinite,
+     * Lambda retries failed records until the record expires in the event source.
      */
     public fun maximumRetryAttempts(maximumRetryAttempts: Number)
 
     /**
-     * @param parallelizationFactor (Streams) The number of batches to process from each shard
-     * concurrently.
+     * @param metricsConfig The metrics configuration for your event source.
+     * For more information, see [Event source mapping
+     * metrics](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics-types.html#event-source-mapping-metrics)
+     * .
+     */
+    public fun metricsConfig(metricsConfig: IResolvable)
+
+    /**
+     * @param metricsConfig The metrics configuration for your event source.
+     * For more information, see [Event source mapping
+     * metrics](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics-types.html#event-source-mapping-metrics)
+     * .
+     */
+    public fun metricsConfig(metricsConfig: CfnEventSourceMapping.MetricsConfigProperty)
+
+    /**
+     * @param metricsConfig The metrics configuration for your event source.
+     * For more information, see [Event source mapping
+     * metrics](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics-types.html#event-source-mapping-metrics)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("cfa19e1914ec2b2d1576246e3f865310dc1c5dda597069bb55a0a0e2c7a6cce9")
+    public
+        fun metricsConfig(metricsConfig: CfnEventSourceMapping.MetricsConfigProperty.Builder.() -> Unit)
+
+    /**
+     * @param parallelizationFactor (Kinesis and DynamoDB Streams only) The number of batches to
+     * process concurrently from each shard.
+     * The default value is 1.
      */
     public fun parallelizationFactor(parallelizationFactor: Number)
 
     /**
-     * @param queues (ActiveMQ) A list of ActiveMQ queues.
+     * @param provisionedPollerConfig (Amazon MSK and self-managed Apache Kafka only) The
+     * provisioned mode configuration for the event source.
+     * For more information, see [provisioned
+     * mode](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#invocation-eventsourcemapping-provisioned-mode)
+     * .
+     */
+    public fun provisionedPollerConfig(provisionedPollerConfig: IResolvable)
+
+    /**
+     * @param provisionedPollerConfig (Amazon MSK and self-managed Apache Kafka only) The
+     * provisioned mode configuration for the event source.
+     * For more information, see [provisioned
+     * mode](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#invocation-eventsourcemapping-provisioned-mode)
+     * .
+     */
+    public
+        fun provisionedPollerConfig(provisionedPollerConfig: CfnEventSourceMapping.ProvisionedPollerConfigProperty)
+
+    /**
+     * @param provisionedPollerConfig (Amazon MSK and self-managed Apache Kafka only) The
+     * provisioned mode configuration for the event source.
+     * For more information, see [provisioned
+     * mode](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#invocation-eventsourcemapping-provisioned-mode)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("476172f4ad6d74b51b7bc0359ca7f1edd94bf675a50e121b6758dfb934fbe8c7")
+    public
+        fun provisionedPollerConfig(provisionedPollerConfig: CfnEventSourceMapping.ProvisionedPollerConfigProperty.Builder.() -> Unit)
+
+    /**
+     * @param queues (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      */
     public fun queues(queues: List<String>)
 
     /**
-     * @param queues (ActiveMQ) A list of ActiveMQ queues.
+     * @param queues (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      */
     public fun queues(vararg queues: String)
 
     /**
-     * @param scalingConfig The scaling configuration for the event source.
+     * @param scalingConfig (Amazon SQS only) The scaling configuration for the event source.
+     * For more information, see [Configuring maximum concurrency for Amazon SQS event
+     * sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)
+     * .
      */
     public fun scalingConfig(scalingConfig: IResolvable)
 
     /**
-     * @param scalingConfig The scaling configuration for the event source.
+     * @param scalingConfig (Amazon SQS only) The scaling configuration for the event source.
+     * For more information, see [Configuring maximum concurrency for Amazon SQS event
+     * sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)
+     * .
      */
     public fun scalingConfig(scalingConfig: CfnEventSourceMapping.ScalingConfigProperty)
 
     /**
-     * @param scalingConfig The scaling configuration for the event source.
+     * @param scalingConfig (Amazon SQS only) The scaling configuration for the event source.
+     * For more information, see [Configuring maximum concurrency for Amazon SQS event
+     * sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)
+     * .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7ac8a6eb426933fb2b88b6b01a6b43a8fc38a35b3ca922d3fffb4555c7fc2d5e")
@@ -456,21 +721,18 @@ public interface CfnEventSourceMappingProps {
         fun scalingConfig(scalingConfig: CfnEventSourceMapping.ScalingConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param selfManagedEventSource The configuration used by AWS Lambda to access a self-managed
-     * event source.
+     * @param selfManagedEventSource The self-managed Apache Kafka cluster for your event source.
      */
     public fun selfManagedEventSource(selfManagedEventSource: IResolvable)
 
     /**
-     * @param selfManagedEventSource The configuration used by AWS Lambda to access a self-managed
-     * event source.
+     * @param selfManagedEventSource The self-managed Apache Kafka cluster for your event source.
      */
     public
         fun selfManagedEventSource(selfManagedEventSource: CfnEventSourceMapping.SelfManagedEventSourceProperty)
 
     /**
-     * @param selfManagedEventSource The configuration used by AWS Lambda to access a self-managed
-     * event source.
+     * @param selfManagedEventSource The self-managed Apache Kafka cluster for your event source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("feb957a59dc8c21d665025789b750dee782b2a8aa37584acb897dbc5107c9aea")
@@ -478,20 +740,20 @@ public interface CfnEventSourceMappingProps {
         fun selfManagedEventSource(selfManagedEventSource: CfnEventSourceMapping.SelfManagedEventSourceProperty.Builder.() -> Unit)
 
     /**
-     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a Self-Managed
+     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a self-managed
      * Apache Kafka event source.
      */
     public fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: IResolvable)
 
     /**
-     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a Self-Managed
+     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a self-managed
      * Apache Kafka event source.
      */
     public
         fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty)
 
     /**
-     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a Self-Managed
+     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a self-managed
      * Apache Kafka event source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -500,55 +762,77 @@ public interface CfnEventSourceMappingProps {
         fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param sourceAccessConfigurations A list of SourceAccessConfiguration.
+     * @param sourceAccessConfigurations An array of the authentication protocol, VPC components, or
+     * virtual host to secure and define your event source.
      */
     public fun sourceAccessConfigurations(sourceAccessConfigurations: IResolvable)
 
     /**
-     * @param sourceAccessConfigurations A list of SourceAccessConfiguration.
+     * @param sourceAccessConfigurations An array of the authentication protocol, VPC components, or
+     * virtual host to secure and define your event source.
      */
     public fun sourceAccessConfigurations(sourceAccessConfigurations: List<Any>)
 
     /**
-     * @param sourceAccessConfigurations A list of SourceAccessConfiguration.
+     * @param sourceAccessConfigurations An array of the authentication protocol, VPC components, or
+     * virtual host to secure and define your event source.
      */
     public fun sourceAccessConfigurations(vararg sourceAccessConfigurations: Any)
 
     /**
-     * @param startingPosition The position in a stream from which to start reading.
-     * Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
+     * @param startingPosition The position in a stream from which to start reading. Required for
+     * Amazon Kinesis and Amazon DynamoDB.
+     * * *LATEST* - Read only new records.
+     * * *TRIM_HORIZON* - Process all available records.
+     * * *AT_TIMESTAMP* - Specify a time from which to start reading records.
      */
     public fun startingPosition(startingPosition: String)
 
     /**
-     * @param startingPositionTimestamp With StartingPosition set to AT_TIMESTAMP, the time from
-     * which to start reading, in Unix time seconds.
+     * @param startingPositionTimestamp With `StartingPosition` set to `AT_TIMESTAMP` , the time
+     * from which to start reading, in Unix time seconds.
+     * `StartingPositionTimestamp` cannot be in the future.
      */
     public fun startingPositionTimestamp(startingPositionTimestamp: Number)
 
     /**
-     * @param tags the value to be set.
+     * @param tags A list of tags to add to the event source mapping.
+     *
+     * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+     * permissions for your [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+     * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+     * unexpected behavior with stack-level tags propagating to the resource during resource creation
+     * and update.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags the value to be set.
+     * @param tags A list of tags to add to the event source mapping.
+     *
+     * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+     * permissions for your [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+     * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+     * unexpected behavior with stack-level tags propagating to the resource during resource creation
+     * and update.
      */
     public fun tags(vararg tags: CfnTag)
 
     /**
-     * @param topics (Kafka) A list of Kafka topics.
+     * @param topics The name of the Kafka topic.
      */
     public fun topics(topics: List<String>)
 
     /**
-     * @param topics (Kafka) A list of Kafka topics.
+     * @param topics The name of the Kafka topic.
      */
     public fun topics(vararg topics: String)
 
     /**
-     * @param tumblingWindowInSeconds (Streams) Tumbling window (non-overlapping time window)
-     * duration to perform aggregations.
+     * @param tumblingWindowInSeconds (Kinesis and DynamoDB Streams only) The duration in seconds of
+     * a processing window for DynamoDB and Kinesis Streams event sources.
+     * A value of 0 seconds indicates no tumbling window.
      */
     public fun tumblingWindowInSeconds(tumblingWindowInSeconds: Number)
   }
@@ -559,8 +843,8 @@ public interface CfnEventSourceMappingProps {
         software.amazon.awscdk.services.lambda.CfnEventSourceMappingProps.builder()
 
     /**
-     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an MSK event
-     * source.
+     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an Amazon
+     * Managed Streaming for Apache Kafka (Amazon MSK) event source.
      */
     override
         fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: IResolvable) {
@@ -568,8 +852,8 @@ public interface CfnEventSourceMappingProps {
     }
 
     /**
-     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an MSK event
-     * source.
+     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an Amazon
+     * Managed Streaming for Apache Kafka (Amazon MSK) event source.
      */
     override
         fun amazonManagedKafkaEventSourceConfig(amazonManagedKafkaEventSourceConfig: CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty) {
@@ -577,8 +861,8 @@ public interface CfnEventSourceMappingProps {
     }
 
     /**
-     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an MSK event
-     * source.
+     * @param amazonManagedKafkaEventSourceConfig Specific configuration settings for an Amazon
+     * Managed Streaming for Apache Kafka (Amazon MSK) event source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("aee9284c4da4983caa97612e7b01c42241967f360aa7dd95373593dc8311c6aa")
@@ -588,30 +872,45 @@ public interface CfnEventSourceMappingProps {
         amazonManagedKafkaEventSourceConfig(CfnEventSourceMapping.AmazonManagedKafkaEventSourceConfigProperty(amazonManagedKafkaEventSourceConfig))
 
     /**
-     * @param batchSize The maximum number of items to retrieve in a single batch.
+     * @param batchSize The maximum number of records in each batch that Lambda pulls from your
+     * stream or queue and sends to your function.
+     * Lambda passes all of the records in the batch to the function in a single call, up to the
+     * payload limit for synchronous invocation (6 MB).
+     *
+     * * *Amazon Kinesis* – Default 100. Max 10,000.
+     * * *Amazon DynamoDB Streams* – Default 100. Max 10,000.
+     * * *Amazon Simple Queue Service* – Default 10. For standard queues the max is 10,000. For FIFO
+     * queues the max is 10.
+     * * *Amazon Managed Streaming for Apache Kafka* – Default 100. Max 10,000.
+     * * *Self-managed Apache Kafka* – Default 100. Max 10,000.
+     * * *Amazon MQ (ActiveMQ and RabbitMQ)* – Default 100. Max 10,000.
+     * * *DocumentDB* – Default 100. Max 10,000.
      */
     override fun batchSize(batchSize: Number) {
       cdkBuilder.batchSize(batchSize)
     }
 
     /**
-     * @param bisectBatchOnFunctionError (Streams) If the function returns an error, split the batch
-     * in two and retry.
+     * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
+     * an error, split the batch in two and retry.
+     * The default value is false.
      */
     override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: Boolean) {
       cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError)
     }
 
     /**
-     * @param bisectBatchOnFunctionError (Streams) If the function returns an error, split the batch
-     * in two and retry.
+     * @param bisectBatchOnFunctionError (Kinesis and DynamoDB Streams only) If the function returns
+     * an error, split the batch in two and retry.
+     * The default value is false.
      */
     override fun bisectBatchOnFunctionError(bisectBatchOnFunctionError: IResolvable) {
       cdkBuilder.bisectBatchOnFunctionError(bisectBatchOnFunctionError.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param destinationConfig A configuration object that specifies the destination of an event
+     * @param destinationConfig (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache
+     * Kafka event sources only) A configuration object that specifies the destination of an event
      * after Lambda processes it.
      */
     override fun destinationConfig(destinationConfig: IResolvable) {
@@ -619,7 +918,8 @@ public interface CfnEventSourceMappingProps {
     }
 
     /**
-     * @param destinationConfig A configuration object that specifies the destination of an event
+     * @param destinationConfig (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache
+     * Kafka event sources only) A configuration object that specifies the destination of an event
      * after Lambda processes it.
      */
     override
@@ -628,7 +928,8 @@ public interface CfnEventSourceMappingProps {
     }
 
     /**
-     * @param destinationConfig A configuration object that specifies the destination of an event
+     * @param destinationConfig (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache
+     * Kafka event sources only) A configuration object that specifies the destination of an event
      * after Lambda processes it.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -638,14 +939,16 @@ public interface CfnEventSourceMappingProps {
         Unit = destinationConfig(CfnEventSourceMapping.DestinationConfigProperty(destinationConfig))
 
     /**
-     * @param documentDbEventSourceConfig Document db event source config.
+     * @param documentDbEventSourceConfig Specific configuration settings for a DocumentDB event
+     * source.
      */
     override fun documentDbEventSourceConfig(documentDbEventSourceConfig: IResolvable) {
       cdkBuilder.documentDbEventSourceConfig(documentDbEventSourceConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param documentDbEventSourceConfig Document db event source config.
+     * @param documentDbEventSourceConfig Specific configuration settings for a DocumentDB event
+     * source.
      */
     override
         fun documentDbEventSourceConfig(documentDbEventSourceConfig: CfnEventSourceMapping.DocumentDBEventSourceConfigProperty) {
@@ -653,7 +956,8 @@ public interface CfnEventSourceMappingProps {
     }
 
     /**
-     * @param documentDbEventSourceConfig Document db event source config.
+     * @param documentDbEventSourceConfig Specific configuration settings for a DocumentDB event
+     * source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d09fb314ca9893c0049527cb14bf2c10d2ff9b3b75d94621775da00c0e2ba4e7")
@@ -663,14 +967,18 @@ public interface CfnEventSourceMappingProps {
         documentDbEventSourceConfig(CfnEventSourceMapping.DocumentDBEventSourceConfigProperty(documentDbEventSourceConfig))
 
     /**
-     * @param enabled Disables the event source mapping to pause polling and invocation.
+     * @param enabled When true, the event source mapping is active. When false, Lambda pauses
+     * polling and invocation.
+     * Default: True
      */
     override fun enabled(enabled: Boolean) {
       cdkBuilder.enabled(enabled)
     }
 
     /**
-     * @param enabled Disables the event source mapping to pause polling and invocation.
+     * @param enabled When true, the event source mapping is active. When false, Lambda pauses
+     * polling and invocation.
+     * Default: True
      */
     override fun enabled(enabled: IResolvable) {
       cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
@@ -678,27 +986,44 @@ public interface CfnEventSourceMappingProps {
 
     /**
      * @param eventSourceArn The Amazon Resource Name (ARN) of the event source.
+     * * *Amazon Kinesis* – The ARN of the data stream or a stream consumer.
+     * * *Amazon DynamoDB Streams* – The ARN of the stream.
+     * * *Amazon Simple Queue Service* – The ARN of the queue.
+     * * *Amazon Managed Streaming for Apache Kafka* – The ARN of the cluster or the ARN of the VPC
+     * connection (for [cross-account event source
+     * mappings](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#msk-multi-vpc) ).
+     * * *Amazon MQ* – The ARN of the broker.
+     * * *Amazon DocumentDB* – The ARN of the DocumentDB change stream.
      */
     override fun eventSourceArn(eventSourceArn: String) {
       cdkBuilder.eventSourceArn(eventSourceArn)
     }
 
     /**
-     * @param filterCriteria The filter criteria to control event filtering.
+     * @param filterCriteria An object that defines the filter criteria that determine whether
+     * Lambda should process an event.
+     * For more information, see [Lambda event
+     * filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) .
      */
     override fun filterCriteria(filterCriteria: IResolvable) {
       cdkBuilder.filterCriteria(filterCriteria.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param filterCriteria The filter criteria to control event filtering.
+     * @param filterCriteria An object that defines the filter criteria that determine whether
+     * Lambda should process an event.
+     * For more information, see [Lambda event
+     * filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) .
      */
     override fun filterCriteria(filterCriteria: CfnEventSourceMapping.FilterCriteriaProperty) {
       cdkBuilder.filterCriteria(filterCriteria.let(CfnEventSourceMapping.FilterCriteriaProperty.Companion::unwrap))
     }
 
     /**
-     * @param filterCriteria The filter criteria to control event filtering.
+     * @param filterCriteria An object that defines the filter criteria that determine whether
+     * Lambda should process an event.
+     * For more information, see [Lambda event
+     * filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("64d63e409c55293cf7b59494387d9651b3d5c3761ad44584ecbc98ce165317b3")
@@ -707,92 +1032,202 @@ public interface CfnEventSourceMappingProps {
         Unit = filterCriteria(CfnEventSourceMapping.FilterCriteriaProperty(filterCriteria))
 
     /**
-     * @param functionName The name of the Lambda function. 
+     * @param functionName The name or ARN of the Lambda function. 
+     * **Name formats** - *Function name* – `MyFunction` .
+     *
+     * * *Function ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
+     * * *Version or Alias ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD` .
+     * * *Partial ARN* – `123456789012:function:MyFunction` .
+     *
+     * The length constraint applies only to the full ARN. If you specify only the function name,
+     * it's limited to 64 characters in length.
      */
     override fun functionName(functionName: String) {
       cdkBuilder.functionName(functionName)
     }
 
     /**
-     * @param functionResponseTypes (Streams) A list of response types supported by the function.
+     * @param functionResponseTypes (Kinesis, DynamoDB Streams, and SQS) A list of current response
+     * type enums applied to the event source mapping.
+     * Valid Values: `ReportBatchItemFailures`
      */
     override fun functionResponseTypes(functionResponseTypes: List<String>) {
       cdkBuilder.functionResponseTypes(functionResponseTypes)
     }
 
     /**
-     * @param functionResponseTypes (Streams) A list of response types supported by the function.
+     * @param functionResponseTypes (Kinesis, DynamoDB Streams, and SQS) A list of current response
+     * type enums applied to the event source mapping.
+     * Valid Values: `ReportBatchItemFailures`
      */
     override fun functionResponseTypes(vararg functionResponseTypes: String): Unit =
         functionResponseTypes(functionResponseTypes.toList())
 
     /**
-     * @param kmsKeyArn The Amazon Resource Name (ARN) of the KMS key.
+     * @param kmsKeyArn The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key
+     * that Lambda uses to encrypt your function's [filter
+     * criteria](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-basics)
+     * .
      */
     override fun kmsKeyArn(kmsKeyArn: String) {
       cdkBuilder.kmsKeyArn(kmsKeyArn)
     }
 
     /**
-     * @param maximumBatchingWindowInSeconds (Streams) The maximum amount of time to gather records
-     * before invoking the function, in seconds.
+     * @param maximumBatchingWindowInSeconds The maximum amount of time, in seconds, that Lambda
+     * spends gathering records before invoking the function.
+     * *Default ( Kinesis , DynamoDB , Amazon SQS event sources)* : 0
+     *
+     * *Default ( Amazon MSK , Kafka, Amazon MQ , Amazon DocumentDB event sources)* : 500 ms
+     *
+     * *Related setting:* For Amazon SQS event sources, when you set `BatchSize` to a value greater
+     * than 10, you must set `MaximumBatchingWindowInSeconds` to at least 1.
      */
     override fun maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds: Number) {
       cdkBuilder.maximumBatchingWindowInSeconds(maximumBatchingWindowInSeconds)
     }
 
     /**
-     * @param maximumRecordAgeInSeconds (Streams) The maximum age of a record that Lambda sends to a
-     * function for processing.
+     * @param maximumRecordAgeInSeconds (Kinesis and DynamoDB Streams only) Discard records older
+     * than the specified age.
+     * The default value is -1,
+     * which sets the maximum age to infinite. When the value is set to infinite, Lambda never
+     * discards old records.
+     *
+     *
+     * The minimum valid value for maximum record age is 60s. Although values less than 60 and
+     * greater than -1 fall within the parameter's absolute range, they are not allowed
      */
     override fun maximumRecordAgeInSeconds(maximumRecordAgeInSeconds: Number) {
       cdkBuilder.maximumRecordAgeInSeconds(maximumRecordAgeInSeconds)
     }
 
     /**
-     * @param maximumRetryAttempts (Streams) The maximum number of times to retry when the function
-     * returns an error.
+     * @param maximumRetryAttempts (Kinesis and DynamoDB Streams only) Discard records after the
+     * specified number of retries.
+     * The default value is -1,
+     * which sets the maximum number of retries to infinite. When MaximumRetryAttempts is infinite,
+     * Lambda retries failed records until the record expires in the event source.
      */
     override fun maximumRetryAttempts(maximumRetryAttempts: Number) {
       cdkBuilder.maximumRetryAttempts(maximumRetryAttempts)
     }
 
     /**
-     * @param parallelizationFactor (Streams) The number of batches to process from each shard
-     * concurrently.
+     * @param metricsConfig The metrics configuration for your event source.
+     * For more information, see [Event source mapping
+     * metrics](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics-types.html#event-source-mapping-metrics)
+     * .
+     */
+    override fun metricsConfig(metricsConfig: IResolvable) {
+      cdkBuilder.metricsConfig(metricsConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param metricsConfig The metrics configuration for your event source.
+     * For more information, see [Event source mapping
+     * metrics](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics-types.html#event-source-mapping-metrics)
+     * .
+     */
+    override fun metricsConfig(metricsConfig: CfnEventSourceMapping.MetricsConfigProperty) {
+      cdkBuilder.metricsConfig(metricsConfig.let(CfnEventSourceMapping.MetricsConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param metricsConfig The metrics configuration for your event source.
+     * For more information, see [Event source mapping
+     * metrics](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics-types.html#event-source-mapping-metrics)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("cfa19e1914ec2b2d1576246e3f865310dc1c5dda597069bb55a0a0e2c7a6cce9")
+    override
+        fun metricsConfig(metricsConfig: CfnEventSourceMapping.MetricsConfigProperty.Builder.() -> Unit):
+        Unit = metricsConfig(CfnEventSourceMapping.MetricsConfigProperty(metricsConfig))
+
+    /**
+     * @param parallelizationFactor (Kinesis and DynamoDB Streams only) The number of batches to
+     * process concurrently from each shard.
+     * The default value is 1.
      */
     override fun parallelizationFactor(parallelizationFactor: Number) {
       cdkBuilder.parallelizationFactor(parallelizationFactor)
     }
 
     /**
-     * @param queues (ActiveMQ) A list of ActiveMQ queues.
+     * @param provisionedPollerConfig (Amazon MSK and self-managed Apache Kafka only) The
+     * provisioned mode configuration for the event source.
+     * For more information, see [provisioned
+     * mode](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#invocation-eventsourcemapping-provisioned-mode)
+     * .
+     */
+    override fun provisionedPollerConfig(provisionedPollerConfig: IResolvable) {
+      cdkBuilder.provisionedPollerConfig(provisionedPollerConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param provisionedPollerConfig (Amazon MSK and self-managed Apache Kafka only) The
+     * provisioned mode configuration for the event source.
+     * For more information, see [provisioned
+     * mode](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#invocation-eventsourcemapping-provisioned-mode)
+     * .
+     */
+    override
+        fun provisionedPollerConfig(provisionedPollerConfig: CfnEventSourceMapping.ProvisionedPollerConfigProperty) {
+      cdkBuilder.provisionedPollerConfig(provisionedPollerConfig.let(CfnEventSourceMapping.ProvisionedPollerConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param provisionedPollerConfig (Amazon MSK and self-managed Apache Kafka only) The
+     * provisioned mode configuration for the event source.
+     * For more information, see [provisioned
+     * mode](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#invocation-eventsourcemapping-provisioned-mode)
+     * .
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("476172f4ad6d74b51b7bc0359ca7f1edd94bf675a50e121b6758dfb934fbe8c7")
+    override
+        fun provisionedPollerConfig(provisionedPollerConfig: CfnEventSourceMapping.ProvisionedPollerConfigProperty.Builder.() -> Unit):
+        Unit =
+        provisionedPollerConfig(CfnEventSourceMapping.ProvisionedPollerConfigProperty(provisionedPollerConfig))
+
+    /**
+     * @param queues (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      */
     override fun queues(queues: List<String>) {
       cdkBuilder.queues(queues)
     }
 
     /**
-     * @param queues (ActiveMQ) A list of ActiveMQ queues.
+     * @param queues (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      */
     override fun queues(vararg queues: String): Unit = queues(queues.toList())
 
     /**
-     * @param scalingConfig The scaling configuration for the event source.
+     * @param scalingConfig (Amazon SQS only) The scaling configuration for the event source.
+     * For more information, see [Configuring maximum concurrency for Amazon SQS event
+     * sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)
+     * .
      */
     override fun scalingConfig(scalingConfig: IResolvable) {
       cdkBuilder.scalingConfig(scalingConfig.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param scalingConfig The scaling configuration for the event source.
+     * @param scalingConfig (Amazon SQS only) The scaling configuration for the event source.
+     * For more information, see [Configuring maximum concurrency for Amazon SQS event
+     * sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)
+     * .
      */
     override fun scalingConfig(scalingConfig: CfnEventSourceMapping.ScalingConfigProperty) {
       cdkBuilder.scalingConfig(scalingConfig.let(CfnEventSourceMapping.ScalingConfigProperty.Companion::unwrap))
     }
 
     /**
-     * @param scalingConfig The scaling configuration for the event source.
+     * @param scalingConfig (Amazon SQS only) The scaling configuration for the event source.
+     * For more information, see [Configuring maximum concurrency for Amazon SQS event
+     * sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)
+     * .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("7ac8a6eb426933fb2b88b6b01a6b43a8fc38a35b3ca922d3fffb4555c7fc2d5e")
@@ -801,16 +1236,14 @@ public interface CfnEventSourceMappingProps {
         Unit = scalingConfig(CfnEventSourceMapping.ScalingConfigProperty(scalingConfig))
 
     /**
-     * @param selfManagedEventSource The configuration used by AWS Lambda to access a self-managed
-     * event source.
+     * @param selfManagedEventSource The self-managed Apache Kafka cluster for your event source.
      */
     override fun selfManagedEventSource(selfManagedEventSource: IResolvable) {
       cdkBuilder.selfManagedEventSource(selfManagedEventSource.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param selfManagedEventSource The configuration used by AWS Lambda to access a self-managed
-     * event source.
+     * @param selfManagedEventSource The self-managed Apache Kafka cluster for your event source.
      */
     override
         fun selfManagedEventSource(selfManagedEventSource: CfnEventSourceMapping.SelfManagedEventSourceProperty) {
@@ -818,8 +1251,7 @@ public interface CfnEventSourceMappingProps {
     }
 
     /**
-     * @param selfManagedEventSource The configuration used by AWS Lambda to access a self-managed
-     * event source.
+     * @param selfManagedEventSource The self-managed Apache Kafka cluster for your event source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("feb957a59dc8c21d665025789b750dee782b2a8aa37584acb897dbc5107c9aea")
@@ -829,7 +1261,7 @@ public interface CfnEventSourceMappingProps {
         selfManagedEventSource(CfnEventSourceMapping.SelfManagedEventSourceProperty(selfManagedEventSource))
 
     /**
-     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a Self-Managed
+     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a self-managed
      * Apache Kafka event source.
      */
     override fun selfManagedKafkaEventSourceConfig(selfManagedKafkaEventSourceConfig: IResolvable) {
@@ -837,7 +1269,7 @@ public interface CfnEventSourceMappingProps {
     }
 
     /**
-     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a Self-Managed
+     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a self-managed
      * Apache Kafka event source.
      */
     override
@@ -846,7 +1278,7 @@ public interface CfnEventSourceMappingProps {
     }
 
     /**
-     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a Self-Managed
+     * @param selfManagedKafkaEventSourceConfig Specific configuration settings for a self-managed
      * Apache Kafka event source.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -857,68 +1289,90 @@ public interface CfnEventSourceMappingProps {
         selfManagedKafkaEventSourceConfig(CfnEventSourceMapping.SelfManagedKafkaEventSourceConfigProperty(selfManagedKafkaEventSourceConfig))
 
     /**
-     * @param sourceAccessConfigurations A list of SourceAccessConfiguration.
+     * @param sourceAccessConfigurations An array of the authentication protocol, VPC components, or
+     * virtual host to secure and define your event source.
      */
     override fun sourceAccessConfigurations(sourceAccessConfigurations: IResolvable) {
       cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param sourceAccessConfigurations A list of SourceAccessConfiguration.
+     * @param sourceAccessConfigurations An array of the authentication protocol, VPC components, or
+     * virtual host to secure and define your event source.
      */
     override fun sourceAccessConfigurations(sourceAccessConfigurations: List<Any>) {
       cdkBuilder.sourceAccessConfigurations(sourceAccessConfigurations.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * @param sourceAccessConfigurations A list of SourceAccessConfiguration.
+     * @param sourceAccessConfigurations An array of the authentication protocol, VPC components, or
+     * virtual host to secure and define your event source.
      */
     override fun sourceAccessConfigurations(vararg sourceAccessConfigurations: Any): Unit =
         sourceAccessConfigurations(sourceAccessConfigurations.toList())
 
     /**
-     * @param startingPosition The position in a stream from which to start reading.
-     * Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
+     * @param startingPosition The position in a stream from which to start reading. Required for
+     * Amazon Kinesis and Amazon DynamoDB.
+     * * *LATEST* - Read only new records.
+     * * *TRIM_HORIZON* - Process all available records.
+     * * *AT_TIMESTAMP* - Specify a time from which to start reading records.
      */
     override fun startingPosition(startingPosition: String) {
       cdkBuilder.startingPosition(startingPosition)
     }
 
     /**
-     * @param startingPositionTimestamp With StartingPosition set to AT_TIMESTAMP, the time from
-     * which to start reading, in Unix time seconds.
+     * @param startingPositionTimestamp With `StartingPosition` set to `AT_TIMESTAMP` , the time
+     * from which to start reading, in Unix time seconds.
+     * `StartingPositionTimestamp` cannot be in the future.
      */
     override fun startingPositionTimestamp(startingPositionTimestamp: Number) {
       cdkBuilder.startingPositionTimestamp(startingPositionTimestamp)
     }
 
     /**
-     * @param tags the value to be set.
+     * @param tags A list of tags to add to the event source mapping.
+     *
+     * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+     * permissions for your [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+     * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+     * unexpected behavior with stack-level tags propagating to the resource during resource creation
+     * and update.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags the value to be set.
+     * @param tags A list of tags to add to the event source mapping.
+     *
+     * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+     * permissions for your [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+     * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+     * unexpected behavior with stack-level tags propagating to the resource during resource creation
+     * and update.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
-     * @param topics (Kafka) A list of Kafka topics.
+     * @param topics The name of the Kafka topic.
      */
     override fun topics(topics: List<String>) {
       cdkBuilder.topics(topics)
     }
 
     /**
-     * @param topics (Kafka) A list of Kafka topics.
+     * @param topics The name of the Kafka topic.
      */
     override fun topics(vararg topics: String): Unit = topics(topics.toList())
 
     /**
-     * @param tumblingWindowInSeconds (Streams) Tumbling window (non-overlapping time window)
-     * duration to perform aggregations.
+     * @param tumblingWindowInSeconds (Kinesis and DynamoDB Streams only) The duration in seconds of
+     * a processing window for DynamoDB and Kinesis Streams event sources.
+     * A value of 0 seconds indicates no tumbling window.
      */
     override fun tumblingWindowInSeconds(tumblingWindowInSeconds: Number) {
       cdkBuilder.tumblingWindowInSeconds(tumblingWindowInSeconds)
@@ -933,7 +1387,8 @@ public interface CfnEventSourceMappingProps {
   ) : CdkObject(cdkObject),
       CfnEventSourceMappingProps {
     /**
-     * Specific configuration settings for an MSK event source.
+     * Specific configuration settings for an Amazon Managed Streaming for Apache Kafka (Amazon MSK)
+     * event source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-amazonmanagedkafkaeventsourceconfig)
      */
@@ -941,35 +1396,55 @@ public interface CfnEventSourceMappingProps {
         unwrap(this).getAmazonManagedKafkaEventSourceConfig()
 
     /**
-     * The maximum number of items to retrieve in a single batch.
+     * The maximum number of records in each batch that Lambda pulls from your stream or queue and
+     * sends to your function.
+     *
+     * Lambda passes all of the records in the batch to the function in a single call, up to the
+     * payload limit for synchronous invocation (6 MB).
+     *
+     * * *Amazon Kinesis* – Default 100. Max 10,000.
+     * * *Amazon DynamoDB Streams* – Default 100. Max 10,000.
+     * * *Amazon Simple Queue Service* – Default 10. For standard queues the max is 10,000. For FIFO
+     * queues the max is 10.
+     * * *Amazon Managed Streaming for Apache Kafka* – Default 100. Max 10,000.
+     * * *Self-managed Apache Kafka* – Default 100. Max 10,000.
+     * * *Amazon MQ (ActiveMQ and RabbitMQ)* – Default 100. Max 10,000.
+     * * *DocumentDB* – Default 100. Max 10,000.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-batchsize)
      */
     override fun batchSize(): Number? = unwrap(this).getBatchSize()
 
     /**
-     * (Streams) If the function returns an error, split the batch in two and retry.
+     * (Kinesis and DynamoDB Streams only) If the function returns an error, split the batch in two
+     * and retry.
+     *
+     * The default value is false.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-bisectbatchonfunctionerror)
      */
     override fun bisectBatchOnFunctionError(): Any? = unwrap(this).getBisectBatchOnFunctionError()
 
     /**
-     * A configuration object that specifies the destination of an event after Lambda processes it.
+     * (Kinesis, DynamoDB Streams, Amazon MSK, and self-managed Apache Kafka event sources only) A
+     * configuration object that specifies the destination of an event after Lambda processes it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-destinationconfig)
      */
     override fun destinationConfig(): Any? = unwrap(this).getDestinationConfig()
 
     /**
-     * Document db event source config.
+     * Specific configuration settings for a DocumentDB event source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-documentdbeventsourceconfig)
      */
     override fun documentDbEventSourceConfig(): Any? = unwrap(this).getDocumentDbEventSourceConfig()
 
     /**
-     * Disables the event source mapping to pause polling and invocation.
+     * When true, the event source mapping is active. When false, Lambda pauses polling and
+     * invocation.
+     *
+     * Default: True
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-enabled)
      */
@@ -978,26 +1453,51 @@ public interface CfnEventSourceMappingProps {
     /**
      * The Amazon Resource Name (ARN) of the event source.
      *
+     * * *Amazon Kinesis* – The ARN of the data stream or a stream consumer.
+     * * *Amazon DynamoDB Streams* – The ARN of the stream.
+     * * *Amazon Simple Queue Service* – The ARN of the queue.
+     * * *Amazon Managed Streaming for Apache Kafka* – The ARN of the cluster or the ARN of the VPC
+     * connection (for [cross-account event source
+     * mappings](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#msk-multi-vpc) ).
+     * * *Amazon MQ* – The ARN of the broker.
+     * * *Amazon DocumentDB* – The ARN of the DocumentDB change stream.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-eventsourcearn)
      */
     override fun eventSourceArn(): String? = unwrap(this).getEventSourceArn()
 
     /**
-     * The filter criteria to control event filtering.
+     * An object that defines the filter criteria that determine whether Lambda should process an
+     * event.
+     *
+     * For more information, see [Lambda event
+     * filtering](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-filtercriteria)
      */
     override fun filterCriteria(): Any? = unwrap(this).getFilterCriteria()
 
     /**
-     * The name of the Lambda function.
+     * The name or ARN of the Lambda function.
+     *
+     * **Name formats** - *Function name* – `MyFunction` .
+     *
+     * * *Function ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction` .
+     * * *Version or Alias ARN* – `arn:aws:lambda:us-west-2:123456789012:function:MyFunction:PROD` .
+     * * *Partial ARN* – `123456789012:function:MyFunction` .
+     *
+     * The length constraint applies only to the full ARN. If you specify only the function name,
+     * it's limited to 64 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionname)
      */
     override fun functionName(): String = unwrap(this).getFunctionName()
 
     /**
-     * (Streams) A list of response types supported by the function.
+     * (Kinesis, DynamoDB Streams, and SQS) A list of current response type enums applied to the
+     * event source mapping.
+     *
+     * Valid Values: `ReportBatchItemFailures`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-functionresponsetypes)
      */
@@ -1005,15 +1505,25 @@ public interface CfnEventSourceMappingProps {
         emptyList()
 
     /**
-     * The Amazon Resource Name (ARN) of the KMS key.
+     * The ARN of the AWS Key Management Service ( AWS KMS ) customer managed key that Lambda uses
+     * to encrypt your function's [filter
+     * criteria](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-basics)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-kmskeyarn)
      */
     override fun kmsKeyArn(): String? = unwrap(this).getKmsKeyArn()
 
     /**
-     * (Streams) The maximum amount of time to gather records before invoking the function, in
-     * seconds.
+     * The maximum amount of time, in seconds, that Lambda spends gathering records before invoking
+     * the function.
+     *
+     * *Default ( Kinesis , DynamoDB , Amazon SQS event sources)* : 0
+     *
+     * *Default ( Amazon MSK , Kafka, Amazon MQ , Amazon DocumentDB event sources)* : 500 ms
+     *
+     * *Related setting:* For Amazon SQS event sources, when you set `BatchSize` to a value greater
+     * than 10, you must set `MaximumBatchingWindowInSeconds` to at least 1.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumbatchingwindowinseconds)
      */
@@ -1021,49 +1531,92 @@ public interface CfnEventSourceMappingProps {
         unwrap(this).getMaximumBatchingWindowInSeconds()
 
     /**
-     * (Streams) The maximum age of a record that Lambda sends to a function for processing.
+     * (Kinesis and DynamoDB Streams only) Discard records older than the specified age.
+     *
+     * The default value is -1,
+     * which sets the maximum age to infinite. When the value is set to infinite, Lambda never
+     * discards old records.
+     *
+     *
+     * The minimum valid value for maximum record age is 60s. Although values less than 60 and
+     * greater than -1 fall within the parameter's absolute range, they are not allowed
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumrecordageinseconds)
      */
     override fun maximumRecordAgeInSeconds(): Number? = unwrap(this).getMaximumRecordAgeInSeconds()
 
     /**
-     * (Streams) The maximum number of times to retry when the function returns an error.
+     * (Kinesis and DynamoDB Streams only) Discard records after the specified number of retries.
+     *
+     * The default value is -1,
+     * which sets the maximum number of retries to infinite. When MaximumRetryAttempts is infinite,
+     * Lambda retries failed records until the record expires in the event source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-maximumretryattempts)
      */
     override fun maximumRetryAttempts(): Number? = unwrap(this).getMaximumRetryAttempts()
 
     /**
-     * (Streams) The number of batches to process from each shard concurrently.
+     * The metrics configuration for your event source.
+     *
+     * For more information, see [Event source mapping
+     * metrics](https://docs.aws.amazon.com/lambda/latest/dg/monitoring-metrics-types.html#event-source-mapping-metrics)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-metricsconfig)
+     */
+    override fun metricsConfig(): Any? = unwrap(this).getMetricsConfig()
+
+    /**
+     * (Kinesis and DynamoDB Streams only) The number of batches to process concurrently from each
+     * shard.
+     *
+     * The default value is 1.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-parallelizationfactor)
      */
     override fun parallelizationFactor(): Number? = unwrap(this).getParallelizationFactor()
 
     /**
-     * (ActiveMQ) A list of ActiveMQ queues.
+     * (Amazon MSK and self-managed Apache Kafka only) The provisioned mode configuration for the
+     * event source.
+     *
+     * For more information, see [provisioned
+     * mode](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#invocation-eventsourcemapping-provisioned-mode)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-provisionedpollerconfig)
+     */
+    override fun provisionedPollerConfig(): Any? = unwrap(this).getProvisionedPollerConfig()
+
+    /**
+     * (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-queues)
      */
     override fun queues(): List<String> = unwrap(this).getQueues() ?: emptyList()
 
     /**
-     * The scaling configuration for the event source.
+     * (Amazon SQS only) The scaling configuration for the event source.
+     *
+     * For more information, see [Configuring maximum concurrency for Amazon SQS event
+     * sources](https://docs.aws.amazon.com/lambda/latest/dg/with-sqs.html#events-sqs-max-concurrency)
+     * .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-scalingconfig)
      */
     override fun scalingConfig(): Any? = unwrap(this).getScalingConfig()
 
     /**
-     * The configuration used by AWS Lambda to access a self-managed event source.
+     * The self-managed Apache Kafka cluster for your event source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-selfmanagedeventsource)
      */
     override fun selfManagedEventSource(): Any? = unwrap(this).getSelfManagedEventSource()
 
     /**
-     * Specific configuration settings for a Self-Managed Apache Kafka event source.
+     * Specific configuration settings for a self-managed Apache Kafka event source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-selfmanagedkafkaeventsourceconfig)
      */
@@ -1071,43 +1624,63 @@ public interface CfnEventSourceMappingProps {
         unwrap(this).getSelfManagedKafkaEventSourceConfig()
 
     /**
-     * A list of SourceAccessConfiguration.
+     * An array of the authentication protocol, VPC components, or virtual host to secure and define
+     * your event source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-sourceaccessconfigurations)
      */
     override fun sourceAccessConfigurations(): Any? = unwrap(this).getSourceAccessConfigurations()
 
     /**
-     * The position in a stream from which to start reading.
+     * The position in a stream from which to start reading. Required for Amazon Kinesis and Amazon
+     * DynamoDB.
      *
-     * Required for Amazon Kinesis and Amazon DynamoDB Streams sources.
+     * * *LATEST* - Read only new records.
+     * * *TRIM_HORIZON* - Process all available records.
+     * * *AT_TIMESTAMP* - Specify a time from which to start reading records.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingposition)
      */
     override fun startingPosition(): String? = unwrap(this).getStartingPosition()
 
     /**
-     * With StartingPosition set to AT_TIMESTAMP, the time from which to start reading, in Unix time
-     * seconds.
+     * With `StartingPosition` set to `AT_TIMESTAMP` , the time from which to start reading, in Unix
+     * time seconds.
+     *
+     * `StartingPositionTimestamp` cannot be in the future.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-startingpositiontimestamp)
      */
     override fun startingPositionTimestamp(): Number? = unwrap(this).getStartingPositionTimestamp()
 
     /**
+     * A list of tags to add to the event source mapping.
+     *
+     *
+     * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+     * permissions for your [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+     * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+     * unexpected behavior with stack-level tags propagating to the resource during resource creation
+     * and update.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
     /**
-     * (Kafka) A list of Kafka topics.
+     * The name of the Kafka topic.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-topics)
      */
     override fun topics(): List<String> = unwrap(this).getTopics() ?: emptyList()
 
     /**
-     * (Streams) Tumbling window (non-overlapping time window) duration to perform aggregations.
+     * (Kinesis and DynamoDB Streams only) The duration in seconds of a processing window for
+     * DynamoDB and Kinesis Streams event sources.
+     *
+     * A value of 0 seconds indicates no tumbling window.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventsourcemapping.html#cfn-lambda-eventsourcemapping-tumblingwindowinseconds)
      */

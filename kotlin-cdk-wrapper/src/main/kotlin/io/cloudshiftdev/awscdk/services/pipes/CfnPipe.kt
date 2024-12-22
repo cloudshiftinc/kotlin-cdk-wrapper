@@ -2704,16 +2704,12 @@ public open class CfnPipe(
    * Example:
    *
    * ```
-   * Queue sourceQueue;
-   * Queue targetQueue;
-   * Filter sourceFilter = new Filter(List.of(FilterPattern.fromObject(Map.of(
-   * "body", Map.of(
-   * // only forward events with customerType B2B or B2C
-   * "customerType", List.of("B2B", "B2C"))))));
-   * Pipe pipe = Pipe.Builder.create(this, "Pipe")
-   * .source(new SqsSource(sourceQueue))
-   * .target(new SqsTarget(targetQueue))
-   * .filter(sourceFilter)
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.pipes.*;
+   * CloudwatchLogsLogDestinationProperty cloudwatchLogsLogDestinationProperty =
+   * CloudwatchLogsLogDestinationProperty.builder()
+   * .logGroupArn("logGroupArn")
    * .build();
    * ```
    *
@@ -5676,14 +5672,13 @@ public open class CfnPipe(
    * ```
    * Queue sourceQueue;
    * Queue targetQueue;
-   * LogGroup loggroup;
+   * InputTransformation targetInputTransformation =
+   * InputTransformation.fromEventPath("$.body.payload");
    * Pipe pipe = Pipe.Builder.create(this, "Pipe")
    * .source(new SqsSource(sourceQueue))
-   * .target(new SqsTarget(targetQueue))
-   * .logLevel(LogLevel.TRACE)
-   * .logIncludeExecutionData(List.of(IncludeExecutionData.ALL))
-   * .logDestinations(List.of(
-   * new CloudwatchDestination(loggroup)))
+   * .target(SqsTarget.Builder.create(targetQueue)
+   * .inputTransformation(targetInputTransformation)
+   * .build())
    * .build();
    * ```
    *
@@ -11160,15 +11155,14 @@ public open class CfnPipe(
    * Example:
    *
    * ```
-   * Queue sourceQueue;
+   * Stream sourceStream;
    * Queue targetQueue;
-   * SqsSource pipeSource = SqsSource.Builder.create(sourceQueue)
-   * .batchSize(10)
-   * .maximumBatchingWindow(Duration.seconds(10))
+   * KinesisSource pipeSource = KinesisSource.Builder.create(sourceStream)
+   * .startingPosition(KinesisStartingPosition.LATEST)
    * .build();
    * Pipe pipe = Pipe.Builder.create(this, "Pipe")
    * .source(pipeSource)
-   * .target(new SomeTarget(targetQueue))
+   * .target(new SqsTarget(targetQueue))
    * .build();
    * ```
    *
@@ -12749,7 +12743,7 @@ public open class CfnPipe(
     public fun timeValue(): String
 
     /**
-     * How to format the timestamps. For example, `YYYY-MM-DDThh:mm:ss.sssTZD` .
+     * How to format the timestamps. For example, `yyyy-MM-dd'T'HH:mm:ss'Z'` .
      *
      * Required if `TimeFieldType` is specified as `TIMESTAMP_FORMAT` .
      *
@@ -12865,7 +12859,7 @@ public open class CfnPipe(
 
       /**
        * @param timestampFormat How to format the timestamps. For example,
-       * `YYYY-MM-DDThh:mm:ss.sssTZD` .
+       * `yyyy-MM-dd'T'HH:mm:ss'Z'` .
        * Required if `TimeFieldType` is specified as `TIMESTAMP_FORMAT` .
        */
       public fun timestampFormat(timestampFormat: String)
@@ -12998,7 +12992,7 @@ public open class CfnPipe(
 
       /**
        * @param timestampFormat How to format the timestamps. For example,
-       * `YYYY-MM-DDThh:mm:ss.sssTZD` .
+       * `yyyy-MM-dd'T'HH:mm:ss'Z'` .
        * Required if `TimeFieldType` is specified as `TIMESTAMP_FORMAT` .
        */
       override fun timestampFormat(timestampFormat: String) {
@@ -13088,7 +13082,7 @@ public open class CfnPipe(
       override fun timeValue(): String = unwrap(this).getTimeValue()
 
       /**
-       * How to format the timestamps. For example, `YYYY-MM-DDThh:mm:ss.sssTZD` .
+       * How to format the timestamps. For example, `yyyy-MM-dd'T'HH:mm:ss'Z'` .
        *
        * Required if `TimeFieldType` is specified as `TIMESTAMP_FORMAT` .
        *

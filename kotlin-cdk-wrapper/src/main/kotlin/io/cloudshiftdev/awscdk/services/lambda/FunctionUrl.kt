@@ -18,13 +18,15 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // Can be a Function or an Alias
+ * import io.cloudshiftdev.awscdk.services.lambda.*;
  * Function fn;
  * FunctionUrl fnUrl = fn.addFunctionUrl(FunctionUrlOptions.builder()
- * .authType(FunctionUrlAuthType.NONE)
+ * .authType(FunctionUrlAuthType.AWS_IAM)
  * .build());
- * CfnOutput.Builder.create(this, "TheUrl")
- * .value(fnUrl.getUrl())
+ * Distribution.Builder.create(this, "MyDistribution")
+ * .defaultBehavior(BehaviorOptions.builder()
+ * .origin(FunctionUrlOrigin.withOriginAccessControl(fnUrl))
+ * .build())
  * .build();
  * ```
  */
@@ -47,6 +49,12 @@ public open class FunctionUrl(
     props: FunctionUrlProps.Builder.() -> Unit,
   ) : this(scope, id, FunctionUrlProps(props)
   )
+
+  /**
+   * The authentication type used for this Function URL.
+   */
+  public override fun authType(): FunctionUrlAuthType =
+      unwrap(this).getAuthType().let(FunctionUrlAuthType::wrap)
 
   /**
    * The ARN of the function this URL refers to.

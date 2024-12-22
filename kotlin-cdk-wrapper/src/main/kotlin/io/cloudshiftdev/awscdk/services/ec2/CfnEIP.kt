@@ -71,6 +71,18 @@ public open class CfnEIP(
   )
 
   /**
+   * An Elastic IP address or a carrier IP address in a Wavelength Zone.
+   */
+  public open fun address(): String? = unwrap(this).getAddress()
+
+  /**
+   * An Elastic IP address or a carrier IP address in a Wavelength Zone.
+   */
+  public open fun address(`value`: String) {
+    unwrap(this).setAddress(`value`)
+  }
+
+  /**
    * The ID that AWS assigns to represent the allocation of the address for use with Amazon VPC.
    *
    * This is returned only for VPC elastic IP addresses. For example, `eipalloc-5723d13e` .
@@ -113,6 +125,20 @@ public open class CfnEIP(
    */
   public open fun instanceId(`value`: String) {
     unwrap(this).setInstanceId(`value`)
+  }
+
+  /**
+   * The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4 CIDR provisioned to
+   * it.
+   */
+  public open fun ipamPoolId(): String? = unwrap(this).getIpamPoolId()
+
+  /**
+   * The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4 CIDR provisioned to
+   * it.
+   */
+  public open fun ipamPoolId(`value`: String) {
+    unwrap(this).setIpamPoolId(`value`)
   }
 
   /**
@@ -182,6 +208,14 @@ public open class CfnEIP(
   @CdkDslMarker
   public interface Builder {
     /**
+     * An Elastic IP address or a carrier IP address in a Wavelength Zone.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-address)
+     * @param address An Elastic IP address or a carrier IP address in a Wavelength Zone. 
+     */
+    public fun address(address: String)
+
+    /**
      * The network ( `vpc` ).
      *
      * If you define an Elastic IP address and associate it with a VPC that is defined in the same
@@ -206,6 +240,20 @@ public open class CfnEIP(
      * @param instanceId The ID of the instance. 
      */
     public fun instanceId(instanceId: String)
+
+    /**
+     * The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4 CIDR provisioned to
+     * it.
+     *
+     * For more information, see [Allocate sequential Elastic IP addresses from an IPAM
+     * pool](https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-eip-pool.html) in the *Amazon VPC
+     * IPAM User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-ipampoolid)
+     * @param ipamPoolId The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4
+     * CIDR provisioned to it. 
+     */
+    public fun ipamPoolId(ipamPoolId: String)
 
     /**
      * A unique set of Availability Zones, Local Zones, or Wavelength Zones from which AWS
@@ -287,6 +335,16 @@ public open class CfnEIP(
         software.amazon.awscdk.services.ec2.CfnEIP.Builder.create(scope, id)
 
     /**
+     * An Elastic IP address or a carrier IP address in a Wavelength Zone.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-address)
+     * @param address An Elastic IP address or a carrier IP address in a Wavelength Zone. 
+     */
+    override fun address(address: String) {
+      cdkBuilder.address(address)
+    }
+
+    /**
      * The network ( `vpc` ).
      *
      * If you define an Elastic IP address and associate it with a VPC that is defined in the same
@@ -314,6 +372,22 @@ public open class CfnEIP(
      */
     override fun instanceId(instanceId: String) {
       cdkBuilder.instanceId(instanceId)
+    }
+
+    /**
+     * The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4 CIDR provisioned to
+     * it.
+     *
+     * For more information, see [Allocate sequential Elastic IP addresses from an IPAM
+     * pool](https://docs.aws.amazon.com/vpc/latest/ipam/tutorials-eip-pool.html) in the *Amazon VPC
+     * IPAM User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-eip.html#cfn-ec2-eip-ipampoolid)
+     * @param ipamPoolId The ID of an IPAM pool which has an Amazon-provided or BYOIP public IPv4
+     * CIDR provisioned to it. 
+     */
+    override fun ipamPoolId(ipamPoolId: String) {
+      cdkBuilder.ipamPoolId(ipamPoolId)
     }
 
     /**

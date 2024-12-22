@@ -36,8 +36,7 @@ public interface CfnAuthPolicyProps {
   public fun policy(): Any
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service network or service for which the policy is
-   * created.
+   * The ID or ARN of the service network or service for which the policy is created.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-authpolicy.html#cfn-vpclattice-authpolicy-resourceidentifier)
    */
@@ -54,8 +53,8 @@ public interface CfnAuthPolicyProps {
     public fun policy(policy: Any)
 
     /**
-     * @param resourceIdentifier The ID or Amazon Resource Name (ARN) of the service network or
-     * service for which the policy is created. 
+     * @param resourceIdentifier The ID or ARN of the service network or service for which the
+     * policy is created. 
      */
     public fun resourceIdentifier(resourceIdentifier: String)
   }
@@ -72,8 +71,8 @@ public interface CfnAuthPolicyProps {
     }
 
     /**
-     * @param resourceIdentifier The ID or Amazon Resource Name (ARN) of the service network or
-     * service for which the policy is created. 
+     * @param resourceIdentifier The ID or ARN of the service network or service for which the
+     * policy is created. 
      */
     override fun resourceIdentifier(resourceIdentifier: String) {
       cdkBuilder.resourceIdentifier(resourceIdentifier)
@@ -95,8 +94,7 @@ public interface CfnAuthPolicyProps {
     override fun policy(): Any = unwrap(this).getPolicy()
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service network or service for which the policy
-     * is created.
+     * The ID or ARN of the service network or service for which the policy is created.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-authpolicy.html#cfn-vpclattice-authpolicy-resourceidentifier)
      */

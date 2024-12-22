@@ -739,12 +739,10 @@ public open class CfnResourceCollection(
      * application and analysis boundary.
      *
      *
-     * The string used for a *key* in a tag that you use to define your resource coverage must begin
-     * with the prefix `Devops-guru-` . The tag *key* might be `DevOps-Guru-deployment-application` or
-     * `devops-guru-rds-application` . When you create a *key* , the case of characters in the *key*
-     * can be whatever you choose. After you create a *key* , it is case-sensitive. For example, DevOps
-     * Guru works with a *key* named `devops-guru-rds` and a *key* named `DevOps-Guru-RDS` , and these
-     * act as two different *keys* . Possible *key* / *value* pairs in your application might be
+     * When you create a *key* , the case of characters in the *key* can be whatever you choose.
+     * After you create a *key* , it is case-sensitive. For example, DevOps Guru works with a *key*
+     * named `devops-guru-rds` and a *key* named `DevOps-Guru-RDS` , and these act as two different
+     * *keys* . Possible *key* / *value* pairs in your application might be
      * `Devops-Guru-production-application/RDS` or `Devops-Guru-production-application/containers` .
      *
      *
@@ -777,13 +775,10 @@ public open class CfnResourceCollection(
        * Guru application and analysis boundary.
        *
        *
-       * The string used for a *key* in a tag that you use to define your resource coverage must
-       * begin with the prefix `Devops-guru-` . The tag *key* might be
-       * `DevOps-Guru-deployment-application` or `devops-guru-rds-application` . When you create a
-       * *key* , the case of characters in the *key* can be whatever you choose. After you create a
-       * *key* , it is case-sensitive. For example, DevOps Guru works with a *key* named
-       * `devops-guru-rds` and a *key* named `DevOps-Guru-RDS` , and these act as two different *keys*
-       * . Possible *key* / *value* pairs in your application might be
+       * When you create a *key* , the case of characters in the *key* can be whatever you choose.
+       * After you create a *key* , it is case-sensitive. For example, DevOps Guru works with a *key*
+       * named `devops-guru-rds` and a *key* named `DevOps-Guru-RDS` , and these act as two different
+       * *keys* . Possible *key* / *value* pairs in your application might be
        * `Devops-Guru-production-application/RDS` or `Devops-Guru-production-application/containers` .
        */
       public fun appBoundaryKey(appBoundaryKey: String)
@@ -822,13 +817,10 @@ public open class CfnResourceCollection(
        * Guru application and analysis boundary.
        *
        *
-       * The string used for a *key* in a tag that you use to define your resource coverage must
-       * begin with the prefix `Devops-guru-` . The tag *key* might be
-       * `DevOps-Guru-deployment-application` or `devops-guru-rds-application` . When you create a
-       * *key* , the case of characters in the *key* can be whatever you choose. After you create a
-       * *key* , it is case-sensitive. For example, DevOps Guru works with a *key* named
-       * `devops-guru-rds` and a *key* named `DevOps-Guru-RDS` , and these act as two different *keys*
-       * . Possible *key* / *value* pairs in your application might be
+       * When you create a *key* , the case of characters in the *key* can be whatever you choose.
+       * After you create a *key* , it is case-sensitive. For example, DevOps Guru works with a *key*
+       * named `devops-guru-rds` and a *key* named `DevOps-Guru-RDS` , and these act as two different
+       * *keys* . Possible *key* / *value* pairs in your application might be
        * `Devops-Guru-production-application/RDS` or `Devops-Guru-production-application/containers` .
        */
       override fun appBoundaryKey(appBoundaryKey: String) {
@@ -873,13 +865,10 @@ public open class CfnResourceCollection(
        * Guru application and analysis boundary.
        *
        *
-       * The string used for a *key* in a tag that you use to define your resource coverage must
-       * begin with the prefix `Devops-guru-` . The tag *key* might be
-       * `DevOps-Guru-deployment-application` or `devops-guru-rds-application` . When you create a
-       * *key* , the case of characters in the *key* can be whatever you choose. After you create a
-       * *key* , it is case-sensitive. For example, DevOps Guru works with a *key* named
-       * `devops-guru-rds` and a *key* named `DevOps-Guru-RDS` , and these act as two different *keys*
-       * . Possible *key* / *value* pairs in your application might be
+       * When you create a *key* , the case of characters in the *key* can be whatever you choose.
+       * After you create a *key* , it is case-sensitive. For example, DevOps Guru works with a *key*
+       * named `devops-guru-rds` and a *key* named `DevOps-Guru-RDS` , and these act as two different
+       * *keys* . Possible *key* / *value* pairs in your application might be
        * `Devops-Guru-production-application/RDS` or `Devops-Guru-production-application/containers` .
        *
        *

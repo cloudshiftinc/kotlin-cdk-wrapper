@@ -44,7 +44,7 @@ public interface BuildEnvironment {
   /**
    * The image used for the builds.
    *
-   * Default: LinuxBuildImage.STANDARD_1_0
+   * Default: LinuxBuildImage.STANDARD_7_0
    */
   public fun buildImage(): IBuildImage? = unwrap(this).getBuildImage()?.let(IBuildImage::wrap)
 
@@ -230,7 +230,7 @@ public interface BuildEnvironment {
     /**
      * The image used for the builds.
      *
-     * Default: LinuxBuildImage.STANDARD_1_0
+     * Default: LinuxBuildImage.STANDARD_7_0
      */
     override fun buildImage(): IBuildImage? = unwrap(this).getBuildImage()?.let(IBuildImage::wrap)
 

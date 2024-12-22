@@ -161,6 +161,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
  * .launchTemplateId("launchTemplateId")
  * .launchTemplateName("launchTemplateName")
+ * .overrides(List.of(LaunchTemplateSpecificationOverrideProperty.builder()
+ * .launchTemplateId("launchTemplateId")
+ * .launchTemplateName("launchTemplateName")
+ * .targetInstanceTypes(List.of("targetInstanceTypes"))
+ * .version("version")
+ * .build()))
  * .version("version")
  * .build())
  * .minvCpus(123)
@@ -1242,6 +1248,12 @@ public open class CfnComputeEnvironment(
    * .launchTemplate(LaunchTemplateSpecificationProperty.builder()
    * .launchTemplateId("launchTemplateId")
    * .launchTemplateName("launchTemplateName")
+   * .overrides(List.of(LaunchTemplateSpecificationOverrideProperty.builder()
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .targetInstanceTypes(List.of("targetInstanceTypes"))
+   * .version("version")
+   * .build()))
    * .version("version")
    * .build())
    * .minvCpus(123)
@@ -3857,6 +3869,407 @@ public open class CfnComputeEnvironment(
   }
 
   /**
+   * An object that represents a launch template to use in place of the default launch template.
+   *
+   * You must specify either the launch template ID or launch template name in the request, but not
+   * both.
+   *
+   * If security groups are specified using both the `securityGroupIds` parameter of
+   * `CreateComputeEnvironment` and the launch template, the values in the `securityGroupIds` parameter
+   * of `CreateComputeEnvironment` will be used.
+   *
+   * You can define up to ten (10) overrides for each compute environment.
+   *
+   *
+   * This object isn't applicable to jobs that are running on Fargate resources. &gt; To unset all
+   * override templates for a compute environment, you can pass an empty array to the
+   * [UpdateComputeEnvironment.overrides](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html)
+   * parameter, or not include the `overrides` parameter when submitting the `UpdateComputeEnvironment`
+   * API operation.
+   *
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.batch.*;
+   * LaunchTemplateSpecificationOverrideProperty launchTemplateSpecificationOverrideProperty =
+   * LaunchTemplateSpecificationOverrideProperty.builder()
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .targetInstanceTypes(List.of("targetInstanceTypes"))
+   * .version("version")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html)
+   */
+  public interface LaunchTemplateSpecificationOverrideProperty {
+    /**
+     * The ID of the launch template.
+     *
+     * *Note:* If you specify the `launchTemplateId` you can't specify the `launchTemplateName` as
+     * well.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-launchtemplateid)
+     */
+    public fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+    /**
+     * The name of the launch template.
+     *
+     * *Note:* If you specify the `launchTemplateName` you can't specify the `launchTemplateId` as
+     * well.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-launchtemplatename)
+     */
+    public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+    /**
+     * The instance type or family that this this override launch template should be applied to.
+     *
+     * This parameter is required when defining a launch template override.
+     *
+     * Information included in this parameter must meet the following requirements:
+     *
+     * * Must be a valid Amazon EC2 instance type or family.
+     * * `optimal` isn't allowed.
+     * * `targetInstanceTypes` can target only instance types and families that are included within
+     * the
+     * [`ComputeResource.instanceTypes`](https://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html#Batch-Type-ComputeResource-instanceTypes)
+     * set. `targetInstanceTypes` doesn't need to include all of the instances from the `instanceType`
+     * set, but at least a subset. For example, if `ComputeResource.instanceTypes` includes `[m5, g5]`
+     * , `targetInstanceTypes` can include `[m5.2xlarge]` and `[m5.large]` but not `[c5.large]` .
+     * * `targetInstanceTypes` included within the same launch template override or across launch
+     * template overrides can't overlap for the same compute environment. For example, you can't define
+     * one launch template override to target an instance family and another define an instance type
+     * within this same family.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-targetinstancetypes)
+     */
+    public fun targetInstanceTypes(): List<String> = unwrap(this).getTargetInstanceTypes() ?:
+        emptyList()
+
+    /**
+     * The version number of the launch template, `$Default` , or `$Latest` .
+     *
+     * If the value is `$Default` , the default version of the launch template is used. If the value
+     * is `$Latest` , the latest version of the launch template is used.
+     *
+     *
+     * If the AMI ID that's used in a compute environment is from the launch template, the AMI isn't
+     * changed when the compute environment is updated. It's only changed if the
+     * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During an
+     * infrastructure update, if either `$Default` or `$Latest` is specified, AWS Batch re-evaluates
+     * the launch template version, and it might use a different version of the launch template. This
+     * is the case even if the launch template isn't specified in the update. When updating a compute
+     * environment, changing the launch template requires an infrastructure update of the compute
+     * environment. For more information, see [Updating compute
+     * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+     * in the *AWS Batch User Guide* .
+     *
+     *
+     * Default: `$Default`
+     *
+     * Latest: `$Latest`
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-version)
+     */
+    public fun version(): String? = unwrap(this).getVersion()
+
+    /**
+     * A builder for [LaunchTemplateSpecificationOverrideProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       * *Note:* If you specify the `launchTemplateId` you can't specify the `launchTemplateName` as
+       * well.
+       */
+      public fun launchTemplateId(launchTemplateId: String)
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * *Note:* If you specify the `launchTemplateName` you can't specify the `launchTemplateId` as
+       * well.
+       */
+      public fun launchTemplateName(launchTemplateName: String)
+
+      /**
+       * @param targetInstanceTypes The instance type or family that this this override launch
+       * template should be applied to.
+       * This parameter is required when defining a launch template override.
+       *
+       * Information included in this parameter must meet the following requirements:
+       *
+       * * Must be a valid Amazon EC2 instance type or family.
+       * * `optimal` isn't allowed.
+       * * `targetInstanceTypes` can target only instance types and families that are included
+       * within the
+       * [`ComputeResource.instanceTypes`](https://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html#Batch-Type-ComputeResource-instanceTypes)
+       * set. `targetInstanceTypes` doesn't need to include all of the instances from the
+       * `instanceType` set, but at least a subset. For example, if `ComputeResource.instanceTypes`
+       * includes `[m5, g5]` , `targetInstanceTypes` can include `[m5.2xlarge]` and `[m5.large]` but
+       * not `[c5.large]` .
+       * * `targetInstanceTypes` included within the same launch template override or across launch
+       * template overrides can't overlap for the same compute environment. For example, you can't
+       * define one launch template override to target an instance family and another define an
+       * instance type within this same family.
+       */
+      public fun targetInstanceTypes(targetInstanceTypes: List<String>)
+
+      /**
+       * @param targetInstanceTypes The instance type or family that this this override launch
+       * template should be applied to.
+       * This parameter is required when defining a launch template override.
+       *
+       * Information included in this parameter must meet the following requirements:
+       *
+       * * Must be a valid Amazon EC2 instance type or family.
+       * * `optimal` isn't allowed.
+       * * `targetInstanceTypes` can target only instance types and families that are included
+       * within the
+       * [`ComputeResource.instanceTypes`](https://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html#Batch-Type-ComputeResource-instanceTypes)
+       * set. `targetInstanceTypes` doesn't need to include all of the instances from the
+       * `instanceType` set, but at least a subset. For example, if `ComputeResource.instanceTypes`
+       * includes `[m5, g5]` , `targetInstanceTypes` can include `[m5.2xlarge]` and `[m5.large]` but
+       * not `[c5.large]` .
+       * * `targetInstanceTypes` included within the same launch template override or across launch
+       * template overrides can't overlap for the same compute environment. For example, you can't
+       * define one launch template override to target an instance family and another define an
+       * instance type within this same family.
+       */
+      public fun targetInstanceTypes(vararg targetInstanceTypes: String)
+
+      /**
+       * @param version The version number of the launch template, `$Default` , or `$Latest` .
+       * If the value is `$Default` , the default version of the launch template is used. If the
+       * value is `$Latest` , the latest version of the launch template is used.
+       *
+       *
+       * If the AMI ID that's used in a compute environment is from the launch template, the AMI
+       * isn't changed when the compute environment is updated. It's only changed if the
+       * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
+       * an infrastructure update, if either `$Default` or `$Latest` is specified, AWS Batch
+       * re-evaluates the launch template version, and it might use a different version of the launch
+       * template. This is the case even if the launch template isn't specified in the update. When
+       * updating a compute environment, changing the launch template requires an infrastructure update
+       * of the compute environment. For more information, see [Updating compute
+       * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+       * in the *AWS Batch User Guide* .
+       *
+       *
+       * Default: `$Default`
+       *
+       * Latest: `$Latest`
+       */
+      public fun version(version: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationOverrideProperty.Builder
+          =
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationOverrideProperty.builder()
+
+      /**
+       * @param launchTemplateId The ID of the launch template.
+       * *Note:* If you specify the `launchTemplateId` you can't specify the `launchTemplateName` as
+       * well.
+       */
+      override fun launchTemplateId(launchTemplateId: String) {
+        cdkBuilder.launchTemplateId(launchTemplateId)
+      }
+
+      /**
+       * @param launchTemplateName The name of the launch template.
+       * *Note:* If you specify the `launchTemplateName` you can't specify the `launchTemplateId` as
+       * well.
+       */
+      override fun launchTemplateName(launchTemplateName: String) {
+        cdkBuilder.launchTemplateName(launchTemplateName)
+      }
+
+      /**
+       * @param targetInstanceTypes The instance type or family that this this override launch
+       * template should be applied to.
+       * This parameter is required when defining a launch template override.
+       *
+       * Information included in this parameter must meet the following requirements:
+       *
+       * * Must be a valid Amazon EC2 instance type or family.
+       * * `optimal` isn't allowed.
+       * * `targetInstanceTypes` can target only instance types and families that are included
+       * within the
+       * [`ComputeResource.instanceTypes`](https://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html#Batch-Type-ComputeResource-instanceTypes)
+       * set. `targetInstanceTypes` doesn't need to include all of the instances from the
+       * `instanceType` set, but at least a subset. For example, if `ComputeResource.instanceTypes`
+       * includes `[m5, g5]` , `targetInstanceTypes` can include `[m5.2xlarge]` and `[m5.large]` but
+       * not `[c5.large]` .
+       * * `targetInstanceTypes` included within the same launch template override or across launch
+       * template overrides can't overlap for the same compute environment. For example, you can't
+       * define one launch template override to target an instance family and another define an
+       * instance type within this same family.
+       */
+      override fun targetInstanceTypes(targetInstanceTypes: List<String>) {
+        cdkBuilder.targetInstanceTypes(targetInstanceTypes)
+      }
+
+      /**
+       * @param targetInstanceTypes The instance type or family that this this override launch
+       * template should be applied to.
+       * This parameter is required when defining a launch template override.
+       *
+       * Information included in this parameter must meet the following requirements:
+       *
+       * * Must be a valid Amazon EC2 instance type or family.
+       * * `optimal` isn't allowed.
+       * * `targetInstanceTypes` can target only instance types and families that are included
+       * within the
+       * [`ComputeResource.instanceTypes`](https://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html#Batch-Type-ComputeResource-instanceTypes)
+       * set. `targetInstanceTypes` doesn't need to include all of the instances from the
+       * `instanceType` set, but at least a subset. For example, if `ComputeResource.instanceTypes`
+       * includes `[m5, g5]` , `targetInstanceTypes` can include `[m5.2xlarge]` and `[m5.large]` but
+       * not `[c5.large]` .
+       * * `targetInstanceTypes` included within the same launch template override or across launch
+       * template overrides can't overlap for the same compute environment. For example, you can't
+       * define one launch template override to target an instance family and another define an
+       * instance type within this same family.
+       */
+      override fun targetInstanceTypes(vararg targetInstanceTypes: String): Unit =
+          targetInstanceTypes(targetInstanceTypes.toList())
+
+      /**
+       * @param version The version number of the launch template, `$Default` , or `$Latest` .
+       * If the value is `$Default` , the default version of the launch template is used. If the
+       * value is `$Latest` , the latest version of the launch template is used.
+       *
+       *
+       * If the AMI ID that's used in a compute environment is from the launch template, the AMI
+       * isn't changed when the compute environment is updated. It's only changed if the
+       * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
+       * an infrastructure update, if either `$Default` or `$Latest` is specified, AWS Batch
+       * re-evaluates the launch template version, and it might use a different version of the launch
+       * template. This is the case even if the launch template isn't specified in the update. When
+       * updating a compute environment, changing the launch template requires an infrastructure update
+       * of the compute environment. For more information, see [Updating compute
+       * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+       * in the *AWS Batch User Guide* .
+       *
+       *
+       * Default: `$Default`
+       *
+       * Latest: `$Latest`
+       */
+      override fun version(version: String) {
+        cdkBuilder.version(version)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationOverrideProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationOverrideProperty,
+    ) : CdkObject(cdkObject),
+        LaunchTemplateSpecificationOverrideProperty {
+      /**
+       * The ID of the launch template.
+       *
+       * *Note:* If you specify the `launchTemplateId` you can't specify the `launchTemplateName` as
+       * well.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-launchtemplateid)
+       */
+      override fun launchTemplateId(): String? = unwrap(this).getLaunchTemplateId()
+
+      /**
+       * The name of the launch template.
+       *
+       * *Note:* If you specify the `launchTemplateName` you can't specify the `launchTemplateId` as
+       * well.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-launchtemplatename)
+       */
+      override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
+
+      /**
+       * The instance type or family that this this override launch template should be applied to.
+       *
+       * This parameter is required when defining a launch template override.
+       *
+       * Information included in this parameter must meet the following requirements:
+       *
+       * * Must be a valid Amazon EC2 instance type or family.
+       * * `optimal` isn't allowed.
+       * * `targetInstanceTypes` can target only instance types and families that are included
+       * within the
+       * [`ComputeResource.instanceTypes`](https://docs.aws.amazon.com/batch/latest/APIReference/API_ComputeResource.html#Batch-Type-ComputeResource-instanceTypes)
+       * set. `targetInstanceTypes` doesn't need to include all of the instances from the
+       * `instanceType` set, but at least a subset. For example, if `ComputeResource.instanceTypes`
+       * includes `[m5, g5]` , `targetInstanceTypes` can include `[m5.2xlarge]` and `[m5.large]` but
+       * not `[c5.large]` .
+       * * `targetInstanceTypes` included within the same launch template override or across launch
+       * template overrides can't overlap for the same compute environment. For example, you can't
+       * define one launch template override to target an instance family and another define an
+       * instance type within this same family.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-targetinstancetypes)
+       */
+      override fun targetInstanceTypes(): List<String> = unwrap(this).getTargetInstanceTypes() ?:
+          emptyList()
+
+      /**
+       * The version number of the launch template, `$Default` , or `$Latest` .
+       *
+       * If the value is `$Default` , the default version of the launch template is used. If the
+       * value is `$Latest` , the latest version of the launch template is used.
+       *
+       *
+       * If the AMI ID that's used in a compute environment is from the launch template, the AMI
+       * isn't changed when the compute environment is updated. It's only changed if the
+       * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
+       * an infrastructure update, if either `$Default` or `$Latest` is specified, AWS Batch
+       * re-evaluates the launch template version, and it might use a different version of the launch
+       * template. This is the case even if the launch template isn't specified in the update. When
+       * updating a compute environment, changing the launch template requires an infrastructure update
+       * of the compute environment. For more information, see [Updating compute
+       * environments](https://docs.aws.amazon.com/batch/latest/userguide/updating-compute-environments.html)
+       * in the *AWS Batch User Guide* .
+       *
+       *
+       * Default: `$Default`
+       *
+       * Latest: `$Latest`
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecificationoverride.html#cfn-batch-computeenvironment-launchtemplatespecificationoverride-version)
+       */
+      override fun version(): String? = unwrap(this).getVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          LaunchTemplateSpecificationOverrideProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationOverrideProperty):
+          LaunchTemplateSpecificationOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          LaunchTemplateSpecificationOverrideProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: LaunchTemplateSpecificationOverrideProperty):
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationOverrideProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.batch.CfnComputeEnvironment.LaunchTemplateSpecificationOverrideProperty
+    }
+  }
+
+  /**
    * An object that represents a launch template that's associated with a compute resource.
    *
    * You must specify either the launch template ID or launch template name in the request, but not
@@ -3880,6 +4293,12 @@ public open class CfnComputeEnvironment(
    * LaunchTemplateSpecificationProperty.builder()
    * .launchTemplateId("launchTemplateId")
    * .launchTemplateName("launchTemplateName")
+   * .overrides(List.of(LaunchTemplateSpecificationOverrideProperty.builder()
+   * .launchTemplateId("launchTemplateId")
+   * .launchTemplateName("launchTemplateName")
+   * .targetInstanceTypes(List.of("targetInstanceTypes"))
+   * .version("version")
+   * .build()))
    * .version("version")
    * .build();
    * ```
@@ -3902,16 +4321,36 @@ public open class CfnComputeEnvironment(
     public fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
     /**
-     * The version number of the launch template, `$Latest` , or `$Default` .
+     * A launch template to use in place of the default launch template.
      *
-     * If the value is `$Latest` , the latest version of the launch template is used. If the value
-     * is `$Default` , the default version of the launch template is used.
+     * You must specify either the launch template ID or launch template name in the request, but
+     * not both.
+     *
+     * You can specify up to ten (10) launch template overrides that are associated to unique
+     * instance types or families for each compute environment.
+     *
+     *
+     * To unset all override templates for a compute environment, you can pass an empty array to the
+     * [UpdateComputeEnvironment.overrides](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html)
+     * parameter, or not include the `overrides` parameter when submitting the
+     * `UpdateComputeEnvironment` API operation.
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-overrides)
+     */
+    public fun overrides(): Any? = unwrap(this).getOverrides()
+
+    /**
+     * The version number of the launch template, `$Default` , or `$Latest` .
+     *
+     * If the value is `$Default` , the default version of the launch template is used. If the value
+     * is `$Latest` , the latest version of the launch template is used.
      *
      *
      * If the AMI ID that's used in a compute environment is from the launch template, the AMI isn't
      * changed when the compute environment is updated. It's only changed if the
      * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During an
-     * infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch re-evaluates
+     * infrastructure update, if either `$Default` or `$Latest` is specified, AWS Batch re-evaluates
      * the launch template version, and it might use a different version of the launch template. This
      * is the case even if the launch template isn't specified in the update. When updating a compute
      * environment, changing the launch template requires an infrastructure update of the compute
@@ -3920,7 +4359,9 @@ public open class CfnComputeEnvironment(
      * in the *AWS Batch User Guide* .
      *
      *
-     * Default: `$Default` .
+     * Default: `$Default`
+     *
+     * Latest: `$Latest`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-version)
      */
@@ -3942,15 +4383,66 @@ public open class CfnComputeEnvironment(
       public fun launchTemplateName(launchTemplateName: String)
 
       /**
-       * @param version The version number of the launch template, `$Latest` , or `$Default` .
-       * If the value is `$Latest` , the latest version of the launch template is used. If the value
-       * is `$Default` , the default version of the launch template is used.
+       * @param overrides A launch template to use in place of the default launch template.
+       * You must specify either the launch template ID or launch template name in the request, but
+       * not both.
+       *
+       * You can specify up to ten (10) launch template overrides that are associated to unique
+       * instance types or families for each compute environment.
+       *
+       *
+       * To unset all override templates for a compute environment, you can pass an empty array to
+       * the
+       * [UpdateComputeEnvironment.overrides](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html)
+       * parameter, or not include the `overrides` parameter when submitting the
+       * `UpdateComputeEnvironment` API operation.
+       */
+      public fun overrides(overrides: IResolvable)
+
+      /**
+       * @param overrides A launch template to use in place of the default launch template.
+       * You must specify either the launch template ID or launch template name in the request, but
+       * not both.
+       *
+       * You can specify up to ten (10) launch template overrides that are associated to unique
+       * instance types or families for each compute environment.
+       *
+       *
+       * To unset all override templates for a compute environment, you can pass an empty array to
+       * the
+       * [UpdateComputeEnvironment.overrides](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html)
+       * parameter, or not include the `overrides` parameter when submitting the
+       * `UpdateComputeEnvironment` API operation.
+       */
+      public fun overrides(overrides: List<Any>)
+
+      /**
+       * @param overrides A launch template to use in place of the default launch template.
+       * You must specify either the launch template ID or launch template name in the request, but
+       * not both.
+       *
+       * You can specify up to ten (10) launch template overrides that are associated to unique
+       * instance types or families for each compute environment.
+       *
+       *
+       * To unset all override templates for a compute environment, you can pass an empty array to
+       * the
+       * [UpdateComputeEnvironment.overrides](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html)
+       * parameter, or not include the `overrides` parameter when submitting the
+       * `UpdateComputeEnvironment` API operation.
+       */
+      public fun overrides(vararg overrides: Any)
+
+      /**
+       * @param version The version number of the launch template, `$Default` , or `$Latest` .
+       * If the value is `$Default` , the default version of the launch template is used. If the
+       * value is `$Latest` , the latest version of the launch template is used.
        *
        *
        * If the AMI ID that's used in a compute environment is from the launch template, the AMI
        * isn't changed when the compute environment is updated. It's only changed if the
        * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
-       * an infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch
+       * an infrastructure update, if either `$Default` or `$Latest` is specified, AWS Batch
        * re-evaluates the launch template version, and it might use a different version of the launch
        * template. This is the case even if the launch template isn't specified in the update. When
        * updating a compute environment, changing the launch template requires an infrastructure update
@@ -3959,7 +4451,9 @@ public open class CfnComputeEnvironment(
        * in the *AWS Batch User Guide* .
        *
        *
-       * Default: `$Default` .
+       * Default: `$Default`
+       *
+       * Latest: `$Latest`
        */
       public fun version(version: String)
     }
@@ -3985,15 +4479,70 @@ public open class CfnComputeEnvironment(
       }
 
       /**
-       * @param version The version number of the launch template, `$Latest` , or `$Default` .
-       * If the value is `$Latest` , the latest version of the launch template is used. If the value
-       * is `$Default` , the default version of the launch template is used.
+       * @param overrides A launch template to use in place of the default launch template.
+       * You must specify either the launch template ID or launch template name in the request, but
+       * not both.
+       *
+       * You can specify up to ten (10) launch template overrides that are associated to unique
+       * instance types or families for each compute environment.
+       *
+       *
+       * To unset all override templates for a compute environment, you can pass an empty array to
+       * the
+       * [UpdateComputeEnvironment.overrides](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html)
+       * parameter, or not include the `overrides` parameter when submitting the
+       * `UpdateComputeEnvironment` API operation.
+       */
+      override fun overrides(overrides: IResolvable) {
+        cdkBuilder.overrides(overrides.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param overrides A launch template to use in place of the default launch template.
+       * You must specify either the launch template ID or launch template name in the request, but
+       * not both.
+       *
+       * You can specify up to ten (10) launch template overrides that are associated to unique
+       * instance types or families for each compute environment.
+       *
+       *
+       * To unset all override templates for a compute environment, you can pass an empty array to
+       * the
+       * [UpdateComputeEnvironment.overrides](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html)
+       * parameter, or not include the `overrides` parameter when submitting the
+       * `UpdateComputeEnvironment` API operation.
+       */
+      override fun overrides(overrides: List<Any>) {
+        cdkBuilder.overrides(overrides.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param overrides A launch template to use in place of the default launch template.
+       * You must specify either the launch template ID or launch template name in the request, but
+       * not both.
+       *
+       * You can specify up to ten (10) launch template overrides that are associated to unique
+       * instance types or families for each compute environment.
+       *
+       *
+       * To unset all override templates for a compute environment, you can pass an empty array to
+       * the
+       * [UpdateComputeEnvironment.overrides](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html)
+       * parameter, or not include the `overrides` parameter when submitting the
+       * `UpdateComputeEnvironment` API operation.
+       */
+      override fun overrides(vararg overrides: Any): Unit = overrides(overrides.toList())
+
+      /**
+       * @param version The version number of the launch template, `$Default` , or `$Latest` .
+       * If the value is `$Default` , the default version of the launch template is used. If the
+       * value is `$Latest` , the latest version of the launch template is used.
        *
        *
        * If the AMI ID that's used in a compute environment is from the launch template, the AMI
        * isn't changed when the compute environment is updated. It's only changed if the
        * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
-       * an infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch
+       * an infrastructure update, if either `$Default` or `$Latest` is specified, AWS Batch
        * re-evaluates the launch template version, and it might use a different version of the launch
        * template. This is the case even if the launch template isn't specified in the update. When
        * updating a compute environment, changing the launch template requires an infrastructure update
@@ -4002,7 +4551,9 @@ public open class CfnComputeEnvironment(
        * in the *AWS Batch User Guide* .
        *
        *
-       * Default: `$Default` .
+       * Default: `$Default`
+       *
+       * Latest: `$Latest`
        */
       override fun version(version: String) {
         cdkBuilder.version(version)
@@ -4032,16 +4583,37 @@ public open class CfnComputeEnvironment(
       override fun launchTemplateName(): String? = unwrap(this).getLaunchTemplateName()
 
       /**
-       * The version number of the launch template, `$Latest` , or `$Default` .
+       * A launch template to use in place of the default launch template.
        *
-       * If the value is `$Latest` , the latest version of the launch template is used. If the value
-       * is `$Default` , the default version of the launch template is used.
+       * You must specify either the launch template ID or launch template name in the request, but
+       * not both.
+       *
+       * You can specify up to ten (10) launch template overrides that are associated to unique
+       * instance types or families for each compute environment.
+       *
+       *
+       * To unset all override templates for a compute environment, you can pass an empty array to
+       * the
+       * [UpdateComputeEnvironment.overrides](https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateComputeEnvironment.html)
+       * parameter, or not include the `overrides` parameter when submitting the
+       * `UpdateComputeEnvironment` API operation.
+       *
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-overrides)
+       */
+      override fun overrides(): Any? = unwrap(this).getOverrides()
+
+      /**
+       * The version number of the launch template, `$Default` , or `$Latest` .
+       *
+       * If the value is `$Default` , the default version of the launch template is used. If the
+       * value is `$Latest` , the latest version of the launch template is used.
        *
        *
        * If the AMI ID that's used in a compute environment is from the launch template, the AMI
        * isn't changed when the compute environment is updated. It's only changed if the
        * `updateToLatestImageVersion` parameter for the compute environment is set to `true` . During
-       * an infrastructure update, if either `$Latest` or `$Default` is specified, AWS Batch
+       * an infrastructure update, if either `$Default` or `$Latest` is specified, AWS Batch
        * re-evaluates the launch template version, and it might use a different version of the launch
        * template. This is the case even if the launch template isn't specified in the update. When
        * updating a compute environment, changing the launch template requires an infrastructure update
@@ -4050,7 +4622,9 @@ public open class CfnComputeEnvironment(
        * in the *AWS Batch User Guide* .
        *
        *
-       * Default: `$Default` .
+       * Default: `$Default`
+       *
+       * Latest: `$Latest`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-batch-computeenvironment-launchtemplatespecification.html#cfn-batch-computeenvironment-launchtemplatespecification-version)
        */

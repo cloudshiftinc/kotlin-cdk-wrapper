@@ -32,6 +32,12 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnWebExperience cfnWebExperience = CfnWebExperience.Builder.create(this, "MyCfnWebExperience")
  * .applicationId("applicationId")
  * // the properties below are optional
+ * .customizationConfiguration(CustomizationConfigurationProperty.builder()
+ * .customCssUrl("customCssUrl")
+ * .faviconUrl("faviconUrl")
+ * .fontUrl("fontUrl")
+ * .logoUrl("logoUrl")
+ * .build())
  * .identityProviderConfiguration(IdentityProviderConfigurationProperty.builder()
  * .openIdConnectConfiguration(OpenIDConnectProviderConfigurationProperty.builder()
  * .secretsArn("secretsArn")
@@ -41,6 +47,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .authenticationUrl("authenticationUrl")
  * .build())
  * .build())
+ * .origins(List.of("origins"))
  * .roleArn("roleArn")
  * .samplePromptsControlMode("samplePromptsControlMode")
  * .subtitle("subtitle")
@@ -127,6 +134,34 @@ public open class CfnWebExperience(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
+   *
+   */
+  public open fun customizationConfiguration(): Any? = unwrap(this).getCustomizationConfiguration()
+
+  /**
+   *
+   */
+  public open fun customizationConfiguration(`value`: IResolvable) {
+    unwrap(this).setCustomizationConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun customizationConfiguration(`value`: CustomizationConfigurationProperty) {
+    unwrap(this).setCustomizationConfiguration(`value`.let(CustomizationConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("cd438925c058fb89b57a1002e11dd96013916d4e20da8cc90a9451bd77858c2d")
+  public open
+      fun customizationConfiguration(`value`: CustomizationConfigurationProperty.Builder.() -> Unit):
+      Unit = customizationConfiguration(CustomizationConfigurationProperty(`value`))
+
+  /**
    * Provides information about the identity provider (IdP) used to authenticate end users of an
    * Amazon Q Business web experience.
    */
@@ -167,6 +202,23 @@ public open class CfnWebExperience(
   public override fun inspect(inspector: TreeInspector) {
     unwrap(this).inspect(inspector.let(TreeInspector.Companion::unwrap))
   }
+
+  /**
+   * Sets the website domain origins that are allowed to embed the Amazon Q Business web experience.
+   */
+  public open fun origins(): List<String> = unwrap(this).getOrigins() ?: emptyList()
+
+  /**
+   * Sets the website domain origins that are allowed to embed the Amazon Q Business web experience.
+   */
+  public open fun origins(`value`: List<String>) {
+    unwrap(this).setOrigins(`value`)
+  }
+
+  /**
+   * Sets the website domain origins that are allowed to embed the Amazon Q Business web experience.
+   */
+  public open fun origins(vararg `value`: String): Unit = origins(`value`.toList())
 
   /**
    * The Amazon Resource Name (ARN) of the service role attached to your web experience.
@@ -259,6 +311,28 @@ public open class CfnWebExperience(
     public fun applicationId(applicationId: String)
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
+     * @param customizationConfiguration 
+     */
+    public fun customizationConfiguration(customizationConfiguration: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
+     * @param customizationConfiguration 
+     */
+    public
+        fun customizationConfiguration(customizationConfiguration: CustomizationConfigurationProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
+     * @param customizationConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5e091b886c1d83980f87f168f9f54ac61e4317268adf9472b32d5730d4dffa1b")
+    public
+        fun customizationConfiguration(customizationConfiguration: CustomizationConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * Provides information about the identity provider (IdP) used to authenticate end users of an
      * Amazon Q Business web experience.
      *
@@ -291,6 +365,42 @@ public open class CfnWebExperience(
     @JvmName("57f86501bd3b16088abd77fc6c5d3047e5b55983ed4dc477068e2d0ad803b46f")
     public
         fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * Sets the website domain origins that are allowed to embed the Amazon Q Business web
+     * experience.
+     *
+     * The *domain origin* refers to the base URL for accessing a website including the protocol (
+     * `http/https` ), the domain name, and the port number (if specified).
+     *
+     *
+     * You must only submit a *base URL* and not a full path. For example,
+     * `https://docs.aws.amazon.com` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-origins)
+     * @param origins Sets the website domain origins that are allowed to embed the Amazon Q
+     * Business web experience. 
+     */
+    public fun origins(origins: List<String>)
+
+    /**
+     * Sets the website domain origins that are allowed to embed the Amazon Q Business web
+     * experience.
+     *
+     * The *domain origin* refers to the base URL for accessing a website including the protocol (
+     * `http/https` ), the domain name, and the port number (if specified).
+     *
+     *
+     * You must only submit a *base URL* and not a full path. For example,
+     * `https://docs.aws.amazon.com` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-origins)
+     * @param origins Sets the website domain origins that are allowed to embed the Amazon Q
+     * Business web experience. 
+     */
+    public fun origins(vararg origins: String)
 
     /**
      * The Amazon Resource Name (ARN) of the service role attached to your web experience.
@@ -383,6 +493,34 @@ public open class CfnWebExperience(
     }
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
+     * @param customizationConfiguration 
+     */
+    override fun customizationConfiguration(customizationConfiguration: IResolvable) {
+      cdkBuilder.customizationConfiguration(customizationConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
+     * @param customizationConfiguration 
+     */
+    override
+        fun customizationConfiguration(customizationConfiguration: CustomizationConfigurationProperty) {
+      cdkBuilder.customizationConfiguration(customizationConfiguration.let(CustomizationConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-customizationconfiguration)
+     * @param customizationConfiguration 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5e091b886c1d83980f87f168f9f54ac61e4317268adf9472b32d5730d4dffa1b")
+    override
+        fun customizationConfiguration(customizationConfiguration: CustomizationConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        customizationConfiguration(CustomizationConfigurationProperty(customizationConfiguration))
+
+    /**
      * Provides information about the identity provider (IdP) used to authenticate end users of an
      * Amazon Q Business web experience.
      *
@@ -421,6 +559,44 @@ public open class CfnWebExperience(
         fun identityProviderConfiguration(identityProviderConfiguration: IdentityProviderConfigurationProperty.Builder.() -> Unit):
         Unit =
         identityProviderConfiguration(IdentityProviderConfigurationProperty(identityProviderConfiguration))
+
+    /**
+     * Sets the website domain origins that are allowed to embed the Amazon Q Business web
+     * experience.
+     *
+     * The *domain origin* refers to the base URL for accessing a website including the protocol (
+     * `http/https` ), the domain name, and the port number (if specified).
+     *
+     *
+     * You must only submit a *base URL* and not a full path. For example,
+     * `https://docs.aws.amazon.com` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-origins)
+     * @param origins Sets the website domain origins that are allowed to embed the Amazon Q
+     * Business web experience. 
+     */
+    override fun origins(origins: List<String>) {
+      cdkBuilder.origins(origins)
+    }
+
+    /**
+     * Sets the website domain origins that are allowed to embed the Amazon Q Business web
+     * experience.
+     *
+     * The *domain origin* refers to the base URL for accessing a website including the protocol (
+     * `http/https` ), the domain name, and the port number (if specified).
+     *
+     *
+     * You must only submit a *base URL* and not a full path. For example,
+     * `https://docs.aws.amazon.com` .
+     *
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-webexperience.html#cfn-qbusiness-webexperience-origins)
+     * @param origins Sets the website domain origins that are allowed to embed the Amazon Q
+     * Business web experience. 
+     */
+    override fun origins(vararg origins: String): Unit = origins(origins.toList())
 
     /**
      * The Amazon Resource Name (ARN) of the service role attached to your web experience.
@@ -529,6 +705,154 @@ public open class CfnWebExperience(
     internal fun unwrap(wrapped: CfnWebExperience):
         software.amazon.awscdk.services.qbusiness.CfnWebExperience = wrapped.cdkObject as
         software.amazon.awscdk.services.qbusiness.CfnWebExperience
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.qbusiness.*;
+   * CustomizationConfigurationProperty customizationConfigurationProperty =
+   * CustomizationConfigurationProperty.builder()
+   * .customCssUrl("customCssUrl")
+   * .faviconUrl("faviconUrl")
+   * .fontUrl("fontUrl")
+   * .logoUrl("logoUrl")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html)
+   */
+  public interface CustomizationConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-customcssurl)
+     */
+    public fun customCssUrl(): String? = unwrap(this).getCustomCssUrl()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-faviconurl)
+     */
+    public fun faviconUrl(): String? = unwrap(this).getFaviconUrl()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-fonturl)
+     */
+    public fun fontUrl(): String? = unwrap(this).getFontUrl()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-logourl)
+     */
+    public fun logoUrl(): String? = unwrap(this).getLogoUrl()
+
+    /**
+     * A builder for [CustomizationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param customCssUrl the value to be set.
+       */
+      public fun customCssUrl(customCssUrl: String)
+
+      /**
+       * @param faviconUrl the value to be set.
+       */
+      public fun faviconUrl(faviconUrl: String)
+
+      /**
+       * @param fontUrl the value to be set.
+       */
+      public fun fontUrl(fontUrl: String)
+
+      /**
+       * @param logoUrl the value to be set.
+       */
+      public fun logoUrl(logoUrl: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.CustomizationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.CustomizationConfigurationProperty.builder()
+
+      /**
+       * @param customCssUrl the value to be set.
+       */
+      override fun customCssUrl(customCssUrl: String) {
+        cdkBuilder.customCssUrl(customCssUrl)
+      }
+
+      /**
+       * @param faviconUrl the value to be set.
+       */
+      override fun faviconUrl(faviconUrl: String) {
+        cdkBuilder.faviconUrl(faviconUrl)
+      }
+
+      /**
+       * @param fontUrl the value to be set.
+       */
+      override fun fontUrl(fontUrl: String) {
+        cdkBuilder.fontUrl(fontUrl)
+      }
+
+      /**
+       * @param logoUrl the value to be set.
+       */
+      override fun logoUrl(logoUrl: String) {
+        cdkBuilder.logoUrl(logoUrl)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.CustomizationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.CustomizationConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        CustomizationConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-customcssurl)
+       */
+      override fun customCssUrl(): String? = unwrap(this).getCustomCssUrl()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-faviconurl)
+       */
+      override fun faviconUrl(): String? = unwrap(this).getFaviconUrl()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-fonturl)
+       */
+      override fun fontUrl(): String? = unwrap(this).getFontUrl()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-qbusiness-webexperience-customizationconfiguration.html#cfn-qbusiness-webexperience-customizationconfiguration-logourl)
+       */
+      override fun logoUrl(): String? = unwrap(this).getLogoUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CustomizationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.qbusiness.CfnWebExperience.CustomizationConfigurationProperty):
+          CustomizationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CustomizationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CustomizationConfigurationProperty):
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.CustomizationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.qbusiness.CfnWebExperience.CustomizationConfigurationProperty
+    }
   }
 
   /**

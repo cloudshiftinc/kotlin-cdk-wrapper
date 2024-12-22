@@ -81,6 +81,19 @@ import kotlin.jvm.JvmName
  * .max(123)
  * .build())
  * // the properties below are optional
+ * .acceleratorCapabilities(AcceleratorCapabilitiesProperty.builder()
+ * .selections(List.of(AcceleratorSelectionProperty.builder()
+ * .name("name")
+ * // the properties below are optional
+ * .runtime("runtime")
+ * .build()))
+ * // the properties below are optional
+ * .count(AcceleratorCountRangeProperty.builder()
+ * .min(123)
+ * // the properties below are optional
+ * .max(123)
+ * .build())
+ * .build())
  * .allowedInstanceTypes(List.of("allowedInstanceTypes"))
  * .customAmounts(List.of(FleetAmountCapabilityProperty.builder()
  * .min(123)

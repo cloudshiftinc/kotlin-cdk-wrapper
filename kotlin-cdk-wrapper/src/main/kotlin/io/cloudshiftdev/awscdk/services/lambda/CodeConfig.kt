@@ -34,6 +34,7 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .objectVersion("objectVersion")
  * .build())
+ * .sourceKMSKeyArn("sourceKMSKeyArn")
  * .build();
  * ```
  */
@@ -58,6 +59,14 @@ public interface CodeConfig {
    * Default: - code is not an s3 location
    */
   public fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
+
+  /**
+   * The ARN of the KMS key used to encrypt the handler code.
+   *
+   * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+   * used.
+   */
+  public fun sourceKMSKeyArn(): String? = unwrap(this).getSourceKMSKeyArn()
 
   /**
    * A builder for [CodeConfig]
@@ -96,6 +105,11 @@ public interface CodeConfig {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("515247777926bcadf9ef8155d90f499a52f7282a137f4faa241eb4e02d5b0ced")
     public fun s3Location(s3Location: Location.Builder.() -> Unit)
+
+    /**
+     * @param sourceKmsKeyArn The ARN of the KMS key used to encrypt the handler code.
+     */
+    public fun sourceKmsKeyArn(sourceKmsKeyArn: String)
   }
 
   private class BuilderImpl : Builder {
@@ -143,6 +157,13 @@ public interface CodeConfig {
     override fun s3Location(s3Location: Location.Builder.() -> Unit): Unit =
         s3Location(Location(s3Location))
 
+    /**
+     * @param sourceKmsKeyArn The ARN of the KMS key used to encrypt the handler code.
+     */
+    override fun sourceKmsKeyArn(sourceKmsKeyArn: String) {
+      cdkBuilder.sourceKmsKeyArn(sourceKmsKeyArn)
+    }
+
     public fun build(): software.amazon.awscdk.services.lambda.CodeConfig = cdkBuilder.build()
   }
 
@@ -170,6 +191,14 @@ public interface CodeConfig {
      * Default: - code is not an s3 location
      */
     override fun s3Location(): Location? = unwrap(this).getS3Location()?.let(Location::wrap)
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     */
+    override fun sourceKMSKeyArn(): String? = unwrap(this).getSourceKMSKeyArn()
   }
 
   public companion object {

@@ -444,6 +444,7 @@ public open class CfnTransitGatewayVpcAttachment(
    * .applianceModeSupport("applianceModeSupport")
    * .dnsSupport("dnsSupport")
    * .ipv6Support("ipv6Support")
+   * .securityGroupReferencingSupport("securityGroupReferencingSupport")
    * .build();
    * ```
    *
@@ -478,6 +479,24 @@ public open class CfnTransitGatewayVpcAttachment(
     public fun ipv6Support(): String? = unwrap(this).getIpv6Support()
 
     /**
+     * Enables you to reference a security group across VPCs attached to a transit gateway (TGW).
+     *
+     * Use this option to simplify security group management and control of instance-to-instance
+     * traffic across VPCs that are connected by transit gateway. You can also use this option to
+     * migrate from VPC peering (which was the only option that supported security group referencing)
+     * to transit gateways (which now also support security group referencing). This option is disabled
+     * by default and there are no additional costs to use this feature.
+     *
+     * For important information about this feature, see [Create a transit
+     * gateway](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw) in the
+     * *AWS Transit Gateway Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-transitgatewayvpcattachment-options.html#cfn-ec2-transitgatewayvpcattachment-options-securitygroupreferencingsupport)
+     */
+    public fun securityGroupReferencingSupport(): String? =
+        unwrap(this).getSecurityGroupReferencingSupport()
+
+    /**
      * A builder for [OptionsProperty]
      */
     @CdkDslMarker
@@ -499,6 +518,21 @@ public open class CfnTransitGatewayVpcAttachment(
        * The default is `disable` .
        */
       public fun ipv6Support(ipv6Support: String)
+
+      /**
+       * @param securityGroupReferencingSupport Enables you to reference a security group across
+       * VPCs attached to a transit gateway (TGW).
+       * Use this option to simplify security group management and control of instance-to-instance
+       * traffic across VPCs that are connected by transit gateway. You can also use this option to
+       * migrate from VPC peering (which was the only option that supported security group referencing)
+       * to transit gateways (which now also support security group referencing). This option is
+       * disabled by default and there are no additional costs to use this feature.
+       *
+       * For important information about this feature, see [Create a transit
+       * gateway](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw) in
+       * the *AWS Transit Gateway Guide* .
+       */
+      public fun securityGroupReferencingSupport(securityGroupReferencingSupport: String)
     }
 
     private class BuilderImpl : Builder {
@@ -529,6 +563,23 @@ public open class CfnTransitGatewayVpcAttachment(
        */
       override fun ipv6Support(ipv6Support: String) {
         cdkBuilder.ipv6Support(ipv6Support)
+      }
+
+      /**
+       * @param securityGroupReferencingSupport Enables you to reference a security group across
+       * VPCs attached to a transit gateway (TGW).
+       * Use this option to simplify security group management and control of instance-to-instance
+       * traffic across VPCs that are connected by transit gateway. You can also use this option to
+       * migrate from VPC peering (which was the only option that supported security group referencing)
+       * to transit gateways (which now also support security group referencing). This option is
+       * disabled by default and there are no additional costs to use this feature.
+       *
+       * For important information about this feature, see [Create a transit
+       * gateway](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw) in
+       * the *AWS Transit Gateway Guide* .
+       */
+      override fun securityGroupReferencingSupport(securityGroupReferencingSupport: String) {
+        cdkBuilder.securityGroupReferencingSupport(securityGroupReferencingSupport)
       }
 
       public fun build():
@@ -566,6 +617,24 @@ public open class CfnTransitGatewayVpcAttachment(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-transitgatewayvpcattachment-options.html#cfn-ec2-transitgatewayvpcattachment-options-ipv6support)
        */
       override fun ipv6Support(): String? = unwrap(this).getIpv6Support()
+
+      /**
+       * Enables you to reference a security group across VPCs attached to a transit gateway (TGW).
+       *
+       * Use this option to simplify security group management and control of instance-to-instance
+       * traffic across VPCs that are connected by transit gateway. You can also use this option to
+       * migrate from VPC peering (which was the only option that supported security group referencing)
+       * to transit gateways (which now also support security group referencing). This option is
+       * disabled by default and there are no additional costs to use this feature.
+       *
+       * For important information about this feature, see [Create a transit
+       * gateway](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw) in
+       * the *AWS Transit Gateway Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-transitgatewayvpcattachment-options.html#cfn-ec2-transitgatewayvpcattachment-options-securitygroupreferencingsupport)
+       */
+      override fun securityGroupReferencingSupport(): String? =
+          unwrap(this).getSecurityGroupReferencingSupport()
     }
 
     public companion object {

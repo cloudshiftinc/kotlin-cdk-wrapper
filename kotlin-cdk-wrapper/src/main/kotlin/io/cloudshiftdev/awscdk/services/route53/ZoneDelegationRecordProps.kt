@@ -23,6 +23,7 @@ import kotlin.collections.List
  * import io.cloudshiftdev.awscdk.*;
  * import io.cloudshiftdev.awscdk.services.route53.*;
  * GeoLocation geoLocation;
+ * HealthCheck healthCheck;
  * HostedZone hostedZone;
  * ZoneDelegationRecordProps zoneDelegationRecordProps = ZoneDelegationRecordProps.builder()
  * .nameServers(List.of("nameServers"))
@@ -31,6 +32,7 @@ import kotlin.collections.List
  * .comment("comment")
  * .deleteExisting(false)
  * .geoLocation(geoLocation)
+ * .healthCheck(healthCheck)
  * .multiValueAnswer(false)
  * .recordName("recordName")
  * .region("region")
@@ -76,6 +78,13 @@ public interface ZoneDelegationRecordProps : RecordSetOptions {
      * user's location.
      */
     public fun geoLocation(geoLocation: GeoLocation)
+
+    /**
+     * @param healthCheck The health check to associate with the record set.
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     */
+    public fun healthCheck(healthCheck: IHealthCheck)
 
     /**
      * @param setIdentifier A string used to distinguish between different records with the same
@@ -185,6 +194,15 @@ public interface ZoneDelegationRecordProps : RecordSetOptions {
      */
     override fun geoLocation(geoLocation: GeoLocation) {
       cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
+    }
+
+    /**
+     * @param healthCheck The health check to associate with the record set.
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     */
+    override fun healthCheck(healthCheck: IHealthCheck) {
+      cdkBuilder.healthCheck(healthCheck.let(IHealthCheck.Companion::unwrap))
     }
 
     /**
@@ -312,6 +330,17 @@ public interface ZoneDelegationRecordProps : RecordSetOptions {
      * The geographical origin for this record to return DNS records based on the user's location.
      */
     override fun geoLocation(): GeoLocation? = unwrap(this).getGeoLocation()?.let(GeoLocation::wrap)
+
+    /**
+     * The health check to associate with the record set.
+     *
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     *
+     * Default: - No health check configured
+     */
+    override fun healthCheck(): IHealthCheck? =
+        unwrap(this).getHealthCheck()?.let(IHealthCheck::wrap)
 
     /**
      * Whether to return multiple values, such as IP addresses for your web servers, in response to

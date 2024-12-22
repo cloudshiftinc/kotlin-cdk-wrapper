@@ -85,6 +85,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .bootstrapClusterCreatorAdminPermissions(false)
  * .build())
  * .bootstrapSelfManagedAddons(false)
+ * .computeConfig(ComputeConfigProperty.builder()
+ * .enabled(false)
+ * .nodePools(List.of("nodePools"))
+ * .nodeRoleArn("nodeRoleArn")
+ * .build())
  * .encryptionConfig(List.of(EncryptionConfigProperty.builder()
  * .provider(ProviderProperty.builder()
  * .keyArn("keyArn")
@@ -92,6 +97,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .resources(List.of("resources"))
  * .build()))
  * .kubernetesNetworkConfig(KubernetesNetworkConfigProperty.builder()
+ * .elasticLoadBalancing(ElasticLoadBalancingProperty.builder()
+ * .enabled(false)
+ * .build())
  * .ipFamily("ipFamily")
  * .serviceIpv4Cidr("serviceIpv4Cidr")
  * .serviceIpv6Cidr("serviceIpv6Cidr")
@@ -112,6 +120,20 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .groupName("groupName")
  * .build())
  * .build())
+ * .remoteNetworkConfig(RemoteNetworkConfigProperty.builder()
+ * .remoteNodeNetworks(List.of(RemoteNodeNetworkProperty.builder()
+ * .cidrs(List.of("cidrs"))
+ * .build()))
+ * // the properties below are optional
+ * .remotePodNetworks(List.of(RemotePodNetworkProperty.builder()
+ * .cidrs(List.of("cidrs"))
+ * .build()))
+ * .build())
+ * .storageConfig(StorageConfigProperty.builder()
+ * .blockStorage(BlockStorageProperty.builder()
+ * .enabled(false)
+ * .build())
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -120,6 +142,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .supportType("supportType")
  * .build())
  * .version("version")
+ * .zonalShiftConfig(ZonalShiftConfigProperty.builder()
+ * .enabled(false)
+ * .build())
  * .build();
  * ```
  *
@@ -259,6 +284,33 @@ public open class CfnCluster(
   }
 
   /**
+   * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+   */
+  public open fun computeConfig(): Any? = unwrap(this).getComputeConfig()
+
+  /**
+   * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+   */
+  public open fun computeConfig(`value`: IResolvable) {
+    unwrap(this).setComputeConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+   */
+  public open fun computeConfig(`value`: ComputeConfigProperty) {
+    unwrap(this).setComputeConfig(`value`.let(ComputeConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("f3f41a13ed35bee07f5c6bc55d5906d3300d1e8bd1f57faa1b2ae2ab02ffa5db")
+  public open fun computeConfig(`value`: ComputeConfigProperty.Builder.() -> Unit): Unit =
+      computeConfig(ComputeConfigProperty(`value`))
+
+  /**
    * The encryption configuration for the cluster.
    */
   public open fun encryptionConfig(): Any? = unwrap(this).getEncryptionConfig()
@@ -386,6 +438,33 @@ public open class CfnCluster(
       outpostConfig(OutpostConfigProperty(`value`))
 
   /**
+   * The configuration in the cluster for EKS Hybrid Nodes.
+   */
+  public open fun remoteNetworkConfig(): Any? = unwrap(this).getRemoteNetworkConfig()
+
+  /**
+   * The configuration in the cluster for EKS Hybrid Nodes.
+   */
+  public open fun remoteNetworkConfig(`value`: IResolvable) {
+    unwrap(this).setRemoteNetworkConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The configuration in the cluster for EKS Hybrid Nodes.
+   */
+  public open fun remoteNetworkConfig(`value`: RemoteNetworkConfigProperty) {
+    unwrap(this).setRemoteNetworkConfig(`value`.let(RemoteNetworkConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * The configuration in the cluster for EKS Hybrid Nodes.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("3d57761c9b9d0d4cee16b2d2ac5ead582f157c909279245e7d3a9e36bda276fb")
+  public open fun remoteNetworkConfig(`value`: RemoteNetworkConfigProperty.Builder.() -> Unit): Unit
+      = remoteNetworkConfig(RemoteNetworkConfigProperty(`value`))
+
+  /**
    * The VPC configuration that's used by the cluster control plane.
    */
   public open fun resourcesVpcConfig(): Any = unwrap(this).getResourcesVpcConfig()
@@ -425,6 +504,37 @@ public open class CfnCluster(
   public open fun roleArn(`value`: String) {
     unwrap(this).setRoleArn(`value`)
   }
+
+  /**
+   * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+   * cluster.
+   */
+  public open fun storageConfig(): Any? = unwrap(this).getStorageConfig()
+
+  /**
+   * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+   * cluster.
+   */
+  public open fun storageConfig(`value`: IResolvable) {
+    unwrap(this).setStorageConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+   * cluster.
+   */
+  public open fun storageConfig(`value`: StorageConfigProperty) {
+    unwrap(this).setStorageConfig(`value`.let(StorageConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+   * cluster.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("9225086a280bf4ab07b42dbee8a761f57f799490c2853c7f80da92c32736cf4b")
+  public open fun storageConfig(`value`: StorageConfigProperty.Builder.() -> Unit): Unit =
+      storageConfig(StorageConfigProperty(`value`))
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -489,6 +599,33 @@ public open class CfnCluster(
   }
 
   /**
+   * The configuration for zonal shift for the cluster.
+   */
+  public open fun zonalShiftConfig(): Any? = unwrap(this).getZonalShiftConfig()
+
+  /**
+   * The configuration for zonal shift for the cluster.
+   */
+  public open fun zonalShiftConfig(`value`: IResolvable) {
+    unwrap(this).setZonalShiftConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The configuration for zonal shift for the cluster.
+   */
+  public open fun zonalShiftConfig(`value`: ZonalShiftConfigProperty) {
+    unwrap(this).setZonalShiftConfig(`value`.let(ZonalShiftConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * The configuration for zonal shift for the cluster.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("d82997b39d7256fa944f5c6d1044013c545e0b3cdfef3b735772b75c43149881")
+  public open fun zonalShiftConfig(`value`: ZonalShiftConfigProperty.Builder.() -> Unit): Unit =
+      zonalShiftConfig(ZonalShiftConfigProperty(`value`))
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.eks.CfnCluster].
    */
   @CdkDslMarker
@@ -548,6 +685,47 @@ public open class CfnCluster(
      * the default networking add-ons will not be installed. 
      */
     public fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: IResolvable)
+
+    /**
+     * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster. 
+     */
+    public fun computeConfig(computeConfig: IResolvable)
+
+    /**
+     * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster. 
+     */
+    public fun computeConfig(computeConfig: ComputeConfigProperty)
+
+    /**
+     * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7e6761849aed3f5be1ea8d6aa1d05b386ea91b0172cda715d6884ff0308c6171")
+    public fun computeConfig(computeConfig: ComputeConfigProperty.Builder.() -> Unit)
 
     /**
      * The encryption configuration for the cluster.
@@ -629,6 +807,11 @@ public open class CfnCluster(
     /**
      * The unique name to give to your cluster.
      *
+     * The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start
+     * with an alphanumeric character and can't be longer than 100 characters. The name must be unique
+     * within the AWS Region and AWS account that you're creating the cluster in. Note that underscores
+     * can't be used in AWS CloudFormation .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-name)
      * @param name The unique name to give to your cluster. 
      */
@@ -668,6 +851,39 @@ public open class CfnCluster(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fd33fe939cf4bdbab02c5d1407a0364d4da3d4d15abcbd69ab72657b980bf691")
     public fun outpostConfig(outpostConfig: OutpostConfigProperty.Builder.() -> Unit)
+
+    /**
+     * The configuration in the cluster for EKS Hybrid Nodes.
+     *
+     * You can't change or update this configuration after the cluster is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
+     */
+    public fun remoteNetworkConfig(remoteNetworkConfig: IResolvable)
+
+    /**
+     * The configuration in the cluster for EKS Hybrid Nodes.
+     *
+     * You can't change or update this configuration after the cluster is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
+     */
+    public fun remoteNetworkConfig(remoteNetworkConfig: RemoteNetworkConfigProperty)
+
+    /**
+     * The configuration in the cluster for EKS Hybrid Nodes.
+     *
+     * You can't change or update this configuration after the cluster is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7281c619ce01dc2506026a53b7a7a94571956a8cf0cc4beebcfa031caab263b8")
+    public
+        fun remoteNetworkConfig(remoteNetworkConfig: RemoteNetworkConfigProperty.Builder.() -> Unit)
 
     /**
      * The VPC configuration that's used by the cluster control plane.
@@ -735,6 +951,50 @@ public open class CfnCluster(
      * the Kubernetes control plane to make calls to AWS API operations on your behalf. 
      */
     public fun roleArn(roleArn: String)
+
+    /**
+     * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+     * cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster. 
+     */
+    public fun storageConfig(storageConfig: IResolvable)
+
+    /**
+     * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+     * cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster. 
+     */
+    public fun storageConfig(storageConfig: StorageConfigProperty)
+
+    /**
+     * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+     * cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5446a51fa8f05914502512c3471cf60435de475c36fcb47bdabdce555b1230f0")
+    public fun storageConfig(storageConfig: StorageConfigProperty.Builder.() -> Unit)
 
     /**
      * The metadata that you apply to the cluster to assist with categorization and organization.
@@ -827,6 +1087,32 @@ public open class CfnCluster(
      * @param version The desired Kubernetes version for your cluster. 
      */
     public fun version(version: String)
+
+    /**
+     * The configuration for zonal shift for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-zonalshiftconfig)
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster. 
+     */
+    public fun zonalShiftConfig(zonalShiftConfig: IResolvable)
+
+    /**
+     * The configuration for zonal shift for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-zonalshiftconfig)
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster. 
+     */
+    public fun zonalShiftConfig(zonalShiftConfig: ZonalShiftConfigProperty)
+
+    /**
+     * The configuration for zonal shift for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-zonalshiftconfig)
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ba8e90958c5335282808c54f38e7b45ade737bacf944aa3ebae3e7cfb956e3f4")
+    public fun zonalShiftConfig(zonalShiftConfig: ZonalShiftConfigProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl(
@@ -900,6 +1186,52 @@ public open class CfnCluster(
     override fun bootstrapSelfManagedAddons(bootstrapSelfManagedAddons: IResolvable) {
       cdkBuilder.bootstrapSelfManagedAddons(bootstrapSelfManagedAddons.let(IResolvable.Companion::unwrap))
     }
+
+    /**
+     * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster. 
+     */
+    override fun computeConfig(computeConfig: IResolvable) {
+      cdkBuilder.computeConfig(computeConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster. 
+     */
+    override fun computeConfig(computeConfig: ComputeConfigProperty) {
+      cdkBuilder.computeConfig(computeConfig.let(ComputeConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * Indicates the current configuration of the compute capability on your EKS Auto Mode cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the compute capability is enabled,
+     * EKS Auto Mode will create and delete EC2 Managed Instances in your AWS account. For more
+     * information, see EKS Auto Mode compute capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-computeconfig)
+     * @param computeConfig Indicates the current configuration of the compute capability on your
+     * EKS Auto Mode cluster. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7e6761849aed3f5be1ea8d6aa1d05b386ea91b0172cda715d6884ff0308c6171")
+    override fun computeConfig(computeConfig: ComputeConfigProperty.Builder.() -> Unit): Unit =
+        computeConfig(ComputeConfigProperty(computeConfig))
 
     /**
      * The encryption configuration for the cluster.
@@ -996,6 +1328,11 @@ public open class CfnCluster(
     /**
      * The unique name to give to your cluster.
      *
+     * The name can contain only alphanumeric characters (case-sensitive) and hyphens. It must start
+     * with an alphanumeric character and can't be longer than 100 characters. The name must be unique
+     * within the AWS Region and AWS account that you're creating the cluster in. Note that underscores
+     * can't be used in AWS CloudFormation .
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-name)
      * @param name The unique name to give to your cluster. 
      */
@@ -1042,6 +1379,44 @@ public open class CfnCluster(
     @JvmName("fd33fe939cf4bdbab02c5d1407a0364d4da3d4d15abcbd69ab72657b980bf691")
     override fun outpostConfig(outpostConfig: OutpostConfigProperty.Builder.() -> Unit): Unit =
         outpostConfig(OutpostConfigProperty(outpostConfig))
+
+    /**
+     * The configuration in the cluster for EKS Hybrid Nodes.
+     *
+     * You can't change or update this configuration after the cluster is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
+     */
+    override fun remoteNetworkConfig(remoteNetworkConfig: IResolvable) {
+      cdkBuilder.remoteNetworkConfig(remoteNetworkConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The configuration in the cluster for EKS Hybrid Nodes.
+     *
+     * You can't change or update this configuration after the cluster is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
+     */
+    override fun remoteNetworkConfig(remoteNetworkConfig: RemoteNetworkConfigProperty) {
+      cdkBuilder.remoteNetworkConfig(remoteNetworkConfig.let(RemoteNetworkConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * The configuration in the cluster for EKS Hybrid Nodes.
+     *
+     * You can't change or update this configuration after the cluster is created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-remotenetworkconfig)
+     * @param remoteNetworkConfig The configuration in the cluster for EKS Hybrid Nodes. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("7281c619ce01dc2506026a53b7a7a94571956a8cf0cc4beebcfa031caab263b8")
+    override
+        fun remoteNetworkConfig(remoteNetworkConfig: RemoteNetworkConfigProperty.Builder.() -> Unit):
+        Unit = remoteNetworkConfig(RemoteNetworkConfigProperty(remoteNetworkConfig))
 
     /**
      * The VPC configuration that's used by the cluster control plane.
@@ -1117,6 +1492,55 @@ public open class CfnCluster(
     override fun roleArn(roleArn: String) {
       cdkBuilder.roleArn(roleArn)
     }
+
+    /**
+     * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+     * cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster. 
+     */
+    override fun storageConfig(storageConfig: IResolvable) {
+      cdkBuilder.storageConfig(storageConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+     * cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster. 
+     */
+    override fun storageConfig(storageConfig: StorageConfigProperty) {
+      cdkBuilder.storageConfig(storageConfig.let(StorageConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+     * cluster.
+     *
+     * For example, if the capability is enabled or disabled. If the block storage capability is
+     * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+     * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-storageconfig)
+     * @param storageConfig Indicates the current configuration of the block storage capability on
+     * your EKS Auto Mode cluster. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5446a51fa8f05914502512c3471cf60435de475c36fcb47bdabdce555b1230f0")
+    override fun storageConfig(storageConfig: StorageConfigProperty.Builder.() -> Unit): Unit =
+        storageConfig(StorageConfigProperty(storageConfig))
 
     /**
      * The metadata that you apply to the cluster to assist with categorization and organization.
@@ -1218,6 +1642,37 @@ public open class CfnCluster(
     override fun version(version: String) {
       cdkBuilder.version(version)
     }
+
+    /**
+     * The configuration for zonal shift for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-zonalshiftconfig)
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster. 
+     */
+    override fun zonalShiftConfig(zonalShiftConfig: IResolvable) {
+      cdkBuilder.zonalShiftConfig(zonalShiftConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The configuration for zonal shift for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-zonalshiftconfig)
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster. 
+     */
+    override fun zonalShiftConfig(zonalShiftConfig: ZonalShiftConfigProperty) {
+      cdkBuilder.zonalShiftConfig(zonalShiftConfig.let(ZonalShiftConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * The configuration for zonal shift for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-cluster.html#cfn-eks-cluster-zonalshiftconfig)
+     * @param zonalShiftConfig The configuration for zonal shift for the cluster. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ba8e90958c5335282808c54f38e7b45ade737bacf944aa3ebae3e7cfb956e3f4")
+    override fun zonalShiftConfig(zonalShiftConfig: ZonalShiftConfigProperty.Builder.() -> Unit):
+        Unit = zonalShiftConfig(ZonalShiftConfigProperty(zonalShiftConfig))
 
     public fun build(): software.amazon.awscdk.services.eks.CfnCluster = cdkBuilder.build()
   }
@@ -1397,6 +1852,122 @@ public open class CfnCluster(
   }
 
   /**
+   * Indicates the current configuration of the block storage capability on your EKS Auto Mode
+   * cluster.
+   *
+   * For example, if the capability is enabled or disabled. If the block storage capability is
+   * enabled, EKS Auto Mode will create and delete EBS volumes in your AWS account. For more
+   * information, see EKS Auto Mode block storage capability in the EKS User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * BlockStorageProperty blockStorageProperty = BlockStorageProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-blockstorage.html)
+   */
+  public interface BlockStorageProperty {
+    /**
+     * Indicates if the block storage capability is enabled on your EKS Auto Mode cluster.
+     *
+     * If the block storage capability is enabled, EKS Auto Mode will create and delete EBS volumes
+     * in your AWS account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-blockstorage.html#cfn-eks-cluster-blockstorage-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [BlockStorageProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Indicates if the block storage capability is enabled on your EKS Auto Mode
+       * cluster.
+       * If the block storage capability is enabled, EKS Auto Mode will create and delete EBS
+       * volumes in your AWS account.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Indicates if the block storage capability is enabled on your EKS Auto Mode
+       * cluster.
+       * If the block storage capability is enabled, EKS Auto Mode will create and delete EBS
+       * volumes in your AWS account.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.BlockStorageProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.BlockStorageProperty.builder()
+
+      /**
+       * @param enabled Indicates if the block storage capability is enabled on your EKS Auto Mode
+       * cluster.
+       * If the block storage capability is enabled, EKS Auto Mode will create and delete EBS
+       * volumes in your AWS account.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Indicates if the block storage capability is enabled on your EKS Auto Mode
+       * cluster.
+       * If the block storage capability is enabled, EKS Auto Mode will create and delete EBS
+       * volumes in your AWS account.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.BlockStorageProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.BlockStorageProperty,
+    ) : CdkObject(cdkObject),
+        BlockStorageProperty {
+      /**
+       * Indicates if the block storage capability is enabled on your EKS Auto Mode cluster.
+       *
+       * If the block storage capability is enabled, EKS Auto Mode will create and delete EBS
+       * volumes in your AWS account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-blockstorage.html#cfn-eks-cluster-blockstorage-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): BlockStorageProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.BlockStorageProperty):
+          BlockStorageProperty = CdkObjectWrappers.wrap(cdkObject) as? BlockStorageProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BlockStorageProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.BlockStorageProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.BlockStorageProperty
+    }
+  }
+
+  /**
    * The cluster control plane logging configuration for your cluster.
    *
    *
@@ -1544,6 +2115,163 @@ public open class CfnCluster(
   }
 
   /**
+   * Todo: add description.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * ComputeConfigProperty computeConfigProperty = ComputeConfigProperty.builder()
+   * .enabled(false)
+   * .nodePools(List.of("nodePools"))
+   * .nodeRoleArn("nodeRoleArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html)
+   */
+  public interface ComputeConfigProperty {
+    /**
+     * Todo: add description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * Todo: add description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-nodepools)
+     */
+    public fun nodePools(): List<String> = unwrap(this).getNodePools() ?: emptyList()
+
+    /**
+     * Todo: add description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-noderolearn)
+     */
+    public fun nodeRoleArn(): String? = unwrap(this).getNodeRoleArn()
+
+    /**
+     * A builder for [ComputeConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Todo: add description.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Todo: add description.
+       */
+      public fun enabled(enabled: IResolvable)
+
+      /**
+       * @param nodePools Todo: add description.
+       */
+      public fun nodePools(nodePools: List<String>)
+
+      /**
+       * @param nodePools Todo: add description.
+       */
+      public fun nodePools(vararg nodePools: String)
+
+      /**
+       * @param nodeRoleArn Todo: add description.
+       */
+      public fun nodeRoleArn(nodeRoleArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.ComputeConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.ComputeConfigProperty.builder()
+
+      /**
+       * @param enabled Todo: add description.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Todo: add description.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param nodePools Todo: add description.
+       */
+      override fun nodePools(nodePools: List<String>) {
+        cdkBuilder.nodePools(nodePools)
+      }
+
+      /**
+       * @param nodePools Todo: add description.
+       */
+      override fun nodePools(vararg nodePools: String): Unit = nodePools(nodePools.toList())
+
+      /**
+       * @param nodeRoleArn Todo: add description.
+       */
+      override fun nodeRoleArn(nodeRoleArn: String) {
+        cdkBuilder.nodeRoleArn(nodeRoleArn)
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.ComputeConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ComputeConfigProperty,
+    ) : CdkObject(cdkObject),
+        ComputeConfigProperty {
+      /**
+       * Todo: add description.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+
+      /**
+       * Todo: add description.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-nodepools)
+       */
+      override fun nodePools(): List<String> = unwrap(this).getNodePools() ?: emptyList()
+
+      /**
+       * Todo: add description.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-computeconfig.html#cfn-eks-cluster-computeconfig-noderolearn)
+       */
+      override fun nodeRoleArn(): String? = unwrap(this).getNodeRoleArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ComputeConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ComputeConfigProperty):
+          ComputeConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ComputeConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ComputeConfigProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.ComputeConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.ComputeConfigProperty
+    }
+  }
+
+  /**
    * The placement configuration for all the control plane instances of your local Amazon EKS
    * cluster on an AWS Outpost.
    *
@@ -1636,6 +2364,123 @@ public open class CfnCluster(
           software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnCluster.ControlPlanePlacementProperty
+    }
+  }
+
+  /**
+   * Indicates the current configuration of the load balancing capability on your EKS Auto Mode
+   * cluster.
+   *
+   * For example, if the capability is enabled or disabled. For more information, see EKS Auto Mode
+   * load balancing capability in the EKS User Guide.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * ElasticLoadBalancingProperty elasticLoadBalancingProperty =
+   * ElasticLoadBalancingProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-elasticloadbalancing.html)
+   */
+  public interface ElasticLoadBalancingProperty {
+    /**
+     * Indicates if the load balancing capability is enabled on your EKS Auto Mode cluster.
+     *
+     * If the load balancing capability is enabled, EKS Auto Mode will create and delete load
+     * balancers in your AWS account.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-elasticloadbalancing.html#cfn-eks-cluster-elasticloadbalancing-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [ElasticLoadBalancingProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled Indicates if the load balancing capability is enabled on your EKS Auto Mode
+       * cluster.
+       * If the load balancing capability is enabled, EKS Auto Mode will create and delete load
+       * balancers in your AWS account.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled Indicates if the load balancing capability is enabled on your EKS Auto Mode
+       * cluster.
+       * If the load balancing capability is enabled, EKS Auto Mode will create and delete load
+       * balancers in your AWS account.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.ElasticLoadBalancingProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.ElasticLoadBalancingProperty.builder()
+
+      /**
+       * @param enabled Indicates if the load balancing capability is enabled on your EKS Auto Mode
+       * cluster.
+       * If the load balancing capability is enabled, EKS Auto Mode will create and delete load
+       * balancers in your AWS account.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled Indicates if the load balancing capability is enabled on your EKS Auto Mode
+       * cluster.
+       * If the load balancing capability is enabled, EKS Auto Mode will create and delete load
+       * balancers in your AWS account.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.eks.CfnCluster.ElasticLoadBalancingProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ElasticLoadBalancingProperty,
+    ) : CdkObject(cdkObject),
+        ElasticLoadBalancingProperty {
+      /**
+       * Indicates if the load balancing capability is enabled on your EKS Auto Mode cluster.
+       *
+       * If the load balancing capability is enabled, EKS Auto Mode will create and delete load
+       * balancers in your AWS account.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-elasticloadbalancing.html#cfn-eks-cluster-elasticloadbalancing-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ElasticLoadBalancingProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ElasticLoadBalancingProperty):
+          ElasticLoadBalancingProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ElasticLoadBalancingProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ElasticLoadBalancingProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.ElasticLoadBalancingProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.ElasticLoadBalancingProperty
     }
   }
 
@@ -1805,6 +2650,9 @@ public open class CfnCluster(
    * import io.cloudshiftdev.awscdk.services.eks.*;
    * KubernetesNetworkConfigProperty kubernetesNetworkConfigProperty =
    * KubernetesNetworkConfigProperty.builder()
+   * .elasticLoadBalancing(ElasticLoadBalancingProperty.builder()
+   * .enabled(false)
+   * .build())
    * .ipFamily("ipFamily")
    * .serviceIpv4Cidr("serviceIpv4Cidr")
    * .serviceIpv6Cidr("serviceIpv6Cidr")
@@ -1814,6 +2662,13 @@ public open class CfnCluster(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html)
    */
   public interface KubernetesNetworkConfigProperty {
+    /**
+     * Todo: add description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-elasticloadbalancing)
+     */
+    public fun elasticLoadBalancing(): Any? = unwrap(this).getElasticLoadBalancing()
+
     /**
      * Specify which IP family is used to assign Kubernetes pod and service IP addresses.
      *
@@ -1873,6 +2728,24 @@ public open class CfnCluster(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param elasticLoadBalancing Todo: add description.
+       */
+      public fun elasticLoadBalancing(elasticLoadBalancing: IResolvable)
+
+      /**
+       * @param elasticLoadBalancing Todo: add description.
+       */
+      public fun elasticLoadBalancing(elasticLoadBalancing: ElasticLoadBalancingProperty)
+
+      /**
+       * @param elasticLoadBalancing Todo: add description.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6c691f0f94e1c194795d057626fc8d0954e91bc977c406e36222ff6309c3614a")
+      public
+          fun elasticLoadBalancing(elasticLoadBalancing: ElasticLoadBalancingProperty.Builder.() -> Unit)
+
+      /**
        * @param ipFamily Specify which IP family is used to assign Kubernetes pod and service IP
        * addresses.
        * If you don't specify a value, `ipv4` is used by default. You can only specify an IP family
@@ -1924,6 +2797,29 @@ public open class CfnCluster(
       private val cdkBuilder:
           software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty.Builder =
           software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty.builder()
+
+      /**
+       * @param elasticLoadBalancing Todo: add description.
+       */
+      override fun elasticLoadBalancing(elasticLoadBalancing: IResolvable) {
+        cdkBuilder.elasticLoadBalancing(elasticLoadBalancing.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param elasticLoadBalancing Todo: add description.
+       */
+      override fun elasticLoadBalancing(elasticLoadBalancing: ElasticLoadBalancingProperty) {
+        cdkBuilder.elasticLoadBalancing(elasticLoadBalancing.let(ElasticLoadBalancingProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param elasticLoadBalancing Todo: add description.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6c691f0f94e1c194795d057626fc8d0954e91bc977c406e36222ff6309c3614a")
+      override
+          fun elasticLoadBalancing(elasticLoadBalancing: ElasticLoadBalancingProperty.Builder.() -> Unit):
+          Unit = elasticLoadBalancing(ElasticLoadBalancingProperty(elasticLoadBalancing))
 
       /**
        * @param ipFamily Specify which IP family is used to assign Kubernetes pod and service IP
@@ -1987,6 +2883,13 @@ public open class CfnCluster(
       cdkObject: software.amazon.awscdk.services.eks.CfnCluster.KubernetesNetworkConfigProperty,
     ) : CdkObject(cdkObject),
         KubernetesNetworkConfigProperty {
+      /**
+       * Todo: add description.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-kubernetesnetworkconfig.html#cfn-eks-cluster-kubernetesnetworkconfig-elasticloadbalancing)
+       */
+      override fun elasticLoadBalancing(): Any? = unwrap(this).getElasticLoadBalancing()
+
       /**
        * Specify which IP family is used to assign Kubernetes pod and service IP addresses.
        *
@@ -2644,6 +3547,608 @@ public open class CfnCluster(
   }
 
   /**
+   * Configuration fields for specifying on-premises node and pod CIDRs that are external to the VPC
+   * passed during cluster creation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * RemoteNetworkConfigProperty remoteNetworkConfigProperty = RemoteNetworkConfigProperty.builder()
+   * .remoteNodeNetworks(List.of(RemoteNodeNetworkProperty.builder()
+   * .cidrs(List.of("cidrs"))
+   * .build()))
+   * // the properties below are optional
+   * .remotePodNetworks(List.of(RemotePodNetworkProperty.builder()
+   * .cidrs(List.of("cidrs"))
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html)
+   */
+  public interface RemoteNetworkConfigProperty {
+    /**
+     * Network configuration of nodes run on-premises with EKS Hybrid Nodes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html#cfn-eks-cluster-remotenetworkconfig-remotenodenetworks)
+     */
+    public fun remoteNodeNetworks(): Any
+
+    /**
+     * Network configuration of pods run on-premises with EKS Hybrid Nodes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html#cfn-eks-cluster-remotenetworkconfig-remotepodnetworks)
+     */
+    public fun remotePodNetworks(): Any? = unwrap(this).getRemotePodNetworks()
+
+    /**
+     * A builder for [RemoteNetworkConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
+       * Nodes. 
+       */
+      public fun remoteNodeNetworks(remoteNodeNetworks: IResolvable)
+
+      /**
+       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
+       * Nodes. 
+       */
+      public fun remoteNodeNetworks(remoteNodeNetworks: List<Any>)
+
+      /**
+       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
+       * Nodes. 
+       */
+      public fun remoteNodeNetworks(vararg remoteNodeNetworks: Any)
+
+      /**
+       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
+       * Nodes.
+       */
+      public fun remotePodNetworks(remotePodNetworks: IResolvable)
+
+      /**
+       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
+       * Nodes.
+       */
+      public fun remotePodNetworks(remotePodNetworks: List<Any>)
+
+      /**
+       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
+       * Nodes.
+       */
+      public fun remotePodNetworks(vararg remotePodNetworks: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.RemoteNetworkConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.RemoteNetworkConfigProperty.builder()
+
+      /**
+       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
+       * Nodes. 
+       */
+      override fun remoteNodeNetworks(remoteNodeNetworks: IResolvable) {
+        cdkBuilder.remoteNodeNetworks(remoteNodeNetworks.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
+       * Nodes. 
+       */
+      override fun remoteNodeNetworks(remoteNodeNetworks: List<Any>) {
+        cdkBuilder.remoteNodeNetworks(remoteNodeNetworks.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param remoteNodeNetworks Network configuration of nodes run on-premises with EKS Hybrid
+       * Nodes. 
+       */
+      override fun remoteNodeNetworks(vararg remoteNodeNetworks: Any): Unit =
+          remoteNodeNetworks(remoteNodeNetworks.toList())
+
+      /**
+       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
+       * Nodes.
+       */
+      override fun remotePodNetworks(remotePodNetworks: IResolvable) {
+        cdkBuilder.remotePodNetworks(remotePodNetworks.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
+       * Nodes.
+       */
+      override fun remotePodNetworks(remotePodNetworks: List<Any>) {
+        cdkBuilder.remotePodNetworks(remotePodNetworks.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param remotePodNetworks Network configuration of pods run on-premises with EKS Hybrid
+       * Nodes.
+       */
+      override fun remotePodNetworks(vararg remotePodNetworks: Any): Unit =
+          remotePodNetworks(remotePodNetworks.toList())
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.RemoteNetworkConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.RemoteNetworkConfigProperty,
+    ) : CdkObject(cdkObject),
+        RemoteNetworkConfigProperty {
+      /**
+       * Network configuration of nodes run on-premises with EKS Hybrid Nodes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html#cfn-eks-cluster-remotenetworkconfig-remotenodenetworks)
+       */
+      override fun remoteNodeNetworks(): Any = unwrap(this).getRemoteNodeNetworks()
+
+      /**
+       * Network configuration of pods run on-premises with EKS Hybrid Nodes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenetworkconfig.html#cfn-eks-cluster-remotenetworkconfig-remotepodnetworks)
+       */
+      override fun remotePodNetworks(): Any? = unwrap(this).getRemotePodNetworks()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RemoteNetworkConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.RemoteNetworkConfigProperty):
+          RemoteNetworkConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RemoteNetworkConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RemoteNetworkConfigProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.RemoteNetworkConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.RemoteNetworkConfigProperty
+    }
+  }
+
+  /**
+   * A network CIDR that can contain hybrid nodes.
+   *
+   * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+   * cluster. These blocks are typically determined by your network administrator.
+   *
+   * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example, `10.2.0.0/16`
+   * ).
+   *
+   * It must satisfy the following requirements:
+   *
+   * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+   * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+   * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
+   * the block of the Kubernetes service IP range.
+   * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+   * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or AWS
+   * Direct Connect .
+   * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports `443`
+   * and `10250` .
+   * * Each host must allow inbound connection from the EKS cluster control plane on TCP port 10250
+   * for logs, exec and port-forward operations.
+   * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+   * running `CoreDNS` on UDP port `53` for service and pod DNS names.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * RemoteNodeNetworkProperty remoteNodeNetworkProperty = RemoteNodeNetworkProperty.builder()
+   * .cidrs(List.of("cidrs"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenodenetwork.html)
+   */
+  public interface RemoteNodeNetworkProperty {
+    /**
+     * A network CIDR that can contain hybrid nodes.
+     *
+     * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+     * cluster. These blocks are typically determined by your network administrator.
+     *
+     * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+     * `10.2.0.0/16` ).
+     *
+     * It must satisfy the following requirements:
+     *
+     * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+     * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+     * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
+     * the block of the Kubernetes service IP range.
+     * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+     * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+     * AWS Direct Connect .
+     * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+     * `443` and `10250` .
+     * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+     * 10250 for logs, exec and port-forward operations.
+     * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+     * running `CoreDNS` on UDP port `53` for service and pod DNS names.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenodenetwork.html#cfn-eks-cluster-remotenodenetwork-cidrs)
+     */
+    public fun cidrs(): List<String>
+
+    /**
+     * A builder for [RemoteNodeNetworkProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidrs A network CIDR that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
+       */
+      public fun cidrs(cidrs: List<String>)
+
+      /**
+       * @param cidrs A network CIDR that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
+       */
+      public fun cidrs(vararg cidrs: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.RemoteNodeNetworkProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.RemoteNodeNetworkProperty.builder()
+
+      /**
+       * @param cidrs A network CIDR that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
+       */
+      override fun cidrs(cidrs: List<String>) {
+        cdkBuilder.cidrs(cidrs)
+      }
+
+      /**
+       * @param cidrs A network CIDR that can contain hybrid nodes. 
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
+       */
+      override fun cidrs(vararg cidrs: String): Unit = cidrs(cidrs.toList())
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.RemoteNodeNetworkProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.RemoteNodeNetworkProperty,
+    ) : CdkObject(cdkObject),
+        RemoteNodeNetworkProperty {
+      /**
+       * A network CIDR that can contain hybrid nodes.
+       *
+       * These CIDR blocks define the expected IP address range of the hybrid nodes that join the
+       * cluster. These blocks are typically determined by your network administrator.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       * * Each block must have a route to the VPC that uses the VPC CIDR blocks, not public IPs or
+       * Elastic IPs. There are many options including AWS Transit Gateway , AWS Site-to-Site VPN , or
+       * AWS Direct Connect .
+       * * Each host must allow outbound connection to the EKS cluster control plane on TCP ports
+       * `443` and `10250` .
+       * * Each host must allow inbound connection from the EKS cluster control plane on TCP port
+       * 10250 for logs, exec and port-forward operations.
+       * * Each host must allow TCP and UDP network connectivity to and from other hosts that are
+       * running `CoreDNS` on UDP port `53` for service and pod DNS names.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotenodenetwork.html#cfn-eks-cluster-remotenodenetwork-cidrs)
+       */
+      override fun cidrs(): List<String> = unwrap(this).getCidrs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RemoteNodeNetworkProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.RemoteNodeNetworkProperty):
+          RemoteNodeNetworkProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          RemoteNodeNetworkProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RemoteNodeNetworkProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.RemoteNodeNetworkProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.RemoteNodeNetworkProperty
+    }
+  }
+
+  /**
+   * A network CIDR that can contain pods that run Kubernetes webhooks on hybrid nodes.
+   *
+   * These CIDR blocks are determined by configuring your Container Network Interface (CNI) plugin.
+   * We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for Kubernetes
+   * isn't available for on-premises and edge locations.
+   *
+   * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example, `10.2.0.0/16`
+   * ).
+   *
+   * It must satisfy the following requirements:
+   *
+   * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+   * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+   * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
+   * the block of the Kubernetes service IP range.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * RemotePodNetworkProperty remotePodNetworkProperty = RemotePodNetworkProperty.builder()
+   * .cidrs(List.of("cidrs"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotepodnetwork.html)
+   */
+  public interface RemotePodNetworkProperty {
+    /**
+     * A network CIDR that can contain pods that run Kubernetes webhooks on hybrid nodes.
+     *
+     * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+     * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+     * Kubernetes isn't available for on-premises and edge locations.
+     *
+     * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+     * `10.2.0.0/16` ).
+     *
+     * It must satisfy the following requirements:
+     *
+     * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+     * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+     * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources, or
+     * the block of the Kubernetes service IP range.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotepodnetwork.html#cfn-eks-cluster-remotepodnetwork-cidrs)
+     */
+    public fun cidrs(): List<String>
+
+    /**
+     * A builder for [RemotePodNetworkProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidrs A network CIDR that can contain pods that run Kubernetes webhooks on hybrid
+       * nodes. 
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       */
+      public fun cidrs(cidrs: List<String>)
+
+      /**
+       * @param cidrs A network CIDR that can contain pods that run Kubernetes webhooks on hybrid
+       * nodes. 
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       */
+      public fun cidrs(vararg cidrs: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.RemotePodNetworkProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.RemotePodNetworkProperty.builder()
+
+      /**
+       * @param cidrs A network CIDR that can contain pods that run Kubernetes webhooks on hybrid
+       * nodes. 
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       */
+      override fun cidrs(cidrs: List<String>) {
+        cdkBuilder.cidrs(cidrs)
+      }
+
+      /**
+       * @param cidrs A network CIDR that can contain pods that run Kubernetes webhooks on hybrid
+       * nodes. 
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       */
+      override fun cidrs(vararg cidrs: String): Unit = cidrs(cidrs.toList())
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.RemotePodNetworkProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.RemotePodNetworkProperty,
+    ) : CdkObject(cdkObject),
+        RemotePodNetworkProperty {
+      /**
+       * A network CIDR that can contain pods that run Kubernetes webhooks on hybrid nodes.
+       *
+       * These CIDR blocks are determined by configuring your Container Network Interface (CNI)
+       * plugin. We recommend the Calico CNI or Cilium CNI. Note that the Amazon VPC CNI plugin for
+       * Kubernetes isn't available for on-premises and edge locations.
+       *
+       * Enter one or more IPv4 CIDR blocks in decimal dotted-quad notation (for example,
+       * `10.2.0.0/16` ).
+       *
+       * It must satisfy the following requirements:
+       *
+       * * Each block must be within an `IPv4` RFC-1918 network range. Minimum allowed size is /24,
+       * maximum allowed size is /8. Publicly-routable addresses aren't supported.
+       * * Each block cannot overlap with the range of the VPC CIDR blocks for your EKS resources,
+       * or the block of the Kubernetes service IP range.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-remotepodnetwork.html#cfn-eks-cluster-remotepodnetwork-cidrs)
+       */
+      override fun cidrs(): List<String> = unwrap(this).getCidrs()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): RemotePodNetworkProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.RemotePodNetworkProperty):
+          RemotePodNetworkProperty = CdkObjectWrappers.wrap(cdkObject) as? RemotePodNetworkProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: RemotePodNetworkProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.RemotePodNetworkProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.RemotePodNetworkProperty
+    }
+  }
+
+  /**
    * An object representing the VPC configuration to use for an Amazon EKS cluster.
    *
    *
@@ -3103,6 +4608,116 @@ public open class CfnCluster(
   }
 
   /**
+   * Todo: add description.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * StorageConfigProperty storageConfigProperty = StorageConfigProperty.builder()
+   * .blockStorage(BlockStorageProperty.builder()
+   * .enabled(false)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-storageconfig.html)
+   */
+  public interface StorageConfigProperty {
+    /**
+     * Todo: add description.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-storageconfig.html#cfn-eks-cluster-storageconfig-blockstorage)
+     */
+    public fun blockStorage(): Any? = unwrap(this).getBlockStorage()
+
+    /**
+     * A builder for [StorageConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param blockStorage Todo: add description.
+       */
+      public fun blockStorage(blockStorage: IResolvable)
+
+      /**
+       * @param blockStorage Todo: add description.
+       */
+      public fun blockStorage(blockStorage: BlockStorageProperty)
+
+      /**
+       * @param blockStorage Todo: add description.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5320a834ec88a1f139ade6a04f4d1aacb18bb2dbc976bc8d190fc7851e9b3ba1")
+      public fun blockStorage(blockStorage: BlockStorageProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.StorageConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.StorageConfigProperty.builder()
+
+      /**
+       * @param blockStorage Todo: add description.
+       */
+      override fun blockStorage(blockStorage: IResolvable) {
+        cdkBuilder.blockStorage(blockStorage.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param blockStorage Todo: add description.
+       */
+      override fun blockStorage(blockStorage: BlockStorageProperty) {
+        cdkBuilder.blockStorage(blockStorage.let(BlockStorageProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param blockStorage Todo: add description.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("5320a834ec88a1f139ade6a04f4d1aacb18bb2dbc976bc8d190fc7851e9b3ba1")
+      override fun blockStorage(blockStorage: BlockStorageProperty.Builder.() -> Unit): Unit =
+          blockStorage(BlockStorageProperty(blockStorage))
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.StorageConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.StorageConfigProperty,
+    ) : CdkObject(cdkObject),
+        StorageConfigProperty {
+      /**
+       * Todo: add description.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-storageconfig.html#cfn-eks-cluster-storageconfig-blockstorage)
+       */
+      override fun blockStorage(): Any? = unwrap(this).getBlockStorage()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): StorageConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.StorageConfigProperty):
+          StorageConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? StorageConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: StorageConfigProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.StorageConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.StorageConfigProperty
+    }
+  }
+
+  /**
    * An object representing the Upgrade Policy to use for the cluster.
    *
    * Example:
@@ -3180,6 +4795,99 @@ public open class CfnCluster(
           software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.eks.CfnCluster.UpgradePolicyProperty
+    }
+  }
+
+  /**
+   * The configuration for zonal shift for the cluster.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.eks.*;
+   * ZonalShiftConfigProperty zonalShiftConfigProperty = ZonalShiftConfigProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-zonalshiftconfig.html)
+   */
+  public interface ZonalShiftConfigProperty {
+    /**
+     * If zonal shift is enabled, AWS configures zonal autoshift for the cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-zonalshiftconfig.html#cfn-eks-cluster-zonalshiftconfig-enabled)
+     */
+    public fun enabled(): Any? = unwrap(this).getEnabled()
+
+    /**
+     * A builder for [ZonalShiftConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled If zonal shift is enabled, AWS configures zonal autoshift for the cluster.
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled If zonal shift is enabled, AWS configures zonal autoshift for the cluster.
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.eks.CfnCluster.ZonalShiftConfigProperty.Builder =
+          software.amazon.awscdk.services.eks.CfnCluster.ZonalShiftConfigProperty.builder()
+
+      /**
+       * @param enabled If zonal shift is enabled, AWS configures zonal autoshift for the cluster.
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled If zonal shift is enabled, AWS configures zonal autoshift for the cluster.
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build(): software.amazon.awscdk.services.eks.CfnCluster.ZonalShiftConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ZonalShiftConfigProperty,
+    ) : CdkObject(cdkObject),
+        ZonalShiftConfigProperty {
+      /**
+       * If zonal shift is enabled, AWS configures zonal autoshift for the cluster.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-eks-cluster-zonalshiftconfig.html#cfn-eks-cluster-zonalshiftconfig-enabled)
+       */
+      override fun enabled(): Any? = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ZonalShiftConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.eks.CfnCluster.ZonalShiftConfigProperty):
+          ZonalShiftConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? ZonalShiftConfigProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ZonalShiftConfigProperty):
+          software.amazon.awscdk.services.eks.CfnCluster.ZonalShiftConfigProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.eks.CfnCluster.ZonalShiftConfigProperty
     }
   }
 }

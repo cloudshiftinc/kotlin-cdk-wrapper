@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.stepfunctions.tasks
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Deprecated
 import kotlin.Number
 import kotlin.Unit
 
@@ -17,7 +18,7 @@ import kotlin.Unit
  * GlueStartJobRun.Builder.create(this, "Task")
  * .glueJobName("my-glue-job")
  * .workerConfiguration(WorkerConfigurationProperty.builder()
- * .workerType(WorkerType.G_1X) // Worker type
+ * .workerTypeV2(WorkerTypeV2.G_1X) // Worker type
  * .numberOfWorkers(2)
  * .build())
  * .build();
@@ -30,9 +31,24 @@ public interface WorkerConfigurationProperty {
   public fun numberOfWorkers(): Number
 
   /**
-   * The type of predefined worker that is allocated when a job runs.
+   * (deprecated) The type of predefined worker that is allocated when a job runs.
+   *
+   * Default: - must choose one of `workerType` or `workerTypeV2`
+   *
+   * @deprecated Use `workerTypeV2` for more flexibility in defining worker types.
    */
-  public fun workerType(): WorkerType
+  @Deprecated(message = "deprecated in CDK")
+  public fun workerType(): WorkerType? = unwrap(this).getWorkerType()?.let(WorkerType::wrap)
+
+  /**
+   * The type of predefined worker that is allocated when a job runs.
+   *
+   * Can be one of the
+   * predefined values or dynamic values using `WorkerTypeV2.of(...)`.
+   *
+   * Default: - must choose one of `workerType` or `workerTypeV2`
+   */
+  public fun workerTypeV2(): WorkerTypeV2? = unwrap(this).getWorkerTypeV2()?.let(WorkerTypeV2::wrap)
 
   /**
    * A builder for [WorkerConfigurationProperty]
@@ -46,9 +62,18 @@ public interface WorkerConfigurationProperty {
     public fun numberOfWorkers(numberOfWorkers: Number)
 
     /**
-     * @param workerType The type of predefined worker that is allocated when a job runs. 
+     * @param workerType The type of predefined worker that is allocated when a job runs.
+     * @deprecated Use `workerTypeV2` for more flexibility in defining worker types.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun workerType(workerType: WorkerType)
+
+    /**
+     * @param workerTypeV2 The type of predefined worker that is allocated when a job runs.
+     * Can be one of the
+     * predefined values or dynamic values using `WorkerTypeV2.of(...)`.
+     */
+    public fun workerTypeV2(workerTypeV2: WorkerTypeV2)
   }
 
   private class BuilderImpl : Builder {
@@ -65,10 +90,21 @@ public interface WorkerConfigurationProperty {
     }
 
     /**
-     * @param workerType The type of predefined worker that is allocated when a job runs. 
+     * @param workerType The type of predefined worker that is allocated when a job runs.
+     * @deprecated Use `workerTypeV2` for more flexibility in defining worker types.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun workerType(workerType: WorkerType) {
       cdkBuilder.workerType(workerType.let(WorkerType.Companion::unwrap))
+    }
+
+    /**
+     * @param workerTypeV2 The type of predefined worker that is allocated when a job runs.
+     * Can be one of the
+     * predefined values or dynamic values using `WorkerTypeV2.of(...)`.
+     */
+    override fun workerTypeV2(workerTypeV2: WorkerTypeV2) {
+      cdkBuilder.workerTypeV2(workerTypeV2.let(WorkerTypeV2.Companion::unwrap))
     }
 
     public fun build():
@@ -86,9 +122,25 @@ public interface WorkerConfigurationProperty {
     override fun numberOfWorkers(): Number = unwrap(this).getNumberOfWorkers()
 
     /**
-     * The type of predefined worker that is allocated when a job runs.
+     * (deprecated) The type of predefined worker that is allocated when a job runs.
+     *
+     * Default: - must choose one of `workerType` or `workerTypeV2`
+     *
+     * @deprecated Use `workerTypeV2` for more flexibility in defining worker types.
      */
-    override fun workerType(): WorkerType = unwrap(this).getWorkerType().let(WorkerType::wrap)
+    @Deprecated(message = "deprecated in CDK")
+    override fun workerType(): WorkerType? = unwrap(this).getWorkerType()?.let(WorkerType::wrap)
+
+    /**
+     * The type of predefined worker that is allocated when a job runs.
+     *
+     * Can be one of the
+     * predefined values or dynamic values using `WorkerTypeV2.of(...)`.
+     *
+     * Default: - must choose one of `workerType` or `workerTypeV2`
+     */
+    override fun workerTypeV2(): WorkerTypeV2? =
+        unwrap(this).getWorkerTypeV2()?.let(WorkerTypeV2::wrap)
   }
 
   public companion object {

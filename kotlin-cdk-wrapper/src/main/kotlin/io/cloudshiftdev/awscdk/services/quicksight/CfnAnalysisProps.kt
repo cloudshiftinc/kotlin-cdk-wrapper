@@ -53,6 +53,11 @@ public interface CfnAnalysisProps {
   public fun errors(): Any? = unwrap(this).getErrors()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-folderarns)
+   */
+  public fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
+
+  /**
    * A descriptive name for the analysis that you're creating.
    *
    * This name displays for the analysis in the Amazon QuickSight console.
@@ -183,6 +188,16 @@ public interface CfnAnalysisProps {
      * @param errors Errors associated with the analysis.
      */
     public fun errors(vararg errors: Any)
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    public fun folderArns(folderArns: List<String>)
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    public fun folderArns(vararg folderArns: String)
 
     /**
      * @param name A descriptive name for the analysis that you're creating. 
@@ -401,6 +416,18 @@ public interface CfnAnalysisProps {
      * @param errors Errors associated with the analysis.
      */
     override fun errors(vararg errors: Any): Unit = errors(errors.toList())
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    override fun folderArns(folderArns: List<String>) {
+      cdkBuilder.folderArns(folderArns)
+    }
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    override fun folderArns(vararg folderArns: String): Unit = folderArns(folderArns.toList())
 
     /**
      * @param name A descriptive name for the analysis that you're creating. 
@@ -625,6 +652,11 @@ public interface CfnAnalysisProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-errors)
      */
     override fun errors(): Any? = unwrap(this).getErrors()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-analysis.html#cfn-quicksight-analysis-folderarns)
+     */
+    override fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
 
     /**
      * A descriptive name for the analysis that you're creating.

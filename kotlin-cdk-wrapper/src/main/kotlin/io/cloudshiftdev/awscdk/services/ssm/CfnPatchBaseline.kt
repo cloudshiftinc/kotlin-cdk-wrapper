@@ -511,6 +511,12 @@ public open class CfnPatchBaseline(
     /**
      * A set of global filters used to include patches in the baseline.
      *
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-globalfilters)
      * @param globalFilters A set of global filters used to include patches in the baseline. 
      */
@@ -519,6 +525,12 @@ public open class CfnPatchBaseline(
     /**
      * A set of global filters used to include patches in the baseline.
      *
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-globalfilters)
      * @param globalFilters A set of global filters used to include patches in the baseline. 
      */
@@ -526,6 +538,12 @@ public open class CfnPatchBaseline(
 
     /**
      * A set of global filters used to include patches in the baseline.
+     *
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-globalfilters)
      * @param globalFilters A set of global filters used to include patches in the baseline. 
@@ -839,6 +857,12 @@ public open class CfnPatchBaseline(
     /**
      * A set of global filters used to include patches in the baseline.
      *
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-globalfilters)
      * @param globalFilters A set of global filters used to include patches in the baseline. 
      */
@@ -849,6 +873,12 @@ public open class CfnPatchBaseline(
     /**
      * A set of global filters used to include patches in the baseline.
      *
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-globalfilters)
      * @param globalFilters A set of global filters used to include patches in the baseline. 
      */
@@ -858,6 +888,12 @@ public open class CfnPatchBaseline(
 
     /**
      * A set of global filters used to include patches in the baseline.
+     *
+     *
+     * The `GlobalFilters` parameter can be configured only by using the AWS CLI or an AWS SDK. It
+     * can't be configured from the Patch Manager console, and its value isn't displayed in the
+     * console.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ssm-patchbaseline.html#cfn-ssm-patchbaseline-globalfilters)
      * @param globalFilters A set of global filters used to include patches in the baseline. 

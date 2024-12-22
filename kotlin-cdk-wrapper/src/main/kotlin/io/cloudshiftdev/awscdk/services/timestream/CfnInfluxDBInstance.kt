@@ -53,6 +53,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .name("name")
  * .organization("organization")
  * .password("password")
+ * .port(123)
  * .publiclyAccessible(false)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -295,6 +296,18 @@ public open class CfnInfluxDBInstance(
   }
 
   /**
+   * The port number on which InfluxDB accepts connections.
+   */
+  public open fun port(): Number? = unwrap(this).getPort()
+
+  /**
+   * The port number on which InfluxDB accepts connections.
+   */
+  public open fun port(`value`: Number) {
+    unwrap(this).setPort(`value`)
+  }
+
+  /**
    * Configures the DB instance with a public IP to facilitate access.
    */
   public open fun publiclyAccessible(): Any? = unwrap(this).getPubliclyAccessible()
@@ -515,6 +528,14 @@ public open class CfnInfluxDBInstance(
      * @param password The password of the initial admin user created in InfluxDB. 
      */
     public fun password(password: String)
+
+    /**
+     * The port number on which InfluxDB accepts connections.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-port)
+     * @param port The port number on which InfluxDB accepts connections. 
+     */
+    public fun port(port: Number)
 
     /**
      * Configures the DB instance with a public IP to facilitate access.
@@ -768,6 +789,16 @@ public open class CfnInfluxDBInstance(
      */
     override fun password(password: String) {
       cdkBuilder.password(password)
+    }
+
+    /**
+     * The port number on which InfluxDB accepts connections.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-timestream-influxdbinstance.html#cfn-timestream-influxdbinstance-port)
+     * @param port The port number on which InfluxDB accepts connections. 
+     */
+    override fun port(port: Number) {
+      cdkBuilder.port(port)
     }
 
     /**

@@ -42,6 +42,9 @@ import kotlin.jvm.JvmName
  * .version("version")
  * .build())
  * .nodegroupName("nodegroupName")
+ * .nodeRepairConfig(NodeRepairConfigProperty.builder()
+ * .enabled(false)
+ * .build())
  * .releaseVersion("releaseVersion")
  * .remoteAccess(RemoteAccessProperty.builder()
  * .ec2SshKey("ec2SshKey")
@@ -171,6 +174,13 @@ public interface CfnNodegroupProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-launchtemplate)
    */
   public fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
+
+  /**
+   * The node auto repair configuration for node group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
+   */
+  public fun nodeRepairConfig(): Any? = unwrap(this).getNodeRepairConfig()
 
   /**
    * The Amazon Resource Name (ARN) of the IAM role to associate with your node group.
@@ -432,6 +442,24 @@ public interface CfnNodegroupProps {
     @JvmName("18969c3bfdf19d3641486ae46a5013a3e6802b5482a7ebd85b52450aa667aa99")
     public
         fun launchTemplate(launchTemplate: CfnNodegroup.LaunchTemplateSpecificationProperty.Builder.() -> Unit)
+
+    /**
+     * @param nodeRepairConfig The node auto repair configuration for node group.
+     */
+    public fun nodeRepairConfig(nodeRepairConfig: IResolvable)
+
+    /**
+     * @param nodeRepairConfig The node auto repair configuration for node group.
+     */
+    public fun nodeRepairConfig(nodeRepairConfig: CfnNodegroup.NodeRepairConfigProperty)
+
+    /**
+     * @param nodeRepairConfig The node auto repair configuration for node group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eda98060c40d77d6b1807101c213fffd27bd7c18bcff6d00f3fc1de23d7a82e7")
+    public
+        fun nodeRepairConfig(nodeRepairConfig: CfnNodegroup.NodeRepairConfigProperty.Builder.() -> Unit)
 
     /**
      * @param nodeRole The Amazon Resource Name (ARN) of the IAM role to associate with your node
@@ -777,6 +805,29 @@ public interface CfnNodegroupProps {
         Unit = launchTemplate(CfnNodegroup.LaunchTemplateSpecificationProperty(launchTemplate))
 
     /**
+     * @param nodeRepairConfig The node auto repair configuration for node group.
+     */
+    override fun nodeRepairConfig(nodeRepairConfig: IResolvable) {
+      cdkBuilder.nodeRepairConfig(nodeRepairConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param nodeRepairConfig The node auto repair configuration for node group.
+     */
+    override fun nodeRepairConfig(nodeRepairConfig: CfnNodegroup.NodeRepairConfigProperty) {
+      cdkBuilder.nodeRepairConfig(nodeRepairConfig.let(CfnNodegroup.NodeRepairConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param nodeRepairConfig The node auto repair configuration for node group.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eda98060c40d77d6b1807101c213fffd27bd7c18bcff6d00f3fc1de23d7a82e7")
+    override
+        fun nodeRepairConfig(nodeRepairConfig: CfnNodegroup.NodeRepairConfigProperty.Builder.() -> Unit):
+        Unit = nodeRepairConfig(CfnNodegroup.NodeRepairConfigProperty(nodeRepairConfig))
+
+    /**
      * @param nodeRole The Amazon Resource Name (ARN) of the IAM role to associate with your node
      * group. 
      * The Amazon EKS worker node `kubelet` daemon makes calls to AWS APIs on your behalf. Nodes
@@ -1097,6 +1148,13 @@ public interface CfnNodegroupProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-launchtemplate)
      */
     override fun launchTemplate(): Any? = unwrap(this).getLaunchTemplate()
+
+    /**
+     * The node auto repair configuration for node group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-eks-nodegroup.html#cfn-eks-nodegroup-noderepairconfig)
+     */
+    override fun nodeRepairConfig(): Any? = unwrap(this).getNodeRepairConfig()
 
     /**
      * The Amazon Resource Name (ARN) of the IAM role to associate with your node group.

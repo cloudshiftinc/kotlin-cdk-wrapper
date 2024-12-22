@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.appsync
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.iam.IRole
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -18,7 +19,9 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.appsync.*;
+ * import io.cloudshiftdev.awscdk.services.iam.*;
  * GraphqlApi graphqlApi;
+ * Role role;
  * HttpDataSourceProps httpDataSourceProps = HttpDataSourceProps.builder()
  * .api(graphqlApi)
  * .endpoint("endpoint")
@@ -29,10 +32,11 @@ import kotlin.jvm.JvmName
  * .build())
  * .description("description")
  * .name("name")
+ * .serviceRole(role)
  * .build();
  * ```
  */
-public interface HttpDataSourceProps : BaseDataSourceProps {
+public interface HttpDataSourceProps : BackedDataSourceProps {
   /**
    * The authorization config in case the HTTP endpoint requires authorization.
    *
@@ -84,6 +88,12 @@ public interface HttpDataSourceProps : BaseDataSourceProps {
      * @param name The name of the data source.
      */
     public fun name(name: String)
+
+    /**
+     * @param serviceRole The IAM service role to be assumed by AppSync to interact with the data
+     * source.
+     */
+    public fun serviceRole(serviceRole: IRole)
   }
 
   private class BuilderImpl : Builder {
@@ -135,6 +145,14 @@ public interface HttpDataSourceProps : BaseDataSourceProps {
       cdkBuilder.name(name)
     }
 
+    /**
+     * @param serviceRole The IAM service role to be assumed by AppSync to interact with the data
+     * source.
+     */
+    override fun serviceRole(serviceRole: IRole) {
+      cdkBuilder.serviceRole(serviceRole.let(IRole.Companion::unwrap))
+    }
+
     public fun build(): software.amazon.awscdk.services.appsync.HttpDataSourceProps =
         cdkBuilder.build()
   }
@@ -174,6 +192,13 @@ public interface HttpDataSourceProps : BaseDataSourceProps {
      * Default: - id of data source
      */
     override fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The IAM service role to be assumed by AppSync to interact with the data source.
+     *
+     * Default: -  Create a new role
+     */
+    override fun serviceRole(): IRole? = unwrap(this).getServiceRole()?.let(IRole::wrap)
   }
 
   public companion object {

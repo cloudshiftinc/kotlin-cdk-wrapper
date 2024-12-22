@@ -64,6 +64,16 @@ public open class HttpLambdaAuthorizer(
   )
 
   /**
+   * The authorizationType used for Lambda Authorizer.
+   */
+  public open fun authorizationType(): String = unwrap(this).getAuthorizationType()
+
+  /**
+   * Return the id of the authorizer if it's been constructed.
+   */
+  public open fun authorizerId(): String = unwrap(this).getAuthorizerId()
+
+  /**
    * Bind this authorizer to a specified Http route.
    *
    * @param options 

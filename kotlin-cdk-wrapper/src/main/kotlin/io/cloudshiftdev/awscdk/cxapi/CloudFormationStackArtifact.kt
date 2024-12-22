@@ -171,7 +171,8 @@ public open class CloudFormationStackArtifact(
   /**
    * SNS Topics that will receive stack events.
    */
-  public open fun notificationArns(): List<String> = unwrap(this).getNotificationArns()
+  public open fun notificationArns(): List<String> = unwrap(this).getNotificationArns() ?:
+      emptyList()
 
   /**
    * The original name as defined in the CDK app.

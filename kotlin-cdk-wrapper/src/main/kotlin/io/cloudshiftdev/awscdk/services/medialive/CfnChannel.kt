@@ -60,6 +60,33 @@ public open class CfnChannel(
   )
 
   /**
+   *
+   */
+  public open fun anywhereSettings(): Any? = unwrap(this).getAnywhereSettings()
+
+  /**
+   *
+   */
+  public open fun anywhereSettings(`value`: IResolvable) {
+    unwrap(this).setAnywhereSettings(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun anywhereSettings(`value`: AnywhereSettingsProperty) {
+    unwrap(this).setAnywhereSettings(`value`.let(AnywhereSettingsProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("50de36667c6feebee2e5795eabb29c447c7c8960d3a8231d13257819630e0010")
+  public open fun anywhereSettings(`value`: AnywhereSettingsProperty.Builder.() -> Unit): Unit =
+      anywhereSettings(AnywhereSettingsProperty(`value`))
+
+  /**
    * The ARN of the MediaLive channel.
    *
    * For example: arn:aws:medialive:us-west-1:111122223333:medialive:channel:1234567
@@ -347,6 +374,26 @@ public open class CfnChannel(
   @CdkDslMarker
   public interface Builder {
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-anywheresettings)
+     * @param anywhereSettings 
+     */
+    public fun anywhereSettings(anywhereSettings: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-anywheresettings)
+     * @param anywhereSettings 
+     */
+    public fun anywhereSettings(anywhereSettings: AnywhereSettingsProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-anywheresettings)
+     * @param anywhereSettings 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a35b0797bf62ba74470fc2f2431ba69850c25040c960fd564b4cb0fa2634ed3b")
+    public fun anywhereSettings(anywhereSettings: AnywhereSettingsProperty.Builder.() -> Unit)
+
+    /**
      * Specification of CDI inputs for this channel.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-cdiinputspecification)
@@ -603,6 +650,31 @@ public open class CfnChannel(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.medialive.CfnChannel.Builder =
         software.amazon.awscdk.services.medialive.CfnChannel.Builder.create(scope, id)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-anywheresettings)
+     * @param anywhereSettings 
+     */
+    override fun anywhereSettings(anywhereSettings: IResolvable) {
+      cdkBuilder.anywhereSettings(anywhereSettings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-anywheresettings)
+     * @param anywhereSettings 
+     */
+    override fun anywhereSettings(anywhereSettings: AnywhereSettingsProperty) {
+      cdkBuilder.anywhereSettings(anywhereSettings.let(AnywhereSettingsProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-anywheresettings)
+     * @param anywhereSettings 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("a35b0797bf62ba74470fc2f2431ba69850c25040c960fd564b4cb0fa2634ed3b")
+    override fun anywhereSettings(anywhereSettings: AnywhereSettingsProperty.Builder.() -> Unit):
+        Unit = anywhereSettings(AnywhereSettingsProperty(anywhereSettings))
 
     /**
      * Specification of CDI inputs for this channel.
@@ -1701,6 +1773,105 @@ public open class CfnChannel(
           software.amazon.awscdk.services.medialive.CfnChannel.AncillarySourceSettingsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnChannel.AncillarySourceSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * AnywhereSettingsProperty anywhereSettingsProperty = AnywhereSettingsProperty.builder()
+   * .channelPlacementGroupId("channelPlacementGroupId")
+   * .clusterId("clusterId")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-anywheresettings.html)
+   */
+  public interface AnywhereSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-anywheresettings.html#cfn-medialive-channel-anywheresettings-channelplacementgroupid)
+     */
+    public fun channelPlacementGroupId(): String? = unwrap(this).getChannelPlacementGroupId()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-anywheresettings.html#cfn-medialive-channel-anywheresettings-clusterid)
+     */
+    public fun clusterId(): String? = unwrap(this).getClusterId()
+
+    /**
+     * A builder for [AnywhereSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param channelPlacementGroupId the value to be set.
+       */
+      public fun channelPlacementGroupId(channelPlacementGroupId: String)
+
+      /**
+       * @param clusterId the value to be set.
+       */
+      public fun clusterId(clusterId: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.AnywhereSettingsProperty.Builder =
+          software.amazon.awscdk.services.medialive.CfnChannel.AnywhereSettingsProperty.builder()
+
+      /**
+       * @param channelPlacementGroupId the value to be set.
+       */
+      override fun channelPlacementGroupId(channelPlacementGroupId: String) {
+        cdkBuilder.channelPlacementGroupId(channelPlacementGroupId)
+      }
+
+      /**
+       * @param clusterId the value to be set.
+       */
+      override fun clusterId(clusterId: String) {
+        cdkBuilder.clusterId(clusterId)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.AnywhereSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AnywhereSettingsProperty,
+    ) : CdkObject(cdkObject),
+        AnywhereSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-anywheresettings.html#cfn-medialive-channel-anywheresettings-channelplacementgroupid)
+       */
+      override fun channelPlacementGroupId(): String? = unwrap(this).getChannelPlacementGroupId()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-anywheresettings.html#cfn-medialive-channel-anywheresettings-clusterid)
+       */
+      override fun clusterId(): String? = unwrap(this).getClusterId()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): AnywhereSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.AnywhereSettingsProperty):
+          AnywhereSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? AnywhereSettingsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: AnywhereSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.AnywhereSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.AnywhereSettingsProperty
     }
   }
 
@@ -6110,6 +6281,704 @@ public open class CfnChannel(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * Object colorSpacePassthroughSettings;
+   * Object rec601Settings;
+   * Object rec709Settings;
+   * Av1ColorSpaceSettingsProperty av1ColorSpaceSettingsProperty =
+   * Av1ColorSpaceSettingsProperty.builder()
+   * .colorSpacePassthroughSettings(colorSpacePassthroughSettings)
+   * .hdr10Settings(Hdr10SettingsProperty.builder()
+   * .maxCll(123)
+   * .maxFall(123)
+   * .build())
+   * .rec601Settings(rec601Settings)
+   * .rec709Settings(rec709Settings)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1colorspacesettings.html)
+   */
+  public interface Av1ColorSpaceSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1colorspacesettings.html#cfn-medialive-channel-av1colorspacesettings-colorspacepassthroughsettings)
+     */
+    public fun colorSpacePassthroughSettings(): Any? =
+        unwrap(this).getColorSpacePassthroughSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1colorspacesettings.html#cfn-medialive-channel-av1colorspacesettings-hdr10settings)
+     */
+    public fun hdr10Settings(): Any? = unwrap(this).getHdr10Settings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1colorspacesettings.html#cfn-medialive-channel-av1colorspacesettings-rec601settings)
+     */
+    public fun rec601Settings(): Any? = unwrap(this).getRec601Settings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1colorspacesettings.html#cfn-medialive-channel-av1colorspacesettings-rec709settings)
+     */
+    public fun rec709Settings(): Any? = unwrap(this).getRec709Settings()
+
+    /**
+     * A builder for [Av1ColorSpaceSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param colorSpacePassthroughSettings the value to be set.
+       */
+      public fun colorSpacePassthroughSettings(colorSpacePassthroughSettings: Any)
+
+      /**
+       * @param hdr10Settings the value to be set.
+       */
+      public fun hdr10Settings(hdr10Settings: IResolvable)
+
+      /**
+       * @param hdr10Settings the value to be set.
+       */
+      public fun hdr10Settings(hdr10Settings: Hdr10SettingsProperty)
+
+      /**
+       * @param hdr10Settings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9f1df8502c65a9b94595cc532d31d2462acd6cb7d658bc6319e6d810a674972f")
+      public fun hdr10Settings(hdr10Settings: Hdr10SettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param rec601Settings the value to be set.
+       */
+      public fun rec601Settings(rec601Settings: Any)
+
+      /**
+       * @param rec709Settings the value to be set.
+       */
+      public fun rec709Settings(rec709Settings: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.Av1ColorSpaceSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnChannel.Av1ColorSpaceSettingsProperty.builder()
+
+      /**
+       * @param colorSpacePassthroughSettings the value to be set.
+       */
+      override fun colorSpacePassthroughSettings(colorSpacePassthroughSettings: Any) {
+        cdkBuilder.colorSpacePassthroughSettings(colorSpacePassthroughSettings)
+      }
+
+      /**
+       * @param hdr10Settings the value to be set.
+       */
+      override fun hdr10Settings(hdr10Settings: IResolvable) {
+        cdkBuilder.hdr10Settings(hdr10Settings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param hdr10Settings the value to be set.
+       */
+      override fun hdr10Settings(hdr10Settings: Hdr10SettingsProperty) {
+        cdkBuilder.hdr10Settings(hdr10Settings.let(Hdr10SettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param hdr10Settings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9f1df8502c65a9b94595cc532d31d2462acd6cb7d658bc6319e6d810a674972f")
+      override fun hdr10Settings(hdr10Settings: Hdr10SettingsProperty.Builder.() -> Unit): Unit =
+          hdr10Settings(Hdr10SettingsProperty(hdr10Settings))
+
+      /**
+       * @param rec601Settings the value to be set.
+       */
+      override fun rec601Settings(rec601Settings: Any) {
+        cdkBuilder.rec601Settings(rec601Settings)
+      }
+
+      /**
+       * @param rec709Settings the value to be set.
+       */
+      override fun rec709Settings(rec709Settings: Any) {
+        cdkBuilder.rec709Settings(rec709Settings)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.Av1ColorSpaceSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Av1ColorSpaceSettingsProperty,
+    ) : CdkObject(cdkObject),
+        Av1ColorSpaceSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1colorspacesettings.html#cfn-medialive-channel-av1colorspacesettings-colorspacepassthroughsettings)
+       */
+      override fun colorSpacePassthroughSettings(): Any? =
+          unwrap(this).getColorSpacePassthroughSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1colorspacesettings.html#cfn-medialive-channel-av1colorspacesettings-hdr10settings)
+       */
+      override fun hdr10Settings(): Any? = unwrap(this).getHdr10Settings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1colorspacesettings.html#cfn-medialive-channel-av1colorspacesettings-rec601settings)
+       */
+      override fun rec601Settings(): Any? = unwrap(this).getRec601Settings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1colorspacesettings.html#cfn-medialive-channel-av1colorspacesettings-rec709settings)
+       */
+      override fun rec709Settings(): Any? = unwrap(this).getRec709Settings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Av1ColorSpaceSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Av1ColorSpaceSettingsProperty):
+          Av1ColorSpaceSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          Av1ColorSpaceSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Av1ColorSpaceSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.Av1ColorSpaceSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.Av1ColorSpaceSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * Object colorSpacePassthroughSettings;
+   * Object rec601Settings;
+   * Object rec709Settings;
+   * Av1SettingsProperty av1SettingsProperty = Av1SettingsProperty.builder()
+   * .afdSignaling("afdSignaling")
+   * .bufSize(123)
+   * .colorSpaceSettings(Av1ColorSpaceSettingsProperty.builder()
+   * .colorSpacePassthroughSettings(colorSpacePassthroughSettings)
+   * .hdr10Settings(Hdr10SettingsProperty.builder()
+   * .maxCll(123)
+   * .maxFall(123)
+   * .build())
+   * .rec601Settings(rec601Settings)
+   * .rec709Settings(rec709Settings)
+   * .build())
+   * .fixedAfd("fixedAfd")
+   * .framerateDenominator(123)
+   * .framerateNumerator(123)
+   * .gopSize(123)
+   * .gopSizeUnits("gopSizeUnits")
+   * .level("level")
+   * .lookAheadRateControl("lookAheadRateControl")
+   * .maxBitrate(123)
+   * .minIInterval(123)
+   * .parDenominator(123)
+   * .parNumerator(123)
+   * .qvbrQualityLevel(123)
+   * .sceneChangeDetect("sceneChangeDetect")
+   * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
+   * .fontSize("fontSize")
+   * .position("position")
+   * .prefix("prefix")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html)
+   */
+  public interface Av1SettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-afdsignaling)
+     */
+    public fun afdSignaling(): String? = unwrap(this).getAfdSignaling()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-bufsize)
+     */
+    public fun bufSize(): Number? = unwrap(this).getBufSize()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-colorspacesettings)
+     */
+    public fun colorSpaceSettings(): Any? = unwrap(this).getColorSpaceSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-fixedafd)
+     */
+    public fun fixedAfd(): String? = unwrap(this).getFixedAfd()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-frameratedenominator)
+     */
+    public fun framerateDenominator(): Number? = unwrap(this).getFramerateDenominator()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-frameratenumerator)
+     */
+    public fun framerateNumerator(): Number? = unwrap(this).getFramerateNumerator()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-gopsize)
+     */
+    public fun gopSize(): Number? = unwrap(this).getGopSize()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-gopsizeunits)
+     */
+    public fun gopSizeUnits(): String? = unwrap(this).getGopSizeUnits()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-level)
+     */
+    public fun level(): String? = unwrap(this).getLevel()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-lookaheadratecontrol)
+     */
+    public fun lookAheadRateControl(): String? = unwrap(this).getLookAheadRateControl()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-maxbitrate)
+     */
+    public fun maxBitrate(): Number? = unwrap(this).getMaxBitrate()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-miniinterval)
+     */
+    public fun minIInterval(): Number? = unwrap(this).getMinIInterval()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-pardenominator)
+     */
+    public fun parDenominator(): Number? = unwrap(this).getParDenominator()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-parnumerator)
+     */
+    public fun parNumerator(): Number? = unwrap(this).getParNumerator()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-qvbrqualitylevel)
+     */
+    public fun qvbrQualityLevel(): Number? = unwrap(this).getQvbrQualityLevel()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-scenechangedetect)
+     */
+    public fun sceneChangeDetect(): String? = unwrap(this).getSceneChangeDetect()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-timecodeburninsettings)
+     */
+    public fun timecodeBurninSettings(): Any? = unwrap(this).getTimecodeBurninSettings()
+
+    /**
+     * A builder for [Av1SettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param afdSignaling the value to be set.
+       */
+      public fun afdSignaling(afdSignaling: String)
+
+      /**
+       * @param bufSize the value to be set.
+       */
+      public fun bufSize(bufSize: Number)
+
+      /**
+       * @param colorSpaceSettings the value to be set.
+       */
+      public fun colorSpaceSettings(colorSpaceSettings: IResolvable)
+
+      /**
+       * @param colorSpaceSettings the value to be set.
+       */
+      public fun colorSpaceSettings(colorSpaceSettings: Av1ColorSpaceSettingsProperty)
+
+      /**
+       * @param colorSpaceSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2c2aa25430efe3f665d9d011a93212d608cc397aad395f2d8a8b0fbcb00155fd")
+      public
+          fun colorSpaceSettings(colorSpaceSettings: Av1ColorSpaceSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param fixedAfd the value to be set.
+       */
+      public fun fixedAfd(fixedAfd: String)
+
+      /**
+       * @param framerateDenominator the value to be set.
+       */
+      public fun framerateDenominator(framerateDenominator: Number)
+
+      /**
+       * @param framerateNumerator the value to be set.
+       */
+      public fun framerateNumerator(framerateNumerator: Number)
+
+      /**
+       * @param gopSize the value to be set.
+       */
+      public fun gopSize(gopSize: Number)
+
+      /**
+       * @param gopSizeUnits the value to be set.
+       */
+      public fun gopSizeUnits(gopSizeUnits: String)
+
+      /**
+       * @param level the value to be set.
+       */
+      public fun level(level: String)
+
+      /**
+       * @param lookAheadRateControl the value to be set.
+       */
+      public fun lookAheadRateControl(lookAheadRateControl: String)
+
+      /**
+       * @param maxBitrate the value to be set.
+       */
+      public fun maxBitrate(maxBitrate: Number)
+
+      /**
+       * @param minIInterval the value to be set.
+       */
+      public fun minIInterval(minIInterval: Number)
+
+      /**
+       * @param parDenominator the value to be set.
+       */
+      public fun parDenominator(parDenominator: Number)
+
+      /**
+       * @param parNumerator the value to be set.
+       */
+      public fun parNumerator(parNumerator: Number)
+
+      /**
+       * @param qvbrQualityLevel the value to be set.
+       */
+      public fun qvbrQualityLevel(qvbrQualityLevel: Number)
+
+      /**
+       * @param sceneChangeDetect the value to be set.
+       */
+      public fun sceneChangeDetect(sceneChangeDetect: String)
+
+      /**
+       * @param timecodeBurninSettings the value to be set.
+       */
+      public fun timecodeBurninSettings(timecodeBurninSettings: IResolvable)
+
+      /**
+       * @param timecodeBurninSettings the value to be set.
+       */
+      public fun timecodeBurninSettings(timecodeBurninSettings: TimecodeBurninSettingsProperty)
+
+      /**
+       * @param timecodeBurninSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f871df5219ad89a25e12addddb5f334811360dc07403a84e1ffd17a26222841a")
+      public
+          fun timecodeBurninSettings(timecodeBurninSettings: TimecodeBurninSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.Av1SettingsProperty.Builder =
+          software.amazon.awscdk.services.medialive.CfnChannel.Av1SettingsProperty.builder()
+
+      /**
+       * @param afdSignaling the value to be set.
+       */
+      override fun afdSignaling(afdSignaling: String) {
+        cdkBuilder.afdSignaling(afdSignaling)
+      }
+
+      /**
+       * @param bufSize the value to be set.
+       */
+      override fun bufSize(bufSize: Number) {
+        cdkBuilder.bufSize(bufSize)
+      }
+
+      /**
+       * @param colorSpaceSettings the value to be set.
+       */
+      override fun colorSpaceSettings(colorSpaceSettings: IResolvable) {
+        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param colorSpaceSettings the value to be set.
+       */
+      override fun colorSpaceSettings(colorSpaceSettings: Av1ColorSpaceSettingsProperty) {
+        cdkBuilder.colorSpaceSettings(colorSpaceSettings.let(Av1ColorSpaceSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param colorSpaceSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2c2aa25430efe3f665d9d011a93212d608cc397aad395f2d8a8b0fbcb00155fd")
+      override
+          fun colorSpaceSettings(colorSpaceSettings: Av1ColorSpaceSettingsProperty.Builder.() -> Unit):
+          Unit = colorSpaceSettings(Av1ColorSpaceSettingsProperty(colorSpaceSettings))
+
+      /**
+       * @param fixedAfd the value to be set.
+       */
+      override fun fixedAfd(fixedAfd: String) {
+        cdkBuilder.fixedAfd(fixedAfd)
+      }
+
+      /**
+       * @param framerateDenominator the value to be set.
+       */
+      override fun framerateDenominator(framerateDenominator: Number) {
+        cdkBuilder.framerateDenominator(framerateDenominator)
+      }
+
+      /**
+       * @param framerateNumerator the value to be set.
+       */
+      override fun framerateNumerator(framerateNumerator: Number) {
+        cdkBuilder.framerateNumerator(framerateNumerator)
+      }
+
+      /**
+       * @param gopSize the value to be set.
+       */
+      override fun gopSize(gopSize: Number) {
+        cdkBuilder.gopSize(gopSize)
+      }
+
+      /**
+       * @param gopSizeUnits the value to be set.
+       */
+      override fun gopSizeUnits(gopSizeUnits: String) {
+        cdkBuilder.gopSizeUnits(gopSizeUnits)
+      }
+
+      /**
+       * @param level the value to be set.
+       */
+      override fun level(level: String) {
+        cdkBuilder.level(level)
+      }
+
+      /**
+       * @param lookAheadRateControl the value to be set.
+       */
+      override fun lookAheadRateControl(lookAheadRateControl: String) {
+        cdkBuilder.lookAheadRateControl(lookAheadRateControl)
+      }
+
+      /**
+       * @param maxBitrate the value to be set.
+       */
+      override fun maxBitrate(maxBitrate: Number) {
+        cdkBuilder.maxBitrate(maxBitrate)
+      }
+
+      /**
+       * @param minIInterval the value to be set.
+       */
+      override fun minIInterval(minIInterval: Number) {
+        cdkBuilder.minIInterval(minIInterval)
+      }
+
+      /**
+       * @param parDenominator the value to be set.
+       */
+      override fun parDenominator(parDenominator: Number) {
+        cdkBuilder.parDenominator(parDenominator)
+      }
+
+      /**
+       * @param parNumerator the value to be set.
+       */
+      override fun parNumerator(parNumerator: Number) {
+        cdkBuilder.parNumerator(parNumerator)
+      }
+
+      /**
+       * @param qvbrQualityLevel the value to be set.
+       */
+      override fun qvbrQualityLevel(qvbrQualityLevel: Number) {
+        cdkBuilder.qvbrQualityLevel(qvbrQualityLevel)
+      }
+
+      /**
+       * @param sceneChangeDetect the value to be set.
+       */
+      override fun sceneChangeDetect(sceneChangeDetect: String) {
+        cdkBuilder.sceneChangeDetect(sceneChangeDetect)
+      }
+
+      /**
+       * @param timecodeBurninSettings the value to be set.
+       */
+      override fun timecodeBurninSettings(timecodeBurninSettings: IResolvable) {
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param timecodeBurninSettings the value to be set.
+       */
+      override fun timecodeBurninSettings(timecodeBurninSettings: TimecodeBurninSettingsProperty) {
+        cdkBuilder.timecodeBurninSettings(timecodeBurninSettings.let(TimecodeBurninSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param timecodeBurninSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("f871df5219ad89a25e12addddb5f334811360dc07403a84e1ffd17a26222841a")
+      override
+          fun timecodeBurninSettings(timecodeBurninSettings: TimecodeBurninSettingsProperty.Builder.() -> Unit):
+          Unit = timecodeBurninSettings(TimecodeBurninSettingsProperty(timecodeBurninSettings))
+
+      public fun build(): software.amazon.awscdk.services.medialive.CfnChannel.Av1SettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Av1SettingsProperty,
+    ) : CdkObject(cdkObject),
+        Av1SettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-afdsignaling)
+       */
+      override fun afdSignaling(): String? = unwrap(this).getAfdSignaling()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-bufsize)
+       */
+      override fun bufSize(): Number? = unwrap(this).getBufSize()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-colorspacesettings)
+       */
+      override fun colorSpaceSettings(): Any? = unwrap(this).getColorSpaceSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-fixedafd)
+       */
+      override fun fixedAfd(): String? = unwrap(this).getFixedAfd()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-frameratedenominator)
+       */
+      override fun framerateDenominator(): Number? = unwrap(this).getFramerateDenominator()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-frameratenumerator)
+       */
+      override fun framerateNumerator(): Number? = unwrap(this).getFramerateNumerator()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-gopsize)
+       */
+      override fun gopSize(): Number? = unwrap(this).getGopSize()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-gopsizeunits)
+       */
+      override fun gopSizeUnits(): String? = unwrap(this).getGopSizeUnits()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-level)
+       */
+      override fun level(): String? = unwrap(this).getLevel()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-lookaheadratecontrol)
+       */
+      override fun lookAheadRateControl(): String? = unwrap(this).getLookAheadRateControl()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-maxbitrate)
+       */
+      override fun maxBitrate(): Number? = unwrap(this).getMaxBitrate()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-miniinterval)
+       */
+      override fun minIInterval(): Number? = unwrap(this).getMinIInterval()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-pardenominator)
+       */
+      override fun parDenominator(): Number? = unwrap(this).getParDenominator()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-parnumerator)
+       */
+      override fun parNumerator(): Number? = unwrap(this).getParNumerator()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-qvbrqualitylevel)
+       */
+      override fun qvbrQualityLevel(): Number? = unwrap(this).getQvbrQualityLevel()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-scenechangedetect)
+       */
+      override fun sceneChangeDetect(): String? = unwrap(this).getSceneChangeDetect()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-av1settings.html#cfn-medialive-channel-av1settings-timecodeburninsettings)
+       */
+      override fun timecodeBurninSettings(): Any? = unwrap(this).getTimecodeBurninSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): Av1SettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.Av1SettingsProperty):
+          Av1SettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? Av1SettingsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: Av1SettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.Av1SettingsProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.Av1SettingsProperty
+    }
+  }
+
+  /**
    * The configuration of ad avail blanking in the output.
    *
    * The parent of this entity is EncoderSettings.
@@ -6646,6 +7515,108 @@ public open class CfnChannel(
           software.amazon.awscdk.services.medialive.CfnChannel.AvailSettingsProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnChannel.AvailSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * BandwidthReductionFilterSettingsProperty bandwidthReductionFilterSettingsProperty =
+   * BandwidthReductionFilterSettingsProperty.builder()
+   * .postFilterSharpening("postFilterSharpening")
+   * .strength("strength")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-bandwidthreductionfiltersettings.html)
+   */
+  public interface BandwidthReductionFilterSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-bandwidthreductionfiltersettings.html#cfn-medialive-channel-bandwidthreductionfiltersettings-postfiltersharpening)
+     */
+    public fun postFilterSharpening(): String? = unwrap(this).getPostFilterSharpening()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-bandwidthreductionfiltersettings.html#cfn-medialive-channel-bandwidthreductionfiltersettings-strength)
+     */
+    public fun strength(): String? = unwrap(this).getStrength()
+
+    /**
+     * A builder for [BandwidthReductionFilterSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param postFilterSharpening the value to be set.
+       */
+      public fun postFilterSharpening(postFilterSharpening: String)
+
+      /**
+       * @param strength the value to be set.
+       */
+      public fun strength(strength: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.BandwidthReductionFilterSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnChannel.BandwidthReductionFilterSettingsProperty.builder()
+
+      /**
+       * @param postFilterSharpening the value to be set.
+       */
+      override fun postFilterSharpening(postFilterSharpening: String) {
+        cdkBuilder.postFilterSharpening(postFilterSharpening)
+      }
+
+      /**
+       * @param strength the value to be set.
+       */
+      override fun strength(strength: String) {
+        cdkBuilder.strength(strength)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.BandwidthReductionFilterSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.BandwidthReductionFilterSettingsProperty,
+    ) : CdkObject(cdkObject),
+        BandwidthReductionFilterSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-bandwidthreductionfiltersettings.html#cfn-medialive-channel-bandwidthreductionfiltersettings-postfiltersharpening)
+       */
+      override fun postFilterSharpening(): String? = unwrap(this).getPostFilterSharpening()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-bandwidthreductionfiltersettings.html#cfn-medialive-channel-bandwidthreductionfiltersettings-strength)
+       */
+      override fun strength(): String? = unwrap(this).getStrength()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BandwidthReductionFilterSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.BandwidthReductionFilterSettingsProperty):
+          BandwidthReductionFilterSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BandwidthReductionFilterSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BandwidthReductionFilterSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.BandwidthReductionFilterSettingsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.BandwidthReductionFilterSettingsProperty
     }
   }
 
@@ -17144,6 +18115,10 @@ public open class CfnChannel(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.medialive.*;
    * H264FilterSettingsProperty h264FilterSettingsProperty = H264FilterSettingsProperty.builder()
+   * .bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty.builder()
+   * .postFilterSharpening("postFilterSharpening")
+   * .strength("strength")
+   * .build())
    * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
    * .postFilterSharpening("postFilterSharpening")
    * .strength("strength")
@@ -17154,6 +18129,12 @@ public open class CfnChannel(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264filtersettings.html)
    */
   public interface H264FilterSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264filtersettings.html#cfn-medialive-channel-h264filtersettings-bandwidthreductionfiltersettings)
+     */
+    public fun bandwidthReductionFilterSettings(): Any? =
+        unwrap(this).getBandwidthReductionFilterSettings()
+
     /**
      * Settings for applying the temporal filter to the video.
      *
@@ -17166,6 +18147,25 @@ public open class CfnChannel(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      public fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: IResolvable)
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      public
+          fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: BandwidthReductionFilterSettingsProperty)
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("27cfb5b1f64f2d541167fa7074f0d604bec204a8e1d0d8fb163893c1dc998088")
+      public
+          fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: BandwidthReductionFilterSettingsProperty.Builder.() -> Unit)
+
       /**
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
        */
@@ -17189,6 +18189,31 @@ public open class CfnChannel(
       private val cdkBuilder:
           software.amazon.awscdk.services.medialive.CfnChannel.H264FilterSettingsProperty.Builder =
           software.amazon.awscdk.services.medialive.CfnChannel.H264FilterSettingsProperty.builder()
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      override fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: IResolvable) {
+        cdkBuilder.bandwidthReductionFilterSettings(bandwidthReductionFilterSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      override
+          fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: BandwidthReductionFilterSettingsProperty) {
+        cdkBuilder.bandwidthReductionFilterSettings(bandwidthReductionFilterSettings.let(BandwidthReductionFilterSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("27cfb5b1f64f2d541167fa7074f0d604bec204a8e1d0d8fb163893c1dc998088")
+      override
+          fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: BandwidthReductionFilterSettingsProperty.Builder.() -> Unit):
+          Unit =
+          bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty(bandwidthReductionFilterSettings))
 
       /**
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
@@ -17222,6 +18247,12 @@ public open class CfnChannel(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H264FilterSettingsProperty,
     ) : CdkObject(cdkObject),
         H264FilterSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264filtersettings.html#cfn-medialive-channel-h264filtersettings-bandwidthreductionfiltersettings)
+       */
+      override fun bandwidthReductionFilterSettings(): Any? =
+          unwrap(this).getBandwidthReductionFilterSettings()
+
       /**
        * Settings for applying the temporal filter to the video.
        *
@@ -17273,6 +18304,10 @@ public open class CfnChannel(
    * .build())
    * .entropyEncoding("entropyEncoding")
    * .filterSettings(H264FilterSettingsProperty.builder()
+   * .bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty.builder()
+   * .postFilterSharpening("postFilterSharpening")
+   * .strength("strength")
+   * .build())
    * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
    * .postFilterSharpening("postFilterSharpening")
    * .strength("strength")
@@ -17293,6 +18328,7 @@ public open class CfnChannel(
    * .lookAheadRateControl("lookAheadRateControl")
    * .maxBitrate(123)
    * .minIInterval(123)
+   * .minQp(123)
    * .numRefFrames(123)
    * .parControl("parControl")
    * .parDenominator(123)
@@ -17534,6 +18570,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264settings.html#cfn-medialive-channel-h264settings-miniinterval)
      */
     public fun minIInterval(): Number? = unwrap(this).getMinIInterval()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264settings.html#cfn-medialive-channel-h264settings-minqp)
+     */
+    public fun minQp(): Number? = unwrap(this).getMinQp()
 
     /**
      * The number of reference frames to use.
@@ -17886,6 +18927,11 @@ public open class CfnChannel(
        * GOP. Note that the maximum GOP stretch = GOP size + Min-I-interval - 1.
        */
       public fun minIInterval(minIInterval: Number)
+
+      /**
+       * @param minQp the value to be set.
+       */
+      public fun minQp(minQp: Number)
 
       /**
        * @param numRefFrames The number of reference frames to use.
@@ -18264,6 +19310,13 @@ public open class CfnChannel(
        */
       override fun minIInterval(minIInterval: Number) {
         cdkBuilder.minIInterval(minIInterval)
+      }
+
+      /**
+       * @param minQp the value to be set.
+       */
+      override fun minQp(minQp: Number) {
+        cdkBuilder.minQp(minQp)
       }
 
       /**
@@ -18664,6 +19717,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264settings.html#cfn-medialive-channel-h264settings-miniinterval)
        */
       override fun minIInterval(): Number? = unwrap(this).getMinIInterval()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h264settings.html#cfn-medialive-channel-h264settings-minqp)
+       */
+      override fun minQp(): Number? = unwrap(this).getMinQp()
 
       /**
        * The number of reference frames to use.
@@ -19206,6 +20264,10 @@ public open class CfnChannel(
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.medialive.*;
    * H265FilterSettingsProperty h265FilterSettingsProperty = H265FilterSettingsProperty.builder()
+   * .bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty.builder()
+   * .postFilterSharpening("postFilterSharpening")
+   * .strength("strength")
+   * .build())
    * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
    * .postFilterSharpening("postFilterSharpening")
    * .strength("strength")
@@ -19216,6 +20278,12 @@ public open class CfnChannel(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265filtersettings.html)
    */
   public interface H265FilterSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265filtersettings.html#cfn-medialive-channel-h265filtersettings-bandwidthreductionfiltersettings)
+     */
+    public fun bandwidthReductionFilterSettings(): Any? =
+        unwrap(this).getBandwidthReductionFilterSettings()
+
     /**
      * Settings for applying the temporal filter to the video.
      *
@@ -19228,6 +20296,25 @@ public open class CfnChannel(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      public fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: IResolvable)
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      public
+          fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: BandwidthReductionFilterSettingsProperty)
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("67fb554a74f7887b45eafa68389023c018a46eadeec20b4c29d3bdffd82bbf26")
+      public
+          fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: BandwidthReductionFilterSettingsProperty.Builder.() -> Unit)
+
       /**
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
        */
@@ -19251,6 +20338,31 @@ public open class CfnChannel(
       private val cdkBuilder:
           software.amazon.awscdk.services.medialive.CfnChannel.H265FilterSettingsProperty.Builder =
           software.amazon.awscdk.services.medialive.CfnChannel.H265FilterSettingsProperty.builder()
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      override fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: IResolvable) {
+        cdkBuilder.bandwidthReductionFilterSettings(bandwidthReductionFilterSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      override
+          fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: BandwidthReductionFilterSettingsProperty) {
+        cdkBuilder.bandwidthReductionFilterSettings(bandwidthReductionFilterSettings.let(BandwidthReductionFilterSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param bandwidthReductionFilterSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("67fb554a74f7887b45eafa68389023c018a46eadeec20b4c29d3bdffd82bbf26")
+      override
+          fun bandwidthReductionFilterSettings(bandwidthReductionFilterSettings: BandwidthReductionFilterSettingsProperty.Builder.() -> Unit):
+          Unit =
+          bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty(bandwidthReductionFilterSettings))
 
       /**
        * @param temporalFilterSettings Settings for applying the temporal filter to the video.
@@ -19284,6 +20396,12 @@ public open class CfnChannel(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.H265FilterSettingsProperty,
     ) : CdkObject(cdkObject),
         H265FilterSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265filtersettings.html#cfn-medialive-channel-h265filtersettings-bandwidthreductionfiltersettings)
+       */
+      override fun bandwidthReductionFilterSettings(): Any? =
+          unwrap(this).getBandwidthReductionFilterSettings()
+
       /**
        * Settings for applying the temporal filter to the video.
        *
@@ -19339,6 +20457,10 @@ public open class CfnChannel(
    * .rec709Settings(Rec709SettingsProperty.builder().build())
    * .build())
    * .filterSettings(H265FilterSettingsProperty.builder()
+   * .bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty.builder()
+   * .postFilterSharpening("postFilterSharpening")
+   * .strength("strength")
+   * .build())
    * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
    * .postFilterSharpening("postFilterSharpening")
    * .strength("strength")
@@ -19355,6 +20477,7 @@ public open class CfnChannel(
    * .lookAheadRateControl("lookAheadRateControl")
    * .maxBitrate(123)
    * .minIInterval(123)
+   * .minQp(123)
    * .mvOverPictureBoundaries("mvOverPictureBoundaries")
    * .mvTemporalPredictor("mvTemporalPredictor")
    * .parDenominator(123)
@@ -19548,6 +20671,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-miniinterval)
      */
     public fun minIInterval(): Number? = unwrap(this).getMinIInterval()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-minqp)
+     */
+    public fun minQp(): Number? = unwrap(this).getMinQp()
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-mvoverpictureboundaries)
@@ -19829,6 +20957,11 @@ public open class CfnChannel(
        * Min-I-interval - 1
        */
       public fun minIInterval(minIInterval: Number)
+
+      /**
+       * @param minQp the value to be set.
+       */
+      public fun minQp(minQp: Number)
 
       /**
        * @param mvOverPictureBoundaries the value to be set.
@@ -20147,6 +21280,13 @@ public open class CfnChannel(
        */
       override fun minIInterval(minIInterval: Number) {
         cdkBuilder.minIInterval(minIInterval)
+      }
+
+      /**
+       * @param minQp the value to be set.
+       */
+      override fun minQp(minQp: Number) {
+        cdkBuilder.minQp(minQp)
       }
 
       /**
@@ -20483,6 +21623,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-miniinterval)
        */
       override fun minIInterval(): Number? = unwrap(this).getMinIInterval()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-minqp)
+       */
+      override fun minQp(): Number? = unwrap(this).getMinQp()
 
       /**
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-h265settings.html#cfn-medialive-channel-h265settings-mvoverpictureboundaries)
@@ -24881,6 +26026,9 @@ public open class CfnChannel(
    * .retryInterval(123)
    * .scte35Source("scte35Source")
    * .build())
+   * .multicastInputSettings(MulticastInputSettingsProperty.builder()
+   * .sourceIpAddress("sourceIpAddress")
+   * .build())
    * .serverValidation("serverValidation")
    * .build())
    * .scte35Pid(123)
@@ -24905,6 +26053,7 @@ public open class CfnChannel(
    * .build())
    * .build())
    * .build())
+   * .logicalInterfaceNames(List.of("logicalInterfaceNames"))
    * .build();
    * ```
    *
@@ -24942,6 +26091,12 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputattachment.html#cfn-medialive-channel-inputattachment-inputsettings)
      */
     public fun inputSettings(): Any? = unwrap(this).getInputSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputattachment.html#cfn-medialive-channel-inputattachment-logicalinterfacenames)
+     */
+    public fun logicalInterfaceNames(): List<String> = unwrap(this).getLogicalInterfaceNames() ?:
+        emptyList()
 
     /**
      * A builder for [InputAttachmentProperty]
@@ -25000,6 +26155,16 @@ public open class CfnChannel(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("40fd982f031418e7a89f9e8318bb9b2455be74009e2c8102957b842f53500f5a")
       public fun inputSettings(inputSettings: InputSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param logicalInterfaceNames the value to be set.
+       */
+      public fun logicalInterfaceNames(logicalInterfaceNames: List<String>)
+
+      /**
+       * @param logicalInterfaceNames the value to be set.
+       */
+      public fun logicalInterfaceNames(vararg logicalInterfaceNames: String)
     }
 
     private class BuilderImpl : Builder {
@@ -25075,6 +26240,19 @@ public open class CfnChannel(
       override fun inputSettings(inputSettings: InputSettingsProperty.Builder.() -> Unit): Unit =
           inputSettings(InputSettingsProperty(inputSettings))
 
+      /**
+       * @param logicalInterfaceNames the value to be set.
+       */
+      override fun logicalInterfaceNames(logicalInterfaceNames: List<String>) {
+        cdkBuilder.logicalInterfaceNames(logicalInterfaceNames)
+      }
+
+      /**
+       * @param logicalInterfaceNames the value to be set.
+       */
+      override fun logicalInterfaceNames(vararg logicalInterfaceNames: String): Unit =
+          logicalInterfaceNames(logicalInterfaceNames.toList())
+
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.InputAttachmentProperty =
           cdkBuilder.build()
@@ -25115,6 +26293,12 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputattachment.html#cfn-medialive-channel-inputattachment-inputsettings)
        */
       override fun inputSettings(): Any? = unwrap(this).getInputSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-inputattachment.html#cfn-medialive-channel-inputattachment-logicalinterfacenames)
+       */
+      override fun logicalInterfaceNames(): List<String> = unwrap(this).getLogicalInterfaceNames()
+          ?: emptyList()
     }
 
     public companion object {
@@ -25865,6 +27049,9 @@ public open class CfnChannel(
    * .retries(123)
    * .retryInterval(123)
    * .scte35Source("scte35Source")
+   * .build())
+   * .multicastInputSettings(MulticastInputSettingsProperty.builder()
+   * .sourceIpAddress("sourceIpAddress")
    * .build())
    * .serverValidation("serverValidation")
    * .build())
@@ -31876,6 +33063,207 @@ public open class CfnChannel(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * MulticastInputSettingsProperty multicastInputSettingsProperty =
+   * MulticastInputSettingsProperty.builder()
+   * .sourceIpAddress("sourceIpAddress")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multicastinputsettings.html)
+   */
+  public interface MulticastInputSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multicastinputsettings.html#cfn-medialive-channel-multicastinputsettings-sourceipaddress)
+     */
+    public fun sourceIpAddress(): String? = unwrap(this).getSourceIpAddress()
+
+    /**
+     * A builder for [MulticastInputSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sourceIpAddress the value to be set.
+       */
+      public fun sourceIpAddress(sourceIpAddress: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.MulticastInputSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnChannel.MulticastInputSettingsProperty.builder()
+
+      /**
+       * @param sourceIpAddress the value to be set.
+       */
+      override fun sourceIpAddress(sourceIpAddress: String) {
+        cdkBuilder.sourceIpAddress(sourceIpAddress)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.MulticastInputSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MulticastInputSettingsProperty,
+    ) : CdkObject(cdkObject),
+        MulticastInputSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multicastinputsettings.html#cfn-medialive-channel-multicastinputsettings-sourceipaddress)
+       */
+      override fun sourceIpAddress(): String? = unwrap(this).getSourceIpAddress()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MulticastInputSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MulticastInputSettingsProperty):
+          MulticastInputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MulticastInputSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MulticastInputSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.MulticastInputSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.MulticastInputSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * MultiplexContainerSettingsProperty multiplexContainerSettingsProperty =
+   * MultiplexContainerSettingsProperty.builder()
+   * .multiplexM2TsSettings(MultiplexM2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioStreamType("audioStreamType")
+   * .ccDescriptor("ccDescriptor")
+   * .ebif("ebif")
+   * .esRateInPes("esRateInPes")
+   * .klv("klv")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .scte35Control("scte35Control")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexcontainersettings.html)
+   */
+  public interface MultiplexContainerSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexcontainersettings.html#cfn-medialive-channel-multiplexcontainersettings-multiplexm2tssettings)
+     */
+    public fun multiplexM2TsSettings(): Any? = unwrap(this).getMultiplexM2TsSettings()
+
+    /**
+     * A builder for [MultiplexContainerSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param multiplexM2TsSettings the value to be set.
+       */
+      public fun multiplexM2TsSettings(multiplexM2TsSettings: IResolvable)
+
+      /**
+       * @param multiplexM2TsSettings the value to be set.
+       */
+      public fun multiplexM2TsSettings(multiplexM2TsSettings: MultiplexM2tsSettingsProperty)
+
+      /**
+       * @param multiplexM2TsSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("430e9a9091d645a0cf900effca75fa0a670770d47ca5fa4c623120ec6c6dde80")
+      public
+          fun multiplexM2TsSettings(multiplexM2TsSettings: MultiplexM2tsSettingsProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexContainerSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexContainerSettingsProperty.builder()
+
+      /**
+       * @param multiplexM2TsSettings the value to be set.
+       */
+      override fun multiplexM2TsSettings(multiplexM2TsSettings: IResolvable) {
+        cdkBuilder.multiplexM2TsSettings(multiplexM2TsSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param multiplexM2TsSettings the value to be set.
+       */
+      override fun multiplexM2TsSettings(multiplexM2TsSettings: MultiplexM2tsSettingsProperty) {
+        cdkBuilder.multiplexM2TsSettings(multiplexM2TsSettings.let(MultiplexM2tsSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param multiplexM2TsSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("430e9a9091d645a0cf900effca75fa0a670770d47ca5fa4c623120ec6c6dde80")
+      override
+          fun multiplexM2TsSettings(multiplexM2TsSettings: MultiplexM2tsSettingsProperty.Builder.() -> Unit):
+          Unit = multiplexM2TsSettings(MultiplexM2tsSettingsProperty(multiplexM2TsSettings))
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexContainerSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexContainerSettingsProperty,
+    ) : CdkObject(cdkObject),
+        MultiplexContainerSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexcontainersettings.html#cfn-medialive-channel-multiplexcontainersettings-multiplexm2tssettings)
+       */
+      override fun multiplexM2TsSettings(): Any? = unwrap(this).getMultiplexM2TsSettings()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MultiplexContainerSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexContainerSettingsProperty):
+          MultiplexContainerSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexContainerSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiplexContainerSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexContainerSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexContainerSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
    * MultiplexGroupSettingsProperty multiplexGroupSettingsProperty =
    * MultiplexGroupSettingsProperty.builder().build();
    * ```
@@ -31924,6 +33312,385 @@ public open class CfnChannel(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * MultiplexM2tsSettingsProperty multiplexM2tsSettingsProperty =
+   * MultiplexM2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioStreamType("audioStreamType")
+   * .ccDescriptor("ccDescriptor")
+   * .ebif("ebif")
+   * .esRateInPes("esRateInPes")
+   * .klv("klv")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .scte35Control("scte35Control")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html)
+   */
+  public interface MultiplexM2tsSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-absentinputaudiobehavior)
+     */
+    public fun absentInputAudioBehavior(): String? = unwrap(this).getAbsentInputAudioBehavior()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-arib)
+     */
+    public fun arib(): String? = unwrap(this).getArib()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-audiobuffermodel)
+     */
+    public fun audioBufferModel(): String? = unwrap(this).getAudioBufferModel()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-audioframesperpes)
+     */
+    public fun audioFramesPerPes(): Number? = unwrap(this).getAudioFramesPerPes()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-audiostreamtype)
+     */
+    public fun audioStreamType(): String? = unwrap(this).getAudioStreamType()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-ccdescriptor)
+     */
+    public fun ccDescriptor(): String? = unwrap(this).getCcDescriptor()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-ebif)
+     */
+    public fun ebif(): String? = unwrap(this).getEbif()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-esrateinpes)
+     */
+    public fun esRateInPes(): String? = unwrap(this).getEsRateInPes()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-klv)
+     */
+    public fun klv(): String? = unwrap(this).getKlv()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-nielsenid3behavior)
+     */
+    public fun nielsenId3Behavior(): String? = unwrap(this).getNielsenId3Behavior()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-pcrcontrol)
+     */
+    public fun pcrControl(): String? = unwrap(this).getPcrControl()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-pcrperiod)
+     */
+    public fun pcrPeriod(): Number? = unwrap(this).getPcrPeriod()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-scte35control)
+     */
+    public fun scte35Control(): String? = unwrap(this).getScte35Control()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-scte35prerollpullupmilliseconds)
+     */
+    public fun scte35PrerollPullupMilliseconds(): Number? =
+        unwrap(this).getScte35PrerollPullupMilliseconds()
+
+    /**
+     * A builder for [MultiplexM2tsSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param absentInputAudioBehavior the value to be set.
+       */
+      public fun absentInputAudioBehavior(absentInputAudioBehavior: String)
+
+      /**
+       * @param arib the value to be set.
+       */
+      public fun arib(arib: String)
+
+      /**
+       * @param audioBufferModel the value to be set.
+       */
+      public fun audioBufferModel(audioBufferModel: String)
+
+      /**
+       * @param audioFramesPerPes the value to be set.
+       */
+      public fun audioFramesPerPes(audioFramesPerPes: Number)
+
+      /**
+       * @param audioStreamType the value to be set.
+       */
+      public fun audioStreamType(audioStreamType: String)
+
+      /**
+       * @param ccDescriptor the value to be set.
+       */
+      public fun ccDescriptor(ccDescriptor: String)
+
+      /**
+       * @param ebif the value to be set.
+       */
+      public fun ebif(ebif: String)
+
+      /**
+       * @param esRateInPes the value to be set.
+       */
+      public fun esRateInPes(esRateInPes: String)
+
+      /**
+       * @param klv the value to be set.
+       */
+      public fun klv(klv: String)
+
+      /**
+       * @param nielsenId3Behavior the value to be set.
+       */
+      public fun nielsenId3Behavior(nielsenId3Behavior: String)
+
+      /**
+       * @param pcrControl the value to be set.
+       */
+      public fun pcrControl(pcrControl: String)
+
+      /**
+       * @param pcrPeriod the value to be set.
+       */
+      public fun pcrPeriod(pcrPeriod: Number)
+
+      /**
+       * @param scte35Control the value to be set.
+       */
+      public fun scte35Control(scte35Control: String)
+
+      /**
+       * @param scte35PrerollPullupMilliseconds the value to be set.
+       */
+      public fun scte35PrerollPullupMilliseconds(scte35PrerollPullupMilliseconds: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexM2tsSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexM2tsSettingsProperty.builder()
+
+      /**
+       * @param absentInputAudioBehavior the value to be set.
+       */
+      override fun absentInputAudioBehavior(absentInputAudioBehavior: String) {
+        cdkBuilder.absentInputAudioBehavior(absentInputAudioBehavior)
+      }
+
+      /**
+       * @param arib the value to be set.
+       */
+      override fun arib(arib: String) {
+        cdkBuilder.arib(arib)
+      }
+
+      /**
+       * @param audioBufferModel the value to be set.
+       */
+      override fun audioBufferModel(audioBufferModel: String) {
+        cdkBuilder.audioBufferModel(audioBufferModel)
+      }
+
+      /**
+       * @param audioFramesPerPes the value to be set.
+       */
+      override fun audioFramesPerPes(audioFramesPerPes: Number) {
+        cdkBuilder.audioFramesPerPes(audioFramesPerPes)
+      }
+
+      /**
+       * @param audioStreamType the value to be set.
+       */
+      override fun audioStreamType(audioStreamType: String) {
+        cdkBuilder.audioStreamType(audioStreamType)
+      }
+
+      /**
+       * @param ccDescriptor the value to be set.
+       */
+      override fun ccDescriptor(ccDescriptor: String) {
+        cdkBuilder.ccDescriptor(ccDescriptor)
+      }
+
+      /**
+       * @param ebif the value to be set.
+       */
+      override fun ebif(ebif: String) {
+        cdkBuilder.ebif(ebif)
+      }
+
+      /**
+       * @param esRateInPes the value to be set.
+       */
+      override fun esRateInPes(esRateInPes: String) {
+        cdkBuilder.esRateInPes(esRateInPes)
+      }
+
+      /**
+       * @param klv the value to be set.
+       */
+      override fun klv(klv: String) {
+        cdkBuilder.klv(klv)
+      }
+
+      /**
+       * @param nielsenId3Behavior the value to be set.
+       */
+      override fun nielsenId3Behavior(nielsenId3Behavior: String) {
+        cdkBuilder.nielsenId3Behavior(nielsenId3Behavior)
+      }
+
+      /**
+       * @param pcrControl the value to be set.
+       */
+      override fun pcrControl(pcrControl: String) {
+        cdkBuilder.pcrControl(pcrControl)
+      }
+
+      /**
+       * @param pcrPeriod the value to be set.
+       */
+      override fun pcrPeriod(pcrPeriod: Number) {
+        cdkBuilder.pcrPeriod(pcrPeriod)
+      }
+
+      /**
+       * @param scte35Control the value to be set.
+       */
+      override fun scte35Control(scte35Control: String) {
+        cdkBuilder.scte35Control(scte35Control)
+      }
+
+      /**
+       * @param scte35PrerollPullupMilliseconds the value to be set.
+       */
+      override fun scte35PrerollPullupMilliseconds(scte35PrerollPullupMilliseconds: Number) {
+        cdkBuilder.scte35PrerollPullupMilliseconds(scte35PrerollPullupMilliseconds)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexM2tsSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexM2tsSettingsProperty,
+    ) : CdkObject(cdkObject),
+        MultiplexM2tsSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-absentinputaudiobehavior)
+       */
+      override fun absentInputAudioBehavior(): String? = unwrap(this).getAbsentInputAudioBehavior()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-arib)
+       */
+      override fun arib(): String? = unwrap(this).getArib()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-audiobuffermodel)
+       */
+      override fun audioBufferModel(): String? = unwrap(this).getAudioBufferModel()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-audioframesperpes)
+       */
+      override fun audioFramesPerPes(): Number? = unwrap(this).getAudioFramesPerPes()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-audiostreamtype)
+       */
+      override fun audioStreamType(): String? = unwrap(this).getAudioStreamType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-ccdescriptor)
+       */
+      override fun ccDescriptor(): String? = unwrap(this).getCcDescriptor()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-ebif)
+       */
+      override fun ebif(): String? = unwrap(this).getEbif()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-esrateinpes)
+       */
+      override fun esRateInPes(): String? = unwrap(this).getEsRateInPes()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-klv)
+       */
+      override fun klv(): String? = unwrap(this).getKlv()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-nielsenid3behavior)
+       */
+      override fun nielsenId3Behavior(): String? = unwrap(this).getNielsenId3Behavior()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-pcrcontrol)
+       */
+      override fun pcrControl(): String? = unwrap(this).getPcrControl()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-pcrperiod)
+       */
+      override fun pcrPeriod(): Number? = unwrap(this).getPcrPeriod()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-scte35control)
+       */
+      override fun scte35Control(): String? = unwrap(this).getScte35Control()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexm2tssettings.html#cfn-medialive-channel-multiplexm2tssettings-scte35prerollpullupmilliseconds)
+       */
+      override fun scte35PrerollPullupMilliseconds(): Number? =
+          unwrap(this).getScte35PrerollPullupMilliseconds()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): MultiplexM2tsSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexM2tsSettingsProperty):
+          MultiplexM2tsSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MultiplexM2tsSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MultiplexM2tsSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexM2tsSettingsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.MultiplexM2tsSettingsProperty
+    }
+  }
+
+  /**
    * Configuration of a Multiplex output.
    *
    * The parent of this entity is OutputSettings.
@@ -31936,6 +33703,24 @@ public open class CfnChannel(
    * import io.cloudshiftdev.awscdk.services.medialive.*;
    * MultiplexOutputSettingsProperty multiplexOutputSettingsProperty =
    * MultiplexOutputSettingsProperty.builder()
+   * .containerSettings(MultiplexContainerSettingsProperty.builder()
+   * .multiplexM2TsSettings(MultiplexM2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioStreamType("audioStreamType")
+   * .ccDescriptor("ccDescriptor")
+   * .ebif("ebif")
+   * .esRateInPes("esRateInPes")
+   * .klv("klv")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .scte35Control("scte35Control")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .build())
+   * .build())
    * .destination(OutputLocationRefProperty.builder()
    * .destinationRefId("destinationRefId")
    * .build())
@@ -31945,6 +33730,11 @@ public open class CfnChannel(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexoutputsettings.html)
    */
   public interface MultiplexOutputSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexoutputsettings.html#cfn-medialive-channel-multiplexoutputsettings-containersettings)
+     */
+    public fun containerSettings(): Any? = unwrap(this).getContainerSettings()
+
     /**
      * Destination is a Multiplex.
      *
@@ -31957,6 +33747,24 @@ public open class CfnChannel(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param containerSettings the value to be set.
+       */
+      public fun containerSettings(containerSettings: IResolvable)
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      public fun containerSettings(containerSettings: MultiplexContainerSettingsProperty)
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ebdd9036f32a65afa4c92e6c750feeb0bcdc883a8a3d2a28b99072e5db24d0de")
+      public
+          fun containerSettings(containerSettings: MultiplexContainerSettingsProperty.Builder.() -> Unit)
+
       /**
        * @param destination Destination is a Multiplex.
        */
@@ -31980,6 +33788,29 @@ public open class CfnChannel(
           software.amazon.awscdk.services.medialive.CfnChannel.MultiplexOutputSettingsProperty.Builder
           =
           software.amazon.awscdk.services.medialive.CfnChannel.MultiplexOutputSettingsProperty.builder()
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      override fun containerSettings(containerSettings: IResolvable) {
+        cdkBuilder.containerSettings(containerSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      override fun containerSettings(containerSettings: MultiplexContainerSettingsProperty) {
+        cdkBuilder.containerSettings(containerSettings.let(MultiplexContainerSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("ebdd9036f32a65afa4c92e6c750feeb0bcdc883a8a3d2a28b99072e5db24d0de")
+      override
+          fun containerSettings(containerSettings: MultiplexContainerSettingsProperty.Builder.() -> Unit):
+          Unit = containerSettings(MultiplexContainerSettingsProperty(containerSettings))
 
       /**
        * @param destination Destination is a Multiplex.
@@ -32012,6 +33843,11 @@ public open class CfnChannel(
       cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.MultiplexOutputSettingsProperty,
     ) : CdkObject(cdkObject),
         MultiplexOutputSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-multiplexoutputsettings.html#cfn-medialive-channel-multiplexoutputsettings-containersettings)
+       */
+      override fun containerSettings(): Any? = unwrap(this).getContainerSettings()
+
       /**
        * Destination is a Multiplex.
        *
@@ -32189,6 +34025,9 @@ public open class CfnChannel(
    * .retryInterval(123)
    * .scte35Source("scte35Source")
    * .build())
+   * .multicastInputSettings(MulticastInputSettingsProperty.builder()
+   * .sourceIpAddress("sourceIpAddress")
+   * .build())
    * .serverValidation("serverValidation")
    * .build();
    * ```
@@ -32202,6 +34041,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-networkinputsettings.html#cfn-medialive-channel-networkinputsettings-hlsinputsettings)
      */
     public fun hlsInputSettings(): Any? = unwrap(this).getHlsInputSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-networkinputsettings.html#cfn-medialive-channel-networkinputsettings-multicastinputsettings)
+     */
+    public fun multicastInputSettings(): Any? = unwrap(this).getMulticastInputSettings()
 
     /**
      * Checks HTTPS server certificates.
@@ -32236,6 +34080,24 @@ public open class CfnChannel(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("63fa83903cb5729012027ed88c7bfdde8e004071033b6652ee3c768997257d51")
       public fun hlsInputSettings(hlsInputSettings: HlsInputSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param multicastInputSettings the value to be set.
+       */
+      public fun multicastInputSettings(multicastInputSettings: IResolvable)
+
+      /**
+       * @param multicastInputSettings the value to be set.
+       */
+      public fun multicastInputSettings(multicastInputSettings: MulticastInputSettingsProperty)
+
+      /**
+       * @param multicastInputSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9ee52aa21beac518b20fa856abe2d89cd6ada4d22e91cfe0bc8b5e6cd17905a6")
+      public
+          fun multicastInputSettings(multicastInputSettings: MulticastInputSettingsProperty.Builder.() -> Unit)
 
       /**
        * @param serverValidation Checks HTTPS server certificates.
@@ -32276,6 +34138,29 @@ public open class CfnChannel(
           Unit = hlsInputSettings(HlsInputSettingsProperty(hlsInputSettings))
 
       /**
+       * @param multicastInputSettings the value to be set.
+       */
+      override fun multicastInputSettings(multicastInputSettings: IResolvable) {
+        cdkBuilder.multicastInputSettings(multicastInputSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param multicastInputSettings the value to be set.
+       */
+      override fun multicastInputSettings(multicastInputSettings: MulticastInputSettingsProperty) {
+        cdkBuilder.multicastInputSettings(multicastInputSettings.let(MulticastInputSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param multicastInputSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("9ee52aa21beac518b20fa856abe2d89cd6ada4d22e91cfe0bc8b5e6cd17905a6")
+      override
+          fun multicastInputSettings(multicastInputSettings: MulticastInputSettingsProperty.Builder.() -> Unit):
+          Unit = multicastInputSettings(MulticastInputSettingsProperty(multicastInputSettings))
+
+      /**
        * @param serverValidation Checks HTTPS server certificates.
        * When set to checkCryptographyOnly, cryptography in the certificate is checked, but not the
        * server's name. Certain subdomains (notably S3 buckets that use dots in the bucket name) don't
@@ -32301,6 +34186,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-networkinputsettings.html#cfn-medialive-channel-networkinputsettings-hlsinputsettings)
        */
       override fun hlsInputSettings(): Any? = unwrap(this).getHlsInputSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-networkinputsettings.html#cfn-medialive-channel-networkinputsettings-multicastinputsettings)
+       */
+      override fun multicastInputSettings(): Any? = unwrap(this).getMulticastInputSettings()
 
       /**
        * Checks HTTPS server certificates.
@@ -32971,6 +34861,11 @@ public open class CfnChannel(
    * .url("url")
    * .username("username")
    * .build()))
+   * .srtSettings(List.of(SrtOutputDestinationSettingsProperty.builder()
+   * .encryptionPassphraseSecretArn("encryptionPassphraseSecretArn")
+   * .streamId("streamId")
+   * .url("url")
+   * .build()))
    * .build();
    * ```
    *
@@ -33006,6 +34901,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html#cfn-medialive-channel-outputdestination-settings)
      */
     public fun settings(): Any? = unwrap(this).getSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html#cfn-medialive-channel-outputdestination-srtsettings)
+     */
+    public fun srtSettings(): Any? = unwrap(this).getSrtSettings()
 
     /**
      * A builder for [OutputDestinationProperty]
@@ -33068,6 +34968,21 @@ public open class CfnChannel(
        * @param settings The destination settings for an output.
        */
       public fun settings(vararg settings: Any)
+
+      /**
+       * @param srtSettings the value to be set.
+       */
+      public fun srtSettings(srtSettings: IResolvable)
+
+      /**
+       * @param srtSettings the value to be set.
+       */
+      public fun srtSettings(srtSettings: List<Any>)
+
+      /**
+       * @param srtSettings the value to be set.
+       */
+      public fun srtSettings(vararg srtSettings: Any)
     }
 
     private class BuilderImpl : Builder {
@@ -33149,6 +35064,25 @@ public open class CfnChannel(
        */
       override fun settings(vararg settings: Any): Unit = settings(settings.toList())
 
+      /**
+       * @param srtSettings the value to be set.
+       */
+      override fun srtSettings(srtSettings: IResolvable) {
+        cdkBuilder.srtSettings(srtSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param srtSettings the value to be set.
+       */
+      override fun srtSettings(srtSettings: List<Any>) {
+        cdkBuilder.srtSettings(srtSettings.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param srtSettings the value to be set.
+       */
+      override fun srtSettings(vararg srtSettings: Any): Unit = srtSettings(srtSettings.toList())
+
       public fun build():
           software.amazon.awscdk.services.medialive.CfnChannel.OutputDestinationProperty =
           cdkBuilder.build()
@@ -33187,6 +35121,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html#cfn-medialive-channel-outputdestination-settings)
        */
       override fun settings(): Any? = unwrap(this).getSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputdestination.html#cfn-medialive-channel-outputdestination-srtsettings)
+       */
+      override fun srtSettings(): Any? = unwrap(this).getSrtSettings()
     }
 
     public companion object {
@@ -33572,6 +35511,9 @@ public open class CfnChannel(
    * .inputLossAction("inputLossAction")
    * .restartDelay(123)
    * .build())
+   * .srtGroupSettings(SrtGroupSettingsProperty.builder()
+   * .inputLossAction("inputLossAction")
+   * .build())
    * .udpGroupSettings(UdpGroupSettingsProperty.builder()
    * .inputLossAction("inputLossAction")
    * .timedMetadataId3Frame("timedMetadataId3Frame")
@@ -33710,6 +35652,24 @@ public open class CfnChannel(
    * .nameModifier("nameModifier")
    * .build())
    * .multiplexOutputSettings(MultiplexOutputSettingsProperty.builder()
+   * .containerSettings(MultiplexContainerSettingsProperty.builder()
+   * .multiplexM2TsSettings(MultiplexM2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioStreamType("audioStreamType")
+   * .ccDescriptor("ccDescriptor")
+   * .ebif("ebif")
+   * .esRateInPes("esRateInPes")
+   * .klv("klv")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .scte35Control("scte35Control")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .build())
+   * .build())
    * .destination(OutputLocationRefProperty.builder()
    * .destinationRefId("destinationRefId")
    * .build())
@@ -33721,6 +35681,77 @@ public open class CfnChannel(
    * .destinationRefId("destinationRefId")
    * .build())
    * .numRetries(123)
+   * .build())
+   * .srtOutputSettings(SrtOutputSettingsProperty.builder()
+   * .bufferMsec(123)
+   * .containerSettings(UdpContainerSettingsProperty.builder()
+   * .m2TsSettings(M2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .aribCaptionsPid("aribCaptionsPid")
+   * .aribCaptionsPidControl("aribCaptionsPidControl")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioPids("audioPids")
+   * .audioStreamType("audioStreamType")
+   * .bitrate(123)
+   * .bufferModel("bufferModel")
+   * .ccDescriptor("ccDescriptor")
+   * .dvbNitSettings(DvbNitSettingsProperty.builder()
+   * .networkId(123)
+   * .networkName("networkName")
+   * .repInterval(123)
+   * .build())
+   * .dvbSdtSettings(DvbSdtSettingsProperty.builder()
+   * .outputSdt("outputSdt")
+   * .repInterval(123)
+   * .serviceName("serviceName")
+   * .serviceProviderName("serviceProviderName")
+   * .build())
+   * .dvbSubPids("dvbSubPids")
+   * .dvbTdtSettings(DvbTdtSettingsProperty.builder()
+   * .repInterval(123)
+   * .build())
+   * .dvbTeletextPid("dvbTeletextPid")
+   * .ebif("ebif")
+   * .ebpAudioInterval("ebpAudioInterval")
+   * .ebpLookaheadMs(123)
+   * .ebpPlacement("ebpPlacement")
+   * .ecmPid("ecmPid")
+   * .esRateInPes("esRateInPes")
+   * .etvPlatformPid("etvPlatformPid")
+   * .etvSignalPid("etvSignalPid")
+   * .fragmentTime(123)
+   * .klv("klv")
+   * .klvDataPids("klvDataPids")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .nullPacketBitrate(123)
+   * .patInterval(123)
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .pcrPid("pcrPid")
+   * .pmtInterval(123)
+   * .pmtPid("pmtPid")
+   * .programNum(123)
+   * .rateMode("rateMode")
+   * .scte27Pids("scte27Pids")
+   * .scte35Control("scte35Control")
+   * .scte35Pid("scte35Pid")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .segmentationMarkers("segmentationMarkers")
+   * .segmentationStyle("segmentationStyle")
+   * .segmentationTime(123)
+   * .timedMetadataBehavior("timedMetadataBehavior")
+   * .timedMetadataPid("timedMetadataPid")
+   * .transportStreamId(123)
+   * .videoPid("videoPid")
+   * .build())
+   * .build())
+   * .destination(OutputLocationRefProperty.builder()
+   * .destinationRefId("destinationRefId")
+   * .build())
+   * .encryptionType("encryptionType")
+   * .latency(123)
    * .build())
    * .udpOutputSettings(UdpOutputSettingsProperty.builder()
    * .bufferMsec(123)
@@ -34157,6 +36188,9 @@ public open class CfnChannel(
    * .inputLossAction("inputLossAction")
    * .restartDelay(123)
    * .build())
+   * .srtGroupSettings(SrtGroupSettingsProperty.builder()
+   * .inputLossAction("inputLossAction")
+   * .build())
    * .udpGroupSettings(UdpGroupSettingsProperty.builder()
    * .inputLossAction("inputLossAction")
    * .timedMetadataId3Frame("timedMetadataId3Frame")
@@ -34223,6 +36257,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-rtmpgroupsettings)
      */
     public fun rtmpGroupSettings(): Any? = unwrap(this).getRtmpGroupSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-srtgroupsettings)
+     */
+    public fun srtGroupSettings(): Any? = unwrap(this).getSrtGroupSettings()
 
     /**
      * The configuration of a UDP output group.
@@ -34382,6 +36421,23 @@ public open class CfnChannel(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("72d6ef372e33f1e29fcb9a476db73cea06e8ed8486049d9531962c64a08e6031")
       public fun rtmpGroupSettings(rtmpGroupSettings: RtmpGroupSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param srtGroupSettings the value to be set.
+       */
+      public fun srtGroupSettings(srtGroupSettings: IResolvable)
+
+      /**
+       * @param srtGroupSettings the value to be set.
+       */
+      public fun srtGroupSettings(srtGroupSettings: SrtGroupSettingsProperty)
+
+      /**
+       * @param srtGroupSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6693dded6f606d51172d40341eee04a099b9d84d12dc4fcc640b932cbba13477")
+      public fun srtGroupSettings(srtGroupSettings: SrtGroupSettingsProperty.Builder.() -> Unit)
 
       /**
        * @param udpGroupSettings The configuration of a UDP output group.
@@ -34598,6 +36654,28 @@ public open class CfnChannel(
           Unit = rtmpGroupSettings(RtmpGroupSettingsProperty(rtmpGroupSettings))
 
       /**
+       * @param srtGroupSettings the value to be set.
+       */
+      override fun srtGroupSettings(srtGroupSettings: IResolvable) {
+        cdkBuilder.srtGroupSettings(srtGroupSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param srtGroupSettings the value to be set.
+       */
+      override fun srtGroupSettings(srtGroupSettings: SrtGroupSettingsProperty) {
+        cdkBuilder.srtGroupSettings(srtGroupSettings.let(SrtGroupSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param srtGroupSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6693dded6f606d51172d40341eee04a099b9d84d12dc4fcc640b932cbba13477")
+      override fun srtGroupSettings(srtGroupSettings: SrtGroupSettingsProperty.Builder.() -> Unit):
+          Unit = srtGroupSettings(SrtGroupSettingsProperty(srtGroupSettings))
+
+      /**
        * @param udpGroupSettings The configuration of a UDP output group.
        */
       override fun udpGroupSettings(udpGroupSettings: IResolvable) {
@@ -34683,6 +36761,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-rtmpgroupsettings)
        */
       override fun rtmpGroupSettings(): Any? = unwrap(this).getRtmpGroupSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputgroupsettings.html#cfn-medialive-channel-outputgroupsettings-srtgroupsettings)
+       */
+      override fun srtGroupSettings(): Any? = unwrap(this).getSrtGroupSettings()
 
       /**
        * The configuration of a UDP output group.
@@ -35072,6 +37155,24 @@ public open class CfnChannel(
    * .nameModifier("nameModifier")
    * .build())
    * .multiplexOutputSettings(MultiplexOutputSettingsProperty.builder()
+   * .containerSettings(MultiplexContainerSettingsProperty.builder()
+   * .multiplexM2TsSettings(MultiplexM2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioStreamType("audioStreamType")
+   * .ccDescriptor("ccDescriptor")
+   * .ebif("ebif")
+   * .esRateInPes("esRateInPes")
+   * .klv("klv")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .scte35Control("scte35Control")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .build())
+   * .build())
    * .destination(OutputLocationRefProperty.builder()
    * .destinationRefId("destinationRefId")
    * .build())
@@ -35083,6 +37184,77 @@ public open class CfnChannel(
    * .destinationRefId("destinationRefId")
    * .build())
    * .numRetries(123)
+   * .build())
+   * .srtOutputSettings(SrtOutputSettingsProperty.builder()
+   * .bufferMsec(123)
+   * .containerSettings(UdpContainerSettingsProperty.builder()
+   * .m2TsSettings(M2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .aribCaptionsPid("aribCaptionsPid")
+   * .aribCaptionsPidControl("aribCaptionsPidControl")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioPids("audioPids")
+   * .audioStreamType("audioStreamType")
+   * .bitrate(123)
+   * .bufferModel("bufferModel")
+   * .ccDescriptor("ccDescriptor")
+   * .dvbNitSettings(DvbNitSettingsProperty.builder()
+   * .networkId(123)
+   * .networkName("networkName")
+   * .repInterval(123)
+   * .build())
+   * .dvbSdtSettings(DvbSdtSettingsProperty.builder()
+   * .outputSdt("outputSdt")
+   * .repInterval(123)
+   * .serviceName("serviceName")
+   * .serviceProviderName("serviceProviderName")
+   * .build())
+   * .dvbSubPids("dvbSubPids")
+   * .dvbTdtSettings(DvbTdtSettingsProperty.builder()
+   * .repInterval(123)
+   * .build())
+   * .dvbTeletextPid("dvbTeletextPid")
+   * .ebif("ebif")
+   * .ebpAudioInterval("ebpAudioInterval")
+   * .ebpLookaheadMs(123)
+   * .ebpPlacement("ebpPlacement")
+   * .ecmPid("ecmPid")
+   * .esRateInPes("esRateInPes")
+   * .etvPlatformPid("etvPlatformPid")
+   * .etvSignalPid("etvSignalPid")
+   * .fragmentTime(123)
+   * .klv("klv")
+   * .klvDataPids("klvDataPids")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .nullPacketBitrate(123)
+   * .patInterval(123)
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .pcrPid("pcrPid")
+   * .pmtInterval(123)
+   * .pmtPid("pmtPid")
+   * .programNum(123)
+   * .rateMode("rateMode")
+   * .scte27Pids("scte27Pids")
+   * .scte35Control("scte35Control")
+   * .scte35Pid("scte35Pid")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .segmentationMarkers("segmentationMarkers")
+   * .segmentationStyle("segmentationStyle")
+   * .segmentationTime(123)
+   * .timedMetadataBehavior("timedMetadataBehavior")
+   * .timedMetadataPid("timedMetadataPid")
+   * .transportStreamId(123)
+   * .videoPid("videoPid")
+   * .build())
+   * .build())
+   * .destination(OutputLocationRefProperty.builder()
+   * .destinationRefId("destinationRefId")
+   * .build())
+   * .encryptionType("encryptionType")
+   * .latency(123)
    * .build())
    * .udpOutputSettings(UdpOutputSettingsProperty.builder()
    * .bufferMsec(123)
@@ -35536,6 +37708,24 @@ public open class CfnChannel(
    * .nameModifier("nameModifier")
    * .build())
    * .multiplexOutputSettings(MultiplexOutputSettingsProperty.builder()
+   * .containerSettings(MultiplexContainerSettingsProperty.builder()
+   * .multiplexM2TsSettings(MultiplexM2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioStreamType("audioStreamType")
+   * .ccDescriptor("ccDescriptor")
+   * .ebif("ebif")
+   * .esRateInPes("esRateInPes")
+   * .klv("klv")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .scte35Control("scte35Control")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .build())
+   * .build())
    * .destination(OutputLocationRefProperty.builder()
    * .destinationRefId("destinationRefId")
    * .build())
@@ -35547,6 +37737,77 @@ public open class CfnChannel(
    * .destinationRefId("destinationRefId")
    * .build())
    * .numRetries(123)
+   * .build())
+   * .srtOutputSettings(SrtOutputSettingsProperty.builder()
+   * .bufferMsec(123)
+   * .containerSettings(UdpContainerSettingsProperty.builder()
+   * .m2TsSettings(M2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .aribCaptionsPid("aribCaptionsPid")
+   * .aribCaptionsPidControl("aribCaptionsPidControl")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioPids("audioPids")
+   * .audioStreamType("audioStreamType")
+   * .bitrate(123)
+   * .bufferModel("bufferModel")
+   * .ccDescriptor("ccDescriptor")
+   * .dvbNitSettings(DvbNitSettingsProperty.builder()
+   * .networkId(123)
+   * .networkName("networkName")
+   * .repInterval(123)
+   * .build())
+   * .dvbSdtSettings(DvbSdtSettingsProperty.builder()
+   * .outputSdt("outputSdt")
+   * .repInterval(123)
+   * .serviceName("serviceName")
+   * .serviceProviderName("serviceProviderName")
+   * .build())
+   * .dvbSubPids("dvbSubPids")
+   * .dvbTdtSettings(DvbTdtSettingsProperty.builder()
+   * .repInterval(123)
+   * .build())
+   * .dvbTeletextPid("dvbTeletextPid")
+   * .ebif("ebif")
+   * .ebpAudioInterval("ebpAudioInterval")
+   * .ebpLookaheadMs(123)
+   * .ebpPlacement("ebpPlacement")
+   * .ecmPid("ecmPid")
+   * .esRateInPes("esRateInPes")
+   * .etvPlatformPid("etvPlatformPid")
+   * .etvSignalPid("etvSignalPid")
+   * .fragmentTime(123)
+   * .klv("klv")
+   * .klvDataPids("klvDataPids")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .nullPacketBitrate(123)
+   * .patInterval(123)
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .pcrPid("pcrPid")
+   * .pmtInterval(123)
+   * .pmtPid("pmtPid")
+   * .programNum(123)
+   * .rateMode("rateMode")
+   * .scte27Pids("scte27Pids")
+   * .scte35Control("scte35Control")
+   * .scte35Pid("scte35Pid")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .segmentationMarkers("segmentationMarkers")
+   * .segmentationStyle("segmentationStyle")
+   * .segmentationTime(123)
+   * .timedMetadataBehavior("timedMetadataBehavior")
+   * .timedMetadataPid("timedMetadataPid")
+   * .transportStreamId(123)
+   * .videoPid("videoPid")
+   * .build())
+   * .build())
+   * .destination(OutputLocationRefProperty.builder()
+   * .destinationRefId("destinationRefId")
+   * .build())
+   * .encryptionType("encryptionType")
+   * .latency(123)
    * .build())
    * .udpOutputSettings(UdpOutputSettingsProperty.builder()
    * .bufferMsec(123)
@@ -35689,6 +37950,11 @@ public open class CfnChannel(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-rtmpoutputsettings)
      */
     public fun rtmpOutputSettings(): Any? = unwrap(this).getRtmpOutputSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-srtoutputsettings)
+     */
+    public fun srtOutputSettings(): Any? = unwrap(this).getSrtOutputSettings()
 
     /**
      * The settings for a UDP output.
@@ -35861,6 +38127,23 @@ public open class CfnChannel(
       @JvmName("1064347474fea1517c2b20cc253c8021728d3a360fd5d9eb92580980b9c5a302")
       public
           fun rtmpOutputSettings(rtmpOutputSettings: RtmpOutputSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param srtOutputSettings the value to be set.
+       */
+      public fun srtOutputSettings(srtOutputSettings: IResolvable)
+
+      /**
+       * @param srtOutputSettings the value to be set.
+       */
+      public fun srtOutputSettings(srtOutputSettings: SrtOutputSettingsProperty)
+
+      /**
+       * @param srtOutputSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("800ac4a9094b5b517c6891aef2b7ff4a58c59df8070ebab14965950068625936")
+      public fun srtOutputSettings(srtOutputSettings: SrtOutputSettingsProperty.Builder.() -> Unit)
 
       /**
        * @param udpOutputSettings The settings for a UDP output.
@@ -36092,6 +38375,29 @@ public open class CfnChannel(
           Unit = rtmpOutputSettings(RtmpOutputSettingsProperty(rtmpOutputSettings))
 
       /**
+       * @param srtOutputSettings the value to be set.
+       */
+      override fun srtOutputSettings(srtOutputSettings: IResolvable) {
+        cdkBuilder.srtOutputSettings(srtOutputSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param srtOutputSettings the value to be set.
+       */
+      override fun srtOutputSettings(srtOutputSettings: SrtOutputSettingsProperty) {
+        cdkBuilder.srtOutputSettings(srtOutputSettings.let(SrtOutputSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param srtOutputSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("800ac4a9094b5b517c6891aef2b7ff4a58c59df8070ebab14965950068625936")
+      override
+          fun srtOutputSettings(srtOutputSettings: SrtOutputSettingsProperty.Builder.() -> Unit):
+          Unit = srtOutputSettings(SrtOutputSettingsProperty(srtOutputSettings))
+
+      /**
        * @param udpOutputSettings The settings for a UDP output.
        * The parent of this entity is OutputGroupSettings.
        */
@@ -36187,6 +38493,11 @@ public open class CfnChannel(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-rtmpoutputsettings)
        */
       override fun rtmpOutputSettings(): Any? = unwrap(this).getRtmpOutputSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-outputsettings.html#cfn-medialive-channel-outputsettings-srtoutputsettings)
+       */
+      override fun srtOutputSettings(): Any? = unwrap(this).getSrtOutputSettings()
 
       /**
        * The settings for a UDP output.
@@ -37963,6 +40274,497 @@ public open class CfnChannel(
           software.amazon.awscdk.services.medialive.CfnChannel.SmpteTtDestinationSettingsProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnChannel.SmpteTtDestinationSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * SrtGroupSettingsProperty srtGroupSettingsProperty = SrtGroupSettingsProperty.builder()
+   * .inputLossAction("inputLossAction")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtgroupsettings.html)
+   */
+  public interface SrtGroupSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtgroupsettings.html#cfn-medialive-channel-srtgroupsettings-inputlossaction)
+     */
+    public fun inputLossAction(): String? = unwrap(this).getInputLossAction()
+
+    /**
+     * A builder for [SrtGroupSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param inputLossAction the value to be set.
+       */
+      public fun inputLossAction(inputLossAction: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtGroupSettingsProperty.Builder =
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtGroupSettingsProperty.builder()
+
+      /**
+       * @param inputLossAction the value to be set.
+       */
+      override fun inputLossAction(inputLossAction: String) {
+        cdkBuilder.inputLossAction(inputLossAction)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtGroupSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.SrtGroupSettingsProperty,
+    ) : CdkObject(cdkObject),
+        SrtGroupSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtgroupsettings.html#cfn-medialive-channel-srtgroupsettings-inputlossaction)
+       */
+      override fun inputLossAction(): String? = unwrap(this).getInputLossAction()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SrtGroupSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.SrtGroupSettingsProperty):
+          SrtGroupSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as? SrtGroupSettingsProperty
+          ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SrtGroupSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtGroupSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtGroupSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * SrtOutputDestinationSettingsProperty srtOutputDestinationSettingsProperty =
+   * SrtOutputDestinationSettingsProperty.builder()
+   * .encryptionPassphraseSecretArn("encryptionPassphraseSecretArn")
+   * .streamId("streamId")
+   * .url("url")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html)
+   */
+  public interface SrtOutputDestinationSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html#cfn-medialive-channel-srtoutputdestinationsettings-encryptionpassphrasesecretarn)
+     */
+    public fun encryptionPassphraseSecretArn(): String? =
+        unwrap(this).getEncryptionPassphraseSecretArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html#cfn-medialive-channel-srtoutputdestinationsettings-streamid)
+     */
+    public fun streamId(): String? = unwrap(this).getStreamId()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html#cfn-medialive-channel-srtoutputdestinationsettings-url)
+     */
+    public fun url(): String? = unwrap(this).getUrl()
+
+    /**
+     * A builder for [SrtOutputDestinationSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param encryptionPassphraseSecretArn the value to be set.
+       */
+      public fun encryptionPassphraseSecretArn(encryptionPassphraseSecretArn: String)
+
+      /**
+       * @param streamId the value to be set.
+       */
+      public fun streamId(streamId: String)
+
+      /**
+       * @param url the value to be set.
+       */
+      public fun url(url: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputDestinationSettingsProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputDestinationSettingsProperty.builder()
+
+      /**
+       * @param encryptionPassphraseSecretArn the value to be set.
+       */
+      override fun encryptionPassphraseSecretArn(encryptionPassphraseSecretArn: String) {
+        cdkBuilder.encryptionPassphraseSecretArn(encryptionPassphraseSecretArn)
+      }
+
+      /**
+       * @param streamId the value to be set.
+       */
+      override fun streamId(streamId: String) {
+        cdkBuilder.streamId(streamId)
+      }
+
+      /**
+       * @param url the value to be set.
+       */
+      override fun url(url: String) {
+        cdkBuilder.url(url)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputDestinationSettingsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputDestinationSettingsProperty,
+    ) : CdkObject(cdkObject),
+        SrtOutputDestinationSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html#cfn-medialive-channel-srtoutputdestinationsettings-encryptionpassphrasesecretarn)
+       */
+      override fun encryptionPassphraseSecretArn(): String? =
+          unwrap(this).getEncryptionPassphraseSecretArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html#cfn-medialive-channel-srtoutputdestinationsettings-streamid)
+       */
+      override fun streamId(): String? = unwrap(this).getStreamId()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputdestinationsettings.html#cfn-medialive-channel-srtoutputdestinationsettings-url)
+       */
+      override fun url(): String? = unwrap(this).getUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SrtOutputDestinationSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputDestinationSettingsProperty):
+          SrtOutputDestinationSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SrtOutputDestinationSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SrtOutputDestinationSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputDestinationSettingsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputDestinationSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * SrtOutputSettingsProperty srtOutputSettingsProperty = SrtOutputSettingsProperty.builder()
+   * .bufferMsec(123)
+   * .containerSettings(UdpContainerSettingsProperty.builder()
+   * .m2TsSettings(M2tsSettingsProperty.builder()
+   * .absentInputAudioBehavior("absentInputAudioBehavior")
+   * .arib("arib")
+   * .aribCaptionsPid("aribCaptionsPid")
+   * .aribCaptionsPidControl("aribCaptionsPidControl")
+   * .audioBufferModel("audioBufferModel")
+   * .audioFramesPerPes(123)
+   * .audioPids("audioPids")
+   * .audioStreamType("audioStreamType")
+   * .bitrate(123)
+   * .bufferModel("bufferModel")
+   * .ccDescriptor("ccDescriptor")
+   * .dvbNitSettings(DvbNitSettingsProperty.builder()
+   * .networkId(123)
+   * .networkName("networkName")
+   * .repInterval(123)
+   * .build())
+   * .dvbSdtSettings(DvbSdtSettingsProperty.builder()
+   * .outputSdt("outputSdt")
+   * .repInterval(123)
+   * .serviceName("serviceName")
+   * .serviceProviderName("serviceProviderName")
+   * .build())
+   * .dvbSubPids("dvbSubPids")
+   * .dvbTdtSettings(DvbTdtSettingsProperty.builder()
+   * .repInterval(123)
+   * .build())
+   * .dvbTeletextPid("dvbTeletextPid")
+   * .ebif("ebif")
+   * .ebpAudioInterval("ebpAudioInterval")
+   * .ebpLookaheadMs(123)
+   * .ebpPlacement("ebpPlacement")
+   * .ecmPid("ecmPid")
+   * .esRateInPes("esRateInPes")
+   * .etvPlatformPid("etvPlatformPid")
+   * .etvSignalPid("etvSignalPid")
+   * .fragmentTime(123)
+   * .klv("klv")
+   * .klvDataPids("klvDataPids")
+   * .nielsenId3Behavior("nielsenId3Behavior")
+   * .nullPacketBitrate(123)
+   * .patInterval(123)
+   * .pcrControl("pcrControl")
+   * .pcrPeriod(123)
+   * .pcrPid("pcrPid")
+   * .pmtInterval(123)
+   * .pmtPid("pmtPid")
+   * .programNum(123)
+   * .rateMode("rateMode")
+   * .scte27Pids("scte27Pids")
+   * .scte35Control("scte35Control")
+   * .scte35Pid("scte35Pid")
+   * .scte35PrerollPullupMilliseconds(123)
+   * .segmentationMarkers("segmentationMarkers")
+   * .segmentationStyle("segmentationStyle")
+   * .segmentationTime(123)
+   * .timedMetadataBehavior("timedMetadataBehavior")
+   * .timedMetadataPid("timedMetadataPid")
+   * .transportStreamId(123)
+   * .videoPid("videoPid")
+   * .build())
+   * .build())
+   * .destination(OutputLocationRefProperty.builder()
+   * .destinationRefId("destinationRefId")
+   * .build())
+   * .encryptionType("encryptionType")
+   * .latency(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html)
+   */
+  public interface SrtOutputSettingsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-buffermsec)
+     */
+    public fun bufferMsec(): Number? = unwrap(this).getBufferMsec()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-containersettings)
+     */
+    public fun containerSettings(): Any? = unwrap(this).getContainerSettings()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-destination)
+     */
+    public fun destination(): Any? = unwrap(this).getDestination()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-encryptiontype)
+     */
+    public fun encryptionType(): String? = unwrap(this).getEncryptionType()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-latency)
+     */
+    public fun latency(): Number? = unwrap(this).getLatency()
+
+    /**
+     * A builder for [SrtOutputSettingsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param bufferMsec the value to be set.
+       */
+      public fun bufferMsec(bufferMsec: Number)
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      public fun containerSettings(containerSettings: IResolvable)
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      public fun containerSettings(containerSettings: UdpContainerSettingsProperty)
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("90147c906df2dcb1a249547439d193d6a0bb789bcccf8124b0c2647aafeaf20b")
+      public
+          fun containerSettings(containerSettings: UdpContainerSettingsProperty.Builder.() -> Unit)
+
+      /**
+       * @param destination the value to be set.
+       */
+      public fun destination(destination: IResolvable)
+
+      /**
+       * @param destination the value to be set.
+       */
+      public fun destination(destination: OutputLocationRefProperty)
+
+      /**
+       * @param destination the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fd70d0ade2a42d0facc2fc85e253ebce643d923be0f18065e92b89b6c3b7634b")
+      public fun destination(destination: OutputLocationRefProperty.Builder.() -> Unit)
+
+      /**
+       * @param encryptionType the value to be set.
+       */
+      public fun encryptionType(encryptionType: String)
+
+      /**
+       * @param latency the value to be set.
+       */
+      public fun latency(latency: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputSettingsProperty.Builder =
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputSettingsProperty.builder()
+
+      /**
+       * @param bufferMsec the value to be set.
+       */
+      override fun bufferMsec(bufferMsec: Number) {
+        cdkBuilder.bufferMsec(bufferMsec)
+      }
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      override fun containerSettings(containerSettings: IResolvable) {
+        cdkBuilder.containerSettings(containerSettings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      override fun containerSettings(containerSettings: UdpContainerSettingsProperty) {
+        cdkBuilder.containerSettings(containerSettings.let(UdpContainerSettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param containerSettings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("90147c906df2dcb1a249547439d193d6a0bb789bcccf8124b0c2647aafeaf20b")
+      override
+          fun containerSettings(containerSettings: UdpContainerSettingsProperty.Builder.() -> Unit):
+          Unit = containerSettings(UdpContainerSettingsProperty(containerSettings))
+
+      /**
+       * @param destination the value to be set.
+       */
+      override fun destination(destination: IResolvable) {
+        cdkBuilder.destination(destination.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param destination the value to be set.
+       */
+      override fun destination(destination: OutputLocationRefProperty) {
+        cdkBuilder.destination(destination.let(OutputLocationRefProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param destination the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("fd70d0ade2a42d0facc2fc85e253ebce643d923be0f18065e92b89b6c3b7634b")
+      override fun destination(destination: OutputLocationRefProperty.Builder.() -> Unit): Unit =
+          destination(OutputLocationRefProperty(destination))
+
+      /**
+       * @param encryptionType the value to be set.
+       */
+      override fun encryptionType(encryptionType: String) {
+        cdkBuilder.encryptionType(encryptionType)
+      }
+
+      /**
+       * @param latency the value to be set.
+       */
+      override fun latency(latency: Number) {
+        cdkBuilder.latency(latency)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputSettingsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputSettingsProperty,
+    ) : CdkObject(cdkObject),
+        SrtOutputSettingsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-buffermsec)
+       */
+      override fun bufferMsec(): Number? = unwrap(this).getBufferMsec()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-containersettings)
+       */
+      override fun containerSettings(): Any? = unwrap(this).getContainerSettings()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-destination)
+       */
+      override fun destination(): Any? = unwrap(this).getDestination()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-encryptiontype)
+       */
+      override fun encryptionType(): String? = unwrap(this).getEncryptionType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-srtoutputsettings.html#cfn-medialive-channel-srtoutputsettings-latency)
+       */
+      override fun latency(): Number? = unwrap(this).getLatency()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SrtOutputSettingsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputSettingsProperty):
+          SrtOutputSettingsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SrtOutputSettingsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SrtOutputSettingsProperty):
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputSettingsProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnChannel.SrtOutputSettingsProperty
     }
   }
 
@@ -39928,7 +42730,41 @@ public open class CfnChannel(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * Object colorSpacePassthroughSettings;
+   * Object rec601Settings;
+   * Object rec709Settings;
    * VideoCodecSettingsProperty videoCodecSettingsProperty = VideoCodecSettingsProperty.builder()
+   * .av1Settings(Av1SettingsProperty.builder()
+   * .afdSignaling("afdSignaling")
+   * .bufSize(123)
+   * .colorSpaceSettings(Av1ColorSpaceSettingsProperty.builder()
+   * .colorSpacePassthroughSettings(colorSpacePassthroughSettings)
+   * .hdr10Settings(Hdr10SettingsProperty.builder()
+   * .maxCll(123)
+   * .maxFall(123)
+   * .build())
+   * .rec601Settings(rec601Settings)
+   * .rec709Settings(rec709Settings)
+   * .build())
+   * .fixedAfd("fixedAfd")
+   * .framerateDenominator(123)
+   * .framerateNumerator(123)
+   * .gopSize(123)
+   * .gopSizeUnits("gopSizeUnits")
+   * .level("level")
+   * .lookAheadRateControl("lookAheadRateControl")
+   * .maxBitrate(123)
+   * .minIInterval(123)
+   * .parDenominator(123)
+   * .parNumerator(123)
+   * .qvbrQualityLevel(123)
+   * .sceneChangeDetect("sceneChangeDetect")
+   * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
+   * .fontSize("fontSize")
+   * .position("position")
+   * .prefix("prefix")
+   * .build())
+   * .build())
    * .frameCaptureSettings(FrameCaptureSettingsProperty.builder()
    * .captureInterval(123)
    * .captureIntervalUnits("captureIntervalUnits")
@@ -39952,6 +42788,10 @@ public open class CfnChannel(
    * .build())
    * .entropyEncoding("entropyEncoding")
    * .filterSettings(H264FilterSettingsProperty.builder()
+   * .bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty.builder()
+   * .postFilterSharpening("postFilterSharpening")
+   * .strength("strength")
+   * .build())
    * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
    * .postFilterSharpening("postFilterSharpening")
    * .strength("strength")
@@ -39972,6 +42812,7 @@ public open class CfnChannel(
    * .lookAheadRateControl("lookAheadRateControl")
    * .maxBitrate(123)
    * .minIInterval(123)
+   * .minQp(123)
    * .numRefFrames(123)
    * .parControl("parControl")
    * .parDenominator(123)
@@ -40013,6 +42854,10 @@ public open class CfnChannel(
    * .rec709Settings(Rec709SettingsProperty.builder().build())
    * .build())
    * .filterSettings(H265FilterSettingsProperty.builder()
+   * .bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty.builder()
+   * .postFilterSharpening("postFilterSharpening")
+   * .strength("strength")
+   * .build())
    * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
    * .postFilterSharpening("postFilterSharpening")
    * .strength("strength")
@@ -40029,6 +42874,7 @@ public open class CfnChannel(
    * .lookAheadRateControl("lookAheadRateControl")
    * .maxBitrate(123)
    * .minIInterval(123)
+   * .minQp(123)
    * .mvOverPictureBoundaries("mvOverPictureBoundaries")
    * .mvTemporalPredictor("mvTemporalPredictor")
    * .parDenominator(123)
@@ -40086,6 +42932,11 @@ public open class CfnChannel(
    */
   public interface VideoCodecSettingsProperty {
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videocodecsettings.html#cfn-medialive-channel-videocodecsettings-av1settings)
+     */
+    public fun av1Settings(): Any? = unwrap(this).getAv1Settings()
+
+    /**
      * The settings for the video codec in a frame capture output.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videocodecsettings.html#cfn-medialive-channel-videocodecsettings-framecapturesettings)
@@ -40118,6 +42969,23 @@ public open class CfnChannel(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param av1Settings the value to be set.
+       */
+      public fun av1Settings(av1Settings: IResolvable)
+
+      /**
+       * @param av1Settings the value to be set.
+       */
+      public fun av1Settings(av1Settings: Av1SettingsProperty)
+
+      /**
+       * @param av1Settings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3579ddda75972367b7888b42e243749f4d4b310adf7350804d4c56b0c3e1bac8")
+      public fun av1Settings(av1Settings: Av1SettingsProperty.Builder.() -> Unit)
+
       /**
        * @param frameCaptureSettings The settings for the video codec in a frame capture output.
        */
@@ -40192,6 +43060,28 @@ public open class CfnChannel(
       private val cdkBuilder:
           software.amazon.awscdk.services.medialive.CfnChannel.VideoCodecSettingsProperty.Builder =
           software.amazon.awscdk.services.medialive.CfnChannel.VideoCodecSettingsProperty.builder()
+
+      /**
+       * @param av1Settings the value to be set.
+       */
+      override fun av1Settings(av1Settings: IResolvable) {
+        cdkBuilder.av1Settings(av1Settings.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param av1Settings the value to be set.
+       */
+      override fun av1Settings(av1Settings: Av1SettingsProperty) {
+        cdkBuilder.av1Settings(av1Settings.let(Av1SettingsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param av1Settings the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("3579ddda75972367b7888b42e243749f4d4b310adf7350804d4c56b0c3e1bac8")
+      override fun av1Settings(av1Settings: Av1SettingsProperty.Builder.() -> Unit): Unit =
+          av1Settings(Av1SettingsProperty(av1Settings))
 
       /**
        * @param frameCaptureSettings The settings for the video codec in a frame capture output.
@@ -40292,6 +43182,11 @@ public open class CfnChannel(
     ) : CdkObject(cdkObject),
         VideoCodecSettingsProperty {
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videocodecsettings.html#cfn-medialive-channel-videocodecsettings-av1settings)
+       */
+      override fun av1Settings(): Any? = unwrap(this).getAv1Settings()
+
+      /**
        * The settings for the video codec in a frame capture output.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-channel-videocodecsettings.html#cfn-medialive-channel-videocodecsettings-framecapturesettings)
@@ -40349,8 +43244,42 @@ public open class CfnChannel(
    * // The code below shows an example of how to instantiate this type.
    * // The values are placeholders you should change.
    * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * Object colorSpacePassthroughSettings;
+   * Object rec601Settings;
+   * Object rec709Settings;
    * VideoDescriptionProperty videoDescriptionProperty = VideoDescriptionProperty.builder()
    * .codecSettings(VideoCodecSettingsProperty.builder()
+   * .av1Settings(Av1SettingsProperty.builder()
+   * .afdSignaling("afdSignaling")
+   * .bufSize(123)
+   * .colorSpaceSettings(Av1ColorSpaceSettingsProperty.builder()
+   * .colorSpacePassthroughSettings(colorSpacePassthroughSettings)
+   * .hdr10Settings(Hdr10SettingsProperty.builder()
+   * .maxCll(123)
+   * .maxFall(123)
+   * .build())
+   * .rec601Settings(rec601Settings)
+   * .rec709Settings(rec709Settings)
+   * .build())
+   * .fixedAfd("fixedAfd")
+   * .framerateDenominator(123)
+   * .framerateNumerator(123)
+   * .gopSize(123)
+   * .gopSizeUnits("gopSizeUnits")
+   * .level("level")
+   * .lookAheadRateControl("lookAheadRateControl")
+   * .maxBitrate(123)
+   * .minIInterval(123)
+   * .parDenominator(123)
+   * .parNumerator(123)
+   * .qvbrQualityLevel(123)
+   * .sceneChangeDetect("sceneChangeDetect")
+   * .timecodeBurninSettings(TimecodeBurninSettingsProperty.builder()
+   * .fontSize("fontSize")
+   * .position("position")
+   * .prefix("prefix")
+   * .build())
+   * .build())
    * .frameCaptureSettings(FrameCaptureSettingsProperty.builder()
    * .captureInterval(123)
    * .captureIntervalUnits("captureIntervalUnits")
@@ -40374,6 +43303,10 @@ public open class CfnChannel(
    * .build())
    * .entropyEncoding("entropyEncoding")
    * .filterSettings(H264FilterSettingsProperty.builder()
+   * .bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty.builder()
+   * .postFilterSharpening("postFilterSharpening")
+   * .strength("strength")
+   * .build())
    * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
    * .postFilterSharpening("postFilterSharpening")
    * .strength("strength")
@@ -40394,6 +43327,7 @@ public open class CfnChannel(
    * .lookAheadRateControl("lookAheadRateControl")
    * .maxBitrate(123)
    * .minIInterval(123)
+   * .minQp(123)
    * .numRefFrames(123)
    * .parControl("parControl")
    * .parDenominator(123)
@@ -40435,6 +43369,10 @@ public open class CfnChannel(
    * .rec709Settings(Rec709SettingsProperty.builder().build())
    * .build())
    * .filterSettings(H265FilterSettingsProperty.builder()
+   * .bandwidthReductionFilterSettings(BandwidthReductionFilterSettingsProperty.builder()
+   * .postFilterSharpening("postFilterSharpening")
+   * .strength("strength")
+   * .build())
    * .temporalFilterSettings(TemporalFilterSettingsProperty.builder()
    * .postFilterSharpening("postFilterSharpening")
    * .strength("strength")
@@ -40451,6 +43389,7 @@ public open class CfnChannel(
    * .lookAheadRateControl("lookAheadRateControl")
    * .maxBitrate(123)
    * .minIInterval(123)
+   * .minQp(123)
    * .mvOverPictureBoundaries("mvOverPictureBoundaries")
    * .mvTemporalPredictor("mvTemporalPredictor")
    * .parDenominator(123)

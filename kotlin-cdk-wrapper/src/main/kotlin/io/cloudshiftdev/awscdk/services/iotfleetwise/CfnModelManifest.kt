@@ -84,12 +84,12 @@ public open class CfnModelManifest(
   public open fun attrLastModificationTime(): String = unwrap(this).getAttrLastModificationTime()
 
   /**
-   * (Optional) A brief description of the vehicle model.
+   * A brief description of the vehicle model.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * (Optional) A brief description of the vehicle model.
+   * A brief description of the vehicle model.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -117,19 +117,19 @@ public open class CfnModelManifest(
   }
 
   /**
-   * (Optional) A list of nodes, which are a general abstraction of signals.
+   * A list of nodes, which are a general abstraction of signals.
    */
   public open fun nodes(): List<String> = unwrap(this).getNodes() ?: emptyList()
 
   /**
-   * (Optional) A list of nodes, which are a general abstraction of signals.
+   * A list of nodes, which are a general abstraction of signals.
    */
   public open fun nodes(`value`: List<String>) {
     unwrap(this).setNodes(`value`)
   }
 
   /**
-   * (Optional) A list of nodes, which are a general abstraction of signals.
+   * A list of nodes, which are a general abstraction of signals.
    */
   public open fun nodes(vararg `value`: String): Unit = nodes(`value`.toList())
 
@@ -146,12 +146,12 @@ public open class CfnModelManifest(
   }
 
   /**
-   * (Optional) The state of the vehicle model.
+   * The state of the vehicle model.
    */
   public open fun status(): String? = unwrap(this).getStatus()
 
   /**
-   * (Optional) The state of the vehicle model.
+   * The state of the vehicle model.
    */
   public open fun status(`value`: String) {
     unwrap(this).setStatus(`value`)
@@ -163,20 +163,20 @@ public open class CfnModelManifest(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * (Optional) Metadata that can be used to manage the vehicle model.
+   * Metadata that can be used to manage the vehicle model.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * (Optional) Metadata that can be used to manage the vehicle model.
+   * Metadata that can be used to manage the vehicle model.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * (Optional) Metadata that can be used to manage the vehicle model.
+   * Metadata that can be used to manage the vehicle model.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -186,10 +186,10 @@ public open class CfnModelManifest(
   @CdkDslMarker
   public interface Builder {
     /**
-     * (Optional) A brief description of the vehicle model.
+     * A brief description of the vehicle model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-description)
-     * @param description (Optional) A brief description of the vehicle model. 
+     * @param description A brief description of the vehicle model. 
      */
     public fun description(description: String)
 
@@ -202,18 +202,18 @@ public open class CfnModelManifest(
     public fun name(name: String)
 
     /**
-     * (Optional) A list of nodes, which are a general abstraction of signals.
+     * A list of nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-nodes)
-     * @param nodes (Optional) A list of nodes, which are a general abstraction of signals. 
+     * @param nodes A list of nodes, which are a general abstraction of signals. 
      */
     public fun nodes(nodes: List<String>)
 
     /**
-     * (Optional) A list of nodes, which are a general abstraction of signals.
+     * A list of nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-nodes)
-     * @param nodes (Optional) A list of nodes, which are a general abstraction of signals. 
+     * @param nodes A list of nodes, which are a general abstraction of signals. 
      */
     public fun nodes(vararg nodes: String)
 
@@ -227,7 +227,7 @@ public open class CfnModelManifest(
     public fun signalCatalogArn(signalCatalogArn: String)
 
     /**
-     * (Optional) The state of the vehicle model.
+     * The state of the vehicle model.
      *
      * If the status is `ACTIVE` , the vehicle model can't be edited. If the status is `DRAFT` , you
      * can edit the vehicle model.
@@ -235,23 +235,23 @@ public open class CfnModelManifest(
      * Default: - "DRAFT"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-status)
-     * @param status (Optional) The state of the vehicle model. 
+     * @param status The state of the vehicle model. 
      */
     public fun status(status: String)
 
     /**
-     * (Optional) Metadata that can be used to manage the vehicle model.
+     * Metadata that can be used to manage the vehicle model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-tags)
-     * @param tags (Optional) Metadata that can be used to manage the vehicle model. 
+     * @param tags Metadata that can be used to manage the vehicle model. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * (Optional) Metadata that can be used to manage the vehicle model.
+     * Metadata that can be used to manage the vehicle model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-tags)
-     * @param tags (Optional) Metadata that can be used to manage the vehicle model. 
+     * @param tags Metadata that can be used to manage the vehicle model. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -264,10 +264,10 @@ public open class CfnModelManifest(
         software.amazon.awscdk.services.iotfleetwise.CfnModelManifest.Builder.create(scope, id)
 
     /**
-     * (Optional) A brief description of the vehicle model.
+     * A brief description of the vehicle model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-description)
-     * @param description (Optional) A brief description of the vehicle model. 
+     * @param description A brief description of the vehicle model. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -284,20 +284,20 @@ public open class CfnModelManifest(
     }
 
     /**
-     * (Optional) A list of nodes, which are a general abstraction of signals.
+     * A list of nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-nodes)
-     * @param nodes (Optional) A list of nodes, which are a general abstraction of signals. 
+     * @param nodes A list of nodes, which are a general abstraction of signals. 
      */
     override fun nodes(nodes: List<String>) {
       cdkBuilder.nodes(nodes)
     }
 
     /**
-     * (Optional) A list of nodes, which are a general abstraction of signals.
+     * A list of nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-nodes)
-     * @param nodes (Optional) A list of nodes, which are a general abstraction of signals. 
+     * @param nodes A list of nodes, which are a general abstraction of signals. 
      */
     override fun nodes(vararg nodes: String): Unit = nodes(nodes.toList())
 
@@ -313,7 +313,7 @@ public open class CfnModelManifest(
     }
 
     /**
-     * (Optional) The state of the vehicle model.
+     * The state of the vehicle model.
      *
      * If the status is `ACTIVE` , the vehicle model can't be edited. If the status is `DRAFT` , you
      * can edit the vehicle model.
@@ -321,27 +321,27 @@ public open class CfnModelManifest(
      * Default: - "DRAFT"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-status)
-     * @param status (Optional) The state of the vehicle model. 
+     * @param status The state of the vehicle model. 
      */
     override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
     /**
-     * (Optional) Metadata that can be used to manage the vehicle model.
+     * Metadata that can be used to manage the vehicle model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-tags)
-     * @param tags (Optional) Metadata that can be used to manage the vehicle model. 
+     * @param tags Metadata that can be used to manage the vehicle model. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * (Optional) Metadata that can be used to manage the vehicle model.
+     * Metadata that can be used to manage the vehicle model.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-modelmanifest.html#cfn-iotfleetwise-modelmanifest-tags)
-     * @param tags (Optional) Metadata that can be used to manage the vehicle model. 
+     * @param tags Metadata that can be used to manage the vehicle model. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

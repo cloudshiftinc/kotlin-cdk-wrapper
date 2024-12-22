@@ -48,8 +48,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .build()))
  * .outputDataConfig(OutputDataConfig.builder()
- * .s3OutputLocation(S3Location.fromBucket(Bucket.fromBucketName(this, "Bucket", "mybucket"),
- * "myoutputpath"))
+ * .s3OutputLocation(S3Location.fromBucket(Bucket.fromBucketName(this, "Bucket",
+ * "amzn-s3-demo-bucket"), "myoutputpath"))
  * .build())
  * .resourceConfig(ResourceConfig.builder()
  * .instanceCount(1)

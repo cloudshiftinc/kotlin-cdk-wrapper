@@ -111,6 +111,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .kmsKeyId("kmsKeyId")
  * .build())
  * .engineVersion("engineVersion")
+ * .identityCenterOptions(IdentityCenterOptionsProperty.builder()
+ * .enabledApiAccess(false)
+ * .identityCenterApplicationArn("identityCenterApplicationArn")
+ * .identityCenterInstanceArn("identityCenterInstanceArn")
+ * .identityStoreId("identityStoreId")
+ * .rolesKey("rolesKey")
+ * .subjectKey("subjectKey")
+ * .build())
  * .ipAddressType("ipAddressType")
  * .logPublishingOptions(Map.of(
  * "logPublishingOptionsKey", LogPublishingOptionProperty.builder()
@@ -277,6 +285,19 @@ public open class CfnDomain(
    * For example, `123456789012/my-domain` .
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
+
+  /**
+   * The ARN for IAM Identity Center Application which will integrate with Amazon OpenSearch
+   * Service.
+   */
+  public open fun attrIdentityCenterOptionsIdentityCenterApplicationArn(): String =
+      unwrap(this).getAttrIdentityCenterOptionsIdentityCenterApplicationArn()
+
+  /**
+   * The ID of IAM Identity Store.
+   */
+  public open fun attrIdentityCenterOptionsIdentityStoreId(): String =
+      unwrap(this).getAttrIdentityCenterOptionsIdentityStoreId()
 
   /**
    *
@@ -511,6 +532,33 @@ public open class CfnDomain(
   public open fun engineVersion(`value`: String) {
     unwrap(this).setEngineVersion(`value`)
   }
+
+  /**
+   * Container for IAM Identity Center Option control for the domain.
+   */
+  public open fun identityCenterOptions(): Any? = unwrap(this).getIdentityCenterOptions()
+
+  /**
+   * Container for IAM Identity Center Option control for the domain.
+   */
+  public open fun identityCenterOptions(`value`: IResolvable) {
+    unwrap(this).setIdentityCenterOptions(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Container for IAM Identity Center Option control for the domain.
+   */
+  public open fun identityCenterOptions(`value`: IdentityCenterOptionsProperty) {
+    unwrap(this).setIdentityCenterOptions(`value`.let(IdentityCenterOptionsProperty.Companion::unwrap))
+  }
+
+  /**
+   * Container for IAM Identity Center Option control for the domain.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("8845fc4355a2aaa4c86944fc30cca1a3079ffe8c8982873441653141d9bc882b")
+  public open fun identityCenterOptions(`value`: IdentityCenterOptionsProperty.Builder.() -> Unit):
+      Unit = identityCenterOptions(IdentityCenterOptionsProperty(`value`))
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -1076,6 +1124,36 @@ public open class CfnDomain(
      * @param engineVersion The version of OpenSearch to use. 
      */
     public fun engineVersion(engineVersion: String)
+
+    /**
+     * Container for IAM Identity Center Option control for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * 
+     */
+    public fun identityCenterOptions(identityCenterOptions: IResolvable)
+
+    /**
+     * Container for IAM Identity Center Option control for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * 
+     */
+    public fun identityCenterOptions(identityCenterOptions: IdentityCenterOptionsProperty)
+
+    /**
+     * Container for IAM Identity Center Option control for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5c8fd82ae73b4adbcf008ebc9ea26847d3d005d517b1565cb4873713bbb68ebc")
+    public
+        fun identityCenterOptions(identityCenterOptions: IdentityCenterOptionsProperty.Builder.() -> Unit)
 
     /**
      * Choose either dual stack or IPv4 as your IP address type.
@@ -1715,6 +1793,41 @@ public open class CfnDomain(
     override fun engineVersion(engineVersion: String) {
       cdkBuilder.engineVersion(engineVersion)
     }
+
+    /**
+     * Container for IAM Identity Center Option control for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * 
+     */
+    override fun identityCenterOptions(identityCenterOptions: IResolvable) {
+      cdkBuilder.identityCenterOptions(identityCenterOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Container for IAM Identity Center Option control for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * 
+     */
+    override fun identityCenterOptions(identityCenterOptions: IdentityCenterOptionsProperty) {
+      cdkBuilder.identityCenterOptions(identityCenterOptions.let(IdentityCenterOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * Container for IAM Identity Center Option control for the domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-opensearchservice-domain.html#cfn-opensearchservice-domain-identitycenteroptions)
+     * @param identityCenterOptions Container for IAM Identity Center Option control for the domain.
+     * 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5c8fd82ae73b4adbcf008ebc9ea26847d3d005d517b1565cb4873713bbb68ebc")
+    override
+        fun identityCenterOptions(identityCenterOptions: IdentityCenterOptionsProperty.Builder.() -> Unit):
+        Unit = identityCenterOptions(IdentityCenterOptionsProperty(identityCenterOptions))
 
     /**
      * Choose either dual stack or IPv4 as your IP address type.
@@ -4266,6 +4379,256 @@ public open class CfnDomain(
           software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.opensearchservice.CfnDomain.EncryptionAtRestOptionsProperty
+    }
+  }
+
+  /**
+   * Container for IAM Identity Center Options settings.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.opensearchservice.*;
+   * IdentityCenterOptionsProperty identityCenterOptionsProperty =
+   * IdentityCenterOptionsProperty.builder()
+   * .enabledApiAccess(false)
+   * .identityCenterApplicationArn("identityCenterApplicationArn")
+   * .identityCenterInstanceArn("identityCenterInstanceArn")
+   * .identityStoreId("identityStoreId")
+   * .rolesKey("rolesKey")
+   * .subjectKey("subjectKey")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html)
+   */
+  public interface IdentityCenterOptionsProperty {
+    /**
+     * True to enable IAM Identity Center for API access in Amazon OpenSearch Service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-enabledapiaccess)
+     */
+    public fun enabledApiAccess(): Any? = unwrap(this).getEnabledApiAccess()
+
+    /**
+     * The ARN for IAM Identity Center Application which will integrate with Amazon OpenSearch
+     * Service.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitycenterapplicationarn)
+     */
+    public fun identityCenterApplicationArn(): String? =
+        unwrap(this).getIdentityCenterApplicationArn()
+
+    /**
+     * The ARN for IAM Identity Center Instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitycenterinstancearn)
+     */
+    public fun identityCenterInstanceArn(): String? = unwrap(this).getIdentityCenterInstanceArn()
+
+    /**
+     * The ID of IAM Identity Store.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitystoreid)
+     */
+    public fun identityStoreId(): String? = unwrap(this).getIdentityStoreId()
+
+    /**
+     * Specify the attribute that contains the backend role (groupName, groupID) of IAM Identity
+     * Center.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-roleskey)
+     */
+    public fun rolesKey(): String? = unwrap(this).getRolesKey()
+
+    /**
+     * Specify the attribute that contains the subject (username, userID, email) of IAM Identity
+     * Center.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-subjectkey)
+     */
+    public fun subjectKey(): String? = unwrap(this).getSubjectKey()
+
+    /**
+     * A builder for [IdentityCenterOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabledApiAccess True to enable IAM Identity Center for API access in Amazon
+       * OpenSearch Service.
+       */
+      public fun enabledApiAccess(enabledApiAccess: Boolean)
+
+      /**
+       * @param enabledApiAccess True to enable IAM Identity Center for API access in Amazon
+       * OpenSearch Service.
+       */
+      public fun enabledApiAccess(enabledApiAccess: IResolvable)
+
+      /**
+       * @param identityCenterApplicationArn The ARN for IAM Identity Center Application which will
+       * integrate with Amazon OpenSearch Service.
+       */
+      public fun identityCenterApplicationArn(identityCenterApplicationArn: String)
+
+      /**
+       * @param identityCenterInstanceArn The ARN for IAM Identity Center Instance.
+       */
+      public fun identityCenterInstanceArn(identityCenterInstanceArn: String)
+
+      /**
+       * @param identityStoreId The ID of IAM Identity Store.
+       */
+      public fun identityStoreId(identityStoreId: String)
+
+      /**
+       * @param rolesKey Specify the attribute that contains the backend role (groupName, groupID)
+       * of IAM Identity Center.
+       */
+      public fun rolesKey(rolesKey: String)
+
+      /**
+       * @param subjectKey Specify the attribute that contains the subject (username, userID, email)
+       * of IAM Identity Center.
+       */
+      public fun subjectKey(subjectKey: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdentityCenterOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdentityCenterOptionsProperty.builder()
+
+      /**
+       * @param enabledApiAccess True to enable IAM Identity Center for API access in Amazon
+       * OpenSearch Service.
+       */
+      override fun enabledApiAccess(enabledApiAccess: Boolean) {
+        cdkBuilder.enabledApiAccess(enabledApiAccess)
+      }
+
+      /**
+       * @param enabledApiAccess True to enable IAM Identity Center for API access in Amazon
+       * OpenSearch Service.
+       */
+      override fun enabledApiAccess(enabledApiAccess: IResolvable) {
+        cdkBuilder.enabledApiAccess(enabledApiAccess.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param identityCenterApplicationArn The ARN for IAM Identity Center Application which will
+       * integrate with Amazon OpenSearch Service.
+       */
+      override fun identityCenterApplicationArn(identityCenterApplicationArn: String) {
+        cdkBuilder.identityCenterApplicationArn(identityCenterApplicationArn)
+      }
+
+      /**
+       * @param identityCenterInstanceArn The ARN for IAM Identity Center Instance.
+       */
+      override fun identityCenterInstanceArn(identityCenterInstanceArn: String) {
+        cdkBuilder.identityCenterInstanceArn(identityCenterInstanceArn)
+      }
+
+      /**
+       * @param identityStoreId The ID of IAM Identity Store.
+       */
+      override fun identityStoreId(identityStoreId: String) {
+        cdkBuilder.identityStoreId(identityStoreId)
+      }
+
+      /**
+       * @param rolesKey Specify the attribute that contains the backend role (groupName, groupID)
+       * of IAM Identity Center.
+       */
+      override fun rolesKey(rolesKey: String) {
+        cdkBuilder.rolesKey(rolesKey)
+      }
+
+      /**
+       * @param subjectKey Specify the attribute that contains the subject (username, userID, email)
+       * of IAM Identity Center.
+       */
+      override fun subjectKey(subjectKey: String) {
+        cdkBuilder.subjectKey(subjectKey)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdentityCenterOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.IdentityCenterOptionsProperty,
+    ) : CdkObject(cdkObject),
+        IdentityCenterOptionsProperty {
+      /**
+       * True to enable IAM Identity Center for API access in Amazon OpenSearch Service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-enabledapiaccess)
+       */
+      override fun enabledApiAccess(): Any? = unwrap(this).getEnabledApiAccess()
+
+      /**
+       * The ARN for IAM Identity Center Application which will integrate with Amazon OpenSearch
+       * Service.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitycenterapplicationarn)
+       */
+      override fun identityCenterApplicationArn(): String? =
+          unwrap(this).getIdentityCenterApplicationArn()
+
+      /**
+       * The ARN for IAM Identity Center Instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitycenterinstancearn)
+       */
+      override fun identityCenterInstanceArn(): String? =
+          unwrap(this).getIdentityCenterInstanceArn()
+
+      /**
+       * The ID of IAM Identity Store.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-identitystoreid)
+       */
+      override fun identityStoreId(): String? = unwrap(this).getIdentityStoreId()
+
+      /**
+       * Specify the attribute that contains the backend role (groupName, groupID) of IAM Identity
+       * Center.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-roleskey)
+       */
+      override fun rolesKey(): String? = unwrap(this).getRolesKey()
+
+      /**
+       * Specify the attribute that contains the subject (username, userID, email) of IAM Identity
+       * Center.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-opensearchservice-domain-identitycenteroptions.html#cfn-opensearchservice-domain-identitycenteroptions-subjectkey)
+       */
+      override fun subjectKey(): String? = unwrap(this).getSubjectKey()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): IdentityCenterOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.opensearchservice.CfnDomain.IdentityCenterOptionsProperty):
+          IdentityCenterOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          IdentityCenterOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: IdentityCenterOptionsProperty):
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdentityCenterOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.opensearchservice.CfnDomain.IdentityCenterOptionsProperty
     }
   }
 

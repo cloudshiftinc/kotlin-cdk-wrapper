@@ -15,40 +15,22 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.ec2.*;
- * import io.cloudshiftdev.awscdk.services.efs.*;
- * // create a new VPC
- * Vpc vpc = new Vpc(this, "VPC");
- * // create a new Amazon EFS filesystem
- * FileSystem fileSystem = FileSystem.Builder.create(this, "Efs").vpc(vpc).build();
- * // create a new access point from the filesystem
- * AccessPoint accessPoint = fileSystem.addAccessPoint("AccessPoint", AccessPointOptions.builder()
- * // set /export/lambda as the root of the access point
- * .path("/export/lambda")
- * // as /export/lambda does not exist in a new efs filesystem, the efs will create the directory
- * with the following createAcl
- * .createAcl(Acl.builder()
- * .ownerUid("1001")
- * .ownerGid("1001")
- * .permissions("750")
- * .build())
- * // enforce the POSIX identity so lambda function will access with this identity
- * .posixUser(PosixUser.builder()
- * .uid("1001")
- * .gid("1001")
- * .build())
+ * fileSystem.addAccessPoint("MyAccessPoint", AccessPointOptions.builder()
+ * // create a unique access point via an optional client token
+ * .clientToken("client-token")
  * .build());
- * Function fn = Function.Builder.create(this, "MyLambda")
- * // mount the access point to /mnt/msg in the lambda runtime environment
- * .filesystem(FileSystem.fromEfsAccessPoint(accessPoint, "/mnt/msg"))
- * .runtime(Runtime.NODEJS_18_X)
- * .handler("index.handler")
- * .code(Code.fromAsset(join(__dirname, "lambda-handler")))
- * .vpc(vpc)
- * .build();
  * ```
  */
 public interface AccessPointOptions {
+  /**
+   * The opaque string specified in the request to ensure idempotent creation.
+   *
+   * Default: - No client token
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html#cfn-efs-accesspoint-clienttoken)
+   */
+  public fun clientToken(): String? = unwrap(this).getClientToken()
+
   /**
    * Specifies the POSIX IDs and permissions to apply when creating the access point's root
    * directory.
@@ -90,6 +72,11 @@ public interface AccessPointOptions {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param clientToken The opaque string specified in the request to ensure idempotent creation.
+     */
+    public fun clientToken(clientToken: String)
+
     /**
      * @param createAcl Specifies the POSIX IDs and permissions to apply when creating the access
      * point's root directory.
@@ -142,6 +129,13 @@ public interface AccessPointOptions {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.efs.AccessPointOptions.Builder =
         software.amazon.awscdk.services.efs.AccessPointOptions.builder()
+
+    /**
+     * @param clientToken The opaque string specified in the request to ensure idempotent creation.
+     */
+    override fun clientToken(clientToken: String) {
+      cdkBuilder.clientToken(clientToken)
+    }
 
     /**
      * @param createAcl Specifies the POSIX IDs and permissions to apply when creating the access
@@ -205,6 +199,15 @@ public interface AccessPointOptions {
     cdkObject: software.amazon.awscdk.services.efs.AccessPointOptions,
   ) : CdkObject(cdkObject),
       AccessPointOptions {
+    /**
+     * The opaque string specified in the request to ensure idempotent creation.
+     *
+     * Default: - No client token
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-efs-accesspoint.html#cfn-efs-accesspoint-clienttoken)
+     */
+    override fun clientToken(): String? = unwrap(this).getClientToken()
+
     /**
      * Specifies the POSIX IDs and permissions to apply when creating the access point's root
      * directory.

@@ -11,6 +11,7 @@ import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnLoadBalancer`.
@@ -22,12 +23,16 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
  * CfnLoadBalancerProps cfnLoadBalancerProps = CfnLoadBalancerProps.builder()
+ * .enablePrefixForIpv6SourceNat("enablePrefixForIpv6SourceNat")
  * .enforceSecurityGroupInboundRulesOnPrivateLinkTraffic("enforceSecurityGroupInboundRulesOnPrivateLinkTraffic")
  * .ipAddressType("ipAddressType")
  * .loadBalancerAttributes(List.of(LoadBalancerAttributeProperty.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .minimumLoadBalancerCapacity(MinimumLoadBalancerCapacityProperty.builder()
+ * .capacityUnits(123)
+ * .build())
  * .name("name")
  * .scheme("scheme")
  * .securityGroups(List.of("securityGroups"))
@@ -37,6 +42,7 @@ import kotlin.collections.List
  * .allocationId("allocationId")
  * .iPv6Address("iPv6Address")
  * .privateIPv4Address("privateIPv4Address")
+ * .sourceNatIpv6Prefix("sourceNatIpv6Prefix")
  * .build()))
  * .subnets(List.of("subnets"))
  * .tags(List.of(CfnTag.builder()
@@ -51,6 +57,17 @@ import kotlin.collections.List
  */
 public interface CfnLoadBalancerProps {
   /**
+   * [Network Load Balancers with UDP listeners] Indicates whether to use an IPv6 prefix from each
+   * subnet for source NAT.
+   *
+   * The IP address type must be `dualstack` . The default value is `off` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-enableprefixforipv6sourcenat)
+   */
+  public fun enablePrefixForIpv6SourceNat(): String? =
+      unwrap(this).getEnablePrefixForIpv6SourceNat()
+
+  /**
    * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
    * Balancer through AWS PrivateLink .
    *
@@ -60,22 +77,18 @@ public interface CfnLoadBalancerProps {
       unwrap(this).getEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic()
 
   /**
-   * Note: Internal load balancers must use the `ipv4` IP address type.
+   * The IP address type. Internal load balancers must use `ipv4` .
    *
-   * [Application Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-   * addresses), `dualstack` (for IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4` (for
-   * IPv6 only public addresses, with private IPv4 and IPv6 addresses).
+   * [Application Load Balancers] The possible values are `ipv4` (IPv4 addresses), `dualstack` (IPv4
+   * and IPv6 addresses), and `dualstack-without-public-ipv4` (public IPv6 addresses and private IPv4
+   * and IPv6 addresses).
    *
-   * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting to
-   * an Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
-   * balancer cannot complete the authentication process, resulting in HTTP 500 errors.
+   * Application Load Balancer authentication supports IPv4 addresses only when connecting to an
+   * Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
+   * balancer can't complete the authentication process, resulting in HTTP 500 errors.
    *
-   * [Network Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-   * addresses) and `dualstack` (for IPv4 and IPv6 addresses). You can’t specify `dualstack` for a load
-   * balancer with a UDP or TCP_UDP listener.
-   *
-   * [Gateway Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-   * addresses) and `dualstack` (for IPv4 and IPv6 addresses).
+   * [Network Load Balancers and Gateway Load Balancers] The possible values are `ipv4` (IPv4
+   * addresses) and `dualstack` (IPv4 and IPv6 addresses).
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype)
    */
@@ -87,6 +100,13 @@ public interface CfnLoadBalancerProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
    */
   public fun loadBalancerAttributes(): Any? = unwrap(this).getLoadBalancerAttributes()
+
+  /**
+   * The minimum capacity for a load balancer.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity)
+   */
+  public fun minimumLoadBalancerCapacity(): Any? = unwrap(this).getMinimumLoadBalancerCapacity()
 
   /**
    * The name of the load balancer.
@@ -117,7 +137,7 @@ public interface CfnLoadBalancerProps {
    *
    * The default is an Internet-facing load balancer.
    *
-   * You cannot specify a scheme for a Gateway Load Balancer.
+   * You can't specify a scheme for a Gateway Load Balancer.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-scheme)
    */
@@ -138,7 +158,7 @@ public interface CfnLoadBalancerProps {
    * subnet mappings, but not both.
    *
    * [Application Load Balancers] You must specify subnets from at least two Availability Zones. You
-   * cannot specify Elastic IP addresses for your subnets.
+   * can't specify Elastic IP addresses for your subnets.
    *
    * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
    *
@@ -151,8 +171,8 @@ public interface CfnLoadBalancerProps {
    * the IPv4 range of the subnet. For internet-facing load balancer, you can specify one IPv6 address
    * per subnet.
    *
-   * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-   * cannot specify Elastic IP addresses for your subnets.
+   * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You can't
+   * specify Elastic IP addresses for your subnets.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
    */
@@ -172,9 +192,8 @@ public interface CfnLoadBalancerProps {
    * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
    * Zones.
    *
-   * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-   *
-   * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+   * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+   * Availability Zones.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets)
    */
@@ -202,6 +221,13 @@ public interface CfnLoadBalancerProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param enablePrefixForIpv6SourceNat [Network Load Balancers with UDP listeners] Indicates
+     * whether to use an IPv6 prefix from each subnet for source NAT.
+     * The IP address type must be `dualstack` . The default value is `off` .
+     */
+    public fun enablePrefixForIpv6SourceNat(enablePrefixForIpv6SourceNat: String)
+
+    /**
      * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
      * inbound security group rules for traffic sent to a Network Load Balancer through AWS PrivateLink
      * .
@@ -210,21 +236,17 @@ public interface CfnLoadBalancerProps {
         fun enforceSecurityGroupInboundRulesOnPrivateLinkTraffic(enforceSecurityGroupInboundRulesOnPrivateLinkTraffic: String)
 
     /**
-     * @param ipAddressType Note: Internal load balancers must use the `ipv4` IP address type.
-     * [Application Load Balancers] The IP address type. The possible values are `ipv4` (for only
-     * IPv4 addresses), `dualstack` (for IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4`
-     * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
+     * @param ipAddressType The IP address type. Internal load balancers must use `ipv4` .
+     * [Application Load Balancers] The possible values are `ipv4` (IPv4 addresses), `dualstack`
+     * (IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4` (public IPv6 addresses and
+     * private IPv4 and IPv6 addresses).
      *
-     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting
-     * to an Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
-     * balancer cannot complete the authentication process, resulting in HTTP 500 errors.
+     * Application Load Balancer authentication supports IPv4 addresses only when connecting to an
+     * Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
+     * balancer can't complete the authentication process, resulting in HTTP 500 errors.
      *
-     * [Network Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses). You can’t specify `dualstack` for a
-     * load balancer with a UDP or TCP_UDP listener.
-     *
-     * [Gateway Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses).
+     * [Network Load Balancers and Gateway Load Balancers] The possible values are `ipv4` (IPv4
+     * addresses) and `dualstack` (IPv4 and IPv6 addresses).
      */
     public fun ipAddressType(ipAddressType: String)
 
@@ -242,6 +264,25 @@ public interface CfnLoadBalancerProps {
      * @param loadBalancerAttributes The load balancer attributes.
      */
     public fun loadBalancerAttributes(vararg loadBalancerAttributes: Any)
+
+    /**
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer.
+     */
+    public fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: IResolvable)
+
+    /**
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer.
+     */
+    public
+        fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: CfnLoadBalancer.MinimumLoadBalancerCapacityProperty)
+
+    /**
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f366e46ca93948220ba1c33c05ce2ebb64f94179a6929a29089a7b6167629440")
+    public
+        fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: CfnLoadBalancer.MinimumLoadBalancerCapacityProperty.Builder.() -> Unit)
 
     /**
      * @param name The name of the load balancer.
@@ -268,7 +309,7 @@ public interface CfnLoadBalancerProps {
      *
      * The default is an Internet-facing load balancer.
      *
-     * You cannot specify a scheme for a Gateway Load Balancer.
+     * You can't specify a scheme for a Gateway Load Balancer.
      */
     public fun scheme(scheme: String)
 
@@ -290,7 +331,7 @@ public interface CfnLoadBalancerProps {
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -304,7 +345,7 @@ public interface CfnLoadBalancerProps {
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      */
     public fun subnetMappings(subnetMappings: IResolvable)
 
@@ -314,7 +355,7 @@ public interface CfnLoadBalancerProps {
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -328,7 +369,7 @@ public interface CfnLoadBalancerProps {
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      */
     public fun subnetMappings(subnetMappings: List<Any>)
 
@@ -338,7 +379,7 @@ public interface CfnLoadBalancerProps {
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -352,7 +393,7 @@ public interface CfnLoadBalancerProps {
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      */
     public fun subnetMappings(vararg subnetMappings: Any)
 
@@ -369,9 +410,8 @@ public interface CfnLoadBalancerProps {
      * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
      * Zones.
      *
-     * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-     *
-     * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+     * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+     * Availability Zones.
      */
     public fun subnets(subnets: List<String>)
 
@@ -388,9 +428,8 @@ public interface CfnLoadBalancerProps {
      * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
      * Zones.
      *
-     * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-     *
-     * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+     * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+     * Availability Zones.
      */
     public fun subnets(vararg subnets: String)
 
@@ -417,6 +456,15 @@ public interface CfnLoadBalancerProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.CfnLoadBalancerProps.builder()
 
     /**
+     * @param enablePrefixForIpv6SourceNat [Network Load Balancers with UDP listeners] Indicates
+     * whether to use an IPv6 prefix from each subnet for source NAT.
+     * The IP address type must be `dualstack` . The default value is `off` .
+     */
+    override fun enablePrefixForIpv6SourceNat(enablePrefixForIpv6SourceNat: String) {
+      cdkBuilder.enablePrefixForIpv6SourceNat(enablePrefixForIpv6SourceNat)
+    }
+
+    /**
      * @param enforceSecurityGroupInboundRulesOnPrivateLinkTraffic Indicates whether to evaluate
      * inbound security group rules for traffic sent to a Network Load Balancer through AWS PrivateLink
      * .
@@ -427,21 +475,17 @@ public interface CfnLoadBalancerProps {
     }
 
     /**
-     * @param ipAddressType Note: Internal load balancers must use the `ipv4` IP address type.
-     * [Application Load Balancers] The IP address type. The possible values are `ipv4` (for only
-     * IPv4 addresses), `dualstack` (for IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4`
-     * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
+     * @param ipAddressType The IP address type. Internal load balancers must use `ipv4` .
+     * [Application Load Balancers] The possible values are `ipv4` (IPv4 addresses), `dualstack`
+     * (IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4` (public IPv6 addresses and
+     * private IPv4 and IPv6 addresses).
      *
-     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting
-     * to an Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
-     * balancer cannot complete the authentication process, resulting in HTTP 500 errors.
+     * Application Load Balancer authentication supports IPv4 addresses only when connecting to an
+     * Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
+     * balancer can't complete the authentication process, resulting in HTTP 500 errors.
      *
-     * [Network Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses). You can’t specify `dualstack` for a
-     * load balancer with a UDP or TCP_UDP listener.
-     *
-     * [Gateway Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses).
+     * [Network Load Balancers and Gateway Load Balancers] The possible values are `ipv4` (IPv4
+     * addresses) and `dualstack` (IPv4 and IPv6 addresses).
      */
     override fun ipAddressType(ipAddressType: String) {
       cdkBuilder.ipAddressType(ipAddressType)
@@ -466,6 +510,31 @@ public interface CfnLoadBalancerProps {
      */
     override fun loadBalancerAttributes(vararg loadBalancerAttributes: Any): Unit =
         loadBalancerAttributes(loadBalancerAttributes.toList())
+
+    /**
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer.
+     */
+    override fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: IResolvable) {
+      cdkBuilder.minimumLoadBalancerCapacity(minimumLoadBalancerCapacity.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer.
+     */
+    override
+        fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: CfnLoadBalancer.MinimumLoadBalancerCapacityProperty) {
+      cdkBuilder.minimumLoadBalancerCapacity(minimumLoadBalancerCapacity.let(CfnLoadBalancer.MinimumLoadBalancerCapacityProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param minimumLoadBalancerCapacity The minimum capacity for a load balancer.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("f366e46ca93948220ba1c33c05ce2ebb64f94179a6929a29089a7b6167629440")
+    override
+        fun minimumLoadBalancerCapacity(minimumLoadBalancerCapacity: CfnLoadBalancer.MinimumLoadBalancerCapacityProperty.Builder.() -> Unit):
+        Unit =
+        minimumLoadBalancerCapacity(CfnLoadBalancer.MinimumLoadBalancerCapacityProperty(minimumLoadBalancerCapacity))
 
     /**
      * @param name The name of the load balancer.
@@ -494,7 +563,7 @@ public interface CfnLoadBalancerProps {
      *
      * The default is an Internet-facing load balancer.
      *
-     * You cannot specify a scheme for a Gateway Load Balancer.
+     * You can't specify a scheme for a Gateway Load Balancer.
      */
     override fun scheme(scheme: String) {
       cdkBuilder.scheme(scheme)
@@ -521,7 +590,7 @@ public interface CfnLoadBalancerProps {
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -535,7 +604,7 @@ public interface CfnLoadBalancerProps {
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      */
     override fun subnetMappings(subnetMappings: IResolvable) {
       cdkBuilder.subnetMappings(subnetMappings.let(IResolvable.Companion::unwrap))
@@ -547,7 +616,7 @@ public interface CfnLoadBalancerProps {
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -561,7 +630,7 @@ public interface CfnLoadBalancerProps {
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      */
     override fun subnetMappings(subnetMappings: List<Any>) {
       cdkBuilder.subnetMappings(subnetMappings.map{CdkObjectWrappers.unwrap(it)})
@@ -573,7 +642,7 @@ public interface CfnLoadBalancerProps {
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -587,7 +656,7 @@ public interface CfnLoadBalancerProps {
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      */
     override fun subnetMappings(vararg subnetMappings: Any): Unit =
         subnetMappings(subnetMappings.toList())
@@ -605,9 +674,8 @@ public interface CfnLoadBalancerProps {
      * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
      * Zones.
      *
-     * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-     *
-     * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+     * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+     * Availability Zones.
      */
     override fun subnets(subnets: List<String>) {
       cdkBuilder.subnets(subnets)
@@ -626,9 +694,8 @@ public interface CfnLoadBalancerProps {
      * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
      * Zones.
      *
-     * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-     *
-     * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+     * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+     * Availability Zones.
      */
     override fun subnets(vararg subnets: String): Unit = subnets(subnets.toList())
 
@@ -661,6 +728,17 @@ public interface CfnLoadBalancerProps {
   ) : CdkObject(cdkObject),
       CfnLoadBalancerProps {
     /**
+     * [Network Load Balancers with UDP listeners] Indicates whether to use an IPv6 prefix from each
+     * subnet for source NAT.
+     *
+     * The IP address type must be `dualstack` . The default value is `off` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-enableprefixforipv6sourcenat)
+     */
+    override fun enablePrefixForIpv6SourceNat(): String? =
+        unwrap(this).getEnablePrefixForIpv6SourceNat()
+
+    /**
      * Indicates whether to evaluate inbound security group rules for traffic sent to a Network Load
      * Balancer through AWS PrivateLink .
      *
@@ -670,22 +748,18 @@ public interface CfnLoadBalancerProps {
         unwrap(this).getEnforceSecurityGroupInboundRulesOnPrivateLinkTraffic()
 
     /**
-     * Note: Internal load balancers must use the `ipv4` IP address type.
+     * The IP address type. Internal load balancers must use `ipv4` .
      *
-     * [Application Load Balancers] The IP address type. The possible values are `ipv4` (for only
-     * IPv4 addresses), `dualstack` (for IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4`
-     * (for IPv6 only public addresses, with private IPv4 and IPv6 addresses).
+     * [Application Load Balancers] The possible values are `ipv4` (IPv4 addresses), `dualstack`
+     * (IPv4 and IPv6 addresses), and `dualstack-without-public-ipv4` (public IPv6 addresses and
+     * private IPv4 and IPv6 addresses).
      *
-     * Note: Application Load Balancer authentication only supports IPv4 addresses when connecting
-     * to an Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
-     * balancer cannot complete the authentication process, resulting in HTTP 500 errors.
+     * Application Load Balancer authentication supports IPv4 addresses only when connecting to an
+     * Identity Provider (IdP) or Amazon Cognito endpoint. Without a public IPv4 address the load
+     * balancer can't complete the authentication process, resulting in HTTP 500 errors.
      *
-     * [Network Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses). You can’t specify `dualstack` for a
-     * load balancer with a UDP or TCP_UDP listener.
-     *
-     * [Gateway Load Balancers] The IP address type. The possible values are `ipv4` (for only IPv4
-     * addresses) and `dualstack` (for IPv4 and IPv6 addresses).
+     * [Network Load Balancers and Gateway Load Balancers] The possible values are `ipv4` (IPv4
+     * addresses) and `dualstack` (IPv4 and IPv6 addresses).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-ipaddresstype)
      */
@@ -697,6 +771,13 @@ public interface CfnLoadBalancerProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-loadbalancerattributes)
      */
     override fun loadBalancerAttributes(): Any? = unwrap(this).getLoadBalancerAttributes()
+
+    /**
+     * The minimum capacity for a load balancer.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-minimumloadbalancercapacity)
+     */
+    override fun minimumLoadBalancerCapacity(): Any? = unwrap(this).getMinimumLoadBalancerCapacity()
 
     /**
      * The name of the load balancer.
@@ -727,7 +808,7 @@ public interface CfnLoadBalancerProps {
      *
      * The default is an Internet-facing load balancer.
      *
-     * You cannot specify a scheme for a Gateway Load Balancer.
+     * You can't specify a scheme for a Gateway Load Balancer.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-scheme)
      */
@@ -748,7 +829,7 @@ public interface CfnLoadBalancerProps {
      * subnet mappings, but not both.
      *
      * [Application Load Balancers] You must specify subnets from at least two Availability Zones.
-     * You cannot specify Elastic IP addresses for your subnets.
+     * You can't specify Elastic IP addresses for your subnets.
      *
      * [Application Load Balancers on Outposts] You must specify one Outpost subnet.
      *
@@ -762,7 +843,7 @@ public interface CfnLoadBalancerProps {
      * specify one IPv6 address per subnet.
      *
      * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones. You
-     * cannot specify Elastic IP addresses for your subnets.
+     * can't specify Elastic IP addresses for your subnets.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnetmappings)
      */
@@ -782,9 +863,8 @@ public interface CfnLoadBalancerProps {
      * [Application Load Balancers on Local Zones] You can specify subnets from one or more Local
      * Zones.
      *
-     * [Network Load Balancers] You can specify subnets from one or more Availability Zones.
-     *
-     * [Gateway Load Balancers] You can specify subnets from one or more Availability Zones.
+     * [Network Load Balancers and Gateway Load Balancers] You can specify subnets from one or more
+     * Availability Zones.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-loadbalancer.html#cfn-elasticloadbalancingv2-loadbalancer-subnets)
      */

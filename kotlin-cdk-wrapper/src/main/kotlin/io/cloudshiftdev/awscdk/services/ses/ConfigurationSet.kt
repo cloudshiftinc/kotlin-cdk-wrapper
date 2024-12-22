@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.ses
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import kotlin.Boolean
@@ -17,12 +18,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * IDedicatedIpPool myPool;
- * ConfigurationSet.Builder.create(this, "ConfigurationSet")
- * .customTrackingRedirectDomain("track.cdk.dev")
- * .suppressionReasons(SuppressionReasons.COMPLAINTS_ONLY)
- * .tlsPolicy(ConfigurationSetTlsPolicy.REQUIRE)
- * .dedicatedIpPool(myPool)
+ * ConfigurationSet.Builder.create(this, "ConfigurationSetWithVdmOptions")
+ * .vdmOptions(VdmOptions.builder()
+ * .engagementMetrics(true)
+ * .optimizedSharedDelivery(true)
+ * .build())
  * .build();
  * ```
  */
@@ -112,6 +112,30 @@ public open class ConfigurationSet(
      * @param dedicatedIpPool The dedicated IP pool to associate with the configuration set. 
      */
     public fun dedicatedIpPool(dedicatedIpPool: IDedicatedIpPool)
+
+    /**
+     * If true, account-level suppression list is disabled;
+     *
+     * email sent with this configuration set
+     * will not use any suppression settings at all
+     *
+     * Default: false
+     *
+     * @param disableSuppressionList If true, account-level suppression list is disabled;. 
+     */
+    public fun disableSuppressionList(disableSuppressionList: Boolean)
+
+    /**
+     * The maximum amount of time that Amazon SES API v2 will attempt delivery of email.
+     *
+     * This value must be greater than or equal to 5 minutes and less than or equal to 14 hours.
+     *
+     * Default: undefined - SES defaults to 14 hours
+     *
+     * @param maxDeliveryDuration The maximum amount of time that Amazon SES API v2 will attempt
+     * delivery of email. 
+     */
+    public fun maxDeliveryDuration(maxDeliveryDuration: Duration)
 
     /**
      * Whether to publish reputation metrics for the configuration set, such as bounce and complaint
@@ -222,6 +246,34 @@ public open class ConfigurationSet(
      */
     override fun dedicatedIpPool(dedicatedIpPool: IDedicatedIpPool) {
       cdkBuilder.dedicatedIpPool(dedicatedIpPool.let(IDedicatedIpPool.Companion::unwrap))
+    }
+
+    /**
+     * If true, account-level suppression list is disabled;
+     *
+     * email sent with this configuration set
+     * will not use any suppression settings at all
+     *
+     * Default: false
+     *
+     * @param disableSuppressionList If true, account-level suppression list is disabled;. 
+     */
+    override fun disableSuppressionList(disableSuppressionList: Boolean) {
+      cdkBuilder.disableSuppressionList(disableSuppressionList)
+    }
+
+    /**
+     * The maximum amount of time that Amazon SES API v2 will attempt delivery of email.
+     *
+     * This value must be greater than or equal to 5 minutes and less than or equal to 14 hours.
+     *
+     * Default: undefined - SES defaults to 14 hours
+     *
+     * @param maxDeliveryDuration The maximum amount of time that Amazon SES API v2 will attempt
+     * delivery of email. 
+     */
+    override fun maxDeliveryDuration(maxDeliveryDuration: Duration) {
+      cdkBuilder.maxDeliveryDuration(maxDeliveryDuration.let(Duration.Companion::unwrap))
     }
 
     /**

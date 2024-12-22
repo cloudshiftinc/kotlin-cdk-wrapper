@@ -30,6 +30,7 @@ import kotlin.collections.List
  * .teamsChannelId("teamsChannelId")
  * .teamsTenantId("teamsTenantId")
  * // the properties below are optional
+ * .customizationResourceArns(List.of("customizationResourceArns"))
  * .guardrailPolicies(List.of("guardrailPolicies"))
  * .loggingLevel("loggingLevel")
  * .snsTopicArns(List.of("snsTopicArns"))
@@ -50,6 +51,15 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-configurationname)
    */
   public fun configurationName(): String
+
+  /**
+   * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
+   * configuration for AWS Chatbot .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-customizationresourcearns)
+   */
+  public fun customizationResourceArns(): List<String> = unwrap(this).getCustomizationResourceArns()
+      ?: emptyList()
 
   /**
    * The list of IAM policy ARNs that are applied as channel guardrails.
@@ -154,6 +164,18 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     public fun configurationName(configurationName: String)
 
     /**
+     * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
+     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot .
+     */
+    public fun customizationResourceArns(customizationResourceArns: List<String>)
+
+    /**
+     * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
+     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot .
+     */
+    public fun customizationResourceArns(vararg customizationResourceArns: String)
+
+    /**
      * @param guardrailPolicies The list of IAM policy ARNs that are applied as channel guardrails.
      * The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set.
      */
@@ -250,6 +272,21 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
     override fun configurationName(configurationName: String) {
       cdkBuilder.configurationName(configurationName)
     }
+
+    /**
+     * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
+     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot .
+     */
+    override fun customizationResourceArns(customizationResourceArns: List<String>) {
+      cdkBuilder.customizationResourceArns(customizationResourceArns)
+    }
+
+    /**
+     * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
+     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot .
+     */
+    override fun customizationResourceArns(vararg customizationResourceArns: String): Unit =
+        customizationResourceArns(customizationResourceArns.toList())
 
     /**
      * @param guardrailPolicies The list of IAM policy ARNs that are applied as channel guardrails.
@@ -373,6 +410,15 @@ public interface CfnMicrosoftTeamsChannelConfigurationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-configurationname)
      */
     override fun configurationName(): String = unwrap(this).getConfigurationName()
+
+    /**
+     * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
+     * configuration for AWS Chatbot .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-customizationresourcearns)
+     */
+    override fun customizationResourceArns(): List<String> =
+        unwrap(this).getCustomizationResourceArns() ?: emptyList()
 
     /**
      * The list of IAM policy ARNs that are applied as channel guardrails.

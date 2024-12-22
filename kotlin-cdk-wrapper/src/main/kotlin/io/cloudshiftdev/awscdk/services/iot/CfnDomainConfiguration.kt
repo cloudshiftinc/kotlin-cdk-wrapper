@@ -32,9 +32,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * import io.cloudshiftdev.awscdk.services.iot.*;
  * CfnDomainConfiguration cfnDomainConfiguration = CfnDomainConfiguration.Builder.create(this,
  * "MyCfnDomainConfiguration")
+ * .applicationProtocol("applicationProtocol")
+ * .authenticationType("authenticationType")
  * .authorizerConfig(AuthorizerConfigProperty.builder()
  * .allowAuthorizerOverride(false)
  * .defaultAuthorizerName("defaultAuthorizerName")
+ * .build())
+ * .clientCertificateConfig(ClientCertificateConfigProperty.builder()
+ * .clientCertificateCallbackArn("clientCertificateCallbackArn")
  * .build())
  * .domainConfigurationName("domainConfigurationName")
  * .domainConfigurationStatus("domainConfigurationStatus")
@@ -42,6 +47,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .serverCertificateArns(List.of("serverCertificateArns"))
  * .serverCertificateConfig(ServerCertificateConfigProperty.builder()
  * .enableOcspCheck(false)
+ * .ocspAuthorizedResponderArn("ocspAuthorizedResponderArn")
+ * .ocspLambdaArn("ocspLambdaArn")
  * .build())
  * .serviceType("serviceType")
  * .tags(List.of(CfnTag.builder()
@@ -84,6 +91,18 @@ public open class CfnDomainConfiguration(
   )
 
   /**
+   * An enumerated string that speciﬁes the application-layer protocol.
+   */
+  public open fun applicationProtocol(): String? = unwrap(this).getApplicationProtocol()
+
+  /**
+   * An enumerated string that speciﬁes the application-layer protocol.
+   */
+  public open fun applicationProtocol(`value`: String) {
+    unwrap(this).setApplicationProtocol(`value`)
+  }
+
+  /**
    * The Amazon Resource Name (ARN) of the domain configuration.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
@@ -101,6 +120,18 @@ public open class CfnDomainConfiguration(
    */
   public open fun attrServerCertificates(): IResolvable =
       unwrap(this).getAttrServerCertificates().let(IResolvable::wrap)
+
+  /**
+   * An enumerated string that speciﬁes the authentication type.
+   */
+  public open fun authenticationType(): String? = unwrap(this).getAuthenticationType()
+
+  /**
+   * An enumerated string that speciﬁes the authentication type.
+   */
+  public open fun authenticationType(`value`: String) {
+    unwrap(this).setAuthenticationType(`value`)
+  }
 
   /**
    * An object that specifies the authorization service for a domain.
@@ -128,6 +159,34 @@ public open class CfnDomainConfiguration(
   @JvmName("7068dcfe8a08dae5b2176eb90e7443672ed814ab8837b883ca3f48e4a9afd32e")
   public open fun authorizerConfig(`value`: AuthorizerConfigProperty.Builder.() -> Unit): Unit =
       authorizerConfig(AuthorizerConfigProperty(`value`))
+
+  /**
+   * An object that speciﬁes the client certificate conﬁguration for a domain.
+   */
+  public open fun clientCertificateConfig(): Any? = unwrap(this).getClientCertificateConfig()
+
+  /**
+   * An object that speciﬁes the client certificate conﬁguration for a domain.
+   */
+  public open fun clientCertificateConfig(`value`: IResolvable) {
+    unwrap(this).setClientCertificateConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * An object that speciﬁes the client certificate conﬁguration for a domain.
+   */
+  public open fun clientCertificateConfig(`value`: ClientCertificateConfigProperty) {
+    unwrap(this).setClientCertificateConfig(`value`.let(ClientCertificateConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   * An object that speciﬁes the client certificate conﬁguration for a domain.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("6dc96da3e800d04772f5e9733e2ab3d6a15c42df3351601a515c17e3fb8827d6")
+  public open
+      fun clientCertificateConfig(`value`: ClientCertificateConfigProperty.Builder.() -> Unit): Unit
+      = clientCertificateConfig(ClientCertificateConfigProperty(`value`))
 
   /**
    * The name of the domain configuration.
@@ -301,6 +360,23 @@ public open class CfnDomainConfiguration(
   @CdkDslMarker
   public interface Builder {
     /**
+     * An enumerated string that speciﬁes the application-layer protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-applicationprotocol)
+     * @param applicationProtocol An enumerated string that speciﬁes the application-layer protocol.
+     * 
+     */
+    public fun applicationProtocol(applicationProtocol: String)
+
+    /**
+     * An enumerated string that speciﬁes the authentication type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-authenticationtype)
+     * @param authenticationType An enumerated string that speciﬁes the authentication type. 
+     */
+    public fun authenticationType(authenticationType: String)
+
+    /**
      * An object that specifies the authorization service for a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-authorizerconfig)
@@ -325,6 +401,36 @@ public open class CfnDomainConfiguration(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("ce4759ae749a4e31a1c4dd04b7986e8d3ab600f3d189c96aff7f6df92ee08972")
     public fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty.Builder.() -> Unit)
+
+    /**
+     * An object that speciﬁes the client certificate conﬁguration for a domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-clientcertificateconfig)
+     * @param clientCertificateConfig An object that speciﬁes the client certificate conﬁguration
+     * for a domain. 
+     */
+    public fun clientCertificateConfig(clientCertificateConfig: IResolvable)
+
+    /**
+     * An object that speciﬁes the client certificate conﬁguration for a domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-clientcertificateconfig)
+     * @param clientCertificateConfig An object that speciﬁes the client certificate conﬁguration
+     * for a domain. 
+     */
+    public fun clientCertificateConfig(clientCertificateConfig: ClientCertificateConfigProperty)
+
+    /**
+     * An object that speciﬁes the client certificate conﬁguration for a domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-clientcertificateconfig)
+     * @param clientCertificateConfig An object that speciﬁes the client certificate conﬁguration
+     * for a domain. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3a551d156c49d8b38bfa822e98063a08da917b3f5d7319c16882908e6fd7c9f5")
+    public
+        fun clientCertificateConfig(clientCertificateConfig: ClientCertificateConfigProperty.Builder.() -> Unit)
 
     /**
      * The name of the domain configuration.
@@ -511,6 +617,27 @@ public open class CfnDomainConfiguration(
         software.amazon.awscdk.services.iot.CfnDomainConfiguration.Builder.create(scope, id)
 
     /**
+     * An enumerated string that speciﬁes the application-layer protocol.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-applicationprotocol)
+     * @param applicationProtocol An enumerated string that speciﬁes the application-layer protocol.
+     * 
+     */
+    override fun applicationProtocol(applicationProtocol: String) {
+      cdkBuilder.applicationProtocol(applicationProtocol)
+    }
+
+    /**
+     * An enumerated string that speciﬁes the authentication type.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-authenticationtype)
+     * @param authenticationType An enumerated string that speciﬁes the authentication type. 
+     */
+    override fun authenticationType(authenticationType: String) {
+      cdkBuilder.authenticationType(authenticationType)
+    }
+
+    /**
      * An object that specifies the authorization service for a domain.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-authorizerconfig)
@@ -540,6 +667,41 @@ public open class CfnDomainConfiguration(
     @JvmName("ce4759ae749a4e31a1c4dd04b7986e8d3ab600f3d189c96aff7f6df92ee08972")
     override fun authorizerConfig(authorizerConfig: AuthorizerConfigProperty.Builder.() -> Unit):
         Unit = authorizerConfig(AuthorizerConfigProperty(authorizerConfig))
+
+    /**
+     * An object that speciﬁes the client certificate conﬁguration for a domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-clientcertificateconfig)
+     * @param clientCertificateConfig An object that speciﬁes the client certificate conﬁguration
+     * for a domain. 
+     */
+    override fun clientCertificateConfig(clientCertificateConfig: IResolvable) {
+      cdkBuilder.clientCertificateConfig(clientCertificateConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * An object that speciﬁes the client certificate conﬁguration for a domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-clientcertificateconfig)
+     * @param clientCertificateConfig An object that speciﬁes the client certificate conﬁguration
+     * for a domain. 
+     */
+    override fun clientCertificateConfig(clientCertificateConfig: ClientCertificateConfigProperty) {
+      cdkBuilder.clientCertificateConfig(clientCertificateConfig.let(ClientCertificateConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * An object that speciﬁes the client certificate conﬁguration for a domain.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-domainconfiguration.html#cfn-iot-domainconfiguration-clientcertificateconfig)
+     * @param clientCertificateConfig An object that speciﬁes the client certificate conﬁguration
+     * for a domain. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("3a551d156c49d8b38bfa822e98063a08da917b3f5d7319c16882908e6fd7c9f5")
+    override
+        fun clientCertificateConfig(clientCertificateConfig: ClientCertificateConfigProperty.Builder.() -> Unit):
+        Unit = clientCertificateConfig(ClientCertificateConfigProperty(clientCertificateConfig))
 
     /**
      * The name of the domain configuration.
@@ -898,6 +1060,96 @@ public open class CfnDomainConfiguration(
   }
 
   /**
+   * An object that speciﬁes the client certificate conﬁguration for a domain.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.iot.*;
+   * ClientCertificateConfigProperty clientCertificateConfigProperty =
+   * ClientCertificateConfigProperty.builder()
+   * .clientCertificateCallbackArn("clientCertificateCallbackArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-clientcertificateconfig.html)
+   */
+  public interface ClientCertificateConfigProperty {
+    /**
+     * The ARN of the Lambda function that IoT invokes after mutual TLS authentication during the
+     * connection.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-clientcertificateconfig.html#cfn-iot-domainconfiguration-clientcertificateconfig-clientcertificatecallbackarn)
+     */
+    public fun clientCertificateCallbackArn(): String? =
+        unwrap(this).getClientCertificateCallbackArn()
+
+    /**
+     * A builder for [ClientCertificateConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param clientCertificateCallbackArn The ARN of the Lambda function that IoT invokes after
+       * mutual TLS authentication during the connection.
+       */
+      public fun clientCertificateCallbackArn(clientCertificateCallbackArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ClientCertificateConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ClientCertificateConfigProperty.builder()
+
+      /**
+       * @param clientCertificateCallbackArn The ARN of the Lambda function that IoT invokes after
+       * mutual TLS authentication during the connection.
+       */
+      override fun clientCertificateCallbackArn(clientCertificateCallbackArn: String) {
+        cdkBuilder.clientCertificateCallbackArn(clientCertificateCallbackArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ClientCertificateConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ClientCertificateConfigProperty,
+    ) : CdkObject(cdkObject),
+        ClientCertificateConfigProperty {
+      /**
+       * The ARN of the Lambda function that IoT invokes after mutual TLS authentication during the
+       * connection.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-clientcertificateconfig.html#cfn-iot-domainconfiguration-clientcertificateconfig-clientcertificatecallbackarn)
+       */
+      override fun clientCertificateCallbackArn(): String? =
+          unwrap(this).getClientCertificateCallbackArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ClientCertificateConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.iot.CfnDomainConfiguration.ClientCertificateConfigProperty):
+          ClientCertificateConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ClientCertificateConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ClientCertificateConfigProperty):
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ClientCertificateConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.iot.CfnDomainConfiguration.ClientCertificateConfigProperty
+    }
+  }
+
+  /**
    * The server certificate configuration.
    *
    * For more information, see [Configurable
@@ -913,6 +1165,8 @@ public open class CfnDomainConfiguration(
    * ServerCertificateConfigProperty serverCertificateConfigProperty =
    * ServerCertificateConfigProperty.builder()
    * .enableOcspCheck(false)
+   * .ocspAuthorizedResponderArn("ocspAuthorizedResponderArn")
+   * .ocspLambdaArn("ocspLambdaArn")
    * .build();
    * ```
    *
@@ -930,6 +1184,16 @@ public open class CfnDomainConfiguration(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-enableocspcheck)
      */
     public fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-ocspauthorizedresponderarn)
+     */
+    public fun ocspAuthorizedResponderArn(): String? = unwrap(this).getOcspAuthorizedResponderArn()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-ocsplambdaarn)
+     */
+    public fun ocspLambdaArn(): String? = unwrap(this).getOcspLambdaArn()
 
     /**
      * A builder for [ServerCertificateConfigProperty]
@@ -953,6 +1217,16 @@ public open class CfnDomainConfiguration(
        * from the AWS IoT Core Developer Guide.
        */
       public fun enableOcspCheck(enableOcspCheck: IResolvable)
+
+      /**
+       * @param ocspAuthorizedResponderArn the value to be set.
+       */
+      public fun ocspAuthorizedResponderArn(ocspAuthorizedResponderArn: String)
+
+      /**
+       * @param ocspLambdaArn the value to be set.
+       */
+      public fun ocspLambdaArn(ocspLambdaArn: String)
     }
 
     private class BuilderImpl : Builder {
@@ -983,6 +1257,20 @@ public open class CfnDomainConfiguration(
         cdkBuilder.enableOcspCheck(enableOcspCheck.let(IResolvable.Companion::unwrap))
       }
 
+      /**
+       * @param ocspAuthorizedResponderArn the value to be set.
+       */
+      override fun ocspAuthorizedResponderArn(ocspAuthorizedResponderArn: String) {
+        cdkBuilder.ocspAuthorizedResponderArn(ocspAuthorizedResponderArn)
+      }
+
+      /**
+       * @param ocspLambdaArn the value to be set.
+       */
+      override fun ocspLambdaArn(ocspLambdaArn: String) {
+        cdkBuilder.ocspLambdaArn(ocspLambdaArn)
+      }
+
       public fun build():
           software.amazon.awscdk.services.iot.CfnDomainConfiguration.ServerCertificateConfigProperty
           = cdkBuilder.build()
@@ -1003,6 +1291,17 @@ public open class CfnDomainConfiguration(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-enableocspcheck)
        */
       override fun enableOcspCheck(): Any? = unwrap(this).getEnableOcspCheck()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-ocspauthorizedresponderarn)
+       */
+      override fun ocspAuthorizedResponderArn(): String? =
+          unwrap(this).getOcspAuthorizedResponderArn()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iot-domainconfiguration-servercertificateconfig.html#cfn-iot-domainconfiguration-servercertificateconfig-ocsplambdaarn)
+       */
+      override fun ocspLambdaArn(): String? = unwrap(this).getOcspLambdaArn()
     }
 
     public companion object {

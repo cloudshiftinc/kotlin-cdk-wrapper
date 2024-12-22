@@ -18,6 +18,11 @@ import kotlin.String
  */
 public interface IFunctionUrl : IResource {
   /**
+   * The authType of the function URL, used for access control.
+   */
+  public fun authType(): FunctionUrlAuthType
+
+  /**
    * The ARN of the function this URL refers to.
    */
   public fun functionArn(): String
@@ -54,6 +59,12 @@ public interface IFunctionUrl : IResource {
     override fun applyRemovalPolicy(policy: RemovalPolicy) {
       unwrap(this).applyRemovalPolicy(policy.let(RemovalPolicy.Companion::unwrap))
     }
+
+    /**
+     * The authType of the function URL, used for access control.
+     */
+    override fun authType(): FunctionUrlAuthType =
+        unwrap(this).getAuthType().let(FunctionUrlAuthType::wrap)
 
     /**
      * The environment this resource belongs to.

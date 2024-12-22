@@ -9,6 +9,7 @@ import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
 import kotlin.collections.Map
 
 /**
@@ -38,6 +39,19 @@ public interface CfnIncludeProps {
    * Default: - will throw an error on detecting any cyclical references
    */
   public fun allowCyclicalReferences(): Boolean? = unwrap(this).getAllowCyclicalReferences()
+
+  /**
+   * Specifies a list of LogicalIDs for resources that will be included in the CDK Stack, but will
+   * not be parsed and converted to CDK types.
+   *
+   * This allows you to use CFN templates
+   * that rely on Intrinsic placement that `cfn-include`
+   * would otherwise reject, such as non-primitive values in resource update policies.
+   *
+   * Default: - All resources are hydrated
+   */
+  public fun dehydratedResources(): List<String> = unwrap(this).getDehydratedResources() ?:
+      emptyList()
 
   /**
    * Specifies the template files that define nested stacks that should be included.
@@ -109,6 +123,24 @@ public interface CfnIncludeProps {
     public fun allowCyclicalReferences(allowCyclicalReferences: Boolean)
 
     /**
+     * @param dehydratedResources Specifies a list of LogicalIDs for resources that will be included
+     * in the CDK Stack, but will not be parsed and converted to CDK types.
+     * This allows you to use CFN templates
+     * that rely on Intrinsic placement that `cfn-include`
+     * would otherwise reject, such as non-primitive values in resource update policies.
+     */
+    public fun dehydratedResources(dehydratedResources: List<String>)
+
+    /**
+     * @param dehydratedResources Specifies a list of LogicalIDs for resources that will be included
+     * in the CDK Stack, but will not be parsed and converted to CDK types.
+     * This allows you to use CFN templates
+     * that rely on Intrinsic placement that `cfn-include`
+     * would otherwise reject, such as non-primitive values in resource update policies.
+     */
+    public fun dehydratedResources(vararg dehydratedResources: String)
+
+    /**
      * @param loadNestedStacks Specifies the template files that define nested stacks that should be
      * included.
      * If your template specifies a stack that isn't included here, it won't be created as a
@@ -168,6 +200,27 @@ public interface CfnIncludeProps {
     override fun allowCyclicalReferences(allowCyclicalReferences: Boolean) {
       cdkBuilder.allowCyclicalReferences(allowCyclicalReferences)
     }
+
+    /**
+     * @param dehydratedResources Specifies a list of LogicalIDs for resources that will be included
+     * in the CDK Stack, but will not be parsed and converted to CDK types.
+     * This allows you to use CFN templates
+     * that rely on Intrinsic placement that `cfn-include`
+     * would otherwise reject, such as non-primitive values in resource update policies.
+     */
+    override fun dehydratedResources(dehydratedResources: List<String>) {
+      cdkBuilder.dehydratedResources(dehydratedResources)
+    }
+
+    /**
+     * @param dehydratedResources Specifies a list of LogicalIDs for resources that will be included
+     * in the CDK Stack, but will not be parsed and converted to CDK types.
+     * This allows you to use CFN templates
+     * that rely on Intrinsic placement that `cfn-include`
+     * would otherwise reject, such as non-primitive values in resource update policies.
+     */
+    override fun dehydratedResources(vararg dehydratedResources: String): Unit =
+        dehydratedResources(dehydratedResources.toList())
 
     /**
      * @param loadNestedStacks Specifies the template files that define nested stacks that should be
@@ -241,6 +294,19 @@ public interface CfnIncludeProps {
      * Default: - will throw an error on detecting any cyclical references
      */
     override fun allowCyclicalReferences(): Boolean? = unwrap(this).getAllowCyclicalReferences()
+
+    /**
+     * Specifies a list of LogicalIDs for resources that will be included in the CDK Stack, but will
+     * not be parsed and converted to CDK types.
+     *
+     * This allows you to use CFN templates
+     * that rely on Intrinsic placement that `cfn-include`
+     * would otherwise reject, such as non-primitive values in resource update policies.
+     *
+     * Default: - All resources are hydrated
+     */
+    override fun dehydratedResources(): List<String> = unwrap(this).getDehydratedResources() ?:
+        emptyList()
 
     /**
      * Specifies the template files that define nested stacks that should be included.

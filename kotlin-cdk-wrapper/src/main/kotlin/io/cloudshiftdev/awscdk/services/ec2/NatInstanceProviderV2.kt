@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.ec2
 
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
@@ -106,6 +107,17 @@ public open class NatInstanceProviderV2(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Whether to associate a public IP address to the primary network interface attached to this
+     * instance.
+     *
+     * Default: undefined - No public IP address associated
+     *
+     * @param associatePublicIpAddress Whether to associate a public IP address to the primary
+     * network interface attached to this instance. 
+     */
+    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
+
     /**
      * Specifying the CPU credit type for burstable EC2 instance types (T2, T3, T3a, etc).
      *
@@ -235,6 +247,19 @@ public open class NatInstanceProviderV2(
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.NatInstanceProviderV2.Builder =
         software.amazon.awscdk.services.ec2.NatInstanceProviderV2.Builder.create()
+
+    /**
+     * Whether to associate a public IP address to the primary network interface attached to this
+     * instance.
+     *
+     * Default: undefined - No public IP address associated
+     *
+     * @param associatePublicIpAddress Whether to associate a public IP address to the primary
+     * network interface attached to this instance. 
+     */
+    override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
+    }
 
     /**
      * Specifying the CPU credit type for burstable EC2 instance types (T2, T3, T3a, etc).

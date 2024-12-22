@@ -34,6 +34,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnIntegration cfnIntegration = CfnIntegration.Builder.create(this, "MyCfnIntegration")
  * .domainName("domainName")
  * // the properties below are optional
+ * .eventTriggerNames(List.of("eventTriggerNames"))
  * .flowDefinition(FlowDefinitionProperty.builder()
  * .flowName("flowName")
  * .kmsArn("kmsArn")
@@ -162,6 +163,25 @@ public open class CfnIntegration(
   }
 
   /**
+   * A list of unique names for active event triggers associated with the integration.
+   */
+  public open fun eventTriggerNames(): List<String> = unwrap(this).getEventTriggerNames() ?:
+      emptyList()
+
+  /**
+   * A list of unique names for active event triggers associated with the integration.
+   */
+  public open fun eventTriggerNames(`value`: List<String>) {
+    unwrap(this).setEventTriggerNames(`value`)
+  }
+
+  /**
+   * A list of unique names for active event triggers associated with the integration.
+   */
+  public open fun eventTriggerNames(vararg `value`: String): Unit =
+      eventTriggerNames(`value`.toList())
+
+  /**
    * The configuration that controls how Customer Profiles retrieves data from the source.
    */
   public open fun flowDefinition(): Any? = unwrap(this).getFlowDefinition()
@@ -282,6 +302,24 @@ public open class CfnIntegration(
     public fun domainName(domainName: String)
 
     /**
+     * A list of unique names for active event triggers associated with the integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-eventtriggernames)
+     * @param eventTriggerNames A list of unique names for active event triggers associated with the
+     * integration. 
+     */
+    public fun eventTriggerNames(eventTriggerNames: List<String>)
+
+    /**
+     * A list of unique names for active event triggers associated with the integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-eventtriggernames)
+     * @param eventTriggerNames A list of unique names for active event triggers associated with the
+     * integration. 
+     */
+    public fun eventTriggerNames(vararg eventTriggerNames: String)
+
+    /**
      * The configuration that controls how Customer Profiles retrieves data from the source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-flowdefinition)
@@ -383,6 +421,27 @@ public open class CfnIntegration(
     override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
+
+    /**
+     * A list of unique names for active event triggers associated with the integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-eventtriggernames)
+     * @param eventTriggerNames A list of unique names for active event triggers associated with the
+     * integration. 
+     */
+    override fun eventTriggerNames(eventTriggerNames: List<String>) {
+      cdkBuilder.eventTriggerNames(eventTriggerNames)
+    }
+
+    /**
+     * A list of unique names for active event triggers associated with the integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-eventtriggernames)
+     * @param eventTriggerNames A list of unique names for active event triggers associated with the
+     * integration. 
+     */
+    override fun eventTriggerNames(vararg eventTriggerNames: String): Unit =
+        eventTriggerNames(eventTriggerNames.toList())
 
     /**
      * The configuration that controls how Customer Profiles retrieves data from the source.

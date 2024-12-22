@@ -13,6 +13,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 
 /**
@@ -24,7 +25,6 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.appsync.*;
- * Object environmentVariables;
  * CfnGraphQLApiProps cfnGraphQLApiProps = CfnGraphQLApiProps.builder()
  * .authenticationType("authenticationType")
  * .name("name")
@@ -55,7 +55,8 @@ import kotlin.jvm.JvmName
  * .operationLevelMetricsConfig("operationLevelMetricsConfig")
  * .resolverLevelMetricsBehavior("resolverLevelMetricsBehavior")
  * .build())
- * .environmentVariables(environmentVariables)
+ * .environmentVariables(Map.of(
+ * "environmentVariablesKey", "environmentVariables"))
  * .introspectionConfig("introspectionConfig")
  * .lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty.builder()
  * .authorizerResultTtlInSeconds(123)
@@ -383,7 +384,21 @@ public interface CfnGraphQLApiProps {
      *
      * *Maximum* : 64
      */
-    public fun environmentVariables(environmentVariables: Any)
+    public fun environmentVariables(environmentVariables: IResolvable)
+
+    /**
+     * @param environmentVariables A map containing the list of resources with their properties and
+     * environment variables.
+     * For more information, see [Environmental
+     * variables](https://docs.aws.amazon.com/appsync/latest/devguide/environmental-variables.html) .
+     *
+     * *Pattern* : `^[A-Za-z]+\\w*$\\`
+     *
+     * *Minimum* : 2
+     *
+     * *Maximum* : 64
+     */
+    public fun environmentVariables(environmentVariables: Map<String, String>)
 
     /**
      * @param introspectionConfig Sets the value of the GraphQL API to enable ( `ENABLED` ) or
@@ -661,7 +676,23 @@ public interface CfnGraphQLApiProps {
      *
      * *Maximum* : 64
      */
-    override fun environmentVariables(environmentVariables: Any) {
+    override fun environmentVariables(environmentVariables: IResolvable) {
+      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param environmentVariables A map containing the list of resources with their properties and
+     * environment variables.
+     * For more information, see [Environmental
+     * variables](https://docs.aws.amazon.com/appsync/latest/devguide/environmental-variables.html) .
+     *
+     * *Pattern* : `^[A-Za-z]+\\w*$\\`
+     *
+     * *Minimum* : 2
+     *
+     * *Maximum* : 64
+     */
+    override fun environmentVariables(environmentVariables: Map<String, String>) {
       cdkBuilder.environmentVariables(environmentVariables)
     }
 

@@ -14,13 +14,15 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.apigatewayv2.*;
- * HttpAuthorizerAttributes httpAuthorizerAttributes = HttpAuthorizerAttributes.builder()
- * .authorizerId("authorizerId")
- * .authorizerType("authorizerType")
- * .build();
+ * import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpAuthorizer;
+ * import io.cloudshiftdev.awscdk.Fn;
+ * String authorizerId = Fn.importValue("authorizerId");
+ * String authorizerType = Fn.importValue("authorizerType");
+ * IHttpRouteAuthorizer authorizer = HttpAuthorizer.fromHttpAuthorizerAttributes(this,
+ * "HttpAuthorizer", HttpAuthorizerAttributes.builder()
+ * .authorizerId(authorizerId)
+ * .authorizerType(authorizerType)
+ * .build());
  * ```
  */
 public interface HttpAuthorizerAttributes {

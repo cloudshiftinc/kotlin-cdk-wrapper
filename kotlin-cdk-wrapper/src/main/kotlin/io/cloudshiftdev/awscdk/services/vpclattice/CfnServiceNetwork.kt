@@ -5,13 +5,19 @@ package io.cloudshiftdev.awscdk.services.vpclattice
 import io.cloudshiftdev.awscdk.CfnResource
 import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IInspectable
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.ITaggable
 import io.cloudshiftdev.awscdk.TagManager
 import io.cloudshiftdev.awscdk.TreeInspector
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
@@ -35,6 +41,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * "MyCfnServiceNetwork")
  * .authType("authType")
  * .name("name")
+ * .sharingConfig(SharingConfigProperty.builder()
+ * .enabled(false)
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -124,6 +133,33 @@ public open class CfnServiceNetwork(
   }
 
   /**
+   *
+   */
+  public open fun sharingConfig(): Any? = unwrap(this).getSharingConfig()
+
+  /**
+   *
+   */
+  public open fun sharingConfig(`value`: IResolvable) {
+    unwrap(this).setSharingConfig(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun sharingConfig(`value`: SharingConfigProperty) {
+    unwrap(this).setSharingConfig(`value`.let(SharingConfigProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("74345cb30e4856d6f6b732e7122310fbe8f24f8243814618cdc689bd86ae1d61")
+  public open fun sharingConfig(`value`: SharingConfigProperty.Builder.() -> Unit): Unit =
+      sharingConfig(SharingConfigProperty(`value`))
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -178,6 +214,26 @@ public open class CfnServiceNetwork(
      * @param name The name of the service network. 
      */
     public fun name(name: String)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
+     * @param sharingConfig 
+     */
+    public fun sharingConfig(sharingConfig: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
+     * @param sharingConfig 
+     */
+    public fun sharingConfig(sharingConfig: SharingConfigProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
+     * @param sharingConfig 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eeb6c7e9643d32040942dfc3640d1ad3035f1177cd77e90c70c8cdecb99f650e")
+    public fun sharingConfig(sharingConfig: SharingConfigProperty.Builder.() -> Unit)
 
     /**
      * The tags for the service network.
@@ -236,6 +292,31 @@ public open class CfnServiceNetwork(
     }
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
+     * @param sharingConfig 
+     */
+    override fun sharingConfig(sharingConfig: IResolvable) {
+      cdkBuilder.sharingConfig(sharingConfig.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
+     * @param sharingConfig 
+     */
+    override fun sharingConfig(sharingConfig: SharingConfigProperty) {
+      cdkBuilder.sharingConfig(sharingConfig.let(SharingConfigProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-sharingconfig)
+     * @param sharingConfig 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eeb6c7e9643d32040942dfc3640d1ad3035f1177cd77e90c70c8cdecb99f650e")
+    override fun sharingConfig(sharingConfig: SharingConfigProperty.Builder.() -> Unit): Unit =
+        sharingConfig(SharingConfigProperty(sharingConfig))
+
+    /**
      * The tags for the service network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetwork.html#cfn-vpclattice-servicenetwork-tags)
@@ -276,5 +357,94 @@ public open class CfnServiceNetwork(
     internal fun unwrap(wrapped: CfnServiceNetwork):
         software.amazon.awscdk.services.vpclattice.CfnServiceNetwork = wrapped.cdkObject as
         software.amazon.awscdk.services.vpclattice.CfnServiceNetwork
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.vpclattice.*;
+   * SharingConfigProperty sharingConfigProperty = SharingConfigProperty.builder()
+   * .enabled(false)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-servicenetwork-sharingconfig.html)
+   */
+  public interface SharingConfigProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-servicenetwork-sharingconfig.html#cfn-vpclattice-servicenetwork-sharingconfig-enabled)
+     */
+    public fun enabled(): Any
+
+    /**
+     * A builder for [SharingConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param enabled the value to be set. 
+       */
+      public fun enabled(enabled: Boolean)
+
+      /**
+       * @param enabled the value to be set. 
+       */
+      public fun enabled(enabled: IResolvable)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.vpclattice.CfnServiceNetwork.SharingConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.vpclattice.CfnServiceNetwork.SharingConfigProperty.builder()
+
+      /**
+       * @param enabled the value to be set. 
+       */
+      override fun enabled(enabled: Boolean) {
+        cdkBuilder.enabled(enabled)
+      }
+
+      /**
+       * @param enabled the value to be set. 
+       */
+      override fun enabled(enabled: IResolvable) {
+        cdkBuilder.enabled(enabled.let(IResolvable.Companion::unwrap))
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.vpclattice.CfnServiceNetwork.SharingConfigProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetwork.SharingConfigProperty,
+    ) : CdkObject(cdkObject),
+        SharingConfigProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-vpclattice-servicenetwork-sharingconfig.html#cfn-vpclattice-servicenetwork-sharingconfig-enabled)
+       */
+      override fun enabled(): Any = unwrap(this).getEnabled()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): SharingConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.vpclattice.CfnServiceNetwork.SharingConfigProperty):
+          SharingConfigProperty = CdkObjectWrappers.wrap(cdkObject) as? SharingConfigProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SharingConfigProperty):
+          software.amazon.awscdk.services.vpclattice.CfnServiceNetwork.SharingConfigProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.vpclattice.CfnServiceNetwork.SharingConfigProperty
+    }
   }
 }

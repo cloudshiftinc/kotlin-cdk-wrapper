@@ -84,12 +84,12 @@ public open class CfnFleet(
   public open fun attrLastModificationTime(): String = unwrap(this).getAttrLastModificationTime()
 
   /**
-   * (Optional) A brief description of the fleet.
+   * A brief description of the fleet.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * (Optional) A brief description of the fleet.
+   * A brief description of the fleet.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -134,20 +134,20 @@ public open class CfnFleet(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * (Optional) Metadata that can be used to manage the fleet.
+   * Metadata that can be used to manage the fleet.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * (Optional) Metadata that can be used to manage the fleet.
+   * Metadata that can be used to manage the fleet.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * (Optional) Metadata that can be used to manage the fleet.
+   * Metadata that can be used to manage the fleet.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -157,10 +157,10 @@ public open class CfnFleet(
   @CdkDslMarker
   public interface Builder {
     /**
-     * (Optional) A brief description of the fleet.
+     * A brief description of the fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-description)
-     * @param description (Optional) A brief description of the fleet. 
+     * @param description A brief description of the fleet. 
      */
     public fun description(description: String)
 
@@ -181,18 +181,18 @@ public open class CfnFleet(
     public fun signalCatalogArn(signalCatalogArn: String)
 
     /**
-     * (Optional) Metadata that can be used to manage the fleet.
+     * Metadata that can be used to manage the fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-tags)
-     * @param tags (Optional) Metadata that can be used to manage the fleet. 
+     * @param tags Metadata that can be used to manage the fleet. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * (Optional) Metadata that can be used to manage the fleet.
+     * Metadata that can be used to manage the fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-tags)
-     * @param tags (Optional) Metadata that can be used to manage the fleet. 
+     * @param tags Metadata that can be used to manage the fleet. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -205,10 +205,10 @@ public open class CfnFleet(
         software.amazon.awscdk.services.iotfleetwise.CfnFleet.Builder.create(scope, id)
 
     /**
-     * (Optional) A brief description of the fleet.
+     * A brief description of the fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-description)
-     * @param description (Optional) A brief description of the fleet. 
+     * @param description A brief description of the fleet. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -235,20 +235,20 @@ public open class CfnFleet(
     }
 
     /**
-     * (Optional) Metadata that can be used to manage the fleet.
+     * Metadata that can be used to manage the fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-tags)
-     * @param tags (Optional) Metadata that can be used to manage the fleet. 
+     * @param tags Metadata that can be used to manage the fleet. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * (Optional) Metadata that can be used to manage the fleet.
+     * Metadata that can be used to manage the fleet.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-fleet.html#cfn-iotfleetwise-fleet-tags)
-     * @param tags (Optional) Metadata that can be used to manage the fleet. 
+     * @param tags Metadata that can be used to manage the fleet. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

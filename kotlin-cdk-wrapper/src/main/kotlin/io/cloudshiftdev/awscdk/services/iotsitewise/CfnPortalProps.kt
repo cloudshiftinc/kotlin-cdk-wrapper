@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.iotsitewise
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
@@ -10,6 +11,7 @@ import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.collections.Map
 
 /**
  * Properties for defining a `CfnPortal`.
@@ -30,6 +32,11 @@ import kotlin.collections.List
  * .notificationSenderEmail("notificationSenderEmail")
  * .portalAuthMode("portalAuthMode")
  * .portalDescription("portalDescription")
+ * .portalType("portalType")
+ * .portalTypeConfiguration(Map.of(
+ * "portalTypeConfigurationKey", PortalTypeEntryProperty.builder()
+ * .portalTools(List.of("portalTools"))
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -107,6 +114,23 @@ public interface CfnPortalProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portalname)
    */
   public fun portalName(): String
+
+  /**
+   * Define the type of portal.
+   *
+   * The value for AWS IoT SiteWise Monitor (Classic) is `SITEWISE_PORTAL_V1` . The value for AWS
+   * IoT SiteWise Monitor (AI-aware) is `SITEWISE_PORTAL_V2` .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portaltype)
+   */
+  public fun portalType(): String? = unwrap(this).getPortalType()
+
+  /**
+   * Map to associate detail of configuration related with a PortalType.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portaltypeconfiguration)
+   */
+  public fun portalTypeConfiguration(): Any? = unwrap(this).getPortalTypeConfiguration()
 
   /**
    * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of a
@@ -187,6 +211,25 @@ public interface CfnPortalProps {
      * @param portalName A friendly name for the portal. 
      */
     public fun portalName(portalName: String)
+
+    /**
+     * @param portalType Define the type of portal.
+     * The value for AWS IoT SiteWise Monitor (Classic) is `SITEWISE_PORTAL_V1` . The value for AWS
+     * IoT SiteWise Monitor (AI-aware) is `SITEWISE_PORTAL_V2` .
+     */
+    public fun portalType(portalType: String)
+
+    /**
+     * @param portalTypeConfiguration Map to associate detail of configuration related with a
+     * PortalType.
+     */
+    public fun portalTypeConfiguration(portalTypeConfiguration: IResolvable)
+
+    /**
+     * @param portalTypeConfiguration Map to associate detail of configuration related with a
+     * PortalType.
+     */
+    public fun portalTypeConfiguration(portalTypeConfiguration: Map<String, Any>)
 
     /**
      * @param roleArn The
@@ -282,6 +325,31 @@ public interface CfnPortalProps {
      */
     override fun portalName(portalName: String) {
       cdkBuilder.portalName(portalName)
+    }
+
+    /**
+     * @param portalType Define the type of portal.
+     * The value for AWS IoT SiteWise Monitor (Classic) is `SITEWISE_PORTAL_V1` . The value for AWS
+     * IoT SiteWise Monitor (AI-aware) is `SITEWISE_PORTAL_V2` .
+     */
+    override fun portalType(portalType: String) {
+      cdkBuilder.portalType(portalType)
+    }
+
+    /**
+     * @param portalTypeConfiguration Map to associate detail of configuration related with a
+     * PortalType.
+     */
+    override fun portalTypeConfiguration(portalTypeConfiguration: IResolvable) {
+      cdkBuilder.portalTypeConfiguration(portalTypeConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param portalTypeConfiguration Map to associate detail of configuration related with a
+     * PortalType.
+     */
+    override fun portalTypeConfiguration(portalTypeConfiguration: Map<String, Any>) {
+      cdkBuilder.portalTypeConfiguration(portalTypeConfiguration.mapValues{CdkObjectWrappers.unwrap(it.value)})
     }
 
     /**
@@ -389,6 +457,23 @@ public interface CfnPortalProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portalname)
      */
     override fun portalName(): String = unwrap(this).getPortalName()
+
+    /**
+     * Define the type of portal.
+     *
+     * The value for AWS IoT SiteWise Monitor (Classic) is `SITEWISE_PORTAL_V1` . The value for AWS
+     * IoT SiteWise Monitor (AI-aware) is `SITEWISE_PORTAL_V2` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portaltype)
+     */
+    override fun portalType(): String? = unwrap(this).getPortalType()
+
+    /**
+     * Map to associate detail of configuration related with a PortalType.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotsitewise-portal.html#cfn-iotsitewise-portal-portaltypeconfiguration)
+     */
+    override fun portalTypeConfiguration(): Any? = unwrap(this).getPortalTypeConfiguration()
 
     /**
      * The [ARN](https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html) of a

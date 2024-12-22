@@ -13,6 +13,7 @@ import io.cloudshiftdev.awscdk.services.ecs.DeploymentCircuitBreaker
 import io.cloudshiftdev.awscdk.services.ecs.DeploymentController
 import io.cloudshiftdev.awscdk.services.ecs.ICluster
 import io.cloudshiftdev.awscdk.services.ecs.PropagatedTagSource
+import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IListenerCertificate
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.INetworkLoadBalancer
 import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.IpAddressType
 import io.cloudshiftdev.awscdk.services.route53.IHostedZone
@@ -44,6 +45,7 @@ import kotlin.jvm.JvmName
  * ContainerDefinition containerDefinition;
  * ContainerImage containerImage;
  * HostedZone hostedZone;
+ * ListenerCertificate listenerCertificate;
  * LogDriver logDriver;
  * INamespace namespace;
  * NetworkLoadBalancer networkLoadBalancer;
@@ -82,6 +84,7 @@ import kotlin.jvm.JvmName
  * .enableExecuteCommand(false)
  * .healthCheckGracePeriod(Duration.minutes(30))
  * .ipAddressType(IpAddressType.IPV4)
+ * .listenerCertificate(listenerCertificate)
  * .listenerPort(123)
  * .loadBalancer(networkLoadBalancer)
  * .maxHealthyPercent(123)
@@ -229,9 +232,20 @@ public interface NetworkLoadBalancedServiceBaseProps {
       unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
   /**
+   * Listener certificate list of ACM cert ARNs.
+   *
+   * If you provide a certificate, the listener's protocol will be TLS.
+   * If not, the listener's protocol will be TCP.
+   *
+   * Default: - none
+   */
+  public fun listenerCertificate(): IListenerCertificate? =
+      unwrap(this).getListenerCertificate()?.let(IListenerCertificate::wrap)
+
+  /**
    * Listener port of the network load balancer that will serve traffic to the service.
    *
-   * Default: 80
+   * Default: 80 or 443 with listenerCertificate provided
    */
   public fun listenerPort(): Number? = unwrap(this).getListenerPort()
 
@@ -439,6 +453,13 @@ public interface NetworkLoadBalancedServiceBaseProps {
      * you must choose IPv4.
      */
     public fun ipAddressType(ipAddressType: IpAddressType)
+
+    /**
+     * @param listenerCertificate Listener certificate list of ACM cert ARNs.
+     * If you provide a certificate, the listener's protocol will be TLS.
+     * If not, the listener's protocol will be TCP.
+     */
+    public fun listenerCertificate(listenerCertificate: IListenerCertificate)
 
     /**
      * @param listenerPort Listener port of the network load balancer that will serve traffic to the
@@ -665,6 +686,15 @@ public interface NetworkLoadBalancedServiceBaseProps {
     }
 
     /**
+     * @param listenerCertificate Listener certificate list of ACM cert ARNs.
+     * If you provide a certificate, the listener's protocol will be TLS.
+     * If not, the listener's protocol will be TCP.
+     */
+    override fun listenerCertificate(listenerCertificate: IListenerCertificate) {
+      cdkBuilder.listenerCertificate(listenerCertificate.let(IListenerCertificate.Companion::unwrap))
+    }
+
+    /**
      * @param listenerPort Listener port of the network load balancer that will serve traffic to the
      * service.
      */
@@ -887,9 +917,20 @@ public interface NetworkLoadBalancedServiceBaseProps {
         unwrap(this).getIpAddressType()?.let(IpAddressType::wrap)
 
     /**
+     * Listener certificate list of ACM cert ARNs.
+     *
+     * If you provide a certificate, the listener's protocol will be TLS.
+     * If not, the listener's protocol will be TCP.
+     *
+     * Default: - none
+     */
+    override fun listenerCertificate(): IListenerCertificate? =
+        unwrap(this).getListenerCertificate()?.let(IListenerCertificate::wrap)
+
+    /**
      * Listener port of the network load balancer that will serve traffic to the service.
      *
-     * Default: 80
+     * Default: 80 or 443 with listenerCertificate provided
      */
     override fun listenerPort(): Number? = unwrap(this).getListenerPort()
 

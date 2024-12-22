@@ -24,6 +24,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
 /**
  * Creates a collection of standardized signals that can be reused to create vehicle models.
  *
+ * For more information, see [Signal
+ * catalogs](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/signal-catalogs.html) in
+ * the *AWS IoT FleetWise Developer Guide* .
+ *
  * Example:
  *
  * ```
@@ -163,12 +167,12 @@ public open class CfnSignalCatalog(
       unwrap(this).getAttrNodeCountsTotalSensors().let(IResolvable::wrap)
 
   /**
-   * (Optional) A brief description of the signal catalog.
+   * A brief description of the signal catalog.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * (Optional) A brief description of the signal catalog.
+   * A brief description of the signal catalog.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -184,38 +188,38 @@ public open class CfnSignalCatalog(
   }
 
   /**
-   * (Optional) The name of the signal catalog.
+   * The name of the signal catalog.
    */
   public open fun name(): String? = unwrap(this).getName()
 
   /**
-   * (Optional) The name of the signal catalog.
+   * The name of the signal catalog.
    */
   public open fun name(`value`: String) {
     unwrap(this).setName(`value`)
   }
 
   /**
-   * (Optional) Information about the number of nodes and node types in a vehicle network.
+   * Information about the number of nodes and node types in a vehicle network.
    */
   public open fun nodeCounts(): Any? = unwrap(this).getNodeCounts()
 
   /**
-   * (Optional) Information about the number of nodes and node types in a vehicle network.
+   * Information about the number of nodes and node types in a vehicle network.
    */
   public open fun nodeCounts(`value`: IResolvable) {
     unwrap(this).setNodeCounts(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * (Optional) Information about the number of nodes and node types in a vehicle network.
+   * Information about the number of nodes and node types in a vehicle network.
    */
   public open fun nodeCounts(`value`: NodeCountsProperty) {
     unwrap(this).setNodeCounts(`value`.let(NodeCountsProperty.Companion::unwrap))
   }
 
   /**
-   * (Optional) Information about the number of nodes and node types in a vehicle network.
+   * Information about the number of nodes and node types in a vehicle network.
    */
   @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
   @JvmName("cc3959deed9e373a7066695f451acd3e636548596d2fcb63f9893b8f0a92eba8")
@@ -223,26 +227,26 @@ public open class CfnSignalCatalog(
       nodeCounts(NodeCountsProperty(`value`))
 
   /**
-   * (Optional) A list of information about nodes, which are a general abstraction of signals.
+   * A list of information about nodes, which are a general abstraction of signals.
    */
   public open fun nodes(): Any? = unwrap(this).getNodes()
 
   /**
-   * (Optional) A list of information about nodes, which are a general abstraction of signals.
+   * A list of information about nodes, which are a general abstraction of signals.
    */
   public open fun nodes(`value`: IResolvable) {
     unwrap(this).setNodes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * (Optional) A list of information about nodes, which are a general abstraction of signals.
+   * A list of information about nodes, which are a general abstraction of signals.
    */
   public open fun nodes(`value`: List<Any>) {
     unwrap(this).setNodes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * (Optional) A list of information about nodes, which are a general abstraction of signals.
+   * A list of information about nodes, which are a general abstraction of signals.
    */
   public open fun nodes(vararg `value`: Any): Unit = nodes(`value`.toList())
 
@@ -252,20 +256,20 @@ public open class CfnSignalCatalog(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * (Optional) Metadata that can be used to manage the signal catalog.
+   * Metadata that can be used to manage the signal catalog.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * (Optional) Metadata that can be used to manage the signal catalog.
+   * Metadata that can be used to manage the signal catalog.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * (Optional) Metadata that can be used to manage the signal catalog.
+   * Metadata that can be used to manage the signal catalog.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -275,90 +279,84 @@ public open class CfnSignalCatalog(
   @CdkDslMarker
   public interface Builder {
     /**
-     * (Optional) A brief description of the signal catalog.
+     * A brief description of the signal catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-description)
-     * @param description (Optional) A brief description of the signal catalog. 
+     * @param description A brief description of the signal catalog. 
      */
     public fun description(description: String)
 
     /**
-     * (Optional) The name of the signal catalog.
+     * The name of the signal catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-name)
-     * @param name (Optional) The name of the signal catalog. 
+     * @param name The name of the signal catalog. 
      */
     public fun name(name: String)
 
     /**
-     * (Optional) Information about the number of nodes and node types in a vehicle network.
+     * Information about the number of nodes and node types in a vehicle network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodecounts)
-     * @param nodeCounts (Optional) Information about the number of nodes and node types in a
-     * vehicle network. 
+     * @param nodeCounts Information about the number of nodes and node types in a vehicle network. 
      */
     public fun nodeCounts(nodeCounts: IResolvable)
 
     /**
-     * (Optional) Information about the number of nodes and node types in a vehicle network.
+     * Information about the number of nodes and node types in a vehicle network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodecounts)
-     * @param nodeCounts (Optional) Information about the number of nodes and node types in a
-     * vehicle network. 
+     * @param nodeCounts Information about the number of nodes and node types in a vehicle network. 
      */
     public fun nodeCounts(nodeCounts: NodeCountsProperty)
 
     /**
-     * (Optional) Information about the number of nodes and node types in a vehicle network.
+     * Information about the number of nodes and node types in a vehicle network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodecounts)
-     * @param nodeCounts (Optional) Information about the number of nodes and node types in a
-     * vehicle network. 
+     * @param nodeCounts Information about the number of nodes and node types in a vehicle network. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0c2c036ef5820857fbc4d7fe0319e34db43831f2e7b29d3257ec25b0e0ae6ac7")
     public fun nodeCounts(nodeCounts: NodeCountsProperty.Builder.() -> Unit)
 
     /**
-     * (Optional) A list of information about nodes, which are a general abstraction of signals.
+     * A list of information about nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodes)
-     * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
-     * signals. 
+     * @param nodes A list of information about nodes, which are a general abstraction of signals. 
      */
     public fun nodes(nodes: IResolvable)
 
     /**
-     * (Optional) A list of information about nodes, which are a general abstraction of signals.
+     * A list of information about nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodes)
-     * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
-     * signals. 
+     * @param nodes A list of information about nodes, which are a general abstraction of signals. 
      */
     public fun nodes(nodes: List<Any>)
 
     /**
-     * (Optional) A list of information about nodes, which are a general abstraction of signals.
+     * A list of information about nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodes)
-     * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
-     * signals. 
+     * @param nodes A list of information about nodes, which are a general abstraction of signals. 
      */
     public fun nodes(vararg nodes: Any)
 
     /**
-     * (Optional) Metadata that can be used to manage the signal catalog.
+     * Metadata that can be used to manage the signal catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-tags)
-     * @param tags (Optional) Metadata that can be used to manage the signal catalog. 
+     * @param tags Metadata that can be used to manage the signal catalog. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * (Optional) Metadata that can be used to manage the signal catalog.
+     * Metadata that can be used to manage the signal catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-tags)
-     * @param tags (Optional) Metadata that can be used to manage the signal catalog. 
+     * @param tags Metadata that can be used to manage the signal catalog. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -371,53 +369,50 @@ public open class CfnSignalCatalog(
         software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.Builder.create(scope, id)
 
     /**
-     * (Optional) A brief description of the signal catalog.
+     * A brief description of the signal catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-description)
-     * @param description (Optional) A brief description of the signal catalog. 
+     * @param description A brief description of the signal catalog. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
-     * (Optional) The name of the signal catalog.
+     * The name of the signal catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-name)
-     * @param name (Optional) The name of the signal catalog. 
+     * @param name The name of the signal catalog. 
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
     }
 
     /**
-     * (Optional) Information about the number of nodes and node types in a vehicle network.
+     * Information about the number of nodes and node types in a vehicle network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodecounts)
-     * @param nodeCounts (Optional) Information about the number of nodes and node types in a
-     * vehicle network. 
+     * @param nodeCounts Information about the number of nodes and node types in a vehicle network. 
      */
     override fun nodeCounts(nodeCounts: IResolvable) {
       cdkBuilder.nodeCounts(nodeCounts.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * (Optional) Information about the number of nodes and node types in a vehicle network.
+     * Information about the number of nodes and node types in a vehicle network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodecounts)
-     * @param nodeCounts (Optional) Information about the number of nodes and node types in a
-     * vehicle network. 
+     * @param nodeCounts Information about the number of nodes and node types in a vehicle network. 
      */
     override fun nodeCounts(nodeCounts: NodeCountsProperty) {
       cdkBuilder.nodeCounts(nodeCounts.let(NodeCountsProperty.Companion::unwrap))
     }
 
     /**
-     * (Optional) Information about the number of nodes and node types in a vehicle network.
+     * Information about the number of nodes and node types in a vehicle network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodecounts)
-     * @param nodeCounts (Optional) Information about the number of nodes and node types in a
-     * vehicle network. 
+     * @param nodeCounts Information about the number of nodes and node types in a vehicle network. 
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("0c2c036ef5820857fbc4d7fe0319e34db43831f2e7b29d3257ec25b0e0ae6ac7")
@@ -425,51 +420,48 @@ public open class CfnSignalCatalog(
         nodeCounts(NodeCountsProperty(nodeCounts))
 
     /**
-     * (Optional) A list of information about nodes, which are a general abstraction of signals.
+     * A list of information about nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodes)
-     * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
-     * signals. 
+     * @param nodes A list of information about nodes, which are a general abstraction of signals. 
      */
     override fun nodes(nodes: IResolvable) {
       cdkBuilder.nodes(nodes.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * (Optional) A list of information about nodes, which are a general abstraction of signals.
+     * A list of information about nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodes)
-     * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
-     * signals. 
+     * @param nodes A list of information about nodes, which are a general abstraction of signals. 
      */
     override fun nodes(nodes: List<Any>) {
       cdkBuilder.nodes(nodes.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * (Optional) A list of information about nodes, which are a general abstraction of signals.
+     * A list of information about nodes, which are a general abstraction of signals.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-nodes)
-     * @param nodes (Optional) A list of information about nodes, which are a general abstraction of
-     * signals. 
+     * @param nodes A list of information about nodes, which are a general abstraction of signals. 
      */
     override fun nodes(vararg nodes: Any): Unit = nodes(nodes.toList())
 
     /**
-     * (Optional) Metadata that can be used to manage the signal catalog.
+     * Metadata that can be used to manage the signal catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-tags)
-     * @param tags (Optional) Metadata that can be used to manage the signal catalog. 
+     * @param tags Metadata that can be used to manage the signal catalog. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * (Optional) Metadata that can be used to manage the signal catalog.
+     * Metadata that can be used to manage the signal catalog.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-signalcatalog.html#cfn-iotfleetwise-signalcatalog-tags)
-     * @param tags (Optional) Metadata that can be used to manage the signal catalog. 
+     * @param tags Metadata that can be used to manage the signal catalog. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -531,14 +523,14 @@ public open class CfnSignalCatalog(
    */
   public interface ActuatorProperty {
     /**
-     * (Optional) A list of possible values an actuator can take.
+     * A list of possible values an actuator can take.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-allowedvalues)
      */
     public fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
 
     /**
-     * (Optional) A specified value for the actuator.
+     * A specified value for the actuator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-assignedvalue)
      */
@@ -552,7 +544,7 @@ public open class CfnSignalCatalog(
     public fun dataType(): String
 
     /**
-     * (Optional) A brief description of the actuator.
+     * A brief description of the actuator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-description)
      */
@@ -569,21 +561,21 @@ public open class CfnSignalCatalog(
     public fun fullyQualifiedName(): String
 
     /**
-     * (Optional) The specified possible maximum value of an actuator.
+     * The specified possible maximum value of an actuator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * (Optional) The specified possible minimum value of an actuator.
+     * The specified possible minimum value of an actuator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-min)
      */
     public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * (Optional) The scientific unit for the actuator.
+     * The scientific unit for the actuator.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-unit)
      */
@@ -595,17 +587,17 @@ public open class CfnSignalCatalog(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param allowedValues (Optional) A list of possible values an actuator can take.
+       * @param allowedValues A list of possible values an actuator can take.
        */
       public fun allowedValues(allowedValues: List<String>)
 
       /**
-       * @param allowedValues (Optional) A list of possible values an actuator can take.
+       * @param allowedValues A list of possible values an actuator can take.
        */
       public fun allowedValues(vararg allowedValues: String)
 
       /**
-       * @param assignedValue (Optional) A specified value for the actuator.
+       * @param assignedValue A specified value for the actuator.
        */
       public fun assignedValue(assignedValue: String)
 
@@ -615,7 +607,7 @@ public open class CfnSignalCatalog(
       public fun dataType(dataType: String)
 
       /**
-       * @param description (Optional) A brief description of the actuator.
+       * @param description A brief description of the actuator.
        */
       public fun description(description: String)
 
@@ -627,17 +619,17 @@ public open class CfnSignalCatalog(
       public fun fullyQualifiedName(fullyQualifiedName: String)
 
       /**
-       * @param max (Optional) The specified possible maximum value of an actuator.
+       * @param max The specified possible maximum value of an actuator.
        */
       public fun max(max: Number)
 
       /**
-       * @param min (Optional) The specified possible minimum value of an actuator.
+       * @param min The specified possible minimum value of an actuator.
        */
       public fun min(min: Number)
 
       /**
-       * @param unit (Optional) The scientific unit for the actuator.
+       * @param unit The scientific unit for the actuator.
        */
       public fun unit(unit: String)
     }
@@ -648,20 +640,20 @@ public open class CfnSignalCatalog(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.ActuatorProperty.builder()
 
       /**
-       * @param allowedValues (Optional) A list of possible values an actuator can take.
+       * @param allowedValues A list of possible values an actuator can take.
        */
       override fun allowedValues(allowedValues: List<String>) {
         cdkBuilder.allowedValues(allowedValues)
       }
 
       /**
-       * @param allowedValues (Optional) A list of possible values an actuator can take.
+       * @param allowedValues A list of possible values an actuator can take.
        */
       override fun allowedValues(vararg allowedValues: String): Unit =
           allowedValues(allowedValues.toList())
 
       /**
-       * @param assignedValue (Optional) A specified value for the actuator.
+       * @param assignedValue A specified value for the actuator.
        */
       override fun assignedValue(assignedValue: String) {
         cdkBuilder.assignedValue(assignedValue)
@@ -675,7 +667,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param description (Optional) A brief description of the actuator.
+       * @param description A brief description of the actuator.
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -691,21 +683,21 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param max (Optional) The specified possible maximum value of an actuator.
+       * @param max The specified possible maximum value of an actuator.
        */
       override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
       /**
-       * @param min (Optional) The specified possible minimum value of an actuator.
+       * @param min The specified possible minimum value of an actuator.
        */
       override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
       /**
-       * @param unit (Optional) The scientific unit for the actuator.
+       * @param unit The scientific unit for the actuator.
        */
       override fun unit(unit: String) {
         cdkBuilder.unit(unit)
@@ -721,14 +713,14 @@ public open class CfnSignalCatalog(
     ) : CdkObject(cdkObject),
         ActuatorProperty {
       /**
-       * (Optional) A list of possible values an actuator can take.
+       * A list of possible values an actuator can take.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-allowedvalues)
        */
       override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
 
       /**
-       * (Optional) A specified value for the actuator.
+       * A specified value for the actuator.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-assignedvalue)
        */
@@ -742,7 +734,7 @@ public open class CfnSignalCatalog(
       override fun dataType(): String = unwrap(this).getDataType()
 
       /**
-       * (Optional) A brief description of the actuator.
+       * A brief description of the actuator.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-description)
        */
@@ -759,21 +751,21 @@ public open class CfnSignalCatalog(
       override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
       /**
-       * (Optional) The specified possible maximum value of an actuator.
+       * The specified possible maximum value of an actuator.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * (Optional) The specified possible minimum value of an actuator.
+       * The specified possible minimum value of an actuator.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-min)
        */
       override fun min(): Number? = unwrap(this).getMin()
 
       /**
-       * (Optional) The scientific unit for the actuator.
+       * The scientific unit for the actuator.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-actuator.html#cfn-iotfleetwise-signalcatalog-actuator-unit)
        */
@@ -826,14 +818,14 @@ public open class CfnSignalCatalog(
    */
   public interface AttributeProperty {
     /**
-     * (Optional) A list of possible values an attribute can be assigned.
+     * A list of possible values an attribute can be assigned.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-allowedvalues)
      */
     public fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
 
     /**
-     * (Optional) A specified value for the attribute.
+     * A specified value for the attribute.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-assignedvalue)
      */
@@ -847,14 +839,14 @@ public open class CfnSignalCatalog(
     public fun dataType(): String
 
     /**
-     * (Optional) The default value of the attribute.
+     * The default value of the attribute.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-defaultvalue)
      */
     public fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
     /**
-     * (Optional) A brief description of the attribute.
+     * A brief description of the attribute.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-description)
      */
@@ -870,21 +862,21 @@ public open class CfnSignalCatalog(
     public fun fullyQualifiedName(): String
 
     /**
-     * (Optional) The specified possible maximum value of the attribute.
+     * The specified possible maximum value of the attribute.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * (Optional) The specified possible minimum value of the attribute.
+     * The specified possible minimum value of the attribute.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-min)
      */
     public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * (Optional) The scientific unit for the attribute.
+     * The scientific unit for the attribute.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-unit)
      */
@@ -896,17 +888,17 @@ public open class CfnSignalCatalog(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+       * @param allowedValues A list of possible values an attribute can be assigned.
        */
       public fun allowedValues(allowedValues: List<String>)
 
       /**
-       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+       * @param allowedValues A list of possible values an attribute can be assigned.
        */
       public fun allowedValues(vararg allowedValues: String)
 
       /**
-       * @param assignedValue (Optional) A specified value for the attribute.
+       * @param assignedValue A specified value for the attribute.
        */
       public fun assignedValue(assignedValue: String)
 
@@ -916,12 +908,12 @@ public open class CfnSignalCatalog(
       public fun dataType(dataType: String)
 
       /**
-       * @param defaultValue (Optional) The default value of the attribute.
+       * @param defaultValue The default value of the attribute.
        */
       public fun defaultValue(defaultValue: String)
 
       /**
-       * @param description (Optional) A brief description of the attribute.
+       * @param description A brief description of the attribute.
        */
       public fun description(description: String)
 
@@ -932,17 +924,17 @@ public open class CfnSignalCatalog(
       public fun fullyQualifiedName(fullyQualifiedName: String)
 
       /**
-       * @param max (Optional) The specified possible maximum value of the attribute.
+       * @param max The specified possible maximum value of the attribute.
        */
       public fun max(max: Number)
 
       /**
-       * @param min (Optional) The specified possible minimum value of the attribute.
+       * @param min The specified possible minimum value of the attribute.
        */
       public fun min(min: Number)
 
       /**
-       * @param unit (Optional) The scientific unit for the attribute.
+       * @param unit The scientific unit for the attribute.
        */
       public fun unit(unit: String)
     }
@@ -953,20 +945,20 @@ public open class CfnSignalCatalog(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.AttributeProperty.builder()
 
       /**
-       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+       * @param allowedValues A list of possible values an attribute can be assigned.
        */
       override fun allowedValues(allowedValues: List<String>) {
         cdkBuilder.allowedValues(allowedValues)
       }
 
       /**
-       * @param allowedValues (Optional) A list of possible values an attribute can be assigned.
+       * @param allowedValues A list of possible values an attribute can be assigned.
        */
       override fun allowedValues(vararg allowedValues: String): Unit =
           allowedValues(allowedValues.toList())
 
       /**
-       * @param assignedValue (Optional) A specified value for the attribute.
+       * @param assignedValue A specified value for the attribute.
        */
       override fun assignedValue(assignedValue: String) {
         cdkBuilder.assignedValue(assignedValue)
@@ -980,14 +972,14 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param defaultValue (Optional) The default value of the attribute.
+       * @param defaultValue The default value of the attribute.
        */
       override fun defaultValue(defaultValue: String) {
         cdkBuilder.defaultValue(defaultValue)
       }
 
       /**
-       * @param description (Optional) A brief description of the attribute.
+       * @param description A brief description of the attribute.
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -1002,21 +994,21 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param max (Optional) The specified possible maximum value of the attribute.
+       * @param max The specified possible maximum value of the attribute.
        */
       override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
       /**
-       * @param min (Optional) The specified possible minimum value of the attribute.
+       * @param min The specified possible minimum value of the attribute.
        */
       override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
       /**
-       * @param unit (Optional) The scientific unit for the attribute.
+       * @param unit The scientific unit for the attribute.
        */
       override fun unit(unit: String) {
         cdkBuilder.unit(unit)
@@ -1032,14 +1024,14 @@ public open class CfnSignalCatalog(
     ) : CdkObject(cdkObject),
         AttributeProperty {
       /**
-       * (Optional) A list of possible values an attribute can be assigned.
+       * A list of possible values an attribute can be assigned.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-allowedvalues)
        */
       override fun allowedValues(): List<String> = unwrap(this).getAllowedValues() ?: emptyList()
 
       /**
-       * (Optional) A specified value for the attribute.
+       * A specified value for the attribute.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-assignedvalue)
        */
@@ -1053,14 +1045,14 @@ public open class CfnSignalCatalog(
       override fun dataType(): String = unwrap(this).getDataType()
 
       /**
-       * (Optional) The default value of the attribute.
+       * The default value of the attribute.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-defaultvalue)
        */
       override fun defaultValue(): String? = unwrap(this).getDefaultValue()
 
       /**
-       * (Optional) A brief description of the attribute.
+       * A brief description of the attribute.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-description)
        */
@@ -1076,21 +1068,21 @@ public open class CfnSignalCatalog(
       override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
       /**
-       * (Optional) The specified possible maximum value of the attribute.
+       * The specified possible maximum value of the attribute.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * (Optional) The specified possible minimum value of the attribute.
+       * The specified possible minimum value of the attribute.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-min)
        */
       override fun min(): Number? = unwrap(this).getMin()
 
       /**
-       * (Optional) The scientific unit for the attribute.
+       * The scientific unit for the attribute.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-attribute.html#cfn-iotfleetwise-signalcatalog-attribute-unit)
        */
@@ -1135,7 +1127,7 @@ public open class CfnSignalCatalog(
    */
   public interface BranchProperty {
     /**
-     * (Optional) A brief description of the branch.
+     * A brief description of the branch.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-description)
      */
@@ -1156,7 +1148,7 @@ public open class CfnSignalCatalog(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param description (Optional) A brief description of the branch.
+       * @param description A brief description of the branch.
        */
       public fun description(description: String)
 
@@ -1173,7 +1165,7 @@ public open class CfnSignalCatalog(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.BranchProperty.builder()
 
       /**
-       * @param description (Optional) A brief description of the branch.
+       * @param description A brief description of the branch.
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -1197,7 +1189,7 @@ public open class CfnSignalCatalog(
     ) : CdkObject(cdkObject),
         BranchProperty {
       /**
-       * (Optional) A brief description of the branch.
+       * A brief description of the branch.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-branch.html#cfn-iotfleetwise-signalcatalog-branch-description)
        */
@@ -1253,35 +1245,35 @@ public open class CfnSignalCatalog(
    */
   public interface NodeCountsProperty {
     /**
-     * (Optional) The total number of nodes in a vehicle network that represent actuators.
+     * The total number of nodes in a vehicle network that represent actuators.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalactuators)
      */
     public fun totalActuators(): Number? = unwrap(this).getTotalActuators()
 
     /**
-     * (Optional) The total number of nodes in a vehicle network that represent attributes.
+     * The total number of nodes in a vehicle network that represent attributes.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalattributes)
      */
     public fun totalAttributes(): Number? = unwrap(this).getTotalAttributes()
 
     /**
-     * (Optional) The total number of nodes in a vehicle network that represent branches.
+     * The total number of nodes in a vehicle network that represent branches.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalbranches)
      */
     public fun totalBranches(): Number? = unwrap(this).getTotalBranches()
 
     /**
-     * (Optional) The total number of nodes in a vehicle network.
+     * The total number of nodes in a vehicle network.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalnodes)
      */
     public fun totalNodes(): Number? = unwrap(this).getTotalNodes()
 
     /**
-     * (Optional) The total number of nodes in a vehicle network that represent sensors.
+     * The total number of nodes in a vehicle network that represent sensors.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalsensors)
      */
@@ -1293,31 +1285,30 @@ public open class CfnSignalCatalog(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param totalActuators (Optional) The total number of nodes in a vehicle network that
-       * represent actuators.
+       * @param totalActuators The total number of nodes in a vehicle network that represent
+       * actuators.
        */
       public fun totalActuators(totalActuators: Number)
 
       /**
-       * @param totalAttributes (Optional) The total number of nodes in a vehicle network that
-       * represent attributes.
+       * @param totalAttributes The total number of nodes in a vehicle network that represent
+       * attributes.
        */
       public fun totalAttributes(totalAttributes: Number)
 
       /**
-       * @param totalBranches (Optional) The total number of nodes in a vehicle network that
-       * represent branches.
+       * @param totalBranches The total number of nodes in a vehicle network that represent
+       * branches.
        */
       public fun totalBranches(totalBranches: Number)
 
       /**
-       * @param totalNodes (Optional) The total number of nodes in a vehicle network.
+       * @param totalNodes The total number of nodes in a vehicle network.
        */
       public fun totalNodes(totalNodes: Number)
 
       /**
-       * @param totalSensors (Optional) The total number of nodes in a vehicle network that
-       * represent sensors.
+       * @param totalSensors The total number of nodes in a vehicle network that represent sensors.
        */
       public fun totalSensors(totalSensors: Number)
     }
@@ -1328,39 +1319,38 @@ public open class CfnSignalCatalog(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeCountsProperty.builder()
 
       /**
-       * @param totalActuators (Optional) The total number of nodes in a vehicle network that
-       * represent actuators.
+       * @param totalActuators The total number of nodes in a vehicle network that represent
+       * actuators.
        */
       override fun totalActuators(totalActuators: Number) {
         cdkBuilder.totalActuators(totalActuators)
       }
 
       /**
-       * @param totalAttributes (Optional) The total number of nodes in a vehicle network that
-       * represent attributes.
+       * @param totalAttributes The total number of nodes in a vehicle network that represent
+       * attributes.
        */
       override fun totalAttributes(totalAttributes: Number) {
         cdkBuilder.totalAttributes(totalAttributes)
       }
 
       /**
-       * @param totalBranches (Optional) The total number of nodes in a vehicle network that
-       * represent branches.
+       * @param totalBranches The total number of nodes in a vehicle network that represent
+       * branches.
        */
       override fun totalBranches(totalBranches: Number) {
         cdkBuilder.totalBranches(totalBranches)
       }
 
       /**
-       * @param totalNodes (Optional) The total number of nodes in a vehicle network.
+       * @param totalNodes The total number of nodes in a vehicle network.
        */
       override fun totalNodes(totalNodes: Number) {
         cdkBuilder.totalNodes(totalNodes)
       }
 
       /**
-       * @param totalSensors (Optional) The total number of nodes in a vehicle network that
-       * represent sensors.
+       * @param totalSensors The total number of nodes in a vehicle network that represent sensors.
        */
       override fun totalSensors(totalSensors: Number) {
         cdkBuilder.totalSensors(totalSensors)
@@ -1376,35 +1366,35 @@ public open class CfnSignalCatalog(
     ) : CdkObject(cdkObject),
         NodeCountsProperty {
       /**
-       * (Optional) The total number of nodes in a vehicle network that represent actuators.
+       * The total number of nodes in a vehicle network that represent actuators.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalactuators)
        */
       override fun totalActuators(): Number? = unwrap(this).getTotalActuators()
 
       /**
-       * (Optional) The total number of nodes in a vehicle network that represent attributes.
+       * The total number of nodes in a vehicle network that represent attributes.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalattributes)
        */
       override fun totalAttributes(): Number? = unwrap(this).getTotalAttributes()
 
       /**
-       * (Optional) The total number of nodes in a vehicle network that represent branches.
+       * The total number of nodes in a vehicle network that represent branches.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalbranches)
        */
       override fun totalBranches(): Number? = unwrap(this).getTotalBranches()
 
       /**
-       * (Optional) The total number of nodes in a vehicle network.
+       * The total number of nodes in a vehicle network.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalnodes)
        */
       override fun totalNodes(): Number? = unwrap(this).getTotalNodes()
 
       /**
-       * (Optional) The total number of nodes in a vehicle network that represent sensors.
+       * The total number of nodes in a vehicle network that represent sensors.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-nodecounts.html#cfn-iotfleetwise-signalcatalog-nodecounts-totalsensors)
        */
@@ -1486,7 +1476,7 @@ public open class CfnSignalCatalog(
    */
   public interface NodeProperty {
     /**
-     * (Optional) Information about a node specified as an actuator.
+     * Information about a node specified as an actuator.
      *
      *
      * An actuator is a digital representation of a vehicle device.
@@ -1497,7 +1487,7 @@ public open class CfnSignalCatalog(
     public fun actuator(): Any? = unwrap(this).getActuator()
 
     /**
-     * (Optional) Information about a node specified as an attribute.
+     * Information about a node specified as an attribute.
      *
      *
      * An attribute represents static information about a vehicle.
@@ -1508,7 +1498,7 @@ public open class CfnSignalCatalog(
     public fun attribute(): Any? = unwrap(this).getAttribute()
 
     /**
-     * (Optional) Information about a node specified as a branch.
+     * Information about a node specified as a branch.
      *
      *
      * A group of signals that are defined in a hierarchical structure.
@@ -1519,7 +1509,7 @@ public open class CfnSignalCatalog(
     public fun branch(): Any? = unwrap(this).getBranch()
 
     /**
-     * (Optional) An input component that reports the environmental condition of a vehicle.
+     * An input component that reports the environmental condition of a vehicle.
      *
      *
      * You can collect data about fluid levels, temperatures, vibrations, or battery voltage from
@@ -1536,21 +1526,21 @@ public open class CfnSignalCatalog(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param actuator (Optional) Information about a node specified as an actuator.
+       * @param actuator Information about a node specified as an actuator.
        *
        * An actuator is a digital representation of a vehicle device.
        */
       public fun actuator(actuator: IResolvable)
 
       /**
-       * @param actuator (Optional) Information about a node specified as an actuator.
+       * @param actuator Information about a node specified as an actuator.
        *
        * An actuator is a digital representation of a vehicle device.
        */
       public fun actuator(actuator: ActuatorProperty)
 
       /**
-       * @param actuator (Optional) Information about a node specified as an actuator.
+       * @param actuator Information about a node specified as an actuator.
        *
        * An actuator is a digital representation of a vehicle device.
        */
@@ -1559,21 +1549,21 @@ public open class CfnSignalCatalog(
       public fun actuator(actuator: ActuatorProperty.Builder.() -> Unit)
 
       /**
-       * @param attribute (Optional) Information about a node specified as an attribute.
+       * @param attribute Information about a node specified as an attribute.
        *
        * An attribute represents static information about a vehicle.
        */
       public fun attribute(attribute: IResolvable)
 
       /**
-       * @param attribute (Optional) Information about a node specified as an attribute.
+       * @param attribute Information about a node specified as an attribute.
        *
        * An attribute represents static information about a vehicle.
        */
       public fun attribute(attribute: AttributeProperty)
 
       /**
-       * @param attribute (Optional) Information about a node specified as an attribute.
+       * @param attribute Information about a node specified as an attribute.
        *
        * An attribute represents static information about a vehicle.
        */
@@ -1582,21 +1572,21 @@ public open class CfnSignalCatalog(
       public fun attribute(attribute: AttributeProperty.Builder.() -> Unit)
 
       /**
-       * @param branch (Optional) Information about a node specified as a branch.
+       * @param branch Information about a node specified as a branch.
        *
        * A group of signals that are defined in a hierarchical structure.
        */
       public fun branch(branch: IResolvable)
 
       /**
-       * @param branch (Optional) Information about a node specified as a branch.
+       * @param branch Information about a node specified as a branch.
        *
        * A group of signals that are defined in a hierarchical structure.
        */
       public fun branch(branch: BranchProperty)
 
       /**
-       * @param branch (Optional) Information about a node specified as a branch.
+       * @param branch Information about a node specified as a branch.
        *
        * A group of signals that are defined in a hierarchical structure.
        */
@@ -1605,8 +1595,7 @@ public open class CfnSignalCatalog(
       public fun branch(branch: BranchProperty.Builder.() -> Unit)
 
       /**
-       * @param sensor (Optional) An input component that reports the environmental condition of a
-       * vehicle.
+       * @param sensor An input component that reports the environmental condition of a vehicle.
        *
        * You can collect data about fluid levels, temperatures, vibrations, or battery voltage from
        * sensors.
@@ -1614,8 +1603,7 @@ public open class CfnSignalCatalog(
       public fun sensor(sensor: IResolvable)
 
       /**
-       * @param sensor (Optional) An input component that reports the environmental condition of a
-       * vehicle.
+       * @param sensor An input component that reports the environmental condition of a vehicle.
        *
        * You can collect data about fluid levels, temperatures, vibrations, or battery voltage from
        * sensors.
@@ -1623,8 +1611,7 @@ public open class CfnSignalCatalog(
       public fun sensor(sensor: SensorProperty)
 
       /**
-       * @param sensor (Optional) An input component that reports the environmental condition of a
-       * vehicle.
+       * @param sensor An input component that reports the environmental condition of a vehicle.
        *
        * You can collect data about fluid levels, temperatures, vibrations, or battery voltage from
        * sensors.
@@ -1640,7 +1627,7 @@ public open class CfnSignalCatalog(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.NodeProperty.builder()
 
       /**
-       * @param actuator (Optional) Information about a node specified as an actuator.
+       * @param actuator Information about a node specified as an actuator.
        *
        * An actuator is a digital representation of a vehicle device.
        */
@@ -1649,7 +1636,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param actuator (Optional) Information about a node specified as an actuator.
+       * @param actuator Information about a node specified as an actuator.
        *
        * An actuator is a digital representation of a vehicle device.
        */
@@ -1658,7 +1645,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param actuator (Optional) Information about a node specified as an actuator.
+       * @param actuator Information about a node specified as an actuator.
        *
        * An actuator is a digital representation of a vehicle device.
        */
@@ -1668,7 +1655,7 @@ public open class CfnSignalCatalog(
           actuator(ActuatorProperty(actuator))
 
       /**
-       * @param attribute (Optional) Information about a node specified as an attribute.
+       * @param attribute Information about a node specified as an attribute.
        *
        * An attribute represents static information about a vehicle.
        */
@@ -1677,7 +1664,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param attribute (Optional) Information about a node specified as an attribute.
+       * @param attribute Information about a node specified as an attribute.
        *
        * An attribute represents static information about a vehicle.
        */
@@ -1686,7 +1673,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param attribute (Optional) Information about a node specified as an attribute.
+       * @param attribute Information about a node specified as an attribute.
        *
        * An attribute represents static information about a vehicle.
        */
@@ -1696,7 +1683,7 @@ public open class CfnSignalCatalog(
           attribute(AttributeProperty(attribute))
 
       /**
-       * @param branch (Optional) Information about a node specified as a branch.
+       * @param branch Information about a node specified as a branch.
        *
        * A group of signals that are defined in a hierarchical structure.
        */
@@ -1705,7 +1692,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param branch (Optional) Information about a node specified as a branch.
+       * @param branch Information about a node specified as a branch.
        *
        * A group of signals that are defined in a hierarchical structure.
        */
@@ -1714,7 +1701,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param branch (Optional) Information about a node specified as a branch.
+       * @param branch Information about a node specified as a branch.
        *
        * A group of signals that are defined in a hierarchical structure.
        */
@@ -1724,8 +1711,7 @@ public open class CfnSignalCatalog(
           branch(BranchProperty(branch))
 
       /**
-       * @param sensor (Optional) An input component that reports the environmental condition of a
-       * vehicle.
+       * @param sensor An input component that reports the environmental condition of a vehicle.
        *
        * You can collect data about fluid levels, temperatures, vibrations, or battery voltage from
        * sensors.
@@ -1735,8 +1721,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param sensor (Optional) An input component that reports the environmental condition of a
-       * vehicle.
+       * @param sensor An input component that reports the environmental condition of a vehicle.
        *
        * You can collect data about fluid levels, temperatures, vibrations, or battery voltage from
        * sensors.
@@ -1746,8 +1731,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param sensor (Optional) An input component that reports the environmental condition of a
-       * vehicle.
+       * @param sensor An input component that reports the environmental condition of a vehicle.
        *
        * You can collect data about fluid levels, temperatures, vibrations, or battery voltage from
        * sensors.
@@ -1766,7 +1750,7 @@ public open class CfnSignalCatalog(
     ) : CdkObject(cdkObject),
         NodeProperty {
       /**
-       * (Optional) Information about a node specified as an actuator.
+       * Information about a node specified as an actuator.
        *
        *
        * An actuator is a digital representation of a vehicle device.
@@ -1777,7 +1761,7 @@ public open class CfnSignalCatalog(
       override fun actuator(): Any? = unwrap(this).getActuator()
 
       /**
-       * (Optional) Information about a node specified as an attribute.
+       * Information about a node specified as an attribute.
        *
        *
        * An attribute represents static information about a vehicle.
@@ -1788,7 +1772,7 @@ public open class CfnSignalCatalog(
       override fun attribute(): Any? = unwrap(this).getAttribute()
 
       /**
-       * (Optional) Information about a node specified as a branch.
+       * Information about a node specified as a branch.
        *
        *
        * A group of signals that are defined in a hierarchical structure.
@@ -1799,7 +1783,7 @@ public open class CfnSignalCatalog(
       override fun branch(): Any? = unwrap(this).getBranch()
 
       /**
-       * (Optional) An input component that reports the environmental condition of a vehicle.
+       * An input component that reports the environmental condition of a vehicle.
        *
        *
        * You can collect data about fluid levels, temperatures, vibrations, or battery voltage from
@@ -1858,7 +1842,7 @@ public open class CfnSignalCatalog(
    */
   public interface SensorProperty {
     /**
-     * (Optional) A list of possible values a sensor can take.
+     * A list of possible values a sensor can take.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-allowedvalues)
      */
@@ -1872,7 +1856,7 @@ public open class CfnSignalCatalog(
     public fun dataType(): String
 
     /**
-     * (Optional) A brief description of a sensor.
+     * A brief description of a sensor.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-description)
      */
@@ -1888,21 +1872,21 @@ public open class CfnSignalCatalog(
     public fun fullyQualifiedName(): String
 
     /**
-     * (Optional) The specified possible maximum value of the sensor.
+     * The specified possible maximum value of the sensor.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-max)
      */
     public fun max(): Number? = unwrap(this).getMax()
 
     /**
-     * (Optional) The specified possible minimum value of the sensor.
+     * The specified possible minimum value of the sensor.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-min)
      */
     public fun min(): Number? = unwrap(this).getMin()
 
     /**
-     * (Optional) The scientific unit of measurement for data collected by the sensor.
+     * The scientific unit of measurement for data collected by the sensor.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-unit)
      */
@@ -1914,12 +1898,12 @@ public open class CfnSignalCatalog(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param allowedValues (Optional) A list of possible values a sensor can take.
+       * @param allowedValues A list of possible values a sensor can take.
        */
       public fun allowedValues(allowedValues: List<String>)
 
       /**
-       * @param allowedValues (Optional) A list of possible values a sensor can take.
+       * @param allowedValues A list of possible values a sensor can take.
        */
       public fun allowedValues(vararg allowedValues: String)
 
@@ -1929,7 +1913,7 @@ public open class CfnSignalCatalog(
       public fun dataType(dataType: String)
 
       /**
-       * @param description (Optional) A brief description of a sensor.
+       * @param description A brief description of a sensor.
        */
       public fun description(description: String)
 
@@ -1940,17 +1924,17 @@ public open class CfnSignalCatalog(
       public fun fullyQualifiedName(fullyQualifiedName: String)
 
       /**
-       * @param max (Optional) The specified possible maximum value of the sensor.
+       * @param max The specified possible maximum value of the sensor.
        */
       public fun max(max: Number)
 
       /**
-       * @param min (Optional) The specified possible minimum value of the sensor.
+       * @param min The specified possible minimum value of the sensor.
        */
       public fun min(min: Number)
 
       /**
-       * @param unit (Optional) The scientific unit of measurement for data collected by the sensor.
+       * @param unit The scientific unit of measurement for data collected by the sensor.
        */
       public fun unit(unit: String)
     }
@@ -1961,14 +1945,14 @@ public open class CfnSignalCatalog(
           software.amazon.awscdk.services.iotfleetwise.CfnSignalCatalog.SensorProperty.builder()
 
       /**
-       * @param allowedValues (Optional) A list of possible values a sensor can take.
+       * @param allowedValues A list of possible values a sensor can take.
        */
       override fun allowedValues(allowedValues: List<String>) {
         cdkBuilder.allowedValues(allowedValues)
       }
 
       /**
-       * @param allowedValues (Optional) A list of possible values a sensor can take.
+       * @param allowedValues A list of possible values a sensor can take.
        */
       override fun allowedValues(vararg allowedValues: String): Unit =
           allowedValues(allowedValues.toList())
@@ -1981,7 +1965,7 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param description (Optional) A brief description of a sensor.
+       * @param description A brief description of a sensor.
        */
       override fun description(description: String) {
         cdkBuilder.description(description)
@@ -1996,21 +1980,21 @@ public open class CfnSignalCatalog(
       }
 
       /**
-       * @param max (Optional) The specified possible maximum value of the sensor.
+       * @param max The specified possible maximum value of the sensor.
        */
       override fun max(max: Number) {
         cdkBuilder.max(max)
       }
 
       /**
-       * @param min (Optional) The specified possible minimum value of the sensor.
+       * @param min The specified possible minimum value of the sensor.
        */
       override fun min(min: Number) {
         cdkBuilder.min(min)
       }
 
       /**
-       * @param unit (Optional) The scientific unit of measurement for data collected by the sensor.
+       * @param unit The scientific unit of measurement for data collected by the sensor.
        */
       override fun unit(unit: String) {
         cdkBuilder.unit(unit)
@@ -2026,7 +2010,7 @@ public open class CfnSignalCatalog(
     ) : CdkObject(cdkObject),
         SensorProperty {
       /**
-       * (Optional) A list of possible values a sensor can take.
+       * A list of possible values a sensor can take.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-allowedvalues)
        */
@@ -2040,7 +2024,7 @@ public open class CfnSignalCatalog(
       override fun dataType(): String = unwrap(this).getDataType()
 
       /**
-       * (Optional) A brief description of a sensor.
+       * A brief description of a sensor.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-description)
        */
@@ -2056,21 +2040,21 @@ public open class CfnSignalCatalog(
       override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
       /**
-       * (Optional) The specified possible maximum value of the sensor.
+       * The specified possible maximum value of the sensor.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-max)
        */
       override fun max(): Number? = unwrap(this).getMax()
 
       /**
-       * (Optional) The specified possible minimum value of the sensor.
+       * The specified possible minimum value of the sensor.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-min)
        */
       override fun min(): Number? = unwrap(this).getMin()
 
       /**
-       * (Optional) The scientific unit of measurement for data collected by the sensor.
+       * The scientific unit of measurement for data collected by the sensor.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-signalcatalog-sensor.html#cfn-iotfleetwise-signalcatalog-sensor-unit)
        */

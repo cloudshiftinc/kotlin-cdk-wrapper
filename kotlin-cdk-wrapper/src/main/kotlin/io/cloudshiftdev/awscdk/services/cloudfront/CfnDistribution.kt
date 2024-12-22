@@ -8386,7 +8386,18 @@ public open class CfnDistribution(
   }
 
   /**
-   * A complex type that controls whether access logs are written for the distribution.
+   * A complex type that specifies whether access logs are written for the distribution.
+   *
+   *
+   * If you already enabled standard logging (legacy) and you want to enable standard logging (v2)
+   * to send your access logs to Amazon S3, we recommend that you specify a *different* Amazon S3
+   * bucket or use a *separate path* in the same bucket (for example, use a log prefix or
+   * partitioning). This helps you keep track of which log files are associated with which logging
+   * subscription and prevents log files from overwriting each other. For more information, see
+   * [Standard logging (access
+   * logs)](https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/AccessLogs.html) in the
+   * *Amazon CloudFront Developer Guide* .
+   *
    *
    * Example:
    *
@@ -8407,7 +8418,7 @@ public open class CfnDistribution(
   public interface LoggingProperty {
     /**
      * The Amazon S3 bucket to store the access logs in, for example,
-     * `myawslogbucket.s3.amazonaws.com` .
+     * `amzn-s3-demo-bucket.s3.amazonaws.com` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-bucket)
      */
@@ -8448,7 +8459,7 @@ public open class CfnDistribution(
     public interface Builder {
       /**
        * @param bucket The Amazon S3 bucket to store the access logs in, for example,
-       * `myawslogbucket.s3.amazonaws.com` . 
+       * `amzn-s3-demo-bucket.s3.amazonaws.com` . 
        */
       public fun bucket(bucket: String)
 
@@ -8488,7 +8499,7 @@ public open class CfnDistribution(
 
       /**
        * @param bucket The Amazon S3 bucket to store the access logs in, for example,
-       * `myawslogbucket.s3.amazonaws.com` . 
+       * `amzn-s3-demo-bucket.s3.amazonaws.com` . 
        */
       override fun bucket(bucket: String) {
         cdkBuilder.bucket(bucket)
@@ -8538,7 +8549,7 @@ public open class CfnDistribution(
         LoggingProperty {
       /**
        * The Amazon S3 bucket to store the access logs in, for example,
-       * `myawslogbucket.s3.amazonaws.com` .
+       * `amzn-s3-demo-bucket.s3.amazonaws.com` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-cloudfront-distribution-logging.html#cfn-cloudfront-distribution-logging-bucket)
        */
@@ -9059,13 +9070,16 @@ public open class CfnDistribution(
   }
 
   /**
-   * An origin group includes two origins (a primary origin and a second origin to failover to) and
-   * a failover criteria that you specify.
+   * An origin group includes two origins (a primary origin and a secondary origin to failover to)
+   * and a failover criteria that you specify.
    *
    * You create an origin group to support origin failover in CloudFront. When you create or update
    * a distribution, you can specify the origin group instead of a single origin, and CloudFront will
-   * failover from the primary origin to the second origin under the failover conditions that you've
+   * failover from the primary origin to the secondary origin under the failover conditions that you've
    * chosen.
+   *
+   * Optionally, you can choose selection criteria for your origin group to specify how your origins
+   * are selected when your distribution routes viewer requests.
    *
    * Example:
    *

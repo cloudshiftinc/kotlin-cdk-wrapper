@@ -63,6 +63,23 @@ import kotlin.jvm.JvmName
  * .accountTargeting("accountTargeting")
  * .emptyTargetResolutionMode("emptyTargetResolutionMode")
  * .build())
+ * .experimentReportConfiguration(ExperimentTemplateExperimentReportConfigurationProperty.builder()
+ * .dataSources(DataSourcesProperty.builder()
+ * .cloudWatchDashboards(List.of(CloudWatchDashboardProperty.builder()
+ * .dashboardIdentifier("dashboardIdentifier")
+ * .build()))
+ * .build())
+ * .outputs(OutputsProperty.builder()
+ * .experimentReportS3Configuration(ExperimentReportS3ConfigurationProperty.builder()
+ * .bucketName("bucketName")
+ * // the properties below are optional
+ * .prefix("prefix")
+ * .build())
+ * .build())
+ * // the properties below are optional
+ * .postExperimentDuration("postExperimentDuration")
+ * .preExperimentDuration("preExperimentDuration")
+ * .build())
  * .logConfiguration(ExperimentTemplateLogConfigurationProperty.builder()
  * .logSchemaVersion(123)
  * // the properties below are optional
@@ -97,6 +114,13 @@ public interface CfnExperimentTemplateProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentoptions)
    */
   public fun experimentOptions(): Any? = unwrap(this).getExperimentOptions()
+
+  /**
+   * Describes the report configuration for the experiment template.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentreportconfiguration)
+   */
+  public fun experimentReportConfiguration(): Any? = unwrap(this).getExperimentReportConfiguration()
 
   /**
    * The configuration for experiment logging.
@@ -171,6 +195,28 @@ public interface CfnExperimentTemplateProps {
     @JvmName("bbdc1f234d99a5c5a8e37a49d7fd2300e00ed88a5f41732748f1139103378e60")
     public
         fun experimentOptions(experimentOptions: CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty.Builder.() -> Unit)
+
+    /**
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template.
+     */
+    public fun experimentReportConfiguration(experimentReportConfiguration: IResolvable)
+
+    /**
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template.
+     */
+    public
+        fun experimentReportConfiguration(experimentReportConfiguration: CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty)
+
+    /**
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("344501386e6f4b373984d04eb84eec6b1a0433cc6e5857e4f482fe6dd47a6919")
+    public
+        fun experimentReportConfiguration(experimentReportConfiguration: CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param logConfiguration The configuration for experiment logging.
@@ -278,6 +324,34 @@ public interface CfnExperimentTemplateProps {
         experimentOptions(CfnExperimentTemplate.ExperimentTemplateExperimentOptionsProperty(experimentOptions))
 
     /**
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template.
+     */
+    override fun experimentReportConfiguration(experimentReportConfiguration: IResolvable) {
+      cdkBuilder.experimentReportConfiguration(experimentReportConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template.
+     */
+    override
+        fun experimentReportConfiguration(experimentReportConfiguration: CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty) {
+      cdkBuilder.experimentReportConfiguration(experimentReportConfiguration.let(CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param experimentReportConfiguration Describes the report configuration for the experiment
+     * template.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("344501386e6f4b373984d04eb84eec6b1a0433cc6e5857e4f482fe6dd47a6919")
+    override
+        fun experimentReportConfiguration(experimentReportConfiguration: CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        experimentReportConfiguration(CfnExperimentTemplate.ExperimentTemplateExperimentReportConfigurationProperty(experimentReportConfiguration))
+
+    /**
      * @param logConfiguration The configuration for experiment logging.
      */
     override fun logConfiguration(logConfiguration: IResolvable) {
@@ -378,6 +452,14 @@ public interface CfnExperimentTemplateProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentoptions)
      */
     override fun experimentOptions(): Any? = unwrap(this).getExperimentOptions()
+
+    /**
+     * Describes the report configuration for the experiment template.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fis-experimenttemplate.html#cfn-fis-experimenttemplate-experimentreportconfiguration)
+     */
+    override fun experimentReportConfiguration(): Any? =
+        unwrap(this).getExperimentReportConfiguration()
 
     /**
      * The configuration for experiment logging.

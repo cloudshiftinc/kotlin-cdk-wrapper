@@ -71,6 +71,14 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
   public fun sortKey(): Attribute? = unwrap(this).getSortKey()?.let(Attribute::wrap)
 
   /**
+   * The warm throughput configuration for the global secondary index.
+   *
+   * Default: - no warm throughput is configured
+   */
+  public fun warmThroughput(): WarmThroughput? =
+      unwrap(this).getWarmThroughput()?.let(WarmThroughput::wrap)
+
+  /**
    * The write capacity.
    *
    * Note: This can only be configured if the primary table billing is provisioned.
@@ -145,6 +153,18 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4418ea1de7991af0bfc3f647fbdfbb9e791e9c8c08304b824c9ba17159c69b16")
     public fun sortKey(sortKey: Attribute.Builder.() -> Unit)
+
+    /**
+     * @param warmThroughput The warm throughput configuration for the global secondary index.
+     */
+    public fun warmThroughput(warmThroughput: WarmThroughput)
+
+    /**
+     * @param warmThroughput The warm throughput configuration for the global secondary index.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("91d6649977f744a032bc11e0ebbb3a39b45a3b54d56acf4f49eed2e92da9f2d9")
+    public fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit)
 
     /**
      * @param writeCapacity The write capacity.
@@ -239,6 +259,21 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
     override fun sortKey(sortKey: Attribute.Builder.() -> Unit): Unit = sortKey(Attribute(sortKey))
 
     /**
+     * @param warmThroughput The warm throughput configuration for the global secondary index.
+     */
+    override fun warmThroughput(warmThroughput: WarmThroughput) {
+      cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughput.Companion::unwrap))
+    }
+
+    /**
+     * @param warmThroughput The warm throughput configuration for the global secondary index.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("91d6649977f744a032bc11e0ebbb3a39b45a3b54d56acf4f49eed2e92da9f2d9")
+    override fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit): Unit =
+        warmThroughput(WarmThroughput(warmThroughput))
+
+    /**
      * @param writeCapacity The write capacity.
      * Note: This can only be configured if the primary table billing is provisioned.
      */
@@ -313,6 +348,14 @@ public interface GlobalSecondaryIndexPropsV2 : SecondaryIndexProps {
      * Default: - no sort key
      */
     override fun sortKey(): Attribute? = unwrap(this).getSortKey()?.let(Attribute::wrap)
+
+    /**
+     * The warm throughput configuration for the global secondary index.
+     *
+     * Default: - no warm throughput is configured
+     */
+    override fun warmThroughput(): WarmThroughput? =
+        unwrap(this).getWarmThroughput()?.let(WarmThroughput::wrap)
 
     /**
      * The write capacity.

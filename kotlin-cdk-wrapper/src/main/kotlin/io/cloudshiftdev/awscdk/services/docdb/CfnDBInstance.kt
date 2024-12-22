@@ -122,12 +122,12 @@ public open class CfnDBInstance(
   }
 
   /**
-   * The CA certificate identifier to use for the DB instance's server certificate.
+   * The identifier of the CA certificate for this DB instance.
    */
   public open fun caCertificateIdentifier(): String? = unwrap(this).getCaCertificateIdentifier()
 
   /**
-   * The CA certificate identifier to use for the DB instance's server certificate.
+   * The identifier of the CA certificate for this DB instance.
    */
   public open fun caCertificateIdentifier(`value`: String) {
     unwrap(this).setCaCertificateIdentifier(`value`)
@@ -300,17 +300,10 @@ public open class CfnDBInstance(
     public fun availabilityZone(availabilityZone: String)
 
     /**
-     * The CA certificate identifier to use for the DB instance's server certificate.
-     *
-     * For more information, see [Updating Your Amazon DocumentDB TLS
-     * Certificates](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
-     * and [Encrypting Data in
-     * Transit](https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html)
-     * in the *Amazon DocumentDB Developer Guide* .
+     * The identifier of the CA certificate for this DB instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html#cfn-docdb-dbinstance-cacertificateidentifier)
-     * @param caCertificateIdentifier The CA certificate identifier to use for the DB instance's
-     * server certificate. 
+     * @param caCertificateIdentifier The identifier of the CA certificate for this DB instance. 
      */
     public fun caCertificateIdentifier(caCertificateIdentifier: String)
 
@@ -512,17 +505,10 @@ public open class CfnDBInstance(
     }
 
     /**
-     * The CA certificate identifier to use for the DB instance's server certificate.
-     *
-     * For more information, see [Updating Your Amazon DocumentDB TLS
-     * Certificates](https://docs.aws.amazon.com/documentdb/latest/developerguide/ca_cert_rotation.html)
-     * and [Encrypting Data in
-     * Transit](https://docs.aws.amazon.com/documentdb/latest/developerguide/security.encryption.ssl.html)
-     * in the *Amazon DocumentDB Developer Guide* .
+     * The identifier of the CA certificate for this DB instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-docdb-dbinstance.html#cfn-docdb-dbinstance-cacertificateidentifier)
-     * @param caCertificateIdentifier The CA certificate identifier to use for the DB instance's
-     * server certificate. 
+     * @param caCertificateIdentifier The identifier of the CA certificate for this DB instance. 
      */
     override fun caCertificateIdentifier(caCertificateIdentifier: String) {
       cdkBuilder.caCertificateIdentifier(caCertificateIdentifier)

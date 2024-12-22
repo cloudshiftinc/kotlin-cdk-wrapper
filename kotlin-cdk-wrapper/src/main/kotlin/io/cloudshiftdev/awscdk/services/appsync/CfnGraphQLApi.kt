@@ -18,6 +18,7 @@ import kotlin.Number
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.collections.Map
 import kotlin.jvm.JvmName
 import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
@@ -35,7 +36,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.appsync.*;
- * Object environmentVariables;
  * CfnGraphQLApi cfnGraphQLApi = CfnGraphQLApi.Builder.create(this, "MyCfnGraphQLApi")
  * .authenticationType("authenticationType")
  * .name("name")
@@ -66,7 +66,8 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .operationLevelMetricsConfig("operationLevelMetricsConfig")
  * .resolverLevelMetricsBehavior("resolverLevelMetricsBehavior")
  * .build())
- * .environmentVariables(environmentVariables)
+ * .environmentVariables(Map.of(
+ * "environmentVariablesKey", "environmentVariables"))
  * .introspectionConfig("introspectionConfig")
  * .lambdaAuthorizerConfig(LambdaAuthorizerConfigProperty.builder()
  * .authorizerResultTtlInSeconds(123)
@@ -193,7 +194,7 @@ public open class CfnGraphQLApi(
   public open fun attrGraphQlUrl(): String = unwrap(this).getAttrGraphQlUrl()
 
   /**
-   * The ID value.
+   *
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 
@@ -258,7 +259,14 @@ public open class CfnGraphQLApi(
   /**
    * A map containing the list of resources with their properties and environment variables.
    */
-  public open fun environmentVariables(`value`: Any) {
+  public open fun environmentVariables(`value`: IResolvable) {
+    unwrap(this).setEnvironmentVariables(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * A map containing the list of resources with their properties and environment variables.
+   */
+  public open fun environmentVariables(`value`: Map<String, String>) {
     unwrap(this).setEnvironmentVariables(`value`)
   }
 
@@ -646,7 +654,25 @@ public open class CfnGraphQLApi(
      * @param environmentVariables A map containing the list of resources with their properties and
      * environment variables. 
      */
-    public fun environmentVariables(environmentVariables: Any)
+    public fun environmentVariables(environmentVariables: IResolvable)
+
+    /**
+     * A map containing the list of resources with their properties and environment variables.
+     *
+     * For more information, see [Environmental
+     * variables](https://docs.aws.amazon.com/appsync/latest/devguide/environmental-variables.html) .
+     *
+     * *Pattern* : `^[A-Za-z]+\\w*$\\`
+     *
+     * *Minimum* : 2
+     *
+     * *Maximum* : 64
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-environmentvariables)
+     * @param environmentVariables A map containing the list of resources with their properties and
+     * environment variables. 
+     */
+    public fun environmentVariables(environmentVariables: Map<String, String>)
 
     /**
      *
@@ -1042,7 +1068,27 @@ public open class CfnGraphQLApi(
      * @param environmentVariables A map containing the list of resources with their properties and
      * environment variables. 
      */
-    override fun environmentVariables(environmentVariables: Any) {
+    override fun environmentVariables(environmentVariables: IResolvable) {
+      cdkBuilder.environmentVariables(environmentVariables.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * A map containing the list of resources with their properties and environment variables.
+     *
+     * For more information, see [Environmental
+     * variables](https://docs.aws.amazon.com/appsync/latest/devguide/environmental-variables.html) .
+     *
+     * *Pattern* : `^[A-Za-z]+\\w*$\\`
+     *
+     * *Minimum* : 2
+     *
+     * *Maximum* : 64
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-appsync-graphqlapi.html#cfn-appsync-graphqlapi-environmentvariables)
+     * @param environmentVariables A map containing the list of resources with their properties and
+     * environment variables. 
+     */
+    override fun environmentVariables(environmentVariables: Map<String, String>) {
       cdkBuilder.environmentVariables(environmentVariables)
     }
 

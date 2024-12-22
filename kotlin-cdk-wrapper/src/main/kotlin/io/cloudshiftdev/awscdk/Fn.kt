@@ -18,12 +18,17 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * CfnInclude cfnTemplate;
- * // mutating the rule
- * CfnParameter myParameter;
- * CfnRule rule = cfnTemplate.getRule("MyRule");
- * rule.addAssertion(Fn.conditionContains(List.of("m1.small"), myParameter.getValueAsString()),
- * "MyParameter has to be m1.small");
+ * import io.cloudshiftdev.awscdk.*;
+ * Bucket destinationBucket;
+ * BucketDeployment myBucketDeployment = BucketDeployment.Builder.create(this,
+ * "DeployMeWithoutExtractingFilesOnDestination")
+ * .sources(List.of(Source.asset(join(__dirname, "my-website"))))
+ * .destinationBucket(destinationBucket)
+ * .extract(false)
+ * .build();
+ * CfnOutput.Builder.create(this, "ObjectKey")
+ * .value(Fn.select(0, myBucketDeployment.getObjectKeys()))
+ * .build();
  * ```
  */
 public open class Fn(

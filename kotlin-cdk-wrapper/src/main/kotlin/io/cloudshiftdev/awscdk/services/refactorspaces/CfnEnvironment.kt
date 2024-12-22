@@ -38,10 +38,9 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.refactorspaces.*;
  * CfnEnvironment cfnEnvironment = CfnEnvironment.Builder.create(this, "MyCfnEnvironment")
+ * .description("description")
  * .name("name")
  * .networkFabricType("networkFabricType")
- * // the properties below are optional
- * .description("description")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -56,6 +55,11 @@ public open class CfnEnvironment(
 ) : CfnResource(cdkObject),
     IInspectable,
     ITaggable {
+  public constructor(scope: CloudshiftdevConstructsConstruct, id: String) :
+      this(software.amazon.awscdk.services.refactorspaces.CfnEnvironment(scope.let(CloudshiftdevConstructsConstruct.Companion::unwrap),
+      id)
+  )
+
   public constructor(
     scope: CloudshiftdevConstructsConstruct,
     id: String,
@@ -111,7 +115,7 @@ public open class CfnEnvironment(
   /**
    * The name of the environment.
    */
-  public open fun name(): String = unwrap(this).getName()
+  public open fun name(): String? = unwrap(this).getName()
 
   /**
    * The name of the environment.
@@ -123,7 +127,7 @@ public open class CfnEnvironment(
   /**
    * The network fabric type of the environment.
    */
-  public open fun networkFabricType(): String = unwrap(this).getNetworkFabricType()
+  public open fun networkFabricType(): String? = unwrap(this).getNetworkFabricType()
 
   /**
    * The network fabric type of the environment.

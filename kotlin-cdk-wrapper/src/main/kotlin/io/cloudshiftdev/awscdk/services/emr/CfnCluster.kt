@@ -40,450 +40,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.services.emr.*;
- * Object additionalInfo;
- * ConfigurationProperty configurationProperty_;
- * CfnCluster cfnCluster = CfnCluster.Builder.create(this, "MyCfnCluster")
- * .instances(JobFlowInstancesConfigProperty.builder()
- * .additionalMasterSecurityGroups(List.of("additionalMasterSecurityGroups"))
- * .additionalSlaveSecurityGroups(List.of("additionalSlaveSecurityGroups"))
- * .coreInstanceFleet(InstanceFleetConfigProperty.builder()
- * .instanceTypeConfigs(List.of(InstanceTypeConfigProperty.builder()
- * .instanceType("instanceType")
- * // the properties below are optional
- * .bidPrice("bidPrice")
- * .bidPriceAsPercentageOfOnDemandPrice(123)
- * .configurations(List.of(ConfigurationProperty.builder()
- * .classification("classification")
- * .configurationProperties(Map.of(
- * "configurationPropertiesKey", "configurationProperties"))
- * .configurations(List.of(configurationProperty_))
- * .build()))
- * .customAmiId("customAmiId")
- * .ebsConfiguration(EbsConfigurationProperty.builder()
- * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
- * .volumeSpecification(VolumeSpecificationProperty.builder()
- * .sizeInGb(123)
- * .volumeType("volumeType")
- * // the properties below are optional
- * .iops(123)
- * .throughput(123)
- * .build())
- * // the properties below are optional
- * .volumesPerInstance(123)
- * .build()))
- * .ebsOptimized(false)
- * .build())
- * .weightedCapacity(123)
- * .build()))
- * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
- * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
- * .allocationStrategy("allocationStrategy")
- * .build())
- * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
- * .timeoutAction("timeoutAction")
- * .timeoutDurationMinutes(123)
- * // the properties below are optional
- * .allocationStrategy("allocationStrategy")
- * .blockDurationMinutes(123)
- * .build())
- * .build())
- * .name("name")
- * .targetOnDemandCapacity(123)
- * .targetSpotCapacity(123)
- * .build())
- * .coreInstanceGroup(InstanceGroupConfigProperty.builder()
- * .instanceCount(123)
- * .instanceType("instanceType")
- * // the properties below are optional
- * .autoScalingPolicy(AutoScalingPolicyProperty.builder()
- * .constraints(ScalingConstraintsProperty.builder()
- * .maxCapacity(123)
- * .minCapacity(123)
- * .build())
- * .rules(List.of(ScalingRuleProperty.builder()
- * .action(ScalingActionProperty.builder()
- * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
- * .scalingAdjustment(123)
- * // the properties below are optional
- * .adjustmentType("adjustmentType")
- * .coolDown(123)
- * .build())
- * // the properties below are optional
- * .market("market")
- * .build())
- * .name("name")
- * .trigger(ScalingTriggerProperty.builder()
- * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
- * .comparisonOperator("comparisonOperator")
- * .metricName("metricName")
- * .period(123)
- * .threshold(123)
- * // the properties below are optional
- * .dimensions(List.of(MetricDimensionProperty.builder()
- * .key("key")
- * .value("value")
- * .build()))
- * .evaluationPeriods(123)
- * .namespace("namespace")
- * .statistic("statistic")
- * .unit("unit")
- * .build())
- * .build())
- * // the properties below are optional
- * .description("description")
- * .build()))
- * .build())
- * .bidPrice("bidPrice")
- * .configurations(List.of(ConfigurationProperty.builder()
- * .classification("classification")
- * .configurationProperties(Map.of(
- * "configurationPropertiesKey", "configurationProperties"))
- * .configurations(List.of(configurationProperty_))
- * .build()))
- * .customAmiId("customAmiId")
- * .ebsConfiguration(EbsConfigurationProperty.builder()
- * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
- * .volumeSpecification(VolumeSpecificationProperty.builder()
- * .sizeInGb(123)
- * .volumeType("volumeType")
- * // the properties below are optional
- * .iops(123)
- * .throughput(123)
- * .build())
- * // the properties below are optional
- * .volumesPerInstance(123)
- * .build()))
- * .ebsOptimized(false)
- * .build())
- * .market("market")
- * .name("name")
- * .build())
- * .ec2KeyName("ec2KeyName")
- * .ec2SubnetId("ec2SubnetId")
- * .ec2SubnetIds(List.of("ec2SubnetIds"))
- * .emrManagedMasterSecurityGroup("emrManagedMasterSecurityGroup")
- * .emrManagedSlaveSecurityGroup("emrManagedSlaveSecurityGroup")
- * .hadoopVersion("hadoopVersion")
- * .keepJobFlowAliveWhenNoSteps(false)
- * .masterInstanceFleet(InstanceFleetConfigProperty.builder()
- * .instanceTypeConfigs(List.of(InstanceTypeConfigProperty.builder()
- * .instanceType("instanceType")
- * // the properties below are optional
- * .bidPrice("bidPrice")
- * .bidPriceAsPercentageOfOnDemandPrice(123)
- * .configurations(List.of(ConfigurationProperty.builder()
- * .classification("classification")
- * .configurationProperties(Map.of(
- * "configurationPropertiesKey", "configurationProperties"))
- * .configurations(List.of(configurationProperty_))
- * .build()))
- * .customAmiId("customAmiId")
- * .ebsConfiguration(EbsConfigurationProperty.builder()
- * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
- * .volumeSpecification(VolumeSpecificationProperty.builder()
- * .sizeInGb(123)
- * .volumeType("volumeType")
- * // the properties below are optional
- * .iops(123)
- * .throughput(123)
- * .build())
- * // the properties below are optional
- * .volumesPerInstance(123)
- * .build()))
- * .ebsOptimized(false)
- * .build())
- * .weightedCapacity(123)
- * .build()))
- * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
- * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
- * .allocationStrategy("allocationStrategy")
- * .build())
- * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
- * .timeoutAction("timeoutAction")
- * .timeoutDurationMinutes(123)
- * // the properties below are optional
- * .allocationStrategy("allocationStrategy")
- * .blockDurationMinutes(123)
- * .build())
- * .build())
- * .name("name")
- * .targetOnDemandCapacity(123)
- * .targetSpotCapacity(123)
- * .build())
- * .masterInstanceGroup(InstanceGroupConfigProperty.builder()
- * .instanceCount(123)
- * .instanceType("instanceType")
- * // the properties below are optional
- * .autoScalingPolicy(AutoScalingPolicyProperty.builder()
- * .constraints(ScalingConstraintsProperty.builder()
- * .maxCapacity(123)
- * .minCapacity(123)
- * .build())
- * .rules(List.of(ScalingRuleProperty.builder()
- * .action(ScalingActionProperty.builder()
- * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
- * .scalingAdjustment(123)
- * // the properties below are optional
- * .adjustmentType("adjustmentType")
- * .coolDown(123)
- * .build())
- * // the properties below are optional
- * .market("market")
- * .build())
- * .name("name")
- * .trigger(ScalingTriggerProperty.builder()
- * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
- * .comparisonOperator("comparisonOperator")
- * .metricName("metricName")
- * .period(123)
- * .threshold(123)
- * // the properties below are optional
- * .dimensions(List.of(MetricDimensionProperty.builder()
- * .key("key")
- * .value("value")
- * .build()))
- * .evaluationPeriods(123)
- * .namespace("namespace")
- * .statistic("statistic")
- * .unit("unit")
- * .build())
- * .build())
- * // the properties below are optional
- * .description("description")
- * .build()))
- * .build())
- * .bidPrice("bidPrice")
- * .configurations(List.of(ConfigurationProperty.builder()
- * .classification("classification")
- * .configurationProperties(Map.of(
- * "configurationPropertiesKey", "configurationProperties"))
- * .configurations(List.of(configurationProperty_))
- * .build()))
- * .customAmiId("customAmiId")
- * .ebsConfiguration(EbsConfigurationProperty.builder()
- * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
- * .volumeSpecification(VolumeSpecificationProperty.builder()
- * .sizeInGb(123)
- * .volumeType("volumeType")
- * // the properties below are optional
- * .iops(123)
- * .throughput(123)
- * .build())
- * // the properties below are optional
- * .volumesPerInstance(123)
- * .build()))
- * .ebsOptimized(false)
- * .build())
- * .market("market")
- * .name("name")
- * .build())
- * .placement(PlacementTypeProperty.builder()
- * .availabilityZone("availabilityZone")
- * .build())
- * .serviceAccessSecurityGroup("serviceAccessSecurityGroup")
- * .taskInstanceFleets(List.of(InstanceFleetConfigProperty.builder()
- * .instanceTypeConfigs(List.of(InstanceTypeConfigProperty.builder()
- * .instanceType("instanceType")
- * // the properties below are optional
- * .bidPrice("bidPrice")
- * .bidPriceAsPercentageOfOnDemandPrice(123)
- * .configurations(List.of(ConfigurationProperty.builder()
- * .classification("classification")
- * .configurationProperties(Map.of(
- * "configurationPropertiesKey", "configurationProperties"))
- * .configurations(List.of(configurationProperty_))
- * .build()))
- * .customAmiId("customAmiId")
- * .ebsConfiguration(EbsConfigurationProperty.builder()
- * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
- * .volumeSpecification(VolumeSpecificationProperty.builder()
- * .sizeInGb(123)
- * .volumeType("volumeType")
- * // the properties below are optional
- * .iops(123)
- * .throughput(123)
- * .build())
- * // the properties below are optional
- * .volumesPerInstance(123)
- * .build()))
- * .ebsOptimized(false)
- * .build())
- * .weightedCapacity(123)
- * .build()))
- * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
- * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
- * .allocationStrategy("allocationStrategy")
- * .build())
- * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
- * .timeoutAction("timeoutAction")
- * .timeoutDurationMinutes(123)
- * // the properties below are optional
- * .allocationStrategy("allocationStrategy")
- * .blockDurationMinutes(123)
- * .build())
- * .build())
- * .name("name")
- * .targetOnDemandCapacity(123)
- * .targetSpotCapacity(123)
- * .build()))
- * .taskInstanceGroups(List.of(InstanceGroupConfigProperty.builder()
- * .instanceCount(123)
- * .instanceType("instanceType")
- * // the properties below are optional
- * .autoScalingPolicy(AutoScalingPolicyProperty.builder()
- * .constraints(ScalingConstraintsProperty.builder()
- * .maxCapacity(123)
- * .minCapacity(123)
- * .build())
- * .rules(List.of(ScalingRuleProperty.builder()
- * .action(ScalingActionProperty.builder()
- * .simpleScalingPolicyConfiguration(SimpleScalingPolicyConfigurationProperty.builder()
- * .scalingAdjustment(123)
- * // the properties below are optional
- * .adjustmentType("adjustmentType")
- * .coolDown(123)
- * .build())
- * // the properties below are optional
- * .market("market")
- * .build())
- * .name("name")
- * .trigger(ScalingTriggerProperty.builder()
- * .cloudWatchAlarmDefinition(CloudWatchAlarmDefinitionProperty.builder()
- * .comparisonOperator("comparisonOperator")
- * .metricName("metricName")
- * .period(123)
- * .threshold(123)
- * // the properties below are optional
- * .dimensions(List.of(MetricDimensionProperty.builder()
- * .key("key")
- * .value("value")
- * .build()))
- * .evaluationPeriods(123)
- * .namespace("namespace")
- * .statistic("statistic")
- * .unit("unit")
- * .build())
- * .build())
- * // the properties below are optional
- * .description("description")
- * .build()))
- * .build())
- * .bidPrice("bidPrice")
- * .configurations(List.of(ConfigurationProperty.builder()
- * .classification("classification")
- * .configurationProperties(Map.of(
- * "configurationPropertiesKey", "configurationProperties"))
- * .configurations(List.of(configurationProperty_))
- * .build()))
- * .customAmiId("customAmiId")
- * .ebsConfiguration(EbsConfigurationProperty.builder()
- * .ebsBlockDeviceConfigs(List.of(EbsBlockDeviceConfigProperty.builder()
- * .volumeSpecification(VolumeSpecificationProperty.builder()
- * .sizeInGb(123)
- * .volumeType("volumeType")
- * // the properties below are optional
- * .iops(123)
- * .throughput(123)
- * .build())
- * // the properties below are optional
- * .volumesPerInstance(123)
- * .build()))
- * .ebsOptimized(false)
- * .build())
- * .market("market")
- * .name("name")
- * .build()))
- * .terminationProtected(false)
- * .unhealthyNodeReplacement(false)
- * .build())
- * .jobFlowRole("jobFlowRole")
- * .name("name")
- * .serviceRole("serviceRole")
- * // the properties below are optional
- * .additionalInfo(additionalInfo)
- * .applications(List.of(ApplicationProperty.builder()
- * .additionalInfo(Map.of(
- * "additionalInfoKey", "additionalInfo"))
- * .args(List.of("args"))
- * .name("name")
- * .version("version")
- * .build()))
- * .autoScalingRole("autoScalingRole")
- * .autoTerminationPolicy(AutoTerminationPolicyProperty.builder()
- * .idleTimeout(123)
- * .build())
- * .bootstrapActions(List.of(BootstrapActionConfigProperty.builder()
- * .name("name")
- * .scriptBootstrapAction(ScriptBootstrapActionConfigProperty.builder()
- * .path("path")
- * // the properties below are optional
- * .args(List.of("args"))
- * .build())
- * .build()))
- * .configurations(List.of(ConfigurationProperty.builder()
- * .classification("classification")
- * .configurationProperties(Map.of(
- * "configurationPropertiesKey", "configurationProperties"))
- * .configurations(List.of(configurationProperty_))
- * .build()))
- * .customAmiId("customAmiId")
- * .ebsRootVolumeIops(123)
- * .ebsRootVolumeSize(123)
- * .ebsRootVolumeThroughput(123)
- * .kerberosAttributes(KerberosAttributesProperty.builder()
- * .kdcAdminPassword("kdcAdminPassword")
- * .realm("realm")
- * // the properties below are optional
- * .adDomainJoinPassword("adDomainJoinPassword")
- * .adDomainJoinUser("adDomainJoinUser")
- * .crossRealmTrustPrincipalPassword("crossRealmTrustPrincipalPassword")
- * .build())
- * .logEncryptionKmsKeyId("logEncryptionKmsKeyId")
- * .logUri("logUri")
- * .managedScalingPolicy(ManagedScalingPolicyProperty.builder()
- * .computeLimits(ComputeLimitsProperty.builder()
- * .maximumCapacityUnits(123)
- * .minimumCapacityUnits(123)
- * .unitType("unitType")
- * // the properties below are optional
- * .maximumCoreCapacityUnits(123)
- * .maximumOnDemandCapacityUnits(123)
- * .build())
- * .build())
- * .osReleaseLabel("osReleaseLabel")
- * .placementGroupConfigs(List.of(PlacementGroupConfigProperty.builder()
- * .instanceRole("instanceRole")
- * // the properties below are optional
- * .placementStrategy("placementStrategy")
- * .build()))
- * .releaseLabel("releaseLabel")
- * .scaleDownBehavior("scaleDownBehavior")
- * .securityConfiguration("securityConfiguration")
- * .stepConcurrencyLevel(123)
- * .steps(List.of(StepConfigProperty.builder()
- * .hadoopJarStep(HadoopJarStepConfigProperty.builder()
- * .jar("jar")
- * // the properties below are optional
- * .args(List.of("args"))
- * .mainClass("mainClass")
- * .stepProperties(List.of(KeyValueProperty.builder()
- * .key("key")
- * .value("value")
- * .build()))
- * .build())
- * .name("name")
- * // the properties below are optional
- * .actionOnFailure("actionOnFailure")
- * .build()))
- * .tags(List.of(CfnTag.builder()
- * .key("key")
- * .value("value")
- * .build()))
- * .visibleToAllUsers(false)
- * .build();
  * ```
  *
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-emr-cluster.html)
@@ -4285,11 +3841,18 @@ public open class CfnCluster(
    * .build()))
    * .ebsOptimized(false)
    * .build())
+   * .priority(123)
    * .weightedCapacity(123)
    * .build()))
    * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
    * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
    * .allocationStrategy("allocationStrategy")
+   * // the properties below are optional
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
    * .build())
    * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
    * .timeoutAction("timeoutAction")
@@ -4300,6 +3863,21 @@ public open class CfnCluster(
    * .build())
    * .build())
    * .name("name")
+   * .resizeSpecifications(InstanceFleetResizingSpecificationsProperty.builder()
+   * .onDemandResizeSpecification(OnDemandResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .spotResizeSpecification(SpotResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .build())
    * .targetOnDemandCapacity(123)
    * .targetSpotCapacity(123)
    * .build();
@@ -4328,6 +3906,13 @@ public open class CfnCluster(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-name)
      */
     public fun name(): String? = unwrap(this).getName()
+
+    /**
+     * The resize specification for the instance fleet.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-resizespecifications)
+     */
+    public fun resizeSpecifications(): Any? = unwrap(this).getResizeSpecifications()
 
     /**
      * The target capacity of On-Demand units for the instance fleet, which determines how many
@@ -4422,6 +4007,25 @@ public open class CfnCluster(
        * @param name The friendly name of the instance fleet.
        */
       public fun name(name: String)
+
+      /**
+       * @param resizeSpecifications The resize specification for the instance fleet.
+       */
+      public fun resizeSpecifications(resizeSpecifications: IResolvable)
+
+      /**
+       * @param resizeSpecifications The resize specification for the instance fleet.
+       */
+      public
+          fun resizeSpecifications(resizeSpecifications: InstanceFleetResizingSpecificationsProperty)
+
+      /**
+       * @param resizeSpecifications The resize specification for the instance fleet.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55eeff33489d923640353bda61381dc97664625a6de0121374ee317859fd2c1e")
+      public
+          fun resizeSpecifications(resizeSpecifications: InstanceFleetResizingSpecificationsProperty.Builder.() -> Unit)
 
       /**
        * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance
@@ -4524,6 +4128,31 @@ public open class CfnCluster(
       }
 
       /**
+       * @param resizeSpecifications The resize specification for the instance fleet.
+       */
+      override fun resizeSpecifications(resizeSpecifications: IResolvable) {
+        cdkBuilder.resizeSpecifications(resizeSpecifications.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param resizeSpecifications The resize specification for the instance fleet.
+       */
+      override
+          fun resizeSpecifications(resizeSpecifications: InstanceFleetResizingSpecificationsProperty) {
+        cdkBuilder.resizeSpecifications(resizeSpecifications.let(InstanceFleetResizingSpecificationsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param resizeSpecifications The resize specification for the instance fleet.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("55eeff33489d923640353bda61381dc97664625a6de0121374ee317859fd2c1e")
+      override
+          fun resizeSpecifications(resizeSpecifications: InstanceFleetResizingSpecificationsProperty.Builder.() -> Unit):
+          Unit =
+          resizeSpecifications(InstanceFleetResizingSpecificationsProperty(resizeSpecifications))
+
+      /**
        * @param targetOnDemandCapacity The target capacity of On-Demand units for the instance
        * fleet, which determines how many On-Demand instances to provision.
        * When the instance fleet launches, Amazon EMR tries to provision On-Demand instances as
@@ -4595,6 +4224,13 @@ public open class CfnCluster(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-name)
        */
       override fun name(): String? = unwrap(this).getName()
+
+      /**
+       * The resize specification for the instance fleet.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetconfig.html#cfn-emr-cluster-instancefleetconfig-resizespecifications)
+       */
+      override fun resizeSpecifications(): Any? = unwrap(this).getResizeSpecifications()
 
       /**
        * The target capacity of On-Demand units for the instance fleet, which determines how many
@@ -4684,6 +4320,12 @@ public open class CfnCluster(
    * = InstanceFleetProvisioningSpecificationsProperty.builder()
    * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
    * .allocationStrategy("allocationStrategy")
+   * // the properties below are optional
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
    * .build())
    * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
    * .timeoutAction("timeoutAction")
@@ -4901,6 +4543,214 @@ public open class CfnCluster(
           software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetProvisioningSpecificationsProperty
+    }
+  }
+
+  /**
+   * The resize specification for On-Demand and Spot Instances in the fleet.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * InstanceFleetResizingSpecificationsProperty instanceFleetResizingSpecificationsProperty =
+   * InstanceFleetResizingSpecificationsProperty.builder()
+   * .onDemandResizeSpecification(OnDemandResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .spotResizeSpecification(SpotResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetresizingspecifications.html)
+   */
+  public interface InstanceFleetResizingSpecificationsProperty {
+    /**
+     * The resize specification for On-Demand Instances in the instance fleet, which contains the
+     * allocation strategy, capacity reservation options, and the resize timeout period.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetresizingspecifications.html#cfn-emr-cluster-instancefleetresizingspecifications-ondemandresizespecification)
+     */
+    public fun onDemandResizeSpecification(): Any? = unwrap(this).getOnDemandResizeSpecification()
+
+    /**
+     * The resize specification for Spot Instances in the instance fleet, which contains the
+     * allocation strategy and the resize timeout period.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetresizingspecifications.html#cfn-emr-cluster-instancefleetresizingspecifications-spotresizespecification)
+     */
+    public fun spotResizeSpecification(): Any? = unwrap(this).getSpotResizeSpecification()
+
+    /**
+     * A builder for [InstanceFleetResizingSpecificationsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param onDemandResizeSpecification The resize specification for On-Demand Instances in the
+       * instance fleet, which contains the allocation strategy, capacity reservation options, and the
+       * resize timeout period.
+       */
+      public fun onDemandResizeSpecification(onDemandResizeSpecification: IResolvable)
+
+      /**
+       * @param onDemandResizeSpecification The resize specification for On-Demand Instances in the
+       * instance fleet, which contains the allocation strategy, capacity reservation options, and the
+       * resize timeout period.
+       */
+      public
+          fun onDemandResizeSpecification(onDemandResizeSpecification: OnDemandResizingSpecificationProperty)
+
+      /**
+       * @param onDemandResizeSpecification The resize specification for On-Demand Instances in the
+       * instance fleet, which contains the allocation strategy, capacity reservation options, and the
+       * resize timeout period.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("41e91255d5e13521c71cfc77ecfe26e974d94da08d5fcf87333483a2966fa250")
+      public
+          fun onDemandResizeSpecification(onDemandResizeSpecification: OnDemandResizingSpecificationProperty.Builder.() -> Unit)
+
+      /**
+       * @param spotResizeSpecification The resize specification for Spot Instances in the instance
+       * fleet, which contains the allocation strategy and the resize timeout period.
+       */
+      public fun spotResizeSpecification(spotResizeSpecification: IResolvable)
+
+      /**
+       * @param spotResizeSpecification The resize specification for Spot Instances in the instance
+       * fleet, which contains the allocation strategy and the resize timeout period.
+       */
+      public fun spotResizeSpecification(spotResizeSpecification: SpotResizingSpecificationProperty)
+
+      /**
+       * @param spotResizeSpecification The resize specification for Spot Instances in the instance
+       * fleet, which contains the allocation strategy and the resize timeout period.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e5053e6f739547381f9f3cca58383a7417efdeb845305edb1b858c53de839d8d")
+      public
+          fun spotResizeSpecification(spotResizeSpecification: SpotResizingSpecificationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetResizingSpecificationsProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetResizingSpecificationsProperty.builder()
+
+      /**
+       * @param onDemandResizeSpecification The resize specification for On-Demand Instances in the
+       * instance fleet, which contains the allocation strategy, capacity reservation options, and the
+       * resize timeout period.
+       */
+      override fun onDemandResizeSpecification(onDemandResizeSpecification: IResolvable) {
+        cdkBuilder.onDemandResizeSpecification(onDemandResizeSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param onDemandResizeSpecification The resize specification for On-Demand Instances in the
+       * instance fleet, which contains the allocation strategy, capacity reservation options, and the
+       * resize timeout period.
+       */
+      override
+          fun onDemandResizeSpecification(onDemandResizeSpecification: OnDemandResizingSpecificationProperty) {
+        cdkBuilder.onDemandResizeSpecification(onDemandResizeSpecification.let(OnDemandResizingSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param onDemandResizeSpecification The resize specification for On-Demand Instances in the
+       * instance fleet, which contains the allocation strategy, capacity reservation options, and the
+       * resize timeout period.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("41e91255d5e13521c71cfc77ecfe26e974d94da08d5fcf87333483a2966fa250")
+      override
+          fun onDemandResizeSpecification(onDemandResizeSpecification: OnDemandResizingSpecificationProperty.Builder.() -> Unit):
+          Unit =
+          onDemandResizeSpecification(OnDemandResizingSpecificationProperty(onDemandResizeSpecification))
+
+      /**
+       * @param spotResizeSpecification The resize specification for Spot Instances in the instance
+       * fleet, which contains the allocation strategy and the resize timeout period.
+       */
+      override fun spotResizeSpecification(spotResizeSpecification: IResolvable) {
+        cdkBuilder.spotResizeSpecification(spotResizeSpecification.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param spotResizeSpecification The resize specification for Spot Instances in the instance
+       * fleet, which contains the allocation strategy and the resize timeout period.
+       */
+      override
+          fun spotResizeSpecification(spotResizeSpecification: SpotResizingSpecificationProperty) {
+        cdkBuilder.spotResizeSpecification(spotResizeSpecification.let(SpotResizingSpecificationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param spotResizeSpecification The resize specification for Spot Instances in the instance
+       * fleet, which contains the allocation strategy and the resize timeout period.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("e5053e6f739547381f9f3cca58383a7417efdeb845305edb1b858c53de839d8d")
+      override
+          fun spotResizeSpecification(spotResizeSpecification: SpotResizingSpecificationProperty.Builder.() -> Unit):
+          Unit = spotResizeSpecification(SpotResizingSpecificationProperty(spotResizeSpecification))
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetResizingSpecificationsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetResizingSpecificationsProperty,
+    ) : CdkObject(cdkObject),
+        InstanceFleetResizingSpecificationsProperty {
+      /**
+       * The resize specification for On-Demand Instances in the instance fleet, which contains the
+       * allocation strategy, capacity reservation options, and the resize timeout period.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetresizingspecifications.html#cfn-emr-cluster-instancefleetresizingspecifications-ondemandresizespecification)
+       */
+      override fun onDemandResizeSpecification(): Any? =
+          unwrap(this).getOnDemandResizeSpecification()
+
+      /**
+       * The resize specification for Spot Instances in the instance fleet, which contains the
+       * allocation strategy and the resize timeout period.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancefleetresizingspecifications.html#cfn-emr-cluster-instancefleetresizingspecifications-spotresizespecification)
+       */
+      override fun spotResizeSpecification(): Any? = unwrap(this).getSpotResizeSpecification()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InstanceFleetResizingSpecificationsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetResizingSpecificationsProperty):
+          InstanceFleetResizingSpecificationsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InstanceFleetResizingSpecificationsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InstanceFleetResizingSpecificationsProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetResizingSpecificationsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.InstanceFleetResizingSpecificationsProperty
     }
   }
 
@@ -5472,6 +5322,7 @@ public open class CfnCluster(
    * .build()))
    * .ebsOptimized(false)
    * .build())
+   * .priority(123)
    * .weightedCapacity(123)
    * .build();
    * ```
@@ -5531,6 +5382,16 @@ public open class CfnCluster(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-instancetype)
      */
     public fun instanceType(): String
+
+    /**
+     * The priority at which Amazon EMR launches the Amazon EC2 instances with this instance type.
+     *
+     * Priority starts at 0, which is the highest priority. Amazon EMR considers the highest
+     * priority first.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-priority)
+     */
+    public fun priority(): Number? = unwrap(this).getPriority()
 
     /**
      * The number of units that a provisioned instance of this type provides toward fulfilling the
@@ -5615,6 +5476,14 @@ public open class CfnCluster(
        * @param instanceType An Amazon EC2 instance type, such as `m3.xlarge` . 
        */
       public fun instanceType(instanceType: String)
+
+      /**
+       * @param priority The priority at which Amazon EMR launches the Amazon EC2 instances with
+       * this instance type.
+       * Priority starts at 0, which is the highest priority. Amazon EMR considers the highest
+       * priority first.
+       */
+      public fun priority(priority: Number)
 
       /**
        * @param weightedCapacity The number of units that a provisioned instance of this type
@@ -5718,6 +5587,16 @@ public open class CfnCluster(
       }
 
       /**
+       * @param priority The priority at which Amazon EMR launches the Amazon EC2 instances with
+       * this instance type.
+       * Priority starts at 0, which is the highest priority. Amazon EMR considers the highest
+       * priority first.
+       */
+      override fun priority(priority: Number) {
+        cdkBuilder.priority(priority)
+      }
+
+      /**
        * @param weightedCapacity The number of units that a provisioned instance of this type
        * provides toward fulfilling the target capacities defined in `InstanceFleetConfig` .
        * This value is 1 for a master instance fleet, and must be 1 or greater for core and task
@@ -5787,6 +5666,16 @@ public open class CfnCluster(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-instancetype)
        */
       override fun instanceType(): String = unwrap(this).getInstanceType()
+
+      /**
+       * The priority at which Amazon EMR launches the Amazon EC2 instances with this instance type.
+       *
+       * Priority starts at 0, which is the highest priority. Amazon EMR considers the highest
+       * priority first.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-instancetypeconfig.html#cfn-emr-cluster-instancetypeconfig-priority)
+       */
+      override fun priority(): Number? = unwrap(this).getPriority()
 
       /**
        * The number of units that a provisioned instance of this type provides toward fulfilling the
@@ -5868,11 +5757,18 @@ public open class CfnCluster(
    * .build()))
    * .ebsOptimized(false)
    * .build())
+   * .priority(123)
    * .weightedCapacity(123)
    * .build()))
    * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
    * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
    * .allocationStrategy("allocationStrategy")
+   * // the properties below are optional
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
    * .build())
    * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
    * .timeoutAction("timeoutAction")
@@ -5883,6 +5779,21 @@ public open class CfnCluster(
    * .build())
    * .build())
    * .name("name")
+   * .resizeSpecifications(InstanceFleetResizingSpecificationsProperty.builder()
+   * .onDemandResizeSpecification(OnDemandResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .spotResizeSpecification(SpotResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .build())
    * .targetOnDemandCapacity(123)
    * .targetSpotCapacity(123)
    * .build())
@@ -5987,11 +5898,18 @@ public open class CfnCluster(
    * .build()))
    * .ebsOptimized(false)
    * .build())
+   * .priority(123)
    * .weightedCapacity(123)
    * .build()))
    * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
    * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
    * .allocationStrategy("allocationStrategy")
+   * // the properties below are optional
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
    * .build())
    * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
    * .timeoutAction("timeoutAction")
@@ -6002,6 +5920,21 @@ public open class CfnCluster(
    * .build())
    * .build())
    * .name("name")
+   * .resizeSpecifications(InstanceFleetResizingSpecificationsProperty.builder()
+   * .onDemandResizeSpecification(OnDemandResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .spotResizeSpecification(SpotResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .build())
    * .targetOnDemandCapacity(123)
    * .targetSpotCapacity(123)
    * .build())
@@ -6103,11 +6036,18 @@ public open class CfnCluster(
    * .build()))
    * .ebsOptimized(false)
    * .build())
+   * .priority(123)
    * .weightedCapacity(123)
    * .build()))
    * .launchSpecifications(InstanceFleetProvisioningSpecificationsProperty.builder()
    * .onDemandSpecification(OnDemandProvisioningSpecificationProperty.builder()
    * .allocationStrategy("allocationStrategy")
+   * // the properties below are optional
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
    * .build())
    * .spotSpecification(SpotProvisioningSpecificationProperty.builder()
    * .timeoutAction("timeoutAction")
@@ -6118,6 +6058,21 @@ public open class CfnCluster(
    * .build())
    * .build())
    * .name("name")
+   * .resizeSpecifications(InstanceFleetResizingSpecificationsProperty.builder()
+   * .onDemandResizeSpecification(OnDemandResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .spotResizeSpecification(SpotResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .timeoutDurationMinutes(123)
+   * .build())
+   * .build())
    * .targetOnDemandCapacity(123)
    * .targetSpotCapacity(123)
    * .build()))
@@ -7965,6 +7920,213 @@ public open class CfnCluster(
   }
 
   /**
+   * Describes the strategy for using unused Capacity Reservations for fulfilling On-Demand
+   * capacity.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * OnDemandCapacityReservationOptionsProperty onDemandCapacityReservationOptionsProperty =
+   * OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandcapacityreservationoptions.html)
+   */
+  public interface OnDemandCapacityReservationOptionsProperty {
+    /**
+     * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
+     *
+     * * `open` - The instance can run in any open Capacity Reservation that has matching attributes
+     * (instance type, platform, Availability Zone).
+     * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
+     * The instance runs as an On-Demand Instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandcapacityreservationoptions.html#cfn-emr-cluster-ondemandcapacityreservationoptions-capacityreservationpreference)
+     */
+    public fun capacityReservationPreference(): String? =
+        unwrap(this).getCapacityReservationPreference()
+
+    /**
+     * The ARN of the Capacity Reservation resource group in which to run the instance.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandcapacityreservationoptions.html#cfn-emr-cluster-ondemandcapacityreservationoptions-capacityreservationresourcegrouparn)
+     */
+    public fun capacityReservationResourceGroupArn(): String? =
+        unwrap(this).getCapacityReservationResourceGroupArn()
+
+    /**
+     * Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity.
+     *
+     * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
+     * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
+     * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
+     * `lowest-price` ) is applied. If the number of unused Capacity Reservations is less than the
+     * On-Demand target capacity, the remaining On-Demand target capacity is launched according to the
+     * On-Demand allocation strategy ( `lowest-price` ).
+     *
+     * If you do not specify a value, the fleet fulfills the On-Demand capacity according to the
+     * chosen On-Demand allocation strategy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandcapacityreservationoptions.html#cfn-emr-cluster-ondemandcapacityreservationoptions-usagestrategy)
+     */
+    public fun usageStrategy(): String? = unwrap(this).getUsageStrategy()
+
+    /**
+     * A builder for [OnDemandCapacityReservationOptionsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param capacityReservationPreference Indicates the instance's Capacity Reservation
+       * preferences. Possible preferences include:.
+       * * `open` - The instance can run in any open Capacity Reservation that has matching
+       * attributes (instance type, platform, Availability Zone).
+       * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
+       * The instance runs as an On-Demand Instance.
+       */
+      public fun capacityReservationPreference(capacityReservationPreference: String)
+
+      /**
+       * @param capacityReservationResourceGroupArn The ARN of the Capacity Reservation resource
+       * group in which to run the instance.
+       */
+      public fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String)
+
+      /**
+       * @param usageStrategy Indicates whether to use unused Capacity Reservations for fulfilling
+       * On-Demand capacity.
+       * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
+       * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
+       * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
+       * `lowest-price` ) is applied. If the number of unused Capacity Reservations is less than the
+       * On-Demand target capacity, the remaining On-Demand target capacity is launched according to
+       * the On-Demand allocation strategy ( `lowest-price` ).
+       *
+       * If you do not specify a value, the fleet fulfills the On-Demand capacity according to the
+       * chosen On-Demand allocation strategy.
+       */
+      public fun usageStrategy(usageStrategy: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandCapacityReservationOptionsProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandCapacityReservationOptionsProperty.builder()
+
+      /**
+       * @param capacityReservationPreference Indicates the instance's Capacity Reservation
+       * preferences. Possible preferences include:.
+       * * `open` - The instance can run in any open Capacity Reservation that has matching
+       * attributes (instance type, platform, Availability Zone).
+       * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
+       * The instance runs as an On-Demand Instance.
+       */
+      override fun capacityReservationPreference(capacityReservationPreference: String) {
+        cdkBuilder.capacityReservationPreference(capacityReservationPreference)
+      }
+
+      /**
+       * @param capacityReservationResourceGroupArn The ARN of the Capacity Reservation resource
+       * group in which to run the instance.
+       */
+      override
+          fun capacityReservationResourceGroupArn(capacityReservationResourceGroupArn: String) {
+        cdkBuilder.capacityReservationResourceGroupArn(capacityReservationResourceGroupArn)
+      }
+
+      /**
+       * @param usageStrategy Indicates whether to use unused Capacity Reservations for fulfilling
+       * On-Demand capacity.
+       * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
+       * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
+       * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
+       * `lowest-price` ) is applied. If the number of unused Capacity Reservations is less than the
+       * On-Demand target capacity, the remaining On-Demand target capacity is launched according to
+       * the On-Demand allocation strategy ( `lowest-price` ).
+       *
+       * If you do not specify a value, the fleet fulfills the On-Demand capacity according to the
+       * chosen On-Demand allocation strategy.
+       */
+      override fun usageStrategy(usageStrategy: String) {
+        cdkBuilder.usageStrategy(usageStrategy)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandCapacityReservationOptionsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandCapacityReservationOptionsProperty,
+    ) : CdkObject(cdkObject),
+        OnDemandCapacityReservationOptionsProperty {
+      /**
+       * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
+       *
+       * * `open` - The instance can run in any open Capacity Reservation that has matching
+       * attributes (instance type, platform, Availability Zone).
+       * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
+       * The instance runs as an On-Demand Instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandcapacityreservationoptions.html#cfn-emr-cluster-ondemandcapacityreservationoptions-capacityreservationpreference)
+       */
+      override fun capacityReservationPreference(): String? =
+          unwrap(this).getCapacityReservationPreference()
+
+      /**
+       * The ARN of the Capacity Reservation resource group in which to run the instance.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandcapacityreservationoptions.html#cfn-emr-cluster-ondemandcapacityreservationoptions-capacityreservationresourcegrouparn)
+       */
+      override fun capacityReservationResourceGroupArn(): String? =
+          unwrap(this).getCapacityReservationResourceGroupArn()
+
+      /**
+       * Indicates whether to use unused Capacity Reservations for fulfilling On-Demand capacity.
+       *
+       * If you specify `use-capacity-reservations-first` , the fleet uses unused Capacity
+       * Reservations to fulfill On-Demand capacity up to the target On-Demand capacity. If multiple
+       * instance pools have unused Capacity Reservations, the On-Demand allocation strategy (
+       * `lowest-price` ) is applied. If the number of unused Capacity Reservations is less than the
+       * On-Demand target capacity, the remaining On-Demand target capacity is launched according to
+       * the On-Demand allocation strategy ( `lowest-price` ).
+       *
+       * If you do not specify a value, the fleet fulfills the On-Demand capacity according to the
+       * chosen On-Demand allocation strategy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandcapacityreservationoptions.html#cfn-emr-cluster-ondemandcapacityreservationoptions-usagestrategy)
+       */
+      override fun usageStrategy(): String? = unwrap(this).getUsageStrategy()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OnDemandCapacityReservationOptionsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandCapacityReservationOptionsProperty):
+          OnDemandCapacityReservationOptionsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnDemandCapacityReservationOptionsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnDemandCapacityReservationOptionsProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandCapacityReservationOptionsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandCapacityReservationOptionsProperty
+    }
+  }
+
+  /**
    * The launch specification for On-Demand Instances in the instance fleet, which determines the
    * allocation strategy.
    *
@@ -7983,6 +8145,12 @@ public open class CfnCluster(
    * OnDemandProvisioningSpecificationProperty onDemandProvisioningSpecificationProperty =
    * OnDemandProvisioningSpecificationProperty.builder()
    * .allocationStrategy("allocationStrategy")
+   * // the properties below are optional
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
    * .build();
    * ```
    *
@@ -8001,6 +8169,14 @@ public open class CfnCluster(
     public fun allocationStrategy(): String
 
     /**
+     * The launch specification for On-Demand instances in the instance fleet, which determines the
+     * allocation strategy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html#cfn-emr-cluster-ondemandprovisioningspecification-capacityreservationoptions)
+     */
+    public fun capacityReservationOptions(): Any? = unwrap(this).getCapacityReservationOptions()
+
+    /**
      * A builder for [OnDemandProvisioningSpecificationProperty]
      */
     @CdkDslMarker
@@ -8013,6 +8189,28 @@ public open class CfnCluster(
        * launch the instances with the highest priority first. The default is `lowest-price` .
        */
       public fun allocationStrategy(allocationStrategy: String)
+
+      /**
+       * @param capacityReservationOptions The launch specification for On-Demand instances in the
+       * instance fleet, which determines the allocation strategy.
+       */
+      public fun capacityReservationOptions(capacityReservationOptions: IResolvable)
+
+      /**
+       * @param capacityReservationOptions The launch specification for On-Demand instances in the
+       * instance fleet, which determines the allocation strategy.
+       */
+      public
+          fun capacityReservationOptions(capacityReservationOptions: OnDemandCapacityReservationOptionsProperty)
+
+      /**
+       * @param capacityReservationOptions The launch specification for On-Demand instances in the
+       * instance fleet, which determines the allocation strategy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ddb7b8872082ca5f4602bd176fbed9bc13a48c93c647978556813ac8ec02eb1")
+      public
+          fun capacityReservationOptions(capacityReservationOptions: OnDemandCapacityReservationOptionsProperty.Builder.() -> Unit)
     }
 
     private class BuilderImpl : Builder {
@@ -8031,6 +8229,34 @@ public open class CfnCluster(
       override fun allocationStrategy(allocationStrategy: String) {
         cdkBuilder.allocationStrategy(allocationStrategy)
       }
+
+      /**
+       * @param capacityReservationOptions The launch specification for On-Demand instances in the
+       * instance fleet, which determines the allocation strategy.
+       */
+      override fun capacityReservationOptions(capacityReservationOptions: IResolvable) {
+        cdkBuilder.capacityReservationOptions(capacityReservationOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param capacityReservationOptions The launch specification for On-Demand instances in the
+       * instance fleet, which determines the allocation strategy.
+       */
+      override
+          fun capacityReservationOptions(capacityReservationOptions: OnDemandCapacityReservationOptionsProperty) {
+        cdkBuilder.capacityReservationOptions(capacityReservationOptions.let(OnDemandCapacityReservationOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param capacityReservationOptions The launch specification for On-Demand instances in the
+       * instance fleet, which determines the allocation strategy.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("2ddb7b8872082ca5f4602bd176fbed9bc13a48c93c647978556813ac8ec02eb1")
+      override
+          fun capacityReservationOptions(capacityReservationOptions: OnDemandCapacityReservationOptionsProperty.Builder.() -> Unit):
+          Unit =
+          capacityReservationOptions(OnDemandCapacityReservationOptionsProperty(capacityReservationOptions))
 
       public fun build():
           software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty =
@@ -8051,6 +8277,14 @@ public open class CfnCluster(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html#cfn-emr-cluster-ondemandprovisioningspecification-allocationstrategy)
        */
       override fun allocationStrategy(): String = unwrap(this).getAllocationStrategy()
+
+      /**
+       * The launch specification for On-Demand instances in the instance fleet, which determines
+       * the allocation strategy.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandprovisioningspecification.html#cfn-emr-cluster-ondemandprovisioningspecification-capacityreservationoptions)
+       */
+      override fun capacityReservationOptions(): Any? = unwrap(this).getCapacityReservationOptions()
     }
 
     public companion object {
@@ -8069,6 +8303,212 @@ public open class CfnCluster(
           software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emr.CfnCluster.OnDemandProvisioningSpecificationProperty
+    }
+  }
+
+  /**
+   * The resize specification for On-Demand Instances in the instance fleet, which contains the
+   * resize timeout period.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * OnDemandResizingSpecificationProperty onDemandResizingSpecificationProperty =
+   * OnDemandResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .capacityReservationOptions(OnDemandCapacityReservationOptionsProperty.builder()
+   * .capacityReservationPreference("capacityReservationPreference")
+   * .capacityReservationResourceGroupArn("capacityReservationResourceGroupArn")
+   * .usageStrategy("usageStrategy")
+   * .build())
+   * .timeoutDurationMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandresizingspecification.html)
+   */
+  public interface OnDemandResizingSpecificationProperty {
+    /**
+     * Specifies the allocation strategy to use to launch On-Demand instances during a resize.
+     *
+     * The default is `lowest-price` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandresizingspecification.html#cfn-emr-cluster-ondemandresizingspecification-allocationstrategy)
+     */
+    public fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandresizingspecification.html#cfn-emr-cluster-ondemandresizingspecification-capacityreservationoptions)
+     */
+    public fun capacityReservationOptions(): Any? = unwrap(this).getCapacityReservationOptions()
+
+    /**
+     * On-Demand resize timeout in minutes.
+     *
+     * If On-Demand Instances are not provisioned within this time, the resize workflow stops. The
+     * minimum value is 5 minutes, and the maximum value is 10,080 minutes (7 days). The timeout
+     * applies to all resize workflows on the Instance Fleet. The resize could be triggered by Amazon
+     * EMR Managed Scaling or by the customer (via Amazon EMR Console, Amazon EMR CLI
+     * modify-instance-fleet or Amazon EMR SDK ModifyInstanceFleet API) or by Amazon EMR due to Amazon
+     * EC2 Spot Reclamation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandresizingspecification.html#cfn-emr-cluster-ondemandresizingspecification-timeoutdurationminutes)
+     */
+    public fun timeoutDurationMinutes(): Number? = unwrap(this).getTimeoutDurationMinutes()
+
+    /**
+     * A builder for [OnDemandResizingSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allocationStrategy Specifies the allocation strategy to use to launch On-Demand
+       * instances during a resize.
+       * The default is `lowest-price` .
+       */
+      public fun allocationStrategy(allocationStrategy: String)
+
+      /**
+       * @param capacityReservationOptions the value to be set.
+       */
+      public fun capacityReservationOptions(capacityReservationOptions: IResolvable)
+
+      /**
+       * @param capacityReservationOptions the value to be set.
+       */
+      public
+          fun capacityReservationOptions(capacityReservationOptions: OnDemandCapacityReservationOptionsProperty)
+
+      /**
+       * @param capacityReservationOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c69f623cf74468f737960560ce3f9020d0d9f79c6373fa85d434c721f49683d2")
+      public
+          fun capacityReservationOptions(capacityReservationOptions: OnDemandCapacityReservationOptionsProperty.Builder.() -> Unit)
+
+      /**
+       * @param timeoutDurationMinutes On-Demand resize timeout in minutes.
+       * If On-Demand Instances are not provisioned within this time, the resize workflow stops. The
+       * minimum value is 5 minutes, and the maximum value is 10,080 minutes (7 days). The timeout
+       * applies to all resize workflows on the Instance Fleet. The resize could be triggered by Amazon
+       * EMR Managed Scaling or by the customer (via Amazon EMR Console, Amazon EMR CLI
+       * modify-instance-fleet or Amazon EMR SDK ModifyInstanceFleet API) or by Amazon EMR due to
+       * Amazon EC2 Spot Reclamation.
+       */
+      public fun timeoutDurationMinutes(timeoutDurationMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandResizingSpecificationProperty.Builder
+          =
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandResizingSpecificationProperty.builder()
+
+      /**
+       * @param allocationStrategy Specifies the allocation strategy to use to launch On-Demand
+       * instances during a resize.
+       * The default is `lowest-price` .
+       */
+      override fun allocationStrategy(allocationStrategy: String) {
+        cdkBuilder.allocationStrategy(allocationStrategy)
+      }
+
+      /**
+       * @param capacityReservationOptions the value to be set.
+       */
+      override fun capacityReservationOptions(capacityReservationOptions: IResolvable) {
+        cdkBuilder.capacityReservationOptions(capacityReservationOptions.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param capacityReservationOptions the value to be set.
+       */
+      override
+          fun capacityReservationOptions(capacityReservationOptions: OnDemandCapacityReservationOptionsProperty) {
+        cdkBuilder.capacityReservationOptions(capacityReservationOptions.let(OnDemandCapacityReservationOptionsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param capacityReservationOptions the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c69f623cf74468f737960560ce3f9020d0d9f79c6373fa85d434c721f49683d2")
+      override
+          fun capacityReservationOptions(capacityReservationOptions: OnDemandCapacityReservationOptionsProperty.Builder.() -> Unit):
+          Unit =
+          capacityReservationOptions(OnDemandCapacityReservationOptionsProperty(capacityReservationOptions))
+
+      /**
+       * @param timeoutDurationMinutes On-Demand resize timeout in minutes.
+       * If On-Demand Instances are not provisioned within this time, the resize workflow stops. The
+       * minimum value is 5 minutes, and the maximum value is 10,080 minutes (7 days). The timeout
+       * applies to all resize workflows on the Instance Fleet. The resize could be triggered by Amazon
+       * EMR Managed Scaling or by the customer (via Amazon EMR Console, Amazon EMR CLI
+       * modify-instance-fleet or Amazon EMR SDK ModifyInstanceFleet API) or by Amazon EMR due to
+       * Amazon EC2 Spot Reclamation.
+       */
+      override fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
+        cdkBuilder.timeoutDurationMinutes(timeoutDurationMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandResizingSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandResizingSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        OnDemandResizingSpecificationProperty {
+      /**
+       * Specifies the allocation strategy to use to launch On-Demand instances during a resize.
+       *
+       * The default is `lowest-price` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandresizingspecification.html#cfn-emr-cluster-ondemandresizingspecification-allocationstrategy)
+       */
+      override fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandresizingspecification.html#cfn-emr-cluster-ondemandresizingspecification-capacityreservationoptions)
+       */
+      override fun capacityReservationOptions(): Any? = unwrap(this).getCapacityReservationOptions()
+
+      /**
+       * On-Demand resize timeout in minutes.
+       *
+       * If On-Demand Instances are not provisioned within this time, the resize workflow stops. The
+       * minimum value is 5 minutes, and the maximum value is 10,080 minutes (7 days). The timeout
+       * applies to all resize workflows on the Instance Fleet. The resize could be triggered by Amazon
+       * EMR Managed Scaling or by the customer (via Amazon EMR Console, Amazon EMR CLI
+       * modify-instance-fleet or Amazon EMR SDK ModifyInstanceFleet API) or by Amazon EMR due to
+       * Amazon EC2 Spot Reclamation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-ondemandresizingspecification.html#cfn-emr-cluster-ondemandresizingspecification-timeoutdurationminutes)
+       */
+      override fun timeoutDurationMinutes(): Number? = unwrap(this).getTimeoutDurationMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          OnDemandResizingSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.OnDemandResizingSpecificationProperty):
+          OnDemandResizingSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OnDemandResizingSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OnDemandResizingSpecificationProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandResizingSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.OnDemandResizingSpecificationProperty
     }
   }
 
@@ -9645,6 +10085,156 @@ public open class CfnCluster(
           software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.emr.CfnCluster.SpotProvisioningSpecificationProperty
+    }
+  }
+
+  /**
+   * The resize specification for Spot Instances in the instance fleet, which contains the resize
+   * timeout period.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.emr.*;
+   * SpotResizingSpecificationProperty spotResizingSpecificationProperty =
+   * SpotResizingSpecificationProperty.builder()
+   * .allocationStrategy("allocationStrategy")
+   * .timeoutDurationMinutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-spotresizingspecification.html)
+   */
+  public interface SpotResizingSpecificationProperty {
+    /**
+     * Specifies the allocation strategy to use to launch Spot instances during a resize.
+     *
+     * If you run Amazon EMR releases 6.9.0 or higher, the default is `price-capacity-optimized` .
+     * If you run Amazon EMR releases 6.8.0 or lower, the default is `capacity-optimized` .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-spotresizingspecification.html#cfn-emr-cluster-spotresizingspecification-allocationstrategy)
+     */
+    public fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+
+    /**
+     * Spot resize timeout in minutes.
+     *
+     * If Spot Instances are not provisioned within this time, the resize workflow will stop
+     * provisioning of Spot instances. Minimum value is 5 minutes and maximum value is 10,080 minutes
+     * (7 days). The timeout applies to all resize workflows on the Instance Fleet. The resize could be
+     * triggered by Amazon EMR Managed Scaling or by the customer (via Amazon EMR Console, Amazon EMR
+     * CLI modify-instance-fleet or Amazon EMR SDK ModifyInstanceFleet API) or by Amazon EMR due to
+     * Amazon EC2 Spot Reclamation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-spotresizingspecification.html#cfn-emr-cluster-spotresizingspecification-timeoutdurationminutes)
+     */
+    public fun timeoutDurationMinutes(): Number? = unwrap(this).getTimeoutDurationMinutes()
+
+    /**
+     * A builder for [SpotResizingSpecificationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param allocationStrategy Specifies the allocation strategy to use to launch Spot instances
+       * during a resize.
+       * If you run Amazon EMR releases 6.9.0 or higher, the default is `price-capacity-optimized` .
+       * If you run Amazon EMR releases 6.8.0 or lower, the default is `capacity-optimized` .
+       */
+      public fun allocationStrategy(allocationStrategy: String)
+
+      /**
+       * @param timeoutDurationMinutes Spot resize timeout in minutes.
+       * If Spot Instances are not provisioned within this time, the resize workflow will stop
+       * provisioning of Spot instances. Minimum value is 5 minutes and maximum value is 10,080 minutes
+       * (7 days). The timeout applies to all resize workflows on the Instance Fleet. The resize could
+       * be triggered by Amazon EMR Managed Scaling or by the customer (via Amazon EMR Console, Amazon
+       * EMR CLI modify-instance-fleet or Amazon EMR SDK ModifyInstanceFleet API) or by Amazon EMR due
+       * to Amazon EC2 Spot Reclamation.
+       */
+      public fun timeoutDurationMinutes(timeoutDurationMinutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.emr.CfnCluster.SpotResizingSpecificationProperty.Builder =
+          software.amazon.awscdk.services.emr.CfnCluster.SpotResizingSpecificationProperty.builder()
+
+      /**
+       * @param allocationStrategy Specifies the allocation strategy to use to launch Spot instances
+       * during a resize.
+       * If you run Amazon EMR releases 6.9.0 or higher, the default is `price-capacity-optimized` .
+       * If you run Amazon EMR releases 6.8.0 or lower, the default is `capacity-optimized` .
+       */
+      override fun allocationStrategy(allocationStrategy: String) {
+        cdkBuilder.allocationStrategy(allocationStrategy)
+      }
+
+      /**
+       * @param timeoutDurationMinutes Spot resize timeout in minutes.
+       * If Spot Instances are not provisioned within this time, the resize workflow will stop
+       * provisioning of Spot instances. Minimum value is 5 minutes and maximum value is 10,080 minutes
+       * (7 days). The timeout applies to all resize workflows on the Instance Fleet. The resize could
+       * be triggered by Amazon EMR Managed Scaling or by the customer (via Amazon EMR Console, Amazon
+       * EMR CLI modify-instance-fleet or Amazon EMR SDK ModifyInstanceFleet API) or by Amazon EMR due
+       * to Amazon EC2 Spot Reclamation.
+       */
+      override fun timeoutDurationMinutes(timeoutDurationMinutes: Number) {
+        cdkBuilder.timeoutDurationMinutes(timeoutDurationMinutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.emr.CfnCluster.SpotResizingSpecificationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SpotResizingSpecificationProperty,
+    ) : CdkObject(cdkObject),
+        SpotResizingSpecificationProperty {
+      /**
+       * Specifies the allocation strategy to use to launch Spot instances during a resize.
+       *
+       * If you run Amazon EMR releases 6.9.0 or higher, the default is `price-capacity-optimized` .
+       * If you run Amazon EMR releases 6.8.0 or lower, the default is `capacity-optimized` .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-spotresizingspecification.html#cfn-emr-cluster-spotresizingspecification-allocationstrategy)
+       */
+      override fun allocationStrategy(): String? = unwrap(this).getAllocationStrategy()
+
+      /**
+       * Spot resize timeout in minutes.
+       *
+       * If Spot Instances are not provisioned within this time, the resize workflow will stop
+       * provisioning of Spot instances. Minimum value is 5 minutes and maximum value is 10,080 minutes
+       * (7 days). The timeout applies to all resize workflows on the Instance Fleet. The resize could
+       * be triggered by Amazon EMR Managed Scaling or by the customer (via Amazon EMR Console, Amazon
+       * EMR CLI modify-instance-fleet or Amazon EMR SDK ModifyInstanceFleet API) or by Amazon EMR due
+       * to Amazon EC2 Spot Reclamation.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-emr-cluster-spotresizingspecification.html#cfn-emr-cluster-spotresizingspecification-timeoutdurationminutes)
+       */
+      override fun timeoutDurationMinutes(): Number? = unwrap(this).getTimeoutDurationMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          SpotResizingSpecificationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.emr.CfnCluster.SpotResizingSpecificationProperty):
+          SpotResizingSpecificationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          SpotResizingSpecificationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: SpotResizingSpecificationProperty):
+          software.amazon.awscdk.services.emr.CfnCluster.SpotResizingSpecificationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.emr.CfnCluster.SpotResizingSpecificationProperty
     }
   }
 

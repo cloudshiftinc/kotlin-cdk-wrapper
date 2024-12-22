@@ -156,6 +156,35 @@ public open class CfnDeliveryStream(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
+   * The top level object for configuring streams with database as a source.
+   */
+  public open fun databaseSourceConfiguration(): Any? =
+      unwrap(this).getDatabaseSourceConfiguration()
+
+  /**
+   * The top level object for configuring streams with database as a source.
+   */
+  public open fun databaseSourceConfiguration(`value`: IResolvable) {
+    unwrap(this).setDatabaseSourceConfiguration(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The top level object for configuring streams with database as a source.
+   */
+  public open fun databaseSourceConfiguration(`value`: DatabaseSourceConfigurationProperty) {
+    unwrap(this).setDatabaseSourceConfiguration(`value`.let(DatabaseSourceConfigurationProperty.Companion::unwrap))
+  }
+
+  /**
+   * The top level object for configuring streams with database as a source.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("04fd2dcb4e11d6daeaa3f71b095471b30b324f47562d68bb2259d9c9b2f1173a")
+  public open
+      fun databaseSourceConfiguration(`value`: DatabaseSourceConfigurationProperty.Builder.() -> Unit):
+      Unit = databaseSourceConfiguration(DatabaseSourceConfigurationProperty(`value`))
+
+  /**
    * Specifies the type and Amazon Resource Name (ARN) of the CMK to use for Server-Side Encryption
    * (SSE).
    */
@@ -191,26 +220,26 @@ public open class CfnDeliveryStream(
       deliveryStreamEncryptionConfigurationInput(DeliveryStreamEncryptionConfigurationInputProperty(`value`))
 
   /**
-   * The name of the delivery stream.
+   * The name of the Firehose stream.
    */
   public open fun deliveryStreamName(): String? = unwrap(this).getDeliveryStreamName()
 
   /**
-   * The name of the delivery stream.
+   * The name of the Firehose stream.
    */
   public open fun deliveryStreamName(`value`: String) {
     unwrap(this).setDeliveryStreamName(`value`)
   }
 
   /**
-   * The delivery stream type.
+   * The Firehose stream type.
    *
    * This can be one of the following values:.
    */
   public open fun deliveryStreamType(): String? = unwrap(this).getDeliveryStreamType()
 
   /**
-   * The delivery stream type.
+   * The Firehose stream type.
    *
    * This can be one of the following values:.
    */
@@ -546,20 +575,20 @@ public open class CfnDeliveryStream(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * A set of tags to assign to the delivery stream.
+   * A set of tags to assign to the Firehose stream.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * A set of tags to assign to the delivery stream.
+   * A set of tags to assign to the Firehose stream.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * A set of tags to assign to the delivery stream.
+   * A set of tags to assign to the Firehose stream.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -642,6 +671,43 @@ public open class CfnDeliveryStream(
         fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: AmazonopensearchserviceDestinationConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * The top level object for configuring streams with database as a source.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration)
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source. 
+     */
+    public fun databaseSourceConfiguration(databaseSourceConfiguration: IResolvable)
+
+    /**
+     * The top level object for configuring streams with database as a source.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration)
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source. 
+     */
+    public
+        fun databaseSourceConfiguration(databaseSourceConfiguration: DatabaseSourceConfigurationProperty)
+
+    /**
+     * The top level object for configuring streams with database as a source.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration)
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0a2dd3be31ad568e01272e15628fa25170e985878084f265ed9e49930cd92b26")
+    public
+        fun databaseSourceConfiguration(databaseSourceConfiguration: DatabaseSourceConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * Specifies the type and Amazon Resource Name (ARN) of the CMK to use for Server-Side
      * Encryption (SSE).
      *
@@ -677,21 +743,21 @@ public open class CfnDeliveryStream(
         fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: DeliveryStreamEncryptionConfigurationInputProperty.Builder.() -> Unit)
 
     /**
-     * The name of the delivery stream.
+     * The name of the Firehose stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamname)
-     * @param deliveryStreamName The name of the delivery stream. 
+     * @param deliveryStreamName The name of the Firehose stream. 
      */
     public fun deliveryStreamName(deliveryStreamName: String)
 
     /**
-     * The delivery stream type. This can be one of the following values:.
+     * The Firehose stream type. This can be one of the following values:.
      *
-     * * `DirectPut` : Provider applications access the delivery stream directly.
-     * * `KinesisStreamAsSource` : The delivery stream uses a Kinesis data stream as a source.
+     * * `DirectPut` : Provider applications access the Firehose stream directly.
+     * * `KinesisStreamAsSource` : The Firehose stream uses a Kinesis data stream as a source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamtype)
-     * @param deliveryStreamType The delivery stream type. This can be one of the following values:.
+     * @param deliveryStreamType The Firehose stream type. This can be one of the following values:.
      * 
      */
     public fun deliveryStreamType(deliveryStreamType: String)
@@ -839,8 +905,6 @@ public open class CfnDeliveryStream(
     /**
      * Specifies the destination configure settings for Apache Iceberg Table.
      *
-     * Amazon Data Firehose is in preview release and is subject to change.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
      * Apache Iceberg Table. 
@@ -849,8 +913,6 @@ public open class CfnDeliveryStream(
 
     /**
      * Specifies the destination configure settings for Apache Iceberg Table.
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
@@ -861,8 +923,6 @@ public open class CfnDeliveryStream(
 
     /**
      * Specifies the destination configure settings for Apache Iceberg Table.
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
@@ -1119,22 +1179,22 @@ public open class CfnDeliveryStream(
         fun splunkDestinationConfiguration(splunkDestinationConfiguration: SplunkDestinationConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * A set of tags to assign to the delivery stream.
+     * A set of tags to assign to the Firehose stream.
      *
      * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
      * For example, you can add friendly names and descriptions or other types of information that can
-     * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+     * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
      * Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
      * AWS Billing and Cost Management User Guide.
      *
-     * You can specify up to 50 tags when creating a delivery stream.
+     * You can specify up to 50 tags when creating a Firehose stream.
      *
      * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
      * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
      * permissions to create tags. If you do not provide this permission, requests to create new
-     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
-     * as following.
+     * Firehose streams with IAM resource tags will fail with an `AccessDeniedException` such as
+     * following.
      *
      * *AccessDeniedException*
      *
@@ -1146,27 +1206,27 @@ public open class CfnDeliveryStream(
      * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-tags)
-     * @param tags A set of tags to assign to the delivery stream. 
+     * @param tags A set of tags to assign to the Firehose stream. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * A set of tags to assign to the delivery stream.
+     * A set of tags to assign to the Firehose stream.
      *
      * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
      * For example, you can add friendly names and descriptions or other types of information that can
-     * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+     * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
      * Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
      * AWS Billing and Cost Management User Guide.
      *
-     * You can specify up to 50 tags when creating a delivery stream.
+     * You can specify up to 50 tags when creating a Firehose stream.
      *
      * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
      * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
      * permissions to create tags. If you do not provide this permission, requests to create new
-     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
-     * as following.
+     * Firehose streams with IAM resource tags will fail with an `AccessDeniedException` such as
+     * following.
      *
      * *AccessDeniedException*
      *
@@ -1178,7 +1238,7 @@ public open class CfnDeliveryStream(
      * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-tags)
-     * @param tags A set of tags to assign to the delivery stream. 
+     * @param tags A set of tags to assign to the Firehose stream. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -1277,6 +1337,49 @@ public open class CfnDeliveryStream(
         amazonopensearchserviceDestinationConfiguration(AmazonopensearchserviceDestinationConfigurationProperty(amazonopensearchserviceDestinationConfiguration))
 
     /**
+     * The top level object for configuring streams with database as a source.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration)
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source. 
+     */
+    override fun databaseSourceConfiguration(databaseSourceConfiguration: IResolvable) {
+      cdkBuilder.databaseSourceConfiguration(databaseSourceConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The top level object for configuring streams with database as a source.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration)
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source. 
+     */
+    override
+        fun databaseSourceConfiguration(databaseSourceConfiguration: DatabaseSourceConfigurationProperty) {
+      cdkBuilder.databaseSourceConfiguration(databaseSourceConfiguration.let(DatabaseSourceConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * The top level object for configuring streams with database as a source.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration)
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("0a2dd3be31ad568e01272e15628fa25170e985878084f265ed9e49930cd92b26")
+    override
+        fun databaseSourceConfiguration(databaseSourceConfiguration: DatabaseSourceConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        databaseSourceConfiguration(DatabaseSourceConfigurationProperty(databaseSourceConfiguration))
+
+    /**
      * Specifies the type and Amazon Resource Name (ARN) of the CMK to use for Server-Side
      * Encryption (SSE).
      *
@@ -1318,23 +1421,23 @@ public open class CfnDeliveryStream(
         deliveryStreamEncryptionConfigurationInput(DeliveryStreamEncryptionConfigurationInputProperty(deliveryStreamEncryptionConfigurationInput))
 
     /**
-     * The name of the delivery stream.
+     * The name of the Firehose stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamname)
-     * @param deliveryStreamName The name of the delivery stream. 
+     * @param deliveryStreamName The name of the Firehose stream. 
      */
     override fun deliveryStreamName(deliveryStreamName: String) {
       cdkBuilder.deliveryStreamName(deliveryStreamName)
     }
 
     /**
-     * The delivery stream type. This can be one of the following values:.
+     * The Firehose stream type. This can be one of the following values:.
      *
-     * * `DirectPut` : Provider applications access the delivery stream directly.
-     * * `KinesisStreamAsSource` : The delivery stream uses a Kinesis data stream as a source.
+     * * `DirectPut` : Provider applications access the Firehose stream directly.
+     * * `KinesisStreamAsSource` : The Firehose stream uses a Kinesis data stream as a source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamtype)
-     * @param deliveryStreamType The delivery stream type. This can be one of the following values:.
+     * @param deliveryStreamType The Firehose stream type. This can be one of the following values:.
      * 
      */
     override fun deliveryStreamType(deliveryStreamType: String) {
@@ -1503,8 +1606,6 @@ public open class CfnDeliveryStream(
     /**
      * Specifies the destination configure settings for Apache Iceberg Table.
      *
-     * Amazon Data Firehose is in preview release and is subject to change.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
      * Apache Iceberg Table. 
@@ -1515,8 +1616,6 @@ public open class CfnDeliveryStream(
 
     /**
      * Specifies the destination configure settings for Apache Iceberg Table.
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
@@ -1529,8 +1628,6 @@ public open class CfnDeliveryStream(
 
     /**
      * Specifies the destination configure settings for Apache Iceberg Table.
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
@@ -1824,22 +1921,22 @@ public open class CfnDeliveryStream(
         splunkDestinationConfiguration(SplunkDestinationConfigurationProperty(splunkDestinationConfiguration))
 
     /**
-     * A set of tags to assign to the delivery stream.
+     * A set of tags to assign to the Firehose stream.
      *
      * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
      * For example, you can add friendly names and descriptions or other types of information that can
-     * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+     * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
      * Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
      * AWS Billing and Cost Management User Guide.
      *
-     * You can specify up to 50 tags when creating a delivery stream.
+     * You can specify up to 50 tags when creating a Firehose stream.
      *
      * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
      * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
      * permissions to create tags. If you do not provide this permission, requests to create new
-     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
-     * as following.
+     * Firehose streams with IAM resource tags will fail with an `AccessDeniedException` such as
+     * following.
      *
      * *AccessDeniedException*
      *
@@ -1851,29 +1948,29 @@ public open class CfnDeliveryStream(
      * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-tags)
-     * @param tags A set of tags to assign to the delivery stream. 
+     * @param tags A set of tags to assign to the Firehose stream. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * A set of tags to assign to the delivery stream.
+     * A set of tags to assign to the Firehose stream.
      *
      * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
      * For example, you can add friendly names and descriptions or other types of information that can
-     * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+     * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
      * Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
      * AWS Billing and Cost Management User Guide.
      *
-     * You can specify up to 50 tags when creating a delivery stream.
+     * You can specify up to 50 tags when creating a Firehose stream.
      *
      * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
      * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
      * permissions to create tags. If you do not provide this permission, requests to create new
-     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
-     * as following.
+     * Firehose streams with IAM resource tags will fail with an `AccessDeniedException` such as
+     * following.
      *
      * *AccessDeniedException*
      *
@@ -1885,7 +1982,7 @@ public open class CfnDeliveryStream(
      * example.](https://docs.aws.amazon.com/firehose/latest/APIReference/API_CreateDeliveryStream.html#API_CreateDeliveryStream_Examples)
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-tags)
-     * @param tags A set of tags to assign to the delivery stream. 
+     * @param tags A set of tags to assign to the Firehose stream. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -1951,7 +2048,7 @@ public open class CfnDeliveryStream(
      * The default value is 5.
      *
      * We recommend setting this parameter to a value greater than the amount of data you typically
-     * ingest into the delivery stream in 10 seconds. For example, if you typically ingest data at 1
+     * ingest into the Firehose stream in 10 seconds. For example, if you typically ingest data at 1
      * MB/sec, the value should be 10 MB or higher.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-amazonopensearchserverlessbufferinghints.html#cfn-kinesisfirehose-deliverystream-amazonopensearchserverlessbufferinghints-sizeinmbs)
@@ -1976,7 +2073,7 @@ public open class CfnDeliveryStream(
        * The default value is 5.
        *
        * We recommend setting this parameter to a value greater than the amount of data you
-       * typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest
+       * typically ingest into the Firehose stream in 10 seconds. For example, if you typically ingest
        * data at 1 MB/sec, the value should be 10 MB or higher.
        */
       public fun sizeInMBs(sizeInMBs: Number)
@@ -2003,7 +2100,7 @@ public open class CfnDeliveryStream(
        * The default value is 5.
        *
        * We recommend setting this parameter to a value greater than the amount of data you
-       * typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest
+       * typically ingest into the Firehose stream in 10 seconds. For example, if you typically ingest
        * data at 1 MB/sec, the value should be 10 MB or higher.
        */
       override fun sizeInMBs(sizeInMBs: Number) {
@@ -2036,7 +2133,7 @@ public open class CfnDeliveryStream(
        * The default value is 5.
        *
        * We recommend setting this parameter to a value greater than the amount of data you
-       * typically ingest into the delivery stream in 10 seconds. For example, if you typically ingest
+       * typically ingest into the Firehose stream in 10 seconds. For example, if you typically ingest
        * data at 1 MB/sec, the value should be 10 MB or higher.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-amazonopensearchserverlessbufferinghints.html#cfn-kinesisfirehose-deliverystream-amazonopensearchserverlessbufferinghints-sizeinmbs)
@@ -4057,8 +4154,6 @@ public open class CfnDeliveryStream(
   /**
    * Describes the containers where the destination Apache Iceberg Tables are persisted.
    *
-   * Amazon Data Firehose is in preview release and is subject to change.
-   *
    * Example:
    *
    * ```
@@ -4075,11 +4170,9 @@ public open class CfnDeliveryStream(
    */
   public interface CatalogConfigurationProperty {
     /**
-     * Specifies the Glue catalog ARN indentifier of the destination Apache Iceberg Tables.
+     * Specifies the Glue catalog ARN identifier of the destination Apache Iceberg Tables.
      *
      * You must specify the ARN in the format `arn:aws:glue:region:account-id:catalog` .
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-catalogconfiguration.html#cfn-kinesisfirehose-deliverystream-catalogconfiguration-catalogarn)
      */
@@ -4091,11 +4184,9 @@ public open class CfnDeliveryStream(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param catalogArn Specifies the Glue catalog ARN indentifier of the destination Apache
+       * @param catalogArn Specifies the Glue catalog ARN identifier of the destination Apache
        * Iceberg Tables.
        * You must specify the ARN in the format `arn:aws:glue:region:account-id:catalog` .
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun catalogArn(catalogArn: String)
     }
@@ -4107,11 +4198,9 @@ public open class CfnDeliveryStream(
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.CatalogConfigurationProperty.builder()
 
       /**
-       * @param catalogArn Specifies the Glue catalog ARN indentifier of the destination Apache
+       * @param catalogArn Specifies the Glue catalog ARN identifier of the destination Apache
        * Iceberg Tables.
        * You must specify the ARN in the format `arn:aws:glue:region:account-id:catalog` .
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun catalogArn(catalogArn: String) {
         cdkBuilder.catalogArn(catalogArn)
@@ -4127,11 +4216,9 @@ public open class CfnDeliveryStream(
     ) : CdkObject(cdkObject),
         CatalogConfigurationProperty {
       /**
-       * Specifies the Glue catalog ARN indentifier of the destination Apache Iceberg Tables.
+       * Specifies the Glue catalog ARN identifier of the destination Apache Iceberg Tables.
        *
        * You must specify the ARN in the format `arn:aws:glue:region:account-id:catalog` .
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-catalogconfiguration.html#cfn-kinesisfirehose-deliverystream-catalogconfiguration-catalogarn)
        */
@@ -4875,6 +4962,1341 @@ public open class CfnDeliveryStream(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * DatabaseColumnsProperty databaseColumnsProperty = DatabaseColumnsProperty.builder()
+   * .exclude(List.of("exclude"))
+   * .include(List.of("include"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasecolumns.html)
+   */
+  public interface DatabaseColumnsProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasecolumns.html#cfn-kinesisfirehose-deliverystream-databasecolumns-exclude)
+     */
+    public fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasecolumns.html#cfn-kinesisfirehose-deliverystream-databasecolumns-include)
+     */
+    public fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
+
+    /**
+     * A builder for [DatabaseColumnsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exclude the value to be set.
+       */
+      public fun exclude(exclude: List<String>)
+
+      /**
+       * @param exclude the value to be set.
+       */
+      public fun exclude(vararg exclude: String)
+
+      /**
+       * @param include the value to be set.
+       */
+      public fun include(include: List<String>)
+
+      /**
+       * @param include the value to be set.
+       */
+      public fun include(vararg include: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseColumnsProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseColumnsProperty.builder()
+
+      /**
+       * @param exclude the value to be set.
+       */
+      override fun exclude(exclude: List<String>) {
+        cdkBuilder.exclude(exclude)
+      }
+
+      /**
+       * @param exclude the value to be set.
+       */
+      override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
+
+      /**
+       * @param include the value to be set.
+       */
+      override fun include(include: List<String>) {
+        cdkBuilder.include(include)
+      }
+
+      /**
+       * @param include the value to be set.
+       */
+      override fun include(vararg include: String): Unit = include(include.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseColumnsProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseColumnsProperty,
+    ) : CdkObject(cdkObject),
+        DatabaseColumnsProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasecolumns.html#cfn-kinesisfirehose-deliverystream-databasecolumns-exclude)
+       */
+      override fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasecolumns.html#cfn-kinesisfirehose-deliverystream-databasecolumns-include)
+       */
+      override fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseColumnsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseColumnsProperty):
+          DatabaseColumnsProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabaseColumnsProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatabaseColumnsProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseColumnsProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseColumnsProperty
+    }
+  }
+
+  /**
+   * The structure to configure the authentication methods for Firehose to connect to source
+   * database endpoint.
+   *
+   * Amazon Data Firehose is in preview release and is subject to change.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * DatabaseSourceAuthenticationConfigurationProperty
+   * databaseSourceAuthenticationConfigurationProperty =
+   * DatabaseSourceAuthenticationConfigurationProperty.builder()
+   * .secretsManagerConfiguration(SecretsManagerConfigurationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .roleArn("roleArn")
+   * .secretArn("secretArn")
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceauthenticationconfiguration.html)
+   */
+  public interface DatabaseSourceAuthenticationConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceauthenticationconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceauthenticationconfiguration-secretsmanagerconfiguration)
+     */
+    public fun secretsManagerConfiguration(): Any
+
+    /**
+     * A builder for [DatabaseSourceAuthenticationConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param secretsManagerConfiguration the value to be set. 
+       */
+      public fun secretsManagerConfiguration(secretsManagerConfiguration: IResolvable)
+
+      /**
+       * @param secretsManagerConfiguration the value to be set. 
+       */
+      public
+          fun secretsManagerConfiguration(secretsManagerConfiguration: SecretsManagerConfigurationProperty)
+
+      /**
+       * @param secretsManagerConfiguration the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("241aee8f37aaa3d5a5526e7bd67d293e68e748ef14bd712c1389b285bde41909")
+      public
+          fun secretsManagerConfiguration(secretsManagerConfiguration: SecretsManagerConfigurationProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceAuthenticationConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceAuthenticationConfigurationProperty.builder()
+
+      /**
+       * @param secretsManagerConfiguration the value to be set. 
+       */
+      override fun secretsManagerConfiguration(secretsManagerConfiguration: IResolvable) {
+        cdkBuilder.secretsManagerConfiguration(secretsManagerConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param secretsManagerConfiguration the value to be set. 
+       */
+      override
+          fun secretsManagerConfiguration(secretsManagerConfiguration: SecretsManagerConfigurationProperty) {
+        cdkBuilder.secretsManagerConfiguration(secretsManagerConfiguration.let(SecretsManagerConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param secretsManagerConfiguration the value to be set. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("241aee8f37aaa3d5a5526e7bd67d293e68e748ef14bd712c1389b285bde41909")
+      override
+          fun secretsManagerConfiguration(secretsManagerConfiguration: SecretsManagerConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          secretsManagerConfiguration(SecretsManagerConfigurationProperty(secretsManagerConfiguration))
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceAuthenticationConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceAuthenticationConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DatabaseSourceAuthenticationConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceauthenticationconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceauthenticationconfiguration-secretsmanagerconfiguration)
+       */
+      override fun secretsManagerConfiguration(): Any =
+          unwrap(this).getSecretsManagerConfiguration()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DatabaseSourceAuthenticationConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceAuthenticationConfigurationProperty):
+          DatabaseSourceAuthenticationConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatabaseSourceAuthenticationConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatabaseSourceAuthenticationConfigurationProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceAuthenticationConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceAuthenticationConfigurationProperty
+    }
+  }
+
+  /**
+   * The top level object for configuring streams with database as a source.
+   *
+   * Amazon Data Firehose is in preview release and is subject to change.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * DatabaseSourceConfigurationProperty databaseSourceConfigurationProperty =
+   * DatabaseSourceConfigurationProperty.builder()
+   * .databases(DatabasesProperty.builder()
+   * .exclude(List.of("exclude"))
+   * .include(List.of("include"))
+   * .build())
+   * .databaseSourceAuthenticationConfiguration(DatabaseSourceAuthenticationConfigurationProperty.builder()
+   * .secretsManagerConfiguration(SecretsManagerConfigurationProperty.builder()
+   * .enabled(false)
+   * // the properties below are optional
+   * .roleArn("roleArn")
+   * .secretArn("secretArn")
+   * .build())
+   * .build())
+   * .databaseSourceVpcConfiguration(DatabaseSourceVPCConfigurationProperty.builder()
+   * .vpcEndpointServiceName("vpcEndpointServiceName")
+   * .build())
+   * .endpoint("endpoint")
+   * .port(123)
+   * .snapshotWatermarkTable("snapshotWatermarkTable")
+   * .tables(DatabaseTablesProperty.builder()
+   * .exclude(List.of("exclude"))
+   * .include(List.of("include"))
+   * .build())
+   * .type("type")
+   * // the properties below are optional
+   * .columns(DatabaseColumnsProperty.builder()
+   * .exclude(List.of("exclude"))
+   * .include(List.of("include"))
+   * .build())
+   * .digest("digest")
+   * .publicCertificate("publicCertificate")
+   * .sslMode("sslMode")
+   * .surrogateKeys(List.of("surrogateKeys"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html)
+   */
+  public interface DatabaseSourceConfigurationProperty {
+    /**
+     * The list of column patterns in source database endpoint for Firehose to read from.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-columns)
+     */
+    public fun columns(): Any? = unwrap(this).getColumns()
+
+    /**
+     * The structure to configure the authentication methods for Firehose to connect to source
+     * database endpoint.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-databasesourceauthenticationconfiguration)
+     */
+    public fun databaseSourceAuthenticationConfiguration(): Any
+
+    /**
+     * The details of the VPC Endpoint Service which Firehose uses to create a PrivateLink to the
+     * database.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-databasesourcevpcconfiguration)
+     */
+    public fun databaseSourceVpcConfiguration(): Any
+
+    /**
+     * The list of database patterns in source database endpoint for Firehose to read from.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-databases)
+     */
+    public fun databases(): Any
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-digest)
+     */
+    public fun digest(): String? = unwrap(this).getDigest()
+
+    /**
+     * The endpoint of the database server.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-endpoint)
+     */
+    public fun endpoint(): String
+
+    /**
+     * The port of the database. This can be one of the following values.
+     *
+     * * 3306 for MySQL database type
+     * * 5432 for PostgreSQL database type
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-port)
+     */
+    public fun port(): Number
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-publiccertificate)
+     */
+    public fun publicCertificate(): String? = unwrap(this).getPublicCertificate()
+
+    /**
+     * The fully qualified name of the table in source database endpoint that Firehose uses to track
+     * snapshot progress.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-snapshotwatermarktable)
+     */
+    public fun snapshotWatermarkTable(): String
+
+    /**
+     * The mode to enable or disable SSL when Firehose connects to the database endpoint.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-sslmode)
+     */
+    public fun sslMode(): String? = unwrap(this).getSslMode()
+
+    /**
+     * The optional list of table and column names used as unique key columns when taking snapshot
+     * if the tables don’t have primary keys configured.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-surrogatekeys)
+     */
+    public fun surrogateKeys(): List<String> = unwrap(this).getSurrogateKeys() ?: emptyList()
+
+    /**
+     * The list of table patterns in source database endpoint for Firehose to read from.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-tables)
+     */
+    public fun tables(): Any
+
+    /**
+     * The type of database engine. This can be one of the following values.
+     *
+     * * MySQL
+     * * PostgreSQL
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-type)
+     */
+    public fun type(): String
+
+    /**
+     * A builder for [DatabaseSourceConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param columns The list of column patterns in source database endpoint for Firehose to read
+       * from.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun columns(columns: IResolvable)
+
+      /**
+       * @param columns The list of column patterns in source database endpoint for Firehose to read
+       * from.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun columns(columns: DatabaseColumnsProperty)
+
+      /**
+       * @param columns The list of column patterns in source database endpoint for Firehose to read
+       * from.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a0ca1d7f413e0ed6bf927b48c78268eb47386ae90781607e0af038fc66628ff9")
+      public fun columns(columns: DatabaseColumnsProperty.Builder.() -> Unit)
+
+      /**
+       * @param databaseSourceAuthenticationConfiguration The structure to configure the
+       * authentication methods for Firehose to connect to source database endpoint. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public
+          fun databaseSourceAuthenticationConfiguration(databaseSourceAuthenticationConfiguration: IResolvable)
+
+      /**
+       * @param databaseSourceAuthenticationConfiguration The structure to configure the
+       * authentication methods for Firehose to connect to source database endpoint. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public
+          fun databaseSourceAuthenticationConfiguration(databaseSourceAuthenticationConfiguration: DatabaseSourceAuthenticationConfigurationProperty)
+
+      /**
+       * @param databaseSourceAuthenticationConfiguration The structure to configure the
+       * authentication methods for Firehose to connect to source database endpoint. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6dccdf6cc173299109aea34cd77878d2eb7cfa43354a558f07ddd30bb3a9e564")
+      public
+          fun databaseSourceAuthenticationConfiguration(databaseSourceAuthenticationConfiguration: DatabaseSourceAuthenticationConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param databaseSourceVpcConfiguration The details of the VPC Endpoint Service which
+       * Firehose uses to create a PrivateLink to the database. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun databaseSourceVpcConfiguration(databaseSourceVpcConfiguration: IResolvable)
+
+      /**
+       * @param databaseSourceVpcConfiguration The details of the VPC Endpoint Service which
+       * Firehose uses to create a PrivateLink to the database. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public
+          fun databaseSourceVpcConfiguration(databaseSourceVpcConfiguration: DatabaseSourceVPCConfigurationProperty)
+
+      /**
+       * @param databaseSourceVpcConfiguration The details of the VPC Endpoint Service which
+       * Firehose uses to create a PrivateLink to the database. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("34128d67aa380b555d285f22f13694656bec0c53d2451f7ca17aaca5c0cbe85c")
+      public
+          fun databaseSourceVpcConfiguration(databaseSourceVpcConfiguration: DatabaseSourceVPCConfigurationProperty.Builder.() -> Unit)
+
+      /**
+       * @param databases The list of database patterns in source database endpoint for Firehose to
+       * read from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun databases(databases: IResolvable)
+
+      /**
+       * @param databases The list of database patterns in source database endpoint for Firehose to
+       * read from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun databases(databases: DatabasesProperty)
+
+      /**
+       * @param databases The list of database patterns in source database endpoint for Firehose to
+       * read from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1ca2b24eca2d95b0363966feb7561d135577817b5c05c5ff579c9578ebe98805")
+      public fun databases(databases: DatabasesProperty.Builder.() -> Unit)
+
+      /**
+       * @param digest the value to be set.
+       */
+      public fun digest(digest: String)
+
+      /**
+       * @param endpoint The endpoint of the database server. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun endpoint(endpoint: String)
+
+      /**
+       * @param port The port of the database. This can be one of the following values. 
+       * * 3306 for MySQL database type
+       * * 5432 for PostgreSQL database type
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun port(port: Number)
+
+      /**
+       * @param publicCertificate the value to be set.
+       */
+      public fun publicCertificate(publicCertificate: String)
+
+      /**
+       * @param snapshotWatermarkTable The fully qualified name of the table in source database
+       * endpoint that Firehose uses to track snapshot progress. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun snapshotWatermarkTable(snapshotWatermarkTable: String)
+
+      /**
+       * @param sslMode The mode to enable or disable SSL when Firehose connects to the database
+       * endpoint.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun sslMode(sslMode: String)
+
+      /**
+       * @param surrogateKeys The optional list of table and column names used as unique key columns
+       * when taking snapshot if the tables don’t have primary keys configured.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun surrogateKeys(surrogateKeys: List<String>)
+
+      /**
+       * @param surrogateKeys The optional list of table and column names used as unique key columns
+       * when taking snapshot if the tables don’t have primary keys configured.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun surrogateKeys(vararg surrogateKeys: String)
+
+      /**
+       * @param tables The list of table patterns in source database endpoint for Firehose to read
+       * from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun tables(tables: IResolvable)
+
+      /**
+       * @param tables The list of table patterns in source database endpoint for Firehose to read
+       * from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun tables(tables: DatabaseTablesProperty)
+
+      /**
+       * @param tables The list of table patterns in source database endpoint for Firehose to read
+       * from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c9980200c8a39392882f56685e1148a46ca94ec6f5a47875190acbc31a7fb2d3")
+      public fun tables(tables: DatabaseTablesProperty.Builder.() -> Unit)
+
+      /**
+       * @param type The type of database engine. This can be one of the following values. 
+       * * MySQL
+       * * PostgreSQL
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun type(type: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceConfigurationProperty.builder()
+
+      /**
+       * @param columns The list of column patterns in source database endpoint for Firehose to read
+       * from.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun columns(columns: IResolvable) {
+        cdkBuilder.columns(columns.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param columns The list of column patterns in source database endpoint for Firehose to read
+       * from.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun columns(columns: DatabaseColumnsProperty) {
+        cdkBuilder.columns(columns.let(DatabaseColumnsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param columns The list of column patterns in source database endpoint for Firehose to read
+       * from.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a0ca1d7f413e0ed6bf927b48c78268eb47386ae90781607e0af038fc66628ff9")
+      override fun columns(columns: DatabaseColumnsProperty.Builder.() -> Unit): Unit =
+          columns(DatabaseColumnsProperty(columns))
+
+      /**
+       * @param databaseSourceAuthenticationConfiguration The structure to configure the
+       * authentication methods for Firehose to connect to source database endpoint. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override
+          fun databaseSourceAuthenticationConfiguration(databaseSourceAuthenticationConfiguration: IResolvable) {
+        cdkBuilder.databaseSourceAuthenticationConfiguration(databaseSourceAuthenticationConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param databaseSourceAuthenticationConfiguration The structure to configure the
+       * authentication methods for Firehose to connect to source database endpoint. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override
+          fun databaseSourceAuthenticationConfiguration(databaseSourceAuthenticationConfiguration: DatabaseSourceAuthenticationConfigurationProperty) {
+        cdkBuilder.databaseSourceAuthenticationConfiguration(databaseSourceAuthenticationConfiguration.let(DatabaseSourceAuthenticationConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param databaseSourceAuthenticationConfiguration The structure to configure the
+       * authentication methods for Firehose to connect to source database endpoint. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("6dccdf6cc173299109aea34cd77878d2eb7cfa43354a558f07ddd30bb3a9e564")
+      override
+          fun databaseSourceAuthenticationConfiguration(databaseSourceAuthenticationConfiguration: DatabaseSourceAuthenticationConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          databaseSourceAuthenticationConfiguration(DatabaseSourceAuthenticationConfigurationProperty(databaseSourceAuthenticationConfiguration))
+
+      /**
+       * @param databaseSourceVpcConfiguration The details of the VPC Endpoint Service which
+       * Firehose uses to create a PrivateLink to the database. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun databaseSourceVpcConfiguration(databaseSourceVpcConfiguration: IResolvable) {
+        cdkBuilder.databaseSourceVpcConfiguration(databaseSourceVpcConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param databaseSourceVpcConfiguration The details of the VPC Endpoint Service which
+       * Firehose uses to create a PrivateLink to the database. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override
+          fun databaseSourceVpcConfiguration(databaseSourceVpcConfiguration: DatabaseSourceVPCConfigurationProperty) {
+        cdkBuilder.databaseSourceVpcConfiguration(databaseSourceVpcConfiguration.let(DatabaseSourceVPCConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param databaseSourceVpcConfiguration The details of the VPC Endpoint Service which
+       * Firehose uses to create a PrivateLink to the database. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("34128d67aa380b555d285f22f13694656bec0c53d2451f7ca17aaca5c0cbe85c")
+      override
+          fun databaseSourceVpcConfiguration(databaseSourceVpcConfiguration: DatabaseSourceVPCConfigurationProperty.Builder.() -> Unit):
+          Unit =
+          databaseSourceVpcConfiguration(DatabaseSourceVPCConfigurationProperty(databaseSourceVpcConfiguration))
+
+      /**
+       * @param databases The list of database patterns in source database endpoint for Firehose to
+       * read from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun databases(databases: IResolvable) {
+        cdkBuilder.databases(databases.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param databases The list of database patterns in source database endpoint for Firehose to
+       * read from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun databases(databases: DatabasesProperty) {
+        cdkBuilder.databases(databases.let(DatabasesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param databases The list of database patterns in source database endpoint for Firehose to
+       * read from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("1ca2b24eca2d95b0363966feb7561d135577817b5c05c5ff579c9578ebe98805")
+      override fun databases(databases: DatabasesProperty.Builder.() -> Unit): Unit =
+          databases(DatabasesProperty(databases))
+
+      /**
+       * @param digest the value to be set.
+       */
+      override fun digest(digest: String) {
+        cdkBuilder.digest(digest)
+      }
+
+      /**
+       * @param endpoint The endpoint of the database server. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun endpoint(endpoint: String) {
+        cdkBuilder.endpoint(endpoint)
+      }
+
+      /**
+       * @param port The port of the database. This can be one of the following values. 
+       * * 3306 for MySQL database type
+       * * 5432 for PostgreSQL database type
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun port(port: Number) {
+        cdkBuilder.port(port)
+      }
+
+      /**
+       * @param publicCertificate the value to be set.
+       */
+      override fun publicCertificate(publicCertificate: String) {
+        cdkBuilder.publicCertificate(publicCertificate)
+      }
+
+      /**
+       * @param snapshotWatermarkTable The fully qualified name of the table in source database
+       * endpoint that Firehose uses to track snapshot progress. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun snapshotWatermarkTable(snapshotWatermarkTable: String) {
+        cdkBuilder.snapshotWatermarkTable(snapshotWatermarkTable)
+      }
+
+      /**
+       * @param sslMode The mode to enable or disable SSL when Firehose connects to the database
+       * endpoint.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun sslMode(sslMode: String) {
+        cdkBuilder.sslMode(sslMode)
+      }
+
+      /**
+       * @param surrogateKeys The optional list of table and column names used as unique key columns
+       * when taking snapshot if the tables don’t have primary keys configured.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun surrogateKeys(surrogateKeys: List<String>) {
+        cdkBuilder.surrogateKeys(surrogateKeys)
+      }
+
+      /**
+       * @param surrogateKeys The optional list of table and column names used as unique key columns
+       * when taking snapshot if the tables don’t have primary keys configured.
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun surrogateKeys(vararg surrogateKeys: String): Unit =
+          surrogateKeys(surrogateKeys.toList())
+
+      /**
+       * @param tables The list of table patterns in source database endpoint for Firehose to read
+       * from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun tables(tables: IResolvable) {
+        cdkBuilder.tables(tables.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param tables The list of table patterns in source database endpoint for Firehose to read
+       * from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun tables(tables: DatabaseTablesProperty) {
+        cdkBuilder.tables(tables.let(DatabaseTablesProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param tables The list of table patterns in source database endpoint for Firehose to read
+       * from. 
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("c9980200c8a39392882f56685e1148a46ca94ec6f5a47875190acbc31a7fb2d3")
+      override fun tables(tables: DatabaseTablesProperty.Builder.() -> Unit): Unit =
+          tables(DatabaseTablesProperty(tables))
+
+      /**
+       * @param type The type of database engine. This can be one of the following values. 
+       * * MySQL
+       * * PostgreSQL
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun type(type: String) {
+        cdkBuilder.type(type)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DatabaseSourceConfigurationProperty {
+      /**
+       * The list of column patterns in source database endpoint for Firehose to read from.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-columns)
+       */
+      override fun columns(): Any? = unwrap(this).getColumns()
+
+      /**
+       * The structure to configure the authentication methods for Firehose to connect to source
+       * database endpoint.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-databasesourceauthenticationconfiguration)
+       */
+      override fun databaseSourceAuthenticationConfiguration(): Any =
+          unwrap(this).getDatabaseSourceAuthenticationConfiguration()
+
+      /**
+       * The details of the VPC Endpoint Service which Firehose uses to create a PrivateLink to the
+       * database.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-databasesourcevpcconfiguration)
+       */
+      override fun databaseSourceVpcConfiguration(): Any =
+          unwrap(this).getDatabaseSourceVpcConfiguration()
+
+      /**
+       * The list of database patterns in source database endpoint for Firehose to read from.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-databases)
+       */
+      override fun databases(): Any = unwrap(this).getDatabases()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-digest)
+       */
+      override fun digest(): String? = unwrap(this).getDigest()
+
+      /**
+       * The endpoint of the database server.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-endpoint)
+       */
+      override fun endpoint(): String = unwrap(this).getEndpoint()
+
+      /**
+       * The port of the database. This can be one of the following values.
+       *
+       * * 3306 for MySQL database type
+       * * 5432 for PostgreSQL database type
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-port)
+       */
+      override fun port(): Number = unwrap(this).getPort()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-publiccertificate)
+       */
+      override fun publicCertificate(): String? = unwrap(this).getPublicCertificate()
+
+      /**
+       * The fully qualified name of the table in source database endpoint that Firehose uses to
+       * track snapshot progress.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-snapshotwatermarktable)
+       */
+      override fun snapshotWatermarkTable(): String = unwrap(this).getSnapshotWatermarkTable()
+
+      /**
+       * The mode to enable or disable SSL when Firehose connects to the database endpoint.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-sslmode)
+       */
+      override fun sslMode(): String? = unwrap(this).getSslMode()
+
+      /**
+       * The optional list of table and column names used as unique key columns when taking snapshot
+       * if the tables don’t have primary keys configured.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-surrogatekeys)
+       */
+      override fun surrogateKeys(): List<String> = unwrap(this).getSurrogateKeys() ?: emptyList()
+
+      /**
+       * The list of table patterns in source database endpoint for Firehose to read from.
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-tables)
+       */
+      override fun tables(): Any = unwrap(this).getTables()
+
+      /**
+       * The type of database engine. This can be one of the following values.
+       *
+       * * MySQL
+       * * PostgreSQL
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourceconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration-type)
+       */
+      override fun type(): String = unwrap(this).getType()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DatabaseSourceConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceConfigurationProperty):
+          DatabaseSourceConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatabaseSourceConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatabaseSourceConfigurationProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceConfigurationProperty
+    }
+  }
+
+  /**
+   * The structure for details of the VPC Endpoint Service which Firehose uses to create a
+   * PrivateLink to the database.
+   *
+   * Amazon Data Firehose is in preview release and is subject to change.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * DatabaseSourceVPCConfigurationProperty databaseSourceVPCConfigurationProperty =
+   * DatabaseSourceVPCConfigurationProperty.builder()
+   * .vpcEndpointServiceName("vpcEndpointServiceName")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourcevpcconfiguration.html)
+   */
+  public interface DatabaseSourceVPCConfigurationProperty {
+    /**
+     * The VPC endpoint service name which Firehose uses to create a PrivateLink to the database.
+     *
+     * The endpoint service must have the Firehose service principle `firehose.amazonaws.com` as an
+     * allowed principal on the VPC endpoint service. The VPC endpoint service name is a string that
+     * looks like `com.amazonaws.vpce.&lt;region&gt;.&lt;vpc-endpoint-service-id&gt;` .
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourcevpcconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourcevpcconfiguration-vpcendpointservicename)
+     */
+    public fun vpcEndpointServiceName(): String
+
+    /**
+     * A builder for [DatabaseSourceVPCConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param vpcEndpointServiceName The VPC endpoint service name which Firehose uses to create a
+       * PrivateLink to the database. 
+       * The endpoint service must have the Firehose service principle `firehose.amazonaws.com` as
+       * an allowed principal on the VPC endpoint service. The VPC endpoint service name is a string
+       * that looks like `com.amazonaws.vpce.&lt;region&gt;.&lt;vpc-endpoint-service-id&gt;` .
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      public fun vpcEndpointServiceName(vpcEndpointServiceName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceVPCConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceVPCConfigurationProperty.builder()
+
+      /**
+       * @param vpcEndpointServiceName The VPC endpoint service name which Firehose uses to create a
+       * PrivateLink to the database. 
+       * The endpoint service must have the Firehose service principle `firehose.amazonaws.com` as
+       * an allowed principal on the VPC endpoint service. The VPC endpoint service name is a string
+       * that looks like `com.amazonaws.vpce.&lt;region&gt;.&lt;vpc-endpoint-service-id&gt;` .
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       */
+      override fun vpcEndpointServiceName(vpcEndpointServiceName: String) {
+        cdkBuilder.vpcEndpointServiceName(vpcEndpointServiceName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceVPCConfigurationProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceVPCConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        DatabaseSourceVPCConfigurationProperty {
+      /**
+       * The VPC endpoint service name which Firehose uses to create a PrivateLink to the database.
+       *
+       * The endpoint service must have the Firehose service principle `firehose.amazonaws.com` as
+       * an allowed principal on the VPC endpoint service. The VPC endpoint service name is a string
+       * that looks like `com.amazonaws.vpce.&lt;region&gt;.&lt;vpc-endpoint-service-id&gt;` .
+       *
+       * Amazon Data Firehose is in preview release and is subject to change.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasesourcevpcconfiguration.html#cfn-kinesisfirehose-deliverystream-databasesourcevpcconfiguration-vpcendpointservicename)
+       */
+      override fun vpcEndpointServiceName(): String = unwrap(this).getVpcEndpointServiceName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          DatabaseSourceVPCConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceVPCConfigurationProperty):
+          DatabaseSourceVPCConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          DatabaseSourceVPCConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatabaseSourceVPCConfigurationProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceVPCConfigurationProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseSourceVPCConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * DatabaseTablesProperty databaseTablesProperty = DatabaseTablesProperty.builder()
+   * .exclude(List.of("exclude"))
+   * .include(List.of("include"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasetables.html)
+   */
+  public interface DatabaseTablesProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasetables.html#cfn-kinesisfirehose-deliverystream-databasetables-exclude)
+     */
+    public fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasetables.html#cfn-kinesisfirehose-deliverystream-databasetables-include)
+     */
+    public fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
+
+    /**
+     * A builder for [DatabaseTablesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exclude the value to be set.
+       */
+      public fun exclude(exclude: List<String>)
+
+      /**
+       * @param exclude the value to be set.
+       */
+      public fun exclude(vararg exclude: String)
+
+      /**
+       * @param include the value to be set.
+       */
+      public fun include(include: List<String>)
+
+      /**
+       * @param include the value to be set.
+       */
+      public fun include(vararg include: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseTablesProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseTablesProperty.builder()
+
+      /**
+       * @param exclude the value to be set.
+       */
+      override fun exclude(exclude: List<String>) {
+        cdkBuilder.exclude(exclude)
+      }
+
+      /**
+       * @param exclude the value to be set.
+       */
+      override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
+
+      /**
+       * @param include the value to be set.
+       */
+      override fun include(include: List<String>) {
+        cdkBuilder.include(include)
+      }
+
+      /**
+       * @param include the value to be set.
+       */
+      override fun include(vararg include: String): Unit = include(include.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseTablesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseTablesProperty,
+    ) : CdkObject(cdkObject),
+        DatabaseTablesProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasetables.html#cfn-kinesisfirehose-deliverystream-databasetables-exclude)
+       */
+      override fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databasetables.html#cfn-kinesisfirehose-deliverystream-databasetables-include)
+       */
+      override fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatabaseTablesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseTablesProperty):
+          DatabaseTablesProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabaseTablesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatabaseTablesProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseTablesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabaseTablesProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.kinesisfirehose.*;
+   * DatabasesProperty databasesProperty = DatabasesProperty.builder()
+   * .exclude(List.of("exclude"))
+   * .include(List.of("include"))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databases.html)
+   */
+  public interface DatabasesProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databases.html#cfn-kinesisfirehose-deliverystream-databases-exclude)
+     */
+    public fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databases.html#cfn-kinesisfirehose-deliverystream-databases-include)
+     */
+    public fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
+
+    /**
+     * A builder for [DatabasesProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param exclude the value to be set.
+       */
+      public fun exclude(exclude: List<String>)
+
+      /**
+       * @param exclude the value to be set.
+       */
+      public fun exclude(vararg exclude: String)
+
+      /**
+       * @param include the value to be set.
+       */
+      public fun include(include: List<String>)
+
+      /**
+       * @param include the value to be set.
+       */
+      public fun include(vararg include: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabasesProperty.Builder
+          =
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabasesProperty.builder()
+
+      /**
+       * @param exclude the value to be set.
+       */
+      override fun exclude(exclude: List<String>) {
+        cdkBuilder.exclude(exclude)
+      }
+
+      /**
+       * @param exclude the value to be set.
+       */
+      override fun exclude(vararg exclude: String): Unit = exclude(exclude.toList())
+
+      /**
+       * @param include the value to be set.
+       */
+      override fun include(include: List<String>) {
+        cdkBuilder.include(include)
+      }
+
+      /**
+       * @param include the value to be set.
+       */
+      override fun include(vararg include: String): Unit = include(include.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabasesProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabasesProperty,
+    ) : CdkObject(cdkObject),
+        DatabasesProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databases.html#cfn-kinesisfirehose-deliverystream-databases-exclude)
+       */
+      override fun exclude(): List<String> = unwrap(this).getExclude() ?: emptyList()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-databases.html#cfn-kinesisfirehose-deliverystream-databases-include)
+       */
+      override fun include(): List<String> = unwrap(this).getInclude() ?: emptyList()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): DatabasesProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabasesProperty):
+          DatabasesProperty = CdkObjectWrappers.wrap(cdkObject) as? DatabasesProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: DatabasesProperty):
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabasesProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.DatabasesProperty
+    }
+  }
+
+  /**
    * Specifies the type and Amazon Resource Name (ARN) of the CMK to use for Server-Side Encryption
    * (SSE).
    *
@@ -5298,8 +6720,6 @@ public open class CfnDeliveryStream(
   /**
    * Describes the configuration of a destination in Apache Iceberg Tables.
    *
-   * Amazon Data Firehose is in preview release and is subject to change.
-   *
    * Example:
    *
    * ```
@@ -5322,16 +6742,12 @@ public open class CfnDeliveryStream(
     /**
      * The name of the Apache Iceberg database.
      *
-     * Amazon Data Firehose is in preview release and is subject to change.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-destinationdatabasename)
      */
     public fun destinationDatabaseName(): String
 
     /**
      * Specifies the name of the Apache Iceberg Table.
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-destinationtablename)
      */
@@ -5343,8 +6759,6 @@ public open class CfnDeliveryStream(
      * All the errors that occurred while delivering to this table will be prefixed with this value
      * in S3 destination.
      *
-     * Amazon Data Firehose is in preview release and is subject to change.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-s3erroroutputprefix)
      */
     public fun s3ErrorOutputPrefix(): String? = unwrap(this).getS3ErrorOutputPrefix()
@@ -5354,8 +6768,6 @@ public open class CfnDeliveryStream(
      *
      * Firehose will use these for running Create, Update, or Delete operations on the given Iceberg
      * table.
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-uniquekeys)
      */
@@ -5368,13 +6780,11 @@ public open class CfnDeliveryStream(
     public interface Builder {
       /**
        * @param destinationDatabaseName The name of the Apache Iceberg database. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun destinationDatabaseName(destinationDatabaseName: String)
 
       /**
        * @param destinationTableName Specifies the name of the Apache Iceberg Table. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun destinationTableName(destinationTableName: String)
 
@@ -5382,8 +6792,6 @@ public open class CfnDeliveryStream(
        * @param s3ErrorOutputPrefix The table specific S3 error output prefix.
        * All the errors that occurred while delivering to this table will be prefixed with this
        * value in S3 destination.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun s3ErrorOutputPrefix(s3ErrorOutputPrefix: String)
 
@@ -5391,8 +6799,6 @@ public open class CfnDeliveryStream(
        * @param uniqueKeys A list of unique keys for a given Apache Iceberg table.
        * Firehose will use these for running Create, Update, or Delete operations on the given
        * Iceberg table.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun uniqueKeys(uniqueKeys: List<String>)
 
@@ -5400,8 +6806,6 @@ public open class CfnDeliveryStream(
        * @param uniqueKeys A list of unique keys for a given Apache Iceberg table.
        * Firehose will use these for running Create, Update, or Delete operations on the given
        * Iceberg table.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun uniqueKeys(vararg uniqueKeys: String)
     }
@@ -5414,7 +6818,6 @@ public open class CfnDeliveryStream(
 
       /**
        * @param destinationDatabaseName The name of the Apache Iceberg database. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun destinationDatabaseName(destinationDatabaseName: String) {
         cdkBuilder.destinationDatabaseName(destinationDatabaseName)
@@ -5422,7 +6825,6 @@ public open class CfnDeliveryStream(
 
       /**
        * @param destinationTableName Specifies the name of the Apache Iceberg Table. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun destinationTableName(destinationTableName: String) {
         cdkBuilder.destinationTableName(destinationTableName)
@@ -5432,8 +6834,6 @@ public open class CfnDeliveryStream(
        * @param s3ErrorOutputPrefix The table specific S3 error output prefix.
        * All the errors that occurred while delivering to this table will be prefixed with this
        * value in S3 destination.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun s3ErrorOutputPrefix(s3ErrorOutputPrefix: String) {
         cdkBuilder.s3ErrorOutputPrefix(s3ErrorOutputPrefix)
@@ -5443,8 +6843,6 @@ public open class CfnDeliveryStream(
        * @param uniqueKeys A list of unique keys for a given Apache Iceberg table.
        * Firehose will use these for running Create, Update, or Delete operations on the given
        * Iceberg table.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun uniqueKeys(uniqueKeys: List<String>) {
         cdkBuilder.uniqueKeys(uniqueKeys)
@@ -5454,8 +6852,6 @@ public open class CfnDeliveryStream(
        * @param uniqueKeys A list of unique keys for a given Apache Iceberg table.
        * Firehose will use these for running Create, Update, or Delete operations on the given
        * Iceberg table.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun uniqueKeys(vararg uniqueKeys: String): Unit = uniqueKeys(uniqueKeys.toList())
 
@@ -5471,16 +6867,12 @@ public open class CfnDeliveryStream(
       /**
        * The name of the Apache Iceberg database.
        *
-       * Amazon Data Firehose is in preview release and is subject to change.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-destinationdatabasename)
        */
       override fun destinationDatabaseName(): String = unwrap(this).getDestinationDatabaseName()
 
       /**
        * Specifies the name of the Apache Iceberg Table.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-destinationtablename)
        */
@@ -5492,8 +6884,6 @@ public open class CfnDeliveryStream(
        * All the errors that occurred while delivering to this table will be prefixed with this
        * value in S3 destination.
        *
-       * Amazon Data Firehose is in preview release and is subject to change.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-s3erroroutputprefix)
        */
       override fun s3ErrorOutputPrefix(): String? = unwrap(this).getS3ErrorOutputPrefix()
@@ -5503,8 +6893,6 @@ public open class CfnDeliveryStream(
        *
        * Firehose will use these for running Create, Update, or Delete operations on the given
        * Iceberg table.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-destinationtableconfiguration.html#cfn-kinesisfirehose-deliverystream-destinationtableconfiguration-uniquekeys)
        */
@@ -7234,7 +8622,7 @@ public open class CfnDeliveryStream(
     public fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
     /**
-     * The Amazon CloudWatch logging options for your delivery stream.
+     * The Amazon CloudWatch logging options for your Firehose stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-cloudwatchloggingoptions)
      */
@@ -7345,8 +8733,8 @@ public open class CfnDeliveryStream(
     /**
      * The Amazon S3 backup mode.
      *
-     * After you create a delivery stream, you can update it to enable Amazon S3 backup if it is
-     * disabled. If backup is enabled, you can't update the delivery stream to disable it.
+     * After you create a Firehose stream, you can update it to enable Amazon S3 backup if it is
+     * disabled. If backup is enabled, you can't update the Firehose stream to disable it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupmode)
      */
@@ -7383,20 +8771,20 @@ public open class CfnDeliveryStream(
       public fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit)
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       public
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -7563,8 +8951,8 @@ public open class CfnDeliveryStream(
 
       /**
        * @param s3BackupMode The Amazon S3 backup mode.
-       * After you create a delivery stream, you can update it to enable Amazon S3 backup if it is
-       * disabled. If backup is enabled, you can't update the delivery stream to disable it.
+       * After you create a Firehose stream, you can update it to enable Amazon S3 backup if it is
+       * disabled. If backup is enabled, you can't update the Firehose stream to disable it.
        */
       public fun s3BackupMode(s3BackupMode: String)
     }
@@ -7608,7 +8996,7 @@ public open class CfnDeliveryStream(
           bufferingHints(BufferingHintsProperty(bufferingHints))
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
@@ -7616,7 +9004,7 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       override
@@ -7625,7 +9013,7 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -7837,8 +9225,8 @@ public open class CfnDeliveryStream(
 
       /**
        * @param s3BackupMode The Amazon S3 backup mode.
-       * After you create a delivery stream, you can update it to enable Amazon S3 backup if it is
-       * disabled. If backup is enabled, you can't update the delivery stream to disable it.
+       * After you create a Firehose stream, you can update it to enable Amazon S3 backup if it is
+       * disabled. If backup is enabled, you can't update the Firehose stream to disable it.
        */
       override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
@@ -7872,7 +9260,7 @@ public open class CfnDeliveryStream(
       override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
       /**
-       * The Amazon CloudWatch logging options for your delivery stream.
+       * The Amazon CloudWatch logging options for your Firehose stream.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-cloudwatchloggingoptions)
        */
@@ -7983,8 +9371,8 @@ public open class CfnDeliveryStream(
       /**
        * The Amazon S3 backup mode.
        *
-       * After you create a delivery stream, you can update it to enable Amazon S3 backup if it is
-       * disabled. If backup is enabled, you can't update the delivery stream to disable it.
+       * After you create a Firehose stream, you can update it to enable Amazon S3 backup if it is
+       * disabled. If backup is enabled, you can't update the Firehose stream to disable it.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-extendeds3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-extendeds3destinationconfiguration-s3backupmode)
        */
@@ -9287,8 +10675,6 @@ public open class CfnDeliveryStream(
   /**
    * Specifies the destination configure settings for Apache Iceberg Table.
    *
-   * Amazon Data Firehose is in preview release and is subject to change.
-   *
    * Example:
    *
    * ```
@@ -9370,8 +10756,6 @@ public open class CfnDeliveryStream(
     /**
      * Configuration describing where the destination Apache Iceberg Tables are persisted.
      *
-     * Amazon Data Firehose is in preview release and is subject to change.
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-catalogconfiguration)
      */
     public fun catalogConfiguration(): Any
@@ -9386,8 +10770,6 @@ public open class CfnDeliveryStream(
      * Apache Iceberg Tables.
      *
      * Firehose will write data with insert if table specific configuration is not provided here.
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-destinationtableconfigurationlist)
      */
@@ -9405,20 +10787,17 @@ public open class CfnDeliveryStream(
     public fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
     /**
-     * The Amazon Resource Name (ARN) of the the IAM role to be assumed by Firehose for calling
-     * Apache Iceberg Tables.
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
+     * The Amazon Resource Name (ARN) of the IAM role to be assumed by Firehose for calling Apache
+     * Iceberg Tables.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-rolearn)
      */
     public fun roleArn(): String
 
     /**
-     * Describes how Firehose will backup records. Currently,S3 backup only supports
-     * `FailedDataOnly` for preview.
+     * Describes how Firehose will backup records.
      *
-     * Amazon Data Firehose is in preview release and is subject to change.
+     * Currently,S3 backup only supports `FailedDataOnly` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-s3backupmode)
      */
@@ -9454,21 +10833,18 @@ public open class CfnDeliveryStream(
       /**
        * @param catalogConfiguration Configuration describing where the destination Apache Iceberg
        * Tables are persisted. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun catalogConfiguration(catalogConfiguration: IResolvable)
 
       /**
        * @param catalogConfiguration Configuration describing where the destination Apache Iceberg
        * Tables are persisted. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty)
 
       /**
        * @param catalogConfiguration Configuration describing where the destination Apache Iceberg
        * Tables are persisted. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b897b0cbbd8f92685f55cbc0e92df9ad14528aa0aecd5a9d53f4419f4b2616f3")
@@ -9498,8 +10874,6 @@ public open class CfnDeliveryStream(
        * @param destinationTableConfigurationList Provides a list of
        * `DestinationTableConfigurations` which Firehose uses to deliver data to Apache Iceberg Tables.
        * Firehose will write data with insert if table specific configuration is not provided here.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun destinationTableConfigurationList(destinationTableConfigurationList: IResolvable)
 
@@ -9507,8 +10881,6 @@ public open class CfnDeliveryStream(
        * @param destinationTableConfigurationList Provides a list of
        * `DestinationTableConfigurations` which Firehose uses to deliver data to Apache Iceberg Tables.
        * Firehose will write data with insert if table specific configuration is not provided here.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun destinationTableConfigurationList(destinationTableConfigurationList: List<Any>)
 
@@ -9516,8 +10888,6 @@ public open class CfnDeliveryStream(
        * @param destinationTableConfigurationList Provides a list of
        * `DestinationTableConfigurations` which Firehose uses to deliver data to Apache Iceberg Tables.
        * Firehose will write data with insert if table specific configuration is not provided here.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       public fun destinationTableConfigurationList(vararg destinationTableConfigurationList: Any)
 
@@ -9557,16 +10927,14 @@ public open class CfnDeliveryStream(
       public fun retryOptions(retryOptions: RetryOptionsProperty.Builder.() -> Unit)
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the the IAM role to be assumed by Firehose
-       * for calling Apache Iceberg Tables. 
-       * Amazon Data Firehose is in preview release and is subject to change.
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role to be assumed by Firehose for
+       * calling Apache Iceberg Tables. 
        */
       public fun roleArn(roleArn: String)
 
       /**
-       * @param s3BackupMode Describes how Firehose will backup records. Currently,S3 backup only
-       * supports `FailedDataOnly` for preview.
-       * Amazon Data Firehose is in preview release and is subject to change.
+       * @param s3BackupMode Describes how Firehose will backup records.
+       * Currently,S3 backup only supports `FailedDataOnly` .
        */
       public fun s3BackupMode(s3BackupMode: String)
 
@@ -9620,7 +10988,6 @@ public open class CfnDeliveryStream(
       /**
        * @param catalogConfiguration Configuration describing where the destination Apache Iceberg
        * Tables are persisted. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun catalogConfiguration(catalogConfiguration: IResolvable) {
         cdkBuilder.catalogConfiguration(catalogConfiguration.let(IResolvable.Companion::unwrap))
@@ -9629,7 +10996,6 @@ public open class CfnDeliveryStream(
       /**
        * @param catalogConfiguration Configuration describing where the destination Apache Iceberg
        * Tables are persisted. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun catalogConfiguration(catalogConfiguration: CatalogConfigurationProperty) {
         cdkBuilder.catalogConfiguration(catalogConfiguration.let(CatalogConfigurationProperty.Companion::unwrap))
@@ -9638,7 +11004,6 @@ public open class CfnDeliveryStream(
       /**
        * @param catalogConfiguration Configuration describing where the destination Apache Iceberg
        * Tables are persisted. 
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("b897b0cbbd8f92685f55cbc0e92df9ad14528aa0aecd5a9d53f4419f4b2616f3")
@@ -9675,8 +11040,6 @@ public open class CfnDeliveryStream(
        * @param destinationTableConfigurationList Provides a list of
        * `DestinationTableConfigurations` which Firehose uses to deliver data to Apache Iceberg Tables.
        * Firehose will write data with insert if table specific configuration is not provided here.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override
           fun destinationTableConfigurationList(destinationTableConfigurationList: IResolvable) {
@@ -9687,8 +11050,6 @@ public open class CfnDeliveryStream(
        * @param destinationTableConfigurationList Provides a list of
        * `DestinationTableConfigurations` which Firehose uses to deliver data to Apache Iceberg Tables.
        * Firehose will write data with insert if table specific configuration is not provided here.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun destinationTableConfigurationList(destinationTableConfigurationList: List<Any>) {
         cdkBuilder.destinationTableConfigurationList(destinationTableConfigurationList.map{CdkObjectWrappers.unwrap(it)})
@@ -9698,8 +11059,6 @@ public open class CfnDeliveryStream(
        * @param destinationTableConfigurationList Provides a list of
        * `DestinationTableConfigurations` which Firehose uses to deliver data to Apache Iceberg Tables.
        * Firehose will write data with insert if table specific configuration is not provided here.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        */
       override fun destinationTableConfigurationList(vararg destinationTableConfigurationList: Any):
           Unit = destinationTableConfigurationList(destinationTableConfigurationList.toList())
@@ -9751,18 +11110,16 @@ public open class CfnDeliveryStream(
           retryOptions(RetryOptionsProperty(retryOptions))
 
       /**
-       * @param roleArn The Amazon Resource Name (ARN) of the the IAM role to be assumed by Firehose
-       * for calling Apache Iceberg Tables. 
-       * Amazon Data Firehose is in preview release and is subject to change.
+       * @param roleArn The Amazon Resource Name (ARN) of the IAM role to be assumed by Firehose for
+       * calling Apache Iceberg Tables. 
        */
       override fun roleArn(roleArn: String) {
         cdkBuilder.roleArn(roleArn)
       }
 
       /**
-       * @param s3BackupMode Describes how Firehose will backup records. Currently,S3 backup only
-       * supports `FailedDataOnly` for preview.
-       * Amazon Data Firehose is in preview release and is subject to change.
+       * @param s3BackupMode Describes how Firehose will backup records.
+       * Currently,S3 backup only supports `FailedDataOnly` .
        */
       override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
@@ -9808,8 +11165,6 @@ public open class CfnDeliveryStream(
       /**
        * Configuration describing where the destination Apache Iceberg Tables are persisted.
        *
-       * Amazon Data Firehose is in preview release and is subject to change.
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-catalogconfiguration)
        */
       override fun catalogConfiguration(): Any = unwrap(this).getCatalogConfiguration()
@@ -9824,8 +11179,6 @@ public open class CfnDeliveryStream(
        * Apache Iceberg Tables.
        *
        * Firehose will write data with insert if table specific configuration is not provided here.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-destinationtableconfigurationlist)
        */
@@ -9843,20 +11196,17 @@ public open class CfnDeliveryStream(
       override fun retryOptions(): Any? = unwrap(this).getRetryOptions()
 
       /**
-       * The Amazon Resource Name (ARN) of the the IAM role to be assumed by Firehose for calling
-       * Apache Iceberg Tables.
-       *
-       * Amazon Data Firehose is in preview release and is subject to change.
+       * The Amazon Resource Name (ARN) of the IAM role to be assumed by Firehose for calling Apache
+       * Iceberg Tables.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-rolearn)
        */
       override fun roleArn(): String = unwrap(this).getRoleArn()
 
       /**
-       * Describes how Firehose will backup records. Currently,S3 backup only supports
-       * `FailedDataOnly` for preview.
+       * Describes how Firehose will backup records.
        *
-       * Amazon Data Firehose is in preview release and is subject to change.
+       * Currently,S3 backup only supports `FailedDataOnly` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-icebergdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration-s3backupmode)
        */
@@ -12174,7 +13524,7 @@ public open class CfnDeliveryStream(
    */
   public interface RedshiftDestinationConfigurationProperty {
     /**
-     * The CloudWatch logging options for your delivery stream.
+     * The CloudWatch logging options for your Firehose stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-cloudwatchloggingoptions)
      */
@@ -12241,8 +13591,8 @@ public open class CfnDeliveryStream(
     /**
      * The Amazon S3 backup mode.
      *
-     * After you create a delivery stream, you can update it to enable Amazon S3 backup if it is
-     * disabled. If backup is enabled, you can't update the delivery stream to disable it.
+     * After you create a Firehose stream, you can update it to enable Amazon S3 backup if it is
+     * disabled. If backup is enabled, you can't update the Firehose stream to disable it.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3backupmode)
      */
@@ -12282,18 +13632,18 @@ public open class CfnDeliveryStream(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       public
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45ef4423662114d977ecc3114c7802625a877da0c62692f1467c0d79e3a2ddac")
@@ -12406,8 +13756,8 @@ public open class CfnDeliveryStream(
 
       /**
        * @param s3BackupMode The Amazon S3 backup mode.
-       * After you create a delivery stream, you can update it to enable Amazon S3 backup if it is
-       * disabled. If backup is enabled, you can't update the delivery stream to disable it.
+       * After you create a Firehose stream, you can update it to enable Amazon S3 backup if it is
+       * disabled. If backup is enabled, you can't update the Firehose stream to disable it.
        */
       public fun s3BackupMode(s3BackupMode: String)
 
@@ -12476,14 +13826,14 @@ public open class CfnDeliveryStream(
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.RedshiftDestinationConfigurationProperty.builder()
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
@@ -12491,7 +13841,7 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("45ef4423662114d977ecc3114c7802625a877da0c62692f1467c0d79e3a2ddac")
@@ -12634,8 +13984,8 @@ public open class CfnDeliveryStream(
 
       /**
        * @param s3BackupMode The Amazon S3 backup mode.
-       * After you create a delivery stream, you can update it to enable Amazon S3 backup if it is
-       * disabled. If backup is enabled, you can't update the delivery stream to disable it.
+       * After you create a Firehose stream, you can update it to enable Amazon S3 backup if it is
+       * disabled. If backup is enabled, you can't update the Firehose stream to disable it.
        */
       override fun s3BackupMode(s3BackupMode: String) {
         cdkBuilder.s3BackupMode(s3BackupMode)
@@ -12721,7 +14071,7 @@ public open class CfnDeliveryStream(
     ) : CdkObject(cdkObject),
         RedshiftDestinationConfigurationProperty {
       /**
-       * The CloudWatch logging options for your delivery stream.
+       * The CloudWatch logging options for your Firehose stream.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-cloudwatchloggingoptions)
        */
@@ -12788,8 +14138,8 @@ public open class CfnDeliveryStream(
       /**
        * The Amazon S3 backup mode.
        *
-       * After you create a delivery stream, you can update it to enable Amazon S3 backup if it is
-       * disabled. If backup is enabled, you can't update the delivery stream to disable it.
+       * After you create a Firehose stream, you can update it to enable Amazon S3 backup if it is
+       * disabled. If backup is enabled, you can't update the Firehose stream to disable it.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-redshiftdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-redshiftdestinationconfiguration-s3backupmode)
        */
@@ -13106,7 +14456,7 @@ public open class CfnDeliveryStream(
     public fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
     /**
-     * The CloudWatch logging options for your delivery stream.
+     * The CloudWatch logging options for your Firehose stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions)
      */
@@ -13199,18 +14549,18 @@ public open class CfnDeliveryStream(
       public fun bufferingHints(bufferingHints: BufferingHintsProperty.Builder.() -> Unit)
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       public
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0d0cd231850b2f6d2f8a9fe62d93558b0f6160910001b5d45539a4dd0579ed6")
@@ -13319,14 +14669,14 @@ public open class CfnDeliveryStream(
           bufferingHints(BufferingHintsProperty(bufferingHints))
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
         cdkBuilder.cloudWatchLoggingOptions(cloudWatchLoggingOptions.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       override
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty) {
@@ -13334,7 +14684,7 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param cloudWatchLoggingOptions The CloudWatch logging options for your delivery stream.
+       * @param cloudWatchLoggingOptions The CloudWatch logging options for your Firehose stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f0d0cd231850b2f6d2f8a9fe62d93558b0f6160910001b5d45539a4dd0579ed6")
@@ -13444,7 +14794,7 @@ public open class CfnDeliveryStream(
       override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
       /**
-       * The CloudWatch logging options for your delivery stream.
+       * The CloudWatch logging options for your Firehose stream.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-s3destinationconfiguration.html#cfn-kinesisfirehose-deliverystream-s3destinationconfiguration-cloudwatchloggingoptions)
        */
@@ -13863,7 +15213,7 @@ public open class CfnDeliveryStream(
    */
   public interface SecretsManagerConfigurationProperty {
     /**
-     * Specifies whether you want to use the the secrets manager feature.
+     * Specifies whether you want to use the secrets manager feature.
      *
      * When set as `True` the secrets manager configuration overwrites the existing secrets in the
      * destination configuration. When it's set to `False` Firehose falls back to the credentials in
@@ -13888,7 +15238,7 @@ public open class CfnDeliveryStream(
      * The ARN of the secret that stores your credentials.
      *
      * It must be in the same region as the Firehose stream and the role. The secret ARN can reside
-     * in a different account than the delivery stream and role as Firehose supports cross-account
+     * in a different account than the Firehose stream and role as Firehose supports cross-account
      * secret access. This parameter is required when *Enabled* is set to `True` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-secretsmanagerconfiguration.html#cfn-kinesisfirehose-deliverystream-secretsmanagerconfiguration-secretarn)
@@ -13901,7 +15251,7 @@ public open class CfnDeliveryStream(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param enabled Specifies whether you want to use the the secrets manager feature. 
+       * @param enabled Specifies whether you want to use the secrets manager feature. 
        * When set as `True` the secrets manager configuration overwrites the existing secrets in the
        * destination configuration. When it's set to `False` Firehose falls back to the credentials in
        * the destination configuration.
@@ -13909,7 +15259,7 @@ public open class CfnDeliveryStream(
       public fun enabled(enabled: Boolean)
 
       /**
-       * @param enabled Specifies whether you want to use the the secrets manager feature. 
+       * @param enabled Specifies whether you want to use the secrets manager feature. 
        * When set as `True` the secrets manager configuration overwrites the existing secrets in the
        * destination configuration. When it's set to `False` Firehose falls back to the credentials in
        * the destination configuration.
@@ -13928,7 +15278,7 @@ public open class CfnDeliveryStream(
       /**
        * @param secretArn The ARN of the secret that stores your credentials.
        * It must be in the same region as the Firehose stream and the role. The secret ARN can
-       * reside in a different account than the delivery stream and role as Firehose supports
+       * reside in a different account than the Firehose stream and role as Firehose supports
        * cross-account secret access. This parameter is required when *Enabled* is set to `True` .
        */
       public fun secretArn(secretArn: String)
@@ -13941,7 +15291,7 @@ public open class CfnDeliveryStream(
           software.amazon.awscdk.services.kinesisfirehose.CfnDeliveryStream.SecretsManagerConfigurationProperty.builder()
 
       /**
-       * @param enabled Specifies whether you want to use the the secrets manager feature. 
+       * @param enabled Specifies whether you want to use the secrets manager feature. 
        * When set as `True` the secrets manager configuration overwrites the existing secrets in the
        * destination configuration. When it's set to `False` Firehose falls back to the credentials in
        * the destination configuration.
@@ -13951,7 +15301,7 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param enabled Specifies whether you want to use the the secrets manager feature. 
+       * @param enabled Specifies whether you want to use the secrets manager feature. 
        * When set as `True` the secrets manager configuration overwrites the existing secrets in the
        * destination configuration. When it's set to `False` Firehose falls back to the credentials in
        * the destination configuration.
@@ -13974,7 +15324,7 @@ public open class CfnDeliveryStream(
       /**
        * @param secretArn The ARN of the secret that stores your credentials.
        * It must be in the same region as the Firehose stream and the role. The secret ARN can
-       * reside in a different account than the delivery stream and role as Firehose supports
+       * reside in a different account than the Firehose stream and role as Firehose supports
        * cross-account secret access. This parameter is required when *Enabled* is set to `True` .
        */
       override fun secretArn(secretArn: String) {
@@ -13991,7 +15341,7 @@ public open class CfnDeliveryStream(
     ) : CdkObject(cdkObject),
         SecretsManagerConfigurationProperty {
       /**
-       * Specifies whether you want to use the the secrets manager feature.
+       * Specifies whether you want to use the secrets manager feature.
        *
        * When set as `True` the secrets manager configuration overwrites the existing secrets in the
        * destination configuration. When it's set to `False` Firehose falls back to the credentials in
@@ -14016,7 +15366,7 @@ public open class CfnDeliveryStream(
        * The ARN of the secret that stores your credentials.
        *
        * It must be in the same region as the Firehose stream and the role. The secret ARN can
-       * reside in a different account than the delivery stream and role as Firehose supports
+       * reside in a different account than the Firehose stream and role as Firehose supports
        * cross-account secret access. This parameter is required when *Enabled* is set to `True` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-secretsmanagerconfiguration.html#cfn-kinesisfirehose-deliverystream-secretsmanagerconfiguration-secretarn)
@@ -14047,11 +15397,7 @@ public open class CfnDeliveryStream(
    * The serializer that you want Firehose to use to convert data to the target format before
    * writing it to Amazon S3.
    *
-   * Firehose supports two types of serializers: the [ORC
-   * SerDe](https://docs.aws.amazon.com/https://hive.apache.org/javadocs/r1.2.2/api/org/apache/hadoop/hive/ql/io/orc/OrcSerde.html)
-   * and the [Parquet
-   * SerDe](https://docs.aws.amazon.com/https://hive.apache.org/javadocs/r1.2.2/api/org/apache/hadoop/hive/ql/io/parquet/serde/ParquetHiveSerDe.html)
-   * .
+   * Firehose supports two types of serializers: the ORC SerDe and the Parquet SerDe.
    *
    * Example:
    *
@@ -14100,7 +15446,7 @@ public open class CfnDeliveryStream(
      * A serializer to use for converting data to the Parquet format before storing it in Amazon S3.
      *
      * For more information, see [Apache
-     * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
+     * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/docs/contribution-guidelines/) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-serializer.html#cfn-kinesisfirehose-deliverystream-serializer-parquetserde)
      */
@@ -14141,7 +15487,8 @@ public open class CfnDeliveryStream(
        * @param parquetSerDe A serializer to use for converting data to the Parquet format before
        * storing it in Amazon S3.
        * For more information, see [Apache
-       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
+       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/docs/contribution-guidelines/)
+       * .
        */
       public fun parquetSerDe(parquetSerDe: IResolvable)
 
@@ -14149,7 +15496,8 @@ public open class CfnDeliveryStream(
        * @param parquetSerDe A serializer to use for converting data to the Parquet format before
        * storing it in Amazon S3.
        * For more information, see [Apache
-       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
+       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/docs/contribution-guidelines/)
+       * .
        */
       public fun parquetSerDe(parquetSerDe: ParquetSerDeProperty)
 
@@ -14157,7 +15505,8 @@ public open class CfnDeliveryStream(
        * @param parquetSerDe A serializer to use for converting data to the Parquet format before
        * storing it in Amazon S3.
        * For more information, see [Apache
-       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
+       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/docs/contribution-guidelines/)
+       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("953e85fd9f4dd15c7294aa43c03da0cfc0e1f6e7e39d451bb5c5cb6bb68a84b0")
@@ -14205,7 +15554,8 @@ public open class CfnDeliveryStream(
        * @param parquetSerDe A serializer to use for converting data to the Parquet format before
        * storing it in Amazon S3.
        * For more information, see [Apache
-       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
+       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/docs/contribution-guidelines/)
+       * .
        */
       override fun parquetSerDe(parquetSerDe: IResolvable) {
         cdkBuilder.parquetSerDe(parquetSerDe.let(IResolvable.Companion::unwrap))
@@ -14215,7 +15565,8 @@ public open class CfnDeliveryStream(
        * @param parquetSerDe A serializer to use for converting data to the Parquet format before
        * storing it in Amazon S3.
        * For more information, see [Apache
-       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
+       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/docs/contribution-guidelines/)
+       * .
        */
       override fun parquetSerDe(parquetSerDe: ParquetSerDeProperty) {
         cdkBuilder.parquetSerDe(parquetSerDe.let(ParquetSerDeProperty.Companion::unwrap))
@@ -14225,7 +15576,8 @@ public open class CfnDeliveryStream(
        * @param parquetSerDe A serializer to use for converting data to the Parquet format before
        * storing it in Amazon S3.
        * For more information, see [Apache
-       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
+       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/docs/contribution-guidelines/)
+       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("953e85fd9f4dd15c7294aa43c03da0cfc0e1f6e7e39d451bb5c5cb6bb68a84b0")
@@ -14256,7 +15608,8 @@ public open class CfnDeliveryStream(
        * S3.
        *
        * For more information, see [Apache
-       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/documentation/latest/) .
+       * Parquet](https://docs.aws.amazon.com/https://parquet.apache.org/docs/contribution-guidelines/)
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-serializer.html#cfn-kinesisfirehose-deliverystream-serializer-parquetserde)
        */
@@ -14315,7 +15668,7 @@ public open class CfnDeliveryStream(
     /**
      * Buffer incoming data to the specified size, in MBs, before delivering it to the destination.
      *
-     * The default value is 1.
+     * The default value is 128.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakebufferinghints.html#cfn-kinesisfirehose-deliverystream-snowflakebufferinghints-sizeinmbs)
      */
@@ -14336,7 +15689,7 @@ public open class CfnDeliveryStream(
       /**
        * @param sizeInMBs Buffer incoming data to the specified size, in MBs, before delivering it
        * to the destination.
-       * The default value is 1.
+       * The default value is 128.
        */
       public fun sizeInMBs(sizeInMBs: Number)
     }
@@ -14359,7 +15712,7 @@ public open class CfnDeliveryStream(
       /**
        * @param sizeInMBs Buffer incoming data to the specified size, in MBs, before delivering it
        * to the destination.
-       * The default value is 1.
+       * The default value is 128.
        */
       override fun sizeInMBs(sizeInMBs: Number) {
         cdkBuilder.sizeInMBs(sizeInMBs)
@@ -14388,7 +15741,7 @@ public open class CfnDeliveryStream(
        * Buffer incoming data to the specified size, in MBs, before delivering it to the
        * destination.
        *
-       * The default value is 1.
+       * The default value is 128.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakebufferinghints.html#cfn-kinesisfirehose-deliverystream-snowflakebufferinghints-sizeinmbs)
        */
@@ -14562,7 +15915,19 @@ public open class CfnDeliveryStream(
     public fun keyPassphrase(): String? = unwrap(this).getKeyPassphrase()
 
     /**
-     * The name of the record metadata column.
+     * Specify a column name in the table, where the metadata information has to be loaded.
+     *
+     * When you enable this field, you will see the following column in the snowflake table, which
+     * differs based on the source type.
+     *
+     * For Direct PUT as source
+     *
+     * `{ "firehoseDeliveryStreamName" : "streamname", "IngestionTime" : "timestamp" }`
+     *
+     * For Kinesis Data Stream as source
+     *
+     * `"kinesisStreamName" : "streamname", "kinesisShardId" : "Id", "kinesisPartitionKey" : "key",
+     * "kinesisSequenceNumber" : "1234", "subsequenceNumber" : "2334", "IngestionTime" : "timestamp" }`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakedestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-snowflakedestinationconfiguration-metadatacolumnname)
      */
@@ -14743,7 +16108,20 @@ public open class CfnDeliveryStream(
       public fun keyPassphrase(keyPassphrase: String)
 
       /**
-       * @param metaDataColumnName The name of the record metadata column.
+       * @param metaDataColumnName Specify a column name in the table, where the metadata
+       * information has to be loaded.
+       * When you enable this field, you will see the following column in the snowflake table, which
+       * differs based on the source type.
+       *
+       * For Direct PUT as source
+       *
+       * `{ "firehoseDeliveryStreamName" : "streamname", "IngestionTime" : "timestamp" }`
+       *
+       * For Kinesis Data Stream as source
+       *
+       * `"kinesisStreamName" : "streamname", "kinesisShardId" : "Id", "kinesisPartitionKey" :
+       * "key", "kinesisSequenceNumber" : "1234", "subsequenceNumber" : "2334", "IngestionTime" :
+       * "timestamp" }`
        */
       public fun metaDataColumnName(metaDataColumnName: String)
 
@@ -15018,7 +16396,20 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param metaDataColumnName The name of the record metadata column.
+       * @param metaDataColumnName Specify a column name in the table, where the metadata
+       * information has to be loaded.
+       * When you enable this field, you will see the following column in the snowflake table, which
+       * differs based on the source type.
+       *
+       * For Direct PUT as source
+       *
+       * `{ "firehoseDeliveryStreamName" : "streamname", "IngestionTime" : "timestamp" }`
+       *
+       * For Kinesis Data Stream as source
+       *
+       * `"kinesisStreamName" : "streamname", "kinesisShardId" : "Id", "kinesisPartitionKey" :
+       * "key", "kinesisSequenceNumber" : "1234", "subsequenceNumber" : "2334", "IngestionTime" :
+       * "timestamp" }`
        */
       override fun metaDataColumnName(metaDataColumnName: String) {
         cdkBuilder.metaDataColumnName(metaDataColumnName)
@@ -15305,7 +16696,20 @@ public open class CfnDeliveryStream(
       override fun keyPassphrase(): String? = unwrap(this).getKeyPassphrase()
 
       /**
-       * The name of the record metadata column.
+       * Specify a column name in the table, where the metadata information has to be loaded.
+       *
+       * When you enable this field, you will see the following column in the snowflake table, which
+       * differs based on the source type.
+       *
+       * For Direct PUT as source
+       *
+       * `{ "firehoseDeliveryStreamName" : "streamname", "IngestionTime" : "timestamp" }`
+       *
+       * For Kinesis Data Stream as source
+       *
+       * `"kinesisStreamName" : "streamname", "kinesisShardId" : "Id", "kinesisPartitionKey" :
+       * "key", "kinesisSequenceNumber" : "1234", "subsequenceNumber" : "2334", "IngestionTime" :
+       * "timestamp" }`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-snowflakedestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-snowflakedestinationconfiguration-metadatacolumnname)
        */
@@ -15967,7 +17371,7 @@ public open class CfnDeliveryStream(
     public fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
     /**
-     * The Amazon CloudWatch logging options for your delivery stream.
+     * The Amazon CloudWatch logging options for your Firehose stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-cloudwatchloggingoptions)
      */
@@ -16076,20 +17480,20 @@ public open class CfnDeliveryStream(
       public fun bufferingHints(bufferingHints: SplunkBufferingHintsProperty.Builder.() -> Unit)
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       public fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable)
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       public
           fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: CloudWatchLoggingOptionsProperty)
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -16245,7 +17649,7 @@ public open class CfnDeliveryStream(
           Unit = bufferingHints(SplunkBufferingHintsProperty(bufferingHints))
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       override fun cloudWatchLoggingOptions(cloudWatchLoggingOptions: IResolvable) {
@@ -16253,7 +17657,7 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       override
@@ -16262,7 +17666,7 @@ public open class CfnDeliveryStream(
       }
 
       /**
-       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your delivery
+       * @param cloudWatchLoggingOptions The Amazon CloudWatch logging options for your Firehose
        * stream.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
@@ -16438,7 +17842,7 @@ public open class CfnDeliveryStream(
       override fun bufferingHints(): Any? = unwrap(this).getBufferingHints()
 
       /**
-       * The Amazon CloudWatch logging options for your delivery stream.
+       * The Amazon CloudWatch logging options for your Firehose stream.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-kinesisfirehose-deliverystream-splunkdestinationconfiguration.html#cfn-kinesisfirehose-deliverystream-splunkdestinationconfiguration-cloudwatchloggingoptions)
        */

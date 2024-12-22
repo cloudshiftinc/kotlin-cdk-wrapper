@@ -31,6 +31,14 @@ import kotlin.jvm.JvmName
  * .build()))
  * .thingTypeName("thingTypeName")
  * .thingTypeProperties(ThingTypePropertiesProperty.builder()
+ * .mqtt5Configuration(Mqtt5ConfigurationProperty.builder()
+ * .propagatingAttributes(List.of(PropagatingAttributeProperty.builder()
+ * .userPropertyKey("userPropertyKey")
+ * // the properties below are optional
+ * .connectionAttribute("connectionAttribute")
+ * .thingAttribute("thingAttribute")
+ * .build()))
+ * .build())
  * .searchableAttributes(List.of("searchableAttributes"))
  * .thingTypeDescription("thingTypeDescription")
  * .build())
@@ -41,7 +49,10 @@ import kotlin.jvm.JvmName
  */
 public interface CfnThingTypeProps {
   /**
-   * Deprecates a thing type. You can not associate new things with deprecated thing type.
+   * Deprecates a thing type.
+   *
+   * You can not associate new things with deprecated thing type. You cannot update
+   * `ThingTypeProperties` if the thing type is deprecated.
    *
    * Requires permission to access the
    * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
@@ -68,9 +79,9 @@ public interface CfnThingTypeProps {
   /**
    * The thing type properties for the thing type to create.
    *
-   * It contains information about the new thing type including a description, and a list of
-   * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
-   * creation of the `ThingType` .
+   * It contains information about the new thing type including a description, a list of searchable
+   * thing attribute names, and a list of propagating attributes. After a thing type is created, you
+   * can only update `Mqtt5Configuration` .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingtype.html#cfn-iot-thingtype-thingtypeproperties)
    */
@@ -82,8 +93,10 @@ public interface CfnThingTypeProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
-     * deprecated thing type.
+     * @param deprecateThingType Deprecates a thing type.
+     * You can not associate new things with deprecated thing type. You cannot update
+     * `ThingTypeProperties` if the thing type is deprecated.
+     *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
@@ -91,8 +104,10 @@ public interface CfnThingTypeProps {
     public fun deprecateThingType(deprecateThingType: Boolean)
 
     /**
-     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
-     * deprecated thing type.
+     * @param deprecateThingType Deprecates a thing type.
+     * You can not associate new things with deprecated thing type. You cannot update
+     * `ThingTypeProperties` if the thing type is deprecated.
+     *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
@@ -116,25 +131,25 @@ public interface CfnThingTypeProps {
 
     /**
      * @param thingTypeProperties The thing type properties for the thing type to create.
-     * It contains information about the new thing type including a description, and a list of
-     * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
-     * creation of the `ThingType` .
+     * It contains information about the new thing type including a description, a list of
+     * searchable thing attribute names, and a list of propagating attributes. After a thing type is
+     * created, you can only update `Mqtt5Configuration` .
      */
     public fun thingTypeProperties(thingTypeProperties: IResolvable)
 
     /**
      * @param thingTypeProperties The thing type properties for the thing type to create.
-     * It contains information about the new thing type including a description, and a list of
-     * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
-     * creation of the `ThingType` .
+     * It contains information about the new thing type including a description, a list of
+     * searchable thing attribute names, and a list of propagating attributes. After a thing type is
+     * created, you can only update `Mqtt5Configuration` .
      */
     public fun thingTypeProperties(thingTypeProperties: CfnThingType.ThingTypePropertiesProperty)
 
     /**
      * @param thingTypeProperties The thing type properties for the thing type to create.
-     * It contains information about the new thing type including a description, and a list of
-     * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
-     * creation of the `ThingType` .
+     * It contains information about the new thing type including a description, a list of
+     * searchable thing attribute names, and a list of propagating attributes. After a thing type is
+     * created, you can only update `Mqtt5Configuration` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96150f95bb0eda1f7dc38218b6cf02c2b0a973ea8a4001907c7e72a7e500f940")
@@ -147,8 +162,10 @@ public interface CfnThingTypeProps {
         software.amazon.awscdk.services.iot.CfnThingTypeProps.builder()
 
     /**
-     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
-     * deprecated thing type.
+     * @param deprecateThingType Deprecates a thing type.
+     * You can not associate new things with deprecated thing type. You cannot update
+     * `ThingTypeProperties` if the thing type is deprecated.
+     *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
@@ -158,8 +175,10 @@ public interface CfnThingTypeProps {
     }
 
     /**
-     * @param deprecateThingType Deprecates a thing type. You can not associate new things with
-     * deprecated thing type.
+     * @param deprecateThingType Deprecates a thing type.
+     * You can not associate new things with deprecated thing type. You cannot update
+     * `ThingTypeProperties` if the thing type is deprecated.
+     *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
      * action.
@@ -189,9 +208,9 @@ public interface CfnThingTypeProps {
 
     /**
      * @param thingTypeProperties The thing type properties for the thing type to create.
-     * It contains information about the new thing type including a description, and a list of
-     * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
-     * creation of the `ThingType` .
+     * It contains information about the new thing type including a description, a list of
+     * searchable thing attribute names, and a list of propagating attributes. After a thing type is
+     * created, you can only update `Mqtt5Configuration` .
      */
     override fun thingTypeProperties(thingTypeProperties: IResolvable) {
       cdkBuilder.thingTypeProperties(thingTypeProperties.let(IResolvable.Companion::unwrap))
@@ -199,9 +218,9 @@ public interface CfnThingTypeProps {
 
     /**
      * @param thingTypeProperties The thing type properties for the thing type to create.
-     * It contains information about the new thing type including a description, and a list of
-     * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
-     * creation of the `ThingType` .
+     * It contains information about the new thing type including a description, a list of
+     * searchable thing attribute names, and a list of propagating attributes. After a thing type is
+     * created, you can only update `Mqtt5Configuration` .
      */
     override
         fun thingTypeProperties(thingTypeProperties: CfnThingType.ThingTypePropertiesProperty) {
@@ -210,9 +229,9 @@ public interface CfnThingTypeProps {
 
     /**
      * @param thingTypeProperties The thing type properties for the thing type to create.
-     * It contains information about the new thing type including a description, and a list of
-     * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
-     * creation of the `ThingType` .
+     * It contains information about the new thing type including a description, a list of
+     * searchable thing attribute names, and a list of propagating attributes. After a thing type is
+     * created, you can only update `Mqtt5Configuration` .
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("96150f95bb0eda1f7dc38218b6cf02c2b0a973ea8a4001907c7e72a7e500f940")
@@ -228,7 +247,10 @@ public interface CfnThingTypeProps {
   ) : CdkObject(cdkObject),
       CfnThingTypeProps {
     /**
-     * Deprecates a thing type. You can not associate new things with deprecated thing type.
+     * Deprecates a thing type.
+     *
+     * You can not associate new things with deprecated thing type. You cannot update
+     * `ThingTypeProperties` if the thing type is deprecated.
      *
      * Requires permission to access the
      * [DeprecateThingType](https://docs.aws.amazon.com//service-authorization/latest/reference/list_awsiot.html#awsiot-actions-as-permissions)
@@ -255,9 +277,9 @@ public interface CfnThingTypeProps {
     /**
      * The thing type properties for the thing type to create.
      *
-     * It contains information about the new thing type including a description, and a list of
-     * searchable thing attribute names. `ThingTypeProperties` can't be updated after the initial
-     * creation of the `ThingType` .
+     * It contains information about the new thing type including a description, a list of
+     * searchable thing attribute names, and a list of propagating attributes. After a thing type is
+     * created, you can only update `Mqtt5Configuration` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-thingtype.html#cfn-iot-thingtype-thingtypeproperties)
      */

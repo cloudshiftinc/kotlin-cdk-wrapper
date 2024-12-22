@@ -16,47 +16,21 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // Build a data source for AppSync to access the database.
- * GraphqlApi api;
- * // Create username and password secret for DB Cluster
- * DatabaseSecret secret = DatabaseSecret.Builder.create(this, "AuroraSecret")
- * .username("clusteradmin")
- * .build();
- * // The VPC to place the cluster in
- * Vpc vpc = new Vpc(this, "AuroraVpc");
- * // Create the serverless cluster, provide all values needed to customise the database.
- * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "AuroraClusterV2")
- * .engine(DatabaseClusterEngine.auroraPostgres(AuroraPostgresClusterEngineProps.builder().version(AuroraPostgresEngineVersion.VER_15_5).build()))
- * .credentials(Map.of("username", "clusteradmin"))
- * .clusterIdentifier("db-endpoint-test")
- * .writer(ClusterInstance.serverlessV2("writer"))
- * .serverlessV2MinCapacity(2)
- * .serverlessV2MaxCapacity(10)
+ * Vpc vpc;
+ * DatabaseCluster cluster = DatabaseCluster.Builder.create(this, "Database")
+ * .engine(DatabaseClusterEngine.auroraPostgres(AuroraPostgresClusterEngineProps.builder().version(AuroraPostgresEngineVersion.VER_15_2).build()))
+ * .credentials(Credentials.fromUsername("adminuser",
+ * CredentialsFromUsernameOptions.builder().password(SecretValue.unsafePlainText("7959866cacc02c2d243ecfe177464fe6")).build()))
+ * .writer(ClusterInstance.provisioned("writer", ProvisionedClusterInstanceProps.builder()
+ * .publiclyAccessible(false)
+ * .build()))
+ * .readers(List.of(ClusterInstance.provisioned("reader")))
+ * .storageType(DBClusterStorageType.AURORA_IOPT1)
+ * .vpcSubnets(SubnetSelection.builder()
+ * .subnetType(SubnetType.PRIVATE_WITH_EGRESS)
+ * .build())
  * .vpc(vpc)
- * .defaultDatabaseName("demos")
- * .enableDataApi(true)
  * .build();
- * RdsDataSource rdsDS = api.addRdsDataSourceV2("rds", cluster, secret, "demos");
- * // Set up a resolver for an RDS query.
- * rdsDS.createResolver("QueryGetDemosRdsResolver", BaseResolverProps.builder()
- * .typeName("Query")
- * .fieldName("getDemosRds")
- * .requestMappingTemplate(MappingTemplate.fromString("\n  {\n    \"version\": \"2018-05-29\",\n   
- * \"statements\": [\n      \"SELECT * FROM demos\"\n    ]\n  }\n  "))
- * .responseMappingTemplate(MappingTemplate.fromString("\n   
- * $utils.toJson($utils.rds.toJsonObject($ctx.result)[0])\n  "))
- * .build());
- * // Set up a resolver for an RDS mutation.
- * rdsDS.createResolver("MutationAddDemoRdsResolver", BaseResolverProps.builder()
- * .typeName("Mutation")
- * .fieldName("addDemoRds")
- * .requestMappingTemplate(MappingTemplate.fromString("\n  {\n    \"version\": \"2018-05-29\",\n   
- * \"statements\": [\n      \"INSERT INTO demos VALUES (:id, :version)\",\n      \"SELECT * WHERE id =
- * :id\"\n    ],\n    \"variableMap\": {\n      \":id\": $util.toJson($util.autoId()),\n     
- * \":version\": $util.toJson($ctx.args.version)\n    }\n  }\n  "))
- * .responseMappingTemplate(MappingTemplate.fromString("\n   
- * $utils.toJson($utils.rds.toJsonObject($ctx.result)[1][0])\n  "))
- * .build());
  * ```
  */
 public open class AuroraPostgresEngineVersion(
@@ -194,6 +168,15 @@ public open class AuroraPostgresEngineVersion(
     public val VER_12_19: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_12_19)
 
+    public val VER_12_20: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_12_20)
+
+    public val VER_12_21: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_12_21)
+
+    public val VER_12_22: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_12_22)
+
     public val VER_12_4: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_12_4)
 
@@ -227,6 +210,15 @@ public open class AuroraPostgresEngineVersion(
     public val VER_13_15: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_13_15)
 
+    public val VER_13_16: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_13_16)
+
+    public val VER_13_17: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_13_17)
+
+    public val VER_13_18: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_13_18)
+
     public val VER_13_3: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_13_3)
 
@@ -257,6 +249,15 @@ public open class AuroraPostgresEngineVersion(
     public val VER_14_12: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_14_12)
 
+    public val VER_14_13: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_14_13)
+
+    public val VER_14_14: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_14_14)
+
+    public val VER_14_15: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_14_15)
+
     public val VER_14_3: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_14_3)
 
@@ -278,6 +279,9 @@ public open class AuroraPostgresEngineVersion(
     public val VER_14_9: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_14_9)
 
+    public val VER_15_10: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_15_10)
+
     public val VER_15_2: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_15_2)
 
@@ -296,6 +300,12 @@ public open class AuroraPostgresEngineVersion(
     public val VER_15_7: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_15_7)
 
+    public val VER_15_8: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_15_8)
+
+    public val VER_15_9: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_15_9)
+
     public val VER_16_0: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_16_0)
 
@@ -307,6 +317,24 @@ public open class AuroraPostgresEngineVersion(
 
     public val VER_16_3: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_16_3)
+
+    public val VER_16_4: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_16_4)
+
+    public val VER_16_4_LIMITLESS: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_16_4_LIMITLESS)
+
+    public val VER_16_5: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_16_5)
+
+    public val VER_16_6: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_16_6)
+
+    public val VER_17_1: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_17_1)
+
+    public val VER_17_2: AuroraPostgresEngineVersion =
+        AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_17_2)
 
     public val VER_9_6_11: AuroraPostgresEngineVersion =
         AuroraPostgresEngineVersion.wrap(software.amazon.awscdk.services.rds.AuroraPostgresEngineVersion.VER_9_6_11)

@@ -33,11 +33,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.amazonmq.*;
  * CfnConfiguration cfnConfiguration = CfnConfiguration.Builder.create(this, "MyCfnConfiguration")
- * .data("data")
  * .engineType("engineType")
  * .name("name")
  * // the properties below are optional
  * .authenticationStrategy("authenticationStrategy")
+ * .data("data")
  * .description("description")
  * .engineVersion("engineVersion")
  * .tags(List.of(TagsEntryProperty.builder()
@@ -106,7 +106,7 @@ public open class CfnConfiguration(
   /**
    * The base64-encoded XML configuration.
    */
-  public open fun `data`(): String = unwrap(this).getData()
+  public open fun `data`(): String? = unwrap(this).getData()
 
   /**
    * The base64-encoded XML configuration.

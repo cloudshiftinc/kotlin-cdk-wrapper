@@ -41,6 +41,12 @@ import kotlin.jvm.JvmName
  * .s3KeyPrefix("s3KeyPrefix")
  * .build())
  * .build())
+ * .placement(PlacementProperty.builder()
+ * .availabilityZone("availabilityZone")
+ * .hostId("hostId")
+ * .hostResourceGroupArn("hostResourceGroupArn")
+ * .tenancy("tenancy")
+ * .build())
  * .resourceTags(Map.of(
  * "resourceTagsKey", "resourceTags"))
  * .securityGroupIds(List.of("securityGroupIds"))
@@ -103,6 +109,14 @@ public interface CfnInfrastructureConfigurationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-name)
    */
   public fun name(): String
+
+  /**
+   * The instance placement settings that define where the instances that are launched from your
+   * image will run.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-placement)
+   */
+  public fun placement(): Any? = unwrap(this).getPlacement()
 
   /**
    * The tags attached to the resource created by Image Builder.
@@ -219,6 +233,27 @@ public interface CfnInfrastructureConfigurationProps {
      * @param name The name of the infrastructure configuration. 
      */
     public fun name(name: String)
+
+    /**
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run.
+     */
+    public fun placement(placement: IResolvable)
+
+    /**
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run.
+     */
+    public fun placement(placement: CfnInfrastructureConfiguration.PlacementProperty)
+
+    /**
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2236db51934879948d63f6c1281dc364beda4ad02d99deb45fd6b8635d11e343")
+    public
+        fun placement(placement: CfnInfrastructureConfiguration.PlacementProperty.Builder.() -> Unit)
 
     /**
      * @param resourceTags The tags attached to the resource created by Image Builder.
@@ -367,6 +402,32 @@ public interface CfnInfrastructureConfigurationProps {
     }
 
     /**
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run.
+     */
+    override fun placement(placement: IResolvable) {
+      cdkBuilder.placement(placement.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run.
+     */
+    override fun placement(placement: CfnInfrastructureConfiguration.PlacementProperty) {
+      cdkBuilder.placement(placement.let(CfnInfrastructureConfiguration.PlacementProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param placement The instance placement settings that define where the instances that are
+     * launched from your image will run.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2236db51934879948d63f6c1281dc364beda4ad02d99deb45fd6b8635d11e343")
+    override
+        fun placement(placement: CfnInfrastructureConfiguration.PlacementProperty.Builder.() -> Unit):
+        Unit = placement(CfnInfrastructureConfiguration.PlacementProperty(placement))
+
+    /**
      * @param resourceTags The tags attached to the resource created by Image Builder.
      */
     override fun resourceTags(resourceTags: IResolvable) {
@@ -488,6 +549,14 @@ public interface CfnInfrastructureConfigurationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The instance placement settings that define where the instances that are launched from your
+     * image will run.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-imagebuilder-infrastructureconfiguration.html#cfn-imagebuilder-infrastructureconfiguration-placement)
+     */
+    override fun placement(): Any? = unwrap(this).getPlacement()
 
     /**
      * The tags attached to the resource created by Image Builder.

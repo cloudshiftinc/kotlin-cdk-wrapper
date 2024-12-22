@@ -20,37 +20,34 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * // The code below shows an example of how to instantiate this type.
- * // The values are placeholders you should change.
- * import io.cloudshiftdev.awscdk.*;
- * import io.cloudshiftdev.awscdk.services.ec2.*;
- * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
- * INetworkLoadBalancerTarget networkLoadBalancerTarget;
  * Vpc vpc;
- * NetworkTargetGroupProps networkTargetGroupProps = NetworkTargetGroupProps.builder()
- * .port(123)
- * // the properties below are optional
- * .connectionTermination(false)
- * .deregistrationDelay(Duration.minutes(30))
- * .healthCheck(HealthCheck.builder()
- * .enabled(false)
- * .healthyGrpcCodes("healthyGrpcCodes")
- * .healthyHttpCodes("healthyHttpCodes")
- * .healthyThresholdCount(123)
- * .interval(Duration.minutes(30))
- * .path("path")
- * .port("port")
- * .protocol(Protocol.HTTP)
- * .timeout(Duration.minutes(30))
- * .unhealthyThresholdCount(123)
- * .build())
- * .preserveClientIp(false)
- * .protocol(Protocol.HTTP)
- * .proxyProtocolV2(false)
- * .targetGroupName("targetGroupName")
- * .targets(List.of(networkLoadBalancerTarget))
- * .targetType(TargetType.INSTANCE)
+ * ApplicationTargetGroup ipv4ApplicationTargetGroup = ApplicationTargetGroup.Builder.create(this,
+ * "IPv4ApplicationTargetGroup")
  * .vpc(vpc)
+ * .port(80)
+ * .targetType(TargetType.INSTANCE)
+ * .ipAddressType(TargetGroupIpAddressType.IPV4)
+ * .build();
+ * ApplicationTargetGroup ipv6ApplicationTargetGroup = ApplicationTargetGroup.Builder.create(this,
+ * "Ipv6ApplicationTargetGroup")
+ * .vpc(vpc)
+ * .port(80)
+ * .targetType(TargetType.INSTANCE)
+ * .ipAddressType(TargetGroupIpAddressType.IPV6)
+ * .build();
+ * NetworkTargetGroup ipv4NetworkTargetGroup = NetworkTargetGroup.Builder.create(this,
+ * "IPv4NetworkTargetGroup")
+ * .vpc(vpc)
+ * .port(80)
+ * .targetType(TargetType.INSTANCE)
+ * .ipAddressType(TargetGroupIpAddressType.IPV4)
+ * .build();
+ * NetworkTargetGroup ipv6NetworkTargetGroup = NetworkTargetGroup.Builder.create(this,
+ * "Ipv6NetworkTargetGroup")
+ * .vpc(vpc)
+ * .port(80)
+ * .targetType(TargetType.INSTANCE)
+ * .ipAddressType(TargetGroupIpAddressType.IPV6)
  * .build();
  * ```
  */
@@ -114,6 +111,11 @@ public interface NetworkTargetGroupProps : BaseTargetGroupProps {
     public fun connectionTermination(connectionTermination: Boolean)
 
     /**
+     * @param crossZoneEnabled Indicates whether cross zone load balancing is enabled.
+     */
+    public fun crossZoneEnabled(crossZoneEnabled: Boolean)
+
+    /**
      * @param deregistrationDelay The amount of time for Elastic Load Balancing to wait before
      * deregistering a target.
      * The range is 0-3600 seconds.
@@ -131,6 +133,12 @@ public interface NetworkTargetGroupProps : BaseTargetGroupProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("bb26c693e7afc0f4749d01b16763279b266d8c27ef88a19c2ee9bcf100330327")
     public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
+
+    /**
+     * @param ipAddressType The type of IP addresses of the targets registered with the target
+     * group.
+     */
+    public fun ipAddressType(ipAddressType: TargetGroupIpAddressType)
 
     /**
      * @param port The port on which the target receives traffic. 
@@ -205,6 +213,13 @@ public interface NetworkTargetGroupProps : BaseTargetGroupProps {
     }
 
     /**
+     * @param crossZoneEnabled Indicates whether cross zone load balancing is enabled.
+     */
+    override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
+      cdkBuilder.crossZoneEnabled(crossZoneEnabled)
+    }
+
+    /**
      * @param deregistrationDelay The amount of time for Elastic Load Balancing to wait before
      * deregistering a target.
      * The range is 0-3600 seconds.
@@ -227,6 +242,14 @@ public interface NetworkTargetGroupProps : BaseTargetGroupProps {
     @JvmName("bb26c693e7afc0f4749d01b16763279b266d8c27ef88a19c2ee9bcf100330327")
     override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
+
+    /**
+     * @param ipAddressType The type of IP addresses of the targets registered with the target
+     * group.
+     */
+    override fun ipAddressType(ipAddressType: TargetGroupIpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(TargetGroupIpAddressType.Companion::unwrap))
+    }
 
     /**
      * @param port The port on which the target receives traffic. 
@@ -321,6 +344,15 @@ public interface NetworkTargetGroupProps : BaseTargetGroupProps {
     override fun connectionTermination(): Boolean? = unwrap(this).getConnectionTermination()
 
     /**
+     * Indicates whether cross zone load balancing is enabled.
+     *
+     * Default: - use load balancer configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html)
+     */
+    override fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
+
+    /**
      * The amount of time for Elastic Load Balancing to wait before deregistering a target.
      *
      * The range is 0-3600 seconds.
@@ -339,6 +371,14 @@ public interface NetworkTargetGroupProps : BaseTargetGroupProps {
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#aws-resource-elasticloadbalancingv2-targetgroup-properties)
      */
     override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+
+    /**
+     * The type of IP addresses of the targets registered with the target group.
+     *
+     * Default: undefined - ELB defaults to IPv4
+     */
+    override fun ipAddressType(): TargetGroupIpAddressType? =
+        unwrap(this).getIpAddressType()?.let(TargetGroupIpAddressType::wrap)
 
     /**
      * The port on which the target receives traffic.

@@ -174,11 +174,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build())
  * .stat("stat")
  * // the properties below are optional
+ * .period(123)
  * .unit("unit")
  * .build())
+ * .period(123)
  * .returnData(false)
  * .build()))
  * .namespace("namespace")
+ * .period(123)
  * .statistic("statistic")
  * .unit("unit")
  * .build())
@@ -1103,11 +1106,14 @@ public open class CfnScalingPolicy(
    * .build())
    * .stat("stat")
    * // the properties below are optional
+   * .period(123)
    * .unit("unit")
    * .build())
+   * .period(123)
    * .returnData(false)
    * .build()))
    * .namespace("namespace")
+   * .period(123)
    * .statistic("statistic")
    * .unit("unit")
    * .build();
@@ -1154,6 +1160,19 @@ public open class CfnScalingPolicy(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
      */
     public fun namespace(): String? = unwrap(this).getNamespace()
+
+    /**
+     * The period of the metric in seconds.
+     *
+     * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric, set
+     * the value to less than 60. For more information, see [Create a target tracking policy using
+     * high-resolution metrics for faster
+     * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-period)
+     */
+    public fun period(): Number? = unwrap(this).getPeriod()
 
     /**
      * The statistic of the metric.
@@ -1234,6 +1253,16 @@ public open class CfnScalingPolicy(
        * @param namespace The namespace of the metric.
        */
       public fun namespace(namespace: String)
+
+      /**
+       * @param period The period of the metric in seconds.
+       * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric,
+       * set the value to less than 60. For more information, see [Create a target tracking policy
+       * using high-resolution metrics for faster
+       * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+       * .
+       */
+      public fun period(period: Number)
 
       /**
        * @param statistic The statistic of the metric.
@@ -1325,6 +1354,18 @@ public open class CfnScalingPolicy(
       }
 
       /**
+       * @param period The period of the metric in seconds.
+       * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric,
+       * set the value to less than 60. For more information, see [Create a target tracking policy
+       * using high-resolution metrics for faster
+       * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+       * .
+       */
+      override fun period(period: Number) {
+        cdkBuilder.period(period)
+      }
+
+      /**
        * @param statistic The statistic of the metric.
        */
       override fun statistic(statistic: String) {
@@ -1388,6 +1429,19 @@ public open class CfnScalingPolicy(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-namespace)
        */
       override fun namespace(): String? = unwrap(this).getNamespace()
+
+      /**
+       * The period of the metric in seconds.
+       *
+       * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric,
+       * set the value to less than 60. For more information, see [Create a target tracking policy
+       * using high-resolution metrics for faster
+       * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-customizedmetricspecification.html#cfn-autoscaling-scalingpolicy-customizedmetricspecification-period)
+       */
+      override fun period(): Number? = unwrap(this).getPeriod()
 
       /**
        * The statistic of the metric.
@@ -5150,11 +5204,14 @@ public open class CfnScalingPolicy(
    * .build())
    * .stat("stat")
    * // the properties below are optional
+   * .period(123)
    * .unit("unit")
    * .build())
+   * .period(123)
    * .returnData(false)
    * .build()))
    * .namespace("namespace")
+   * .period(123)
    * .statistic("statistic")
    * .unit("unit")
    * .build())
@@ -5470,8 +5527,11 @@ public open class CfnScalingPolicy(
    * performing a math expression on the values of returned metric statistics to create a new time
    * series. A time series is a series of data points, each of which is associated with a timestamp.
    *
-   * You can use `TargetTrackingMetricDataQuery` structures with a `PutScalingPolicy` operation when
-   * you specify a `TargetTrackingConfiguration` in the request.
+   * You can use `TargetTrackingMetricDataQuery` structures with a
+   * [PutScalingPolicy](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_PutScalingPolicy.html)
+   * operation when you specify a
+   * [TargetTrackingConfiguration](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_TargetTrackingConfiguration.html)
+   * in the request.
    *
    * You can call for a single metric or perform math expressions on multiple metrics. Any
    * expressions used in a metric specification must eventually return a single time series.
@@ -5505,8 +5565,10 @@ public open class CfnScalingPolicy(
    * .build())
    * .stat("stat")
    * // the properties below are optional
+   * .period(123)
    * .unit("unit")
    * .build())
+   * .period(123)
    * .returnData(false)
    * .build();
    * ```
@@ -5560,6 +5622,19 @@ public open class CfnScalingPolicy(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingmetricdataquery.html#cfn-autoscaling-scalingpolicy-targettrackingmetricdataquery-metricstat)
      */
     public fun metricStat(): Any? = unwrap(this).getMetricStat()
+
+    /**
+     * The period of the metric in seconds.
+     *
+     * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric, set
+     * the value to less than 60. For more information, see [Create a target tracking policy using
+     * high-resolution metrics for faster
+     * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingmetricdataquery.html#cfn-autoscaling-scalingpolicy-targettrackingmetricdataquery-period)
+     */
+    public fun period(): Number? = unwrap(this).getPeriod()
 
     /**
      * Indicates whether to return the timestamps and raw data values of this metric.
@@ -5630,6 +5705,16 @@ public open class CfnScalingPolicy(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("11f6218aea7a8b4148a7c87d3253ae417c9d055973eb7b70fbf2461603f086d9")
       public fun metricStat(metricStat: TargetTrackingMetricStatProperty.Builder.() -> Unit)
+
+      /**
+       * @param period The period of the metric in seconds.
+       * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric,
+       * set the value to less than 60. For more information, see [Create a target tracking policy
+       * using high-resolution metrics for faster
+       * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+       * .
+       */
+      public fun period(period: Number)
 
       /**
        * @param returnData Indicates whether to return the timestamps and raw data values of this
@@ -5725,6 +5810,18 @@ public open class CfnScalingPolicy(
           = metricStat(TargetTrackingMetricStatProperty(metricStat))
 
       /**
+       * @param period The period of the metric in seconds.
+       * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric,
+       * set the value to less than 60. For more information, see [Create a target tracking policy
+       * using high-resolution metrics for faster
+       * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+       * .
+       */
+      override fun period(period: Number) {
+        cdkBuilder.period(period)
+      }
+
+      /**
        * @param returnData Indicates whether to return the timestamps and raw data values of this
        * metric.
        * If you use any math expressions, specify `true` for this value for only the final math
@@ -5809,6 +5906,19 @@ public open class CfnScalingPolicy(
       override fun metricStat(): Any? = unwrap(this).getMetricStat()
 
       /**
+       * The period of the metric in seconds.
+       *
+       * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric,
+       * set the value to less than 60. For more information, see [Create a target tracking policy
+       * using high-resolution metrics for faster
+       * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingmetricdataquery.html#cfn-autoscaling-scalingpolicy-targettrackingmetricdataquery-period)
+       */
+      override fun period(): Number? = unwrap(this).getPeriod()
+
+      /**
        * Indicates whether to return the timestamps and raw data values of this metric.
        *
        * If you use any math expressions, specify `true` for this value for only the final math
@@ -5845,7 +5955,9 @@ public open class CfnScalingPolicy(
   /**
    * This structure defines the CloudWatch metric to return, along with the statistic and unit.
    *
-   * `TargetTrackingMetricStat` is a property of the `TargetTrackingMetricDataQuery` object.
+   * `TargetTrackingMetricStat` is a property of the
+   * [TargetTrackingMetricDataQuery](https://docs.aws.amazon.com/autoscaling/ec2/APIReference/API_TargetTrackingMetricDataQuery.html)
+   * object.
    *
    * For more information about the CloudWatch terminology below, see [Amazon CloudWatch
    * concepts](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/cloudwatch_concepts.html)
@@ -5870,6 +5982,7 @@ public open class CfnScalingPolicy(
    * .build())
    * .stat("stat")
    * // the properties below are optional
+   * .period(123)
    * .unit("unit")
    * .build();
    * ```
@@ -5883,6 +5996,19 @@ public open class CfnScalingPolicy(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingmetricstat.html#cfn-autoscaling-scalingpolicy-targettrackingmetricstat-metric)
      */
     public fun metric(): Any
+
+    /**
+     * The period of the metric in seconds.
+     *
+     * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric, set
+     * the value to less than 60. For more information, see [Create a target tracking policy using
+     * high-resolution metrics for faster
+     * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingmetricstat.html#cfn-autoscaling-scalingpolicy-targettrackingmetricstat-period)
+     */
+    public fun period(): Number? = unwrap(this).getPeriod()
 
     /**
      * The statistic to return.
@@ -5930,6 +6056,16 @@ public open class CfnScalingPolicy(
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("25d2515ccb2f5e33fd222e74a08ccb48818bbe9bfaf0e4cab712bf42fd8b58fb")
       public fun metric(metric: MetricProperty.Builder.() -> Unit)
+
+      /**
+       * @param period The period of the metric in seconds.
+       * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric,
+       * set the value to less than 60. For more information, see [Create a target tracking policy
+       * using high-resolution metrics for faster
+       * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+       * .
+       */
+      public fun period(period: Number)
 
       /**
        * @param stat The statistic to return. 
@@ -5980,6 +6116,18 @@ public open class CfnScalingPolicy(
           metric(MetricProperty(metric))
 
       /**
+       * @param period The period of the metric in seconds.
+       * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric,
+       * set the value to less than 60. For more information, see [Create a target tracking policy
+       * using high-resolution metrics for faster
+       * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+       * .
+       */
+      override fun period(period: Number) {
+        cdkBuilder.period(period)
+      }
+
+      /**
        * @param stat The statistic to return. 
        * It can include any CloudWatch statistic or extended statistic. For a list of valid values,
        * see the table in
@@ -6017,6 +6165,19 @@ public open class CfnScalingPolicy(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingmetricstat.html#cfn-autoscaling-scalingpolicy-targettrackingmetricstat-metric)
        */
       override fun metric(): Any = unwrap(this).getMetric()
+
+      /**
+       * The period of the metric in seconds.
+       *
+       * The default value is 60. Accepted values are 10, 30, and 60. For high resolution metric,
+       * set the value to less than 60. For more information, see [Create a target tracking policy
+       * using high-resolution metrics for faster
+       * response](https://docs.aws.amazon.com/autoscaling/ec2/userguide/policy-creating-high-resolution-metrics.html)
+       * .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-autoscaling-scalingpolicy-targettrackingmetricstat.html#cfn-autoscaling-scalingpolicy-targettrackingmetricstat-period)
+       */
+      override fun period(): Number? = unwrap(this).getPeriod()
 
       /**
        * The statistic to return.

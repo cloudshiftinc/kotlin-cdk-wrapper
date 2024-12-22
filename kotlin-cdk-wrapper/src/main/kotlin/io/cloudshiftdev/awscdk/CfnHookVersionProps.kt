@@ -35,7 +35,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnHookVersionProps {
   /**
-   * The Amazon Resource Name (ARN) of the task execution role that grants the hook permission.
+   * The Amazon Resource Name (ARN) of the task execution role that grants the Hook permission.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html#cfn-cloudformation-hookversion-executionrolearn)
    */
@@ -49,8 +49,8 @@ public interface CfnHookVersionProps {
   public fun loggingConfig(): Any? = unwrap(this).getLoggingConfig()
 
   /**
-   * A URL to the Amazon S3 bucket containing the hook project package that contains the necessary
-   * files for the hook you want to register.
+   * A URL to the Amazon S3 bucket containing the Hook project package that contains the necessary
+   * files for the Hook you want to register.
    *
    * For information on generating a schema handler package for the resource you want to register,
    * see
@@ -98,7 +98,7 @@ public interface CfnHookVersionProps {
   public interface Builder {
     /**
      * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that grants
-     * the hook permission.
+     * the Hook permission.
      */
     public fun executionRoleArn(executionRoleArn: String)
 
@@ -120,8 +120,8 @@ public interface CfnHookVersionProps {
     public fun loggingConfig(loggingConfig: CfnHookVersion.LoggingConfigProperty.Builder.() -> Unit)
 
     /**
-     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the hook project package
-     * that contains the necessary files for the hook you want to register. 
+     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the Hook project package
+     * that contains the necessary files for the Hook you want to register. 
      * For information on generating a schema handler package for the resource you want to register,
      * see
      * [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)
@@ -162,7 +162,7 @@ public interface CfnHookVersionProps {
 
     /**
      * @param executionRoleArn The Amazon Resource Name (ARN) of the task execution role that grants
-     * the hook permission.
+     * the Hook permission.
      */
     override fun executionRoleArn(executionRoleArn: String) {
       cdkBuilder.executionRoleArn(executionRoleArn)
@@ -192,8 +192,8 @@ public interface CfnHookVersionProps {
         Unit = loggingConfig(CfnHookVersion.LoggingConfigProperty(loggingConfig))
 
     /**
-     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the hook project package
-     * that contains the necessary files for the hook you want to register. 
+     * @param schemaHandlerPackage A URL to the Amazon S3 bucket containing the Hook project package
+     * that contains the necessary files for the Hook you want to register. 
      * For information on generating a schema handler package for the resource you want to register,
      * see
      * [submit](https://docs.aws.amazon.com/cloudformation-cli/latest/userguide/resource-type-cli-submit.html)
@@ -239,7 +239,7 @@ public interface CfnHookVersionProps {
   ) : CdkObject(cdkObject),
       CfnHookVersionProps {
     /**
-     * The Amazon Resource Name (ARN) of the task execution role that grants the hook permission.
+     * The Amazon Resource Name (ARN) of the task execution role that grants the Hook permission.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudformation-hookversion.html#cfn-cloudformation-hookversion-executionrolearn)
      */
@@ -253,8 +253,8 @@ public interface CfnHookVersionProps {
     override fun loggingConfig(): Any? = unwrap(this).getLoggingConfig()
 
     /**
-     * A URL to the Amazon S3 bucket containing the hook project package that contains the necessary
-     * files for the hook you want to register.
+     * A URL to the Amazon S3 bucket containing the Hook project package that contains the necessary
+     * files for the Hook you want to register.
      *
      * For information on generating a schema handler package for the resource you want to register,
      * see

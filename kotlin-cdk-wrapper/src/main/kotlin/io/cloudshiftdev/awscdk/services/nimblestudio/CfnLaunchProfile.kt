@@ -632,8 +632,6 @@ public open class CfnLaunchProfile(
      * After this point, Nimble Studio automatically terminates or stops the session. The default
      * length of time is 690 minutes, and the maximum length of time is 30 days.
      *
-     * Default: - 690
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html#cfn-nimblestudio-launchprofile-streamconfiguration-maxsessionlengthinminutes)
      */
     public fun maxSessionLengthInMinutes(): Number? = unwrap(this).getMaxSessionLengthInMinutes()
@@ -656,8 +654,6 @@ public open class CfnLaunchProfile(
      * `StopStreamingSession` to stop sessions in the `READY` state. If the time that a session stays
      * in the `READY` state exceeds the `maxSessionLengthInMinutes` value, the session will
      * automatically be stopped (instead of terminated).
-     *
-     * Default: - 0
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html#cfn-nimblestudio-launchprofile-streamconfiguration-maxstoppedsessionlengthinminutes)
      */
@@ -1074,8 +1070,6 @@ public open class CfnLaunchProfile(
        * After this point, Nimble Studio automatically terminates or stops the session. The default
        * length of time is 690 minutes, and the maximum length of time is 30 days.
        *
-       * Default: - 690
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html#cfn-nimblestudio-launchprofile-streamconfiguration-maxsessionlengthinminutes)
        */
       override fun maxSessionLengthInMinutes(): Number? =
@@ -1099,8 +1093,6 @@ public open class CfnLaunchProfile(
        * `StopStreamingSession` to stop sessions in the `READY` state. If the time that a session stays
        * in the `READY` state exceeds the `maxSessionLengthInMinutes` value, the session will
        * automatically be stopped (instead of terminated).
-       *
-       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfiguration.html#cfn-nimblestudio-launchprofile-streamconfiguration-maxstoppedsessionlengthinminutes)
        */
@@ -1190,8 +1182,6 @@ public open class CfnLaunchProfile(
      * The maximum number of backups that each streaming session created from this launch profile
      * can have.
      *
-     * Default: - 0
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-maxbackupstoretain)
      */
     public fun maxBackupsToRetain(): Number? = unwrap(this).getMaxBackupsToRetain()
@@ -1263,8 +1253,6 @@ public open class CfnLaunchProfile(
       /**
        * The maximum number of backups that each streaming session created from this launch profile
        * can have.
-       *
-       * Default: - 0
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-streamconfigurationsessionbackup.html#cfn-nimblestudio-launchprofile-streamconfigurationsessionbackup-maxbackupstoretain)
        */
@@ -1599,8 +1587,6 @@ public open class CfnLaunchProfile(
      * The number of I/O operations per second for the root volume that is attached to streaming
      * session.
      *
-     * Default: - 3000
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-iops)
      */
     public fun iops(): Number? = unwrap(this).getIops()
@@ -1610,8 +1596,6 @@ public open class CfnLaunchProfile(
      *
      * The root volume size is measured in GiBs.
      *
-     * Default: - 500
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-size)
      */
     public fun size(): Number? = unwrap(this).getSize()
@@ -1620,8 +1604,6 @@ public open class CfnLaunchProfile(
      * The throughput to provision for the root volume that is attached to the streaming session.
      *
      * The throughput is measured in MiB/s.
-     *
-     * Default: - 125
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-throughput)
      */
@@ -1696,8 +1678,6 @@ public open class CfnLaunchProfile(
        * The number of I/O operations per second for the root volume that is attached to streaming
        * session.
        *
-       * Default: - 3000
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-iops)
        */
       override fun iops(): Number? = unwrap(this).getIops()
@@ -1707,8 +1687,6 @@ public open class CfnLaunchProfile(
        *
        * The root volume size is measured in GiBs.
        *
-       * Default: - 500
-       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-size)
        */
       override fun size(): Number? = unwrap(this).getSize()
@@ -1717,8 +1695,6 @@ public open class CfnLaunchProfile(
        * The throughput to provision for the root volume that is attached to the streaming session.
        *
        * The throughput is measured in MiB/s.
-       *
-       * Default: - 125
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-nimblestudio-launchprofile-volumeconfiguration.html#cfn-nimblestudio-launchprofile-volumeconfiguration-throughput)
        */

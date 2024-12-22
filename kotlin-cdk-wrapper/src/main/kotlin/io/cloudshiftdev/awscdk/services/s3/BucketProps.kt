@@ -301,6 +301,21 @@ public interface BucketProps {
   public fun transferAcceleration(): Boolean? = unwrap(this).getTransferAcceleration()
 
   /**
+   * Indicates which default minimum object size behavior is applied to the lifecycle configuration.
+   *
+   * To customize the minimum object size for any transition you can add a filter that specifies a
+   * custom
+   * `objectSizeGreaterThan` or `objectSizeLessThan` for `lifecycleRules` property. Custom filters
+   * always
+   * take precedence over the default transition behavior.
+   *
+   * Default: - TransitionDefaultMinimumObjectSize.VARIES_BY_STORAGE_CLASS before September 2024,
+   * otherwise TransitionDefaultMinimumObjectSize.ALL_STORAGE_CLASSES_128_K.
+   */
+  public fun transitionDefaultMinimumObjectSize(): TransitionDefaultMinimumObjectSize? =
+      unwrap(this).getTransitionDefaultMinimumObjectSize()?.let(TransitionDefaultMinimumObjectSize::wrap)
+
+  /**
    * Whether this bucket should have versioning turned on or not.
    *
    * Default: false (unless object lock is enabled, then true)
@@ -547,6 +562,18 @@ public interface BucketProps {
      * or not.
      */
     public fun transferAcceleration(transferAcceleration: Boolean)
+
+    /**
+     * @param transitionDefaultMinimumObjectSize Indicates which default minimum object size
+     * behavior is applied to the lifecycle configuration.
+     * To customize the minimum object size for any transition you can add a filter that specifies a
+     * custom
+     * `objectSizeGreaterThan` or `objectSizeLessThan` for `lifecycleRules` property. Custom filters
+     * always
+     * take precedence over the default transition behavior.
+     */
+    public
+        fun transitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize: TransitionDefaultMinimumObjectSize)
 
     /**
      * @param versioned Whether this bucket should have versioning turned on or not.
@@ -855,6 +882,20 @@ public interface BucketProps {
      */
     override fun transferAcceleration(transferAcceleration: Boolean) {
       cdkBuilder.transferAcceleration(transferAcceleration)
+    }
+
+    /**
+     * @param transitionDefaultMinimumObjectSize Indicates which default minimum object size
+     * behavior is applied to the lifecycle configuration.
+     * To customize the minimum object size for any transition you can add a filter that specifies a
+     * custom
+     * `objectSizeGreaterThan` or `objectSizeLessThan` for `lifecycleRules` property. Custom filters
+     * always
+     * take precedence over the default transition behavior.
+     */
+    override
+        fun transitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize: TransitionDefaultMinimumObjectSize) {
+      cdkBuilder.transitionDefaultMinimumObjectSize(transitionDefaultMinimumObjectSize.let(TransitionDefaultMinimumObjectSize.Companion::unwrap))
     }
 
     /**
@@ -1189,6 +1230,22 @@ public interface BucketProps {
      * Default: false
      */
     override fun transferAcceleration(): Boolean? = unwrap(this).getTransferAcceleration()
+
+    /**
+     * Indicates which default minimum object size behavior is applied to the lifecycle
+     * configuration.
+     *
+     * To customize the minimum object size for any transition you can add a filter that specifies a
+     * custom
+     * `objectSizeGreaterThan` or `objectSizeLessThan` for `lifecycleRules` property. Custom filters
+     * always
+     * take precedence over the default transition behavior.
+     *
+     * Default: - TransitionDefaultMinimumObjectSize.VARIES_BY_STORAGE_CLASS before September 2024,
+     * otherwise TransitionDefaultMinimumObjectSize.ALL_STORAGE_CLASSES_128_K.
+     */
+    override fun transitionDefaultMinimumObjectSize(): TransitionDefaultMinimumObjectSize? =
+        unwrap(this).getTransitionDefaultMinimumObjectSize()?.let(TransitionDefaultMinimumObjectSize::wrap)
 
     /**
      * Whether this bucket should have versioning turned on or not.

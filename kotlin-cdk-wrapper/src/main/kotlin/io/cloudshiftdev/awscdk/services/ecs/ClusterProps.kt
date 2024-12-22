@@ -17,35 +17,25 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * Vpc vpc;
- * Cluster cluster = Cluster.Builder.create(this, "Cluster")
- * .vpc(vpc)
- * .build();
- * AutoScalingGroup autoScalingGroup = AutoScalingGroup.Builder.create(this, "ASG")
- * .vpc(vpc)
- * .instanceType(new InstanceType("t2.micro"))
- * .machineImage(EcsOptimizedImage.amazonLinux2())
- * .minCapacity(0)
- * .maxCapacity(100)
- * .build();
- * AsgCapacityProvider capacityProvider = AsgCapacityProvider.Builder.create(this,
- * "AsgCapacityProvider")
- * .autoScalingGroup(autoScalingGroup)
- * .instanceWarmupPeriod(300)
- * .build();
- * cluster.addAsgCapacityProvider(capacityProvider);
- * Ec2TaskDefinition taskDefinition = new Ec2TaskDefinition(this, "TaskDef");
- * taskDefinition.addContainer("web", ContainerDefinitionOptions.builder()
- * .image(ContainerImage.fromRegistry("amazon/amazon-ecs-sample"))
- * .memoryReservationMiB(256)
+ * IVpc vpc = Vpc.fromLookup(this, "Vpc", VpcLookupOptions.builder()
+ * .isDefault(true)
  * .build());
- * Ec2Service.Builder.create(this, "EC2Service")
+ * Cluster cluster = Cluster.Builder.create(this, "ECSCluster").vpc(vpc).build();
+ * TaskDefinition taskDefinition = TaskDefinition.Builder.create(this, "TD")
+ * .compatibility(Compatibility.FARGATE)
+ * .cpu("256")
+ * .memoryMiB("512")
+ * .build();
+ * taskDefinition.addContainer("TheContainer", ContainerDefinitionOptions.builder()
+ * .image(ContainerImage.fromRegistry("foo/bar"))
+ * .build());
+ * EcsRunTask runTask = EcsRunTask.Builder.create(this, "Run")
+ * .integrationPattern(IntegrationPattern.RUN_JOB)
  * .cluster(cluster)
  * .taskDefinition(taskDefinition)
- * .capacityProviderStrategies(List.of(CapacityProviderStrategy.builder()
- * .capacityProvider(capacityProvider.getCapacityProviderName())
- * .weight(1)
- * .build()))
+ * .launchTarget(new EcsFargateLaunchTarget())
+ * .cpu("1024")
+ * .memoryMiB("1048")
  * .build();
  * ```
  */
@@ -97,6 +87,14 @@ public interface ClusterProps {
    */
   public fun executeCommandConfiguration(): ExecuteCommandConfiguration? =
       unwrap(this).getExecuteCommandConfiguration()?.let(ExecuteCommandConfiguration::wrap)
+
+  /**
+   * Encryption configuration for ECS Managed storage.
+   *
+   * Default: - no encryption will be applied.
+   */
+  public fun managedStorageConfiguration(): ManagedStorageConfiguration? =
+      unwrap(this).getManagedStorageConfiguration()?.let(ManagedStorageConfiguration::wrap)
 
   /**
    * The VPC where your ECS instances will be running or your ENIs will be deployed.
@@ -163,6 +161,19 @@ public interface ClusterProps {
     @JvmName("7a84c57c81ae5d4feff639ad2768bf3ee1d0413198a625692cd77e859750443c")
     public
         fun executeCommandConfiguration(executeCommandConfiguration: ExecuteCommandConfiguration.Builder.() -> Unit)
+
+    /**
+     * @param managedStorageConfiguration Encryption configuration for ECS Managed storage.
+     */
+    public fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfiguration)
+
+    /**
+     * @param managedStorageConfiguration Encryption configuration for ECS Managed storage.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("51e62492ece1fa17d77dc0474719da2c9a0f2690613771ba91a6d40acf315bb9")
+    public
+        fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfiguration.Builder.() -> Unit)
 
     /**
      * @param vpc The VPC where your ECS instances will be running or your ENIs will be deployed.
@@ -245,6 +256,23 @@ public interface ClusterProps {
         Unit = executeCommandConfiguration(ExecuteCommandConfiguration(executeCommandConfiguration))
 
     /**
+     * @param managedStorageConfiguration Encryption configuration for ECS Managed storage.
+     */
+    override
+        fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfiguration) {
+      cdkBuilder.managedStorageConfiguration(managedStorageConfiguration.let(ManagedStorageConfiguration.Companion::unwrap))
+    }
+
+    /**
+     * @param managedStorageConfiguration Encryption configuration for ECS Managed storage.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("51e62492ece1fa17d77dc0474719da2c9a0f2690613771ba91a6d40acf315bb9")
+    override
+        fun managedStorageConfiguration(managedStorageConfiguration: ManagedStorageConfiguration.Builder.() -> Unit):
+        Unit = managedStorageConfiguration(ManagedStorageConfiguration(managedStorageConfiguration))
+
+    /**
      * @param vpc The VPC where your ECS instances will be running or your ENIs will be deployed.
      */
     override fun vpc(vpc: IVpc) {
@@ -305,6 +333,14 @@ public interface ClusterProps {
      */
     override fun executeCommandConfiguration(): ExecuteCommandConfiguration? =
         unwrap(this).getExecuteCommandConfiguration()?.let(ExecuteCommandConfiguration::wrap)
+
+    /**
+     * Encryption configuration for ECS Managed storage.
+     *
+     * Default: - no encryption will be applied.
+     */
+    override fun managedStorageConfiguration(): ManagedStorageConfiguration? =
+        unwrap(this).getManagedStorageConfiguration()?.let(ManagedStorageConfiguration::wrap)
 
     /**
      * The VPC where your ECS instances will be running or your ENIs will be deployed.

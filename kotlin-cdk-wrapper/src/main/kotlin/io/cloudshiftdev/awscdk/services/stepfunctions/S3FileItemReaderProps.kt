@@ -17,19 +17,30 @@ import kotlin.Unit
  *
  * ```
  * import io.cloudshiftdev.awscdk.services.s3.*;
- * // create a bucket
- * Bucket bucket = new Bucket(this, "Bucket");
- * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
+ * / **
+ * * Tree view of bucket:
+ * *  my-bucket
+ * *  |
+ * *  +--input.json
+ * *  |
+ * *  ...
+ * *
+ * * File content of input.json:
+ * *  [
+ * *    "item1",
+ * *    "item2"
+ * *  ]
+ * *&#47;
+ * Bucket bucket = Bucket.Builder.create(this, "Bucket")
+ * .bucketName("my-bucket")
+ * .build();
+ * DistributedMap distributedMap = DistributedMap.Builder.create(this, "DistributedMap")
  * .itemReader(S3JsonItemReader.Builder.create()
  * .bucket(bucket)
- * .key("my-key.json")
- * .build())
- * .resultWriter(ResultWriter.Builder.create()
- * .bucket(bucket)
- * .prefix("my-prefix")
+ * .key("input.json")
  * .build())
  * .build();
- * distributedMap.itemProcessor(new Pass(this, "Pass State"));
+ * distributedMap.itemProcessor(new Pass(this, "Pass"));
  * ```
  */
 public interface S3FileItemReaderProps : ItemReaderProps {
@@ -45,9 +56,15 @@ public interface S3FileItemReaderProps : ItemReaderProps {
   public interface Builder {
     /**
      * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
-     * over. 
+     * over.
      */
     public fun bucket(bucket: IBucket)
+
+    /**
+     * @param bucketNamePath S3 bucket name containing objects to iterate over or a file with a list
+     * to iterate over, as JsonPath.
+     */
+    public fun bucketNamePath(bucketNamePath: String)
 
     /**
      * @param key Key of file stored in S3 bucket containing an array to iterate over. 
@@ -67,10 +84,18 @@ public interface S3FileItemReaderProps : ItemReaderProps {
 
     /**
      * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
-     * over. 
+     * over.
      */
     override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
+    }
+
+    /**
+     * @param bucketNamePath S3 bucket name containing objects to iterate over or a file with a list
+     * to iterate over, as JsonPath.
+     */
+    override fun bucketNamePath(bucketNamePath: String) {
+      cdkBuilder.bucketNamePath(bucketNamePath)
     }
 
     /**
@@ -97,8 +122,22 @@ public interface S3FileItemReaderProps : ItemReaderProps {
       S3FileItemReaderProps {
     /**
      * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
+     *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucketNamePath)
      */
-    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket? = unwrap(this).getBucket()?.let(IBucket::wrap)
+
+    /**
+     * S3 bucket name containing objects to iterate over or a file with a list to iterate over, as
+     * JsonPath.
+     *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucket)
+     */
+    override fun bucketNamePath(): String? = unwrap(this).getBucketNamePath()
 
     /**
      * Key of file stored in S3 bucket containing an array to iterate over.

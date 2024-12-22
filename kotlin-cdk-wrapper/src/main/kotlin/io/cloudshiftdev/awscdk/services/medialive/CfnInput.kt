@@ -35,15 +35,28 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Object tags;
  * CfnInput cfnInput = CfnInput.Builder.create(this, "MyCfnInput")
  * .destinations(List.of(InputDestinationRequestProperty.builder()
+ * .network("network")
+ * .networkRoutes(List.of(InputRequestDestinationRouteProperty.builder()
+ * .cidr("cidr")
+ * .gateway("gateway")
+ * .build()))
+ * .staticIpAddress("staticIpAddress")
  * .streamName("streamName")
  * .build()))
  * .inputDevices(List.of(InputDeviceSettingsProperty.builder()
  * .id("id")
  * .build()))
+ * .inputNetworkLocation("inputNetworkLocation")
  * .inputSecurityGroups(List.of("inputSecurityGroups"))
  * .mediaConnectFlows(List.of(MediaConnectFlowRequestProperty.builder()
  * .flowArn("flowArn")
  * .build()))
+ * .multicastSettings(MulticastSettingsCreateRequestProperty.builder()
+ * .sources(List.of(MulticastSourceCreateRequestProperty.builder()
+ * .sourceIp("sourceIp")
+ * .url("url")
+ * .build()))
+ * .build())
  * .name("name")
  * .roleArn("roleArn")
  * .sources(List.of(InputSourceRequestProperty.builder()
@@ -178,6 +191,18 @@ public open class CfnInput(
   public open fun inputDevices(vararg `value`: Any): Unit = inputDevices(`value`.toList())
 
   /**
+   *
+   */
+  public open fun inputNetworkLocation(): String? = unwrap(this).getInputNetworkLocation()
+
+  /**
+   *
+   */
+  public open fun inputNetworkLocation(`value`: String) {
+    unwrap(this).setInputNetworkLocation(`value`)
+  }
+
+  /**
    * The list of input security groups (referenced by IDs) to attach to the input if the input is a
    * push type.
    */
@@ -231,6 +256,34 @@ public open class CfnInput(
    * Settings that apply only if the input is a MediaConnect input.
    */
   public open fun mediaConnectFlows(vararg `value`: Any): Unit = mediaConnectFlows(`value`.toList())
+
+  /**
+   *
+   */
+  public open fun multicastSettings(): Any? = unwrap(this).getMulticastSettings()
+
+  /**
+   *
+   */
+  public open fun multicastSettings(`value`: IResolvable) {
+    unwrap(this).setMulticastSettings(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  public open fun multicastSettings(`value`: MulticastSettingsCreateRequestProperty) {
+    unwrap(this).setMulticastSettings(`value`.let(MulticastSettingsCreateRequestProperty.Companion::unwrap))
+  }
+
+  /**
+   *
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("dfea0fc3b1f7c2811ae288163a3285fed32a8a6765b51be4cc5b9e91f1cba389")
+  public open
+      fun multicastSettings(`value`: MulticastSettingsCreateRequestProperty.Builder.() -> Unit):
+      Unit = multicastSettings(MulticastSettingsCreateRequestProperty(`value`))
 
   /**
    * A name for the input.
@@ -417,6 +470,12 @@ public open class CfnInput(
     public fun inputDevices(vararg inputDevices: Any)
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-inputnetworklocation)
+     * @param inputNetworkLocation 
+     */
+    public fun inputNetworkLocation(inputNetworkLocation: String)
+
+    /**
      * The list of input security groups (referenced by IDs) to attach to the input if the input is
      * a push type.
      *
@@ -459,6 +518,27 @@ public open class CfnInput(
      * @param mediaConnectFlows Settings that apply only if the input is a MediaConnect input. 
      */
     public fun mediaConnectFlows(vararg mediaConnectFlows: Any)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-multicastsettings)
+     * @param multicastSettings 
+     */
+    public fun multicastSettings(multicastSettings: IResolvable)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-multicastsettings)
+     * @param multicastSettings 
+     */
+    public fun multicastSettings(multicastSettings: MulticastSettingsCreateRequestProperty)
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-multicastsettings)
+     * @param multicastSettings 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5501623020c276f7455f5ee9a4d1d406d185c0cafa2c3a0c4f6aca7eb97acdb5")
+    public
+        fun multicastSettings(multicastSettings: MulticastSettingsCreateRequestProperty.Builder.() -> Unit)
 
     /**
      * A name for the input.
@@ -635,6 +715,14 @@ public open class CfnInput(
     override fun inputDevices(vararg inputDevices: Any): Unit = inputDevices(inputDevices.toList())
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-inputnetworklocation)
+     * @param inputNetworkLocation 
+     */
+    override fun inputNetworkLocation(inputNetworkLocation: String) {
+      cdkBuilder.inputNetworkLocation(inputNetworkLocation)
+    }
+
+    /**
      * The list of input security groups (referenced by IDs) to attach to the input if the input is
      * a push type.
      *
@@ -685,6 +773,32 @@ public open class CfnInput(
      */
     override fun mediaConnectFlows(vararg mediaConnectFlows: Any): Unit =
         mediaConnectFlows(mediaConnectFlows.toList())
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-multicastsettings)
+     * @param multicastSettings 
+     */
+    override fun multicastSettings(multicastSettings: IResolvable) {
+      cdkBuilder.multicastSettings(multicastSettings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-multicastsettings)
+     * @param multicastSettings 
+     */
+    override fun multicastSettings(multicastSettings: MulticastSettingsCreateRequestProperty) {
+      cdkBuilder.multicastSettings(multicastSettings.let(MulticastSettingsCreateRequestProperty.Companion::unwrap))
+    }
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-input.html#cfn-medialive-input-multicastsettings)
+     * @param multicastSettings 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("5501623020c276f7455f5ee9a4d1d406d185c0cafa2c3a0c4f6aca7eb97acdb5")
+    override
+        fun multicastSettings(multicastSettings: MulticastSettingsCreateRequestProperty.Builder.() -> Unit):
+        Unit = multicastSettings(MulticastSettingsCreateRequestProperty(multicastSettings))
 
     /**
      * A name for the input.
@@ -854,6 +968,12 @@ public open class CfnInput(
    * import io.cloudshiftdev.awscdk.services.medialive.*;
    * InputDestinationRequestProperty inputDestinationRequestProperty =
    * InputDestinationRequestProperty.builder()
+   * .network("network")
+   * .networkRoutes(List.of(InputRequestDestinationRouteProperty.builder()
+   * .cidr("cidr")
+   * .gateway("gateway")
+   * .build()))
+   * .staticIpAddress("staticIpAddress")
    * .streamName("streamName")
    * .build();
    * ```
@@ -861,6 +981,21 @@ public open class CfnInput(
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html)
    */
   public interface InputDestinationRequestProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-network)
+     */
+    public fun network(): String? = unwrap(this).getNetwork()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-networkroutes)
+     */
+    public fun networkRoutes(): Any? = unwrap(this).getNetworkRoutes()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-staticipaddress)
+     */
+    public fun staticIpAddress(): String? = unwrap(this).getStaticIpAddress()
+
     /**
      * The stream name (application name/application instance) for the location the RTMP source
      * content will be pushed to in MediaLive.
@@ -875,6 +1010,31 @@ public open class CfnInput(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param network the value to be set.
+       */
+      public fun network(network: String)
+
+      /**
+       * @param networkRoutes the value to be set.
+       */
+      public fun networkRoutes(networkRoutes: IResolvable)
+
+      /**
+       * @param networkRoutes the value to be set.
+       */
+      public fun networkRoutes(networkRoutes: List<Any>)
+
+      /**
+       * @param networkRoutes the value to be set.
+       */
+      public fun networkRoutes(vararg networkRoutes: Any)
+
+      /**
+       * @param staticIpAddress the value to be set.
+       */
+      public fun staticIpAddress(staticIpAddress: String)
+
+      /**
        * @param streamName The stream name (application name/application instance) for the location
        * the RTMP source content will be pushed to in MediaLive.
        */
@@ -886,6 +1046,40 @@ public open class CfnInput(
           software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty.Builder
           =
           software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty.builder()
+
+      /**
+       * @param network the value to be set.
+       */
+      override fun network(network: String) {
+        cdkBuilder.network(network)
+      }
+
+      /**
+       * @param networkRoutes the value to be set.
+       */
+      override fun networkRoutes(networkRoutes: IResolvable) {
+        cdkBuilder.networkRoutes(networkRoutes.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param networkRoutes the value to be set.
+       */
+      override fun networkRoutes(networkRoutes: List<Any>) {
+        cdkBuilder.networkRoutes(networkRoutes.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param networkRoutes the value to be set.
+       */
+      override fun networkRoutes(vararg networkRoutes: Any): Unit =
+          networkRoutes(networkRoutes.toList())
+
+      /**
+       * @param staticIpAddress the value to be set.
+       */
+      override fun staticIpAddress(staticIpAddress: String) {
+        cdkBuilder.staticIpAddress(staticIpAddress)
+      }
 
       /**
        * @param streamName The stream name (application name/application instance) for the location
@@ -904,6 +1098,21 @@ public open class CfnInput(
       cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputDestinationRequestProperty,
     ) : CdkObject(cdkObject),
         InputDestinationRequestProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-network)
+       */
+      override fun network(): String? = unwrap(this).getNetwork()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-networkroutes)
+       */
+      override fun networkRoutes(): Any? = unwrap(this).getNetworkRoutes()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputdestinationrequest.html#cfn-medialive-input-inputdestinationrequest-staticipaddress)
+       */
+      override fun staticIpAddress(): String? = unwrap(this).getStaticIpAddress()
+
       /**
        * The stream name (application name/application instance) for the location the RTMP source
        * content will be pushed to in MediaLive.
@@ -1088,6 +1297,108 @@ public open class CfnInput(
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnInput.InputDeviceSettingsProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * InputRequestDestinationRouteProperty inputRequestDestinationRouteProperty =
+   * InputRequestDestinationRouteProperty.builder()
+   * .cidr("cidr")
+   * .gateway("gateway")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputrequestdestinationroute.html)
+   */
+  public interface InputRequestDestinationRouteProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputrequestdestinationroute.html#cfn-medialive-input-inputrequestdestinationroute-cidr)
+     */
+    public fun cidr(): String? = unwrap(this).getCidr()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputrequestdestinationroute.html#cfn-medialive-input-inputrequestdestinationroute-gateway)
+     */
+    public fun gateway(): String? = unwrap(this).getGateway()
+
+    /**
+     * A builder for [InputRequestDestinationRouteProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cidr the value to be set.
+       */
+      public fun cidr(cidr: String)
+
+      /**
+       * @param gateway the value to be set.
+       */
+      public fun gateway(gateway: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.InputRequestDestinationRouteProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnInput.InputRequestDestinationRouteProperty.builder()
+
+      /**
+       * @param cidr the value to be set.
+       */
+      override fun cidr(cidr: String) {
+        cdkBuilder.cidr(cidr)
+      }
+
+      /**
+       * @param gateway the value to be set.
+       */
+      override fun gateway(gateway: String) {
+        cdkBuilder.gateway(gateway)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.InputRequestDestinationRouteProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputRequestDestinationRouteProperty,
+    ) : CdkObject(cdkObject),
+        InputRequestDestinationRouteProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputrequestdestinationroute.html#cfn-medialive-input-inputrequestdestinationroute-cidr)
+       */
+      override fun cidr(): String? = unwrap(this).getCidr()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-inputrequestdestinationroute.html#cfn-medialive-input-inputrequestdestinationroute-gateway)
+       */
+      override fun gateway(): String? = unwrap(this).getGateway()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          InputRequestDestinationRouteProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.InputRequestDestinationRouteProperty):
+          InputRequestDestinationRouteProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          InputRequestDestinationRouteProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: InputRequestDestinationRouteProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.InputRequestDestinationRouteProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.InputRequestDestinationRouteProperty
     }
   }
 
@@ -1487,6 +1798,212 @@ public open class CfnInput(
           software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty =
           (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.medialive.CfnInput.MediaConnectFlowRequestProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * MulticastSettingsCreateRequestProperty multicastSettingsCreateRequestProperty =
+   * MulticastSettingsCreateRequestProperty.builder()
+   * .sources(List.of(MulticastSourceCreateRequestProperty.builder()
+   * .sourceIp("sourceIp")
+   * .url("url")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-multicastsettingscreaterequest.html)
+   */
+  public interface MulticastSettingsCreateRequestProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-multicastsettingscreaterequest.html#cfn-medialive-input-multicastsettingscreaterequest-sources)
+     */
+    public fun sources(): Any? = unwrap(this).getSources()
+
+    /**
+     * A builder for [MulticastSettingsCreateRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sources the value to be set.
+       */
+      public fun sources(sources: IResolvable)
+
+      /**
+       * @param sources the value to be set.
+       */
+      public fun sources(sources: List<Any>)
+
+      /**
+       * @param sources the value to be set.
+       */
+      public fun sources(vararg sources: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSettingsCreateRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSettingsCreateRequestProperty.builder()
+
+      /**
+       * @param sources the value to be set.
+       */
+      override fun sources(sources: IResolvable) {
+        cdkBuilder.sources(sources.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param sources the value to be set.
+       */
+      override fun sources(sources: List<Any>) {
+        cdkBuilder.sources(sources.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param sources the value to be set.
+       */
+      override fun sources(vararg sources: Any): Unit = sources(sources.toList())
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSettingsCreateRequestProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.MulticastSettingsCreateRequestProperty,
+    ) : CdkObject(cdkObject),
+        MulticastSettingsCreateRequestProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-multicastsettingscreaterequest.html#cfn-medialive-input-multicastsettingscreaterequest-sources)
+       */
+      override fun sources(): Any? = unwrap(this).getSources()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MulticastSettingsCreateRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.MulticastSettingsCreateRequestProperty):
+          MulticastSettingsCreateRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MulticastSettingsCreateRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MulticastSettingsCreateRequestProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSettingsCreateRequestProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSettingsCreateRequestProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.medialive.*;
+   * MulticastSourceCreateRequestProperty multicastSourceCreateRequestProperty =
+   * MulticastSourceCreateRequestProperty.builder()
+   * .sourceIp("sourceIp")
+   * .url("url")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-multicastsourcecreaterequest.html)
+   */
+  public interface MulticastSourceCreateRequestProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-multicastsourcecreaterequest.html#cfn-medialive-input-multicastsourcecreaterequest-sourceip)
+     */
+    public fun sourceIp(): String? = unwrap(this).getSourceIp()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-multicastsourcecreaterequest.html#cfn-medialive-input-multicastsourcecreaterequest-url)
+     */
+    public fun url(): String? = unwrap(this).getUrl()
+
+    /**
+     * A builder for [MulticastSourceCreateRequestProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sourceIp the value to be set.
+       */
+      public fun sourceIp(sourceIp: String)
+
+      /**
+       * @param url the value to be set.
+       */
+      public fun url(url: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSourceCreateRequestProperty.Builder
+          =
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSourceCreateRequestProperty.builder()
+
+      /**
+       * @param sourceIp the value to be set.
+       */
+      override fun sourceIp(sourceIp: String) {
+        cdkBuilder.sourceIp(sourceIp)
+      }
+
+      /**
+       * @param url the value to be set.
+       */
+      override fun url(url: String) {
+        cdkBuilder.url(url)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSourceCreateRequestProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.medialive.CfnInput.MulticastSourceCreateRequestProperty,
+    ) : CdkObject(cdkObject),
+        MulticastSourceCreateRequestProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-multicastsourcecreaterequest.html#cfn-medialive-input-multicastsourcecreaterequest-sourceip)
+       */
+      override fun sourceIp(): String? = unwrap(this).getSourceIp()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-medialive-input-multicastsourcecreaterequest.html#cfn-medialive-input-multicastsourcecreaterequest-url)
+       */
+      override fun url(): String? = unwrap(this).getUrl()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          MulticastSourceCreateRequestProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.medialive.CfnInput.MulticastSourceCreateRequestProperty):
+          MulticastSourceCreateRequestProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          MulticastSourceCreateRequestProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: MulticastSourceCreateRequestProperty):
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSourceCreateRequestProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.medialive.CfnInput.MulticastSourceCreateRequestProperty
     }
   }
 

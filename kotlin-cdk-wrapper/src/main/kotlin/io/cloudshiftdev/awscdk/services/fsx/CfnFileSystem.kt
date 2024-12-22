@@ -54,6 +54,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .dataCompressionType("dataCompressionType")
  * .deploymentType("deploymentType")
  * .driveCacheType("driveCacheType")
+ * .efaEnabled(false)
  * .exportPath("exportPath")
  * .importedFileChunkSize(123)
  * .importPath("importPath")
@@ -96,6 +97,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .endpointIpAddressRange("endpointIpAddressRange")
  * .options(List.of("options"))
  * .preferredSubnetId("preferredSubnetId")
+ * .readCacheConfiguration(ReadCacheConfigurationProperty.builder()
+ * .sizeGiB(123)
+ * .sizingMode("sizingMode")
+ * .build())
  * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
  * .copyTagsToSnapshots(false)
  * .dataCompressionType("dataCompressionType")
@@ -394,16 +399,12 @@ public open class CfnFileSystem(
   }
 
   /**
-   * Sets the storage type for the file system that you're creating.
-   *
-   * Valid values are `SSD` and `HDD` .
+   * Sets the storage class for the file system that you're creating.
    */
   public open fun storageType(): String? = unwrap(this).getStorageType()
 
   /**
-   * Sets the storage type for the file system that you're creating.
-   *
-   * Valid values are `SSD` and `HDD` .
+   * Sets the storage class for the file system that you're creating.
    */
   public open fun storageType(`value`: String) {
     unwrap(this).setStorageType(`value`)
@@ -740,24 +741,29 @@ public open class CfnFileSystem(
     public fun storageCapacity(storageCapacity: Number)
 
     /**
-     * Sets the storage type for the file system that you're creating. Valid values are `SSD` and
-     * `HDD` .
+     * Sets the storage class for the file system that you're creating.
+     *
+     * Valid values are `SSD` , `HDD` , and `INTELLIGENT_TIERING` .
      *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
      * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
+     * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
+     * type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* and [Multiple storage
+     * in the *FSx for Windows File Server User Guide* , [Multiple storage
      * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* .
+     * *FSx for Lustre User Guide* , and [Working with
+     * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
+     * in the *Amazon FSx for OpenZFS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-storagetype)
-     * @param storageType Sets the storage type for the file system that you're creating. Valid
-     * values are `SSD` and `HDD` . 
+     * @param storageType Sets the storage class for the file system that you're creating. 
      */
     public fun storageType(storageType: String)
 
@@ -1161,24 +1167,29 @@ public open class CfnFileSystem(
     }
 
     /**
-     * Sets the storage type for the file system that you're creating. Valid values are `SSD` and
-     * `HDD` .
+     * Sets the storage class for the file system that you're creating.
+     *
+     * Valid values are `SSD` , `HDD` , and `INTELLIGENT_TIERING` .
      *
      * * Set to `SSD` to use solid state drive storage. SSD is supported on all Windows, Lustre,
      * ONTAP, and OpenZFS deployment types.
      * * Set to `HDD` to use hard disk drive storage. HDD is supported on `SINGLE_AZ_2` and
      * `MULTI_AZ_1` Windows file system deployment types, and on `PERSISTENT_1` Lustre file system
      * deployment types.
+     * * Set to `INTELLIGENT_TIERING` to use fully elastic, intelligently-tiered storage.
+     * Intelligent-Tiering is only available for OpenZFS file systems with the Multi-AZ deployment
+     * type.
      *
      * Default value is `SSD` . For more information, see [Storage type
      * options](https://docs.aws.amazon.com/fsx/latest/WindowsGuide/optimize-fsx-costs.html#storage-type-options)
-     * in the *FSx for Windows File Server User Guide* and [Multiple storage
+     * in the *FSx for Windows File Server User Guide* , [Multiple storage
      * options](https://docs.aws.amazon.com/fsx/latest/LustreGuide/what-is.html#storage-options) in the
-     * *FSx for Lustre User Guide* .
+     * *FSx for Lustre User Guide* , and [Working with
+     * Intelligent-Tiering](https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance-intelligent-tiering)
+     * in the *Amazon FSx for OpenZFS User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-fsx-filesystem.html#cfn-fsx-filesystem-storagetype)
-     * @param storageType Sets the storage type for the file system that you're creating. Valid
-     * values are `SSD` and `HDD` . 
+     * @param storageType Sets the storage class for the file system that you're creating. 
      */
     override fun storageType(storageType: String) {
       cdkBuilder.storageType(storageType)
@@ -1908,6 +1919,7 @@ public open class CfnFileSystem(
    * .dataCompressionType("dataCompressionType")
    * .deploymentType("deploymentType")
    * .driveCacheType("driveCacheType")
+   * .efaEnabled(false)
    * .exportPath("exportPath")
    * .importedFileChunkSize(123)
    * .importPath("importPath")
@@ -2064,6 +2076,11 @@ public open class CfnFileSystem(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-drivecachetype)
      */
     public fun driveCacheType(): String? = unwrap(this).getDriveCacheType()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-efaenabled)
+     */
+    public fun efaEnabled(): Any? = unwrap(this).getEfaEnabled()
 
     /**
      * (Optional) Specifies the path in the Amazon S3 bucket where the root of your Amazon FSx file
@@ -2307,6 +2324,16 @@ public open class CfnFileSystem(
        * `PERSISTENT_1` .
        */
       public fun driveCacheType(driveCacheType: String)
+
+      /**
+       * @param efaEnabled the value to be set.
+       */
+      public fun efaEnabled(efaEnabled: Boolean)
+
+      /**
+       * @param efaEnabled the value to be set.
+       */
+      public fun efaEnabled(efaEnabled: IResolvable)
 
       /**
        * @param exportPath (Optional) Specifies the path in the Amazon S3 bucket where the root of
@@ -2562,6 +2589,20 @@ public open class CfnFileSystem(
        */
       override fun driveCacheType(driveCacheType: String) {
         cdkBuilder.driveCacheType(driveCacheType)
+      }
+
+      /**
+       * @param efaEnabled the value to be set.
+       */
+      override fun efaEnabled(efaEnabled: Boolean) {
+        cdkBuilder.efaEnabled(efaEnabled)
+      }
+
+      /**
+       * @param efaEnabled the value to be set.
+       */
+      override fun efaEnabled(efaEnabled: IResolvable) {
+        cdkBuilder.efaEnabled(efaEnabled.let(IResolvable.Companion::unwrap))
       }
 
       /**
@@ -2826,6 +2867,11 @@ public open class CfnFileSystem(
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-drivecachetype)
        */
       override fun driveCacheType(): String? = unwrap(this).getDriveCacheType()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-lustreconfiguration.html#cfn-fsx-filesystem-lustreconfiguration-efaenabled)
+       */
+      override fun efaEnabled(): Any? = unwrap(this).getEfaEnabled()
 
       /**
        * (Optional) Specifies the path in the Amazon S3 bucket where the root of your Amazon FSx
@@ -4030,6 +4076,10 @@ public open class CfnFileSystem(
    * .endpointIpAddressRange("endpointIpAddressRange")
    * .options(List.of("options"))
    * .preferredSubnetId("preferredSubnetId")
+   * .readCacheConfiguration(ReadCacheConfigurationProperty.builder()
+   * .sizeGiB(123)
+   * .sizingMode("sizingMode")
+   * .build())
    * .rootVolumeConfiguration(RootVolumeConfigurationProperty.builder()
    * .copyTagsToSnapshots(false)
    * .dataCompressionType("dataCompressionType")
@@ -4174,6 +4224,11 @@ public open class CfnFileSystem(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-openzfsconfiguration.html#cfn-fsx-filesystem-openzfsconfiguration-preferredsubnetid)
      */
     public fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-openzfsconfiguration.html#cfn-fsx-filesystem-openzfsconfiguration-readcacheconfiguration)
+     */
+    public fun readCacheConfiguration(): Any? = unwrap(this).getReadCacheConfiguration()
 
     /**
      * The configuration Amazon FSx uses when creating the root value of the Amazon FSx for OpenZFS
@@ -4383,6 +4438,24 @@ public open class CfnFileSystem(
        * This specifies the subnet in which you want the preferred file server to be located.
        */
       public fun preferredSubnetId(preferredSubnetId: String)
+
+      /**
+       * @param readCacheConfiguration the value to be set.
+       */
+      public fun readCacheConfiguration(readCacheConfiguration: IResolvable)
+
+      /**
+       * @param readCacheConfiguration the value to be set.
+       */
+      public fun readCacheConfiguration(readCacheConfiguration: ReadCacheConfigurationProperty)
+
+      /**
+       * @param readCacheConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa52e1e86dd284e7a705961556a997d77f41728e5a90b20e5441db643303f691")
+      public
+          fun readCacheConfiguration(readCacheConfiguration: ReadCacheConfigurationProperty.Builder.() -> Unit)
 
       /**
        * @param rootVolumeConfiguration The configuration Amazon FSx uses when creating the root
@@ -4634,6 +4707,29 @@ public open class CfnFileSystem(
       }
 
       /**
+       * @param readCacheConfiguration the value to be set.
+       */
+      override fun readCacheConfiguration(readCacheConfiguration: IResolvable) {
+        cdkBuilder.readCacheConfiguration(readCacheConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param readCacheConfiguration the value to be set.
+       */
+      override fun readCacheConfiguration(readCacheConfiguration: ReadCacheConfigurationProperty) {
+        cdkBuilder.readCacheConfiguration(readCacheConfiguration.let(ReadCacheConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param readCacheConfiguration the value to be set.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("aa52e1e86dd284e7a705961556a997d77f41728e5a90b20e5441db643303f691")
+      override
+          fun readCacheConfiguration(readCacheConfiguration: ReadCacheConfigurationProperty.Builder.() -> Unit):
+          Unit = readCacheConfiguration(ReadCacheConfigurationProperty(readCacheConfiguration))
+
+      /**
        * @param rootVolumeConfiguration The configuration Amazon FSx uses when creating the root
        * value of the Amazon FSx for OpenZFS file system.
        * All volumes are children of the root volume.
@@ -4844,6 +4940,11 @@ public open class CfnFileSystem(
       override fun preferredSubnetId(): String? = unwrap(this).getPreferredSubnetId()
 
       /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-openzfsconfiguration.html#cfn-fsx-filesystem-openzfsconfiguration-readcacheconfiguration)
+       */
+      override fun readCacheConfiguration(): Any? = unwrap(this).getReadCacheConfiguration()
+
+      /**
        * The configuration Amazon FSx uses when creating the root value of the Amazon FSx for
        * OpenZFS file system.
        *
@@ -4914,6 +5015,106 @@ public open class CfnFileSystem(
           software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty = (wrapped
           as CdkObject).cdkObject as
           software.amazon.awscdk.services.fsx.CfnFileSystem.OpenZFSConfigurationProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.fsx.*;
+   * ReadCacheConfigurationProperty readCacheConfigurationProperty =
+   * ReadCacheConfigurationProperty.builder()
+   * .sizeGiB(123)
+   * .sizingMode("sizingMode")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-readcacheconfiguration.html)
+   */
+  public interface ReadCacheConfigurationProperty {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-readcacheconfiguration.html#cfn-fsx-filesystem-readcacheconfiguration-sizegib)
+     */
+    public fun sizeGiB(): Number? = unwrap(this).getSizeGiB()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-readcacheconfiguration.html#cfn-fsx-filesystem-readcacheconfiguration-sizingmode)
+     */
+    public fun sizingMode(): String? = unwrap(this).getSizingMode()
+
+    /**
+     * A builder for [ReadCacheConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param sizeGiB the value to be set.
+       */
+      public fun sizeGiB(sizeGiB: Number)
+
+      /**
+       * @param sizingMode the value to be set.
+       */
+      public fun sizingMode(sizingMode: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ReadCacheConfigurationProperty.Builder =
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ReadCacheConfigurationProperty.builder()
+
+      /**
+       * @param sizeGiB the value to be set.
+       */
+      override fun sizeGiB(sizeGiB: Number) {
+        cdkBuilder.sizeGiB(sizeGiB)
+      }
+
+      /**
+       * @param sizingMode the value to be set.
+       */
+      override fun sizingMode(sizingMode: String) {
+        cdkBuilder.sizingMode(sizingMode)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ReadCacheConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.ReadCacheConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        ReadCacheConfigurationProperty {
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-readcacheconfiguration.html#cfn-fsx-filesystem-readcacheconfiguration-sizegib)
+       */
+      override fun sizeGiB(): Number? = unwrap(this).getSizeGiB()
+
+      /**
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-fsx-filesystem-readcacheconfiguration.html#cfn-fsx-filesystem-readcacheconfiguration-sizingmode)
+       */
+      override fun sizingMode(): String? = unwrap(this).getSizingMode()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReadCacheConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.fsx.CfnFileSystem.ReadCacheConfigurationProperty):
+          ReadCacheConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          ReadCacheConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReadCacheConfigurationProperty):
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ReadCacheConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.fsx.CfnFileSystem.ReadCacheConfigurationProperty
     }
   }
 

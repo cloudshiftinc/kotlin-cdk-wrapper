@@ -5,6 +5,7 @@ package io.cloudshiftdev.awscdk.services.ec2
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Boolean
 import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
@@ -27,6 +28,14 @@ import kotlin.Unit
  * ```
  */
 public interface NatInstanceProps {
+  /**
+   * Whether to associate a public IP address to the primary network interface attached to this
+   * instance.
+   *
+   * Default: undefined - No public IP address associated
+   */
+  public fun associatePublicIpAddress(): Boolean? = unwrap(this).getAssociatePublicIpAddress()
+
   /**
    * Specifying the CPU credit type for burstable EC2 instance types (T2, T3, T3a, etc).
    *
@@ -147,6 +156,12 @@ public interface NatInstanceProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param associatePublicIpAddress Whether to associate a public IP address to the primary
+     * network interface attached to this instance.
+     */
+    public fun associatePublicIpAddress(associatePublicIpAddress: Boolean)
+
+    /**
      * @param creditSpecification Specifying the CPU credit type for burstable EC2 instance types
      * (T2, T3, T3a, etc).
      * The unlimited CPU credit option is not supported for T3 instances with dedicated host
@@ -221,6 +236,14 @@ public interface NatInstanceProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ec2.NatInstanceProps.Builder =
         software.amazon.awscdk.services.ec2.NatInstanceProps.builder()
+
+    /**
+     * @param associatePublicIpAddress Whether to associate a public IP address to the primary
+     * network interface attached to this instance.
+     */
+    override fun associatePublicIpAddress(associatePublicIpAddress: Boolean) {
+      cdkBuilder.associatePublicIpAddress(associatePublicIpAddress)
+    }
 
     /**
      * @param creditSpecification Specifying the CPU credit type for burstable EC2 instance types
@@ -316,6 +339,14 @@ public interface NatInstanceProps {
     cdkObject: software.amazon.awscdk.services.ec2.NatInstanceProps,
   ) : CdkObject(cdkObject),
       NatInstanceProps {
+    /**
+     * Whether to associate a public IP address to the primary network interface attached to this
+     * instance.
+     *
+     * Default: undefined - No public IP address associated
+     */
+    override fun associatePublicIpAddress(): Boolean? = unwrap(this).getAssociatePublicIpAddress()
+
     /**
      * Specifying the CPU credit type for burstable EC2 instance types (T2, T3, T3a, etc).
      *

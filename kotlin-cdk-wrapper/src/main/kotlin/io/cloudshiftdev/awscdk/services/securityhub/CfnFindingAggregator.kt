@@ -66,7 +66,9 @@ public open class CfnFindingAggregator(
   )
 
   /**
-   * The aggregation Region.
+   * The home Region.
+   *
+   * Findings generated in linked Regions are replicated and sent to the home Region.
    */
   public open fun attrFindingAggregationRegion(): String =
       unwrap(this).getAttrFindingAggregationRegion()
@@ -136,18 +138,17 @@ public open class CfnFindingAggregator(
      *
      * The selected option also determines how to use the Regions provided in the Regions list.
      *
-     * The options are as follows:
+     * In AWS CloudFormation , the options for this property are as follows:
      *
-     * * `ALL_REGIONS` - Aggregates findings from all of the Regions where Security Hub is enabled.
-     * When you choose this option, Security Hub also automatically aggregates findings from new
-     * Regions as Security Hub supports them and you opt into them.
-     * * `ALL_REGIONS_EXCEPT_SPECIFIED` - Aggregates findings from all of the Regions where Security
-     * Hub is enabled, except for the Regions listed in the `Regions` parameter. When you choose this
-     * option, Security Hub also automatically aggregates findings from new Regions as Security Hub
-     * supports them and you opt into them.
-     * * `SPECIFIED_REGIONS` - Aggregates findings only from the Regions listed in the `Regions`
-     * parameter. Security Hub does not automatically aggregate findings from new Regions.
-     * * `NO_REGIONS` - Aggregates no data because no Regions are selected as linked Regions.
+     * * `ALL_REGIONS` - Indicates to aggregate findings from all of the Regions where Security Hub
+     * is enabled. When you choose this option, Security Hub also automatically aggregates findings
+     * from new Regions as Security Hub supports them and you opt into them.
+     * * `ALL_REGIONS_EXCEPT_SPECIFIED` - Indicates to aggregate findings from all of the Regions
+     * where Security Hub is enabled, except for the Regions listed in the `Regions` parameter. When
+     * you choose this option, Security Hub also automatically aggregates findings from new Regions as
+     * Security Hub supports them and you opt into them.
+     * * `SPECIFIED_REGIONS` - Indicates to aggregate findings only from the Regions listed in the
+     * `Regions` parameter. Security Hub does not automatically aggregate findings from new Regions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-findingaggregator.html#cfn-securityhub-findingaggregator-regionlinkingmode)
      * @param regionLinkingMode Indicates whether to aggregate findings from all of the available
@@ -162,9 +163,6 @@ public open class CfnFindingAggregator(
      * If `RegionLinkingMode` is `SPECIFIED_REGIONS` , then this is a space-separated list of
      * Regions that do aggregate findings to the aggregation Region.
      *
-     * An `InvalidInputException` error results if you populate this field while `RegionLinkingMode`
-     * is `NO_REGIONS` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-findingaggregator.html#cfn-securityhub-findingaggregator-regions)
      * @param regions If `RegionLinkingMode` is `ALL_REGIONS_EXCEPT_SPECIFIED` , then this is a
      * space-separated list of Regions that do not aggregate findings to the aggregation Region. 
@@ -177,9 +175,6 @@ public open class CfnFindingAggregator(
      *
      * If `RegionLinkingMode` is `SPECIFIED_REGIONS` , then this is a space-separated list of
      * Regions that do aggregate findings to the aggregation Region.
-     *
-     * An `InvalidInputException` error results if you populate this field while `RegionLinkingMode`
-     * is `NO_REGIONS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-findingaggregator.html#cfn-securityhub-findingaggregator-regions)
      * @param regions If `RegionLinkingMode` is `ALL_REGIONS_EXCEPT_SPECIFIED` , then this is a
@@ -204,18 +199,17 @@ public open class CfnFindingAggregator(
      *
      * The selected option also determines how to use the Regions provided in the Regions list.
      *
-     * The options are as follows:
+     * In AWS CloudFormation , the options for this property are as follows:
      *
-     * * `ALL_REGIONS` - Aggregates findings from all of the Regions where Security Hub is enabled.
-     * When you choose this option, Security Hub also automatically aggregates findings from new
-     * Regions as Security Hub supports them and you opt into them.
-     * * `ALL_REGIONS_EXCEPT_SPECIFIED` - Aggregates findings from all of the Regions where Security
-     * Hub is enabled, except for the Regions listed in the `Regions` parameter. When you choose this
-     * option, Security Hub also automatically aggregates findings from new Regions as Security Hub
-     * supports them and you opt into them.
-     * * `SPECIFIED_REGIONS` - Aggregates findings only from the Regions listed in the `Regions`
-     * parameter. Security Hub does not automatically aggregate findings from new Regions.
-     * * `NO_REGIONS` - Aggregates no data because no Regions are selected as linked Regions.
+     * * `ALL_REGIONS` - Indicates to aggregate findings from all of the Regions where Security Hub
+     * is enabled. When you choose this option, Security Hub also automatically aggregates findings
+     * from new Regions as Security Hub supports them and you opt into them.
+     * * `ALL_REGIONS_EXCEPT_SPECIFIED` - Indicates to aggregate findings from all of the Regions
+     * where Security Hub is enabled, except for the Regions listed in the `Regions` parameter. When
+     * you choose this option, Security Hub also automatically aggregates findings from new Regions as
+     * Security Hub supports them and you opt into them.
+     * * `SPECIFIED_REGIONS` - Indicates to aggregate findings only from the Regions listed in the
+     * `Regions` parameter. Security Hub does not automatically aggregate findings from new Regions.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-findingaggregator.html#cfn-securityhub-findingaggregator-regionlinkingmode)
      * @param regionLinkingMode Indicates whether to aggregate findings from all of the available
@@ -232,9 +226,6 @@ public open class CfnFindingAggregator(
      * If `RegionLinkingMode` is `SPECIFIED_REGIONS` , then this is a space-separated list of
      * Regions that do aggregate findings to the aggregation Region.
      *
-     * An `InvalidInputException` error results if you populate this field while `RegionLinkingMode`
-     * is `NO_REGIONS` .
-     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-findingaggregator.html#cfn-securityhub-findingaggregator-regions)
      * @param regions If `RegionLinkingMode` is `ALL_REGIONS_EXCEPT_SPECIFIED` , then this is a
      * space-separated list of Regions that do not aggregate findings to the aggregation Region. 
@@ -249,9 +240,6 @@ public open class CfnFindingAggregator(
      *
      * If `RegionLinkingMode` is `SPECIFIED_REGIONS` , then this is a space-separated list of
      * Regions that do aggregate findings to the aggregation Region.
-     *
-     * An `InvalidInputException` error results if you populate this field while `RegionLinkingMode`
-     * is `NO_REGIONS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-securityhub-findingaggregator.html#cfn-securityhub-findingaggregator-regions)
      * @param regions If `RegionLinkingMode` is `ALL_REGIONS_EXCEPT_SPECIFIED` , then this is a

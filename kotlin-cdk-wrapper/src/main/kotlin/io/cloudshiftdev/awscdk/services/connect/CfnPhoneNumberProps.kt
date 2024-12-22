@@ -62,10 +62,10 @@ public interface CfnPhoneNumberProps {
 
   /**
    * The claimed phone number ARN that was previously imported from the external service, such as
-   * Amazon Pinpoint.
+   * AWS End User Messaging.
    *
-   * If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported from
-   * Amazon Pinpoint.
+   * If it is from AWS End User Messaging, it looks like the ARN of the phone number that was
+   * imported from AWS End User Messaging.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-phonenumber.html#cfn-connect-phonenumber-sourcephonenumberarn)
    */
@@ -119,9 +119,9 @@ public interface CfnPhoneNumberProps {
 
     /**
      * @param sourcePhoneNumberArn The claimed phone number ARN that was previously imported from
-     * the external service, such as Amazon Pinpoint.
-     * If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported
-     * from Amazon Pinpoint.
+     * the external service, such as AWS End User Messaging.
+     * If it is from AWS End User Messaging, it looks like the ARN of the phone number that was
+     * imported from AWS End User Messaging.
      */
     public fun sourcePhoneNumberArn(sourcePhoneNumberArn: String)
 
@@ -178,9 +178,9 @@ public interface CfnPhoneNumberProps {
 
     /**
      * @param sourcePhoneNumberArn The claimed phone number ARN that was previously imported from
-     * the external service, such as Amazon Pinpoint.
-     * If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported
-     * from Amazon Pinpoint.
+     * the external service, such as AWS End User Messaging.
+     * If it is from AWS End User Messaging, it looks like the ARN of the phone number that was
+     * imported from AWS End User Messaging.
      */
     override fun sourcePhoneNumberArn(sourcePhoneNumberArn: String) {
       cdkBuilder.sourcePhoneNumberArn(sourcePhoneNumberArn)
@@ -248,10 +248,10 @@ public interface CfnPhoneNumberProps {
 
     /**
      * The claimed phone number ARN that was previously imported from the external service, such as
-     * Amazon Pinpoint.
+     * AWS End User Messaging.
      *
-     * If it is from Amazon Pinpoint, it looks like the ARN of the phone number that was imported
-     * from Amazon Pinpoint.
+     * If it is from AWS End User Messaging, it looks like the ARN of the phone number that was
+     * imported from AWS End User Messaging.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-phonenumber.html#cfn-connect-phonenumber-sourcephonenumberarn)
      */

@@ -44,9 +44,15 @@ public interface CfnVPCEndpointProps {
    * The default endpoint policy allows full access to the service. Endpoint policies are supported
    * only for gateway and interface endpoints.
    *
-   * For CloudFormation templates in YAML, you can provide the policy in JSON or YAML format. AWS
-   * CloudFormation converts YAML policies to JSON format before calling the API to create or modify
-   * the VPC endpoint.
+   * For CloudFormation templates in YAML, you can provide the policy in JSON or YAML format. For
+   * example, if you have a JSON policy, you can convert it to YAML before including it in the YAML
+   * template, and AWS CloudFormation converts the policy to JSON format before calling the API actions
+   * for AWS PrivateLink . Alternatively, you can include the JSON directly in the YAML, as shown in
+   * the following `Properties` section:
+   *
+   * `Properties: VpcEndpointType: 'Interface' ServiceName: !Sub 'com.amazonaws.${AWS::Region}.logs'
+   * PolicyDocument: '{ "Version":"2012-10-17", "Statement": [{ "Effect":"Allow", "Principal":"*",
+   * "Action":["logs:Describe*","logs:Get*","logs:List*","logs:FilterLogEvents"], "Resource":"*" }] }'`
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument)
    */
@@ -135,9 +141,17 @@ public interface CfnVPCEndpointProps {
      * The default endpoint policy allows full access to the service. Endpoint policies are
      * supported only for gateway and interface endpoints.
      *
-     * For CloudFormation templates in YAML, you can provide the policy in JSON or YAML format. AWS
-     * CloudFormation converts YAML policies to JSON format before calling the API to create or modify
-     * the VPC endpoint.
+     * For CloudFormation templates in YAML, you can provide the policy in JSON or YAML format. For
+     * example, if you have a JSON policy, you can convert it to YAML before including it in the YAML
+     * template, and AWS CloudFormation converts the policy to JSON format before calling the API
+     * actions for AWS PrivateLink . Alternatively, you can include the JSON directly in the YAML, as
+     * shown in the following `Properties` section:
+     *
+     * `Properties: VpcEndpointType: 'Interface' ServiceName: !Sub
+     * 'com.amazonaws.${AWS::Region}.logs' PolicyDocument: '{ "Version":"2012-10-17", "Statement": [{
+     * "Effect":"Allow", "Principal":"*",
+     * "Action":["logs:Describe*","logs:Get*","logs:List*","logs:FilterLogEvents"], "Resource":"*" }]
+     * }'`
      */
     public fun policyDocument(policyDocument: Any)
 
@@ -247,9 +261,17 @@ public interface CfnVPCEndpointProps {
      * The default endpoint policy allows full access to the service. Endpoint policies are
      * supported only for gateway and interface endpoints.
      *
-     * For CloudFormation templates in YAML, you can provide the policy in JSON or YAML format. AWS
-     * CloudFormation converts YAML policies to JSON format before calling the API to create or modify
-     * the VPC endpoint.
+     * For CloudFormation templates in YAML, you can provide the policy in JSON or YAML format. For
+     * example, if you have a JSON policy, you can convert it to YAML before including it in the YAML
+     * template, and AWS CloudFormation converts the policy to JSON format before calling the API
+     * actions for AWS PrivateLink . Alternatively, you can include the JSON directly in the YAML, as
+     * shown in the following `Properties` section:
+     *
+     * `Properties: VpcEndpointType: 'Interface' ServiceName: !Sub
+     * 'com.amazonaws.${AWS::Region}.logs' PolicyDocument: '{ "Version":"2012-10-17", "Statement": [{
+     * "Effect":"Allow", "Principal":"*",
+     * "Action":["logs:Describe*","logs:Get*","logs:List*","logs:FilterLogEvents"], "Resource":"*" }]
+     * }'`
      */
     override fun policyDocument(policyDocument: Any) {
       cdkBuilder.policyDocument(policyDocument)
@@ -382,9 +404,17 @@ public interface CfnVPCEndpointProps {
      * The default endpoint policy allows full access to the service. Endpoint policies are
      * supported only for gateway and interface endpoints.
      *
-     * For CloudFormation templates in YAML, you can provide the policy in JSON or YAML format. AWS
-     * CloudFormation converts YAML policies to JSON format before calling the API to create or modify
-     * the VPC endpoint.
+     * For CloudFormation templates in YAML, you can provide the policy in JSON or YAML format. For
+     * example, if you have a JSON policy, you can convert it to YAML before including it in the YAML
+     * template, and AWS CloudFormation converts the policy to JSON format before calling the API
+     * actions for AWS PrivateLink . Alternatively, you can include the JSON directly in the YAML, as
+     * shown in the following `Properties` section:
+     *
+     * `Properties: VpcEndpointType: 'Interface' ServiceName: !Sub
+     * 'com.amazonaws.${AWS::Region}.logs' PolicyDocument: '{ "Version":"2012-10-17", "Statement": [{
+     * "Effect":"Allow", "Principal":"*",
+     * "Action":["logs:Describe*","logs:Get*","logs:List*","logs:FilterLogEvents"], "Resource":"*" }]
+     * }'`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-vpcendpoint.html#cfn-ec2-vpcendpoint-policydocument)
      */

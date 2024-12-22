@@ -28,7 +28,7 @@ import kotlin.Unit
  */
 public interface CfnHookDefaultVersionProps {
   /**
-   * The name of the hook.
+   * The name of the Hook.
    *
    * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
    *
@@ -60,7 +60,7 @@ public interface CfnHookDefaultVersionProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param typeName The name of the hook.
+     * @param typeName The name of the Hook.
      * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
      */
     public fun typeName(typeName: String)
@@ -84,7 +84,7 @@ public interface CfnHookDefaultVersionProps {
         software.amazon.awscdk.services.cloudformation.CfnHookDefaultVersionProps.builder()
 
     /**
-     * @param typeName The name of the hook.
+     * @param typeName The name of the Hook.
      * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
      */
     override fun typeName(typeName: String) {
@@ -116,7 +116,7 @@ public interface CfnHookDefaultVersionProps {
   ) : CdkObject(cdkObject),
       CfnHookDefaultVersionProps {
     /**
-     * The name of the hook.
+     * The name of the Hook.
      *
      * You must specify either `TypeVersionArn` , or `TypeName` and `VersionId` .
      *

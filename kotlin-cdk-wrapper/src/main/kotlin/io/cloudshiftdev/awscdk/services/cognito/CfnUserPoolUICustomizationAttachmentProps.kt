@@ -30,10 +30,10 @@ import kotlin.Unit
  */
 public interface CfnUserPoolUICustomizationAttachmentProps {
   /**
-   * The client ID for the client app.
+   * The app client ID for your UI customization.
    *
-   * You can specify the UI customization settings for a single client (with a specific clientId) or
-   * for all clients (by setting the clientId to `ALL` ).
+   * When this value isn't present, the customization applies to all user pool app clients that
+   * don't have client-level settings..
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-clientid)
    */
@@ -59,9 +59,9 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param clientId The client ID for the client app. 
-     * You can specify the UI customization settings for a single client (with a specific clientId)
-     * or for all clients (by setting the clientId to `ALL` ).
+     * @param clientId The app client ID for your UI customization. 
+     * When this value isn't present, the customization applies to all user pool app clients that
+     * don't have client-level settings..
      */
     public fun clientId(clientId: String)
 
@@ -82,9 +82,9 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
         software.amazon.awscdk.services.cognito.CfnUserPoolUICustomizationAttachmentProps.builder()
 
     /**
-     * @param clientId The client ID for the client app. 
-     * You can specify the UI customization settings for a single client (with a specific clientId)
-     * or for all clients (by setting the clientId to `ALL` ).
+     * @param clientId The app client ID for your UI customization. 
+     * When this value isn't present, the customization applies to all user pool app clients that
+     * don't have client-level settings..
      */
     override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
@@ -114,10 +114,10 @@ public interface CfnUserPoolUICustomizationAttachmentProps {
   ) : CdkObject(cdkObject),
       CfnUserPoolUICustomizationAttachmentProps {
     /**
-     * The client ID for the client app.
+     * The app client ID for your UI customization.
      *
-     * You can specify the UI customization settings for a single client (with a specific clientId)
-     * or for all clients (by setting the clientId to `ALL` ).
+     * When this value isn't present, the customization applies to all user pool app clients that
+     * don't have client-level settings..
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpooluicustomizationattachment.html#cfn-cognito-userpooluicustomizationattachment-clientid)
      */

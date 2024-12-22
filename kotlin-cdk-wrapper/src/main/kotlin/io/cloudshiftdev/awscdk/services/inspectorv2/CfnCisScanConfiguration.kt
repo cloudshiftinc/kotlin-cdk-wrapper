@@ -59,7 +59,6 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .securityLevel("securityLevel")
  * .targets(CisTargetsProperty.builder()
  * .accountIds(List.of("accountIds"))
- * // the properties below are optional
  * .targetResourceTags(Map.of(
  * "targetResourceTagsKey", List.of("targetResourceTags")))
  * .build())
@@ -422,7 +421,6 @@ public open class CfnCisScanConfiguration(
    * import io.cloudshiftdev.awscdk.services.inspectorv2.*;
    * CisTargetsProperty cisTargetsProperty = CisTargetsProperty.builder()
    * .accountIds(List.of("accountIds"))
-   * // the properties below are optional
    * .targetResourceTags(Map.of(
    * "targetResourceTagsKey", List.of("targetResourceTags")))
    * .build();
@@ -443,7 +441,7 @@ public open class CfnCisScanConfiguration(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-targetresourcetags)
      */
-    public fun targetResourceTags(): Any? = unwrap(this).getTargetResourceTags()
+    public fun targetResourceTags(): Any
 
     /**
      * A builder for [CisTargetsProperty]
@@ -461,12 +459,12 @@ public open class CfnCisScanConfiguration(
       public fun accountIds(vararg accountIds: String)
 
       /**
-       * @param targetResourceTags The CIS target resource tags.
+       * @param targetResourceTags The CIS target resource tags. 
        */
       public fun targetResourceTags(targetResourceTags: IResolvable)
 
       /**
-       * @param targetResourceTags The CIS target resource tags.
+       * @param targetResourceTags The CIS target resource tags. 
        */
       public fun targetResourceTags(targetResourceTags: Map<String, List<String>>)
     }
@@ -490,14 +488,14 @@ public open class CfnCisScanConfiguration(
       override fun accountIds(vararg accountIds: String): Unit = accountIds(accountIds.toList())
 
       /**
-       * @param targetResourceTags The CIS target resource tags.
+       * @param targetResourceTags The CIS target resource tags. 
        */
       override fun targetResourceTags(targetResourceTags: IResolvable) {
         cdkBuilder.targetResourceTags(targetResourceTags.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param targetResourceTags The CIS target resource tags.
+       * @param targetResourceTags The CIS target resource tags. 
        */
       override fun targetResourceTags(targetResourceTags: Map<String, List<String>>) {
         cdkBuilder.targetResourceTags(targetResourceTags)
@@ -524,7 +522,7 @@ public open class CfnCisScanConfiguration(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-inspectorv2-cisscanconfiguration-cistargets.html#cfn-inspectorv2-cisscanconfiguration-cistargets-targetresourcetags)
        */
-      override fun targetResourceTags(): Any? = unwrap(this).getTargetResourceTags()
+      override fun targetResourceTags(): Any = unwrap(this).getTargetResourceTags()
     }
 
     public companion object {

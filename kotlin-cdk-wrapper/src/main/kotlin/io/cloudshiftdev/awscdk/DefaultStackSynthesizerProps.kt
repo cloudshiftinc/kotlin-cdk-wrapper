@@ -19,7 +19,7 @@ import kotlin.collections.Map
  * ```
  * MyStack.Builder.create(app, "MyStack")
  * .synthesizer(DefaultStackSynthesizer.Builder.create()
- * .fileAssetsBucketName("my-orgs-asset-bucket")
+ * .fileAssetsBucketName("amzn-s3-demo-bucket")
  * .build())
  * .build();
  * ```

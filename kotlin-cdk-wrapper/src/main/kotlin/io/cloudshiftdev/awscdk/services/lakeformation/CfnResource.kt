@@ -63,7 +63,7 @@ public open class CfnResource(
   )
 
   /**
-   *
+   * An identifier for the catalog resource.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
 

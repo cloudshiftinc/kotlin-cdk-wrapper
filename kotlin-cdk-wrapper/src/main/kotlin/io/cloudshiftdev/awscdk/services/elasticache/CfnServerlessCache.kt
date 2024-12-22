@@ -453,7 +453,7 @@ public open class CfnServerlessCache(
      * The daily time that a cache snapshot will be created.
      *
      * Default is NULL, i.e. snapshots will not be created at a specific time on a daily basis.
-     * Available for Redis OSS and Serverless Memcached only.
+     * Available for Valkey, Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-dailysnapshottime)
      * @param dailySnapshotTime The daily time that a cache snapshot will be created. 
@@ -621,7 +621,7 @@ public open class CfnServerlessCache(
     /**
      * The current setting for the number of serverless cache snapshots the system will retain.
      *
-     * Available for Redis OSS and Serverless Memcached only.
+     * Available for Valkey, Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-snapshotretentionlimit)
      * @param snapshotRetentionLimit The current setting for the number of serverless cache
@@ -674,7 +674,7 @@ public open class CfnServerlessCache(
     /**
      * The identifier of the user group associated with the serverless cache.
      *
-     * Available for Redis OSS only. Default is NULL.
+     * Available for Valkey and Redis OSS only. Default is NULL.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-usergroupid)
      * @param userGroupId The identifier of the user group associated with the serverless cache. 
@@ -724,7 +724,7 @@ public open class CfnServerlessCache(
      * The daily time that a cache snapshot will be created.
      *
      * Default is NULL, i.e. snapshots will not be created at a specific time on a daily basis.
-     * Available for Redis OSS and Serverless Memcached only.
+     * Available for Valkey, Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-dailysnapshottime)
      * @param dailySnapshotTime The daily time that a cache snapshot will be created. 
@@ -922,7 +922,7 @@ public open class CfnServerlessCache(
     /**
      * The current setting for the number of serverless cache snapshots the system will retain.
      *
-     * Available for Redis OSS and Serverless Memcached only.
+     * Available for Valkey, Redis OSS and Serverless Memcached only.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-snapshotretentionlimit)
      * @param snapshotRetentionLimit The current setting for the number of serverless cache
@@ -981,7 +981,7 @@ public open class CfnServerlessCache(
     /**
      * The identifier of the user group associated with the serverless cache.
      *
-     * Available for Redis OSS only. Default is NULL.
+     * Available for Valkey and Redis OSS only. Default is NULL.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-serverlesscache.html#cfn-elasticache-serverlesscache-usergroupid)
      * @param userGroupId The identifier of the user group associated with the serverless cache. 

@@ -6,6 +6,7 @@ import io.cloudshiftdev.awscdk.CfnParameter
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Unit
 
 /**
@@ -17,11 +18,14 @@ import kotlin.Unit
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.*;
+ * import io.cloudshiftdev.awscdk.services.kms.*;
  * import io.cloudshiftdev.awscdk.services.lambda.*;
  * CfnParameter cfnParameter;
+ * Key key;
  * CfnParametersCodeProps cfnParametersCodeProps = CfnParametersCodeProps.builder()
  * .bucketNameParam(cfnParameter)
  * .objectKeyParam(cfnParameter)
+ * .sourceKMSKey(key)
  * .build();
  * ```
  */
@@ -49,6 +53,14 @@ public interface CfnParametersCodeProps {
       unwrap(this).getObjectKeyParam()?.let(CfnParameter::wrap)
 
   /**
+   * The ARN of the KMS key used to encrypt the handler code.
+   *
+   * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+   * used.
+   */
+  public fun sourceKMSKey(): IKey? = unwrap(this).getSourceKMSKey()?.let(IKey::wrap)
+
+  /**
    * A builder for [CfnParametersCodeProps]
    */
   @CdkDslMarker
@@ -66,6 +78,11 @@ public interface CfnParametersCodeProps {
      * Must be of type 'String'.
      */
     public fun objectKeyParam(objectKeyParam: CfnParameter)
+
+    /**
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code.
+     */
+    public fun sourceKmsKey(sourceKmsKey: IKey)
   }
 
   private class BuilderImpl : Builder {
@@ -88,6 +105,13 @@ public interface CfnParametersCodeProps {
      */
     override fun objectKeyParam(objectKeyParam: CfnParameter) {
       cdkBuilder.objectKeyParam(objectKeyParam.let(CfnParameter.Companion::unwrap))
+    }
+
+    /**
+     * @param sourceKmsKey The ARN of the KMS key used to encrypt the handler code.
+     */
+    override fun sourceKmsKey(sourceKmsKey: IKey) {
+      cdkBuilder.sourceKmsKey(sourceKmsKey.let(IKey.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.lambda.CfnParametersCodeProps =
@@ -119,6 +143,14 @@ public interface CfnParametersCodeProps {
      */
     override fun objectKeyParam(): CfnParameter? =
         unwrap(this).getObjectKeyParam()?.let(CfnParameter::wrap)
+
+    /**
+     * The ARN of the KMS key used to encrypt the handler code.
+     *
+     * Default: - the default server-side encryption with Amazon S3 managed keys(SSE-S3) key will be
+     * used.
+     */
+    override fun sourceKMSKey(): IKey? = unwrap(this).getSourceKMSKey()?.let(IKey::wrap)
   }
 
   public companion object {

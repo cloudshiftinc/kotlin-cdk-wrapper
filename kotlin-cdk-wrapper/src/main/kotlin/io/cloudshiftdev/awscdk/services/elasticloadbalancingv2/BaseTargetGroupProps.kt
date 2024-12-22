@@ -7,6 +7,7 @@ import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -24,6 +25,7 @@ import kotlin.jvm.JvmName
  * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
  * Vpc vpc;
  * BaseTargetGroupProps baseTargetGroupProps = BaseTargetGroupProps.builder()
+ * .crossZoneEnabled(false)
  * .deregistrationDelay(Duration.minutes(30))
  * .healthCheck(HealthCheck.builder()
  * .enabled(false)
@@ -37,6 +39,7 @@ import kotlin.jvm.JvmName
  * .timeout(Duration.minutes(30))
  * .unhealthyThresholdCount(123)
  * .build())
+ * .ipAddressType(TargetGroupIpAddressType.IPV4)
  * .targetGroupName("targetGroupName")
  * .targetType(TargetType.INSTANCE)
  * .vpc(vpc)
@@ -44,6 +47,15 @@ import kotlin.jvm.JvmName
  * ```
  */
 public interface BaseTargetGroupProps {
+  /**
+   * Indicates whether cross zone load balancing is enabled.
+   *
+   * Default: - use load balancer configuration
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html)
+   */
+  public fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
+
   /**
    * The amount of time for Elastic Load Balancing to wait before deregistering a target.
    *
@@ -63,6 +75,14 @@ public interface BaseTargetGroupProps {
    * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#aws-resource-elasticloadbalancingv2-targetgroup-properties)
    */
   public fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+
+  /**
+   * The type of IP addresses of the targets registered with the target group.
+   *
+   * Default: undefined - ELB defaults to IPv4
+   */
+  public fun ipAddressType(): TargetGroupIpAddressType? =
+      unwrap(this).getIpAddressType()?.let(TargetGroupIpAddressType::wrap)
 
   /**
    * The name of the target group.
@@ -101,6 +121,11 @@ public interface BaseTargetGroupProps {
   @CdkDslMarker
   public interface Builder {
     /**
+     * @param crossZoneEnabled Indicates whether cross zone load balancing is enabled.
+     */
+    public fun crossZoneEnabled(crossZoneEnabled: Boolean)
+
+    /**
      * @param deregistrationDelay The amount of time for Elastic Load Balancing to wait before
      * deregistering a target.
      * The range is 0-3600 seconds.
@@ -118,6 +143,12 @@ public interface BaseTargetGroupProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("d447c1fdbad8fa2df305155c089a3fbc348687a137ca99e8ba194481d957409e")
     public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
+
+    /**
+     * @param ipAddressType The type of IP addresses of the targets registered with the target
+     * group.
+     */
+    public fun ipAddressType(ipAddressType: TargetGroupIpAddressType)
 
     /**
      * @param targetGroupName The name of the target group.
@@ -148,6 +179,13 @@ public interface BaseTargetGroupProps {
         software.amazon.awscdk.services.elasticloadbalancingv2.BaseTargetGroupProps.builder()
 
     /**
+     * @param crossZoneEnabled Indicates whether cross zone load balancing is enabled.
+     */
+    override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
+      cdkBuilder.crossZoneEnabled(crossZoneEnabled)
+    }
+
+    /**
      * @param deregistrationDelay The amount of time for Elastic Load Balancing to wait before
      * deregistering a target.
      * The range is 0-3600 seconds.
@@ -170,6 +208,14 @@ public interface BaseTargetGroupProps {
     @JvmName("d447c1fdbad8fa2df305155c089a3fbc348687a137ca99e8ba194481d957409e")
     override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
+
+    /**
+     * @param ipAddressType The type of IP addresses of the targets registered with the target
+     * group.
+     */
+    override fun ipAddressType(ipAddressType: TargetGroupIpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(TargetGroupIpAddressType.Companion::unwrap))
+    }
 
     /**
      * @param targetGroupName The name of the target group.
@@ -208,6 +254,15 @@ public interface BaseTargetGroupProps {
   ) : CdkObject(cdkObject),
       BaseTargetGroupProps {
     /**
+     * Indicates whether cross zone load balancing is enabled.
+     *
+     * Default: - use load balancer configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html)
+     */
+    override fun crossZoneEnabled(): Boolean? = unwrap(this).getCrossZoneEnabled()
+
+    /**
      * The amount of time for Elastic Load Balancing to wait before deregistering a target.
      *
      * The range is 0-3600 seconds.
@@ -226,6 +281,14 @@ public interface BaseTargetGroupProps {
      * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticloadbalancingv2-targetgroup.html#aws-resource-elasticloadbalancingv2-targetgroup-properties)
      */
     override fun healthCheck(): HealthCheck? = unwrap(this).getHealthCheck()?.let(HealthCheck::wrap)
+
+    /**
+     * The type of IP addresses of the targets registered with the target group.
+     *
+     * Default: undefined - ELB defaults to IPv4
+     */
+    override fun ipAddressType(): TargetGroupIpAddressType? =
+        unwrap(this).getIpAddressType()?.let(TargetGroupIpAddressType::wrap)
 
     /**
      * The name of the target group.

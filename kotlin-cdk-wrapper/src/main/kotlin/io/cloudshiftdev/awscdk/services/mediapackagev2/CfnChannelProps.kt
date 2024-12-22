@@ -57,6 +57,17 @@ public interface CfnChannelProps {
   public fun description(): String? = unwrap(this).getDescription()
 
   /**
+   * The input type will be an immutable field which will be used to define whether the channel will
+   * allow CMAF ingest or HLS ingest.
+   *
+   * If unprovided, it will default to HLS to preserve current behavior.
+   *
+   * The allowed values are:
+   *
+   * * `HLS` - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+   * * `CMAF` - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional
+   * DASH manifests).
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputtype)
    */
   public fun inputType(): String? = unwrap(this).getInputType()
@@ -90,7 +101,15 @@ public interface CfnChannelProps {
     public fun description(description: String)
 
     /**
-     * @param inputType the value to be set.
+     * @param inputType The input type will be an immutable field which will be used to define
+     * whether the channel will allow CMAF ingest or HLS ingest.
+     * If unprovided, it will default to HLS to preserve current behavior.
+     *
+     * The allowed values are:
+     *
+     * * `HLS` - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * * `CMAF` - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional
+     * DASH manifests).
      */
     public fun inputType(inputType: String)
 
@@ -132,7 +151,15 @@ public interface CfnChannelProps {
     }
 
     /**
-     * @param inputType the value to be set.
+     * @param inputType The input type will be an immutable field which will be used to define
+     * whether the channel will allow CMAF ingest or HLS ingest.
+     * If unprovided, it will default to HLS to preserve current behavior.
+     *
+     * The allowed values are:
+     *
+     * * `HLS` - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * * `CMAF` - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional
+     * DASH manifests).
      */
     override fun inputType(inputType: String) {
       cdkBuilder.inputType(inputType)
@@ -180,6 +207,17 @@ public interface CfnChannelProps {
     override fun description(): String? = unwrap(this).getDescription()
 
     /**
+     * The input type will be an immutable field which will be used to define whether the channel
+     * will allow CMAF ingest or HLS ingest.
+     *
+     * If unprovided, it will default to HLS to preserve current behavior.
+     *
+     * The allowed values are:
+     *
+     * * `HLS` - The HLS streaming specification (which defines M3U8 manifests and TS segments).
+     * * `CMAF` - The DASH-IF CMAF Ingest specification (which defines CMAF segments with optional
+     * DASH manifests).
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-mediapackagev2-channel.html#cfn-mediapackagev2-channel-inputtype)
      */
     override fun inputType(): String? = unwrap(this).getInputType()

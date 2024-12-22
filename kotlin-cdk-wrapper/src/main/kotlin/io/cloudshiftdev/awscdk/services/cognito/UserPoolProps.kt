@@ -9,6 +9,7 @@ import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.iam.IRole
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import kotlin.Boolean
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.Map
@@ -42,10 +43,13 @@ public interface UserPoolProps {
       unwrap(this).getAccountRecovery()?.let(AccountRecovery::wrap)
 
   /**
-   * The user pool's Advanced Security Mode.
+   * (deprecated) The user pool's Advanced Security Mode.
    *
    * Default: - no value
+   *
+   * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
    */
+  @Deprecated(message = "deprecated in CDK")
   public fun advancedSecurityMode(): AdvancedSecurityMode? =
       unwrap(this).getAdvancedSecurityMode()?.let(AdvancedSecurityMode::wrap)
 
@@ -112,6 +116,18 @@ public interface UserPoolProps {
   public fun enableSmsRole(): Boolean? = unwrap(this).getEnableSmsRole()
 
   /**
+   * The user pool feature plan, or tier.
+   *
+   * This parameter determines the eligibility of the user pool for features like managed login,
+   * access-token customization, and threat protection.
+   *
+   * Default: - FeaturePlan.ESSENTIALS for a newly created user pool; FeaturePlan.LITE otherwise
+   *
+   * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-sign-in-feature-plans.html)
+   */
+  public fun featurePlan(): FeaturePlan? = unwrap(this).getFeaturePlan()?.let(FeaturePlan::wrap)
+
+  /**
    * Attributes which Cognito will look to handle changes to the value of your users' email address
    * and phone number attributes.
    *
@@ -153,8 +169,9 @@ public interface UserPoolProps {
    *
    * Ignored if `mfa` is set to `OFF`.
    *
-   * Default: - { sms: true, otp: false }, if `mfa` is set to `OPTIONAL` or `REQUIRED`.
-   * { sms: false, otp: false }, otherwise
+   * Default: - { sms: true, otp: false, email: false }, if `mfa` is set to `OPTIONAL` or
+   * `REQUIRED`.
+   * { sms: false, otp: false, email:false }, otherwise
    */
   public fun mfaSecondFactor(): MfaSecondFactor? =
       unwrap(this).getMfaSecondFactor()?.let(MfaSecondFactor::wrap)
@@ -291,7 +308,9 @@ public interface UserPoolProps {
 
     /**
      * @param advancedSecurityMode The user pool's Advanced Security Mode.
+     * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
      */
+    @Deprecated(message = "deprecated in CDK")
     public fun advancedSecurityMode(advancedSecurityMode: AdvancedSecurityMode)
 
     /**
@@ -351,6 +370,13 @@ public interface UserPoolProps {
      * not.
      */
     public fun enableSmsRole(enableSmsRole: Boolean)
+
+    /**
+     * @param featurePlan The user pool feature plan, or tier.
+     * This parameter determines the eligibility of the user pool for features like managed login,
+     * access-token customization, and threat protection.
+     */
+    public fun featurePlan(featurePlan: FeaturePlan)
 
     /**
      * @param keepOriginal Attributes which Cognito will look to handle changes to the value of your
@@ -551,7 +577,9 @@ public interface UserPoolProps {
 
     /**
      * @param advancedSecurityMode The user pool's Advanced Security Mode.
+     * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun advancedSecurityMode(advancedSecurityMode: AdvancedSecurityMode) {
       cdkBuilder.advancedSecurityMode(advancedSecurityMode.let(AdvancedSecurityMode.Companion::unwrap))
     }
@@ -628,6 +656,15 @@ public interface UserPoolProps {
      */
     override fun enableSmsRole(enableSmsRole: Boolean) {
       cdkBuilder.enableSmsRole(enableSmsRole)
+    }
+
+    /**
+     * @param featurePlan The user pool feature plan, or tier.
+     * This parameter determines the eligibility of the user pool for features like managed login,
+     * access-token customization, and threat protection.
+     */
+    override fun featurePlan(featurePlan: FeaturePlan) {
+      cdkBuilder.featurePlan(featurePlan.let(FeaturePlan.Companion::unwrap))
     }
 
     /**
@@ -873,10 +910,13 @@ public interface UserPoolProps {
         unwrap(this).getAccountRecovery()?.let(AccountRecovery::wrap)
 
     /**
-     * The user pool's Advanced Security Mode.
+     * (deprecated) The user pool's Advanced Security Mode.
      *
      * Default: - no value
+     *
+     * @deprecated Advanced Security Mode is deprecated in favor of user pool feature plans.
      */
+    @Deprecated(message = "deprecated in CDK")
     override fun advancedSecurityMode(): AdvancedSecurityMode? =
         unwrap(this).getAdvancedSecurityMode()?.let(AdvancedSecurityMode::wrap)
 
@@ -944,6 +984,18 @@ public interface UserPoolProps {
     override fun enableSmsRole(): Boolean? = unwrap(this).getEnableSmsRole()
 
     /**
+     * The user pool feature plan, or tier.
+     *
+     * This parameter determines the eligibility of the user pool for features like managed login,
+     * access-token customization, and threat protection.
+     *
+     * Default: - FeaturePlan.ESSENTIALS for a newly created user pool; FeaturePlan.LITE otherwise
+     *
+     * [Documentation](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-sign-in-feature-plans.html)
+     */
+    override fun featurePlan(): FeaturePlan? = unwrap(this).getFeaturePlan()?.let(FeaturePlan::wrap)
+
+    /**
      * Attributes which Cognito will look to handle changes to the value of your users' email
      * address and phone number attributes.
      *
@@ -985,8 +1037,9 @@ public interface UserPoolProps {
      *
      * Ignored if `mfa` is set to `OFF`.
      *
-     * Default: - { sms: true, otp: false }, if `mfa` is set to `OPTIONAL` or `REQUIRED`.
-     * { sms: false, otp: false }, otherwise
+     * Default: - { sms: true, otp: false, email: false }, if `mfa` is set to `OPTIONAL` or
+     * `REQUIRED`.
+     * { sms: false, otp: false, email:false }, otherwise
      */
     override fun mfaSecondFactor(): MfaSecondFactor? =
         unwrap(this).getMfaSecondFactor()?.let(MfaSecondFactor::wrap)

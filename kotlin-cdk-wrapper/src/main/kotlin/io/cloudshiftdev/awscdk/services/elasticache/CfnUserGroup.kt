@@ -16,9 +16,9 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * For Redis OSS engine version 6.0 onwards: Creates a Redis user group. For more information, see
- * [Using Role Based Access Control
- * (RBAC)](https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/Clusters.RBAC.html).
+ * For Valkey 7.2 and onwards, or Redis OSS 6.0 and onwards: Creates a user group. For more
+ * information, see [Using Role Based Access Control
+ * (RBAC)](https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/Clusters.RBAC.html).
  *
  * Example:
  *
@@ -74,12 +74,12 @@ public open class CfnUserGroup(
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
   /**
-   * The current supported value is redis.
+   * The current supported values are valkey and redis.
    */
   public open fun engine(): String = unwrap(this).getEngine()
 
   /**
-   * The current supported value is redis.
+   * The current supported values are valkey and redis.
    */
   public open fun engine(`value`: String) {
     unwrap(this).setEngine(`value`)
@@ -152,10 +152,10 @@ public open class CfnUserGroup(
   @CdkDslMarker
   public interface Builder {
     /**
-     * The current supported value is redis.
+     * The current supported values are valkey and redis.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-engine)
-     * @param engine The current supported value is redis. 
+     * @param engine The current supported values are valkey and redis. 
      */
     public fun engine(engine: String)
 
@@ -212,10 +212,10 @@ public open class CfnUserGroup(
         software.amazon.awscdk.services.elasticache.CfnUserGroup.Builder.create(scope, id)
 
     /**
-     * The current supported value is redis.
+     * The current supported values are valkey and redis.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-engine)
-     * @param engine The current supported value is redis. 
+     * @param engine The current supported values are valkey and redis. 
      */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)

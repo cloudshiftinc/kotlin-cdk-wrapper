@@ -29,6 +29,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * * Each network interface has a unique ID.
  * * The signal decoders are specified in the model manifest.
  *
+ * For more information, see [Decoder
+ * manifests](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/decoder-manifests.html)
+ * in the *AWS IoT FleetWise Developer Guide* .
+ *
+ *
+ * Access to certain AWS IoT FleetWise features is currently gated. For more information, see [AWS
+ * Region and feature
+ * availability](https://docs.aws.amazon.com/iot-fleetwise/latest/developerguide/fleetwise-regions.html)
+ * in the *AWS IoT FleetWise Developer Guide* .
+ *
+ *
  * Example:
  *
  * ```
@@ -40,6 +51,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .modelManifestArn("modelManifestArn")
  * .name("name")
  * // the properties below are optional
+ * .defaultForUnmappedSignals("defaultForUnmappedSignals")
  * .description("description")
  * .networkInterfaces(List.of(NetworkInterfacesItemsProperty.builder()
  * .interfaceId("interfaceId")
@@ -140,12 +152,24 @@ public open class CfnDecoderManifest(
   public open fun attrLastModificationTime(): String = unwrap(this).getAttrLastModificationTime()
 
   /**
-   * (Optional) A brief description of the decoder manifest.
+   * Use default decoders for all unmapped signals in the model.
+   */
+  public open fun defaultForUnmappedSignals(): String? = unwrap(this).getDefaultForUnmappedSignals()
+
+  /**
+   * Use default decoders for all unmapped signals in the model.
+   */
+  public open fun defaultForUnmappedSignals(`value`: String) {
+    unwrap(this).setDefaultForUnmappedSignals(`value`)
+  }
+
+  /**
+   * A brief description of the decoder manifest.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   * (Optional) A brief description of the decoder manifest.
+   * A brief description of the decoder manifest.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -187,60 +211,60 @@ public open class CfnDecoderManifest(
   }
 
   /**
-   * (Optional) A list of information about available network interfaces.
+   * A list of information about available network interfaces.
    */
   public open fun networkInterfaces(): Any? = unwrap(this).getNetworkInterfaces()
 
   /**
-   * (Optional) A list of information about available network interfaces.
+   * A list of information about available network interfaces.
    */
   public open fun networkInterfaces(`value`: IResolvable) {
     unwrap(this).setNetworkInterfaces(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * (Optional) A list of information about available network interfaces.
+   * A list of information about available network interfaces.
    */
   public open fun networkInterfaces(`value`: List<Any>) {
     unwrap(this).setNetworkInterfaces(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * (Optional) A list of information about available network interfaces.
+   * A list of information about available network interfaces.
    */
   public open fun networkInterfaces(vararg `value`: Any): Unit = networkInterfaces(`value`.toList())
 
   /**
-   * (Optional) A list of information about signal decoders.
+   * A list of information about signal decoders.
    */
   public open fun signalDecoders(): Any? = unwrap(this).getSignalDecoders()
 
   /**
-   * (Optional) A list of information about signal decoders.
+   * A list of information about signal decoders.
    */
   public open fun signalDecoders(`value`: IResolvable) {
     unwrap(this).setSignalDecoders(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * (Optional) A list of information about signal decoders.
+   * A list of information about signal decoders.
    */
   public open fun signalDecoders(`value`: List<Any>) {
     unwrap(this).setSignalDecoders(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * (Optional) A list of information about signal decoders.
+   * A list of information about signal decoders.
    */
   public open fun signalDecoders(vararg `value`: Any): Unit = signalDecoders(`value`.toList())
 
   /**
-   * (Optional) The state of the decoder manifest.
+   * The state of the decoder manifest.
    */
   public open fun status(): String? = unwrap(this).getStatus()
 
   /**
-   * (Optional) The state of the decoder manifest.
+   * The state of the decoder manifest.
    */
   public open fun status(`value`: String) {
     unwrap(this).setStatus(`value`)
@@ -252,20 +276,20 @@ public open class CfnDecoderManifest(
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
 
   /**
-   * (Optional) Metadata that can be used to manage the decoder manifest.
+   * Metadata that can be used to manage the decoder manifest.
    */
   public open fun tagsRaw(): List<CfnTag> = unwrap(this).getTagsRaw()?.map(CfnTag::wrap) ?:
       emptyList()
 
   /**
-   * (Optional) Metadata that can be used to manage the decoder manifest.
+   * Metadata that can be used to manage the decoder manifest.
    */
   public open fun tagsRaw(`value`: List<CfnTag>) {
     unwrap(this).setTagsRaw(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * (Optional) Metadata that can be used to manage the decoder manifest.
+   * Metadata that can be used to manage the decoder manifest.
    */
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
@@ -275,10 +299,20 @@ public open class CfnDecoderManifest(
   @CdkDslMarker
   public interface Builder {
     /**
-     * (Optional) A brief description of the decoder manifest.
+     * Use default decoders for all unmapped signals in the model.
+     *
+     * You don't need to provide any detailed decoding information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-defaultforunmappedsignals)
+     * @param defaultForUnmappedSignals Use default decoders for all unmapped signals in the model. 
+     */
+    public fun defaultForUnmappedSignals(defaultForUnmappedSignals: String)
+
+    /**
+     * A brief description of the decoder manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-description)
-     * @param description (Optional) A brief description of the decoder manifest. 
+     * @param description A brief description of the decoder manifest. 
      */
     public fun description(description: String)
 
@@ -301,58 +335,55 @@ public open class CfnDecoderManifest(
     public fun name(name: String)
 
     /**
-     * (Optional) A list of information about available network interfaces.
+     * A list of information about available network interfaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
-     * 
+     * @param networkInterfaces A list of information about available network interfaces. 
      */
     public fun networkInterfaces(networkInterfaces: IResolvable)
 
     /**
-     * (Optional) A list of information about available network interfaces.
+     * A list of information about available network interfaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
-     * 
+     * @param networkInterfaces A list of information about available network interfaces. 
      */
     public fun networkInterfaces(networkInterfaces: List<Any>)
 
     /**
-     * (Optional) A list of information about available network interfaces.
+     * A list of information about available network interfaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
-     * 
+     * @param networkInterfaces A list of information about available network interfaces. 
      */
     public fun networkInterfaces(vararg networkInterfaces: Any)
 
     /**
-     * (Optional) A list of information about signal decoders.
+     * A list of information about signal decoders.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
-     * @param signalDecoders (Optional) A list of information about signal decoders. 
+     * @param signalDecoders A list of information about signal decoders. 
      */
     public fun signalDecoders(signalDecoders: IResolvable)
 
     /**
-     * (Optional) A list of information about signal decoders.
+     * A list of information about signal decoders.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
-     * @param signalDecoders (Optional) A list of information about signal decoders. 
+     * @param signalDecoders A list of information about signal decoders. 
      */
     public fun signalDecoders(signalDecoders: List<Any>)
 
     /**
-     * (Optional) A list of information about signal decoders.
+     * A list of information about signal decoders.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
-     * @param signalDecoders (Optional) A list of information about signal decoders. 
+     * @param signalDecoders A list of information about signal decoders. 
      */
     public fun signalDecoders(vararg signalDecoders: Any)
 
     /**
-     * (Optional) The state of the decoder manifest.
+     * The state of the decoder manifest.
      *
      * If the status is `ACTIVE` , the decoder manifest can't be edited. If the status is marked
      * `DRAFT` , you can edit the decoder manifest.
@@ -360,23 +391,23 @@ public open class CfnDecoderManifest(
      * Default: - "DRAFT"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-status)
-     * @param status (Optional) The state of the decoder manifest. 
+     * @param status The state of the decoder manifest. 
      */
     public fun status(status: String)
 
     /**
-     * (Optional) Metadata that can be used to manage the decoder manifest.
+     * Metadata that can be used to manage the decoder manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-tags)
-     * @param tags (Optional) Metadata that can be used to manage the decoder manifest. 
+     * @param tags Metadata that can be used to manage the decoder manifest. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * (Optional) Metadata that can be used to manage the decoder manifest.
+     * Metadata that can be used to manage the decoder manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-tags)
-     * @param tags (Optional) Metadata that can be used to manage the decoder manifest. 
+     * @param tags Metadata that can be used to manage the decoder manifest. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -389,10 +420,22 @@ public open class CfnDecoderManifest(
         = software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.Builder.create(scope, id)
 
     /**
-     * (Optional) A brief description of the decoder manifest.
+     * Use default decoders for all unmapped signals in the model.
+     *
+     * You don't need to provide any detailed decoding information.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-defaultforunmappedsignals)
+     * @param defaultForUnmappedSignals Use default decoders for all unmapped signals in the model. 
+     */
+    override fun defaultForUnmappedSignals(defaultForUnmappedSignals: String) {
+      cdkBuilder.defaultForUnmappedSignals(defaultForUnmappedSignals)
+    }
+
+    /**
+     * A brief description of the decoder manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-description)
-     * @param description (Optional) A brief description of the decoder manifest. 
+     * @param description A brief description of the decoder manifest. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -421,68 +464,65 @@ public open class CfnDecoderManifest(
     }
 
     /**
-     * (Optional) A list of information about available network interfaces.
+     * A list of information about available network interfaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
-     * 
+     * @param networkInterfaces A list of information about available network interfaces. 
      */
     override fun networkInterfaces(networkInterfaces: IResolvable) {
       cdkBuilder.networkInterfaces(networkInterfaces.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * (Optional) A list of information about available network interfaces.
+     * A list of information about available network interfaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
-     * 
+     * @param networkInterfaces A list of information about available network interfaces. 
      */
     override fun networkInterfaces(networkInterfaces: List<Any>) {
       cdkBuilder.networkInterfaces(networkInterfaces.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * (Optional) A list of information about available network interfaces.
+     * A list of information about available network interfaces.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-networkinterfaces)
-     * @param networkInterfaces (Optional) A list of information about available network interfaces.
-     * 
+     * @param networkInterfaces A list of information about available network interfaces. 
      */
     override fun networkInterfaces(vararg networkInterfaces: Any): Unit =
         networkInterfaces(networkInterfaces.toList())
 
     /**
-     * (Optional) A list of information about signal decoders.
+     * A list of information about signal decoders.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
-     * @param signalDecoders (Optional) A list of information about signal decoders. 
+     * @param signalDecoders A list of information about signal decoders. 
      */
     override fun signalDecoders(signalDecoders: IResolvable) {
       cdkBuilder.signalDecoders(signalDecoders.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * (Optional) A list of information about signal decoders.
+     * A list of information about signal decoders.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
-     * @param signalDecoders (Optional) A list of information about signal decoders. 
+     * @param signalDecoders A list of information about signal decoders. 
      */
     override fun signalDecoders(signalDecoders: List<Any>) {
       cdkBuilder.signalDecoders(signalDecoders.map{CdkObjectWrappers.unwrap(it)})
     }
 
     /**
-     * (Optional) A list of information about signal decoders.
+     * A list of information about signal decoders.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-signaldecoders)
-     * @param signalDecoders (Optional) A list of information about signal decoders. 
+     * @param signalDecoders A list of information about signal decoders. 
      */
     override fun signalDecoders(vararg signalDecoders: Any): Unit =
         signalDecoders(signalDecoders.toList())
 
     /**
-     * (Optional) The state of the decoder manifest.
+     * The state of the decoder manifest.
      *
      * If the status is `ACTIVE` , the decoder manifest can't be edited. If the status is marked
      * `DRAFT` , you can edit the decoder manifest.
@@ -490,27 +530,27 @@ public open class CfnDecoderManifest(
      * Default: - "DRAFT"
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-status)
-     * @param status (Optional) The state of the decoder manifest. 
+     * @param status The state of the decoder manifest. 
      */
     override fun status(status: String) {
       cdkBuilder.status(status)
     }
 
     /**
-     * (Optional) Metadata that can be used to manage the decoder manifest.
+     * Metadata that can be used to manage the decoder manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-tags)
-     * @param tags (Optional) Metadata that can be used to manage the decoder manifest. 
+     * @param tags Metadata that can be used to manage the decoder manifest. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * (Optional) Metadata that can be used to manage the decoder manifest.
+     * Metadata that can be used to manage the decoder manifest.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iotfleetwise-decodermanifest.html#cfn-iotfleetwise-decodermanifest-tags)
-     * @param tags (Optional) Metadata that can be used to manage the decoder manifest. 
+     * @param tags Metadata that can be used to manage the decoder manifest. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -567,14 +607,14 @@ public open class CfnDecoderManifest(
     public fun name(): String
 
     /**
-     * (Optional) The name of the communication protocol for the interface.
+     * The name of the communication protocol for the interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-caninterface.html#cfn-iotfleetwise-decodermanifest-caninterface-protocolname)
      */
     public fun protocolName(): String? = unwrap(this).getProtocolName()
 
     /**
-     * (Optional) The version of the communication protocol for the interface.
+     * The version of the communication protocol for the interface.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-caninterface.html#cfn-iotfleetwise-decodermanifest-caninterface-protocolversion)
      */
@@ -591,13 +631,12 @@ public open class CfnDecoderManifest(
       public fun name(name: String)
 
       /**
-       * @param protocolName (Optional) The name of the communication protocol for the interface.
+       * @param protocolName The name of the communication protocol for the interface.
        */
       public fun protocolName(protocolName: String)
 
       /**
-       * @param protocolVersion (Optional) The version of the communication protocol for the
-       * interface.
+       * @param protocolVersion The version of the communication protocol for the interface.
        */
       public fun protocolVersion(protocolVersion: String)
     }
@@ -616,15 +655,14 @@ public open class CfnDecoderManifest(
       }
 
       /**
-       * @param protocolName (Optional) The name of the communication protocol for the interface.
+       * @param protocolName The name of the communication protocol for the interface.
        */
       override fun protocolName(protocolName: String) {
         cdkBuilder.protocolName(protocolName)
       }
 
       /**
-       * @param protocolVersion (Optional) The version of the communication protocol for the
-       * interface.
+       * @param protocolVersion The version of the communication protocol for the interface.
        */
       override fun protocolVersion(protocolVersion: String) {
         cdkBuilder.protocolVersion(protocolVersion)
@@ -647,14 +685,14 @@ public open class CfnDecoderManifest(
       override fun name(): String = unwrap(this).getName()
 
       /**
-       * (Optional) The name of the communication protocol for the interface.
+       * The name of the communication protocol for the interface.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-caninterface.html#cfn-iotfleetwise-decodermanifest-caninterface-protocolname)
        */
       override fun protocolName(): String? = unwrap(this).getProtocolName()
 
       /**
-       * (Optional) The version of the communication protocol for the interface.
+       * The version of the communication protocol for the interface.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-caninterface.html#cfn-iotfleetwise-decodermanifest-caninterface-protocolversion)
        */
@@ -1105,8 +1143,8 @@ public open class CfnDecoderManifest(
   }
 
   /**
-   * (Optional) Information about a single controller area network (CAN) signal and the messages it
-   * receives and transmits.
+   * Information about a single controller area network (CAN) signal and the messages it receives
+   * and transmits.
    *
    * Example:
    *
@@ -1166,7 +1204,7 @@ public open class CfnDecoderManifest(
     public fun messageId(): String
 
     /**
-     * (Optional) The name of the signal.
+     * The name of the signal.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-name)
      */
@@ -1219,7 +1257,7 @@ public open class CfnDecoderManifest(
       public fun messageId(messageId: String)
 
       /**
-       * @param name (Optional) The name of the signal.
+       * @param name The name of the signal.
        */
       public fun name(name: String)
 
@@ -1277,7 +1315,7 @@ public open class CfnDecoderManifest(
       }
 
       /**
-       * @param name (Optional) The name of the signal.
+       * @param name The name of the signal.
        */
       override fun name(name: String) {
         cdkBuilder.name(name)
@@ -1343,7 +1381,7 @@ public open class CfnDecoderManifest(
       override fun messageId(): String = unwrap(this).getMessageId()
 
       /**
-       * (Optional) The name of the signal.
+       * The name of the signal.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-cansignal.html#cfn-iotfleetwise-decodermanifest-cansignal-name)
        */
@@ -1385,7 +1423,7 @@ public open class CfnDecoderManifest(
   }
 
   /**
-   * (Optional) A list of information about available network interfaces.
+   * A list of information about available network interfaces.
    *
    * Example:
    *
@@ -1627,14 +1665,14 @@ public open class CfnDecoderManifest(
    */
   public interface ObdInterfaceProperty {
     /**
-     * (Optional) The maximum number message requests per diagnostic trouble code per second.
+     * The maximum number message requests per diagnostic trouble code per second.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-dtcrequestintervalseconds)
      */
     public fun dtcRequestIntervalSeconds(): String? = unwrap(this).getDtcRequestIntervalSeconds()
 
     /**
-     * (Optional) Whether the vehicle has a transmission control module (TCM).
+     * Whether the vehicle has a transmission control module (TCM).
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-hastransmissionecu)
      */
@@ -1648,14 +1686,14 @@ public open class CfnDecoderManifest(
     public fun name(): String
 
     /**
-     * (Optional) The standard OBD II PID.
+     * The standard OBD II PID.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-obdstandard)
      */
     public fun obdStandard(): String? = unwrap(this).getObdStandard()
 
     /**
-     * (Optional) The maximum number message requests per second.
+     * The maximum number message requests per second.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-pidrequestintervalseconds)
      */
@@ -1669,7 +1707,7 @@ public open class CfnDecoderManifest(
     public fun requestMessageId(): String
 
     /**
-     * (Optional) Whether to use extended IDs in the message.
+     * Whether to use extended IDs in the message.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-useextendedids)
      */
@@ -1681,14 +1719,13 @@ public open class CfnDecoderManifest(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param dtcRequestIntervalSeconds (Optional) The maximum number message requests per
-       * diagnostic trouble code per second.
+       * @param dtcRequestIntervalSeconds The maximum number message requests per diagnostic trouble
+       * code per second.
        */
       public fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String)
 
       /**
-       * @param hasTransmissionEcu (Optional) Whether the vehicle has a transmission control module
-       * (TCM).
+       * @param hasTransmissionEcu Whether the vehicle has a transmission control module (TCM).
        */
       public fun hasTransmissionEcu(hasTransmissionEcu: String)
 
@@ -1698,12 +1735,12 @@ public open class CfnDecoderManifest(
       public fun name(name: String)
 
       /**
-       * @param obdStandard (Optional) The standard OBD II PID.
+       * @param obdStandard The standard OBD II PID.
        */
       public fun obdStandard(obdStandard: String)
 
       /**
-       * @param pidRequestIntervalSeconds (Optional) The maximum number message requests per second.
+       * @param pidRequestIntervalSeconds The maximum number message requests per second.
        */
       public fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String)
 
@@ -1713,7 +1750,7 @@ public open class CfnDecoderManifest(
       public fun requestMessageId(requestMessageId: String)
 
       /**
-       * @param useExtendedIds (Optional) Whether to use extended IDs in the message.
+       * @param useExtendedIds Whether to use extended IDs in the message.
        */
       public fun useExtendedIds(useExtendedIds: String)
     }
@@ -1725,16 +1762,15 @@ public open class CfnDecoderManifest(
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdInterfaceProperty.builder()
 
       /**
-       * @param dtcRequestIntervalSeconds (Optional) The maximum number message requests per
-       * diagnostic trouble code per second.
+       * @param dtcRequestIntervalSeconds The maximum number message requests per diagnostic trouble
+       * code per second.
        */
       override fun dtcRequestIntervalSeconds(dtcRequestIntervalSeconds: String) {
         cdkBuilder.dtcRequestIntervalSeconds(dtcRequestIntervalSeconds)
       }
 
       /**
-       * @param hasTransmissionEcu (Optional) Whether the vehicle has a transmission control module
-       * (TCM).
+       * @param hasTransmissionEcu Whether the vehicle has a transmission control module (TCM).
        */
       override fun hasTransmissionEcu(hasTransmissionEcu: String) {
         cdkBuilder.hasTransmissionEcu(hasTransmissionEcu)
@@ -1748,14 +1784,14 @@ public open class CfnDecoderManifest(
       }
 
       /**
-       * @param obdStandard (Optional) The standard OBD II PID.
+       * @param obdStandard The standard OBD II PID.
        */
       override fun obdStandard(obdStandard: String) {
         cdkBuilder.obdStandard(obdStandard)
       }
 
       /**
-       * @param pidRequestIntervalSeconds (Optional) The maximum number message requests per second.
+       * @param pidRequestIntervalSeconds The maximum number message requests per second.
        */
       override fun pidRequestIntervalSeconds(pidRequestIntervalSeconds: String) {
         cdkBuilder.pidRequestIntervalSeconds(pidRequestIntervalSeconds)
@@ -1769,7 +1805,7 @@ public open class CfnDecoderManifest(
       }
 
       /**
-       * @param useExtendedIds (Optional) Whether to use extended IDs in the message.
+       * @param useExtendedIds Whether to use extended IDs in the message.
        */
       override fun useExtendedIds(useExtendedIds: String) {
         cdkBuilder.useExtendedIds(useExtendedIds)
@@ -1785,7 +1821,7 @@ public open class CfnDecoderManifest(
     ) : CdkObject(cdkObject),
         ObdInterfaceProperty {
       /**
-       * (Optional) The maximum number message requests per diagnostic trouble code per second.
+       * The maximum number message requests per diagnostic trouble code per second.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-dtcrequestintervalseconds)
        */
@@ -1793,7 +1829,7 @@ public open class CfnDecoderManifest(
           unwrap(this).getDtcRequestIntervalSeconds()
 
       /**
-       * (Optional) Whether the vehicle has a transmission control module (TCM).
+       * Whether the vehicle has a transmission control module (TCM).
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-hastransmissionecu)
        */
@@ -1807,14 +1843,14 @@ public open class CfnDecoderManifest(
       override fun name(): String = unwrap(this).getName()
 
       /**
-       * (Optional) The standard OBD II PID.
+       * The standard OBD II PID.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-obdstandard)
        */
       override fun obdStandard(): String? = unwrap(this).getObdStandard()
 
       /**
-       * (Optional) The maximum number message requests per second.
+       * The maximum number message requests per second.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-pidrequestintervalseconds)
        */
@@ -1829,7 +1865,7 @@ public open class CfnDecoderManifest(
       override fun requestMessageId(): String = unwrap(this).getRequestMessageId()
 
       /**
-       * (Optional) Whether to use extended IDs in the message.
+       * Whether to use extended IDs in the message.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdinterface.html#cfn-iotfleetwise-decodermanifest-obdinterface-useextendedids)
        */
@@ -1890,8 +1926,7 @@ public open class CfnDecoderManifest(
     public fun interfaceId(): String
 
     /**
-     * (Optional) Information about a network interface specified by the On-board diagnostic (OBD)
-     * II protocol.
+     * Information about a network interface specified by the On-board diagnostic (OBD) II protocol.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdnetworkinterface.html#cfn-iotfleetwise-decodermanifest-obdnetworkinterface-obdinterface)
      */
@@ -1919,20 +1954,20 @@ public open class CfnDecoderManifest(
       public fun interfaceId(interfaceId: String)
 
       /**
-       * @param obdInterface (Optional) Information about a network interface specified by the
-       * On-board diagnostic (OBD) II protocol. 
+       * @param obdInterface Information about a network interface specified by the On-board
+       * diagnostic (OBD) II protocol. 
        */
       public fun obdInterface(obdInterface: IResolvable)
 
       /**
-       * @param obdInterface (Optional) Information about a network interface specified by the
-       * On-board diagnostic (OBD) II protocol. 
+       * @param obdInterface Information about a network interface specified by the On-board
+       * diagnostic (OBD) II protocol. 
        */
       public fun obdInterface(obdInterface: ObdInterfaceProperty)
 
       /**
-       * @param obdInterface (Optional) Information about a network interface specified by the
-       * On-board diagnostic (OBD) II protocol. 
+       * @param obdInterface Information about a network interface specified by the On-board
+       * diagnostic (OBD) II protocol. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b4e925efad6770cab1c4f601f1ca931315944f146f2e4ff09af99a7ecf270c6")
@@ -1961,24 +1996,24 @@ public open class CfnDecoderManifest(
       }
 
       /**
-       * @param obdInterface (Optional) Information about a network interface specified by the
-       * On-board diagnostic (OBD) II protocol. 
+       * @param obdInterface Information about a network interface specified by the On-board
+       * diagnostic (OBD) II protocol. 
        */
       override fun obdInterface(obdInterface: IResolvable) {
         cdkBuilder.obdInterface(obdInterface.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param obdInterface (Optional) Information about a network interface specified by the
-       * On-board diagnostic (OBD) II protocol. 
+       * @param obdInterface Information about a network interface specified by the On-board
+       * diagnostic (OBD) II protocol. 
        */
       override fun obdInterface(obdInterface: ObdInterfaceProperty) {
         cdkBuilder.obdInterface(obdInterface.let(ObdInterfaceProperty.Companion::unwrap))
       }
 
       /**
-       * @param obdInterface (Optional) Information about a network interface specified by the
-       * On-board diagnostic (OBD) II protocol. 
+       * @param obdInterface Information about a network interface specified by the On-board
+       * diagnostic (OBD) II protocol. 
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("0b4e925efad6770cab1c4f601f1ca931315944f146f2e4ff09af99a7ecf270c6")
@@ -2012,8 +2047,8 @@ public open class CfnDecoderManifest(
       override fun interfaceId(): String = unwrap(this).getInterfaceId()
 
       /**
-       * (Optional) Information about a network interface specified by the On-board diagnostic (OBD)
-       * II protocol.
+       * Information about a network interface specified by the On-board diagnostic (OBD) II
+       * protocol.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdnetworkinterface.html#cfn-iotfleetwise-decodermanifest-obdnetworkinterface-obdinterface)
        */
@@ -2081,11 +2116,15 @@ public open class CfnDecoderManifest(
    */
   public interface ObdSignalDecoderProperty {
     /**
+     * The fully qualified name of a signal decoder as defined in a vehicle model.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignaldecoder.html#cfn-iotfleetwise-decodermanifest-obdsignaldecoder-fullyqualifiedname)
      */
     public fun fullyQualifiedName(): String
 
     /**
+     * The ID of a network interface that specifies what network protocol a vehicle follows.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignaldecoder.html#cfn-iotfleetwise-decodermanifest-obdsignaldecoder-interfaceid)
      */
     public fun interfaceId(): String
@@ -2099,6 +2138,12 @@ public open class CfnDecoderManifest(
     public fun obdSignal(): Any
 
     /**
+     * The network protocol for the vehicle.
+     *
+     * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated between
+     * electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+     * self-diagnostic data is communicated between ECUs.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignaldecoder.html#cfn-iotfleetwise-decodermanifest-obdsignaldecoder-type)
      */
     public fun type(): String
@@ -2109,12 +2154,14 @@ public open class CfnDecoderManifest(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param fullyQualifiedName the value to be set. 
+       * @param fullyQualifiedName The fully qualified name of a signal decoder as defined in a
+       * vehicle model. 
        */
       public fun fullyQualifiedName(fullyQualifiedName: String)
 
       /**
-       * @param interfaceId the value to be set. 
+       * @param interfaceId The ID of a network interface that specifies what network protocol a
+       * vehicle follows. 
        */
       public fun interfaceId(interfaceId: String)
 
@@ -2139,7 +2186,10 @@ public open class CfnDecoderManifest(
       public fun obdSignal(obdSignal: ObdSignalProperty.Builder.() -> Unit)
 
       /**
-       * @param type the value to be set. 
+       * @param type The network protocol for the vehicle. 
+       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
+       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+       * self-diagnostic data is communicated between ECUs.
        */
       public fun type(type: String)
     }
@@ -2151,14 +2201,16 @@ public open class CfnDecoderManifest(
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalDecoderProperty.builder()
 
       /**
-       * @param fullyQualifiedName the value to be set. 
+       * @param fullyQualifiedName The fully qualified name of a signal decoder as defined in a
+       * vehicle model. 
        */
       override fun fullyQualifiedName(fullyQualifiedName: String) {
         cdkBuilder.fullyQualifiedName(fullyQualifiedName)
       }
 
       /**
-       * @param interfaceId the value to be set. 
+       * @param interfaceId The ID of a network interface that specifies what network protocol a
+       * vehicle follows. 
        */
       override fun interfaceId(interfaceId: String) {
         cdkBuilder.interfaceId(interfaceId)
@@ -2190,7 +2242,10 @@ public open class CfnDecoderManifest(
           obdSignal(ObdSignalProperty(obdSignal))
 
       /**
-       * @param type the value to be set. 
+       * @param type The network protocol for the vehicle. 
+       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
+       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+       * self-diagnostic data is communicated between ECUs.
        */
       override fun type(type: String) {
         cdkBuilder.type(type)
@@ -2206,11 +2261,15 @@ public open class CfnDecoderManifest(
     ) : CdkObject(cdkObject),
         ObdSignalDecoderProperty {
       /**
+       * The fully qualified name of a signal decoder as defined in a vehicle model.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignaldecoder.html#cfn-iotfleetwise-decodermanifest-obdsignaldecoder-fullyqualifiedname)
        */
       override fun fullyQualifiedName(): String = unwrap(this).getFullyQualifiedName()
 
       /**
+       * The ID of a network interface that specifies what network protocol a vehicle follows.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignaldecoder.html#cfn-iotfleetwise-decodermanifest-obdsignaldecoder-interfaceid)
        */
       override fun interfaceId(): String = unwrap(this).getInterfaceId()
@@ -2224,6 +2283,12 @@ public open class CfnDecoderManifest(
       override fun obdSignal(): Any = unwrap(this).getObdSignal()
 
       /**
+       * The network protocol for the vehicle.
+       *
+       * For example, `CAN_SIGNAL` specifies a protocol that defines how data is communicated
+       * between electronic control units (ECUs). `OBD_SIGNAL` specifies a protocol that defines how
+       * self-diagnostic data is communicated between ECUs.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignaldecoder.html#cfn-iotfleetwise-decodermanifest-obdsignaldecoder-type)
        */
       override fun type(): String = unwrap(this).getType()
@@ -2275,14 +2340,14 @@ public open class CfnDecoderManifest(
    */
   public interface ObdSignalProperty {
     /**
-     * (Optional) The number of bits to mask in a message.
+     * The number of bits to mask in a message.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitmasklength)
      */
     public fun bitMaskLength(): String? = unwrap(this).getBitMaskLength()
 
     /**
-     * (Optional) The number of positions to shift bits in the message.
+     * The number of positions to shift bits in the message.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitrightshift)
      */
@@ -2345,12 +2410,12 @@ public open class CfnDecoderManifest(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param bitMaskLength (Optional) The number of bits to mask in a message.
+       * @param bitMaskLength The number of bits to mask in a message.
        */
       public fun bitMaskLength(bitMaskLength: String)
 
       /**
-       * @param bitRightShift (Optional) The number of positions to shift bits in the message.
+       * @param bitRightShift The number of positions to shift bits in the message.
        */
       public fun bitRightShift(bitRightShift: String)
 
@@ -2398,14 +2463,14 @@ public open class CfnDecoderManifest(
           software.amazon.awscdk.services.iotfleetwise.CfnDecoderManifest.ObdSignalProperty.builder()
 
       /**
-       * @param bitMaskLength (Optional) The number of bits to mask in a message.
+       * @param bitMaskLength The number of bits to mask in a message.
        */
       override fun bitMaskLength(bitMaskLength: String) {
         cdkBuilder.bitMaskLength(bitMaskLength)
       }
 
       /**
-       * @param bitRightShift (Optional) The number of positions to shift bits in the message.
+       * @param bitRightShift The number of positions to shift bits in the message.
        */
       override fun bitRightShift(bitRightShift: String) {
         cdkBuilder.bitRightShift(bitRightShift)
@@ -2471,14 +2536,14 @@ public open class CfnDecoderManifest(
     ) : CdkObject(cdkObject),
         ObdSignalProperty {
       /**
-       * (Optional) The number of bits to mask in a message.
+       * The number of bits to mask in a message.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitmasklength)
        */
       override fun bitMaskLength(): String? = unwrap(this).getBitMaskLength()
 
       /**
-       * (Optional) The number of positions to shift bits in the message.
+       * The number of positions to shift bits in the message.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotfleetwise-decodermanifest-obdsignal.html#cfn-iotfleetwise-decodermanifest-obdsignal-bitrightshift)
        */

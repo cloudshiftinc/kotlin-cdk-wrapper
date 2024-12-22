@@ -191,6 +191,16 @@ public open class NetworkTargetGroup(
     public fun connectionTermination(connectionTermination: Boolean)
 
     /**
+     * Indicates whether cross zone load balancing is enabled.
+     *
+     * Default: - use load balancer configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html)
+     * @param crossZoneEnabled Indicates whether cross zone load balancing is enabled. 
+     */
+    public fun crossZoneEnabled(crossZoneEnabled: Boolean)
+
+    /**
      * The amount of time for Elastic Load Balancing to wait before deregistering a target.
      *
      * The range is 0-3600 seconds.
@@ -225,6 +235,16 @@ public open class NetworkTargetGroup(
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("9c7ee6a16ec18311c4c64074c4eac245e90c71b6535cdddc06564288488e16b5")
     public fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit)
+
+    /**
+     * The type of IP addresses of the targets registered with the target group.
+     *
+     * Default: undefined - ELB defaults to IPv4
+     *
+     * @param ipAddressType The type of IP addresses of the targets registered with the target
+     * group. 
+     */
+    public fun ipAddressType(ipAddressType: TargetGroupIpAddressType)
 
     /**
      * The port on which the target receives traffic.
@@ -348,6 +368,18 @@ public open class NetworkTargetGroup(
     }
 
     /**
+     * Indicates whether cross zone load balancing is enabled.
+     *
+     * Default: - use load balancer configuration
+     *
+     * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-targetgroup-targetgroupattribute.html)
+     * @param crossZoneEnabled Indicates whether cross zone load balancing is enabled. 
+     */
+    override fun crossZoneEnabled(crossZoneEnabled: Boolean) {
+      cdkBuilder.crossZoneEnabled(crossZoneEnabled)
+    }
+
+    /**
      * The amount of time for Elastic Load Balancing to wait before deregistering a target.
      *
      * The range is 0-3600 seconds.
@@ -387,6 +419,18 @@ public open class NetworkTargetGroup(
     @JvmName("9c7ee6a16ec18311c4c64074c4eac245e90c71b6535cdddc06564288488e16b5")
     override fun healthCheck(healthCheck: HealthCheck.Builder.() -> Unit): Unit =
         healthCheck(HealthCheck(healthCheck))
+
+    /**
+     * The type of IP addresses of the targets registered with the target group.
+     *
+     * Default: undefined - ELB defaults to IPv4
+     *
+     * @param ipAddressType The type of IP addresses of the targets registered with the target
+     * group. 
+     */
+    override fun ipAddressType(ipAddressType: TargetGroupIpAddressType) {
+      cdkBuilder.ipAddressType(ipAddressType.let(TargetGroupIpAddressType.Companion::unwrap))
+    }
 
     /**
      * The port on which the target receives traffic.

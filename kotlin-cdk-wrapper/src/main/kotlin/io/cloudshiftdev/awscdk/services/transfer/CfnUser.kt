@@ -96,11 +96,6 @@ public open class CfnUser(
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
   /**
-   *
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
-
-  /**
    * The ID of the server to which the user is attached.
    *
    * An example `ServerId` is `s-01234567890abcdef` .

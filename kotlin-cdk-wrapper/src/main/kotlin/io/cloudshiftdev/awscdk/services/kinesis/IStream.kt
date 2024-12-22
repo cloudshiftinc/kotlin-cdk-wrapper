@@ -10,8 +10,10 @@ import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import io.cloudshiftdev.awscdk.services.cloudwatch.Metric
 import io.cloudshiftdev.awscdk.services.cloudwatch.MetricOptions
+import io.cloudshiftdev.awscdk.services.iam.AddToResourcePolicyResult
 import io.cloudshiftdev.awscdk.services.iam.Grant
 import io.cloudshiftdev.awscdk.services.iam.IGrantable
+import io.cloudshiftdev.awscdk.services.iam.PolicyStatement
 import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.constructs.Node
 import kotlin.String
@@ -22,6 +24,31 @@ import kotlin.jvm.JvmName
  * A Kinesis Stream.
  */
 public interface IStream : IResource {
+  /**
+   * Adds a statement to the IAM resource policy associated with this stream.
+   *
+   * If this stream was created in this stack (`new Stream`), a resource policy
+   * will be automatically created upon the first call to `addToResourcePolicy`. If
+   * the stream is imported (`Stream.import`), then this is a no-op.
+   *
+   * @param statement 
+   */
+  public fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult
+
+  /**
+   * Adds a statement to the IAM resource policy associated with this stream.
+   *
+   * If this stream was created in this stack (`new Stream`), a resource policy
+   * will be automatically created upon the first call to `addToResourcePolicy`. If
+   * the stream is imported (`Stream.import`), then this is a no-op.
+   *
+   * @param statement 
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
+  public fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
+      AddToResourcePolicyResult
+
   /**
    * Optional KMS encryption key associated with this stream.
    */
@@ -909,6 +936,32 @@ public interface IStream : IResource {
     cdkObject: software.amazon.awscdk.services.kinesis.IStream,
   ) : CdkObject(cdkObject),
       IStream {
+    /**
+     * Adds a statement to the IAM resource policy associated with this stream.
+     *
+     * If this stream was created in this stack (`new Stream`), a resource policy
+     * will be automatically created upon the first call to `addToResourcePolicy`. If
+     * the stream is imported (`Stream.import`), then this is a no-op.
+     *
+     * @param statement 
+     */
+    override fun addToResourcePolicy(statement: PolicyStatement): AddToResourcePolicyResult =
+        unwrap(this).addToResourcePolicy(statement.let(PolicyStatement.Companion::unwrap)).let(AddToResourcePolicyResult::wrap)
+
+    /**
+     * Adds a statement to the IAM resource policy associated with this stream.
+     *
+     * If this stream was created in this stack (`new Stream`), a resource policy
+     * will be automatically created upon the first call to `addToResourcePolicy`. If
+     * the stream is imported (`Stream.import`), then this is a no-op.
+     *
+     * @param statement 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b93f8258425594b02debe63f0c120f198512d8431f5ae67b7fb7780e34fcbae2")
+    override fun addToResourcePolicy(statement: PolicyStatement.Builder.() -> Unit):
+        AddToResourcePolicyResult = addToResourcePolicy(PolicyStatement(statement))
+
     /**
      * Apply the given removal policy to this resource.
      *

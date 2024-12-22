@@ -288,6 +288,9 @@ public open class Runtime(
     public val NODEJS_20_X: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.NODEJS_20_X)
 
+    public val NODEJS_22_X: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.NODEJS_22_X)
+
     public val NODEJS_4_3: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.NODEJS_4_3)
 
@@ -320,6 +323,9 @@ public open class Runtime(
 
     public val PYTHON_3_12: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.PYTHON_3_12)
+
+    public val PYTHON_3_13: Runtime =
+        Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.PYTHON_3_13)
 
     public val PYTHON_3_6: Runtime =
         Runtime.wrap(software.amazon.awscdk.services.lambda.Runtime.PYTHON_3_6)

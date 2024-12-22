@@ -51,7 +51,6 @@ import kotlin.jvm.JvmName
  * .securityLevel("securityLevel")
  * .targets(CisTargetsProperty.builder()
  * .accountIds(List.of("accountIds"))
- * // the properties below are optional
  * .targetResourceTags(Map.of(
  * "targetResourceTagsKey", List.of("targetResourceTags")))
  * .build())

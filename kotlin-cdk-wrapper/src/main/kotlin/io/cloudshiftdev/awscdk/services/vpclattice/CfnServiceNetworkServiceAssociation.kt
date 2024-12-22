@@ -21,7 +21,7 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * Associates a service with a service network.
+ * Associates the specified service with the specified service network.
  *
  * For more information, see [Manage service
  * associations](https://docs.aws.amazon.com/vpc-lattice/latest/ug/service-network-associations.html#service-network-service-associations)
@@ -183,24 +183,24 @@ public open class CfnServiceNetworkServiceAssociation(
   }
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service.
+   * The ID or ARN of the service.
    */
   public open fun serviceIdentifier(): String? = unwrap(this).getServiceIdentifier()
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service.
+   * The ID or ARN of the service.
    */
   public open fun serviceIdentifier(`value`: String) {
     unwrap(this).setServiceIdentifier(`value`)
   }
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service network.
+   * The ID or ARN of the service network.
    */
   public open fun serviceNetworkIdentifier(): String? = unwrap(this).getServiceNetworkIdentifier()
 
   /**
-   * The ID or Amazon Resource Name (ARN) of the service network.
+   * The ID or ARN of the service network.
    */
   public open fun serviceNetworkIdentifier(`value`: String) {
     unwrap(this).setServiceNetworkIdentifier(`value`)
@@ -262,20 +262,20 @@ public open class CfnServiceNetworkServiceAssociation(
     public fun dnsEntry(dnsEntry: DnsEntryProperty.Builder.() -> Unit)
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or ARN of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-serviceidentifier)
-     * @param serviceIdentifier The ID or Amazon Resource Name (ARN) of the service. 
+     * @param serviceIdentifier The ID or ARN of the service. 
      */
     public fun serviceIdentifier(serviceIdentifier: String)
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service network.
+     * The ID or ARN of the service network.
      *
-     * You must use the ARN if the resources specified in the operation are in different accounts.
+     * You must use an ARN if the resources are in different accounts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-servicenetworkidentifier)
-     * @param serviceNetworkIdentifier The ID or Amazon Resource Name (ARN) of the service network. 
+     * @param serviceNetworkIdentifier The ID or ARN of the service network. 
      */
     public fun serviceNetworkIdentifier(serviceNetworkIdentifier: String)
 
@@ -337,22 +337,22 @@ public open class CfnServiceNetworkServiceAssociation(
         dnsEntry(DnsEntryProperty(dnsEntry))
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service.
+     * The ID or ARN of the service.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-serviceidentifier)
-     * @param serviceIdentifier The ID or Amazon Resource Name (ARN) of the service. 
+     * @param serviceIdentifier The ID or ARN of the service. 
      */
     override fun serviceIdentifier(serviceIdentifier: String) {
       cdkBuilder.serviceIdentifier(serviceIdentifier)
     }
 
     /**
-     * The ID or Amazon Resource Name (ARN) of the service network.
+     * The ID or ARN of the service network.
      *
-     * You must use the ARN if the resources specified in the operation are in different accounts.
+     * You must use an ARN if the resources are in different accounts.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-vpclattice-servicenetworkserviceassociation.html#cfn-vpclattice-servicenetworkserviceassociation-servicenetworkidentifier)
-     * @param serviceNetworkIdentifier The ID or Amazon Resource Name (ARN) of the service network. 
+     * @param serviceNetworkIdentifier The ID or ARN of the service network. 
      */
     override fun serviceNetworkIdentifier(serviceNetworkIdentifier: String) {
       cdkBuilder.serviceNetworkIdentifier(serviceNetworkIdentifier)

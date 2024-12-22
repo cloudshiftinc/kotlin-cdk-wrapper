@@ -15,7 +15,7 @@ import kotlin.String
  *
  * ```
  * Cluster.Builder.create(this, "HelloEKS")
- * .version(KubernetesVersion.V1_30)
+ * .version(KubernetesVersion.V1_31)
  * .albController(AlbControllerOptions.builder()
  * .version(AlbControllerVersion.V2_8_2)
  * .build())

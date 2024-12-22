@@ -47,6 +47,9 @@ import kotlin.jvm.JvmName
  * .qAppsConfiguration(QAppsConfigurationProperty.builder()
  * .qAppsControlMode("qAppsControlMode")
  * .build())
+ * .quickSightConfiguration(QuickSightConfigurationProperty.builder()
+ * .clientNamespace("clientNamespace")
+ * .build())
  * .roleArn("roleArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -143,6 +146,11 @@ public interface CfnApplicationProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-qappsconfiguration)
    */
   public fun qAppsConfiguration(): Any? = unwrap(this).getQAppsConfiguration()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
+   */
+  public fun quickSightConfiguration(): Any? = unwrap(this).getQuickSightConfiguration()
 
   /**
    * The Amazon Resource Name (ARN) of an IAM role with permissions to access your Amazon CloudWatch
@@ -326,6 +334,25 @@ public interface CfnApplicationProps {
     @JvmName("0f26f3a798119a59262229a82de5e820aafba5cc143caa174e523a1fe90eebd6")
     public
         fun qAppsConfiguration(qAppsConfiguration: CfnApplication.QAppsConfigurationProperty.Builder.() -> Unit)
+
+    /**
+     * @param quickSightConfiguration the value to be set.
+     */
+    public fun quickSightConfiguration(quickSightConfiguration: IResolvable)
+
+    /**
+     * @param quickSightConfiguration the value to be set.
+     */
+    public
+        fun quickSightConfiguration(quickSightConfiguration: CfnApplication.QuickSightConfigurationProperty)
+
+    /**
+     * @param quickSightConfiguration the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2644237e81915884b45721068d8bd81308b42917f6b7436b89d47f25e2e28c13")
+    public
+        fun quickSightConfiguration(quickSightConfiguration: CfnApplication.QuickSightConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param roleArn The Amazon Resource Name (ARN) of an IAM role with permissions to access your
@@ -556,6 +583,31 @@ public interface CfnApplicationProps {
         Unit = qAppsConfiguration(CfnApplication.QAppsConfigurationProperty(qAppsConfiguration))
 
     /**
+     * @param quickSightConfiguration the value to be set.
+     */
+    override fun quickSightConfiguration(quickSightConfiguration: IResolvable) {
+      cdkBuilder.quickSightConfiguration(quickSightConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param quickSightConfiguration the value to be set.
+     */
+    override
+        fun quickSightConfiguration(quickSightConfiguration: CfnApplication.QuickSightConfigurationProperty) {
+      cdkBuilder.quickSightConfiguration(quickSightConfiguration.let(CfnApplication.QuickSightConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param quickSightConfiguration the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("2644237e81915884b45721068d8bd81308b42917f6b7436b89d47f25e2e28c13")
+    override
+        fun quickSightConfiguration(quickSightConfiguration: CfnApplication.QuickSightConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        quickSightConfiguration(CfnApplication.QuickSightConfigurationProperty(quickSightConfiguration))
+
+    /**
      * @param roleArn The Amazon Resource Name (ARN) of an IAM role with permissions to access your
      * Amazon CloudWatch logs and metrics.
      * If this property is not specified, Amazon Q Business will create a [service linked role
@@ -680,6 +732,11 @@ public interface CfnApplicationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-qappsconfiguration)
      */
     override fun qAppsConfiguration(): Any? = unwrap(this).getQAppsConfiguration()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-qbusiness-application.html#cfn-qbusiness-application-quicksightconfiguration)
+     */
+    override fun quickSightConfiguration(): Any? = unwrap(this).getQuickSightConfiguration()
 
     /**
      * The Amazon Resource Name (ARN) of an IAM role with permissions to access your Amazon

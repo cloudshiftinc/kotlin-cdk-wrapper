@@ -46,6 +46,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.ecs.*;
  * CfnService cfnService = CfnService.Builder.create(this, "MyCfnService")
+ * .availabilityZoneRebalancing("availabilityZoneRebalancing")
  * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
  * .base(123)
  * .capacityProvider("capacityProvider")
@@ -174,6 +175,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .volumeType("volumeType")
  * .build())
  * .build()))
+ * .vpcLatticeConfigurations(List.of(VpcLatticeConfigurationProperty.builder()
+ * .portName("portName")
+ * .roleArn("roleArn")
+ * .targetGroupArn("targetGroupArn")
+ * .build()))
  * .build();
  * ```
  *
@@ -214,6 +220,19 @@ public open class CfnService(
    * Not currently supported in AWS CloudFormation .
    */
   public open fun attrServiceArn(): String = unwrap(this).getAttrServiceArn()
+
+  /**
+   * Indicates whether to use Availability Zone rebalancing for the service.
+   */
+  public open fun availabilityZoneRebalancing(): String? =
+      unwrap(this).getAvailabilityZoneRebalancing()
+
+  /**
+   * Indicates whether to use Availability Zone rebalancing for the service.
+   */
+  public open fun availabilityZoneRebalancing(`value`: String) {
+    unwrap(this).setAvailabilityZoneRebalancing(`value`)
+  }
 
   /**
    * The capacity provider strategy to use for the service.
@@ -365,14 +384,14 @@ public open class CfnService(
 
   /**
    * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy Elastic
-   * Load Balancing target health checks after a task has first started.
+   * Load Balancing, VPC Lattice, and container health checks after a task has first started.
    */
   public open fun healthCheckGracePeriodSeconds(): Number? =
       unwrap(this).getHealthCheckGracePeriodSeconds()
 
   /**
    * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy Elastic
-   * Load Balancing target health checks after a task has first started.
+   * Load Balancing, VPC Lattice, and container health checks after a task has first started.
    */
   public open fun healthCheckGracePeriodSeconds(`value`: Number) {
     unwrap(this).setHealthCheckGracePeriodSeconds(`value`)
@@ -704,10 +723,50 @@ public open class CfnService(
       volumeConfigurations(`value`.toList())
 
   /**
+   * The VPC Lattice configuration for the service being created.
+   */
+  public open fun vpcLatticeConfigurations(): Any? = unwrap(this).getVpcLatticeConfigurations()
+
+  /**
+   * The VPC Lattice configuration for the service being created.
+   */
+  public open fun vpcLatticeConfigurations(`value`: IResolvable) {
+    unwrap(this).setVpcLatticeConfigurations(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The VPC Lattice configuration for the service being created.
+   */
+  public open fun vpcLatticeConfigurations(`value`: List<Any>) {
+    unwrap(this).setVpcLatticeConfigurations(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The VPC Lattice configuration for the service being created.
+   */
+  public open fun vpcLatticeConfigurations(vararg `value`: Any): Unit =
+      vpcLatticeConfigurations(`value`.toList())
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.ecs.CfnService].
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * Indicates whether to use Availability Zone rebalancing for the service.
+     *
+     * For more information, see [Balancing an Amazon ECS service across Availability
+     * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
+     * the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * Default: - "DISABLED"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-availabilityzonerebalancing)
+     * @param availabilityZoneRebalancing Indicates whether to use Availability Zone rebalancing for
+     * the service. 
+     */
+    public fun availabilityZoneRebalancing(availabilityZoneRebalancing: String)
+
     /**
      * The capacity provider strategy to use for the service.
      *
@@ -899,26 +958,21 @@ public open class CfnService(
 
     /**
      * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy
-     * Elastic Load Balancing target health checks after a task has first started.
+     * Elastic Load Balancing, VPC Lattice, and container health checks after a task has first started.
      *
-     * This is only used when your service is configured to use a load balancer. If your service has
-     * a load balancer defined and you don't specify a health check grace period value, the default
-     * value of `0` is used.
+     * If you don't specify a health check grace period value, the default value of `0` is used. If
+     * you don't use any of the health checks, then `healthCheckGracePeriodSeconds` is unused.
      *
-     * If you do not use an Elastic Load Balancing, we recommend that you use the `startPeriod` in
-     * the task definition health check parameters. For more information, see [Health
-     * check](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html) .
-     *
-     * If your service's tasks take a while to start and respond to Elastic Load Balancing health
-     * checks, you can specify a health check grace period of up to 2,147,483,647 seconds (about 69
-     * years). During that time, the Amazon ECS service scheduler ignores health check status. This
-     * grace period can prevent the service scheduler from marking tasks as unhealthy and stopping them
-     * before they have time to come up.
+     * If your service's tasks take a while to start and respond to health checks, you can specify a
+     * health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the
+     * Amazon ECS service scheduler ignores health check status. This grace period can prevent the
+     * service scheduler from marking tasks as unhealthy and stopping them before they have time to
+     * come up.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds)
      * @param healthCheckGracePeriodSeconds The period of time, in seconds, that the Amazon ECS
-     * service scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has
-     * first started. 
+     * service scheduler ignores unhealthy Elastic Load Balancing, VPC Lattice, and container health
+     * checks after a task has first started. 
      */
     public fun healthCheckGracePeriodSeconds(healthCheckGracePeriodSeconds: Number)
 
@@ -1413,6 +1467,30 @@ public open class CfnService(
      * as a volume that is configured at launch time. 
      */
     public fun volumeConfigurations(vararg volumeConfigurations: Any)
+
+    /**
+     * The VPC Lattice configuration for the service being created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-vpclatticeconfigurations)
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created. 
+     */
+    public fun vpcLatticeConfigurations(vpcLatticeConfigurations: IResolvable)
+
+    /**
+     * The VPC Lattice configuration for the service being created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-vpclatticeconfigurations)
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created. 
+     */
+    public fun vpcLatticeConfigurations(vpcLatticeConfigurations: List<Any>)
+
+    /**
+     * The VPC Lattice configuration for the service being created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-vpclatticeconfigurations)
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created. 
+     */
+    public fun vpcLatticeConfigurations(vararg vpcLatticeConfigurations: Any)
   }
 
   private class BuilderImpl(
@@ -1421,6 +1499,23 @@ public open class CfnService(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnService.Builder =
         software.amazon.awscdk.services.ecs.CfnService.Builder.create(scope, id)
+
+    /**
+     * Indicates whether to use Availability Zone rebalancing for the service.
+     *
+     * For more information, see [Balancing an Amazon ECS service across Availability
+     * Zones](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-rebalancing.html) in
+     * the *Amazon Elastic Container Service Developer Guide* .
+     *
+     * Default: - "DISABLED"
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-availabilityzonerebalancing)
+     * @param availabilityZoneRebalancing Indicates whether to use Availability Zone rebalancing for
+     * the service. 
+     */
+    override fun availabilityZoneRebalancing(availabilityZoneRebalancing: String) {
+      cdkBuilder.availabilityZoneRebalancing(availabilityZoneRebalancing)
+    }
 
     /**
      * The capacity provider strategy to use for the service.
@@ -1640,26 +1735,21 @@ public open class CfnService(
 
     /**
      * The period of time, in seconds, that the Amazon ECS service scheduler ignores unhealthy
-     * Elastic Load Balancing target health checks after a task has first started.
+     * Elastic Load Balancing, VPC Lattice, and container health checks after a task has first started.
      *
-     * This is only used when your service is configured to use a load balancer. If your service has
-     * a load balancer defined and you don't specify a health check grace period value, the default
-     * value of `0` is used.
+     * If you don't specify a health check grace period value, the default value of `0` is used. If
+     * you don't use any of the health checks, then `healthCheckGracePeriodSeconds` is unused.
      *
-     * If you do not use an Elastic Load Balancing, we recommend that you use the `startPeriod` in
-     * the task definition health check parameters. For more information, see [Health
-     * check](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_HealthCheck.html) .
-     *
-     * If your service's tasks take a while to start and respond to Elastic Load Balancing health
-     * checks, you can specify a health check grace period of up to 2,147,483,647 seconds (about 69
-     * years). During that time, the Amazon ECS service scheduler ignores health check status. This
-     * grace period can prevent the service scheduler from marking tasks as unhealthy and stopping them
-     * before they have time to come up.
+     * If your service's tasks take a while to start and respond to health checks, you can specify a
+     * health check grace period of up to 2,147,483,647 seconds (about 69 years). During that time, the
+     * Amazon ECS service scheduler ignores health check status. This grace period can prevent the
+     * service scheduler from marking tasks as unhealthy and stopping them before they have time to
+     * come up.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-healthcheckgraceperiodseconds)
      * @param healthCheckGracePeriodSeconds The period of time, in seconds, that the Amazon ECS
-     * service scheduler ignores unhealthy Elastic Load Balancing target health checks after a task has
-     * first started. 
+     * service scheduler ignores unhealthy Elastic Load Balancing, VPC Lattice, and container health
+     * checks after a task has first started. 
      */
     override fun healthCheckGracePeriodSeconds(healthCheckGracePeriodSeconds: Number) {
       cdkBuilder.healthCheckGracePeriodSeconds(healthCheckGracePeriodSeconds)
@@ -2209,6 +2299,35 @@ public open class CfnService(
     override fun volumeConfigurations(vararg volumeConfigurations: Any): Unit =
         volumeConfigurations(volumeConfigurations.toList())
 
+    /**
+     * The VPC Lattice configuration for the service being created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-vpclatticeconfigurations)
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created. 
+     */
+    override fun vpcLatticeConfigurations(vpcLatticeConfigurations: IResolvable) {
+      cdkBuilder.vpcLatticeConfigurations(vpcLatticeConfigurations.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The VPC Lattice configuration for the service being created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-vpclatticeconfigurations)
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created. 
+     */
+    override fun vpcLatticeConfigurations(vpcLatticeConfigurations: List<Any>) {
+      cdkBuilder.vpcLatticeConfigurations(vpcLatticeConfigurations.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The VPC Lattice configuration for the service being created.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-service.html#cfn-ecs-service-vpclatticeconfigurations)
+     * @param vpcLatticeConfigurations The VPC Lattice configuration for the service being created. 
+     */
+    override fun vpcLatticeConfigurations(vararg vpcLatticeConfigurations: Any): Unit =
+        vpcLatticeConfigurations(vpcLatticeConfigurations.toList())
+
     public fun build(): software.amazon.awscdk.services.ecs.CfnService = cdkBuilder.build()
   }
 
@@ -2257,7 +2376,7 @@ public open class CfnService(
     /**
      * Whether the task's elastic network interface receives a public IP address.
      *
-     * The default value is `DISABLED` .
+     * The default value is `ENABLED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
      */
@@ -2298,7 +2417,7 @@ public open class CfnService(
       /**
        * @param assignPublicIp Whether the task's elastic network interface receives a public IP
        * address.
-       * The default value is `DISABLED` .
+       * The default value is `ENABLED` .
        */
       public fun assignPublicIp(assignPublicIp: String)
 
@@ -2349,7 +2468,7 @@ public open class CfnService(
       /**
        * @param assignPublicIp Whether the task's elastic network interface receives a public IP
        * address.
-       * The default value is `DISABLED` .
+       * The default value is `ENABLED` .
        */
       override fun assignPublicIp(assignPublicIp: String) {
         cdkBuilder.assignPublicIp(assignPublicIp)
@@ -2409,7 +2528,7 @@ public open class CfnService(
       /**
        * Whether the task's elastic network interface receives a public IP address.
        *
-       * The default value is `DISABLED` .
+       * The default value is `ENABLED` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-awsvpcconfiguration.html#cfn-ecs-service-awsvpcconfiguration-assignpublicip)
        */
@@ -3686,10 +3805,6 @@ public open class CfnService(
   /**
    * The deployment controller to use for the service.
    *
-   * For more information, see [Amazon ECS deployment
-   * types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-types.html) in the
-   * *Amazon Elastic Container Service Developer Guide* .
-   *
    * Example:
    *
    * ```
@@ -4378,6 +4493,148 @@ public open class CfnService(
     /**
      * The configuration options to send to the log driver.
      *
+     * The options you can specify depend on the log driver. Some of the options you can specify
+     * when you use the `awslogs` log driver to route logs to Amazon CloudWatch include the following:
+     *
+     * * **awslogs-create-group** - Required: No
+     *
+     * Specify whether you want the log group to be created automatically. If this option isn't
+     * specified, it defaults to `false` .
+     *
+     *
+     * Your IAM policy must include the `logs:CreateLogGroup` permission before you attempt to use
+     * `awslogs-create-group` .
+     *
+     *
+     * * **awslogs-region** - Required: Yes
+     *
+     * Specify the AWS Region that the `awslogs` log driver is to send your Docker logs to. You can
+     * choose to send all of your logs from clusters in different Regions to a single region in
+     * CloudWatch Logs. This is so that they're all visible in one location. Otherwise, you can
+     * separate them by Region for more granularity. Make sure that the specified log group exists in
+     * the Region that you specify with this option.
+     *
+     * * **awslogs-group** - Required: Yes
+     *
+     * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
+     *
+     * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional for
+     * the EC2 launch type, required for the Fargate launch type.
+     *
+     * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
+     * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
+     * specify a prefix with this option, then the log stream takes the format
+     * `prefix-name/container-name/ecs-task-id` .
+     *
+     * If you don't specify a prefix with this option, then the log stream is named after the
+     * container ID that's assigned by the Docker daemon on the container instance. Because it's
+     * difficult to trace logs back to the container that sent them with just the Docker container ID
+     * (which is only available on the container instance), we recommend that you specify a prefix with
+     * this option.
+     *
+     * For Amazon ECS services, you can use the service name as the prefix. Doing so, you can trace
+     * log streams to the service that the container belongs to, the name of the container that sent
+     * them, and the ID of the task that the container belongs to.
+     *
+     * You must specify a stream-prefix for your logs to have your logs appear in the Log pane when
+     * using the Amazon ECS console.
+     *
+     * * **awslogs-datetime-format** - Required: No
+     *
+     * This option defines a multiline start pattern in Python `strftime` format. A log message
+     * consists of a line that matches the pattern and any following lines that don’t match the
+     * pattern. The matched line is the delimiter between log messages.
+     *
+     * One example of a use case for using this format is for parsing output such as a stack dump,
+     * which might otherwise be logged in multiple entries. The correct pattern allows it to be
+     * captured in a single entry.
+     *
+     * For more information, see
+     * [awslogs-datetime-format](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format)
+     * .
+     *
+     * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+     * options.
+     *
+     *
+     * Multiline logging performs regular expression parsing and matching of all log messages. This
+     * might have a negative impact on logging performance.
+     *
+     *
+     * * **awslogs-multiline-pattern** - Required: No
+     *
+     * This option defines a multiline start pattern that uses a regular expression. A log message
+     * consists of a line that matches the pattern and any following lines that don’t match the
+     * pattern. The matched line is the delimiter between log messages.
+     *
+     * For more information, see
+     * [awslogs-multiline-pattern](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-multiline-pattern)
+     * .
+     *
+     * This option is ignored if `awslogs-datetime-format` is also configured.
+     *
+     * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+     * options.
+     *
+     *
+     * Multiline logging performs regular expression parsing and matching of all log messages. This
+     * might have a negative impact on logging performance.
+     *
+     *
+     * * **mode** - Required: No
+     *
+     * Valid values: `non-blocking` | `blocking`
+     *
+     * This option defines the delivery mode of log messages from the container to CloudWatch Logs.
+     * The delivery mode you choose affects application availability when the flow of logs from
+     * container to CloudWatch is interrupted.
+     *
+     * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls from
+     * container code to write to the `stdout` and `stderr` streams will block. The logging thread of
+     * the application will block as a result. This may cause the application to become unresponsive
+     * and lead to container healthcheck failure.
+     *
+     * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
+     * intermediate buffer configured with the `max-buffer-size` option. This prevents the application
+     * from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend using this mode
+     * if you want to ensure service availability and are okay with some log loss. For more
+     * information, see [Preventing log loss with non-blocking mode in the `awslogs` container log
+     * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
+     * .
+     *
+     * * **max-buffer-size** - Required: No
+     *
+     * Default value: `1m`
+     *
+     * When `non-blocking` mode is used, the `max-buffer-size` log option controls the size of the
+     * buffer that's used for intermediate message storage. Make sure to specify an adequate buffer
+     * size based on your application. When the buffer fills up, further logs cannot be stored. Logs
+     * that cannot be stored are lost.
+     *
+     * To route logs using the `splunk` log router, you need to specify a `splunk-token` and a
+     * `splunk-url` .
+     *
+     * When you use the `awsfirelens` log router to route logs to an AWS Service or AWS Partner
+     * Network destination for log storage and analytics, you can set the `log-driver-buffer-limit`
+     * option to limit the number of events that are buffered in memory, before being sent to the log
+     * router container. It can help to resolve potential log loss issue because high throughput might
+     * result in memory running out for the buffer inside of Docker.
+     *
+     * Other options you can specify when using `awsfirelens` to route logs depend on the
+     * destination. When you export logs to Amazon Data Firehose, you can specify the AWS Region with
+     * `region` and a name for the log stream with `delivery_stream` .
+     *
+     * When you export logs to Amazon Kinesis Data Streams, you can specify an AWS Region with
+     * `region` and a data stream name with `stream` .
+     *
+     * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
+     * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth` ,
+     * `Aws_region` , `Suppress_Type_Name` , and `tls` .
+     *
+     * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option. You
+     * can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
+     * options.
+     *
      * This parameter requires version 1.19 of the Docker Remote API or greater on your container
      * instance. To check the Docker Remote API version on your container instance, log in to your
      * container instance and run the following command: `sudo docker version --format
@@ -4431,6 +4688,150 @@ public open class CfnService(
 
       /**
        * @param options The configuration options to send to the log driver.
+       * The options you can specify depend on the log driver. Some of the options you can specify
+       * when you use the `awslogs` log driver to route logs to Amazon CloudWatch include the
+       * following:
+       *
+       * * **awslogs-create-group** - Required: No
+       *
+       * Specify whether you want the log group to be created automatically. If this option isn't
+       * specified, it defaults to `false` .
+       *
+       *
+       * Your IAM policy must include the `logs:CreateLogGroup` permission before you attempt to use
+       * `awslogs-create-group` .
+       *
+       *
+       * * **awslogs-region** - Required: Yes
+       *
+       * Specify the AWS Region that the `awslogs` log driver is to send your Docker logs to. You
+       * can choose to send all of your logs from clusters in different Regions to a single region in
+       * CloudWatch Logs. This is so that they're all visible in one location. Otherwise, you can
+       * separate them by Region for more granularity. Make sure that the specified log group exists in
+       * the Region that you specify with this option.
+       *
+       * * **awslogs-group** - Required: Yes
+       *
+       * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
+       *
+       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
+       * for the EC2 launch type, required for the Fargate launch type.
+       *
+       * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
+       * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
+       * specify a prefix with this option, then the log stream takes the format
+       * `prefix-name/container-name/ecs-task-id` .
+       *
+       * If you don't specify a prefix with this option, then the log stream is named after the
+       * container ID that's assigned by the Docker daemon on the container instance. Because it's
+       * difficult to trace logs back to the container that sent them with just the Docker container ID
+       * (which is only available on the container instance), we recommend that you specify a prefix
+       * with this option.
+       *
+       * For Amazon ECS services, you can use the service name as the prefix. Doing so, you can
+       * trace log streams to the service that the container belongs to, the name of the container that
+       * sent them, and the ID of the task that the container belongs to.
+       *
+       * You must specify a stream-prefix for your logs to have your logs appear in the Log pane
+       * when using the Amazon ECS console.
+       *
+       * * **awslogs-datetime-format** - Required: No
+       *
+       * This option defines a multiline start pattern in Python `strftime` format. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * One example of a use case for using this format is for parsing output such as a stack dump,
+       * which might otherwise be logged in multiple entries. The correct pattern allows it to be
+       * captured in a single entry.
+       *
+       * For more information, see
+       * [awslogs-datetime-format](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format)
+       * .
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **awslogs-multiline-pattern** - Required: No
+       *
+       * This option defines a multiline start pattern that uses a regular expression. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * For more information, see
+       * [awslogs-multiline-pattern](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-multiline-pattern)
+       * .
+       *
+       * This option is ignored if `awslogs-datetime-format` is also configured.
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **mode** - Required: No
+       *
+       * Valid values: `non-blocking` | `blocking`
+       *
+       * This option defines the delivery mode of log messages from the container to CloudWatch
+       * Logs. The delivery mode you choose affects application availability when the flow of logs from
+       * container to CloudWatch is interrupted.
+       *
+       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
+       * from container code to write to the `stdout` and `stderr` streams will block. The logging
+       * thread of the application will block as a result. This may cause the application to become
+       * unresponsive and lead to container healthcheck failure.
+       *
+       * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
+       * intermediate buffer configured with the `max-buffer-size` option. This prevents the
+       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
+       * using this mode if you want to ensure service availability and are okay with some log loss.
+       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
+       * container log
+       * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
+       * .
+       *
+       * * **max-buffer-size** - Required: No
+       *
+       * Default value: `1m`
+       *
+       * When `non-blocking` mode is used, the `max-buffer-size` log option controls the size of the
+       * buffer that's used for intermediate message storage. Make sure to specify an adequate buffer
+       * size based on your application. When the buffer fills up, further logs cannot be stored. Logs
+       * that cannot be stored are lost.
+       *
+       * To route logs using the `splunk` log router, you need to specify a `splunk-token` and a
+       * `splunk-url` .
+       *
+       * When you use the `awsfirelens` log router to route logs to an AWS Service or AWS Partner
+       * Network destination for log storage and analytics, you can set the `log-driver-buffer-limit`
+       * option to limit the number of events that are buffered in memory, before being sent to the log
+       * router container. It can help to resolve potential log loss issue because high throughput
+       * might result in memory running out for the buffer inside of Docker.
+       *
+       * Other options you can specify when using `awsfirelens` to route logs depend on the
+       * destination. When you export logs to Amazon Data Firehose, you can specify the AWS Region with
+       * `region` and a name for the log stream with `delivery_stream` .
+       *
+       * When you export logs to Amazon Kinesis Data Streams, you can specify an AWS Region with
+       * `region` and a data stream name with `stream` .
+       *
+       * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
+       * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       *
+       * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
+       * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
+       * options.
+       *
        * This parameter requires version 1.19 of the Docker Remote API or greater on your container
        * instance. To check the Docker Remote API version on your container instance, log in to your
        * container instance and run the following command: `sudo docker version --format
@@ -4440,6 +4841,150 @@ public open class CfnService(
 
       /**
        * @param options The configuration options to send to the log driver.
+       * The options you can specify depend on the log driver. Some of the options you can specify
+       * when you use the `awslogs` log driver to route logs to Amazon CloudWatch include the
+       * following:
+       *
+       * * **awslogs-create-group** - Required: No
+       *
+       * Specify whether you want the log group to be created automatically. If this option isn't
+       * specified, it defaults to `false` .
+       *
+       *
+       * Your IAM policy must include the `logs:CreateLogGroup` permission before you attempt to use
+       * `awslogs-create-group` .
+       *
+       *
+       * * **awslogs-region** - Required: Yes
+       *
+       * Specify the AWS Region that the `awslogs` log driver is to send your Docker logs to. You
+       * can choose to send all of your logs from clusters in different Regions to a single region in
+       * CloudWatch Logs. This is so that they're all visible in one location. Otherwise, you can
+       * separate them by Region for more granularity. Make sure that the specified log group exists in
+       * the Region that you specify with this option.
+       *
+       * * **awslogs-group** - Required: Yes
+       *
+       * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
+       *
+       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
+       * for the EC2 launch type, required for the Fargate launch type.
+       *
+       * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
+       * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
+       * specify a prefix with this option, then the log stream takes the format
+       * `prefix-name/container-name/ecs-task-id` .
+       *
+       * If you don't specify a prefix with this option, then the log stream is named after the
+       * container ID that's assigned by the Docker daemon on the container instance. Because it's
+       * difficult to trace logs back to the container that sent them with just the Docker container ID
+       * (which is only available on the container instance), we recommend that you specify a prefix
+       * with this option.
+       *
+       * For Amazon ECS services, you can use the service name as the prefix. Doing so, you can
+       * trace log streams to the service that the container belongs to, the name of the container that
+       * sent them, and the ID of the task that the container belongs to.
+       *
+       * You must specify a stream-prefix for your logs to have your logs appear in the Log pane
+       * when using the Amazon ECS console.
+       *
+       * * **awslogs-datetime-format** - Required: No
+       *
+       * This option defines a multiline start pattern in Python `strftime` format. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * One example of a use case for using this format is for parsing output such as a stack dump,
+       * which might otherwise be logged in multiple entries. The correct pattern allows it to be
+       * captured in a single entry.
+       *
+       * For more information, see
+       * [awslogs-datetime-format](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format)
+       * .
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **awslogs-multiline-pattern** - Required: No
+       *
+       * This option defines a multiline start pattern that uses a regular expression. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * For more information, see
+       * [awslogs-multiline-pattern](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-multiline-pattern)
+       * .
+       *
+       * This option is ignored if `awslogs-datetime-format` is also configured.
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **mode** - Required: No
+       *
+       * Valid values: `non-blocking` | `blocking`
+       *
+       * This option defines the delivery mode of log messages from the container to CloudWatch
+       * Logs. The delivery mode you choose affects application availability when the flow of logs from
+       * container to CloudWatch is interrupted.
+       *
+       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
+       * from container code to write to the `stdout` and `stderr` streams will block. The logging
+       * thread of the application will block as a result. This may cause the application to become
+       * unresponsive and lead to container healthcheck failure.
+       *
+       * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
+       * intermediate buffer configured with the `max-buffer-size` option. This prevents the
+       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
+       * using this mode if you want to ensure service availability and are okay with some log loss.
+       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
+       * container log
+       * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
+       * .
+       *
+       * * **max-buffer-size** - Required: No
+       *
+       * Default value: `1m`
+       *
+       * When `non-blocking` mode is used, the `max-buffer-size` log option controls the size of the
+       * buffer that's used for intermediate message storage. Make sure to specify an adequate buffer
+       * size based on your application. When the buffer fills up, further logs cannot be stored. Logs
+       * that cannot be stored are lost.
+       *
+       * To route logs using the `splunk` log router, you need to specify a `splunk-token` and a
+       * `splunk-url` .
+       *
+       * When you use the `awsfirelens` log router to route logs to an AWS Service or AWS Partner
+       * Network destination for log storage and analytics, you can set the `log-driver-buffer-limit`
+       * option to limit the number of events that are buffered in memory, before being sent to the log
+       * router container. It can help to resolve potential log loss issue because high throughput
+       * might result in memory running out for the buffer inside of Docker.
+       *
+       * Other options you can specify when using `awsfirelens` to route logs depend on the
+       * destination. When you export logs to Amazon Data Firehose, you can specify the AWS Region with
+       * `region` and a name for the log stream with `delivery_stream` .
+       *
+       * When you export logs to Amazon Kinesis Data Streams, you can specify an AWS Region with
+       * `region` and a data stream name with `stream` .
+       *
+       * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
+       * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       *
+       * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
+       * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
+       * options.
+       *
        * This parameter requires version 1.19 of the Docker Remote API or greater on your container
        * instance. To check the Docker Remote API version on your container instance, log in to your
        * container instance and run the following command: `sudo docker version --format
@@ -4507,6 +5052,150 @@ public open class CfnService(
 
       /**
        * @param options The configuration options to send to the log driver.
+       * The options you can specify depend on the log driver. Some of the options you can specify
+       * when you use the `awslogs` log driver to route logs to Amazon CloudWatch include the
+       * following:
+       *
+       * * **awslogs-create-group** - Required: No
+       *
+       * Specify whether you want the log group to be created automatically. If this option isn't
+       * specified, it defaults to `false` .
+       *
+       *
+       * Your IAM policy must include the `logs:CreateLogGroup` permission before you attempt to use
+       * `awslogs-create-group` .
+       *
+       *
+       * * **awslogs-region** - Required: Yes
+       *
+       * Specify the AWS Region that the `awslogs` log driver is to send your Docker logs to. You
+       * can choose to send all of your logs from clusters in different Regions to a single region in
+       * CloudWatch Logs. This is so that they're all visible in one location. Otherwise, you can
+       * separate them by Region for more granularity. Make sure that the specified log group exists in
+       * the Region that you specify with this option.
+       *
+       * * **awslogs-group** - Required: Yes
+       *
+       * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
+       *
+       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
+       * for the EC2 launch type, required for the Fargate launch type.
+       *
+       * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
+       * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
+       * specify a prefix with this option, then the log stream takes the format
+       * `prefix-name/container-name/ecs-task-id` .
+       *
+       * If you don't specify a prefix with this option, then the log stream is named after the
+       * container ID that's assigned by the Docker daemon on the container instance. Because it's
+       * difficult to trace logs back to the container that sent them with just the Docker container ID
+       * (which is only available on the container instance), we recommend that you specify a prefix
+       * with this option.
+       *
+       * For Amazon ECS services, you can use the service name as the prefix. Doing so, you can
+       * trace log streams to the service that the container belongs to, the name of the container that
+       * sent them, and the ID of the task that the container belongs to.
+       *
+       * You must specify a stream-prefix for your logs to have your logs appear in the Log pane
+       * when using the Amazon ECS console.
+       *
+       * * **awslogs-datetime-format** - Required: No
+       *
+       * This option defines a multiline start pattern in Python `strftime` format. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * One example of a use case for using this format is for parsing output such as a stack dump,
+       * which might otherwise be logged in multiple entries. The correct pattern allows it to be
+       * captured in a single entry.
+       *
+       * For more information, see
+       * [awslogs-datetime-format](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format)
+       * .
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **awslogs-multiline-pattern** - Required: No
+       *
+       * This option defines a multiline start pattern that uses a regular expression. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * For more information, see
+       * [awslogs-multiline-pattern](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-multiline-pattern)
+       * .
+       *
+       * This option is ignored if `awslogs-datetime-format` is also configured.
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **mode** - Required: No
+       *
+       * Valid values: `non-blocking` | `blocking`
+       *
+       * This option defines the delivery mode of log messages from the container to CloudWatch
+       * Logs. The delivery mode you choose affects application availability when the flow of logs from
+       * container to CloudWatch is interrupted.
+       *
+       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
+       * from container code to write to the `stdout` and `stderr` streams will block. The logging
+       * thread of the application will block as a result. This may cause the application to become
+       * unresponsive and lead to container healthcheck failure.
+       *
+       * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
+       * intermediate buffer configured with the `max-buffer-size` option. This prevents the
+       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
+       * using this mode if you want to ensure service availability and are okay with some log loss.
+       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
+       * container log
+       * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
+       * .
+       *
+       * * **max-buffer-size** - Required: No
+       *
+       * Default value: `1m`
+       *
+       * When `non-blocking` mode is used, the `max-buffer-size` log option controls the size of the
+       * buffer that's used for intermediate message storage. Make sure to specify an adequate buffer
+       * size based on your application. When the buffer fills up, further logs cannot be stored. Logs
+       * that cannot be stored are lost.
+       *
+       * To route logs using the `splunk` log router, you need to specify a `splunk-token` and a
+       * `splunk-url` .
+       *
+       * When you use the `awsfirelens` log router to route logs to an AWS Service or AWS Partner
+       * Network destination for log storage and analytics, you can set the `log-driver-buffer-limit`
+       * option to limit the number of events that are buffered in memory, before being sent to the log
+       * router container. It can help to resolve potential log loss issue because high throughput
+       * might result in memory running out for the buffer inside of Docker.
+       *
+       * Other options you can specify when using `awsfirelens` to route logs depend on the
+       * destination. When you export logs to Amazon Data Firehose, you can specify the AWS Region with
+       * `region` and a name for the log stream with `delivery_stream` .
+       *
+       * When you export logs to Amazon Kinesis Data Streams, you can specify an AWS Region with
+       * `region` and a data stream name with `stream` .
+       *
+       * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
+       * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       *
+       * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
+       * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
+       * options.
+       *
        * This parameter requires version 1.19 of the Docker Remote API or greater on your container
        * instance. To check the Docker Remote API version on your container instance, log in to your
        * container instance and run the following command: `sudo docker version --format
@@ -4518,6 +5207,150 @@ public open class CfnService(
 
       /**
        * @param options The configuration options to send to the log driver.
+       * The options you can specify depend on the log driver. Some of the options you can specify
+       * when you use the `awslogs` log driver to route logs to Amazon CloudWatch include the
+       * following:
+       *
+       * * **awslogs-create-group** - Required: No
+       *
+       * Specify whether you want the log group to be created automatically. If this option isn't
+       * specified, it defaults to `false` .
+       *
+       *
+       * Your IAM policy must include the `logs:CreateLogGroup` permission before you attempt to use
+       * `awslogs-create-group` .
+       *
+       *
+       * * **awslogs-region** - Required: Yes
+       *
+       * Specify the AWS Region that the `awslogs` log driver is to send your Docker logs to. You
+       * can choose to send all of your logs from clusters in different Regions to a single region in
+       * CloudWatch Logs. This is so that they're all visible in one location. Otherwise, you can
+       * separate them by Region for more granularity. Make sure that the specified log group exists in
+       * the Region that you specify with this option.
+       *
+       * * **awslogs-group** - Required: Yes
+       *
+       * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
+       *
+       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
+       * for the EC2 launch type, required for the Fargate launch type.
+       *
+       * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
+       * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
+       * specify a prefix with this option, then the log stream takes the format
+       * `prefix-name/container-name/ecs-task-id` .
+       *
+       * If you don't specify a prefix with this option, then the log stream is named after the
+       * container ID that's assigned by the Docker daemon on the container instance. Because it's
+       * difficult to trace logs back to the container that sent them with just the Docker container ID
+       * (which is only available on the container instance), we recommend that you specify a prefix
+       * with this option.
+       *
+       * For Amazon ECS services, you can use the service name as the prefix. Doing so, you can
+       * trace log streams to the service that the container belongs to, the name of the container that
+       * sent them, and the ID of the task that the container belongs to.
+       *
+       * You must specify a stream-prefix for your logs to have your logs appear in the Log pane
+       * when using the Amazon ECS console.
+       *
+       * * **awslogs-datetime-format** - Required: No
+       *
+       * This option defines a multiline start pattern in Python `strftime` format. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * One example of a use case for using this format is for parsing output such as a stack dump,
+       * which might otherwise be logged in multiple entries. The correct pattern allows it to be
+       * captured in a single entry.
+       *
+       * For more information, see
+       * [awslogs-datetime-format](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format)
+       * .
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **awslogs-multiline-pattern** - Required: No
+       *
+       * This option defines a multiline start pattern that uses a regular expression. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * For more information, see
+       * [awslogs-multiline-pattern](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-multiline-pattern)
+       * .
+       *
+       * This option is ignored if `awslogs-datetime-format` is also configured.
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **mode** - Required: No
+       *
+       * Valid values: `non-blocking` | `blocking`
+       *
+       * This option defines the delivery mode of log messages from the container to CloudWatch
+       * Logs. The delivery mode you choose affects application availability when the flow of logs from
+       * container to CloudWatch is interrupted.
+       *
+       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
+       * from container code to write to the `stdout` and `stderr` streams will block. The logging
+       * thread of the application will block as a result. This may cause the application to become
+       * unresponsive and lead to container healthcheck failure.
+       *
+       * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
+       * intermediate buffer configured with the `max-buffer-size` option. This prevents the
+       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
+       * using this mode if you want to ensure service availability and are okay with some log loss.
+       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
+       * container log
+       * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
+       * .
+       *
+       * * **max-buffer-size** - Required: No
+       *
+       * Default value: `1m`
+       *
+       * When `non-blocking` mode is used, the `max-buffer-size` log option controls the size of the
+       * buffer that's used for intermediate message storage. Make sure to specify an adequate buffer
+       * size based on your application. When the buffer fills up, further logs cannot be stored. Logs
+       * that cannot be stored are lost.
+       *
+       * To route logs using the `splunk` log router, you need to specify a `splunk-token` and a
+       * `splunk-url` .
+       *
+       * When you use the `awsfirelens` log router to route logs to an AWS Service or AWS Partner
+       * Network destination for log storage and analytics, you can set the `log-driver-buffer-limit`
+       * option to limit the number of events that are buffered in memory, before being sent to the log
+       * router container. It can help to resolve potential log loss issue because high throughput
+       * might result in memory running out for the buffer inside of Docker.
+       *
+       * Other options you can specify when using `awsfirelens` to route logs depend on the
+       * destination. When you export logs to Amazon Data Firehose, you can specify the AWS Region with
+       * `region` and a name for the log stream with `delivery_stream` .
+       *
+       * When you export logs to Amazon Kinesis Data Streams, you can specify an AWS Region with
+       * `region` and a data stream name with `stream` .
+       *
+       * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
+       * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       *
+       * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
+       * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
+       * options.
+       *
        * This parameter requires version 1.19 of the Docker Remote API or greater on your container
        * instance. To check the Docker Remote API version on your container instance, log in to your
        * container instance and run the following command: `sudo docker version --format
@@ -4596,6 +5429,150 @@ public open class CfnService(
 
       /**
        * The configuration options to send to the log driver.
+       *
+       * The options you can specify depend on the log driver. Some of the options you can specify
+       * when you use the `awslogs` log driver to route logs to Amazon CloudWatch include the
+       * following:
+       *
+       * * **awslogs-create-group** - Required: No
+       *
+       * Specify whether you want the log group to be created automatically. If this option isn't
+       * specified, it defaults to `false` .
+       *
+       *
+       * Your IAM policy must include the `logs:CreateLogGroup` permission before you attempt to use
+       * `awslogs-create-group` .
+       *
+       *
+       * * **awslogs-region** - Required: Yes
+       *
+       * Specify the AWS Region that the `awslogs` log driver is to send your Docker logs to. You
+       * can choose to send all of your logs from clusters in different Regions to a single region in
+       * CloudWatch Logs. This is so that they're all visible in one location. Otherwise, you can
+       * separate them by Region for more granularity. Make sure that the specified log group exists in
+       * the Region that you specify with this option.
+       *
+       * * **awslogs-group** - Required: Yes
+       *
+       * Make sure to specify a log group that the `awslogs` log driver sends its log streams to.
+       *
+       * * **awslogs-stream-prefix** - Required: Yes, when using the Fargate launch type.Optional
+       * for the EC2 launch type, required for the Fargate launch type.
+       *
+       * Use the `awslogs-stream-prefix` option to associate a log stream with the specified prefix,
+       * the container name, and the ID of the Amazon ECS task that the container belongs to. If you
+       * specify a prefix with this option, then the log stream takes the format
+       * `prefix-name/container-name/ecs-task-id` .
+       *
+       * If you don't specify a prefix with this option, then the log stream is named after the
+       * container ID that's assigned by the Docker daemon on the container instance. Because it's
+       * difficult to trace logs back to the container that sent them with just the Docker container ID
+       * (which is only available on the container instance), we recommend that you specify a prefix
+       * with this option.
+       *
+       * For Amazon ECS services, you can use the service name as the prefix. Doing so, you can
+       * trace log streams to the service that the container belongs to, the name of the container that
+       * sent them, and the ID of the task that the container belongs to.
+       *
+       * You must specify a stream-prefix for your logs to have your logs appear in the Log pane
+       * when using the Amazon ECS console.
+       *
+       * * **awslogs-datetime-format** - Required: No
+       *
+       * This option defines a multiline start pattern in Python `strftime` format. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * One example of a use case for using this format is for parsing output such as a stack dump,
+       * which might otherwise be logged in multiple entries. The correct pattern allows it to be
+       * captured in a single entry.
+       *
+       * For more information, see
+       * [awslogs-datetime-format](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-datetime-format)
+       * .
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **awslogs-multiline-pattern** - Required: No
+       *
+       * This option defines a multiline start pattern that uses a regular expression. A log message
+       * consists of a line that matches the pattern and any following lines that don’t match the
+       * pattern. The matched line is the delimiter between log messages.
+       *
+       * For more information, see
+       * [awslogs-multiline-pattern](https://docs.aws.amazon.com/https://docs.docker.com/config/containers/logging/awslogs/#awslogs-multiline-pattern)
+       * .
+       *
+       * This option is ignored if `awslogs-datetime-format` is also configured.
+       *
+       * You cannot configure both the `awslogs-datetime-format` and `awslogs-multiline-pattern`
+       * options.
+       *
+       *
+       * Multiline logging performs regular expression parsing and matching of all log messages.
+       * This might have a negative impact on logging performance.
+       *
+       *
+       * * **mode** - Required: No
+       *
+       * Valid values: `non-blocking` | `blocking`
+       *
+       * This option defines the delivery mode of log messages from the container to CloudWatch
+       * Logs. The delivery mode you choose affects application availability when the flow of logs from
+       * container to CloudWatch is interrupted.
+       *
+       * If you use the `blocking` mode and the flow of logs to CloudWatch is interrupted, calls
+       * from container code to write to the `stdout` and `stderr` streams will block. The logging
+       * thread of the application will block as a result. This may cause the application to become
+       * unresponsive and lead to container healthcheck failure.
+       *
+       * If you use the `non-blocking` mode, the container's logs are instead stored in an in-memory
+       * intermediate buffer configured with the `max-buffer-size` option. This prevents the
+       * application from becoming unresponsive when logs cannot be sent to CloudWatch. We recommend
+       * using this mode if you want to ensure service availability and are okay with some log loss.
+       * For more information, see [Preventing log loss with non-blocking mode in the `awslogs`
+       * container log
+       * driver](https://docs.aws.amazon.com/containers/preventing-log-loss-with-non-blocking-mode-in-the-awslogs-container-log-driver/)
+       * .
+       *
+       * * **max-buffer-size** - Required: No
+       *
+       * Default value: `1m`
+       *
+       * When `non-blocking` mode is used, the `max-buffer-size` log option controls the size of the
+       * buffer that's used for intermediate message storage. Make sure to specify an adequate buffer
+       * size based on your application. When the buffer fills up, further logs cannot be stored. Logs
+       * that cannot be stored are lost.
+       *
+       * To route logs using the `splunk` log router, you need to specify a `splunk-token` and a
+       * `splunk-url` .
+       *
+       * When you use the `awsfirelens` log router to route logs to an AWS Service or AWS Partner
+       * Network destination for log storage and analytics, you can set the `log-driver-buffer-limit`
+       * option to limit the number of events that are buffered in memory, before being sent to the log
+       * router container. It can help to resolve potential log loss issue because high throughput
+       * might result in memory running out for the buffer inside of Docker.
+       *
+       * Other options you can specify when using `awsfirelens` to route logs depend on the
+       * destination. When you export logs to Amazon Data Firehose, you can specify the AWS Region with
+       * `region` and a name for the log stream with `delivery_stream` .
+       *
+       * When you export logs to Amazon Kinesis Data Streams, you can specify an AWS Region with
+       * `region` and a data stream name with `stream` .
+       *
+       * When you export logs to Amazon OpenSearch Service, you can specify options like `Name` ,
+       * `Host` (OpenSearch Service endpoint without protocol), `Port` , `Index` , `Type` , `Aws_auth`
+       * , `Aws_region` , `Suppress_Type_Name` , and `tls` .
+       *
+       * When you export logs to Amazon S3, you can specify the bucket using the `bucket` option.
+       * You can also specify `region` , `total_file_size` , `upload_timeout` , and `use_put_object` as
+       * options.
        *
        * This parameter requires version 1.19 of the Docker Remote API or greater on your container
        * instance. To check the Docker Remote API version on your container instance, log in to your
@@ -6852,7 +7829,10 @@ public open class CfnService(
    * The configuration for the Amazon EBS volume that Amazon ECS creates and manages on your behalf.
    *
    * These settings are used to create each Amazon EBS volume, with one volume created for each task
-   * in the service.
+   * in the service. For information about the supported launch types and operating systems, see
+   * [Supported operating systems and launch
+   * types](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ebs-volumes.html#ebs-volumes-configuration)
+   * in the *Amazon Elastic Container Service Developer Guide* .
    *
    * Many of these parameters map 1:1 with the Amazon EBS `CreateVolume` API request parameters.
    *
@@ -6902,14 +7882,16 @@ public open class CfnService(
     public fun encrypted(): Any? = unwrap(this).getEncrypted()
 
     /**
-     * The Linux filesystem type for the volume.
+     * The filesystem type for the volume.
      *
      * For volumes created from a snapshot, you must specify the same filesystem type that the
      * volume was using when the snapshot was created. If there is a filesystem type mismatch, the task
      * will fail to start.
      *
-     * The available filesystem types are `ext3` , `ext4` , and `xfs` . If no value is specified,
-     * the `xfs` filesystem type is used by default.
+     * The available Linux filesystem types are `ext3` , `ext4` , and `xfs` . If no value is
+     * specified, the `xfs` filesystem type is used by default.
+     *
+     * The available Windows filesystem types are `NTFS` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-servicemanagedebsvolumeconfiguration.html#cfn-ecs-service-servicemanagedebsvolumeconfiguration-filesystemtype)
      */
@@ -7082,13 +8064,15 @@ public open class CfnService(
       public fun encrypted(encrypted: IResolvable)
 
       /**
-       * @param filesystemType The Linux filesystem type for the volume.
+       * @param filesystemType The filesystem type for the volume.
        * For volumes created from a snapshot, you must specify the same filesystem type that the
        * volume was using when the snapshot was created. If there is a filesystem type mismatch, the
        * task will fail to start.
        *
-       * The available filesystem types are `ext3` , `ext4` , and `xfs` . If no value is specified,
-       * the `xfs` filesystem type is used by default.
+       * The available Linux filesystem types are `ext3` , `ext4` , and `xfs` . If no value is
+       * specified, the `xfs` filesystem type is used by default.
+       *
+       * The available Windows filesystem types are `NTFS` .
        */
       public fun filesystemType(filesystemType: String)
 
@@ -7258,13 +8242,15 @@ public open class CfnService(
       }
 
       /**
-       * @param filesystemType The Linux filesystem type for the volume.
+       * @param filesystemType The filesystem type for the volume.
        * For volumes created from a snapshot, you must specify the same filesystem type that the
        * volume was using when the snapshot was created. If there is a filesystem type mismatch, the
        * task will fail to start.
        *
-       * The available filesystem types are `ext3` , `ext4` , and `xfs` . If no value is specified,
-       * the `xfs` filesystem type is used by default.
+       * The available Linux filesystem types are `ext3` , `ext4` , and `xfs` . If no value is
+       * specified, the `xfs` filesystem type is used by default.
+       *
+       * The available Windows filesystem types are `NTFS` .
        */
       override fun filesystemType(filesystemType: String) {
         cdkBuilder.filesystemType(filesystemType)
@@ -7447,14 +8433,16 @@ public open class CfnService(
       override fun encrypted(): Any? = unwrap(this).getEncrypted()
 
       /**
-       * The Linux filesystem type for the volume.
+       * The filesystem type for the volume.
        *
        * For volumes created from a snapshot, you must specify the same filesystem type that the
        * volume was using when the snapshot was created. If there is a filesystem type mismatch, the
        * task will fail to start.
        *
-       * The available filesystem types are `ext3` , `ext4` , and `xfs` . If no value is specified,
-       * the `xfs` filesystem type is used by default.
+       * The available Linux filesystem types are `ext3` , `ext4` , and `xfs` . If no value is
+       * specified, the `xfs` filesystem type is used by default.
+       *
+       * The available Windows filesystem types are `NTFS` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-servicemanagedebsvolumeconfiguration.html#cfn-ecs-service-servicemanagedebsvolumeconfiguration-filesystemtype)
        */
@@ -8222,6 +9210,166 @@ public open class CfnService(
           software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnService.TimeoutConfigurationProperty
+    }
+  }
+
+  /**
+   * The VPC Lattice configuration for your service that holds the information for the target
+   * group(s) Amazon ECS tasks will be registered to.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * VpcLatticeConfigurationProperty vpcLatticeConfigurationProperty =
+   * VpcLatticeConfigurationProperty.builder()
+   * .portName("portName")
+   * .roleArn("roleArn")
+   * .targetGroupArn("targetGroupArn")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-vpclatticeconfiguration.html)
+   */
+  public interface VpcLatticeConfigurationProperty {
+    /**
+     * The name of the port mapping to register in the VPC Lattice target group.
+     *
+     * This is the name of the `portMapping` you defined in your task definition.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-vpclatticeconfiguration.html#cfn-ecs-service-vpclatticeconfiguration-portname)
+     */
+    public fun portName(): String
+
+    /**
+     * The ARN of the IAM role to associate with this VPC Lattice configuration.
+     *
+     * This is the Amazon ECS infrastructure IAM role that is used to manage your VPC Lattice
+     * infrastructure.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-vpclatticeconfiguration.html#cfn-ecs-service-vpclatticeconfiguration-rolearn)
+     */
+    public fun roleArn(): String
+
+    /**
+     * The full Amazon Resource Name (ARN) of the target group or groups associated with the VPC
+     * Lattice configuration that the Amazon ECS tasks will be registered to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-vpclatticeconfiguration.html#cfn-ecs-service-vpclatticeconfiguration-targetgrouparn)
+     */
+    public fun targetGroupArn(): String
+
+    /**
+     * A builder for [VpcLatticeConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param portName The name of the port mapping to register in the VPC Lattice target group. 
+       * This is the name of the `portMapping` you defined in your task definition.
+       */
+      public fun portName(portName: String)
+
+      /**
+       * @param roleArn The ARN of the IAM role to associate with this VPC Lattice configuration. 
+       * This is the Amazon ECS infrastructure IAM role that is used to manage your VPC Lattice
+       * infrastructure.
+       */
+      public fun roleArn(roleArn: String)
+
+      /**
+       * @param targetGroupArn The full Amazon Resource Name (ARN) of the target group or groups
+       * associated with the VPC Lattice configuration that the Amazon ECS tasks will be registered to.
+       * 
+       */
+      public fun targetGroupArn(targetGroupArn: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnService.VpcLatticeConfigurationProperty.Builder =
+          software.amazon.awscdk.services.ecs.CfnService.VpcLatticeConfigurationProperty.builder()
+
+      /**
+       * @param portName The name of the port mapping to register in the VPC Lattice target group. 
+       * This is the name of the `portMapping` you defined in your task definition.
+       */
+      override fun portName(portName: String) {
+        cdkBuilder.portName(portName)
+      }
+
+      /**
+       * @param roleArn The ARN of the IAM role to associate with this VPC Lattice configuration. 
+       * This is the Amazon ECS infrastructure IAM role that is used to manage your VPC Lattice
+       * infrastructure.
+       */
+      override fun roleArn(roleArn: String) {
+        cdkBuilder.roleArn(roleArn)
+      }
+
+      /**
+       * @param targetGroupArn The full Amazon Resource Name (ARN) of the target group or groups
+       * associated with the VPC Lattice configuration that the Amazon ECS tasks will be registered to.
+       * 
+       */
+      override fun targetGroupArn(targetGroupArn: String) {
+        cdkBuilder.targetGroupArn(targetGroupArn)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnService.VpcLatticeConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnService.VpcLatticeConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        VpcLatticeConfigurationProperty {
+      /**
+       * The name of the port mapping to register in the VPC Lattice target group.
+       *
+       * This is the name of the `portMapping` you defined in your task definition.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-vpclatticeconfiguration.html#cfn-ecs-service-vpclatticeconfiguration-portname)
+       */
+      override fun portName(): String = unwrap(this).getPortName()
+
+      /**
+       * The ARN of the IAM role to associate with this VPC Lattice configuration.
+       *
+       * This is the Amazon ECS infrastructure IAM role that is used to manage your VPC Lattice
+       * infrastructure.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-vpclatticeconfiguration.html#cfn-ecs-service-vpclatticeconfiguration-rolearn)
+       */
+      override fun roleArn(): String = unwrap(this).getRoleArn()
+
+      /**
+       * The full Amazon Resource Name (ARN) of the target group or groups associated with the VPC
+       * Lattice configuration that the Amazon ECS tasks will be registered to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-service-vpclatticeconfiguration.html#cfn-ecs-service-vpclatticeconfiguration-targetgrouparn)
+       */
+      override fun targetGroupArn(): String = unwrap(this).getTargetGroupArn()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): VpcLatticeConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnService.VpcLatticeConfigurationProperty):
+          VpcLatticeConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          VpcLatticeConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: VpcLatticeConfigurationProperty):
+          software.amazon.awscdk.services.ecs.CfnService.VpcLatticeConfigurationProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnService.VpcLatticeConfigurationProperty
     }
   }
 }

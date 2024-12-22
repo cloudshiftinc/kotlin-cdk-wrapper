@@ -29,6 +29,7 @@ import kotlin.collections.Map
  * .authenticationType("authenticationType")
  * .browserSettingsArn("browserSettingsArn")
  * .customerManagedKey("customerManagedKey")
+ * .dataProtectionSettingsArn("dataProtectionSettingsArn")
  * .displayName("displayName")
  * .instanceType("instanceType")
  * .ipAccessSettingsArn("ipAccessSettingsArn")
@@ -99,6 +100,13 @@ public interface CfnPortalProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-customermanagedkey)
    */
   public fun customerManagedKey(): String? = unwrap(this).getCustomerManagedKey()
+
+  /**
+   * The ARN of the data protection settings.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-dataprotectionsettingsarn)
+   */
+  public fun dataProtectionSettingsArn(): String? = unwrap(this).getDataProtectionSettingsArn()
 
   /**
    * The name of the web portal.
@@ -221,6 +229,11 @@ public interface CfnPortalProps {
     public fun customerManagedKey(customerManagedKey: String)
 
     /**
+     * @param dataProtectionSettingsArn The ARN of the data protection settings.
+     */
+    public fun dataProtectionSettingsArn(dataProtectionSettingsArn: String)
+
+    /**
      * @param displayName The name of the web portal.
      */
     public fun displayName(displayName: String)
@@ -337,6 +350,13 @@ public interface CfnPortalProps {
      */
     override fun customerManagedKey(customerManagedKey: String) {
       cdkBuilder.customerManagedKey(customerManagedKey)
+    }
+
+    /**
+     * @param dataProtectionSettingsArn The ARN of the data protection settings.
+     */
+    override fun dataProtectionSettingsArn(dataProtectionSettingsArn: String) {
+      cdkBuilder.dataProtectionSettingsArn(dataProtectionSettingsArn)
     }
 
     /**
@@ -472,6 +492,13 @@ public interface CfnPortalProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-customermanagedkey)
      */
     override fun customerManagedKey(): String? = unwrap(this).getCustomerManagedKey()
+
+    /**
+     * The ARN of the data protection settings.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-workspacesweb-portal.html#cfn-workspacesweb-portal-dataprotectionsettingsarn)
+     */
+    override fun dataProtectionSettingsArn(): String? = unwrap(this).getDataProtectionSettingsArn()
 
     /**
      * The name of the web portal.

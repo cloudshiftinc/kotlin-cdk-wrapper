@@ -16,12 +16,19 @@ import kotlin.collections.Map
  * Example:
  *
  * ```
- * Function fn;
- * MathExpression allProblems = MathExpression.Builder.create()
- * .expression("errors + throttles")
+ * MatchmakingRuleSet matchmakingRuleSet;
+ * // Alarm that triggers when the per-second average of not placed matches exceed 10%
+ * MathExpression ruleEvaluationRatio = MathExpression.Builder.create()
+ * .expression("1 - (ruleEvaluationsPassed / ruleEvaluationsFailed)")
  * .usingMetrics(Map.of(
- * "errors", fn.metricErrors(),
- * "throttles", fn.metricThrottles()))
+ * "ruleEvaluationsPassed",
+ * matchmakingRuleSet.metricRuleEvaluationsPassed(MetricOptions.builder().statistic(Statistic.SUM).build()),
+ * "ruleEvaluationsFailed", matchmakingRuleSet.metric("ruleEvaluationsFailed")))
+ * .build();
+ * Alarm.Builder.create(this, "Alarm")
+ * .metric(ruleEvaluationRatio)
+ * .threshold(0.1)
+ * .evaluationPeriods(3)
  * .build();
  * ```
  */
@@ -39,6 +46,33 @@ public interface MathExpressionProps : MathExpressionOptions {
    *
    * The key is the identifier that represents the given metric in the
    * expression, and the value is the actual Metric object.
+   *
+   * The `period` of each metric in `usingMetrics` is ignored and instead overridden
+   * by the `period` specified for the `MathExpression` construct. Even if no `period`
+   * is specified for the `MathExpression`, it will be overridden by the default
+   * value (`Duration.minutes(5)`).
+   *
+   * Example:
+   *
+   * ```
+   * IApplicationLoadBalancerMetrics metrics;
+   * MathExpression.Builder.create()
+   * .expression("m1+m2")
+   * .label("AlbErrors")
+   * .usingMetrics(Map.of(
+   * "m1", metrics.custom("HTTPCode_ELB_500_Count", MetricOptions.builder()
+   * .period(Duration.minutes(1)) // &lt;- This period will be ignored
+   * .statistic("Sum")
+   * .label("HTTPCode_ELB_500_Count")
+   * .build()),
+   * "m2", metrics.custom("HTTPCode_ELB_502_Count", MetricOptions.builder()
+   * .period(Duration.minutes(1)) // &lt;- This period will be ignored
+   * .statistic("Sum")
+   * .label("HTTPCode_ELB_502_Count")
+   * .build())))
+   * .period(Duration.minutes(3))
+   * .build();
+   * ```
    *
    * Default: - Empty map.
    */
@@ -113,6 +147,34 @@ public interface MathExpressionProps : MathExpressionOptions {
      * @param usingMetrics The metrics used in the expression, in a map.
      * The key is the identifier that represents the given metric in the
      * expression, and the value is the actual Metric object.
+     *
+     * The `period` of each metric in `usingMetrics` is ignored and instead overridden
+     * by the `period` specified for the `MathExpression` construct. Even if no `period`
+     * is specified for the `MathExpression`, it will be overridden by the default
+     * value (`Duration.minutes(5)`).
+     *
+     * Example:
+     *
+     * ```
+     * IApplicationLoadBalancerMetrics metrics;
+     * *
+     * MathExpression.Builder.create()
+     * .expression("m1+m2")
+     * .label("AlbErrors")
+     * .usingMetrics(Map.of(
+     * "m1", metrics.custom("HTTPCode_ELB_500_Count", MetricOptions.builder()
+     * .period(Duration.minutes(1)) // &lt;- This period will be ignored
+     * .statistic("Sum")
+     * .label("HTTPCode_ELB_500_Count")
+     * .build()),
+     * "m2", metrics.custom("HTTPCode_ELB_502_Count", MetricOptions.builder()
+     * .period(Duration.minutes(1)) // &lt;- This period will be ignored
+     * .statistic("Sum")
+     * .label("HTTPCode_ELB_502_Count")
+     * .build())))
+     * .period(Duration.minutes(3))
+     * .build();
+     * ```
      */
     public fun usingMetrics(usingMetrics: Map<String, IMetric>)
   }
@@ -196,6 +258,34 @@ public interface MathExpressionProps : MathExpressionOptions {
      * @param usingMetrics The metrics used in the expression, in a map.
      * The key is the identifier that represents the given metric in the
      * expression, and the value is the actual Metric object.
+     *
+     * The `period` of each metric in `usingMetrics` is ignored and instead overridden
+     * by the `period` specified for the `MathExpression` construct. Even if no `period`
+     * is specified for the `MathExpression`, it will be overridden by the default
+     * value (`Duration.minutes(5)`).
+     *
+     * Example:
+     *
+     * ```
+     * IApplicationLoadBalancerMetrics metrics;
+     * *
+     * MathExpression.Builder.create()
+     * .expression("m1+m2")
+     * .label("AlbErrors")
+     * .usingMetrics(Map.of(
+     * "m1", metrics.custom("HTTPCode_ELB_500_Count", MetricOptions.builder()
+     * .period(Duration.minutes(1)) // &lt;- This period will be ignored
+     * .statistic("Sum")
+     * .label("HTTPCode_ELB_500_Count")
+     * .build()),
+     * "m2", metrics.custom("HTTPCode_ELB_502_Count", MetricOptions.builder()
+     * .period(Duration.minutes(1)) // &lt;- This period will be ignored
+     * .statistic("Sum")
+     * .label("HTTPCode_ELB_502_Count")
+     * .build())))
+     * .period(Duration.minutes(3))
+     * .build();
+     * ```
      */
     override fun usingMetrics(usingMetrics: Map<String, IMetric>) {
       cdkBuilder.usingMetrics(usingMetrics.mapValues{IMetric.unwrap(it.value)})
@@ -288,6 +378,33 @@ public interface MathExpressionProps : MathExpressionOptions {
      *
      * The key is the identifier that represents the given metric in the
      * expression, and the value is the actual Metric object.
+     *
+     * The `period` of each metric in `usingMetrics` is ignored and instead overridden
+     * by the `period` specified for the `MathExpression` construct. Even if no `period`
+     * is specified for the `MathExpression`, it will be overridden by the default
+     * value (`Duration.minutes(5)`).
+     *
+     * Example:
+     *
+     * ```
+     * IApplicationLoadBalancerMetrics metrics;
+     * MathExpression.Builder.create()
+     * .expression("m1+m2")
+     * .label("AlbErrors")
+     * .usingMetrics(Map.of(
+     * "m1", metrics.custom("HTTPCode_ELB_500_Count", MetricOptions.builder()
+     * .period(Duration.minutes(1)) // &lt;- This period will be ignored
+     * .statistic("Sum")
+     * .label("HTTPCode_ELB_500_Count")
+     * .build()),
+     * "m2", metrics.custom("HTTPCode_ELB_502_Count", MetricOptions.builder()
+     * .period(Duration.minutes(1)) // &lt;- This period will be ignored
+     * .statistic("Sum")
+     * .label("HTTPCode_ELB_502_Count")
+     * .build())))
+     * .period(Duration.minutes(3))
+     * .build();
+     * ```
      *
      * Default: - Empty map.
      */

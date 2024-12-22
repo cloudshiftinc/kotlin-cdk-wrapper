@@ -48,6 +48,25 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .timeZone("timeZone")
  * // the properties below are optional
  * .description("description")
+ * .hoursOfOperationOverrides(List.of(HoursOfOperationOverrideProperty.builder()
+ * .effectiveFrom("effectiveFrom")
+ * .effectiveTill("effectiveTill")
+ * .overrideConfig(List.of(HoursOfOperationOverrideConfigProperty.builder()
+ * .day("day")
+ * .endTime(OverrideTimeSliceProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build())
+ * .startTime(OverrideTimeSliceProperty.builder()
+ * .hours(123)
+ * .minutes(123)
+ * .build())
+ * .build()))
+ * .overrideName("overrideName")
+ * // the properties below are optional
+ * .hoursOfOperationOverrideId("hoursOfOperationOverrideId")
+ * .overrideDescription("overrideDescription")
+ * .build()))
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -118,6 +137,31 @@ public open class CfnHoursOfOperation(
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
   }
+
+  /**
+   * One or more hours of operation overrides assigned to an hour of operation.
+   */
+  public open fun hoursOfOperationOverrides(): Any? = unwrap(this).getHoursOfOperationOverrides()
+
+  /**
+   * One or more hours of operation overrides assigned to an hour of operation.
+   */
+  public open fun hoursOfOperationOverrides(`value`: IResolvable) {
+    unwrap(this).setHoursOfOperationOverrides(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * One or more hours of operation overrides assigned to an hour of operation.
+   */
+  public open fun hoursOfOperationOverrides(`value`: List<Any>) {
+    unwrap(this).setHoursOfOperationOverrides(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * One or more hours of operation overrides assigned to an hour of operation.
+   */
+  public open fun hoursOfOperationOverrides(vararg `value`: Any): Unit =
+      hoursOfOperationOverrides(`value`.toList())
 
   /**
    * Examines the CloudFormation resource and discloses attributes.
@@ -225,6 +269,33 @@ public open class CfnHoursOfOperation(
     public fun description(description: String)
 
     /**
+     * One or more hours of operation overrides assigned to an hour of operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-hoursofoperationoverrides)
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation. 
+     */
+    public fun hoursOfOperationOverrides(hoursOfOperationOverrides: IResolvable)
+
+    /**
+     * One or more hours of operation overrides assigned to an hour of operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-hoursofoperationoverrides)
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation. 
+     */
+    public fun hoursOfOperationOverrides(hoursOfOperationOverrides: List<Any>)
+
+    /**
+     * One or more hours of operation overrides assigned to an hour of operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-hoursofoperationoverrides)
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation. 
+     */
+    public fun hoursOfOperationOverrides(vararg hoursOfOperationOverrides: Any)
+
+    /**
      * The Amazon Resource Name (ARN) of the instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-instancearn)
@@ -313,6 +384,38 @@ public open class CfnHoursOfOperation(
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * One or more hours of operation overrides assigned to an hour of operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-hoursofoperationoverrides)
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation. 
+     */
+    override fun hoursOfOperationOverrides(hoursOfOperationOverrides: IResolvable) {
+      cdkBuilder.hoursOfOperationOverrides(hoursOfOperationOverrides.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * One or more hours of operation overrides assigned to an hour of operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-hoursofoperationoverrides)
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation. 
+     */
+    override fun hoursOfOperationOverrides(hoursOfOperationOverrides: List<Any>) {
+      cdkBuilder.hoursOfOperationOverrides(hoursOfOperationOverrides.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * One or more hours of operation overrides assigned to an hour of operation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-connect-hoursofoperation.html#cfn-connect-hoursofoperation-hoursofoperationoverrides)
+     * @param hoursOfOperationOverrides One or more hours of operation overrides assigned to an hour
+     * of operation. 
+     */
+    override fun hoursOfOperationOverrides(vararg hoursOfOperationOverrides: Any): Unit =
+        hoursOfOperationOverrides(hoursOfOperationOverrides.toList())
 
     /**
      * The Amazon Resource Name (ARN) of the instance.
@@ -590,6 +693,472 @@ public open class CfnHoursOfOperation(
   }
 
   /**
+   * Contains information about the hours of operation override.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * HoursOfOperationOverrideConfigProperty hoursOfOperationOverrideConfigProperty =
+   * HoursOfOperationOverrideConfigProperty.builder()
+   * .day("day")
+   * .endTime(OverrideTimeSliceProperty.builder()
+   * .hours(123)
+   * .minutes(123)
+   * .build())
+   * .startTime(OverrideTimeSliceProperty.builder()
+   * .hours(123)
+   * .minutes(123)
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html)
+   */
+  public interface HoursOfOperationOverrideConfigProperty {
+    /**
+     * The day that the hours of operation override applies to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-day)
+     */
+    public fun day(): String
+
+    /**
+     * The start time or end time for an an hours of operation override.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-endtime)
+     */
+    public fun endTime(): Any
+
+    /**
+     * The start time or end time for an an hours of operation override.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-starttime)
+     */
+    public fun startTime(): Any
+
+    /**
+     * A builder for [HoursOfOperationOverrideConfigProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param day The day that the hours of operation override applies to. 
+       */
+      public fun day(day: String)
+
+      /**
+       * @param endTime The start time or end time for an an hours of operation override. 
+       */
+      public fun endTime(endTime: IResolvable)
+
+      /**
+       * @param endTime The start time or end time for an an hours of operation override. 
+       */
+      public fun endTime(endTime: OverrideTimeSliceProperty)
+
+      /**
+       * @param endTime The start time or end time for an an hours of operation override. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("24090d47896334564f65e788bd5db72825a46e8438cbbced4de30203a73db964")
+      public fun endTime(endTime: OverrideTimeSliceProperty.Builder.() -> Unit)
+
+      /**
+       * @param startTime The start time or end time for an an hours of operation override. 
+       */
+      public fun startTime(startTime: IResolvable)
+
+      /**
+       * @param startTime The start time or end time for an an hours of operation override. 
+       */
+      public fun startTime(startTime: OverrideTimeSliceProperty)
+
+      /**
+       * @param startTime The start time or end time for an an hours of operation override. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4a53be39462dabc179e9e25f7570e7c6c9c0c44be2fec0f7229fbf6e15122b17")
+      public fun startTime(startTime: OverrideTimeSliceProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideConfigProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideConfigProperty.builder()
+
+      /**
+       * @param day The day that the hours of operation override applies to. 
+       */
+      override fun day(day: String) {
+        cdkBuilder.day(day)
+      }
+
+      /**
+       * @param endTime The start time or end time for an an hours of operation override. 
+       */
+      override fun endTime(endTime: IResolvable) {
+        cdkBuilder.endTime(endTime.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param endTime The start time or end time for an an hours of operation override. 
+       */
+      override fun endTime(endTime: OverrideTimeSliceProperty) {
+        cdkBuilder.endTime(endTime.let(OverrideTimeSliceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param endTime The start time or end time for an an hours of operation override. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("24090d47896334564f65e788bd5db72825a46e8438cbbced4de30203a73db964")
+      override fun endTime(endTime: OverrideTimeSliceProperty.Builder.() -> Unit): Unit =
+          endTime(OverrideTimeSliceProperty(endTime))
+
+      /**
+       * @param startTime The start time or end time for an an hours of operation override. 
+       */
+      override fun startTime(startTime: IResolvable) {
+        cdkBuilder.startTime(startTime.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param startTime The start time or end time for an an hours of operation override. 
+       */
+      override fun startTime(startTime: OverrideTimeSliceProperty) {
+        cdkBuilder.startTime(startTime.let(OverrideTimeSliceProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param startTime The start time or end time for an an hours of operation override. 
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("4a53be39462dabc179e9e25f7570e7c6c9c0c44be2fec0f7229fbf6e15122b17")
+      override fun startTime(startTime: OverrideTimeSliceProperty.Builder.() -> Unit): Unit =
+          startTime(OverrideTimeSliceProperty(startTime))
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideConfigProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideConfigProperty,
+    ) : CdkObject(cdkObject),
+        HoursOfOperationOverrideConfigProperty {
+      /**
+       * The day that the hours of operation override applies to.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-day)
+       */
+      override fun day(): String = unwrap(this).getDay()
+
+      /**
+       * The start time or end time for an an hours of operation override.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-endtime)
+       */
+      override fun endTime(): Any = unwrap(this).getEndTime()
+
+      /**
+       * The start time or end time for an an hours of operation override.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverrideconfig.html#cfn-connect-hoursofoperation-hoursofoperationoverrideconfig-starttime)
+       */
+      override fun startTime(): Any = unwrap(this).getStartTime()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          HoursOfOperationOverrideConfigProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideConfigProperty):
+          HoursOfOperationOverrideConfigProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HoursOfOperationOverrideConfigProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HoursOfOperationOverrideConfigProperty):
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideConfigProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideConfigProperty
+    }
+  }
+
+  /**
+   * Overrides attached to the hours of operation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * HoursOfOperationOverrideProperty hoursOfOperationOverrideProperty =
+   * HoursOfOperationOverrideProperty.builder()
+   * .effectiveFrom("effectiveFrom")
+   * .effectiveTill("effectiveTill")
+   * .overrideConfig(List.of(HoursOfOperationOverrideConfigProperty.builder()
+   * .day("day")
+   * .endTime(OverrideTimeSliceProperty.builder()
+   * .hours(123)
+   * .minutes(123)
+   * .build())
+   * .startTime(OverrideTimeSliceProperty.builder()
+   * .hours(123)
+   * .minutes(123)
+   * .build())
+   * .build()))
+   * .overrideName("overrideName")
+   * // the properties below are optional
+   * .hoursOfOperationOverrideId("hoursOfOperationOverrideId")
+   * .overrideDescription("overrideDescription")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html)
+   */
+  public interface HoursOfOperationOverrideProperty {
+    /**
+     * The date from which the hours of operation override would be effective.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-effectivefrom)
+     */
+    public fun effectiveFrom(): String
+
+    /**
+     * The date till which the hours of operation override would be effective.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-effectivetill)
+     */
+    public fun effectiveTill(): String
+
+    /**
+     * The Resource Identifier for the hours of operation override.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-hoursofoperationoverrideid)
+     */
+    public fun hoursOfOperationOverrideId(): String? = unwrap(this).getHoursOfOperationOverrideId()
+
+    /**
+     * Configuration information for the hours of operation override: day, start time, and end time.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-overrideconfig)
+     */
+    public fun overrideConfig(): Any
+
+    /**
+     * The description of the hours of operation override.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-overridedescription)
+     */
+    public fun overrideDescription(): String? = unwrap(this).getOverrideDescription()
+
+    /**
+     * The name of the hours of operation override.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-overridename)
+     */
+    public fun overrideName(): String
+
+    /**
+     * A builder for [HoursOfOperationOverrideProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param effectiveFrom The date from which the hours of operation override would be
+       * effective. 
+       */
+      public fun effectiveFrom(effectiveFrom: String)
+
+      /**
+       * @param effectiveTill The date till which the hours of operation override would be
+       * effective. 
+       */
+      public fun effectiveTill(effectiveTill: String)
+
+      /**
+       * @param hoursOfOperationOverrideId The Resource Identifier for the hours of operation
+       * override.
+       */
+      public fun hoursOfOperationOverrideId(hoursOfOperationOverrideId: String)
+
+      /**
+       * @param overrideConfig Configuration information for the hours of operation override: day,
+       * start time, and end time. 
+       */
+      public fun overrideConfig(overrideConfig: IResolvable)
+
+      /**
+       * @param overrideConfig Configuration information for the hours of operation override: day,
+       * start time, and end time. 
+       */
+      public fun overrideConfig(overrideConfig: List<Any>)
+
+      /**
+       * @param overrideConfig Configuration information for the hours of operation override: day,
+       * start time, and end time. 
+       */
+      public fun overrideConfig(vararg overrideConfig: Any)
+
+      /**
+       * @param overrideDescription The description of the hours of operation override.
+       */
+      public fun overrideDescription(overrideDescription: String)
+
+      /**
+       * @param overrideName The name of the hours of operation override. 
+       */
+      public fun overrideName(overrideName: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideProperty.builder()
+
+      /**
+       * @param effectiveFrom The date from which the hours of operation override would be
+       * effective. 
+       */
+      override fun effectiveFrom(effectiveFrom: String) {
+        cdkBuilder.effectiveFrom(effectiveFrom)
+      }
+
+      /**
+       * @param effectiveTill The date till which the hours of operation override would be
+       * effective. 
+       */
+      override fun effectiveTill(effectiveTill: String) {
+        cdkBuilder.effectiveTill(effectiveTill)
+      }
+
+      /**
+       * @param hoursOfOperationOverrideId The Resource Identifier for the hours of operation
+       * override.
+       */
+      override fun hoursOfOperationOverrideId(hoursOfOperationOverrideId: String) {
+        cdkBuilder.hoursOfOperationOverrideId(hoursOfOperationOverrideId)
+      }
+
+      /**
+       * @param overrideConfig Configuration information for the hours of operation override: day,
+       * start time, and end time. 
+       */
+      override fun overrideConfig(overrideConfig: IResolvable) {
+        cdkBuilder.overrideConfig(overrideConfig.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param overrideConfig Configuration information for the hours of operation override: day,
+       * start time, and end time. 
+       */
+      override fun overrideConfig(overrideConfig: List<Any>) {
+        cdkBuilder.overrideConfig(overrideConfig.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param overrideConfig Configuration information for the hours of operation override: day,
+       * start time, and end time. 
+       */
+      override fun overrideConfig(vararg overrideConfig: Any): Unit =
+          overrideConfig(overrideConfig.toList())
+
+      /**
+       * @param overrideDescription The description of the hours of operation override.
+       */
+      override fun overrideDescription(overrideDescription: String) {
+        cdkBuilder.overrideDescription(overrideDescription)
+      }
+
+      /**
+       * @param overrideName The name of the hours of operation override. 
+       */
+      override fun overrideName(overrideName: String) {
+        cdkBuilder.overrideName(overrideName)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideProperty
+          = cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideProperty,
+    ) : CdkObject(cdkObject),
+        HoursOfOperationOverrideProperty {
+      /**
+       * The date from which the hours of operation override would be effective.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-effectivefrom)
+       */
+      override fun effectiveFrom(): String = unwrap(this).getEffectiveFrom()
+
+      /**
+       * The date till which the hours of operation override would be effective.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-effectivetill)
+       */
+      override fun effectiveTill(): String = unwrap(this).getEffectiveTill()
+
+      /**
+       * The Resource Identifier for the hours of operation override.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-hoursofoperationoverrideid)
+       */
+      override fun hoursOfOperationOverrideId(): String? =
+          unwrap(this).getHoursOfOperationOverrideId()
+
+      /**
+       * Configuration information for the hours of operation override: day, start time, and end
+       * time.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-overrideconfig)
+       */
+      override fun overrideConfig(): Any = unwrap(this).getOverrideConfig()
+
+      /**
+       * The description of the hours of operation override.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-overridedescription)
+       */
+      override fun overrideDescription(): String? = unwrap(this).getOverrideDescription()
+
+      /**
+       * The name of the hours of operation override.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-hoursofoperationoverride.html#cfn-connect-hoursofoperation-hoursofoperationoverride-overridename)
+       */
+      override fun overrideName(): String = unwrap(this).getOverrideName()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): HoursOfOperationOverrideProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideProperty):
+          HoursOfOperationOverrideProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          HoursOfOperationOverrideProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: HoursOfOperationOverrideProperty):
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideProperty
+          = (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationOverrideProperty
+    }
+  }
+
+  /**
    * The start time or end time for an hours of operation.
    *
    * Example:
@@ -698,6 +1267,116 @@ public open class CfnHoursOfOperation(
           software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationTimeSliceProperty
           = (wrapped as CdkObject).cdkObject as
           software.amazon.awscdk.services.connect.CfnHoursOfOperation.HoursOfOperationTimeSliceProperty
+    }
+  }
+
+  /**
+   * The start time or end time for an an hours of operation override.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.connect.*;
+   * OverrideTimeSliceProperty overrideTimeSliceProperty = OverrideTimeSliceProperty.builder()
+   * .hours(123)
+   * .minutes(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-overridetimeslice.html)
+   */
+  public interface OverrideTimeSliceProperty {
+    /**
+     * The hours.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-overridetimeslice.html#cfn-connect-hoursofoperation-overridetimeslice-hours)
+     */
+    public fun hours(): Number
+
+    /**
+     * The minutes.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-overridetimeslice.html#cfn-connect-hoursofoperation-overridetimeslice-minutes)
+     */
+    public fun minutes(): Number
+
+    /**
+     * A builder for [OverrideTimeSliceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param hours The hours. 
+       */
+      public fun hours(hours: Number)
+
+      /**
+       * @param minutes The minutes. 
+       */
+      public fun minutes(minutes: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.OverrideTimeSliceProperty.Builder
+          =
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.OverrideTimeSliceProperty.builder()
+
+      /**
+       * @param hours The hours. 
+       */
+      override fun hours(hours: Number) {
+        cdkBuilder.hours(hours)
+      }
+
+      /**
+       * @param minutes The minutes. 
+       */
+      override fun minutes(minutes: Number) {
+        cdkBuilder.minutes(minutes)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.OverrideTimeSliceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.OverrideTimeSliceProperty,
+    ) : CdkObject(cdkObject),
+        OverrideTimeSliceProperty {
+      /**
+       * The hours.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-overridetimeslice.html#cfn-connect-hoursofoperation-overridetimeslice-hours)
+       */
+      override fun hours(): Number = unwrap(this).getHours()
+
+      /**
+       * The minutes.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-connect-hoursofoperation-overridetimeslice.html#cfn-connect-hoursofoperation-overridetimeslice-minutes)
+       */
+      override fun minutes(): Number = unwrap(this).getMinutes()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): OverrideTimeSliceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.connect.CfnHoursOfOperation.OverrideTimeSliceProperty):
+          OverrideTimeSliceProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          OverrideTimeSliceProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: OverrideTimeSliceProperty):
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.OverrideTimeSliceProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.connect.CfnHoursOfOperation.OverrideTimeSliceProperty
     }
   }
 }

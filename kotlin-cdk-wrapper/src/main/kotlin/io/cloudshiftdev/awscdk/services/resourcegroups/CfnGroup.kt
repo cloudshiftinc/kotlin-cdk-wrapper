@@ -706,7 +706,7 @@ public open class CfnGroup(
      *
      * For the list of parameters that you can use with each configuration item `Type` , see
      * [Supported resource types and
-     * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+     * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
      * in the *AWS Resource Groups User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-parameters)
@@ -718,7 +718,7 @@ public open class CfnGroup(
      *
      * Each item must have a unique value for type. For the list of the types that you can specify
      * for a configuration item, see [Supported resource types and
-     * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+     * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
      * in the *AWS Resource Groups User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-type)
@@ -734,7 +734,7 @@ public open class CfnGroup(
        * @param parameters A collection of parameters for this configuration item.
        * For the list of parameters that you can use with each configuration item `Type` , see
        * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        */
       public fun parameters(parameters: IResolvable)
@@ -743,7 +743,7 @@ public open class CfnGroup(
        * @param parameters A collection of parameters for this configuration item.
        * For the list of parameters that you can use with each configuration item `Type` , see
        * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        */
       public fun parameters(parameters: List<Any>)
@@ -752,7 +752,7 @@ public open class CfnGroup(
        * @param parameters A collection of parameters for this configuration item.
        * For the list of parameters that you can use with each configuration item `Type` , see
        * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        */
       public fun parameters(vararg parameters: Any)
@@ -761,7 +761,7 @@ public open class CfnGroup(
        * @param type Specifies the type of configuration item.
        * Each item must have a unique value for type. For the list of the types that you can specify
        * for a configuration item, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        */
       public fun type(type: String)
@@ -777,7 +777,7 @@ public open class CfnGroup(
        * @param parameters A collection of parameters for this configuration item.
        * For the list of parameters that you can use with each configuration item `Type` , see
        * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        */
       override fun parameters(parameters: IResolvable) {
@@ -788,7 +788,7 @@ public open class CfnGroup(
        * @param parameters A collection of parameters for this configuration item.
        * For the list of parameters that you can use with each configuration item `Type` , see
        * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        */
       override fun parameters(parameters: List<Any>) {
@@ -799,7 +799,7 @@ public open class CfnGroup(
        * @param parameters A collection of parameters for this configuration item.
        * For the list of parameters that you can use with each configuration item `Type` , see
        * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        */
       override fun parameters(vararg parameters: Any): Unit = parameters(parameters.toList())
@@ -808,7 +808,7 @@ public open class CfnGroup(
        * @param type Specifies the type of configuration item.
        * Each item must have a unique value for type. For the list of the types that you can specify
        * for a configuration item, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        */
       override fun type(type: String) {
@@ -829,7 +829,7 @@ public open class CfnGroup(
        *
        * For the list of parameters that you can use with each configuration item `Type` , see
        * [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-parameters)
@@ -841,7 +841,7 @@ public open class CfnGroup(
        *
        * Each item must have a unique value for type. For the list of the types that you can specify
        * for a configuration item, see [Supported resource types and
-       * parameters](https://docs.aws.amazon.com/ARG/latest/APIReference/about-slg.html#about-slg-types)
+       * parameters](https://docs.aws.amazon.com//ARG/latest/APIReference/about-slg.html#about-slg-types)
        * in the *AWS Resource Groups User Guide* .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-resourcegroups-group-configurationitem.html#cfn-resourcegroups-group-configurationitem-type)

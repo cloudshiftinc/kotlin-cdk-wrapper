@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.aws_apigatewayv2_authorizers
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpAuthorizerType
 import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpRouteAuthorizerBindOptions
 import io.cloudshiftdev.awscdk.services.apigatewayv2.HttpRouteAuthorizerConfig
 import io.cloudshiftdev.awscdk.services.apigatewayv2.IHttpRouteAuthorizer
@@ -36,6 +37,12 @@ public open class HttpIamAuthorizer(
   public constructor() :
       this(software.amazon.awscdk.aws_apigatewayv2_authorizers.HttpIamAuthorizer()
   )
+
+  /**
+   * The authorizationType used for IAM Authorizer.
+   */
+  public open fun authorizationType(): HttpAuthorizerType =
+      unwrap(this).getAuthorizationType().let(HttpAuthorizerType::wrap)
 
   /**
    * Bind this authorizer to a specified Http route.

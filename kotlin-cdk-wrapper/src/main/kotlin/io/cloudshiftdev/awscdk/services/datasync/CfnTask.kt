@@ -86,6 +86,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .key("key")
  * .value("value")
  * .build()))
+ * .taskMode("taskMode")
  * .taskReportConfig(TaskReportConfigProperty.builder()
  * .destination(DestinationProperty.builder()
  * .s3(S3Property.builder()
@@ -217,30 +218,30 @@ public open class CfnTask(
   public open fun excludes(vararg `value`: Any): Unit = excludes(`value`.toList())
 
   /**
-   * Specifies include filters define the files, objects, and folders in your source location that
-   * you want DataSync to transfer.
+   * Specifies include filters that define the files, objects, and folders in your source location
+   * that you want DataSync to transfer.
    */
   public open fun includes(): Any? = unwrap(this).getIncludes()
 
   /**
-   * Specifies include filters define the files, objects, and folders in your source location that
-   * you want DataSync to transfer.
+   * Specifies include filters that define the files, objects, and folders in your source location
+   * that you want DataSync to transfer.
    */
   public open fun includes(`value`: IResolvable) {
     unwrap(this).setIncludes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   * Specifies include filters define the files, objects, and folders in your source location that
-   * you want DataSync to transfer.
+   * Specifies include filters that define the files, objects, and folders in your source location
+   * that you want DataSync to transfer.
    */
   public open fun includes(`value`: List<Any>) {
     unwrap(this).setIncludes(`value`.map{CdkObjectWrappers.unwrap(it)})
   }
 
   /**
-   * Specifies include filters define the files, objects, and folders in your source location that
-   * you want DataSync to transfer.
+   * Specifies include filters that define the files, objects, and folders in your source location
+   * that you want DataSync to transfer.
    */
   public open fun includes(vararg `value`: Any): Unit = includes(`value`.toList())
 
@@ -390,6 +391,18 @@ public open class CfnTask(
   public open fun tagsRaw(vararg `value`: CfnTag): Unit = tagsRaw(`value`.toList())
 
   /**
+   * Specifies one of the following task modes for your data transfer:.
+   */
+  public open fun taskMode(): String? = unwrap(this).getTaskMode()
+
+  /**
+   * Specifies one of the following task modes for your data transfer:.
+   */
+  public open fun taskMode(`value`: String) {
+    unwrap(this).setTaskMode(`value`)
+  }
+
+  /**
    * Specifies how you want to configure a task report, which provides detailed information about
    * your DataSync transfer.
    */
@@ -429,8 +442,11 @@ public open class CfnTask(
      * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring
      * your task.
      *
-     * For more information, see [Monitoring DataSync with Amazon
-     * CloudWatch](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html) .
+     * For Enhanced mode tasks, you don't need to specify anything. DataSync automatically sends
+     * logs to a CloudWatch log group named `/aws/datasync` .
+     *
+     * For more information, see [Monitoring data transfers with CloudWatch
+     * Logs](https://docs.aws.amazon.com/datasync/latest/userguide/configure-logging.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-cloudwatchloggrouparn)
      * @param cloudWatchLogGroupArn Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch
@@ -487,40 +503,40 @@ public open class CfnTask(
     public fun excludes(vararg excludes: Any)
 
     /**
-     * Specifies include filters define the files, objects, and folders in your source location that
-     * you want DataSync to transfer.
+     * Specifies include filters that define the files, objects, and folders in your source location
+     * that you want DataSync to transfer.
      *
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer. 
      */
     public fun includes(includes: IResolvable)
 
     /**
-     * Specifies include filters define the files, objects, and folders in your source location that
-     * you want DataSync to transfer.
+     * Specifies include filters that define the files, objects, and folders in your source location
+     * that you want DataSync to transfer.
      *
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer. 
      */
     public fun includes(includes: List<Any>)
 
     /**
-     * Specifies include filters define the files, objects, and folders in your source location that
-     * you want DataSync to transfer.
+     * Specifies include filters that define the files, objects, and folders in your source location
+     * that you want DataSync to transfer.
      *
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer. 
      */
     public fun includes(vararg includes: Any)
@@ -675,6 +691,34 @@ public open class CfnTask(
     public fun tags(vararg tags: CfnTag)
 
     /**
+     * Specifies one of the following task modes for your data transfer:.
+     *
+     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
+     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
+     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
+     * between Amazon S3 locations.
+     *
+     *
+     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
+     * must have the `iam:CreateServiceLinkedRole` permission.
+     *
+     *
+     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
+     * DataSync locations. Basic mode tasks are subject to
+     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
+     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
+     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
+     *
+     * For more information, see [Understanding task mode
+     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskmode)
+     * @param taskMode Specifies one of the following task modes for your data transfer:. 
+     */
+    public fun taskMode(taskMode: String)
+
+    /**
      * Specifies how you want to configure a task report, which provides detailed information about
      * your DataSync transfer.
      *
@@ -742,8 +786,11 @@ public open class CfnTask(
      * Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch log group for monitoring
      * your task.
      *
-     * For more information, see [Monitoring DataSync with Amazon
-     * CloudWatch](https://docs.aws.amazon.com/datasync/latest/userguide/monitor-datasync.html) .
+     * For Enhanced mode tasks, you don't need to specify anything. DataSync automatically sends
+     * logs to a CloudWatch log group named `/aws/datasync` .
+     *
+     * For more information, see [Monitoring data transfers with CloudWatch
+     * Logs](https://docs.aws.amazon.com/datasync/latest/userguide/configure-logging.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-cloudwatchloggrouparn)
      * @param cloudWatchLogGroupArn Specifies the Amazon Resource Name (ARN) of an Amazon CloudWatch
@@ -808,14 +855,14 @@ public open class CfnTask(
     override fun excludes(vararg excludes: Any): Unit = excludes(excludes.toList())
 
     /**
-     * Specifies include filters define the files, objects, and folders in your source location that
-     * you want DataSync to transfer.
+     * Specifies include filters that define the files, objects, and folders in your source location
+     * that you want DataSync to transfer.
      *
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer. 
      */
     override fun includes(includes: IResolvable) {
@@ -823,14 +870,14 @@ public open class CfnTask(
     }
 
     /**
-     * Specifies include filters define the files, objects, and folders in your source location that
-     * you want DataSync to transfer.
+     * Specifies include filters that define the files, objects, and folders in your source location
+     * that you want DataSync to transfer.
      *
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer. 
      */
     override fun includes(includes: List<Any>) {
@@ -838,14 +885,14 @@ public open class CfnTask(
     }
 
     /**
-     * Specifies include filters define the files, objects, and folders in your source location that
-     * you want DataSync to transfer.
+     * Specifies include filters that define the files, objects, and folders in your source location
+     * that you want DataSync to transfer.
      *
      * For more information and examples, see [Specifying what DataSync transfers by using
      * filters](https://docs.aws.amazon.com/datasync/latest/userguide/filtering.html) .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-includes)
-     * @param includes Specifies include filters define the files, objects, and folders in your
+     * @param includes Specifies include filters that define the files, objects, and folders in your
      * source location that you want DataSync to transfer. 
      */
     override fun includes(vararg includes: Any): Unit = includes(includes.toList())
@@ -1019,6 +1066,36 @@ public open class CfnTask(
      * @param tags Specifies the tags that you want to apply to your task. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
+
+    /**
+     * Specifies one of the following task modes for your data transfer:.
+     *
+     * * `ENHANCED` - Transfer virtually unlimited numbers of objects with higher performance than
+     * Basic mode. Enhanced mode tasks optimize the data transfer process by listing, preparing,
+     * transferring, and verifying data in parallel. Enhanced mode is currently available for transfers
+     * between Amazon S3 locations.
+     *
+     *
+     * To create an Enhanced mode task, the IAM role that you use to call the `CreateTask` operation
+     * must have the `iam:CreateServiceLinkedRole` permission.
+     *
+     *
+     * * `BASIC` (default) - Transfer files or objects between AWS storage and all other supported
+     * DataSync locations. Basic mode tasks are subject to
+     * [quotas](https://docs.aws.amazon.com/datasync/latest/userguide/datasync-limits.html) on the
+     * number of files, objects, and directories in a dataset. Basic mode sequentially prepares,
+     * transfers, and verifies data, making it slower than Enhanced mode for most workloads.
+     *
+     * For more information, see [Understanding task mode
+     * differences](https://docs.aws.amazon.com/datasync/latest/userguide/choosing-task-mode.html#task-mode-differences)
+     * .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-datasync-task.html#cfn-datasync-task-taskmode)
+     * @param taskMode Specifies one of the following task modes for your data transfer:. 
+     */
+    override fun taskMode(taskMode: String) {
+      cdkBuilder.taskMode(taskMode)
+    }
 
     /**
      * Specifies how you want to configure a task report, which provides detailed information about

@@ -208,6 +208,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .projectionType("projectionType")
  * .build())
  * // the properties below are optional
+ * .warmThroughput(WarmThroughputProperty.builder()
+ * .readUnitsPerSecond(123)
+ * .writeUnitsPerSecond(123)
+ * .build())
  * .writeOnDemandThroughputSettings(WriteOnDemandThroughputSettingsProperty.builder()
  * .maxWriteRequestUnits(123)
  * .build())
@@ -251,6 +255,10 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .enabled(false)
  * // the properties below are optional
  * .attributeName("attributeName")
+ * .build())
+ * .warmThroughput(WarmThroughputProperty.builder()
+ * .readUnitsPerSecond(123)
+ * .writeUnitsPerSecond(123)
  * .build())
  * .writeOnDemandThroughputSettings(WriteOnDemandThroughputSettingsProperty.builder()
  * .maxWriteRequestUnits(123)
@@ -561,6 +569,37 @@ public open class CfnGlobalTable(
   public open
       fun timeToLiveSpecification(`value`: TimeToLiveSpecificationProperty.Builder.() -> Unit): Unit
       = timeToLiveSpecification(TimeToLiveSpecificationProperty(`value`))
+
+  /**
+   * Provides visibility into the number of read and write operations your table or secondary index
+   * can instantaneously support.
+   */
+  public open fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
+
+  /**
+   * Provides visibility into the number of read and write operations your table or secondary index
+   * can instantaneously support.
+   */
+  public open fun warmThroughput(`value`: IResolvable) {
+    unwrap(this).setWarmThroughput(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * Provides visibility into the number of read and write operations your table or secondary index
+   * can instantaneously support.
+   */
+  public open fun warmThroughput(`value`: WarmThroughputProperty) {
+    unwrap(this).setWarmThroughput(`value`.let(WarmThroughputProperty.Companion::unwrap))
+  }
+
+  /**
+   * Provides visibility into the number of read and write operations your table or secondary index
+   * can instantaneously support.
+   */
+  @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+  @JvmName("7571d59bb1f31bb0e2876e0a98639fd1259ae70eaa1cc8803ae7225f2efa6fda")
+  public open fun warmThroughput(`value`: WarmThroughputProperty.Builder.() -> Unit): Unit =
+      warmThroughput(WarmThroughputProperty(`value`))
 
   /**
    * Sets the write request settings for a global table or a global secondary index.
@@ -993,9 +1032,50 @@ public open class CfnGlobalTable(
         fun timeToLiveSpecification(timeToLiveSpecification: TimeToLiveSpecificationProperty.Builder.() -> Unit)
 
     /**
+     * Provides visibility into the number of read and write operations your table or secondary
+     * index can instantaneously support.
+     *
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-warmthroughput)
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support. 
+     */
+    public fun warmThroughput(warmThroughput: IResolvable)
+
+    /**
+     * Provides visibility into the number of read and write operations your table or secondary
+     * index can instantaneously support.
+     *
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-warmthroughput)
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support. 
+     */
+    public fun warmThroughput(warmThroughput: WarmThroughputProperty)
+
+    /**
+     * Provides visibility into the number of read and write operations your table or secondary
+     * index can instantaneously support.
+     *
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-warmthroughput)
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fb663e91fee0d575cf5f523231dc675320a568897e670c9d8a08c99c1dde25e1")
+    public fun warmThroughput(warmThroughput: WarmThroughputProperty.Builder.() -> Unit)
+
+    /**
      * Sets the write request settings for a global table or a global secondary index.
      *
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
@@ -1006,7 +1086,7 @@ public open class CfnGlobalTable(
     /**
      * Sets the write request settings for a global table or a global secondary index.
      *
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
@@ -1018,7 +1098,7 @@ public open class CfnGlobalTable(
     /**
      * Sets the write request settings for a global table or a global secondary index.
      *
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
@@ -1485,9 +1565,55 @@ public open class CfnGlobalTable(
         Unit = timeToLiveSpecification(TimeToLiveSpecificationProperty(timeToLiveSpecification))
 
     /**
+     * Provides visibility into the number of read and write operations your table or secondary
+     * index can instantaneously support.
+     *
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-warmthroughput)
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support. 
+     */
+    override fun warmThroughput(warmThroughput: IResolvable) {
+      cdkBuilder.warmThroughput(warmThroughput.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * Provides visibility into the number of read and write operations your table or secondary
+     * index can instantaneously support.
+     *
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-warmthroughput)
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support. 
+     */
+    override fun warmThroughput(warmThroughput: WarmThroughputProperty) {
+      cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughputProperty.Companion::unwrap))
+    }
+
+    /**
+     * Provides visibility into the number of read and write operations your table or secondary
+     * index can instantaneously support.
+     *
+     * The settings can be modified using the `UpdateTable` operation to meet the throughput
+     * requirements of an upcoming peak event.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-warmthroughput)
+     * @param warmThroughput Provides visibility into the number of read and write operations your
+     * table or secondary index can instantaneously support. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("fb663e91fee0d575cf5f523231dc675320a568897e670c9d8a08c99c1dde25e1")
+    override fun warmThroughput(warmThroughput: WarmThroughputProperty.Builder.() -> Unit): Unit =
+        warmThroughput(WarmThroughputProperty(warmThroughput))
+
+    /**
      * Sets the write request settings for a global table or a global secondary index.
      *
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
@@ -1500,7 +1626,7 @@ public open class CfnGlobalTable(
     /**
      * Sets the write request settings for a global table or a global secondary index.
      *
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
@@ -1514,7 +1640,7 @@ public open class CfnGlobalTable(
     /**
      * Sets the write request settings for a global table or a global secondary index.
      *
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-globaltable.html#cfn-dynamodb-globaltable-writeondemandthroughputsettings)
      * @param writeOnDemandThroughputSettings Sets the write request settings for a global table or
@@ -2139,6 +2265,10 @@ public open class CfnGlobalTable(
    * .projectionType("projectionType")
    * .build())
    * // the properties below are optional
+   * .warmThroughput(WarmThroughputProperty.builder()
+   * .readUnitsPerSecond(123)
+   * .writeUnitsPerSecond(123)
+   * .build())
    * .writeOnDemandThroughputSettings(WriteOnDemandThroughputSettingsProperty.builder()
    * .maxWriteRequestUnits(123)
    * .build())
@@ -2202,9 +2332,20 @@ public open class CfnGlobalTable(
     public fun projection(): Any
 
     /**
+     * Represents the warm throughput value (in read units per second and write units per second)
+     * for the specified secondary index.
+     *
+     * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` , or
+     * both.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-warmthroughput)
+     */
+    public fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
+
+    /**
      * Sets the write request settings for a global table or a global secondary index.
      *
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-writeondemandthroughputsettings)
      */
@@ -2302,16 +2443,44 @@ public open class CfnGlobalTable(
       public fun projection(projection: ProjectionProperty.Builder.() -> Unit)
 
       /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      public fun warmThroughput(warmThroughput: IResolvable)
+
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      public fun warmThroughput(warmThroughput: WarmThroughputProperty)
+
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("65f3e02df3db63106ff31fc1eaf20732d23a406d926914cd0ea9eeb2a23cab59")
+      public fun warmThroughput(warmThroughput: WarmThroughputProperty.Builder.() -> Unit)
+
+      /**
        * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
        * or a global secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       public fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable)
 
       /**
        * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
        * or a global secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       public
           fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: WriteOnDemandThroughputSettingsProperty)
@@ -2319,7 +2488,8 @@ public open class CfnGlobalTable(
       /**
        * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
        * or a global secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("75bc700c6e6d1f0b234f7f279ab9bdd40651f966af3b0ae481f86f62bf711096")
@@ -2447,9 +2617,41 @@ public open class CfnGlobalTable(
           projection(ProjectionProperty(projection))
 
       /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      override fun warmThroughput(warmThroughput: IResolvable) {
+        cdkBuilder.warmThroughput(warmThroughput.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      override fun warmThroughput(warmThroughput: WarmThroughputProperty) {
+        cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughputProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param warmThroughput Represents the warm throughput value (in read units per second and
+       * write units per second) for the specified secondary index.
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("65f3e02df3db63106ff31fc1eaf20732d23a406d926914cd0ea9eeb2a23cab59")
+      override fun warmThroughput(warmThroughput: WarmThroughputProperty.Builder.() -> Unit): Unit =
+          warmThroughput(WarmThroughputProperty(warmThroughput))
+
+      /**
        * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
        * or a global secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       override fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: IResolvable) {
         cdkBuilder.writeOnDemandThroughputSettings(writeOnDemandThroughputSettings.let(IResolvable.Companion::unwrap))
@@ -2458,7 +2660,8 @@ public open class CfnGlobalTable(
       /**
        * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
        * or a global secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       override
           fun writeOnDemandThroughputSettings(writeOnDemandThroughputSettings: WriteOnDemandThroughputSettingsProperty) {
@@ -2468,7 +2671,8 @@ public open class CfnGlobalTable(
       /**
        * @param writeOnDemandThroughputSettings Sets the write request settings for a global table
        * or a global secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("75bc700c6e6d1f0b234f7f279ab9bdd40651f966af3b0ae481f86f62bf711096")
@@ -2560,9 +2764,21 @@ public open class CfnGlobalTable(
       override fun projection(): Any = unwrap(this).getProjection()
 
       /**
+       * Represents the warm throughput value (in read units per second and write units per second)
+       * for the specified secondary index.
+       *
+       * If you use this parameter, you must specify `ReadUnitsPerSecond` , `WriteUnitsPerSecond` ,
+       * or both.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-warmthroughput)
+       */
+      override fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
+
+      /**
        * Sets the write request settings for a global table or a global secondary index.
        *
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-globalsecondaryindex.html#cfn-dynamodb-globaltable-globalsecondaryindex-writeondemandthroughputsettings)
        */
@@ -3465,7 +3681,7 @@ public open class CfnGlobalTable(
   /**
    * Sets the read request settings for a replica table or a replica global secondary index.
    *
-   * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+   * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
    *
    * Example:
    *
@@ -3789,7 +4005,7 @@ public open class CfnGlobalTable(
     /**
      * Sets the read request settings for a replica global secondary index.
      *
-     * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+     * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-readondemandthroughputsettings)
      */
@@ -3856,14 +4072,16 @@ public open class CfnGlobalTable(
       /**
        * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
        * secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       public fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: IResolvable)
 
       /**
        * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
        * secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       public
           fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: ReadOnDemandThroughputSettingsProperty)
@@ -3871,7 +4089,8 @@ public open class CfnGlobalTable(
       /**
        * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
        * secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("afdf16d2798041a0b92d4ce57cbf89143ebabde09bf9c47543cd5c7117d71e89")
@@ -3961,7 +4180,8 @@ public open class CfnGlobalTable(
       /**
        * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
        * secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       override fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: IResolvable) {
         cdkBuilder.readOnDemandThroughputSettings(readOnDemandThroughputSettings.let(IResolvable.Companion::unwrap))
@@ -3970,7 +4190,8 @@ public open class CfnGlobalTable(
       /**
        * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
        * secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       override
           fun readOnDemandThroughputSettings(readOnDemandThroughputSettings: ReadOnDemandThroughputSettingsProperty) {
@@ -3980,7 +4201,8 @@ public open class CfnGlobalTable(
       /**
        * @param readOnDemandThroughputSettings Sets the read request settings for a replica global
        * secondary index.
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("afdf16d2798041a0b92d4ce57cbf89143ebabde09bf9c47543cd5c7117d71e89")
@@ -4053,7 +4275,8 @@ public open class CfnGlobalTable(
       /**
        * Sets the read request settings for a replica global secondary index.
        *
-       * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+       * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode`
+       * .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-replicaglobalsecondaryindexspecification.html#cfn-dynamodb-globaltable-replicaglobalsecondaryindexspecification-readondemandthroughputsettings)
        */
@@ -6228,9 +6451,126 @@ public open class CfnGlobalTable(
   }
 
   /**
+   * Provides visibility into the number of read and write operations your table or secondary index
+   * can instantaneously support.
+   *
+   * The settings can be modified using the `UpdateTable` operation to meet the throughput
+   * requirements of an upcoming peak event.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.dynamodb.*;
+   * WarmThroughputProperty warmThroughputProperty = WarmThroughputProperty.builder()
+   * .readUnitsPerSecond(123)
+   * .writeUnitsPerSecond(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-warmthroughput.html)
+   */
+  public interface WarmThroughputProperty {
+    /**
+     * Represents the number of read operations your base table can instantaneously support.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-warmthroughput.html#cfn-dynamodb-globaltable-warmthroughput-readunitspersecond)
+     */
+    public fun readUnitsPerSecond(): Number? = unwrap(this).getReadUnitsPerSecond()
+
+    /**
+     * Represents the number of write operations your base table can instantaneously support.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-warmthroughput.html#cfn-dynamodb-globaltable-warmthroughput-writeunitspersecond)
+     */
+    public fun writeUnitsPerSecond(): Number? = unwrap(this).getWriteUnitsPerSecond()
+
+    /**
+     * A builder for [WarmThroughputProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param readUnitsPerSecond Represents the number of read operations your base table can
+       * instantaneously support.
+       */
+      public fun readUnitsPerSecond(readUnitsPerSecond: Number)
+
+      /**
+       * @param writeUnitsPerSecond Represents the number of write operations your base table can
+       * instantaneously support.
+       */
+      public fun writeUnitsPerSecond(writeUnitsPerSecond: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WarmThroughputProperty.Builder =
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WarmThroughputProperty.builder()
+
+      /**
+       * @param readUnitsPerSecond Represents the number of read operations your base table can
+       * instantaneously support.
+       */
+      override fun readUnitsPerSecond(readUnitsPerSecond: Number) {
+        cdkBuilder.readUnitsPerSecond(readUnitsPerSecond)
+      }
+
+      /**
+       * @param writeUnitsPerSecond Represents the number of write operations your base table can
+       * instantaneously support.
+       */
+      override fun writeUnitsPerSecond(writeUnitsPerSecond: Number) {
+        cdkBuilder.writeUnitsPerSecond(writeUnitsPerSecond)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WarmThroughputProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WarmThroughputProperty,
+    ) : CdkObject(cdkObject),
+        WarmThroughputProperty {
+      /**
+       * Represents the number of read operations your base table can instantaneously support.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-warmthroughput.html#cfn-dynamodb-globaltable-warmthroughput-readunitspersecond)
+       */
+      override fun readUnitsPerSecond(): Number? = unwrap(this).getReadUnitsPerSecond()
+
+      /**
+       * Represents the number of write operations your base table can instantaneously support.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-dynamodb-globaltable-warmthroughput.html#cfn-dynamodb-globaltable-warmthroughput-writeunitspersecond)
+       */
+      override fun writeUnitsPerSecond(): Number? = unwrap(this).getWriteUnitsPerSecond()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): WarmThroughputProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WarmThroughputProperty):
+          WarmThroughputProperty = CdkObjectWrappers.wrap(cdkObject) as? WarmThroughputProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: WarmThroughputProperty):
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WarmThroughputProperty = (wrapped
+          as CdkObject).cdkObject as
+          software.amazon.awscdk.services.dynamodb.CfnGlobalTable.WarmThroughputProperty
+    }
+  }
+
+  /**
    * Sets the write request settings for a global table or a global secondary index.
    *
-   * You must specify this setting if you set the `BillingMode` to `PAY_PER_REQUEST` .
+   * You can only specify this setting if your resource uses the `PAY_PER_REQUEST` `BillingMode` .
    *
    * Example:
    *

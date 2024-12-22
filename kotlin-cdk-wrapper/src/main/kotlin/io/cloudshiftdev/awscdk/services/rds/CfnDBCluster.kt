@@ -106,6 +106,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .availabilityZones(List.of("availabilityZones"))
  * .backtrackWindow(123)
  * .backupRetentionPeriod(123)
+ * .clusterScalabilityType("clusterScalabilityType")
  * .copyTagsToSnapshot(false)
  * .databaseName("databaseName")
  * .dbClusterIdentifier("dbClusterIdentifier")
@@ -387,6 +388,18 @@ public open class CfnDBCluster(
    */
   public open fun backupRetentionPeriod(`value`: Number) {
     unwrap(this).setBackupRetentionPeriod(`value`)
+  }
+
+  /**
+   * Specifies the scalability mode of the Aurora DB cluster.
+   */
+  public open fun clusterScalabilityType(): String? = unwrap(this).getClusterScalabilityType()
+
+  /**
+   * Specifies the scalability mode of the Aurora DB cluster.
+   */
+  public open fun clusterScalabilityType(`value`: String) {
+    unwrap(this).setClusterScalabilityType(`value`)
   }
 
   /**
@@ -1370,6 +1383,18 @@ public open class CfnDBCluster(
     public fun backupRetentionPeriod(backupRetentionPeriod: Number)
 
     /**
+     * Specifies the scalability mode of the Aurora DB cluster.
+     *
+     * When set to `limitless` , the cluster operates as an Aurora Limitless Database, allowing you
+     * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
+     * `standard` (the default), the cluster uses normal DB instance creation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-clusterscalabilitytype)
+     * @param clusterScalabilityType Specifies the scalability mode of the Aurora DB cluster. 
+     */
+    public fun clusterScalabilityType(clusterScalabilityType: String)
+
+    /**
      * A value that indicates whether to copy all tags from the DB cluster to snapshots of the DB
      * cluster.
      *
@@ -1814,7 +1839,7 @@ public open class CfnDBCluster(
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * * Amazon Aurora - [Using Amazon RDS Extended
      * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
      * * Amazon RDS - [Using Amazon RDS Extended
@@ -2959,6 +2984,20 @@ public open class CfnDBCluster(
     }
 
     /**
+     * Specifies the scalability mode of the Aurora DB cluster.
+     *
+     * When set to `limitless` , the cluster operates as an Aurora Limitless Database, allowing you
+     * to create a DB shard group for horizontal scaling (sharding) capabilities. When set to
+     * `standard` (the default), the cluster uses normal DB instance creation.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-dbcluster.html#cfn-rds-dbcluster-clusterscalabilitytype)
+     * @param clusterScalabilityType Specifies the scalability mode of the Aurora DB cluster. 
+     */
+    override fun clusterScalabilityType(clusterScalabilityType: String) {
+      cdkBuilder.clusterScalabilityType(clusterScalabilityType)
+    }
+
+    /**
      * A value that indicates whether to copy all tags from the DB cluster to snapshots of the DB
      * cluster.
      *
@@ -3450,7 +3489,7 @@ public open class CfnDBCluster(
      * Extended Support, you can run the selected major engine version on your DB cluster past the end
      * of standard support for that engine version. For more information, see the following sections:
      *
-     * * Amazon Aurora (PostgreSQL only) - [Using Amazon RDS Extended
+     * * Amazon Aurora - [Using Amazon RDS Extended
      * Support](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/extended-support.html) in
      * the *Amazon Aurora User Guide*
      * * Amazon RDS - [Using Amazon RDS Extended
@@ -5486,8 +5525,10 @@ public open class CfnDBCluster(
      * The minimum number of Aurora capacity units (ACUs) for a DB instance in an Aurora Serverless
      * v2 cluster.
      *
-     * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
-     * smallest value that you can use is 0.5.
+     * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. For Aurora
+     * versions that support the Aurora Serverless v2 auto-pause feature, the smallest value that you
+     * can use is 0. For versions that don't support Aurora Serverless v2 auto-pause, the smallest
+     * value that you can use is 0.5.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-mincapacity)
      */
@@ -5520,7 +5561,9 @@ public open class CfnDBCluster(
       /**
        * @param minCapacity The minimum number of Aurora capacity units (ACUs) for a DB instance in
        * an Aurora Serverless v2 cluster.
-       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
+       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. For
+       * Aurora versions that support the Aurora Serverless v2 auto-pause feature, the smallest value
+       * that you can use is 0. For versions that don't support Aurora Serverless v2 auto-pause, the
        * smallest value that you can use is 0.5.
        */
       public fun minCapacity(minCapacity: Number)
@@ -5556,7 +5599,9 @@ public open class CfnDBCluster(
       /**
        * @param minCapacity The minimum number of Aurora capacity units (ACUs) for a DB instance in
        * an Aurora Serverless v2 cluster.
-       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
+       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. For
+       * Aurora versions that support the Aurora Serverless v2 auto-pause feature, the smallest value
+       * that you can use is 0. For versions that don't support Aurora Serverless v2 auto-pause, the
        * smallest value that you can use is 0.5.
        */
       override fun minCapacity(minCapacity: Number) {
@@ -5598,7 +5643,9 @@ public open class CfnDBCluster(
        * The minimum number of Aurora capacity units (ACUs) for a DB instance in an Aurora
        * Serverless v2 cluster.
        *
-       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. The
+       * You can specify ACU values in half-step increments, such as 8, 8.5, 9, and so on. For
+       * Aurora versions that support the Aurora Serverless v2 auto-pause feature, the smallest value
+       * that you can use is 0. For versions that don't support Aurora Serverless v2 auto-pause, the
        * smallest value that you can use is 0.5.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-rds-dbcluster-serverlessv2scalingconfiguration.html#cfn-rds-dbcluster-serverlessv2scalingconfiguration-mincapacity)

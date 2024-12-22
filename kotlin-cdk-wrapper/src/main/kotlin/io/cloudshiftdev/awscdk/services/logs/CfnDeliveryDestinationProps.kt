@@ -26,6 +26,7 @@ import kotlin.collections.List
  * // the properties below are optional
  * .deliveryDestinationPolicy(deliveryDestinationPolicy)
  * .destinationResourceArn("destinationResourceArn")
+ * .outputFormat("outputFormat")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -61,6 +62,13 @@ public interface CfnDeliveryDestinationProps {
   public fun name(): String
 
   /**
+   * The format of the logs that are sent to this delivery destination.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-outputformat)
+   */
+  public fun outputFormat(): String? = unwrap(this).getOutputFormat()
+
+  /**
    * The tags that have been assigned to this delivery destination.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-tags)
@@ -90,6 +98,11 @@ public interface CfnDeliveryDestinationProps {
      * @param name The name of this delivery destination. 
      */
     public fun name(name: String)
+
+    /**
+     * @param outputFormat The format of the logs that are sent to this delivery destination.
+     */
+    public fun outputFormat(outputFormat: String)
 
     /**
      * @param tags The tags that have been assigned to this delivery destination.
@@ -129,6 +142,13 @@ public interface CfnDeliveryDestinationProps {
      */
     override fun name(name: String) {
       cdkBuilder.name(name)
+    }
+
+    /**
+     * @param outputFormat The format of the logs that are sent to this delivery destination.
+     */
+    override fun outputFormat(outputFormat: String) {
+      cdkBuilder.outputFormat(outputFormat)
     }
 
     /**
@@ -174,6 +194,13 @@ public interface CfnDeliveryDestinationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-name)
      */
     override fun name(): String = unwrap(this).getName()
+
+    /**
+     * The format of the logs that are sent to this delivery destination.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-deliverydestination.html#cfn-logs-deliverydestination-outputformat)
+     */
+    override fun outputFormat(): String? = unwrap(this).getOutputFormat()
 
     /**
      * The tags that have been assigned to this delivery destination.

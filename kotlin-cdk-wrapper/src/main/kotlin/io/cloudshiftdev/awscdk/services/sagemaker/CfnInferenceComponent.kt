@@ -42,19 +42,14 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * CfnInferenceComponent cfnInferenceComponent = CfnInferenceComponent.Builder.create(this,
  * "MyCfnInferenceComponent")
  * .endpointName("endpointName")
- * .runtimeConfig(InferenceComponentRuntimeConfigProperty.builder()
- * .copyCount(123)
- * .currentCopyCount(123)
- * .desiredCopyCount(123)
- * .build())
  * .specification(InferenceComponentSpecificationProperty.builder()
+ * .baseInferenceComponentName("baseInferenceComponentName")
  * .computeResourceRequirements(InferenceComponentComputeResourceRequirementsProperty.builder()
  * .maxMemoryRequiredInMb(123)
  * .minMemoryRequiredInMb(123)
  * .numberOfAcceleratorDevicesRequired(123)
  * .numberOfCpuCoresRequired(123)
  * .build())
- * // the properties below are optional
  * .container(InferenceComponentContainerSpecificationProperty.builder()
  * .artifactUrl("artifactUrl")
  * .deployedImage(DeployedImageProperty.builder()
@@ -72,14 +67,19 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .modelDataDownloadTimeoutInSeconds(123)
  * .build())
  * .build())
- * .variantName("variantName")
  * // the properties below are optional
  * .endpointArn("endpointArn")
  * .inferenceComponentName("inferenceComponentName")
+ * .runtimeConfig(InferenceComponentRuntimeConfigProperty.builder()
+ * .copyCount(123)
+ * .currentCopyCount(123)
+ * .desiredCopyCount(123)
+ * .build())
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
  * .build()))
+ * .variantName("variantName")
  * .build();
  * ```
  *
@@ -205,7 +205,7 @@ public open class CfnInferenceComponent(
   /**
    * The runtime config for the inference component.
    */
-  public open fun runtimeConfig(): Any = unwrap(this).getRuntimeConfig()
+  public open fun runtimeConfig(): Any? = unwrap(this).getRuntimeConfig()
 
   /**
    * The runtime config for the inference component.
@@ -278,7 +278,7 @@ public open class CfnInferenceComponent(
   /**
    * The name of the production variant that hosts the inference component.
    */
-  public open fun variantName(): String = unwrap(this).getVariantName()
+  public open fun variantName(): String? = unwrap(this).getVariantName()
 
   /**
    * The name of the production variant that hosts the inference component.
@@ -703,8 +703,8 @@ public open class CfnInferenceComponent(
   }
 
   /**
-   * Defines the compute resources to allocate to run a model that you assign to an inference
-   * component.
+   * Defines the compute resources to allocate to run a model, plus any adapter models, that you
+   * assign to an inference component.
    *
    * These resources include CPU cores, accelerators, and memory.
    *
@@ -1294,13 +1294,13 @@ public open class CfnInferenceComponent(
    * import io.cloudshiftdev.awscdk.services.sagemaker.*;
    * InferenceComponentSpecificationProperty inferenceComponentSpecificationProperty =
    * InferenceComponentSpecificationProperty.builder()
+   * .baseInferenceComponentName("baseInferenceComponentName")
    * .computeResourceRequirements(InferenceComponentComputeResourceRequirementsProperty.builder()
    * .maxMemoryRequiredInMb(123)
    * .minMemoryRequiredInMb(123)
    * .numberOfAcceleratorDevicesRequired(123)
    * .numberOfCpuCoresRequired(123)
    * .build())
-   * // the properties below are optional
    * .container(InferenceComponentContainerSpecificationProperty.builder()
    * .artifactUrl("artifactUrl")
    * .deployedImage(DeployedImageProperty.builder()
@@ -1324,11 +1324,37 @@ public open class CfnInferenceComponent(
    */
   public interface InferenceComponentSpecificationProperty {
     /**
-     * The compute resources allocated to run the model assigned to the inference component.
+     * The name of an existing inference component that is to contain the inference component that
+     * you're creating with your request.
+     *
+     * Specify this parameter only if your request is meant to create an adapter inference
+     * component. An adapter inference component contains the path to an adapter model. The purpose of
+     * the adapter model is to tailor the inference output of a base foundation model, which is hosted
+     * by the base inference component. The adapter inference component uses the compute resources that
+     * you assigned to the base inference component.
+     *
+     * When you create an adapter inference component, use the `Container` parameter to specify the
+     * location of the adapter artifacts. In the parameter value, use the `ArtifactUrl` parameter of
+     * the `InferenceComponentContainerSpecification` data type.
+     *
+     * Before you can create an adapter inference component, you must have an existing inference
+     * component that contains the foundation model that you want to adapt.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-baseinferencecomponentname)
+     */
+    public fun baseInferenceComponentName(): String? = unwrap(this).getBaseInferenceComponentName()
+
+    /**
+     * The compute resources allocated to run the model, plus any adapter models, that you assign to
+     * the inference component.
+     *
+     * Omit this parameter if your request is meant to create an adapter inference component. An
+     * adapter inference component is loaded by a base inference component, and it uses the compute
+     * resources of the base inference component.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-computeresourcerequirements)
      */
-    public fun computeResourceRequirements(): Any
+    public fun computeResourceRequirements(): Any? = unwrap(this).getComputeResourceRequirements()
 
     /**
      * Defines a container that provides the runtime environment for a model that you deploy with an
@@ -1359,21 +1385,48 @@ public open class CfnInferenceComponent(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param computeResourceRequirements The compute resources allocated to run the model
-       * assigned to the inference component. 
+       * @param baseInferenceComponentName The name of an existing inference component that is to
+       * contain the inference component that you're creating with your request.
+       * Specify this parameter only if your request is meant to create an adapter inference
+       * component. An adapter inference component contains the path to an adapter model. The purpose
+       * of the adapter model is to tailor the inference output of a base foundation model, which is
+       * hosted by the base inference component. The adapter inference component uses the compute
+       * resources that you assigned to the base inference component.
+       *
+       * When you create an adapter inference component, use the `Container` parameter to specify
+       * the location of the adapter artifacts. In the parameter value, use the `ArtifactUrl` parameter
+       * of the `InferenceComponentContainerSpecification` data type.
+       *
+       * Before you can create an adapter inference component, you must have an existing inference
+       * component that contains the foundation model that you want to adapt.
+       */
+      public fun baseInferenceComponentName(baseInferenceComponentName: String)
+
+      /**
+       * @param computeResourceRequirements The compute resources allocated to run the model, plus
+       * any adapter models, that you assign to the inference component.
+       * Omit this parameter if your request is meant to create an adapter inference component. An
+       * adapter inference component is loaded by a base inference component, and it uses the compute
+       * resources of the base inference component.
        */
       public fun computeResourceRequirements(computeResourceRequirements: IResolvable)
 
       /**
-       * @param computeResourceRequirements The compute resources allocated to run the model
-       * assigned to the inference component. 
+       * @param computeResourceRequirements The compute resources allocated to run the model, plus
+       * any adapter models, that you assign to the inference component.
+       * Omit this parameter if your request is meant to create an adapter inference component. An
+       * adapter inference component is loaded by a base inference component, and it uses the compute
+       * resources of the base inference component.
        */
       public
           fun computeResourceRequirements(computeResourceRequirements: InferenceComponentComputeResourceRequirementsProperty)
 
       /**
-       * @param computeResourceRequirements The compute resources allocated to run the model
-       * assigned to the inference component. 
+       * @param computeResourceRequirements The compute resources allocated to run the model, plus
+       * any adapter models, that you assign to the inference component.
+       * Omit this parameter if your request is meant to create an adapter inference component. An
+       * adapter inference component is loaded by a base inference component, and it uses the compute
+       * resources of the base inference component.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db00219b7dbb581ee5a0820364523ece8e2c71181d72bb3cc72165ffd178a63a")
@@ -1433,16 +1486,42 @@ public open class CfnInferenceComponent(
           software.amazon.awscdk.services.sagemaker.CfnInferenceComponent.InferenceComponentSpecificationProperty.builder()
 
       /**
-       * @param computeResourceRequirements The compute resources allocated to run the model
-       * assigned to the inference component. 
+       * @param baseInferenceComponentName The name of an existing inference component that is to
+       * contain the inference component that you're creating with your request.
+       * Specify this parameter only if your request is meant to create an adapter inference
+       * component. An adapter inference component contains the path to an adapter model. The purpose
+       * of the adapter model is to tailor the inference output of a base foundation model, which is
+       * hosted by the base inference component. The adapter inference component uses the compute
+       * resources that you assigned to the base inference component.
+       *
+       * When you create an adapter inference component, use the `Container` parameter to specify
+       * the location of the adapter artifacts. In the parameter value, use the `ArtifactUrl` parameter
+       * of the `InferenceComponentContainerSpecification` data type.
+       *
+       * Before you can create an adapter inference component, you must have an existing inference
+       * component that contains the foundation model that you want to adapt.
+       */
+      override fun baseInferenceComponentName(baseInferenceComponentName: String) {
+        cdkBuilder.baseInferenceComponentName(baseInferenceComponentName)
+      }
+
+      /**
+       * @param computeResourceRequirements The compute resources allocated to run the model, plus
+       * any adapter models, that you assign to the inference component.
+       * Omit this parameter if your request is meant to create an adapter inference component. An
+       * adapter inference component is loaded by a base inference component, and it uses the compute
+       * resources of the base inference component.
        */
       override fun computeResourceRequirements(computeResourceRequirements: IResolvable) {
         cdkBuilder.computeResourceRequirements(computeResourceRequirements.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param computeResourceRequirements The compute resources allocated to run the model
-       * assigned to the inference component. 
+       * @param computeResourceRequirements The compute resources allocated to run the model, plus
+       * any adapter models, that you assign to the inference component.
+       * Omit this parameter if your request is meant to create an adapter inference component. An
+       * adapter inference component is loaded by a base inference component, and it uses the compute
+       * resources of the base inference component.
        */
       override
           fun computeResourceRequirements(computeResourceRequirements: InferenceComponentComputeResourceRequirementsProperty) {
@@ -1450,8 +1529,11 @@ public open class CfnInferenceComponent(
       }
 
       /**
-       * @param computeResourceRequirements The compute resources allocated to run the model
-       * assigned to the inference component. 
+       * @param computeResourceRequirements The compute resources allocated to run the model, plus
+       * any adapter models, that you assign to the inference component.
+       * Omit this parameter if your request is meant to create an adapter inference component. An
+       * adapter inference component is loaded by a base inference component, and it uses the compute
+       * resources of the base inference component.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("db00219b7dbb581ee5a0820364523ece8e2c71181d72bb3cc72165ffd178a63a")
@@ -1528,11 +1610,38 @@ public open class CfnInferenceComponent(
     ) : CdkObject(cdkObject),
         InferenceComponentSpecificationProperty {
       /**
-       * The compute resources allocated to run the model assigned to the inference component.
+       * The name of an existing inference component that is to contain the inference component that
+       * you're creating with your request.
+       *
+       * Specify this parameter only if your request is meant to create an adapter inference
+       * component. An adapter inference component contains the path to an adapter model. The purpose
+       * of the adapter model is to tailor the inference output of a base foundation model, which is
+       * hosted by the base inference component. The adapter inference component uses the compute
+       * resources that you assigned to the base inference component.
+       *
+       * When you create an adapter inference component, use the `Container` parameter to specify
+       * the location of the adapter artifacts. In the parameter value, use the `ArtifactUrl` parameter
+       * of the `InferenceComponentContainerSpecification` data type.
+       *
+       * Before you can create an adapter inference component, you must have an existing inference
+       * component that contains the foundation model that you want to adapt.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-baseinferencecomponentname)
+       */
+      override fun baseInferenceComponentName(): String? =
+          unwrap(this).getBaseInferenceComponentName()
+
+      /**
+       * The compute resources allocated to run the model, plus any adapter models, that you assign
+       * to the inference component.
+       *
+       * Omit this parameter if your request is meant to create an adapter inference component. An
+       * adapter inference component is loaded by a base inference component, and it uses the compute
+       * resources of the base inference component.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-sagemaker-inferencecomponent-inferencecomponentspecification.html#cfn-sagemaker-inferencecomponent-inferencecomponentspecification-computeresourcerequirements)
        */
-      override fun computeResourceRequirements(): Any =
+      override fun computeResourceRequirements(): Any? =
           unwrap(this).getComputeResourceRequirements()
 
       /**

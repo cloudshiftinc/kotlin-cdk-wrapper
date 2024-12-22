@@ -185,7 +185,7 @@ public interface CfnBucketProps {
   public fun notificationConfiguration(): Any? = unwrap(this).getNotificationConfiguration()
 
   /**
-   * This operation is not supported by directory buckets.
+   * This operation is not supported for directory buckets.
    *
    * Places an Object Lock configuration on the specified bucket. The rule specified in the Object
    * Lock configuration will be applied by default to every new object placed in the specified bucket.
@@ -587,7 +587,7 @@ public interface CfnBucketProps {
         fun notificationConfiguration(notificationConfiguration: CfnBucket.NotificationConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param objectLockConfiguration This operation is not supported by directory buckets.
+     * @param objectLockConfiguration This operation is not supported for directory buckets.
      * Places an Object Lock configuration on the specified bucket. The rule specified in the Object
      * Lock configuration will be applied by default to every new object placed in the specified
      * bucket. For more information, see [Locking
@@ -604,7 +604,7 @@ public interface CfnBucketProps {
     public fun objectLockConfiguration(objectLockConfiguration: IResolvable)
 
     /**
-     * @param objectLockConfiguration This operation is not supported by directory buckets.
+     * @param objectLockConfiguration This operation is not supported for directory buckets.
      * Places an Object Lock configuration on the specified bucket. The rule specified in the Object
      * Lock configuration will be applied by default to every new object placed in the specified
      * bucket. For more information, see [Locking
@@ -622,7 +622,7 @@ public interface CfnBucketProps {
         fun objectLockConfiguration(objectLockConfiguration: CfnBucket.ObjectLockConfigurationProperty)
 
     /**
-     * @param objectLockConfiguration This operation is not supported by directory buckets.
+     * @param objectLockConfiguration This operation is not supported for directory buckets.
      * Places an Object Lock configuration on the specified bucket. The rule specified in the Object
      * Lock configuration will be applied by default to every new object placed in the specified
      * bucket. For more information, see [Locking
@@ -1179,7 +1179,7 @@ public interface CfnBucketProps {
         notificationConfiguration(CfnBucket.NotificationConfigurationProperty(notificationConfiguration))
 
     /**
-     * @param objectLockConfiguration This operation is not supported by directory buckets.
+     * @param objectLockConfiguration This operation is not supported for directory buckets.
      * Places an Object Lock configuration on the specified bucket. The rule specified in the Object
      * Lock configuration will be applied by default to every new object placed in the specified
      * bucket. For more information, see [Locking
@@ -1198,7 +1198,7 @@ public interface CfnBucketProps {
     }
 
     /**
-     * @param objectLockConfiguration This operation is not supported by directory buckets.
+     * @param objectLockConfiguration This operation is not supported for directory buckets.
      * Places an Object Lock configuration on the specified bucket. The rule specified in the Object
      * Lock configuration will be applied by default to every new object placed in the specified
      * bucket. For more information, see [Locking
@@ -1218,7 +1218,7 @@ public interface CfnBucketProps {
     }
 
     /**
-     * @param objectLockConfiguration This operation is not supported by directory buckets.
+     * @param objectLockConfiguration This operation is not supported for directory buckets.
      * Places an Object Lock configuration on the specified bucket. The rule specified in the Object
      * Lock configuration will be applied by default to every new object placed in the specified
      * bucket. For more information, see [Locking
@@ -1603,7 +1603,7 @@ public interface CfnBucketProps {
     override fun notificationConfiguration(): Any? = unwrap(this).getNotificationConfiguration()
 
     /**
-     * This operation is not supported by directory buckets.
+     * This operation is not supported for directory buckets.
      *
      * Places an Object Lock configuration on the specified bucket. The rule specified in the Object
      * Lock configuration will be applied by default to every new object placed in the specified

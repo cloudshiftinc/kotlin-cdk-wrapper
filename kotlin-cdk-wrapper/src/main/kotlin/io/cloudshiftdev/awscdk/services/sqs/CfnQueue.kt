@@ -46,7 +46,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  *
  * For more information about creating FIFO (first-in-first-out) queues, see [Creating an Amazon SQS
  * queue ( AWS CloudFormation
- * )](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/screate-queue-cloudformation.html)
+ * )](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/create-queue-cloudformation.html)
  * in the *Amazon SQS Developer Guide* .
  *
  * Example:
@@ -451,8 +451,8 @@ public open class CfnQueue(
      * If set to true, creates a FIFO queue.
      *
      * If you don't specify this property, Amazon SQS creates a standard queue. For more
-     * information, see [FIFO
-     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html)
+     * information, see [Amazon SQS FIFO
+     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
      * in the *Amazon SQS Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html#cfn-sqs-queue-fifoqueue)
@@ -464,8 +464,8 @@ public open class CfnQueue(
      * If set to true, creates a FIFO queue.
      *
      * If you don't specify this property, Amazon SQS creates a standard queue. For more
-     * information, see [FIFO
-     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html)
+     * information, see [Amazon SQS FIFO
+     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
      * in the *Amazon SQS Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html#cfn-sqs-queue-fifoqueue)
@@ -517,8 +517,8 @@ public open class CfnQueue(
     /**
      * The ID of an AWS Key Management Service (KMS) for Amazon SQS , or a custom KMS.
      *
-     * To use the AWS managed KMS for Amazon SQS , specify a (default) alias ARN, alias name (e.g.
-     * `alias/aws/sqs` ), key ARN, or key ID. For more information, see the following:
+     * To use the AWS managed KMS for Amazon SQS , specify a (default) alias ARN, alias name (for
+     * example `alias/aws/sqs` ), key ARN, or key ID. For more information, see the following:
      *
      * * [Encryption at
      * rest](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html)
@@ -529,9 +529,9 @@ public open class CfnQueue(
      * * [Request
      * Parameters](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html#API_DescribeKey_RequestParameters)
      * in the *AWS Key Management Service API Reference*
-     * * The Key Management Service (KMS) section of the [AWS Key Management Service Best
-     * Practices](https://docs.aws.amazon.com/https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf)
-     * whitepaper
+     * * The Key Management Service (KMS) section of the [Security best practices for AWS Key
+     * Management Service](https://docs.aws.amazon.com/kms/latest/developerguide/best-practices.html)
+     * in the *AWS Key Management Service Developer Guide*
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html#cfn-sqs-queue-kmsmasterkeyid)
      * @param kmsMasterKeyId The ID of an AWS Key Management Service (KMS) for Amazon SQS , or a
@@ -566,8 +566,8 @@ public open class CfnQueue(
      * A name for the queue.
      *
      * To create a FIFO queue, the name of your FIFO queue must end with the `.fifo` suffix. For
-     * more information, see [FIFO
-     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html)
+     * more information, see [Amazon SQS FIFO
+     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
      * in the *Amazon SQS Developer Guide* .
      *
      * If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that
@@ -820,8 +820,8 @@ public open class CfnQueue(
      * If set to true, creates a FIFO queue.
      *
      * If you don't specify this property, Amazon SQS creates a standard queue. For more
-     * information, see [FIFO
-     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html)
+     * information, see [Amazon SQS FIFO
+     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
      * in the *Amazon SQS Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html#cfn-sqs-queue-fifoqueue)
@@ -835,8 +835,8 @@ public open class CfnQueue(
      * If set to true, creates a FIFO queue.
      *
      * If you don't specify this property, Amazon SQS creates a standard queue. For more
-     * information, see [FIFO
-     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html)
+     * information, see [Amazon SQS FIFO
+     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
      * in the *Amazon SQS Developer Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html#cfn-sqs-queue-fifoqueue)
@@ -894,8 +894,8 @@ public open class CfnQueue(
     /**
      * The ID of an AWS Key Management Service (KMS) for Amazon SQS , or a custom KMS.
      *
-     * To use the AWS managed KMS for Amazon SQS , specify a (default) alias ARN, alias name (e.g.
-     * `alias/aws/sqs` ), key ARN, or key ID. For more information, see the following:
+     * To use the AWS managed KMS for Amazon SQS , specify a (default) alias ARN, alias name (for
+     * example `alias/aws/sqs` ), key ARN, or key ID. For more information, see the following:
      *
      * * [Encryption at
      * rest](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-server-side-encryption.html)
@@ -906,9 +906,9 @@ public open class CfnQueue(
      * * [Request
      * Parameters](https://docs.aws.amazon.com/kms/latest/APIReference/API_DescribeKey.html#API_DescribeKey_RequestParameters)
      * in the *AWS Key Management Service API Reference*
-     * * The Key Management Service (KMS) section of the [AWS Key Management Service Best
-     * Practices](https://docs.aws.amazon.com/https://d0.awsstatic.com/whitepapers/aws-kms-best-practices.pdf)
-     * whitepaper
+     * * The Key Management Service (KMS) section of the [Security best practices for AWS Key
+     * Management Service](https://docs.aws.amazon.com/kms/latest/developerguide/best-practices.html)
+     * in the *AWS Key Management Service Developer Guide*
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-sqs-queue.html#cfn-sqs-queue-kmsmasterkeyid)
      * @param kmsMasterKeyId The ID of an AWS Key Management Service (KMS) for Amazon SQS , or a
@@ -949,8 +949,8 @@ public open class CfnQueue(
      * A name for the queue.
      *
      * To create a FIFO queue, the name of your FIFO queue must end with the `.fifo` suffix. For
-     * more information, see [FIFO
-     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/FIFO-queues.html)
+     * more information, see [Amazon SQS FIFO
+     * queues](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-fifo-queues.html)
      * in the *Amazon SQS Developer Guide* .
      *
      * If you don't specify a name, AWS CloudFormation generates a unique physical ID and uses that

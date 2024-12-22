@@ -2265,16 +2265,13 @@ public open class CfnDBInstance(
      * * `CharacterSetName`
      * * `DBClusterIdentifier`
      * * `DBName`
-     * * `DeleteAutomatedBackups`
      * * `KmsKeyId`
      * * `MasterUsername`
      * * `MasterUserPassword`
-     * * `PerformanceInsightsKMSKeyId`
-     * * `PerformanceInsightsRetentionPeriod`
      * * `PromotionTier`
      * * `SourceDBInstanceIdentifier`
      * * `SourceRegion`
-     * * `StorageEncrypted` (for an encrypted snapshot)
+     * * `StorageEncrypted` (for an unencrypted snapshot)
      * * `Timezone`
      *
      * *Amazon Aurora*
@@ -4631,16 +4628,13 @@ public open class CfnDBInstance(
      * * `CharacterSetName`
      * * `DBClusterIdentifier`
      * * `DBName`
-     * * `DeleteAutomatedBackups`
      * * `KmsKeyId`
      * * `MasterUsername`
      * * `MasterUserPassword`
-     * * `PerformanceInsightsKMSKeyId`
-     * * `PerformanceInsightsRetentionPeriod`
      * * `PromotionTier`
      * * `SourceDBInstanceIdentifier`
      * * `SourceRegion`
-     * * `StorageEncrypted` (for an encrypted snapshot)
+     * * `StorageEncrypted` (for an unencrypted snapshot)
      * * `Timezone`
      *
      * *Amazon Aurora*

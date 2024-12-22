@@ -27,6 +27,15 @@ import kotlin.jvm.JvmName
  * // the properties below are optional
  * .analyzerConfiguration(AnalyzerConfigurationProperty.builder()
  * .unusedAccessConfiguration(UnusedAccessConfigurationProperty.builder()
+ * .analysisRule(AnalysisRuleProperty.builder()
+ * .exclusions(List.of(AnalysisRuleCriteriaProperty.builder()
+ * .accountIds(List.of("accountIds"))
+ * .resourceTags(List.of(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build())))
+ * .build()))
+ * .build())
  * .unusedAccessAge(123)
  * .build())
  * .build())
@@ -53,8 +62,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnAnalyzerProps {
   /**
-   * Contains information about the configuration of an unused access analyzer for an AWS
-   * organization or account.
+   * Contains information about the configuration of an analyzer for an AWS organization or account.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
    */
@@ -79,6 +87,14 @@ public interface CfnAnalyzerProps {
   /**
    * An array of key-value pairs to apply to the analyzer.
    *
+   * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+   * `-` .
+   *
+   * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+   * prefixed with `aws:` .
+   *
+   * For the tag value, you can specify a value that is 0 to 256 characters in length.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
@@ -98,21 +114,21 @@ public interface CfnAnalyzerProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account.
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account.
      */
     public fun analyzerConfiguration(analyzerConfiguration: IResolvable)
 
     /**
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account.
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account.
      */
     public
         fun analyzerConfiguration(analyzerConfiguration: CfnAnalyzer.AnalyzerConfigurationProperty)
 
     /**
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account.
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e8ef999c1ee18f5f538bd76caa12533cc428031c70ead9e147324a194fc0e6c")
@@ -144,11 +160,25 @@ public interface CfnAnalyzerProps {
 
     /**
      * @param tags An array of key-value pairs to apply to the analyzer.
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
      * @param tags An array of key-value pairs to apply to the analyzer.
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length.
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -165,16 +195,16 @@ public interface CfnAnalyzerProps {
         = software.amazon.awscdk.services.accessanalyzer.CfnAnalyzerProps.builder()
 
     /**
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account.
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account.
      */
     override fun analyzerConfiguration(analyzerConfiguration: IResolvable) {
       cdkBuilder.analyzerConfiguration(analyzerConfiguration.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account.
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account.
      */
     override
         fun analyzerConfiguration(analyzerConfiguration: CfnAnalyzer.AnalyzerConfigurationProperty) {
@@ -182,8 +212,8 @@ public interface CfnAnalyzerProps {
     }
 
     /**
-     * @param analyzerConfiguration Contains information about the configuration of an unused access
-     * analyzer for an AWS organization or account.
+     * @param analyzerConfiguration Contains information about the configuration of an analyzer for
+     * an AWS organization or account.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("4e8ef999c1ee18f5f538bd76caa12533cc428031c70ead9e147324a194fc0e6c")
@@ -223,6 +253,13 @@ public interface CfnAnalyzerProps {
 
     /**
      * @param tags An array of key-value pairs to apply to the analyzer.
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
@@ -230,6 +267,13 @@ public interface CfnAnalyzerProps {
 
     /**
      * @param tags An array of key-value pairs to apply to the analyzer.
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -251,8 +295,8 @@ public interface CfnAnalyzerProps {
   ) : CdkObject(cdkObject),
       CfnAnalyzerProps {
     /**
-     * Contains information about the configuration of an unused access analyzer for an AWS
-     * organization or account.
+     * Contains information about the configuration of an analyzer for an AWS organization or
+     * account.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-analyzerconfiguration)
      */
@@ -276,6 +320,14 @@ public interface CfnAnalyzerProps {
 
     /**
      * An array of key-value pairs to apply to the analyzer.
+     *
+     * You can use the set of Unicode letters, digits, whitespace, `_` , `.` , `/` , `=` , `+` , and
+     * `-` .
+     *
+     * For the tag key, you can specify a value that is 1 to 128 characters in length and cannot be
+     * prefixed with `aws:` .
+     *
+     * For the tag value, you can specify a value that is 0 to 256 characters in length.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-accessanalyzer-analyzer.html#cfn-accessanalyzer-analyzer-tags)
      */

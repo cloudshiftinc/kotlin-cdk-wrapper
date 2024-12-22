@@ -24,6 +24,11 @@ import kotlin.jvm.JvmName
  */
 public interface CfnChannelProps {
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-anywheresettings)
+   */
+  public fun anywhereSettings(): Any? = unwrap(this).getAnywhereSettings()
+
+  /**
    * Specification of CDI inputs for this channel.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-cdiinputspecification)
@@ -129,6 +134,24 @@ public interface CfnChannelProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param anywhereSettings the value to be set.
+     */
+    public fun anywhereSettings(anywhereSettings: IResolvable)
+
+    /**
+     * @param anywhereSettings the value to be set.
+     */
+    public fun anywhereSettings(anywhereSettings: CfnChannel.AnywhereSettingsProperty)
+
+    /**
+     * @param anywhereSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8d92f6999a057d23bb5c801d8dc97e7e93c4c17eb0482f9850cac86595cdd7c8")
+    public
+        fun anywhereSettings(anywhereSettings: CfnChannel.AnywhereSettingsProperty.Builder.() -> Unit)
+
     /**
      * @param cdiInputSpecification Specification of CDI inputs for this channel.
      */
@@ -298,6 +321,29 @@ public interface CfnChannelProps {
   private class BuilderImpl : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.medialive.CfnChannelProps.Builder =
         software.amazon.awscdk.services.medialive.CfnChannelProps.builder()
+
+    /**
+     * @param anywhereSettings the value to be set.
+     */
+    override fun anywhereSettings(anywhereSettings: IResolvable) {
+      cdkBuilder.anywhereSettings(anywhereSettings.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param anywhereSettings the value to be set.
+     */
+    override fun anywhereSettings(anywhereSettings: CfnChannel.AnywhereSettingsProperty) {
+      cdkBuilder.anywhereSettings(anywhereSettings.let(CfnChannel.AnywhereSettingsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param anywhereSettings the value to be set.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("8d92f6999a057d23bb5c801d8dc97e7e93c4c17eb0482f9850cac86595cdd7c8")
+    override
+        fun anywhereSettings(anywhereSettings: CfnChannel.AnywhereSettingsProperty.Builder.() -> Unit):
+        Unit = anywhereSettings(CfnChannel.AnywhereSettingsProperty(anywhereSettings))
 
     /**
      * @param cdiInputSpecification Specification of CDI inputs for this channel.
@@ -517,6 +563,11 @@ public interface CfnChannelProps {
     cdkObject: software.amazon.awscdk.services.medialive.CfnChannelProps,
   ) : CdkObject(cdkObject),
       CfnChannelProps {
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-medialive-channel.html#cfn-medialive-channel-anywheresettings)
+     */
+    override fun anywhereSettings(): Any? = unwrap(this).getAnywhereSettings()
+
     /**
      * Specification of CDI inputs for this channel.
      *

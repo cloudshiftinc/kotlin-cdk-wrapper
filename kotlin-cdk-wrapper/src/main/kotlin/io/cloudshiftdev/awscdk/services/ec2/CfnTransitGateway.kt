@@ -62,6 +62,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .dnsSupport("dnsSupport")
  * .multicastSupport("multicastSupport")
  * .propagationDefaultRouteTableId("propagationDefaultRouteTableId")
+ * .securityGroupReferencingSupport("securityGroupReferencingSupport")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -232,6 +233,19 @@ public open class CfnTransitGateway(
   }
 
   /**
+   * Enables you to reference a security group across VPCs attached to a transit gateway (TGW).
+   */
+  public open fun securityGroupReferencingSupport(): String? =
+      unwrap(this).getSecurityGroupReferencingSupport()
+
+  /**
+   * Enables you to reference a security group across VPCs attached to a transit gateway (TGW).
+   */
+  public open fun securityGroupReferencingSupport(`value`: String) {
+    unwrap(this).setSecurityGroupReferencingSupport(`value`)
+  }
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -375,6 +389,25 @@ public open class CfnTransitGateway(
      * @param propagationDefaultRouteTableId The ID of the default propagation route table. 
      */
     public fun propagationDefaultRouteTableId(propagationDefaultRouteTableId: String)
+
+    /**
+     * Enables you to reference a security group across VPCs attached to a transit gateway (TGW).
+     *
+     * Use this option to simplify security group management and control of instance-to-instance
+     * traffic across VPCs that are connected by transit gateway. You can also use this option to
+     * migrate from VPC peering (which was the only option that supported security group referencing)
+     * to transit gateways (which now also support security group referencing). This option is disabled
+     * by default and there are no additional costs to use this feature.
+     *
+     * For important information about this feature, see [Create a transit
+     * gateway](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw) in the
+     * *AWS Transit Gateway Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-securitygroupreferencingsupport)
+     * @param securityGroupReferencingSupport Enables you to reference a security group across VPCs
+     * attached to a transit gateway (TGW). 
+     */
+    public fun securityGroupReferencingSupport(securityGroupReferencingSupport: String)
 
     /**
      * The tags for the transit gateway.
@@ -528,6 +561,27 @@ public open class CfnTransitGateway(
      */
     override fun propagationDefaultRouteTableId(propagationDefaultRouteTableId: String) {
       cdkBuilder.propagationDefaultRouteTableId(propagationDefaultRouteTableId)
+    }
+
+    /**
+     * Enables you to reference a security group across VPCs attached to a transit gateway (TGW).
+     *
+     * Use this option to simplify security group management and control of instance-to-instance
+     * traffic across VPCs that are connected by transit gateway. You can also use this option to
+     * migrate from VPC peering (which was the only option that supported security group referencing)
+     * to transit gateways (which now also support security group referencing). This option is disabled
+     * by default and there are no additional costs to use this feature.
+     *
+     * For important information about this feature, see [Create a transit
+     * gateway](https://docs.aws.amazon.com/vpc/latest/tgw/tgw-transit-gateways.html#create-tgw) in the
+     * *AWS Transit Gateway Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-transitgateway.html#cfn-ec2-transitgateway-securitygroupreferencingsupport)
+     * @param securityGroupReferencingSupport Enables you to reference a security group across VPCs
+     * attached to a transit gateway (TGW). 
+     */
+    override fun securityGroupReferencingSupport(securityGroupReferencingSupport: String) {
+      cdkBuilder.securityGroupReferencingSupport(securityGroupReferencingSupport)
     }
 
     /**

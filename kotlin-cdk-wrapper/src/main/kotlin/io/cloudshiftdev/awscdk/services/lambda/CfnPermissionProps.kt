@@ -78,7 +78,7 @@ public interface CfnPermissionProps {
   public fun functionUrlAuthType(): String? = unwrap(this).getFunctionUrlAuthType()
 
   /**
-   * The AWS service or AWS account that invokes the function.
+   * The AWS service , AWS account , IAM user, or IAM role that invokes the function.
    *
    * If you specify a service, use `SourceArn` or `SourceAccount` to limit who can invoke the
    * function through that service.
@@ -157,7 +157,8 @@ public interface CfnPermissionProps {
     public fun functionUrlAuthType(functionUrlAuthType: String)
 
     /**
-     * @param principal The AWS service or AWS account that invokes the function. 
+     * @param principal The AWS service , AWS account , IAM user, or IAM role that invokes the
+     * function. 
      * If you specify a service, use `SourceArn` or `SourceAccount` to limit who can invoke the
      * function through that service.
      */
@@ -232,7 +233,8 @@ public interface CfnPermissionProps {
     }
 
     /**
-     * @param principal The AWS service or AWS account that invokes the function. 
+     * @param principal The AWS service , AWS account , IAM user, or IAM role that invokes the
+     * function. 
      * If you specify a service, use `SourceArn` or `SourceAccount` to limit who can invoke the
      * function through that service.
      */
@@ -321,7 +323,7 @@ public interface CfnPermissionProps {
     override fun functionUrlAuthType(): String? = unwrap(this).getFunctionUrlAuthType()
 
     /**
-     * The AWS service or AWS account that invokes the function.
+     * The AWS service , AWS account , IAM user, or IAM role that invokes the function.
      *
      * If you specify a service, use `SourceArn` or `SourceAccount` to limit who can invoke the
      * function through that service.

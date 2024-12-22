@@ -19,10 +19,6 @@ import kotlin.Unit
  * // create a bucket
  * Bucket bucket = new Bucket(this, "Bucket");
  * DistributedMap distributedMap = DistributedMap.Builder.create(this, "Distributed Map State")
- * .itemReader(S3JsonItemReader.Builder.create()
- * .bucket(bucket)
- * .key("my-key.json")
- * .build())
  * .resultWriter(ResultWriter.Builder.create()
  * .bucket(bucket)
  * .prefix("my-prefix")

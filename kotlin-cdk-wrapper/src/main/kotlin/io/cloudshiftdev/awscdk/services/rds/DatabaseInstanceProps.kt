@@ -29,28 +29,19 @@ import kotlin.jvm.JvmName
  * Example:
  *
  * ```
- * IVpc vpc;
- * DatabaseInstance instance1 = DatabaseInstance.Builder.create(this, "PostgresInstance1")
- * .engine(DatabaseInstanceEngine.POSTGRES)
- * // Generate the secret with admin username `postgres` and random password
- * .credentials(Credentials.fromGeneratedSecret("postgres"))
+ * Vpc vpc;
+ * DatabaseInstance iopsInstance = DatabaseInstance.Builder.create(this, "IopsInstance")
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_39).build()))
  * .vpc(vpc)
+ * .storageType(StorageType.IO1)
+ * .iops(5000)
  * .build();
- * // Templated secret with username and password fields
- * Secret templatedSecret = Secret.Builder.create(this, "TemplatedSecret")
- * .generateSecretString(SecretStringGenerator.builder()
- * .secretStringTemplate(JSON.stringify(Map.of("username", "postgres")))
- * .generateStringKey("password")
- * .excludeCharacters("/&#64;\"")
- * .build())
- * .build();
- * // Using the templated secret as credentials
- * DatabaseInstance instance2 = DatabaseInstance.Builder.create(this, "PostgresInstance2")
- * .engine(DatabaseInstanceEngine.POSTGRES)
- * .credentials(Map.of(
- * "username", templatedSecret.secretValueFromJson("username").toString(),
- * "password", templatedSecret.secretValueFromJson("password")))
+ * DatabaseInstance gp3Instance = DatabaseInstance.Builder.create(this, "Gp3Instance")
+ * .engine(DatabaseInstanceEngine.mysql(MySqlInstanceEngineProps.builder().version(MysqlEngineVersion.VER_8_0_39).build()))
  * .vpc(vpc)
+ * .allocatedStorage(500)
+ * .storageType(StorageType.GP3)
+ * .storageThroughput(500)
  * .build();
  * ```
  */

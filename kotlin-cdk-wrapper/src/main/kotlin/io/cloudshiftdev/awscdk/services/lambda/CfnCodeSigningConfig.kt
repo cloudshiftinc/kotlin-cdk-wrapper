@@ -166,19 +166,19 @@ public open class CfnCodeSigningConfig(
   }
 
   /**
-   * A list of tags to apply to CodeSigningConfig resource.
+   * A list of tags to add to the code signing configuration.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * A list of tags to apply to CodeSigningConfig resource.
+   * A list of tags to add to the code signing configuration.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * A list of tags to apply to CodeSigningConfig resource.
+   * A list of tags to add to the code signing configuration.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
@@ -255,18 +255,36 @@ public open class CfnCodeSigningConfig(
     public fun description(description: String)
 
     /**
-     * A list of tags to apply to CodeSigningConfig resource.
+     * A list of tags to add to the code signing configuration.
+     *
+     *
+     * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+     * permissions for your [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+     * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+     * unexpected behavior with stack-level tags propagating to the resource during resource creation
+     * and update.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
-     * @param tags A list of tags to apply to CodeSigningConfig resource. 
+     * @param tags A list of tags to add to the code signing configuration. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * A list of tags to apply to CodeSigningConfig resource.
+     * A list of tags to add to the code signing configuration.
+     *
+     *
+     * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+     * permissions for your [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+     * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+     * unexpected behavior with stack-level tags propagating to the resource during resource creation
+     * and update.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
-     * @param tags A list of tags to apply to CodeSigningConfig resource. 
+     * @param tags A list of tags to add to the code signing configuration. 
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -358,20 +376,38 @@ public open class CfnCodeSigningConfig(
     }
 
     /**
-     * A list of tags to apply to CodeSigningConfig resource.
+     * A list of tags to add to the code signing configuration.
+     *
+     *
+     * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+     * permissions for your [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+     * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+     * unexpected behavior with stack-level tags propagating to the resource during resource creation
+     * and update.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
-     * @param tags A list of tags to apply to CodeSigningConfig resource. 
+     * @param tags A list of tags to add to the code signing configuration. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * A list of tags to apply to CodeSigningConfig resource.
+     * A list of tags to add to the code signing configuration.
+     *
+     *
+     * You must have the `lambda:TagResource` , `lambda:UntagResource` , and `lambda:ListTags`
+     * permissions for your [IAM
+     * principal](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html) to
+     * manage the AWS CloudFormation stack. If you don't have these permissions, there might be
+     * unexpected behavior with stack-level tags propagating to the resource during resource creation
+     * and update.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-codesigningconfig.html#cfn-lambda-codesigningconfig-tags)
-     * @param tags A list of tags to apply to CodeSigningConfig resource. 
+     * @param tags A list of tags to add to the code signing configuration. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 

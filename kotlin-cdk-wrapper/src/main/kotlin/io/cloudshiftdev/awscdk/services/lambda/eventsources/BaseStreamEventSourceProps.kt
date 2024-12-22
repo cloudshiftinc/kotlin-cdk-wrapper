@@ -10,6 +10,7 @@ import io.cloudshiftdev.awscdk.services.lambda.StartingPosition
 import kotlin.Boolean
 import kotlin.Number
 import kotlin.Unit
+import kotlin.jvm.JvmName
 
 /**
  * The set of properties for streaming event sources shared by Dynamo, Kinesis and Kafka.
@@ -28,6 +29,10 @@ import kotlin.Unit
  * .batchSize(123)
  * .enabled(false)
  * .maxBatchingWindow(Duration.minutes(30))
+ * .provisionedPollerConfig(ProvisionedPollerConfig.builder()
+ * .maximumPollers(123)
+ * .minimumPollers(123)
+ * .build())
  * .build();
  * ```
  */
@@ -73,6 +78,17 @@ public interface BaseStreamEventSourceProps {
       unwrap(this).getMaxBatchingWindow()?.let(Duration::wrap)
 
   /**
+   * Configuration for provisioned pollers that read from the event source.
+   *
+   * When specified, allows control over the minimum and maximum number of pollers
+   * that can be provisioned to process events from the source.
+   *
+   * Default: - no provisioned pollers
+   */
+  public fun provisionedPollerConfig(): ProvisionedPollerConfig? =
+      unwrap(this).getProvisionedPollerConfig()?.let(ProvisionedPollerConfig::wrap)
+
+  /**
    * Where to begin consuming the stream.
    */
   public fun startingPosition(): StartingPosition
@@ -109,6 +125,25 @@ public interface BaseStreamEventSourceProps {
      * Maximum of Duration.minutes(5).
      */
     public fun maxBatchingWindow(maxBatchingWindow: Duration)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    public fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b53427f81c1d814c31a5b95097555e697fd97334e6ddd88b376ae95bed4376ad")
+    public
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit)
 
     /**
      * @param startingPosition Where to begin consuming the stream. 
@@ -154,6 +189,28 @@ public interface BaseStreamEventSourceProps {
     override fun maxBatchingWindow(maxBatchingWindow: Duration) {
       cdkBuilder.maxBatchingWindow(maxBatchingWindow.let(Duration.Companion::unwrap))
     }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    override fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig) {
+      cdkBuilder.provisionedPollerConfig(provisionedPollerConfig.let(ProvisionedPollerConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("b53427f81c1d814c31a5b95097555e697fd97334e6ddd88b376ae95bed4376ad")
+    override
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit):
+        Unit = provisionedPollerConfig(ProvisionedPollerConfig(provisionedPollerConfig))
 
     /**
      * @param startingPosition Where to begin consuming the stream. 
@@ -210,6 +267,17 @@ public interface BaseStreamEventSourceProps {
      */
     override fun maxBatchingWindow(): Duration? =
         unwrap(this).getMaxBatchingWindow()?.let(Duration::wrap)
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     */
+    override fun provisionedPollerConfig(): ProvisionedPollerConfig? =
+        unwrap(this).getProvisionedPollerConfig()?.let(ProvisionedPollerConfig::wrap)
 
     /**
      * Where to begin consuming the stream.

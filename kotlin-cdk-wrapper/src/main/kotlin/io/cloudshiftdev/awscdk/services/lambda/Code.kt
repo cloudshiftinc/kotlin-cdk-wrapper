@@ -130,6 +130,26 @@ public abstract class Code(
         software.amazon.awscdk.services.lambda.Code.fromBucket(bucket.let(IBucket.Companion::unwrap),
         key, objectVersion).let(S3Code::wrap)
 
+    public fun fromBucketV2(bucket: IBucket, key: String): S3CodeV2 =
+        software.amazon.awscdk.services.lambda.Code.fromBucketV2(bucket.let(IBucket.Companion::unwrap),
+        key).let(S3CodeV2::wrap)
+
+    public fun fromBucketV2(
+      bucket: IBucket,
+      key: String,
+      options: BucketOptions,
+    ): S3CodeV2 =
+        software.amazon.awscdk.services.lambda.Code.fromBucketV2(bucket.let(IBucket.Companion::unwrap),
+        key, options.let(BucketOptions.Companion::unwrap)).let(S3CodeV2::wrap)
+
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("4dddafffd71f2fb5bfa7382c98928ed8f50a2f3f1ecc42038e1bad0c792293a3")
+    public fun fromBucketV2(
+      bucket: IBucket,
+      key: String,
+      options: BucketOptions.Builder.() -> Unit,
+    ): S3CodeV2 = fromBucketV2(bucket, key, BucketOptions(options))
+
     public fun fromCfnParameters(): CfnParametersCode =
         software.amazon.awscdk.services.lambda.Code.fromCfnParameters().let(CfnParametersCode::wrap)
 

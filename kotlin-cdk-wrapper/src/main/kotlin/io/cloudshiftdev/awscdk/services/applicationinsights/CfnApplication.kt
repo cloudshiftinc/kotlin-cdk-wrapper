@@ -236,6 +236,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .build()))
  * .opsCenterEnabled(false)
  * .opsItemSnsTopicArn("opsItemSnsTopicArn")
+ * .snsNotificationArn("snsNotificationArn")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -483,6 +484,18 @@ public open class CfnApplication(
   }
 
   /**
+   * The SNS topic ARN that is associated with SNS notifications for updates or issues.
+   */
+  public open fun snsNotificationArn(): String? = unwrap(this).getSnsNotificationArn()
+
+  /**
+   * The SNS topic ARN that is associated with SNS notifications for updates or issues.
+   */
+  public open fun snsNotificationArn(`value`: String) {
+    unwrap(this).setSnsNotificationArn(`value`)
+  }
+
+  /**
    * Tag Manager which manages the tags for this resource.
    */
   public override fun tags(): TagManager = unwrap(this).getTags().let(TagManager::wrap)
@@ -705,6 +718,15 @@ public open class CfnApplication(
      * @param resourceGroupName The name of the resource group used for the application. 
      */
     public fun resourceGroupName(resourceGroupName: String)
+
+    /**
+     * The SNS topic ARN that is associated with SNS notifications for updates or issues.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-snsnotificationarn)
+     * @param snsNotificationArn The SNS topic ARN that is associated with SNS notifications for
+     * updates or issues. 
+     */
+    public fun snsNotificationArn(snsNotificationArn: String)
 
     /**
      * An array of `Tags` .
@@ -962,6 +984,17 @@ public open class CfnApplication(
      */
     override fun resourceGroupName(resourceGroupName: String) {
       cdkBuilder.resourceGroupName(resourceGroupName)
+    }
+
+    /**
+     * The SNS topic ARN that is associated with SNS notifications for updates or issues.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationinsights-application.html#cfn-applicationinsights-application-snsnotificationarn)
+     * @param snsNotificationArn The SNS topic ARN that is associated with SNS notifications for
+     * updates or issues. 
+     */
+    override fun snsNotificationArn(snsNotificationArn: String) {
+      cdkBuilder.snsNotificationArn(snsNotificationArn)
     }
 
     /**

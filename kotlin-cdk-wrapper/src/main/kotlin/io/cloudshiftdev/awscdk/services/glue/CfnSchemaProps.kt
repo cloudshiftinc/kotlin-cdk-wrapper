@@ -26,7 +26,6 @@ import kotlin.jvm.JvmName
  * .compatibility("compatibility")
  * .dataFormat("dataFormat")
  * .name("name")
- * .schemaDefinition("schemaDefinition")
  * // the properties below are optional
  * .checkpointVersion(SchemaVersionProperty.builder()
  * .isLatest(false)
@@ -37,6 +36,7 @@ import kotlin.jvm.JvmName
  * .arn("arn")
  * .name("name")
  * .build())
+ * .schemaDefinition("schemaDefinition")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -101,7 +101,7 @@ public interface CfnSchemaProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-schemadefinition)
    */
-  public fun schemaDefinition(): String
+  public fun schemaDefinition(): String? = unwrap(this).getSchemaDefinition()
 
   /**
    * AWS tags that contain a key value pair and may be searched by console, command line, or API.
@@ -181,7 +181,7 @@ public interface CfnSchemaProps {
 
     /**
      * @param schemaDefinition The schema definition using the `DataFormat` setting for `SchemaName`
-     * . 
+     * .
      */
     public fun schemaDefinition(schemaDefinition: String)
 
@@ -286,7 +286,7 @@ public interface CfnSchemaProps {
 
     /**
      * @param schemaDefinition The schema definition using the `DataFormat` setting for `SchemaName`
-     * . 
+     * .
      */
     override fun schemaDefinition(schemaDefinition: String) {
       cdkBuilder.schemaDefinition(schemaDefinition)
@@ -367,7 +367,7 @@ public interface CfnSchemaProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-glue-schema.html#cfn-glue-schema-schemadefinition)
      */
-    override fun schemaDefinition(): String = unwrap(this).getSchemaDefinition()
+    override fun schemaDefinition(): String? = unwrap(this).getSchemaDefinition()
 
     /**
      * AWS tags that contain a key value pair and may be searched by console, command line, or API.

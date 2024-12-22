@@ -185,6 +185,25 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
     public fun onFailure(onFailure: IEventSourceDlq)
 
     /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    public fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d3d593b0c7e5e0b5034278635c81f6d53b8126b1ebf383af49783ac119b561cf")
+    public
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit)
+
+    /**
      * @param rootCaCertificate The secret with the root CA certificate used by your Kafka brokers
      * for TLS encryption This field is required if your Kafka brokers use certificates signed by a
      * private CA.
@@ -337,6 +356,28 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
     override fun onFailure(onFailure: IEventSourceDlq) {
       cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    override fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig) {
+      cdkBuilder.provisionedPollerConfig(provisionedPollerConfig.let(ProvisionedPollerConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d3d593b0c7e5e0b5034278635c81f6d53b8126b1ebf383af49783ac119b561cf")
+    override
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit):
+        Unit = provisionedPollerConfig(ProvisionedPollerConfig(provisionedPollerConfig))
 
     /**
      * @param rootCaCertificate The secret with the root CA certificate used by your Kafka brokers
@@ -508,6 +549,17 @@ public interface SelfManagedKafkaEventSourceProps : KafkaEventSourceProps {
      */
     override fun onFailure(): IEventSourceDlq? =
         unwrap(this).getOnFailure()?.let(IEventSourceDlq::wrap)
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     */
+    override fun provisionedPollerConfig(): ProvisionedPollerConfig? =
+        unwrap(this).getProvisionedPollerConfig()?.let(ProvisionedPollerConfig::wrap)
 
     /**
      * The secret with the root CA certificate used by your Kafka brokers for TLS encryption This

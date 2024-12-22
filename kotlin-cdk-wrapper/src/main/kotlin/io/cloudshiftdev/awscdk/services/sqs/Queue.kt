@@ -20,15 +20,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Queue sourceQueue;
- * IFunction targetFunction;
- * LambdaFunction pipeTarget = LambdaFunction.Builder.create(targetFunction)
- * .inputTransformation(InputTransformation.fromObject(Map.of("body", "👀")))
+ * import io.cloudshiftdev.awscdk.services.redshiftserverless.*;
+ * CfnWorkgroup workgroup;
+ * Rule rule = Rule.Builder.create(this, "Rule")
+ * .schedule(Schedule.rate(Duration.hours(1)))
  * .build();
- * Pipe pipe = Pipe.Builder.create(this, "Pipe")
- * .source(new SomeSource(sourceQueue))
- * .target(pipeTarget)
- * .build();
+ * Queue dlq = new Queue(this, "DeadLetterQueue");
+ * rule.addTarget(RedshiftQuery.Builder.create(workgroup.getAttrWorkgroupWorkgroupArn())
+ * .database("dev")
+ * .deadLetterQueue(dlq)
+ * .sql(List.of("SELECT * FROM foo", "SELECT * FROM baz"))
+ * .build());
  * ```
  */
 public open class Queue(

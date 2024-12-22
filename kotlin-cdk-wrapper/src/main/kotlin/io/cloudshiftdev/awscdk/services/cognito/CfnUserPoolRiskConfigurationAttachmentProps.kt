@@ -93,10 +93,10 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
       unwrap(this).getAccountTakeoverRiskConfiguration()
 
   /**
-   * The app client ID.
+   * The app client where this configuration is applied.
    *
-   * You can specify the risk configuration for a single client (with a specific ClientId) or for
-   * all clients (by setting the ClientId to `ALL` ).
+   * When this parameter isn't present, the risk configuration applies to all user pool app clients
+   * that don't have client-level settings.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-clientid)
    */
@@ -154,9 +154,9 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
         fun accountTakeoverRiskConfiguration(accountTakeoverRiskConfiguration: CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty.Builder.() -> Unit)
 
     /**
-     * @param clientId The app client ID. 
-     * You can specify the risk configuration for a single client (with a specific ClientId) or for
-     * all clients (by setting the ClientId to `ALL` ).
+     * @param clientId The app client where this configuration is applied. 
+     * When this parameter isn't present, the risk configuration applies to all user pool app
+     * clients that don't have client-level settings.
      */
     public fun clientId(clientId: String)
 
@@ -246,9 +246,9 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
         accountTakeoverRiskConfiguration(CfnUserPoolRiskConfigurationAttachment.AccountTakeoverRiskConfigurationTypeProperty(accountTakeoverRiskConfiguration))
 
     /**
-     * @param clientId The app client ID. 
-     * You can specify the risk configuration for a single client (with a specific ClientId) or for
-     * all clients (by setting the ClientId to `ALL` ).
+     * @param clientId The app client where this configuration is applied. 
+     * When this parameter isn't present, the risk configuration applies to all user pool app
+     * clients that don't have client-level settings.
      */
     override fun clientId(clientId: String) {
       cdkBuilder.clientId(clientId)
@@ -337,10 +337,10 @@ public interface CfnUserPoolRiskConfigurationAttachmentProps {
         unwrap(this).getAccountTakeoverRiskConfiguration()
 
     /**
-     * The app client ID.
+     * The app client where this configuration is applied.
      *
-     * You can specify the risk configuration for a single client (with a specific ClientId) or for
-     * all clients (by setting the ClientId to `ALL` ).
+     * When this parameter isn't present, the risk configuration applies to all user pool app
+     * clients that don't have client-level settings.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolriskconfigurationattachment.html#cfn-cognito-userpoolriskconfigurationattachment-clientid)
      */

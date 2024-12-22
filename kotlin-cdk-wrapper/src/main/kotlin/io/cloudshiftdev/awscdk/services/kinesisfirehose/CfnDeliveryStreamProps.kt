@@ -61,6 +61,15 @@ public interface CfnDeliveryStreamProps {
       unwrap(this).getAmazonopensearchserviceDestinationConfiguration()
 
   /**
+   * The top level object for configuring streams with database as a source.
+   *
+   * Amazon Data Firehose is in preview release and is subject to change.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration)
+   */
+  public fun databaseSourceConfiguration(): Any? = unwrap(this).getDatabaseSourceConfiguration()
+
+  /**
    * Specifies the type and Amazon Resource Name (ARN) of the CMK to use for Server-Side Encryption
    * (SSE).
    *
@@ -70,17 +79,17 @@ public interface CfnDeliveryStreamProps {
       unwrap(this).getDeliveryStreamEncryptionConfigurationInput()
 
   /**
-   * The name of the delivery stream.
+   * The name of the Firehose stream.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamname)
    */
   public fun deliveryStreamName(): String? = unwrap(this).getDeliveryStreamName()
 
   /**
-   * The delivery stream type. This can be one of the following values:.
+   * The Firehose stream type. This can be one of the following values:.
    *
-   * * `DirectPut` : Provider applications access the delivery stream directly.
-   * * `KinesisStreamAsSource` : The delivery stream uses a Kinesis data stream as a source.
+   * * `DirectPut` : Provider applications access the Firehose stream directly.
+   * * `KinesisStreamAsSource` : The Firehose stream uses a Kinesis data stream as a source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamtype)
    */
@@ -128,8 +137,6 @@ public interface CfnDeliveryStreamProps {
 
   /**
    * Specifies the destination configure settings for Apache Iceberg Table.
-   *
-   * Amazon Data Firehose is in preview release and is subject to change.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
    */
@@ -201,22 +208,21 @@ public interface CfnDeliveryStreamProps {
       unwrap(this).getSplunkDestinationConfiguration()
 
   /**
-   * A set of tags to assign to the delivery stream.
+   * A set of tags to assign to the Firehose stream.
    *
    * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
    * For example, you can add friendly names and descriptions or other types of information that can
-   * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+   * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
    * Allocation
    * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
    * AWS Billing and Cost Management User Guide.
    *
-   * You can specify up to 50 tags when creating a delivery stream.
+   * You can specify up to 50 tags when creating a Firehose stream.
    *
    * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
    * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
    * permissions to create tags. If you do not provide this permission, requests to create new Firehose
-   * delivery streams with IAM resource tags will fail with an `AccessDeniedException` such as
-   * following.
+   * streams with IAM resource tags will fail with an `AccessDeniedException` such as following.
    *
    * *AccessDeniedException*
    *
@@ -286,6 +292,31 @@ public interface CfnDeliveryStreamProps {
         fun amazonopensearchserviceDestinationConfiguration(amazonopensearchserviceDestinationConfiguration: CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty.Builder.() -> Unit)
 
     /**
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    public fun databaseSourceConfiguration(databaseSourceConfiguration: IResolvable)
+
+    /**
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    public
+        fun databaseSourceConfiguration(databaseSourceConfiguration: CfnDeliveryStream.DatabaseSourceConfigurationProperty)
+
+    /**
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("44d69ff3bb748e4f473c981f57c0a4b9e9cf70dc73838c14f951c2112d90b025")
+    public
+        fun databaseSourceConfiguration(databaseSourceConfiguration: CfnDeliveryStream.DatabaseSourceConfigurationProperty.Builder.() -> Unit)
+
+    /**
      * @param deliveryStreamEncryptionConfigurationInput Specifies the type and Amazon Resource Name
      * (ARN) of the CMK to use for Server-Side Encryption (SSE).
      */
@@ -309,14 +340,14 @@ public interface CfnDeliveryStreamProps {
         fun deliveryStreamEncryptionConfigurationInput(deliveryStreamEncryptionConfigurationInput: CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty.Builder.() -> Unit)
 
     /**
-     * @param deliveryStreamName The name of the delivery stream.
+     * @param deliveryStreamName The name of the Firehose stream.
      */
     public fun deliveryStreamName(deliveryStreamName: String)
 
     /**
-     * @param deliveryStreamType The delivery stream type. This can be one of the following values:.
-     * * `DirectPut` : Provider applications access the delivery stream directly.
-     * * `KinesisStreamAsSource` : The delivery stream uses a Kinesis data stream as a source.
+     * @param deliveryStreamType The Firehose stream type. This can be one of the following values:.
+     * * `DirectPut` : Provider applications access the Firehose stream directly.
+     * * `KinesisStreamAsSource` : The Firehose stream uses a Kinesis data stream as a source.
      */
     public fun deliveryStreamType(deliveryStreamType: String)
 
@@ -427,14 +458,12 @@ public interface CfnDeliveryStreamProps {
     /**
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
      * Apache Iceberg Table.
-     * Amazon Data Firehose is in preview release and is subject to change.
      */
     public fun icebergDestinationConfiguration(icebergDestinationConfiguration: IResolvable)
 
     /**
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
      * Apache Iceberg Table.
-     * Amazon Data Firehose is in preview release and is subject to change.
      */
     public
         fun icebergDestinationConfiguration(icebergDestinationConfiguration: CfnDeliveryStream.IcebergDestinationConfigurationProperty)
@@ -442,7 +471,6 @@ public interface CfnDeliveryStreamProps {
     /**
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
      * Apache Iceberg Table.
-     * Amazon Data Firehose is in preview release and is subject to change.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("484f7d6c612844105ad2074cd8d8320f4f5b531fd1100f259474d8b5f7d008a0")
@@ -624,21 +652,21 @@ public interface CfnDeliveryStreamProps {
         fun splunkDestinationConfiguration(splunkDestinationConfiguration: CfnDeliveryStream.SplunkDestinationConfigurationProperty.Builder.() -> Unit)
 
     /**
-     * @param tags A set of tags to assign to the delivery stream.
+     * @param tags A set of tags to assign to the Firehose stream.
      * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
      * For example, you can add friendly names and descriptions or other types of information that can
-     * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+     * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
      * Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
      * AWS Billing and Cost Management User Guide.
      *
-     * You can specify up to 50 tags when creating a delivery stream.
+     * You can specify up to 50 tags when creating a Firehose stream.
      *
      * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
      * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
      * permissions to create tags. If you do not provide this permission, requests to create new
-     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
-     * as following.
+     * Firehose streams with IAM resource tags will fail with an `AccessDeniedException` such as
+     * following.
      *
      * *AccessDeniedException*
      *
@@ -652,21 +680,21 @@ public interface CfnDeliveryStreamProps {
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags A set of tags to assign to the delivery stream.
+     * @param tags A set of tags to assign to the Firehose stream.
      * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
      * For example, you can add friendly names and descriptions or other types of information that can
-     * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+     * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
      * Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
      * AWS Billing and Cost Management User Guide.
      *
-     * You can specify up to 50 tags when creating a delivery stream.
+     * You can specify up to 50 tags when creating a Firehose stream.
      *
      * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
      * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
      * permissions to create tags. If you do not provide this permission, requests to create new
-     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
-     * as following.
+     * Firehose streams with IAM resource tags will fail with an `AccessDeniedException` such as
+     * following.
      *
      * *AccessDeniedException*
      *
@@ -747,6 +775,37 @@ public interface CfnDeliveryStreamProps {
         amazonopensearchserviceDestinationConfiguration(CfnDeliveryStream.AmazonopensearchserviceDestinationConfigurationProperty(amazonopensearchserviceDestinationConfiguration))
 
     /**
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    override fun databaseSourceConfiguration(databaseSourceConfiguration: IResolvable) {
+      cdkBuilder.databaseSourceConfiguration(databaseSourceConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    override
+        fun databaseSourceConfiguration(databaseSourceConfiguration: CfnDeliveryStream.DatabaseSourceConfigurationProperty) {
+      cdkBuilder.databaseSourceConfiguration(databaseSourceConfiguration.let(CfnDeliveryStream.DatabaseSourceConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param databaseSourceConfiguration The top level object for configuring streams with database
+     * as a source.
+     * Amazon Data Firehose is in preview release and is subject to change.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("44d69ff3bb748e4f473c981f57c0a4b9e9cf70dc73838c14f951c2112d90b025")
+    override
+        fun databaseSourceConfiguration(databaseSourceConfiguration: CfnDeliveryStream.DatabaseSourceConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        databaseSourceConfiguration(CfnDeliveryStream.DatabaseSourceConfigurationProperty(databaseSourceConfiguration))
+
+    /**
      * @param deliveryStreamEncryptionConfigurationInput Specifies the type and Amazon Resource Name
      * (ARN) of the CMK to use for Server-Side Encryption (SSE).
      */
@@ -776,16 +835,16 @@ public interface CfnDeliveryStreamProps {
         deliveryStreamEncryptionConfigurationInput(CfnDeliveryStream.DeliveryStreamEncryptionConfigurationInputProperty(deliveryStreamEncryptionConfigurationInput))
 
     /**
-     * @param deliveryStreamName The name of the delivery stream.
+     * @param deliveryStreamName The name of the Firehose stream.
      */
     override fun deliveryStreamName(deliveryStreamName: String) {
       cdkBuilder.deliveryStreamName(deliveryStreamName)
     }
 
     /**
-     * @param deliveryStreamType The delivery stream type. This can be one of the following values:.
-     * * `DirectPut` : Provider applications access the delivery stream directly.
-     * * `KinesisStreamAsSource` : The delivery stream uses a Kinesis data stream as a source.
+     * @param deliveryStreamType The Firehose stream type. This can be one of the following values:.
+     * * `DirectPut` : Provider applications access the Firehose stream directly.
+     * * `KinesisStreamAsSource` : The Firehose stream uses a Kinesis data stream as a source.
      */
     override fun deliveryStreamType(deliveryStreamType: String) {
       cdkBuilder.deliveryStreamType(deliveryStreamType)
@@ -917,7 +976,6 @@ public interface CfnDeliveryStreamProps {
     /**
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
      * Apache Iceberg Table.
-     * Amazon Data Firehose is in preview release and is subject to change.
      */
     override fun icebergDestinationConfiguration(icebergDestinationConfiguration: IResolvable) {
       cdkBuilder.icebergDestinationConfiguration(icebergDestinationConfiguration.let(IResolvable.Companion::unwrap))
@@ -926,7 +984,6 @@ public interface CfnDeliveryStreamProps {
     /**
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
      * Apache Iceberg Table.
-     * Amazon Data Firehose is in preview release and is subject to change.
      */
     override
         fun icebergDestinationConfiguration(icebergDestinationConfiguration: CfnDeliveryStream.IcebergDestinationConfigurationProperty) {
@@ -936,7 +993,6 @@ public interface CfnDeliveryStreamProps {
     /**
      * @param icebergDestinationConfiguration Specifies the destination configure settings for
      * Apache Iceberg Table.
-     * Amazon Data Firehose is in preview release and is subject to change.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("484f7d6c612844105ad2074cd8d8320f4f5b531fd1100f259474d8b5f7d008a0")
@@ -1156,21 +1212,21 @@ public interface CfnDeliveryStreamProps {
         splunkDestinationConfiguration(CfnDeliveryStream.SplunkDestinationConfigurationProperty(splunkDestinationConfiguration))
 
     /**
-     * @param tags A set of tags to assign to the delivery stream.
+     * @param tags A set of tags to assign to the Firehose stream.
      * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
      * For example, you can add friendly names and descriptions or other types of information that can
-     * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+     * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
      * Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
      * AWS Billing and Cost Management User Guide.
      *
-     * You can specify up to 50 tags when creating a delivery stream.
+     * You can specify up to 50 tags when creating a Firehose stream.
      *
      * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
      * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
      * permissions to create tags. If you do not provide this permission, requests to create new
-     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
-     * as following.
+     * Firehose streams with IAM resource tags will fail with an `AccessDeniedException` such as
+     * following.
      *
      * *AccessDeniedException*
      *
@@ -1186,21 +1242,21 @@ public interface CfnDeliveryStreamProps {
     }
 
     /**
-     * @param tags A set of tags to assign to the delivery stream.
+     * @param tags A set of tags to assign to the Firehose stream.
      * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
      * For example, you can add friendly names and descriptions or other types of information that can
-     * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+     * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
      * Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
      * AWS Billing and Cost Management User Guide.
      *
-     * You can specify up to 50 tags when creating a delivery stream.
+     * You can specify up to 50 tags when creating a Firehose stream.
      *
      * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
      * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
      * permissions to create tags. If you do not provide this permission, requests to create new
-     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
-     * as following.
+     * Firehose streams with IAM resource tags will fail with an `AccessDeniedException` such as
+     * following.
      *
      * *AccessDeniedException*
      *
@@ -1241,6 +1297,15 @@ public interface CfnDeliveryStreamProps {
         unwrap(this).getAmazonopensearchserviceDestinationConfiguration()
 
     /**
+     * The top level object for configuring streams with database as a source.
+     *
+     * Amazon Data Firehose is in preview release and is subject to change.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-databasesourceconfiguration)
+     */
+    override fun databaseSourceConfiguration(): Any? = unwrap(this).getDatabaseSourceConfiguration()
+
+    /**
      * Specifies the type and Amazon Resource Name (ARN) of the CMK to use for Server-Side
      * Encryption (SSE).
      *
@@ -1250,17 +1315,17 @@ public interface CfnDeliveryStreamProps {
         unwrap(this).getDeliveryStreamEncryptionConfigurationInput()
 
     /**
-     * The name of the delivery stream.
+     * The name of the Firehose stream.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamname)
      */
     override fun deliveryStreamName(): String? = unwrap(this).getDeliveryStreamName()
 
     /**
-     * The delivery stream type. This can be one of the following values:.
+     * The Firehose stream type. This can be one of the following values:.
      *
-     * * `DirectPut` : Provider applications access the delivery stream directly.
-     * * `KinesisStreamAsSource` : The delivery stream uses a Kinesis data stream as a source.
+     * * `DirectPut` : Provider applications access the Firehose stream directly.
+     * * `KinesisStreamAsSource` : The Firehose stream uses a Kinesis data stream as a source.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-deliverystreamtype)
      */
@@ -1308,8 +1373,6 @@ public interface CfnDeliveryStreamProps {
 
     /**
      * Specifies the destination configure settings for Apache Iceberg Table.
-     *
-     * Amazon Data Firehose is in preview release and is subject to change.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-kinesisfirehose-deliverystream.html#cfn-kinesisfirehose-deliverystream-icebergdestinationconfiguration)
      */
@@ -1381,22 +1444,22 @@ public interface CfnDeliveryStreamProps {
         unwrap(this).getSplunkDestinationConfiguration()
 
     /**
-     * A set of tags to assign to the delivery stream.
+     * A set of tags to assign to the Firehose stream.
      *
      * A tag is a key-value pair that you can define and assign to AWS resources. Tags are metadata.
      * For example, you can add friendly names and descriptions or other types of information that can
-     * help you distinguish the delivery stream. For more information about tags, see [Using Cost
+     * help you distinguish the Firehose stream. For more information about tags, see [Using Cost
      * Allocation
      * Tags](https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/cost-alloc-tags.html) in the
      * AWS Billing and Cost Management User Guide.
      *
-     * You can specify up to 50 tags when creating a delivery stream.
+     * You can specify up to 50 tags when creating a Firehose stream.
      *
      * If you specify tags in the `CreateDeliveryStream` action, Amazon Data Firehose performs an
      * additional authorization on the `firehose:TagDeliveryStream` action to verify if users have
      * permissions to create tags. If you do not provide this permission, requests to create new
-     * Firehose delivery streams with IAM resource tags will fail with an `AccessDeniedException` such
-     * as following.
+     * Firehose streams with IAM resource tags will fail with an `AccessDeniedException` such as
+     * following.
      *
      * *AccessDeniedException*
      *

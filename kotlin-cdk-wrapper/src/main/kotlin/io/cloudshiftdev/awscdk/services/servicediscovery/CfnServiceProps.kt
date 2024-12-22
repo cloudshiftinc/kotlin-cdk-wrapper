@@ -22,6 +22,7 @@ import kotlin.jvm.JvmName
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.servicediscovery.*;
+ * Object serviceAttributes;
  * CfnServiceProps cfnServiceProps = CfnServiceProps.builder()
  * .description("description")
  * .dnsConfig(DnsConfigProperty.builder()
@@ -44,6 +45,7 @@ import kotlin.jvm.JvmName
  * .build())
  * .name("name")
  * .namespaceId("namespaceId")
+ * .serviceAttributes(serviceAttributes)
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -118,6 +120,11 @@ public interface CfnServiceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-namespaceid)
    */
   public fun namespaceId(): String? = unwrap(this).getNamespaceId()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-serviceattributes)
+   */
+  public fun serviceAttributes(): Any? = unwrap(this).getServiceAttributes()
 
   /**
    * The tags for the service.
@@ -253,6 +260,11 @@ public interface CfnServiceProps {
      * . Don't specify a value in both places.
      */
     public fun namespaceId(namespaceId: String)
+
+    /**
+     * @param serviceAttributes the value to be set.
+     */
+    public fun serviceAttributes(serviceAttributes: Any)
 
     /**
      * @param tags The tags for the service.
@@ -414,6 +426,13 @@ public interface CfnServiceProps {
     }
 
     /**
+     * @param serviceAttributes the value to be set.
+     */
+    override fun serviceAttributes(serviceAttributes: Any) {
+      cdkBuilder.serviceAttributes(serviceAttributes)
+    }
+
+    /**
      * @param tags The tags for the service.
      * Each tag consists of a key and an optional value, both of which you define. Tag keys can have
      * a maximum character length of 128 characters, and tag values can have a maximum length of 256
@@ -511,6 +530,11 @@ public interface CfnServiceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-namespaceid)
      */
     override fun namespaceId(): String? = unwrap(this).getNamespaceId()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-servicediscovery-service.html#cfn-servicediscovery-service-serviceattributes)
+     */
+    override fun serviceAttributes(): Any? = unwrap(this).getServiceAttributes()
 
     /**
      * The tags for the service.

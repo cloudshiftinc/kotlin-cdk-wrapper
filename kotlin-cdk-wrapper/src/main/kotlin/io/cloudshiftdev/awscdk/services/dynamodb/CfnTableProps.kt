@@ -61,6 +61,10 @@ import kotlin.jvm.JvmName
  * .readCapacityUnits(123)
  * .writeCapacityUnits(123)
  * .build())
+ * .warmThroughput(WarmThroughputProperty.builder()
+ * .readUnitsPerSecond(123)
+ * .writeUnitsPerSecond(123)
+ * .build())
  * .build()))
  * .importSourceSpecification(ImportSourceSpecificationProperty.builder()
  * .inputFormat("inputFormat")
@@ -132,6 +136,10 @@ import kotlin.jvm.JvmName
  * .enabled(false)
  * // the properties below are optional
  * .attributeName("attributeName")
+ * .build())
+ * .warmThroughput(WarmThroughputProperty.builder()
+ * .readUnitsPerSecond(123)
+ * .writeUnitsPerSecond(123)
  * .build())
  * .build();
  * ```
@@ -222,12 +230,13 @@ public interface CfnTableProps {
   public fun globalSecondaryIndexes(): Any? = unwrap(this).getGlobalSecondaryIndexes()
 
   /**
-   * Specifies the properties of data being imported from the S3 bucket source to the table.
+   * Specifies the properties of data being imported from the S3 bucket source to the" table.
    *
    *
    * If you specify the `ImportSourceSpecification` property, and also specify either the
-   * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-   * the IAM entity creating/updating stack must have `UpdateTable` permission.
+   * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+   * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+   * permission.
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-importsourcespecification)
@@ -378,6 +387,14 @@ public interface CfnTableProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-timetolivespecification)
    */
   public fun timeToLiveSpecification(): Any? = unwrap(this).getTimeToLiveSpecification()
+
+  /**
+   * Represents the warm throughput (in read units per second and write units per second) for
+   * creating a table.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+   */
+  public fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
 
   /**
    * A builder for [CfnTableProps]
@@ -552,32 +569,35 @@ public interface CfnTableProps {
 
     /**
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table.
+     * bucket source to the" table.
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      */
     public fun importSourceSpecification(importSourceSpecification: IResolvable)
 
     /**
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table.
+     * bucket source to the" table.
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      */
     public
         fun importSourceSpecification(importSourceSpecification: CfnTable.ImportSourceSpecificationProperty)
 
     /**
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table.
+     * bucket source to the" table.
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fcfa4b8b3fb01671f8a472422d5bd789be1593d7487e0f98b1d617e0645a214e")
@@ -896,6 +916,26 @@ public interface CfnTableProps {
     @JvmName("538d06314b2d8f6c9f1ad9a4139ade75fa91cbf0137fb6283ebc5f4aabeae1d6")
     public
         fun timeToLiveSpecification(timeToLiveSpecification: CfnTable.TimeToLiveSpecificationProperty.Builder.() -> Unit)
+
+    /**
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table.
+     */
+    public fun warmThroughput(warmThroughput: IResolvable)
+
+    /**
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table.
+     */
+    public fun warmThroughput(warmThroughput: CfnTable.WarmThroughputProperty)
+
+    /**
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ba9e82a26cdb59a4d49d89f33376cc87ee4bfa2ec6384127ff8368859ddb4a28")
+    public fun warmThroughput(warmThroughput: CfnTable.WarmThroughputProperty.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -1092,11 +1132,12 @@ public interface CfnTableProps {
 
     /**
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table.
+     * bucket source to the" table.
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      */
     override fun importSourceSpecification(importSourceSpecification: IResolvable) {
       cdkBuilder.importSourceSpecification(importSourceSpecification.let(IResolvable.Companion::unwrap))
@@ -1104,11 +1145,12 @@ public interface CfnTableProps {
 
     /**
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table.
+     * bucket source to the" table.
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      */
     override
         fun importSourceSpecification(importSourceSpecification: CfnTable.ImportSourceSpecificationProperty) {
@@ -1117,11 +1159,12 @@ public interface CfnTableProps {
 
     /**
      * @param importSourceSpecification Specifies the properties of data being imported from the S3
-     * bucket source to the table.
+     * bucket source to the" table.
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("fcfa4b8b3fb01671f8a472422d5bd789be1593d7487e0f98b1d617e0645a214e")
@@ -1502,6 +1545,31 @@ public interface CfnTableProps {
         Unit =
         timeToLiveSpecification(CfnTable.TimeToLiveSpecificationProperty(timeToLiveSpecification))
 
+    /**
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table.
+     */
+    override fun warmThroughput(warmThroughput: IResolvable) {
+      cdkBuilder.warmThroughput(warmThroughput.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table.
+     */
+    override fun warmThroughput(warmThroughput: CfnTable.WarmThroughputProperty) {
+      cdkBuilder.warmThroughput(warmThroughput.let(CfnTable.WarmThroughputProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param warmThroughput Represents the warm throughput (in read units per second and write
+     * units per second) for creating a table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("ba9e82a26cdb59a4d49d89f33376cc87ee4bfa2ec6384127ff8368859ddb4a28")
+    override fun warmThroughput(warmThroughput: CfnTable.WarmThroughputProperty.Builder.() -> Unit):
+        Unit = warmThroughput(CfnTable.WarmThroughputProperty(warmThroughput))
+
     public fun build(): software.amazon.awscdk.services.dynamodb.CfnTableProps = cdkBuilder.build()
   }
 
@@ -1593,12 +1661,13 @@ public interface CfnTableProps {
     override fun globalSecondaryIndexes(): Any? = unwrap(this).getGlobalSecondaryIndexes()
 
     /**
-     * Specifies the properties of data being imported from the S3 bucket source to the table.
+     * Specifies the properties of data being imported from the S3 bucket source to the" table.
      *
      *
      * If you specify the `ImportSourceSpecification` property, and also specify either the
-     * `StreamSpecification` , the `TableClass` property, or the `DeletionProtectionEnabled` property,
-     * the IAM entity creating/updating stack must have `UpdateTable` permission.
+     * `StreamSpecification` , the `TableClass` property, the `DeletionProtectionEnabled` property, or
+     * the `WarmThroughput` property, the IAM entity creating/updating stack must have `UpdateTable`
+     * permission.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-importsourcespecification)
@@ -1750,6 +1819,14 @@ public interface CfnTableProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-timetolivespecification)
      */
     override fun timeToLiveSpecification(): Any? = unwrap(this).getTimeToLiveSpecification()
+
+    /**
+     * Represents the warm throughput (in read units per second and write units per second) for
+     * creating a table.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     */
+    override fun warmThroughput(): Any? = unwrap(this).getWarmThroughput()
   }
 
   public companion object {

@@ -31,6 +31,13 @@ import kotlin.jvm.JvmName
  * .password("password")
  * .username("username")
  * .build())
+ * .connectivityParameters(ConnectivityParametersProperty.builder()
+ * .resourceParameters(ResourceParametersProperty.builder()
+ * .resourceConfigurationArn("resourceConfigurationArn")
+ * // the properties below are optional
+ * .resourceAssociationArn("resourceAssociationArn")
+ * .build())
+ * .build())
  * .invocationHttpParameters(ConnectionHttpParametersProperty.builder()
  * .bodyParameters(List.of(ParameterProperty.builder()
  * .key("key")
@@ -81,8 +88,14 @@ import kotlin.jvm.JvmName
  * .build())
  * .build())
  * .build())
- * // the properties below are optional
  * .description("description")
+ * .invocationConnectivityParameters(InvocationConnectivityParametersProperty.builder()
+ * .resourceParameters(ResourceParametersProperty.builder()
+ * .resourceConfigurationArn("resourceConfigurationArn")
+ * // the properties below are optional
+ * .resourceAssociationArn("resourceAssociationArn")
+ * .build())
+ * .build())
  * .name("name")
  * .build();
  * ```
@@ -91,12 +104,13 @@ import kotlin.jvm.JvmName
  */
 public interface CfnConnectionProps {
   /**
-   * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters to
-   * use to authorize with the endpoint.
+   * The authorization parameters to use to authorize with the endpoint.
+   *
+   * You must include only authorization parameters for the `AuthorizationType` you specify.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
    */
-  public fun authParameters(): Any
+  public fun authParameters(): Any? = unwrap(this).getAuthParameters()
 
   /**
    * The type of authorization to use for the connection.
@@ -107,7 +121,7 @@ public interface CfnConnectionProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authorizationtype)
    */
-  public fun authorizationType(): String
+  public fun authorizationType(): String? = unwrap(this).getAuthorizationType()
 
   /**
    * A description for the connection to create.
@@ -115,6 +129,14 @@ public interface CfnConnectionProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-description)
    */
   public fun description(): String? = unwrap(this).getDescription()
+
+  /**
+   * The private resource the HTTP request will be sent to.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
+   */
+  public fun invocationConnectivityParameters(): Any? =
+      unwrap(this).getInvocationConnectivityParameters()
 
   /**
    * The name for the connection to create.
@@ -129,20 +151,20 @@ public interface CfnConnectionProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint.
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      */
     public fun authParameters(authParameters: IResolvable)
 
     /**
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint.
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      */
     public fun authParameters(authParameters: CfnConnection.AuthParametersProperty)
 
     /**
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint.
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf937ae1aa8f4c90c97e3448b625c5c03492ccadd908836c6f18632e7bbb3499")
@@ -150,7 +172,7 @@ public interface CfnConnectionProps {
         fun authParameters(authParameters: CfnConnection.AuthParametersProperty.Builder.() -> Unit)
 
     /**
-     * @param authorizationType The type of authorization to use for the connection. 
+     * @param authorizationType The type of authorization to use for the connection.
      *
      * OAUTH tokens are refreshed when a 401 or 407 response is returned.
      */
@@ -160,6 +182,28 @@ public interface CfnConnectionProps {
      * @param description A description for the connection to create.
      */
     public fun description(description: String)
+
+    /**
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to.
+     */
+    public fun invocationConnectivityParameters(invocationConnectivityParameters: IResolvable)
+
+    /**
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to.
+     */
+    public
+        fun invocationConnectivityParameters(invocationConnectivityParameters: CfnConnection.InvocationConnectivityParametersProperty)
+
+    /**
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9cde2803880cc27f9f21bfdfcc7817f53c11e92e43490873291f8da85e402e15")
+    public
+        fun invocationConnectivityParameters(invocationConnectivityParameters: CfnConnection.InvocationConnectivityParametersProperty.Builder.() -> Unit)
 
     /**
      * @param name The name for the connection to create.
@@ -172,24 +216,24 @@ public interface CfnConnectionProps {
         software.amazon.awscdk.services.events.CfnConnectionProps.builder()
 
     /**
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint.
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      */
     override fun authParameters(authParameters: IResolvable) {
       cdkBuilder.authParameters(authParameters.let(IResolvable.Companion::unwrap))
     }
 
     /**
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint.
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      */
     override fun authParameters(authParameters: CfnConnection.AuthParametersProperty) {
       cdkBuilder.authParameters(authParameters.let(CfnConnection.AuthParametersProperty.Companion::unwrap))
     }
 
     /**
-     * @param authParameters A `CreateConnectionAuthRequestParameters` object that contains the
-     * authorization parameters to use to authorize with the endpoint. 
+     * @param authParameters The authorization parameters to use to authorize with the endpoint.
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      */
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("cf937ae1aa8f4c90c97e3448b625c5c03492ccadd908836c6f18632e7bbb3499")
@@ -198,7 +242,7 @@ public interface CfnConnectionProps {
         Unit = authParameters(CfnConnection.AuthParametersProperty(authParameters))
 
     /**
-     * @param authorizationType The type of authorization to use for the connection. 
+     * @param authorizationType The type of authorization to use for the connection.
      *
      * OAUTH tokens are refreshed when a 401 or 407 response is returned.
      */
@@ -212,6 +256,34 @@ public interface CfnConnectionProps {
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
+
+    /**
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to.
+     */
+    override fun invocationConnectivityParameters(invocationConnectivityParameters: IResolvable) {
+      cdkBuilder.invocationConnectivityParameters(invocationConnectivityParameters.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to.
+     */
+    override
+        fun invocationConnectivityParameters(invocationConnectivityParameters: CfnConnection.InvocationConnectivityParametersProperty) {
+      cdkBuilder.invocationConnectivityParameters(invocationConnectivityParameters.let(CfnConnection.InvocationConnectivityParametersProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param invocationConnectivityParameters The private resource the HTTP request will be sent
+     * to.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("9cde2803880cc27f9f21bfdfcc7817f53c11e92e43490873291f8da85e402e15")
+    override
+        fun invocationConnectivityParameters(invocationConnectivityParameters: CfnConnection.InvocationConnectivityParametersProperty.Builder.() -> Unit):
+        Unit =
+        invocationConnectivityParameters(CfnConnection.InvocationConnectivityParametersProperty(invocationConnectivityParameters))
 
     /**
      * @param name The name for the connection to create.
@@ -229,12 +301,13 @@ public interface CfnConnectionProps {
   ) : CdkObject(cdkObject),
       CfnConnectionProps {
     /**
-     * A `CreateConnectionAuthRequestParameters` object that contains the authorization parameters
-     * to use to authorize with the endpoint.
+     * The authorization parameters to use to authorize with the endpoint.
+     *
+     * You must include only authorization parameters for the `AuthorizationType` you specify.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authparameters)
      */
-    override fun authParameters(): Any = unwrap(this).getAuthParameters()
+    override fun authParameters(): Any? = unwrap(this).getAuthParameters()
 
     /**
      * The type of authorization to use for the connection.
@@ -245,7 +318,7 @@ public interface CfnConnectionProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-authorizationtype)
      */
-    override fun authorizationType(): String = unwrap(this).getAuthorizationType()
+    override fun authorizationType(): String? = unwrap(this).getAuthorizationType()
 
     /**
      * A description for the connection to create.
@@ -253,6 +326,14 @@ public interface CfnConnectionProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-description)
      */
     override fun description(): String? = unwrap(this).getDescription()
+
+    /**
+     * The private resource the HTTP request will be sent to.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-events-connection.html#cfn-events-connection-invocationconnectivityparameters)
+     */
+    override fun invocationConnectivityParameters(): Any? =
+        unwrap(this).getInvocationConnectivityParameters()
 
     /**
      * The name for the connection to create.

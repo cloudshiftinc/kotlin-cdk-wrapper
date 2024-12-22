@@ -353,6 +353,17 @@ public open class Table(
     public fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit)
 
     /**
+     * Kinesis Data Stream approximate creation timestamp prescision.
+     *
+     * Default: ApproximateCreationDateTimePrecision.MICROSECOND
+     *
+     * @param kinesisPrecisionTimestamp Kinesis Data Stream approximate creation timestamp
+     * prescision. 
+     */
+    public
+        fun kinesisPrecisionTimestamp(kinesisPrecisionTimestamp: ApproximateCreationDateTimePrecision)
+
+    /**
      * Kinesis Data Stream to capture item-level changes for the table.
      *
      * Default: - no Kinesis Data Stream
@@ -575,6 +586,36 @@ public open class Table(
     public fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean)
 
     /**
+     * Specify values to pre-warm you DynamoDB Table Warm Throughput feature is not available for
+     * Global Table replicas using the `Table` construct.
+     *
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     *
+     * Default: - warm throughput is not configured
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct. 
+     */
+    public fun warmThroughput(warmThroughput: WarmThroughput)
+
+    /**
+     * Specify values to pre-warm you DynamoDB Table Warm Throughput feature is not available for
+     * Global Table replicas using the `Table` construct.
+     *
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     *
+     * Default: - warm throughput is not configured
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("105c71b31b15f5e5358ec9fd11559289b782dcb520a5b0786e59497b9ee9f78b")
+    public fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit)
+
+    /**
      * The write capacity for the table.
      *
      * Careful if you add Global Secondary Indexes, as
@@ -694,6 +735,19 @@ public open class Table(
     @JvmName("ca2f70bbf86ecde413627217be1d1e3d8fdc03a709cc0c706605cdcb1bf7f7d6")
     override fun importSource(importSource: ImportSourceSpecification.Builder.() -> Unit): Unit =
         importSource(ImportSourceSpecification(importSource))
+
+    /**
+     * Kinesis Data Stream approximate creation timestamp prescision.
+     *
+     * Default: ApproximateCreationDateTimePrecision.MICROSECOND
+     *
+     * @param kinesisPrecisionTimestamp Kinesis Data Stream approximate creation timestamp
+     * prescision. 
+     */
+    override
+        fun kinesisPrecisionTimestamp(kinesisPrecisionTimestamp: ApproximateCreationDateTimePrecision) {
+      cdkBuilder.kinesisPrecisionTimestamp(kinesisPrecisionTimestamp.let(ApproximateCreationDateTimePrecision.Companion::unwrap))
+    }
 
     /**
      * Kinesis Data Stream to capture item-level changes for the table.
@@ -951,6 +1005,39 @@ public open class Table(
     override fun waitForReplicationToFinish(waitForReplicationToFinish: Boolean) {
       cdkBuilder.waitForReplicationToFinish(waitForReplicationToFinish)
     }
+
+    /**
+     * Specify values to pre-warm you DynamoDB Table Warm Throughput feature is not available for
+     * Global Table replicas using the `Table` construct.
+     *
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     *
+     * Default: - warm throughput is not configured
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct. 
+     */
+    override fun warmThroughput(warmThroughput: WarmThroughput) {
+      cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughput.Companion::unwrap))
+    }
+
+    /**
+     * Specify values to pre-warm you DynamoDB Table Warm Throughput feature is not available for
+     * Global Table replicas using the `Table` construct.
+     *
+     * To enable Warm Throughput, use the `TableV2` construct instead.
+     *
+     * Default: - warm throughput is not configured
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-dynamodb-table.html#cfn-dynamodb-table-warmthroughput)
+     * @param warmThroughput Specify values to pre-warm you DynamoDB Table Warm Throughput feature
+     * is not available for Global Table replicas using the `Table` construct. 
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("105c71b31b15f5e5358ec9fd11559289b782dcb520a5b0786e59497b9ee9f78b")
+    override fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit): Unit =
+        warmThroughput(WarmThroughput(warmThroughput))
 
     /**
      * The write capacity for the table.

@@ -81,6 +81,12 @@ public interface CfnIdNamespaceAssociationProps {
   public fun name(): String
 
   /**
+   * An optional label that you can assign to a resource when you create it.
+   *
+   * Each tag consists of a key and an optional value, both of which you define. When you use
+   * tagging, you can also use tag-based access control in IAM policies to control access to this
+   * resource.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-idnamespaceassociation.html#cfn-cleanrooms-idnamespaceassociation-tags)
    */
   public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
@@ -147,12 +153,18 @@ public interface CfnIdNamespaceAssociationProps {
     public fun name(name: String)
 
     /**
-     * @param tags the value to be set.
+     * @param tags An optional label that you can assign to a resource when you create it.
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags the value to be set.
+     * @param tags An optional label that you can assign to a resource when you create it.
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
      */
     public fun tags(vararg tags: CfnTag)
   }
@@ -237,14 +249,20 @@ public interface CfnIdNamespaceAssociationProps {
     }
 
     /**
-     * @param tags the value to be set.
+     * @param tags An optional label that you can assign to a resource when you create it.
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags the value to be set.
+     * @param tags An optional label that you can assign to a resource when you create it.
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -292,6 +310,12 @@ public interface CfnIdNamespaceAssociationProps {
     override fun name(): String = unwrap(this).getName()
 
     /**
+     * An optional label that you can assign to a resource when you create it.
+     *
+     * Each tag consists of a key and an optional value, both of which you define. When you use
+     * tagging, you can also use tag-based access control in IAM policies to control access to this
+     * resource.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cleanrooms-idnamespaceassociation.html#cfn-cleanrooms-idnamespaceassociation-tags)
      */
     override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()

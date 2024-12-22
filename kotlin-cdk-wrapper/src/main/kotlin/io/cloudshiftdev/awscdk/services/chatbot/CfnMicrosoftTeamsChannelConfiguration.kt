@@ -44,6 +44,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .teamsChannelId("teamsChannelId")
  * .teamsTenantId("teamsTenantId")
  * // the properties below are optional
+ * .customizationResourceArns(List.of("customizationResourceArns"))
  * .guardrailPolicies(List.of("guardrailPolicies"))
  * .loggingLevel("loggingLevel")
  * .snsTopicArns(List.of("snsTopicArns"))
@@ -79,7 +80,7 @@ public open class CfnMicrosoftTeamsChannelConfiguration(
   )
 
   /**
-   * Amazon Resource Name (ARN) of the configuration.
+   * The ARN of the resource.
    */
   public open fun attrArn(): String = unwrap(this).getAttrArn()
 
@@ -100,6 +101,28 @@ public open class CfnMicrosoftTeamsChannelConfiguration(
   public open fun configurationName(`value`: String) {
     unwrap(this).setConfigurationName(`value`)
   }
+
+  /**
+   * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
+   * configuration for AWS Chatbot .
+   */
+  public open fun customizationResourceArns(): List<String> =
+      unwrap(this).getCustomizationResourceArns() ?: emptyList()
+
+  /**
+   * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
+   * configuration for AWS Chatbot .
+   */
+  public open fun customizationResourceArns(`value`: List<String>) {
+    unwrap(this).setCustomizationResourceArns(`value`)
+  }
+
+  /**
+   * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
+   * configuration for AWS Chatbot .
+   */
+  public open fun customizationResourceArns(vararg `value`: String): Unit =
+      customizationResourceArns(`value`.toList())
 
   /**
    * The list of IAM policy ARNs that are applied as channel guardrails.
@@ -261,6 +284,26 @@ public open class CfnMicrosoftTeamsChannelConfiguration(
     public fun configurationName(configurationName: String)
 
     /**
+     * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
+     * configuration for AWS Chatbot .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-customizationresourcearns)
+     * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
+     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot . 
+     */
+    public fun customizationResourceArns(customizationResourceArns: List<String>)
+
+    /**
+     * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
+     * configuration for AWS Chatbot .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-customizationresourcearns)
+     * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
+     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot . 
+     */
+    public fun customizationResourceArns(vararg customizationResourceArns: String)
+
+    /**
      * The list of IAM policy ARNs that are applied as channel guardrails.
      *
      * The AWS managed 'AdministratorAccess' policy is applied as a default if this is not set.
@@ -417,6 +460,29 @@ public open class CfnMicrosoftTeamsChannelConfiguration(
     override fun configurationName(configurationName: String) {
       cdkBuilder.configurationName(configurationName)
     }
+
+    /**
+     * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
+     * configuration for AWS Chatbot .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-customizationresourcearns)
+     * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
+     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot . 
+     */
+    override fun customizationResourceArns(customizationResourceArns: List<String>) {
+      cdkBuilder.customizationResourceArns(customizationResourceArns)
+    }
+
+    /**
+     * Links a list of resource ARNs (for example, custom action ARNs) to a Miscrosoft Teams channel
+     * configuration for AWS Chatbot .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-chatbot-microsoftteamschannelconfiguration.html#cfn-chatbot-microsoftteamschannelconfiguration-customizationresourcearns)
+     * @param customizationResourceArns Links a list of resource ARNs (for example, custom action
+     * ARNs) to a Miscrosoft Teams channel configuration for AWS Chatbot . 
+     */
+    override fun customizationResourceArns(vararg customizationResourceArns: String): Unit =
+        customizationResourceArns(customizationResourceArns.toList())
 
     /**
      * The list of IAM policy ARNs that are applied as channel guardrails.

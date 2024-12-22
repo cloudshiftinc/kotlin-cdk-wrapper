@@ -28,7 +28,7 @@ import kotlin.jvm.JvmName
  * .description("service registering non-ip instances")
  * .build());
  * service1.registerNonIpInstance("NonIpInstance", NonIpInstanceBaseProps.builder()
- * .customAttributes(Map.of("arn", "arn:aws:s3:::mybucket"))
+ * .customAttributes(Map.of("arn", "arn:aws:s3:::amzn-s3-demo-bucket"))
  * .build());
  * Service service2 = namespace.createService("IpService", BaseServiceProps.builder()
  * .description("service registering ip instances")

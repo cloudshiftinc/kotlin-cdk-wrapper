@@ -17,12 +17,14 @@ import kotlin.Unit
  * Example:
  *
  * ```
- * import io.cloudshiftdev.awscdk.services.apigateway.*;
+ * import io.cloudshiftdev.awscdk.services.elasticloadbalancingv2.*;
  * HostedZone zone;
- * LambdaRestApi restApi;
+ * ApplicationLoadBalancer lb;
  * ARecord.Builder.create(this, "AliasRecord")
  * .zone(zone)
- * .target(RecordTarget.fromAlias(new ApiGateway(restApi)))
+ * .target(RecordTarget.fromAlias(
+ * new LoadBalancerTarget(lb, Map.of(
+ * "evaluateTargetHealth", true))))
  * .build();
  * ```
  */
@@ -62,6 +64,13 @@ public interface ARecordProps : RecordSetOptions {
      * user's location.
      */
     public fun geoLocation(geoLocation: GeoLocation)
+
+    /**
+     * @param healthCheck The health check to associate with the record set.
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     */
+    public fun healthCheck(healthCheck: IHealthCheck)
 
     /**
      * @param setIdentifier A string used to distinguish between different records with the same
@@ -165,6 +174,15 @@ public interface ARecordProps : RecordSetOptions {
      */
     override fun geoLocation(geoLocation: GeoLocation) {
       cdkBuilder.geoLocation(geoLocation.let(GeoLocation.Companion::unwrap))
+    }
+
+    /**
+     * @param healthCheck The health check to associate with the record set.
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     */
+    override fun healthCheck(healthCheck: IHealthCheck) {
+      cdkBuilder.healthCheck(healthCheck.let(IHealthCheck.Companion::unwrap))
     }
 
     /**
@@ -286,6 +304,17 @@ public interface ARecordProps : RecordSetOptions {
      * The geographical origin for this record to return DNS records based on the user's location.
      */
     override fun geoLocation(): GeoLocation? = unwrap(this).getGeoLocation()?.let(GeoLocation::wrap)
+
+    /**
+     * The health check to associate with the record set.
+     *
+     * Route53 will return this record set in response to DNS queries only if the health check is
+     * passing.
+     *
+     * Default: - No health check configured
+     */
+    override fun healthCheck(): IHealthCheck? =
+        unwrap(this).getHealthCheck()?.let(IHealthCheck::wrap)
 
     /**
      * Whether to return multiple values, such as IP addresses for your web servers, in response to

@@ -2859,7 +2859,8 @@ public open class CfnFlow(
   }
 
   /**
-   * The settings for source monitoring.
+   * The `SourceMonitoringConfig` property type specifies the source monitoring settings for an
+   * AWS::MediaConnect::Flow.
    *
    * Example:
    *
@@ -2877,7 +2878,12 @@ public open class CfnFlow(
    */
   public interface SourceMonitoringConfigProperty {
     /**
-     * The state of thumbnail monitoring.
+     * The current state of the thumbnail monitoring.
+     *
+     * * If you don't explicitly specify a value when creating a flow, no thumbnail state will be
+     * set.
+     * * If you update an existing flow and remove a previously set thumbnail state, the value will
+     * change to `DISABLED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-thumbnailstate)
      */
@@ -2889,7 +2895,11 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param thumbnailState The state of thumbnail monitoring. 
+       * @param thumbnailState The current state of the thumbnail monitoring. 
+       * * If you don't explicitly specify a value when creating a flow, no thumbnail state will be
+       * set.
+       * * If you update an existing flow and remove a previously set thumbnail state, the value
+       * will change to `DISABLED` .
        */
       public fun thumbnailState(thumbnailState: String)
     }
@@ -2901,7 +2911,11 @@ public open class CfnFlow(
           software.amazon.awscdk.services.mediaconnect.CfnFlow.SourceMonitoringConfigProperty.builder()
 
       /**
-       * @param thumbnailState The state of thumbnail monitoring. 
+       * @param thumbnailState The current state of the thumbnail monitoring. 
+       * * If you don't explicitly specify a value when creating a flow, no thumbnail state will be
+       * set.
+       * * If you update an existing flow and remove a previously set thumbnail state, the value
+       * will change to `DISABLED` .
        */
       override fun thumbnailState(thumbnailState: String) {
         cdkBuilder.thumbnailState(thumbnailState)
@@ -2917,7 +2931,12 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         SourceMonitoringConfigProperty {
       /**
-       * The state of thumbnail monitoring.
+       * The current state of the thumbnail monitoring.
+       *
+       * * If you don't explicitly specify a value when creating a flow, no thumbnail state will be
+       * set.
+       * * If you update an existing flow and remove a previously set thumbnail state, the value
+       * will change to `DISABLED` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-sourcemonitoringconfig.html#cfn-mediaconnect-flow-sourcemonitoringconfig-thumbnailstate)
        */
@@ -3207,6 +3226,11 @@ public open class CfnFlow(
      *
      * AWS CloudFormation does not currently support CDI or ST 2110 JPEG XS source protocols.
      *
+     *
+     * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+     * maintained for legacy purposes only.
+     *
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-protocol)
      */
     public fun protocol(): String? = unwrap(this).getProtocol()
@@ -3403,6 +3427,10 @@ public open class CfnFlow(
       /**
        * @param protocol The protocol that is used by the source.
        * AWS CloudFormation does not currently support CDI or ST 2110 JPEG XS source protocols.
+       *
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       public fun protocol(protocol: String)
 
@@ -3614,6 +3642,10 @@ public open class CfnFlow(
       /**
        * @param protocol The protocol that is used by the source.
        * AWS CloudFormation does not currently support CDI or ST 2110 JPEG XS source protocols.
+       *
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
        */
       override fun protocol(protocol: String) {
         cdkBuilder.protocol(protocol)
@@ -3800,6 +3832,11 @@ public open class CfnFlow(
        * The protocol that is used by the source.
        *
        * AWS CloudFormation does not currently support CDI or ST 2110 JPEG XS source protocols.
+       *
+       *
+       * AWS Elemental MediaConnect no longer supports the Fujitsu QoS protocol. This reference is
+       * maintained for legacy purposes only.
+       *
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-mediaconnect-flow-source.html#cfn-mediaconnect-flow-source-protocol)
        */

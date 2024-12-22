@@ -17,6 +17,7 @@ import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
 import kotlin.collections.Map
+import kotlin.jvm.JvmName
 
 /**
  * Properties for a MSK event source.
@@ -121,6 +122,25 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
     public fun onFailure(onFailure: IEventSourceDlq)
 
     /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    public fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig)
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("efd806b601382156f057dbdc15b8be68afc0030a102a07ca26b33992871c9e12")
+    public
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit)
+
+    /**
      * @param secret The secret with the Kafka credentials, see
      * https://docs.aws.amazon.com/msk/latest/developerguide/msk-password.html for details This field
      * is required if your Kafka brokers are accessed over the Internet.
@@ -221,6 +241,28 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
     override fun onFailure(onFailure: IEventSourceDlq) {
       cdkBuilder.onFailure(onFailure.let(IEventSourceDlq.Companion::unwrap))
     }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    override fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig) {
+      cdkBuilder.provisionedPollerConfig(provisionedPollerConfig.let(ProvisionedPollerConfig.Companion::unwrap))
+    }
+
+    /**
+     * @param provisionedPollerConfig Configuration for provisioned pollers that read from the event
+     * source.
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("efd806b601382156f057dbdc15b8be68afc0030a102a07ca26b33992871c9e12")
+    override
+        fun provisionedPollerConfig(provisionedPollerConfig: ProvisionedPollerConfig.Builder.() -> Unit):
+        Unit = provisionedPollerConfig(ProvisionedPollerConfig(provisionedPollerConfig))
 
     /**
      * @param secret The secret with the Kafka credentials, see
@@ -340,6 +382,17 @@ public interface ManagedKafkaEventSourceProps : KafkaEventSourceProps {
      */
     override fun onFailure(): IEventSourceDlq? =
         unwrap(this).getOnFailure()?.let(IEventSourceDlq::wrap)
+
+    /**
+     * Configuration for provisioned pollers that read from the event source.
+     *
+     * When specified, allows control over the minimum and maximum number of pollers
+     * that can be provisioned to process events from the source.
+     *
+     * Default: - no provisioned pollers
+     */
+    override fun provisionedPollerConfig(): ProvisionedPollerConfig? =
+        unwrap(this).getProvisionedPollerConfig()?.let(ProvisionedPollerConfig::wrap)
 
     /**
      * The secret with the Kafka credentials, see

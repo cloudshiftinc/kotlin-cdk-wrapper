@@ -42,7 +42,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Vpc vpc;
  * Cluster.Builder.create(this, "MyCluster")
  * .kubectlMemory(Size.gibibytes(4))
- * .version(KubernetesVersion.V1_30)
+ * .version(KubernetesVersion.V1_31)
  * .build();
  * Cluster.fromClusterAttributes(this, "MyCluster", ClusterAttributes.builder()
  * .kubectlMemory(Size.gibibytes(4))

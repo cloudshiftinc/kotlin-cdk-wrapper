@@ -23,13 +23,13 @@ import kotlin.collections.List
  * Object providerDetails;
  * CfnUserPoolIdentityProviderProps cfnUserPoolIdentityProviderProps =
  * CfnUserPoolIdentityProviderProps.builder()
+ * .providerDetails(providerDetails)
  * .providerName("providerName")
  * .providerType("providerType")
  * .userPoolId("userPoolId")
  * // the properties below are optional
  * .attributeMapping(attributeMapping)
  * .idpIdentifiers(List.of("idpIdentifiers"))
- * .providerDetails(providerDetails)
  * .build();
  * ```
  *
@@ -139,7 +139,7 @@ public interface CfnUserPoolIdentityProviderProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providerdetails)
    */
-  public fun providerDetails(): Any? = unwrap(this).getProviderDetails()
+  public fun providerDetails(): Any
 
   /**
    * The IdP name.
@@ -185,6 +185,7 @@ public interface CfnUserPoolIdentityProviderProps {
 
     /**
      * @param providerDetails The scopes, URLs, and identifiers for your external identity provider.
+     * 
      * The following
      * examples describe the provider detail keys for each IdP type. These values and their
      * schema are subject to change. Social IdP `authorize_scopes` values must match
@@ -315,6 +316,7 @@ public interface CfnUserPoolIdentityProviderProps {
 
     /**
      * @param providerDetails The scopes, URLs, and identifiers for your external identity provider.
+     * 
      * The following
      * examples describe the provider detail keys for each IdP type. These values and their
      * schema are subject to change. Social IdP `authorize_scopes` values must match
@@ -535,7 +537,7 @@ public interface CfnUserPoolIdentityProviderProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolidentityprovider.html#cfn-cognito-userpoolidentityprovider-providerdetails)
      */
-    override fun providerDetails(): Any? = unwrap(this).getProviderDetails()
+    override fun providerDetails(): Any = unwrap(this).getProviderDetails()
 
     /**
      * The IdP name.

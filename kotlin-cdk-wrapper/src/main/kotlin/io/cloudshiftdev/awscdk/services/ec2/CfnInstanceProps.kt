@@ -274,9 +274,7 @@ public interface CfnInstanceProps {
    * An elastic inference accelerator to associate with the instance.
    *
    *
-   * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-   * see [Amazon Elastic Inference
-   * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+   * Amazon Elastic Inference is no longer available.
    *
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)
@@ -873,9 +871,7 @@ public interface CfnInstanceProps {
      * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
      * instance.
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      */
     public fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable)
 
@@ -883,9 +879,7 @@ public interface CfnInstanceProps {
      * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
      * instance.
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      */
     public fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>)
 
@@ -893,9 +887,7 @@ public interface CfnInstanceProps {
      * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
      * instance.
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      */
     public fun elasticInferenceAccelerators(vararg elasticInferenceAccelerators: Any)
 
@@ -1657,9 +1649,7 @@ public interface CfnInstanceProps {
      * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
      * instance.
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      */
     override fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable) {
       cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.let(IResolvable.Companion::unwrap))
@@ -1669,9 +1659,7 @@ public interface CfnInstanceProps {
      * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
      * instance.
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      */
     override fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>) {
       cdkBuilder.elasticInferenceAccelerators(elasticInferenceAccelerators.map{CdkObjectWrappers.unwrap(it)})
@@ -1681,9 +1669,7 @@ public interface CfnInstanceProps {
      * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
      * instance.
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      */
     override fun elasticInferenceAccelerators(vararg elasticInferenceAccelerators: Any): Unit =
         elasticInferenceAccelerators(elasticInferenceAccelerators.toList())
@@ -2417,9 +2403,7 @@ public interface CfnInstanceProps {
      * An elastic inference accelerator to associate with the instance.
      *
      *
-     * Amazon Elastic Inference (EI) is no longer available to new customers. For more information,
-     * see [Amazon Elastic Inference
-     * FAQs](https://docs.aws.amazon.com/machine-learning/elastic-inference/faqs/) .
+     * Amazon Elastic Inference is no longer available.
      *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ec2-instance.html#cfn-ec2-instance-elasticinferenceaccelerators)

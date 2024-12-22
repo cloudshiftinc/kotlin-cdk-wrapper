@@ -18,8 +18,9 @@ import kotlin.String
  * // The code below shows an example of how to instantiate this type.
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.route53.targets.*;
+ * IAliasRecordTargetProps aliasRecordTargetProps;
  * GlobalAcceleratorDomainTarget globalAcceleratorDomainTarget = new
- * GlobalAcceleratorDomainTarget("acceleratorDomainName");
+ * GlobalAcceleratorDomainTarget("acceleratorDomainName", aliasRecordTargetProps);
  * ```
  */
 public open class GlobalAcceleratorDomainTarget(
@@ -28,6 +29,11 @@ public open class GlobalAcceleratorDomainTarget(
     IAliasRecordTarget {
   public constructor(acceleratorDomainName: String) :
       this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorDomainTarget(acceleratorDomainName)
+  )
+
+  public constructor(acceleratorDomainName: String, props: IAliasRecordTargetProps) :
+      this(software.amazon.awscdk.services.route53.targets.GlobalAcceleratorDomainTarget(acceleratorDomainName,
+      props.let(IAliasRecordTargetProps.Companion::unwrap))
   )
 
   /**

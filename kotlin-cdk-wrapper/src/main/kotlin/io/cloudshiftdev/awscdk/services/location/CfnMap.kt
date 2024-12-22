@@ -539,8 +539,8 @@ public open class CfnMap(
     /**
      * Specifies the map style selected from an available data provider.
      *
-     * Valid [Esri map styles](https://docs.aws.amazon.com/location/latest/developerguide/esri.html)
-     * :
+     * Valid [Esri map
+     * styles](https://docs.aws.amazon.com/location/previous/developerguide/esri.html) :
      *
      * * `VectorEsriDarkGrayCanvas` – The Esri Dark Gray Canvas map style. A vector basemap with a
      * dark gray, neutral background with minimal colors, labels, and features that's designed to draw
@@ -561,7 +561,7 @@ public open class CfnMap(
      * day in mobile devices.
      *
      * Valid [HERE Technologies map
-     * styles](https://docs.aws.amazon.com/location/latest/developerguide/HERE.html) :
+     * styles](https://docs.aws.amazon.com/location/previous/developerguide/HERE.html) :
      *
      * * `VectorHereContrast` – The HERE Contrast (Berlin) map style is a high contrast detailed
      * base map of the world that blends 3D and 2D rendering.
@@ -589,7 +589,7 @@ public open class CfnMap(
      *
      *
      * Valid [GrabMaps map
-     * styles](https://docs.aws.amazon.com/location/latest/developerguide/grab.html) :
+     * styles](https://docs.aws.amazon.com/location/previous/developerguide/grab.html) :
      *
      * * `VectorGrabStandardLight` – The Grab Standard Light map style provides a basemap with
      * detailed land use coloring, area names, roads, landmarks, and points of interest covering
@@ -601,12 +601,12 @@ public open class CfnMap(
      * Grab provides maps only for countries in Southeast Asia, and is only available in the Asia
      * Pacific (Singapore) Region ( `ap-southeast-1` ). For more information, see [GrabMaps countries
      * and area
-     * covered](https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area)
+     * covered](https://docs.aws.amazon.com/location/previous/developerguide/grab.html#grab-coverage-area)
      * .
      *
      *
      * Valid [Open Data map
-     * styles](https://docs.aws.amazon.com/location/latest/developerguide/open-data.html) :
+     * styles](https://docs.aws.amazon.com/location/previous/developerguide/open-data.html) :
      *
      * * `VectorOpenDataStandardLight` – The Open Data Standard Light map style provides a detailed
      * basemap for the world suitable for website and mobile application use. The map includes highways
@@ -666,7 +666,7 @@ public open class CfnMap(
       /**
        * @param style Specifies the map style selected from an available data provider. 
        * Valid [Esri map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/esri.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/esri.html) :
        *
        * * `VectorEsriDarkGrayCanvas` – The Esri Dark Gray Canvas map style. A vector basemap with a
        * dark gray, neutral background with minimal colors, labels, and features that's designed to
@@ -687,7 +687,7 @@ public open class CfnMap(
        * day in mobile devices.
        *
        * Valid [HERE Technologies map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/HERE.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/HERE.html) :
        *
        * * `VectorHereContrast` – The HERE Contrast (Berlin) map style is a high contrast detailed
        * base map of the world that blends 3D and 2D rendering.
@@ -715,7 +715,7 @@ public open class CfnMap(
        *
        *
        * Valid [GrabMaps map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/grab.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/grab.html) :
        *
        * * `VectorGrabStandardLight` – The Grab Standard Light map style provides a basemap with
        * detailed land use coloring, area names, roads, landmarks, and points of interest covering
@@ -727,12 +727,12 @@ public open class CfnMap(
        * Grab provides maps only for countries in Southeast Asia, and is only available in the Asia
        * Pacific (Singapore) Region ( `ap-southeast-1` ). For more information, see [GrabMaps countries
        * and area
-       * covered](https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area)
+       * covered](https://docs.aws.amazon.com/location/previous/developerguide/grab.html#grab-coverage-area)
        * .
        *
        *
        * Valid [Open Data map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/open-data.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/open-data.html) :
        *
        * * `VectorOpenDataStandardLight` – The Open Data Standard Light map style provides a
        * detailed basemap for the world suitable for website and mobile application use. The map
@@ -797,7 +797,7 @@ public open class CfnMap(
       /**
        * @param style Specifies the map style selected from an available data provider. 
        * Valid [Esri map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/esri.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/esri.html) :
        *
        * * `VectorEsriDarkGrayCanvas` – The Esri Dark Gray Canvas map style. A vector basemap with a
        * dark gray, neutral background with minimal colors, labels, and features that's designed to
@@ -818,7 +818,7 @@ public open class CfnMap(
        * day in mobile devices.
        *
        * Valid [HERE Technologies map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/HERE.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/HERE.html) :
        *
        * * `VectorHereContrast` – The HERE Contrast (Berlin) map style is a high contrast detailed
        * base map of the world that blends 3D and 2D rendering.
@@ -846,7 +846,7 @@ public open class CfnMap(
        *
        *
        * Valid [GrabMaps map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/grab.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/grab.html) :
        *
        * * `VectorGrabStandardLight` – The Grab Standard Light map style provides a basemap with
        * detailed land use coloring, area names, roads, landmarks, and points of interest covering
@@ -858,12 +858,12 @@ public open class CfnMap(
        * Grab provides maps only for countries in Southeast Asia, and is only available in the Asia
        * Pacific (Singapore) Region ( `ap-southeast-1` ). For more information, see [GrabMaps countries
        * and area
-       * covered](https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area)
+       * covered](https://docs.aws.amazon.com/location/previous/developerguide/grab.html#grab-coverage-area)
        * .
        *
        *
        * Valid [Open Data map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/open-data.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/open-data.html) :
        *
        * * `VectorOpenDataStandardLight` – The Open Data Standard Light map style provides a
        * detailed basemap for the world suitable for website and mobile application use. The map
@@ -920,7 +920,7 @@ public open class CfnMap(
        * Specifies the map style selected from an available data provider.
        *
        * Valid [Esri map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/esri.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/esri.html) :
        *
        * * `VectorEsriDarkGrayCanvas` – The Esri Dark Gray Canvas map style. A vector basemap with a
        * dark gray, neutral background with minimal colors, labels, and features that's designed to
@@ -941,7 +941,7 @@ public open class CfnMap(
        * day in mobile devices.
        *
        * Valid [HERE Technologies map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/HERE.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/HERE.html) :
        *
        * * `VectorHereContrast` – The HERE Contrast (Berlin) map style is a high contrast detailed
        * base map of the world that blends 3D and 2D rendering.
@@ -969,7 +969,7 @@ public open class CfnMap(
        *
        *
        * Valid [GrabMaps map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/grab.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/grab.html) :
        *
        * * `VectorGrabStandardLight` – The Grab Standard Light map style provides a basemap with
        * detailed land use coloring, area names, roads, landmarks, and points of interest covering
@@ -981,12 +981,12 @@ public open class CfnMap(
        * Grab provides maps only for countries in Southeast Asia, and is only available in the Asia
        * Pacific (Singapore) Region ( `ap-southeast-1` ). For more information, see [GrabMaps countries
        * and area
-       * covered](https://docs.aws.amazon.com/location/latest/developerguide/grab.html#grab-coverage-area)
+       * covered](https://docs.aws.amazon.com/location/previous/developerguide/grab.html#grab-coverage-area)
        * .
        *
        *
        * Valid [Open Data map
-       * styles](https://docs.aws.amazon.com/location/latest/developerguide/open-data.html) :
+       * styles](https://docs.aws.amazon.com/location/previous/developerguide/open-data.html) :
        *
        * * `VectorOpenDataStandardLight` – The Open Data Standard Light map style provides a
        * detailed basemap for the world suitable for website and mobile application use. The map

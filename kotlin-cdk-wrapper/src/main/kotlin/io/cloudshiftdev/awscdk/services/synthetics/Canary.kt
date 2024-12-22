@@ -14,6 +14,7 @@ import io.cloudshiftdev.awscdk.services.ec2.ISecurityGroup
 import io.cloudshiftdev.awscdk.services.ec2.IVpc
 import io.cloudshiftdev.awscdk.services.ec2.SubnetSelection
 import io.cloudshiftdev.awscdk.services.iam.IRole
+import io.cloudshiftdev.awscdk.services.kms.IKey
 import io.cloudshiftdev.awscdk.services.s3.IBucket
 import io.cloudshiftdev.awscdk.services.s3.LifecycleRule
 import kotlin.Boolean
@@ -215,6 +216,30 @@ public open class Canary(
      * runs. 
      */
     public fun activeTracing(activeTracing: Boolean)
+
+    /**
+     * Canary Artifacts in S3 encryption mode.
+     *
+     * Artifact encryption is only supported for canaries that use Synthetics runtime
+     * version `syn-nodejs-puppeteer-3.3` or later.
+     *
+     * Default: - Artifacts are encrypted at rest using an AWS managed key.
+     * `ArtifactsEncryptionMode.KMS` is set if you specify `artifactS3KmsKey`.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+     * @param artifactS3EncryptionMode Canary Artifacts in S3 encryption mode. 
+     */
+    public fun artifactS3EncryptionMode(artifactS3EncryptionMode: ArtifactsEncryptionMode)
+
+    /**
+     * The KMS key used to encrypt canary artifacts.
+     *
+     * Default: - no kms key if `artifactS3EncryptionMode` is set to `S3_MANAGED`. A key will be
+     * created if one is not provided and `artifactS3EncryptionMode` is set to `KMS`.
+     *
+     * @param artifactS3KmsKey The KMS key used to encrypt canary artifacts. 
+     */
+    public fun artifactS3KmsKey(artifactS3KmsKey: IKey)
 
     /**
      * Lifecycle rules for the generated canary artifact bucket.
@@ -512,6 +537,34 @@ public open class Canary(
      */
     override fun activeTracing(activeTracing: Boolean) {
       cdkBuilder.activeTracing(activeTracing)
+    }
+
+    /**
+     * Canary Artifacts in S3 encryption mode.
+     *
+     * Artifact encryption is only supported for canaries that use Synthetics runtime
+     * version `syn-nodejs-puppeteer-3.3` or later.
+     *
+     * Default: - Artifacts are encrypted at rest using an AWS managed key.
+     * `ArtifactsEncryptionMode.KMS` is set if you specify `artifactS3KmsKey`.
+     *
+     * [Documentation](https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_artifact_encryption.html)
+     * @param artifactS3EncryptionMode Canary Artifacts in S3 encryption mode. 
+     */
+    override fun artifactS3EncryptionMode(artifactS3EncryptionMode: ArtifactsEncryptionMode) {
+      cdkBuilder.artifactS3EncryptionMode(artifactS3EncryptionMode.let(ArtifactsEncryptionMode.Companion::unwrap))
+    }
+
+    /**
+     * The KMS key used to encrypt canary artifacts.
+     *
+     * Default: - no kms key if `artifactS3EncryptionMode` is set to `S3_MANAGED`. A key will be
+     * created if one is not provided and `artifactS3EncryptionMode` is set to `KMS`.
+     *
+     * @param artifactS3KmsKey The KMS key used to encrypt canary artifacts. 
+     */
+    override fun artifactS3KmsKey(artifactS3KmsKey: IKey) {
+      cdkBuilder.artifactS3KmsKey(artifactS3KmsKey.let(IKey.Companion::unwrap))
     }
 
     /**

@@ -18,9 +18,9 @@ import io.cloudshiftdev.constructs.Construct as CloudshiftdevConstructsConstruct
 import software.constructs.Construct as SoftwareConstructsConstruct
 
 /**
- * The logging parameters of a user pool, as returned in the response to a
- * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
- * request.
+ * Sets up or modifies the logging configuration of a user pool.
+ *
+ * User pools can export user notification logs and advanced security features user activity logs.
  *
  * Example:
  *
@@ -253,12 +253,6 @@ public open class CfnLogDeliveryConfiguration(
   /**
    * Configuration for the CloudWatch log group destination of user pool detailed activity logging,
    * or of user activity log export with advanced security features.
-   *
-   * This data type is a request parameter of
-   * [SetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetLogDeliveryConfiguration.html)
-   * and a response parameter of
-   * [GetLogDeliveryConfiguration](https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetLogDeliveryConfiguration.html)
-   * .
    *
    * Example:
    *

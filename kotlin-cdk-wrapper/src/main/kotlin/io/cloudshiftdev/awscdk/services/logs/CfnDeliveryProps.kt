@@ -3,9 +3,12 @@
 package io.cloudshiftdev.awscdk.services.logs
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
+import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
@@ -23,6 +26,10 @@ import kotlin.collections.List
  * .deliveryDestinationArn("deliveryDestinationArn")
  * .deliverySourceName("deliverySourceName")
  * // the properties below are optional
+ * .fieldDelimiter("fieldDelimiter")
+ * .recordFields(List.of("recordFields"))
+ * .s3EnableHiveCompatiblePath(false)
+ * .s3SuffixPath("s3SuffixPath")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
  * .value("value")
@@ -48,6 +55,41 @@ public interface CfnDeliveryProps {
   public fun deliverySourceName(): String
 
   /**
+   * The field delimiter that is used between record fields when the final output format of a
+   * delivery is in `Plain` , `W3C` , or `Raw` format.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-fielddelimiter)
+   */
+  public fun fieldDelimiter(): String? = unwrap(this).getFieldDelimiter()
+
+  /**
+   * The record fields used in this delivery.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-recordfields)
+   */
+  public fun recordFields(): List<String> = unwrap(this).getRecordFields() ?: emptyList()
+
+  /**
+   * This parameter causes the S3 objects that contain delivered logs to use a prefix structure that
+   * allows for integration with Apache Hive.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3enablehivecompatiblepath)
+   */
+  public fun s3EnableHiveCompatiblePath(): Any? = unwrap(this).getS3EnableHiveCompatiblePath()
+
+  /**
+   * This string allows re-configuring the S3 object prefix to contain either static or variable
+   * sections.
+   *
+   * The valid variables to use in the suffix path will vary by each log source. See
+   * ConfigurationTemplate$allowedSuffixPathFields for more info on what values are supported in the
+   * suffix path for each log source.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3suffixpath)
+   */
+  public fun s3SuffixPath(): String? = unwrap(this).getS3SuffixPath()
+
+  /**
    * The tags that have been assigned to this delivery.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-tags)
@@ -70,6 +112,43 @@ public interface CfnDeliveryProps {
      * delivery. 
      */
     public fun deliverySourceName(deliverySourceName: String)
+
+    /**
+     * @param fieldDelimiter The field delimiter that is used between record fields when the final
+     * output format of a delivery is in `Plain` , `W3C` , or `Raw` format.
+     */
+    public fun fieldDelimiter(fieldDelimiter: String)
+
+    /**
+     * @param recordFields The record fields used in this delivery.
+     */
+    public fun recordFields(recordFields: List<String>)
+
+    /**
+     * @param recordFields The record fields used in this delivery.
+     */
+    public fun recordFields(vararg recordFields: String)
+
+    /**
+     * @param s3EnableHiveCompatiblePath This parameter causes the S3 objects that contain delivered
+     * logs to use a prefix structure that allows for integration with Apache Hive.
+     */
+    public fun s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath: Boolean)
+
+    /**
+     * @param s3EnableHiveCompatiblePath This parameter causes the S3 objects that contain delivered
+     * logs to use a prefix structure that allows for integration with Apache Hive.
+     */
+    public fun s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath: IResolvable)
+
+    /**
+     * @param s3SuffixPath This string allows re-configuring the S3 object prefix to contain either
+     * static or variable sections.
+     * The valid variables to use in the suffix path will vary by each log source. See
+     * ConfigurationTemplate$allowedSuffixPathFields for more info on what values are supported in the
+     * suffix path for each log source.
+     */
+    public fun s3SuffixPath(s3SuffixPath: String)
 
     /**
      * @param tags The tags that have been assigned to this delivery.
@@ -100,6 +179,54 @@ public interface CfnDeliveryProps {
      */
     override fun deliverySourceName(deliverySourceName: String) {
       cdkBuilder.deliverySourceName(deliverySourceName)
+    }
+
+    /**
+     * @param fieldDelimiter The field delimiter that is used between record fields when the final
+     * output format of a delivery is in `Plain` , `W3C` , or `Raw` format.
+     */
+    override fun fieldDelimiter(fieldDelimiter: String) {
+      cdkBuilder.fieldDelimiter(fieldDelimiter)
+    }
+
+    /**
+     * @param recordFields The record fields used in this delivery.
+     */
+    override fun recordFields(recordFields: List<String>) {
+      cdkBuilder.recordFields(recordFields)
+    }
+
+    /**
+     * @param recordFields The record fields used in this delivery.
+     */
+    override fun recordFields(vararg recordFields: String): Unit =
+        recordFields(recordFields.toList())
+
+    /**
+     * @param s3EnableHiveCompatiblePath This parameter causes the S3 objects that contain delivered
+     * logs to use a prefix structure that allows for integration with Apache Hive.
+     */
+    override fun s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath: Boolean) {
+      cdkBuilder.s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath)
+    }
+
+    /**
+     * @param s3EnableHiveCompatiblePath This parameter causes the S3 objects that contain delivered
+     * logs to use a prefix structure that allows for integration with Apache Hive.
+     */
+    override fun s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath: IResolvable) {
+      cdkBuilder.s3EnableHiveCompatiblePath(s3EnableHiveCompatiblePath.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param s3SuffixPath This string allows re-configuring the S3 object prefix to contain either
+     * static or variable sections.
+     * The valid variables to use in the suffix path will vary by each log source. See
+     * ConfigurationTemplate$allowedSuffixPathFields for more info on what values are supported in the
+     * suffix path for each log source.
+     */
+    override fun s3SuffixPath(s3SuffixPath: String) {
+      cdkBuilder.s3SuffixPath(s3SuffixPath)
     }
 
     /**
@@ -134,6 +261,41 @@ public interface CfnDeliveryProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-deliverysourcename)
      */
     override fun deliverySourceName(): String = unwrap(this).getDeliverySourceName()
+
+    /**
+     * The field delimiter that is used between record fields when the final output format of a
+     * delivery is in `Plain` , `W3C` , or `Raw` format.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-fielddelimiter)
+     */
+    override fun fieldDelimiter(): String? = unwrap(this).getFieldDelimiter()
+
+    /**
+     * The record fields used in this delivery.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-recordfields)
+     */
+    override fun recordFields(): List<String> = unwrap(this).getRecordFields() ?: emptyList()
+
+    /**
+     * This parameter causes the S3 objects that contain delivered logs to use a prefix structure
+     * that allows for integration with Apache Hive.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3enablehivecompatiblepath)
+     */
+    override fun s3EnableHiveCompatiblePath(): Any? = unwrap(this).getS3EnableHiveCompatiblePath()
+
+    /**
+     * This string allows re-configuring the S3 object prefix to contain either static or variable
+     * sections.
+     *
+     * The valid variables to use in the suffix path will vary by each log source. See
+     * ConfigurationTemplate$allowedSuffixPathFields for more info on what values are supported in the
+     * suffix path for each log source.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-logs-delivery.html#cfn-logs-delivery-s3suffixpath)
+     */
+    override fun s3SuffixPath(): String? = unwrap(this).getS3SuffixPath()
 
     /**
      * The tags that have been assigned to this delivery.

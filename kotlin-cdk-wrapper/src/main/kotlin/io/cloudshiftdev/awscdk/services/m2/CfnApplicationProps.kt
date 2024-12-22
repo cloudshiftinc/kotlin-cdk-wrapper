@@ -22,13 +22,13 @@ import kotlin.jvm.JvmName
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.m2.*;
  * CfnApplicationProps cfnApplicationProps = CfnApplicationProps.builder()
+ * .engineType("engineType")
+ * .name("name")
+ * // the properties below are optional
  * .definition(DefinitionProperty.builder()
  * .content("content")
  * .s3Location("s3Location")
  * .build())
- * .engineType("engineType")
- * .name("name")
- * // the properties below are optional
  * .description("description")
  * .kmsKeyId("kmsKeyId")
  * .roleArn("roleArn")
@@ -49,7 +49,7 @@ public interface CfnApplicationProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-application.html#cfn-m2-application-definition)
    */
-  public fun definition(): Any
+  public fun definition(): Any? = unwrap(this).getDefinition()
 
   /**
    * The description of the application.
@@ -104,7 +104,7 @@ public interface CfnApplicationProps {
   public interface Builder {
     /**
      * @param definition The application definition for a particular application. You can specify
-     * either inline JSON or an Amazon S3 bucket location. 
+     * either inline JSON or an Amazon S3 bucket location.
      * For information about application definitions, see the [AWS Mainframe Modernization User
      * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
      */
@@ -112,7 +112,7 @@ public interface CfnApplicationProps {
 
     /**
      * @param definition The application definition for a particular application. You can specify
-     * either inline JSON or an Amazon S3 bucket location. 
+     * either inline JSON or an Amazon S3 bucket location.
      * For information about application definitions, see the [AWS Mainframe Modernization User
      * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
      */
@@ -120,7 +120,7 @@ public interface CfnApplicationProps {
 
     /**
      * @param definition The application definition for a particular application. You can specify
-     * either inline JSON or an Amazon S3 bucket location. 
+     * either inline JSON or an Amazon S3 bucket location.
      * For information about application definitions, see the [AWS Mainframe Modernization User
      * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
      */
@@ -168,7 +168,7 @@ public interface CfnApplicationProps {
 
     /**
      * @param definition The application definition for a particular application. You can specify
-     * either inline JSON or an Amazon S3 bucket location. 
+     * either inline JSON or an Amazon S3 bucket location.
      * For information about application definitions, see the [AWS Mainframe Modernization User
      * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
      */
@@ -178,7 +178,7 @@ public interface CfnApplicationProps {
 
     /**
      * @param definition The application definition for a particular application. You can specify
-     * either inline JSON or an Amazon S3 bucket location. 
+     * either inline JSON or an Amazon S3 bucket location.
      * For information about application definitions, see the [AWS Mainframe Modernization User
      * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
      */
@@ -188,7 +188,7 @@ public interface CfnApplicationProps {
 
     /**
      * @param definition The application definition for a particular application. You can specify
-     * either inline JSON or an Amazon S3 bucket location. 
+     * either inline JSON or an Amazon S3 bucket location.
      * For information about application definitions, see the [AWS Mainframe Modernization User
      * Guide](https://docs.aws.amazon.com/m2/latest/userguide/applications-m2-definition.html) .
      */
@@ -258,7 +258,7 @@ public interface CfnApplicationProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-m2-application.html#cfn-m2-application-definition)
      */
-    override fun definition(): Any = unwrap(this).getDefinition()
+    override fun definition(): Any? = unwrap(this).getDefinition()
 
     /**
      * The description of the application.

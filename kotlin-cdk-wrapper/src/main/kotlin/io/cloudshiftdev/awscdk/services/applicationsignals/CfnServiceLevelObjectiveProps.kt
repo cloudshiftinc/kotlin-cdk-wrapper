@@ -26,6 +26,9 @@ import kotlin.jvm.JvmName
  * CfnServiceLevelObjectiveProps.builder()
  * .name("name")
  * // the properties below are optional
+ * .burnRateConfigurations(List.of(BurnRateConfigurationProperty.builder()
+ * .lookBackWindowMinutes(123)
+ * .build()))
  * .description("description")
  * .goal(GoalProperty.builder()
  * .attainmentGoal(123)
@@ -162,6 +165,17 @@ import kotlin.jvm.JvmName
  */
 public interface CfnServiceLevelObjectiveProps {
   /**
+   * Each object in this array defines the length of the look-back window used to calculate one burn
+   * rate metric for this SLO.
+   *
+   * The burn rate measures how fast the service is consuming the error budget, relative to the
+   * attainment goal of the SLO.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-burnrateconfigurations)
+   */
+  public fun burnRateConfigurations(): Any? = unwrap(this).getBurnRateConfigurations()
+
+  /**
    * An optional description for this SLO.
    *
    * Default: - "No description"
@@ -221,6 +235,30 @@ public interface CfnServiceLevelObjectiveProps {
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO.
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     */
+    public fun burnRateConfigurations(burnRateConfigurations: IResolvable)
+
+    /**
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO.
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     */
+    public fun burnRateConfigurations(burnRateConfigurations: List<Any>)
+
+    /**
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO.
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     */
+    public fun burnRateConfigurations(vararg burnRateConfigurations: Any)
+
     /**
      * @param description An optional description for this SLO.
      */
@@ -319,6 +357,35 @@ public interface CfnServiceLevelObjectiveProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjectiveProps.Builder =
         software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjectiveProps.builder()
+
+    /**
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO.
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     */
+    override fun burnRateConfigurations(burnRateConfigurations: IResolvable) {
+      cdkBuilder.burnRateConfigurations(burnRateConfigurations.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO.
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     */
+    override fun burnRateConfigurations(burnRateConfigurations: List<Any>) {
+      cdkBuilder.burnRateConfigurations(burnRateConfigurations.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param burnRateConfigurations Each object in this array defines the length of the look-back
+     * window used to calculate one burn rate metric for this SLO.
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     */
+    override fun burnRateConfigurations(vararg burnRateConfigurations: Any): Unit =
+        burnRateConfigurations(burnRateConfigurations.toList())
 
     /**
      * @param description An optional description for this SLO.
@@ -444,6 +511,17 @@ public interface CfnServiceLevelObjectiveProps {
     cdkObject: software.amazon.awscdk.services.applicationsignals.CfnServiceLevelObjectiveProps,
   ) : CdkObject(cdkObject),
       CfnServiceLevelObjectiveProps {
+    /**
+     * Each object in this array defines the length of the look-back window used to calculate one
+     * burn rate metric for this SLO.
+     *
+     * The burn rate measures how fast the service is consuming the error budget, relative to the
+     * attainment goal of the SLO.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationsignals-servicelevelobjective.html#cfn-applicationsignals-servicelevelobjective-burnrateconfigurations)
+     */
+    override fun burnRateConfigurations(): Any? = unwrap(this).getBurnRateConfigurations()
+
     /**
      * An optional description for this SLO.
      *

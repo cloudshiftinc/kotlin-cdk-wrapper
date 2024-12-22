@@ -104,6 +104,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .stringExpression(RuleStringExpressionProperty.builder()
  * .evaluate(RuleStringToEvaluateProperty.builder()
  * .attribute("attribute")
+ * .mimeHeaderAttribute("mimeHeaderAttribute")
  * .build())
  * .operator("operator")
  * .values(List.of("values"))
@@ -149,6 +150,7 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .stringExpression(RuleStringExpressionProperty.builder()
  * .evaluate(RuleStringToEvaluateProperty.builder()
  * .attribute("attribute")
+ * .mimeHeaderAttribute("mimeHeaderAttribute")
  * .build())
  * .operator("operator")
  * .values(List.of("values"))
@@ -1983,6 +1985,7 @@ public open class CfnMailManagerRuleSet(
    * .stringExpression(RuleStringExpressionProperty.builder()
    * .evaluate(RuleStringToEvaluateProperty.builder()
    * .attribute("attribute")
+   * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build())
    * .operator("operator")
    * .values(List.of("values"))
@@ -3162,6 +3165,7 @@ public open class CfnMailManagerRuleSet(
    * .stringExpression(RuleStringExpressionProperty.builder()
    * .evaluate(RuleStringToEvaluateProperty.builder()
    * .attribute("attribute")
+   * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build())
    * .operator("operator")
    * .values(List.of("values"))
@@ -3207,6 +3211,7 @@ public open class CfnMailManagerRuleSet(
    * .stringExpression(RuleStringExpressionProperty.builder()
    * .evaluate(RuleStringToEvaluateProperty.builder()
    * .attribute("attribute")
+   * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build())
    * .operator("operator")
    * .values(List.of("values"))
@@ -3493,6 +3498,7 @@ public open class CfnMailManagerRuleSet(
    * RuleStringExpressionProperty.builder()
    * .evaluate(RuleStringToEvaluateProperty.builder()
    * .attribute("attribute")
+   * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build())
    * .operator("operator")
    * .values(List.of("values"))
@@ -3686,6 +3692,11 @@ public open class CfnMailManagerRuleSet(
   /**
    * The string to evaluate in a string condition expression.
    *
+   *
+   * This data type is a UNION, so only one of the following members can be specified when used or
+   * returned.
+   *
+   *
    * Example:
    *
    * ```
@@ -3695,6 +3706,7 @@ public open class CfnMailManagerRuleSet(
    * RuleStringToEvaluateProperty ruleStringToEvaluateProperty =
    * RuleStringToEvaluateProperty.builder()
    * .attribute("attribute")
+   * .mimeHeaderAttribute("mimeHeaderAttribute")
    * .build();
    * ```
    *
@@ -3706,7 +3718,14 @@ public open class CfnMailManagerRuleSet(
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulestringtoevaluate.html#cfn-ses-mailmanagerruleset-rulestringtoevaluate-attribute)
      */
-    public fun attribute(): String
+    public fun attribute(): String? = unwrap(this).getAttribute()
+
+    /**
+     * The email MIME X-Header attribute to evaluate in a string condition expression.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulestringtoevaluate.html#cfn-ses-mailmanagerruleset-rulestringtoevaluate-mimeheaderattribute)
+     */
+    public fun mimeHeaderAttribute(): String? = unwrap(this).getMimeHeaderAttribute()
 
     /**
      * A builder for [RuleStringToEvaluateProperty]
@@ -3714,9 +3733,15 @@ public open class CfnMailManagerRuleSet(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param attribute The email attribute to evaluate in a string condition expression. 
+       * @param attribute The email attribute to evaluate in a string condition expression.
        */
       public fun attribute(attribute: String)
+
+      /**
+       * @param mimeHeaderAttribute The email MIME X-Header attribute to evaluate in a string
+       * condition expression.
+       */
+      public fun mimeHeaderAttribute(mimeHeaderAttribute: String)
     }
 
     private class BuilderImpl : Builder {
@@ -3726,10 +3751,18 @@ public open class CfnMailManagerRuleSet(
           software.amazon.awscdk.services.ses.CfnMailManagerRuleSet.RuleStringToEvaluateProperty.builder()
 
       /**
-       * @param attribute The email attribute to evaluate in a string condition expression. 
+       * @param attribute The email attribute to evaluate in a string condition expression.
        */
       override fun attribute(attribute: String) {
         cdkBuilder.attribute(attribute)
+      }
+
+      /**
+       * @param mimeHeaderAttribute The email MIME X-Header attribute to evaluate in a string
+       * condition expression.
+       */
+      override fun mimeHeaderAttribute(mimeHeaderAttribute: String) {
+        cdkBuilder.mimeHeaderAttribute(mimeHeaderAttribute)
       }
 
       public fun build():
@@ -3746,7 +3779,14 @@ public open class CfnMailManagerRuleSet(
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulestringtoevaluate.html#cfn-ses-mailmanagerruleset-rulestringtoevaluate-attribute)
        */
-      override fun attribute(): String = unwrap(this).getAttribute()
+      override fun attribute(): String? = unwrap(this).getAttribute()
+
+      /**
+       * The email MIME X-Header attribute to evaluate in a string condition expression.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ses-mailmanagerruleset-rulestringtoevaluate.html#cfn-ses-mailmanagerruleset-rulestringtoevaluate-mimeheaderattribute)
+       */
+      override fun mimeHeaderAttribute(): String? = unwrap(this).getMimeHeaderAttribute()
     }
 
     public companion object {

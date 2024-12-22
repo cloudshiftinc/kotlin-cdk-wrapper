@@ -15,9 +15,40 @@ public abstract class BaseListener(
 ) : Resource(cdkObject),
     IListener {
   /**
+   * Set a non-standard attribute on the listener.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-listenerattribute.html)
+   * @param key 
+   * @param value
+   */
+  public open fun attribute(key: String) {
+    unwrap(this).setAttribute(key)
+  }
+
+  /**
+   * Set a non-standard attribute on the listener.
+   *
+   * [Documentation](https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-elasticloadbalancingv2-listener-listenerattribute.html)
+   * @param key 
+   * @param value
+   */
+  public open fun attribute(key: String, `value`: String) {
+    unwrap(this).setAttribute(key, `value`)
+  }
+
+  /**
    * ARN of the listener.
    */
   public override fun listenerArn(): String = unwrap(this).getListenerArn()
+
+  /**
+   * Remove an attribute from the listener.
+   *
+   * @param key 
+   */
+  public open fun removeAttribute(key: String) {
+    unwrap(this).removeAttribute(key)
+  }
 
   private class Wrapper(
     cdkObject: software.amazon.awscdk.services.elasticloadbalancingv2.BaseListener,

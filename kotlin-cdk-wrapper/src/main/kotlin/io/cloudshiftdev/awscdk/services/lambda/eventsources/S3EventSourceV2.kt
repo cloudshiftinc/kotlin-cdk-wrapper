@@ -22,7 +22,7 @@ import software.amazon.awscdk.services.s3.IBucket as AmazonAwscdkServicesS3IBuck
  * import io.cloudshiftdev.awscdk.services.s3.*;
  * import io.cloudshiftdev.awscdk.services.lambda.eventsources.S3EventSourceV2;
  * Function fn;
- * IBucket bucket = Bucket.fromBucketName(this, "Bucket", "bucket-name");
+ * IBucket bucket = Bucket.fromBucketName(this, "Bucket", "amzn-s3-demo-bucket");
  * fn.addEventSource(S3EventSourceV2.Builder.create(bucket)
  * .events(List.of(EventType.OBJECT_CREATED, EventType.OBJECT_REMOVED))
  * .filters(List.of(NotificationKeyFilter.builder().prefix("subdir/").build()))

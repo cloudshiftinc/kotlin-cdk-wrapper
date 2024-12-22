@@ -23,9 +23,10 @@ import kotlin.Unit
  * Bucket bucket;
  * CsvHeaders csvHeaders;
  * S3CsvItemReaderProps s3CsvItemReaderProps = S3CsvItemReaderProps.builder()
- * .bucket(bucket)
  * .key("key")
  * // the properties below are optional
+ * .bucket(bucket)
+ * .bucketNamePath("bucketNamePath")
  * .csvHeaders(csvHeaders)
  * .maxItems(123)
  * .build();
@@ -46,9 +47,15 @@ public interface S3CsvItemReaderProps : S3FileItemReaderProps {
   public interface Builder {
     /**
      * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
-     * over. 
+     * over.
      */
     public fun bucket(bucket: IBucket)
+
+    /**
+     * @param bucketNamePath S3 bucket name containing objects to iterate over or a file with a list
+     * to iterate over, as JsonPath.
+     */
+    public fun bucketNamePath(bucketNamePath: String)
 
     /**
      * @param csvHeaders CSV file header configuration.
@@ -73,10 +80,18 @@ public interface S3CsvItemReaderProps : S3FileItemReaderProps {
 
     /**
      * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
-     * over. 
+     * over.
      */
     override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
+    }
+
+    /**
+     * @param bucketNamePath S3 bucket name containing objects to iterate over or a file with a list
+     * to iterate over, as JsonPath.
+     */
+    override fun bucketNamePath(bucketNamePath: String) {
+      cdkBuilder.bucketNamePath(bucketNamePath)
     }
 
     /**
@@ -110,8 +125,22 @@ public interface S3CsvItemReaderProps : S3FileItemReaderProps {
       S3CsvItemReaderProps {
     /**
      * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
+     *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucketNamePath)
      */
-    override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+    override fun bucket(): IBucket? = unwrap(this).getBucket()?.let(IBucket::wrap)
+
+    /**
+     * S3 bucket name containing objects to iterate over or a file with a list to iterate over, as
+     * JsonPath.
+     *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucket)
+     */
+    override fun bucketNamePath(): String? = unwrap(this).getBucketNamePath()
 
     /**
      * CSV file header configuration.

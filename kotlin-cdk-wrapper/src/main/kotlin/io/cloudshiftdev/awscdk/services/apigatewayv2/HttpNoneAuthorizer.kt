@@ -3,6 +3,7 @@
 package io.cloudshiftdev.awscdk.services.apigatewayv2
 
 import io.cloudshiftdev.awscdk.common.CdkObject
+import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
 
@@ -52,6 +53,11 @@ public open class HttpNoneAuthorizer(
     IHttpRouteAuthorizer {
   public constructor() : this(software.amazon.awscdk.services.apigatewayv2.HttpNoneAuthorizer()
   )
+
+  /**
+   * The authorizationType used for IAM Authorizer.
+   */
+  public open fun authorizationType(): String = unwrap(this).getAuthorizationType()
 
   /**
    * Bind this authorizer to a specified Http route.

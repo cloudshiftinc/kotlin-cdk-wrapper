@@ -25,9 +25,10 @@ import kotlin.collections.List
  * Bucket bucket;
  * CsvHeaders csvHeaders;
  * S3CsvItemReader s3CsvItemReader = S3CsvItemReader.Builder.create()
- * .bucket(bucket)
  * .key("key")
  * // the properties below are optional
+ * .bucket(bucket)
+ * .bucketNamePath("bucketNamePath")
  * .csvHeaders(csvHeaders)
  * .maxItems(123)
  * .build();
@@ -49,6 +50,12 @@ public open class S3CsvItemReader(
    * S3 Bucket containing a file with a list to iterate over.
    */
   public override fun bucket(): IBucket = unwrap(this).getBucket().let(IBucket::wrap)
+
+  /**
+   * S3 bucket name containing objects to iterate over or a file with a list to iterate over, as
+   * JsonPath.
+   */
+  public override fun bucketNamePath(): String? = unwrap(this).getBucketNamePath()
 
   /**
    * CSV headers configuration.
@@ -85,6 +92,13 @@ public open class S3CsvItemReader(
   public override fun resource(): String = unwrap(this).getResource()
 
   /**
+   * Validate that ItemReader contains exactly either.
+   *
+   * [Documentation](bucketNamePath)
+   */
+  public override fun validateItemReader(): List<String> = unwrap(this).validateItemReader()
+
+  /**
    * A fluent builder for [io.cloudshiftdev.awscdk.services.stepfunctions.S3CsvItemReader].
    */
   @CdkDslMarker
@@ -92,10 +106,25 @@ public open class S3CsvItemReader(
     /**
      * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
      *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucketNamePath)
      * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
      * over. 
      */
     public fun bucket(bucket: IBucket)
+
+    /**
+     * S3 bucket name containing objects to iterate over or a file with a list to iterate over, as
+     * JsonPath.
+     *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucket)
+     * @param bucketNamePath S3 bucket name containing objects to iterate over or a file with a list
+     * to iterate over, as JsonPath. 
+     */
+    public fun bucketNamePath(bucketNamePath: String)
 
     /**
      * CSV file header configuration.
@@ -130,11 +159,28 @@ public open class S3CsvItemReader(
     /**
      * S3 Bucket containing objects to iterate over or a file with a list to iterate over.
      *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucketNamePath)
      * @param bucket S3 Bucket containing objects to iterate over or a file with a list to iterate
      * over. 
      */
     override fun bucket(bucket: IBucket) {
       cdkBuilder.bucket(bucket.let(IBucket.Companion::unwrap))
+    }
+
+    /**
+     * S3 bucket name containing objects to iterate over or a file with a list to iterate over, as
+     * JsonPath.
+     *
+     * Default: - S3 bucket will be determined from
+     *
+     * [Documentation](bucket)
+     * @param bucketNamePath S3 bucket name containing objects to iterate over or a file with a list
+     * to iterate over, as JsonPath. 
+     */
+    override fun bucketNamePath(bucketNamePath: String) {
+      cdkBuilder.bucketNamePath(bucketNamePath)
     }
 
     /**

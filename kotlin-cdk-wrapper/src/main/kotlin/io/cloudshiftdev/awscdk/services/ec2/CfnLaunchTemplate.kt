@@ -784,6 +784,135 @@ public open class CfnLaunchTemplate(
   }
 
   /**
+   * The baseline performance to consider, using an instance family as a baseline reference.
+   *
+   * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+   * this baseline to guide instance type selection, but there is no guarantee that the selected
+   * instance types will always exceed the baseline for every application.
+   *
+   * Currently, this parameter only supports CPU performance as a baseline performance factor. For
+   * example, specifying `c6i` would use the CPU performance of the `c6i` family as the baseline
+   * reference.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * BaselinePerformanceFactorsProperty baselinePerformanceFactorsProperty =
+   * BaselinePerformanceFactorsProperty.builder()
+   * .cpu(CpuProperty.builder()
+   * .references(List.of(ReferenceProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineperformancefactors.html)
+   */
+  public interface BaselinePerformanceFactorsProperty {
+    /**
+     * The CPU performance to consider, using an instance family as the baseline reference.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineperformancefactors.html#cfn-ec2-launchtemplate-baselineperformancefactors-cpu)
+     */
+    public fun cpu(): Any? = unwrap(this).getCpu()
+
+    /**
+     * A builder for [BaselinePerformanceFactorsProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      public fun cpu(cpu: IResolvable)
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      public fun cpu(cpu: CpuProperty)
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b14bd963244504cf6e17c0e99d0a3a11f89e0a9fe215ec03f1da1846e74c3aac")
+      public fun cpu(cpu: CpuProperty.Builder.() -> Unit)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselinePerformanceFactorsProperty.Builder
+          =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselinePerformanceFactorsProperty.builder()
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      override fun cpu(cpu: IResolvable) {
+        cdkBuilder.cpu(cpu.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      override fun cpu(cpu: CpuProperty) {
+        cdkBuilder.cpu(cpu.let(CpuProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param cpu The CPU performance to consider, using an instance family as the baseline
+       * reference.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("b14bd963244504cf6e17c0e99d0a3a11f89e0a9fe215ec03f1da1846e74c3aac")
+      override fun cpu(cpu: CpuProperty.Builder.() -> Unit): Unit = cpu(CpuProperty(cpu))
+
+      public fun build():
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselinePerformanceFactorsProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselinePerformanceFactorsProperty,
+    ) : CdkObject(cdkObject),
+        BaselinePerformanceFactorsProperty {
+      /**
+       * The CPU performance to consider, using an instance family as the baseline reference.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-baselineperformancefactors.html#cfn-ec2-launchtemplate-baselineperformancefactors-cpu)
+       */
+      override fun cpu(): Any? = unwrap(this).getCpu()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          BaselinePerformanceFactorsProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselinePerformanceFactorsProperty):
+          BaselinePerformanceFactorsProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          BaselinePerformanceFactorsProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: BaselinePerformanceFactorsProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselinePerformanceFactorsProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.BaselinePerformanceFactorsProperty
+    }
+  }
+
+  /**
    * Specifies a block device mapping for a launch template.
    *
    * You must specify `DeviceName` plus exactly one of the following properties: `Ebs` , `NoDevice`
@@ -1042,8 +1171,10 @@ public open class CfnLaunchTemplate(
     /**
      * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
      *
+     * * `capacity-reservations-only` - The instance will only run in a Capacity Reservation or
+     * Capacity Reservation group. If capacity isn't available, the instance will fail to launch.
      * * `open` - The instance can run in any `open` Capacity Reservation that has matching
-     * attributes (instance type, platform, Availability Zone).
+     * attributes (instance type, platform, Availability Zone, tenancy).
      * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
      * The instance runs in On-Demand capacity.
      *
@@ -1067,8 +1198,10 @@ public open class CfnLaunchTemplate(
       /**
        * @param capacityReservationPreference Indicates the instance's Capacity Reservation
        * preferences. Possible preferences include:.
+       * * `capacity-reservations-only` - The instance will only run in a Capacity Reservation or
+       * Capacity Reservation group. If capacity isn't available, the instance will fail to launch.
        * * `open` - The instance can run in any `open` Capacity Reservation that has matching
-       * attributes (instance type, platform, Availability Zone).
+       * attributes (instance type, platform, Availability Zone, tenancy).
        * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
        * The instance runs in On-Demand capacity.
        */
@@ -1106,8 +1239,10 @@ public open class CfnLaunchTemplate(
       /**
        * @param capacityReservationPreference Indicates the instance's Capacity Reservation
        * preferences. Possible preferences include:.
+       * * `capacity-reservations-only` - The instance will only run in a Capacity Reservation or
+       * Capacity Reservation group. If capacity isn't available, the instance will fail to launch.
        * * `open` - The instance can run in any `open` Capacity Reservation that has matching
-       * attributes (instance type, platform, Availability Zone).
+       * attributes (instance type, platform, Availability Zone, tenancy).
        * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
        * The instance runs in On-Demand capacity.
        */
@@ -1155,8 +1290,10 @@ public open class CfnLaunchTemplate(
       /**
        * Indicates the instance's Capacity Reservation preferences. Possible preferences include:.
        *
+       * * `capacity-reservations-only` - The instance will only run in a Capacity Reservation or
+       * Capacity Reservation group. If capacity isn't available, the instance will fail to launch.
        * * `open` - The instance can run in any `open` Capacity Reservation that has matching
-       * attributes (instance type, platform, Availability Zone).
+       * attributes (instance type, platform, Availability Zone, tenancy).
        * * `none` - The instance avoids running in a Capacity Reservation even if one is available.
        * The instance runs in On-Demand capacity.
        *
@@ -1655,6 +1792,125 @@ public open class CfnLaunchTemplate(
   }
 
   /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * CpuProperty cpuProperty = CpuProperty.builder()
+   * .references(List.of(ReferenceProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpu.html)
+   */
+  public interface CpuProperty {
+    /**
+     * A list of references to be used as baseline for the CPU performance.
+     *
+     * Currently, you can only specify a single reference across different instance type variations
+     * such as CPU manufacturers, architectures etc.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpu.html#cfn-ec2-launchtemplate-cpu-references)
+     */
+    public fun references(): Any? = unwrap(this).getReferences()
+
+    /**
+     * A builder for [CpuProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param references A list of references to be used as baseline for the CPU performance.
+       * Currently, you can only specify a single reference across different instance type
+       * variations such as CPU manufacturers, architectures etc.
+       */
+      public fun references(references: IResolvable)
+
+      /**
+       * @param references A list of references to be used as baseline for the CPU performance.
+       * Currently, you can only specify a single reference across different instance type
+       * variations such as CPU manufacturers, architectures etc.
+       */
+      public fun references(references: List<Any>)
+
+      /**
+       * @param references A list of references to be used as baseline for the CPU performance.
+       * Currently, you can only specify a single reference across different instance type
+       * variations such as CPU manufacturers, architectures etc.
+       */
+      public fun references(vararg references: Any)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuProperty.builder()
+
+      /**
+       * @param references A list of references to be used as baseline for the CPU performance.
+       * Currently, you can only specify a single reference across different instance type
+       * variations such as CPU manufacturers, architectures etc.
+       */
+      override fun references(references: IResolvable) {
+        cdkBuilder.references(references.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param references A list of references to be used as baseline for the CPU performance.
+       * Currently, you can only specify a single reference across different instance type
+       * variations such as CPU manufacturers, architectures etc.
+       */
+      override fun references(references: List<Any>) {
+        cdkBuilder.references(references.map{CdkObjectWrappers.unwrap(it)})
+      }
+
+      /**
+       * @param references A list of references to be used as baseline for the CPU performance.
+       * Currently, you can only specify a single reference across different instance type
+       * variations such as CPU manufacturers, architectures etc.
+       */
+      override fun references(vararg references: Any): Unit = references(references.toList())
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuProperty,
+    ) : CdkObject(cdkObject),
+        CpuProperty {
+      /**
+       * A list of references to be used as baseline for the CPU performance.
+       *
+       * Currently, you can only specify a single reference across different instance type
+       * variations such as CPU manufacturers, architectures etc.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-cpu.html#cfn-ec2-launchtemplate-cpu-references)
+       */
+      override fun references(): Any? = unwrap(this).getReferences()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): CpuProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuProperty):
+          CpuProperty = CdkObjectWrappers.wrap(cdkObject) as? CpuProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CpuProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuProperty = (wrapped as
+          CdkObject).cdkObject as software.amazon.awscdk.services.ec2.CfnLaunchTemplate.CpuProperty
+    }
+  }
+
+  /**
    * Specifies the credit option for CPU usage of a T2, T3, or T3a instance.
    *
    * `CreditSpecification` is a property of [AWS::EC2::LaunchTemplate
@@ -1816,7 +2072,8 @@ public open class CfnLaunchTemplate(
     public fun iops(): Number? = unwrap(this).getIops()
 
     /**
-     * The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used for encryption.
+     * Identifier (key ID, key alias, key ARN, or alias ARN) of the customer managed KMS key to use
+     * for EBS encryption.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-kmskeyid)
      */
@@ -1917,8 +2174,8 @@ public open class CfnLaunchTemplate(
       public fun iops(iops: Number)
 
       /**
-       * @param kmsKeyId The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used
-       * for encryption.
+       * @param kmsKeyId Identifier (key ID, key alias, key ARN, or alias ARN) of the customer
+       * managed KMS key to use for EBS encryption.
        */
       public fun kmsKeyId(kmsKeyId: String)
 
@@ -2018,8 +2275,8 @@ public open class CfnLaunchTemplate(
       }
 
       /**
-       * @param kmsKeyId The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used
-       * for encryption.
+       * @param kmsKeyId Identifier (key ID, key alias, key ARN, or alias ARN) of the customer
+       * managed KMS key to use for EBS encryption.
        */
       override fun kmsKeyId(kmsKeyId: String) {
         cdkBuilder.kmsKeyId(kmsKeyId)
@@ -2115,7 +2372,8 @@ public open class CfnLaunchTemplate(
       override fun iops(): Number? = unwrap(this).getIops()
 
       /**
-       * The ARN of the symmetric AWS Key Management Service ( AWS KMS ) CMK used for encryption.
+       * Identifier (key ID, key alias, key ARN, or alias ARN) of the customer managed KMS key to
+       * use for EBS encryption.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-ebs.html#cfn-ec2-launchtemplate-ebs-kmskeyid)
        */
@@ -3073,11 +3331,9 @@ public open class CfnLaunchTemplate(
    * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
    *
    *
-   * For more information, see [Attribute-based instance type selection for EC2
+   * For more information, see [Specify attributes for instance type selection for EC2 Fleet or Spot
    * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-   * , [Attribute-based instance type selection for Spot
-   * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-   * , and [Spot placement
+   * and [Spot placement
    * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
    * *Amazon EC2 User Guide* .
    *
@@ -3105,6 +3361,13 @@ public open class CfnLaunchTemplate(
    * .baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsProperty.builder()
    * .max(123)
    * .min(123)
+   * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsProperty.builder()
+   * .cpu(CpuProperty.builder()
+   * .references(List.of(ReferenceProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
    * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
@@ -3210,7 +3473,6 @@ public open class CfnLaunchTemplate(
      *
      * * For instance types with GPU accelerators, specify `gpu` .
      * * For instance types with FPGA accelerators, specify `fpga` .
-     * * For instance types with inference accelerators, specify `inference` .
      *
      * Default: Any accelerator type
      *
@@ -3269,6 +3531,21 @@ public open class CfnLaunchTemplate(
     public fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
 
     /**
+     * The baseline performance to consider, using an instance family as a baseline reference.
+     *
+     * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+     * this baseline to guide instance type selection, but there is no guarantee that the selected
+     * instance types will always exceed the baseline for every application. Currently, this parameter
+     * only supports CPU performance as a baseline performance factor. For more information, see
+     * [Performance
+     * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+     * in the *Amazon EC2 User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baselineperformancefactors)
+     */
+    public fun baselinePerformanceFactors(): Any? = unwrap(this).getBaselinePerformanceFactors()
+
+    /**
      * Indicates whether burstable performance T instance types are included, excluded, or required.
      *
      * For more information, see [Burstable performance
@@ -3291,6 +3568,7 @@ public open class CfnLaunchTemplate(
      * * For instance types with Intel CPUs, specify `intel` .
      * * For instance types with AMD CPUs, specify `amd` .
      * * For instance types with AWS CPUs, specify `amazon-web-services` .
+     * * For instance types with Apple CPUs, specify `apple` .
      *
      *
      * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched with
@@ -3667,7 +3945,6 @@ public open class CfnLaunchTemplate(
        * @param acceleratorTypes The accelerator types that must be on the instance type.
        * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -3677,7 +3954,6 @@ public open class CfnLaunchTemplate(
        * @param acceleratorTypes The accelerator types that must be on the instance type.
        * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -3772,6 +4048,49 @@ public open class CfnLaunchTemplate(
           fun baselineEbsBandwidthMbps(baselineEbsBandwidthMbps: BaselineEbsBandwidthMbpsProperty.Builder.() -> Unit)
 
       /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public fun baselinePerformanceFactors(baselinePerformanceFactors: IResolvable)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      public
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsProperty)
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a8df59dbd8a6e39b854aa81b360a3afb8b5b081bc3e25177ce225473a4f382c9")
+      public
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsProperty.Builder.() -> Unit)
+
+      /**
        * @param burstablePerformance Indicates whether burstable performance T instance types are
        * included, excluded, or required.
        * For more information, see [Burstable performance
@@ -3791,6 +4110,7 @@ public open class CfnLaunchTemplate(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
@@ -3807,6 +4127,7 @@ public open class CfnLaunchTemplate(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
@@ -4301,7 +4622,6 @@ public open class CfnLaunchTemplate(
        * @param acceleratorTypes The accelerator types that must be on the instance type.
        * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4313,7 +4633,6 @@ public open class CfnLaunchTemplate(
        * @param acceleratorTypes The accelerator types that must be on the instance type.
        * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4420,6 +4739,55 @@ public open class CfnLaunchTemplate(
           baselineEbsBandwidthMbps(BaselineEbsBandwidthMbpsProperty(baselineEbsBandwidthMbps))
 
       /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override fun baselinePerformanceFactors(baselinePerformanceFactors: IResolvable) {
+        cdkBuilder.baselinePerformanceFactors(baselinePerformanceFactors.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      override
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsProperty) {
+        cdkBuilder.baselinePerformanceFactors(baselinePerformanceFactors.let(BaselinePerformanceFactorsProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param baselinePerformanceFactors The baseline performance to consider, using an instance
+       * family as a baseline reference.
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("a8df59dbd8a6e39b854aa81b360a3afb8b5b081bc3e25177ce225473a4f382c9")
+      override
+          fun baselinePerformanceFactors(baselinePerformanceFactors: BaselinePerformanceFactorsProperty.Builder.() -> Unit):
+          Unit =
+          baselinePerformanceFactors(BaselinePerformanceFactorsProperty(baselinePerformanceFactors))
+
+      /**
        * @param burstablePerformance Indicates whether burstable performance T instance types are
        * included, excluded, or required.
        * For more information, see [Burstable performance
@@ -4441,6 +4809,7 @@ public open class CfnLaunchTemplate(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
@@ -4459,6 +4828,7 @@ public open class CfnLaunchTemplate(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
@@ -4933,7 +5303,6 @@ public open class CfnLaunchTemplate(
        *
        * * For instance types with GPU accelerators, specify `gpu` .
        * * For instance types with FPGA accelerators, specify `fpga` .
-       * * For instance types with inference accelerators, specify `inference` .
        *
        * Default: Any accelerator type
        *
@@ -4993,6 +5362,21 @@ public open class CfnLaunchTemplate(
       override fun baselineEbsBandwidthMbps(): Any? = unwrap(this).getBaselineEbsBandwidthMbps()
 
       /**
+       * The baseline performance to consider, using an instance family as a baseline reference.
+       *
+       * The instance family establishes the lowest acceptable level of performance. Amazon EC2 uses
+       * this baseline to guide instance type selection, but there is no guarantee that the selected
+       * instance types will always exceed the baseline for every application. Currently, this
+       * parameter only supports CPU performance as a baseline performance factor. For more
+       * information, see [Performance
+       * protection](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html#ec2fleet-abis-performance-protection)
+       * in the *Amazon EC2 User Guide* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-instancerequirements.html#cfn-ec2-launchtemplate-instancerequirements-baselineperformancefactors)
+       */
+      override fun baselinePerformanceFactors(): Any? = unwrap(this).getBaselinePerformanceFactors()
+
+      /**
        * Indicates whether burstable performance T instance types are included, excluded, or
        * required.
        *
@@ -5016,6 +5400,7 @@ public open class CfnLaunchTemplate(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
@@ -5664,6 +6049,13 @@ public open class CfnLaunchTemplate(
    * .max(123)
    * .min(123)
    * .build())
+   * .baselinePerformanceFactors(BaselinePerformanceFactorsProperty.builder()
+   * .cpu(CpuProperty.builder()
+   * .references(List.of(ReferenceProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build()))
+   * .build())
+   * .build())
    * .burstablePerformance("burstablePerformance")
    * .cpuManufacturers(List.of("cpuManufacturers"))
    * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
@@ -5880,10 +6272,11 @@ public open class CfnLaunchTemplate(
     public fun elasticGpuSpecifications(): Any? = unwrap(this).getElasticGpuSpecifications()
 
     /**
-     * An elastic inference accelerator to associate with the instance.
+     * Amazon Elastic Inference is no longer available.
      *
-     * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances to
-     * accelerate your Deep Learning (DL) inference workloads.
+     * An elastic inference accelerator to associate with the instance. Elastic inference
+     * accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your Deep
+     * Learning (DL) inference workloads.
      *
      * You cannot specify accelerators from different generations in the same request.
      *
@@ -6007,11 +6400,10 @@ public open class CfnLaunchTemplate(
      * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
      *
      *
-     * For more information, see [Attribute-based instance type selection for EC2
+     * For more information, see [Specify attributes for instance type selection for EC2 Fleet or
+     * Spot
      * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-     * , [Attribute-based instance type selection for Spot
-     * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-     * , and [Spot placement
+     * and [Spot placement
      * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
      * *Amazon EC2 User Guide* .
      *
@@ -6357,10 +6749,10 @@ public open class CfnLaunchTemplate(
       public fun elasticGpuSpecifications(vararg elasticGpuSpecifications: Any)
 
       /**
-       * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
-       * instance.
-       * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances
-       * to accelerate your Deep Learning (DL) inference workloads.
+       * @param elasticInferenceAccelerators Amazon Elastic Inference is no longer available.
+       * An elastic inference accelerator to associate with the instance. Elastic inference
+       * accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your
+       * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
        *
@@ -6375,10 +6767,10 @@ public open class CfnLaunchTemplate(
       public fun elasticInferenceAccelerators(elasticInferenceAccelerators: IResolvable)
 
       /**
-       * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
-       * instance.
-       * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances
-       * to accelerate your Deep Learning (DL) inference workloads.
+       * @param elasticInferenceAccelerators Amazon Elastic Inference is no longer available.
+       * An elastic inference accelerator to associate with the instance. Elastic inference
+       * accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your
+       * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
        *
@@ -6393,10 +6785,10 @@ public open class CfnLaunchTemplate(
       public fun elasticInferenceAccelerators(elasticInferenceAccelerators: List<Any>)
 
       /**
-       * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
-       * instance.
-       * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances
-       * to accelerate your Deep Learning (DL) inference workloads.
+       * @param elasticInferenceAccelerators Amazon Elastic Inference is no longer available.
+       * An elastic inference accelerator to associate with the instance. Elastic inference
+       * accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your
+       * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
        *
@@ -6574,11 +6966,10 @@ public open class CfnLaunchTemplate(
        * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
        *
        *
-       * For more information, see [Attribute-based instance type selection for EC2
+       * For more information, see [Specify attributes for instance type selection for EC2 Fleet or
+       * Spot
        * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-       * , [Attribute-based instance type selection for Spot
-       * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-       * , and [Spot placement
+       * and [Spot placement
        * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
        * *Amazon EC2 User Guide* .
        */
@@ -6618,11 +7009,10 @@ public open class CfnLaunchTemplate(
        * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
        *
        *
-       * For more information, see [Attribute-based instance type selection for EC2
+       * For more information, see [Specify attributes for instance type selection for EC2 Fleet or
+       * Spot
        * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-       * , [Attribute-based instance type selection for Spot
-       * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-       * , and [Spot placement
+       * and [Spot placement
        * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
        * *Amazon EC2 User Guide* .
        */
@@ -6662,11 +7052,10 @@ public open class CfnLaunchTemplate(
        * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
        *
        *
-       * For more information, see [Attribute-based instance type selection for EC2
+       * For more information, see [Specify attributes for instance type selection for EC2 Fleet or
+       * Spot
        * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-       * , [Attribute-based instance type selection for Spot
-       * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-       * , and [Spot placement
+       * and [Spot placement
        * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
        * *Amazon EC2 User Guide* .
        */
@@ -7144,10 +7533,10 @@ public open class CfnLaunchTemplate(
           elasticGpuSpecifications(elasticGpuSpecifications.toList())
 
       /**
-       * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
-       * instance.
-       * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances
-       * to accelerate your Deep Learning (DL) inference workloads.
+       * @param elasticInferenceAccelerators Amazon Elastic Inference is no longer available.
+       * An elastic inference accelerator to associate with the instance. Elastic inference
+       * accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your
+       * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
        *
@@ -7164,10 +7553,10 @@ public open class CfnLaunchTemplate(
       }
 
       /**
-       * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
-       * instance.
-       * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances
-       * to accelerate your Deep Learning (DL) inference workloads.
+       * @param elasticInferenceAccelerators Amazon Elastic Inference is no longer available.
+       * An elastic inference accelerator to associate with the instance. Elastic inference
+       * accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your
+       * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
        *
@@ -7184,10 +7573,10 @@ public open class CfnLaunchTemplate(
       }
 
       /**
-       * @param elasticInferenceAccelerators An elastic inference accelerator to associate with the
-       * instance.
-       * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances
-       * to accelerate your Deep Learning (DL) inference workloads.
+       * @param elasticInferenceAccelerators Amazon Elastic Inference is no longer available.
+       * An elastic inference accelerator to associate with the instance. Elastic inference
+       * accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your
+       * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
        *
@@ -7390,11 +7779,10 @@ public open class CfnLaunchTemplate(
        * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
        *
        *
-       * For more information, see [Attribute-based instance type selection for EC2
+       * For more information, see [Specify attributes for instance type selection for EC2 Fleet or
+       * Spot
        * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-       * , [Attribute-based instance type selection for Spot
-       * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-       * , and [Spot placement
+       * and [Spot placement
        * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
        * *Amazon EC2 User Guide* .
        */
@@ -7436,11 +7824,10 @@ public open class CfnLaunchTemplate(
        * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
        *
        *
-       * For more information, see [Attribute-based instance type selection for EC2
+       * For more information, see [Specify attributes for instance type selection for EC2 Fleet or
+       * Spot
        * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-       * , [Attribute-based instance type selection for Spot
-       * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-       * , and [Spot placement
+       * and [Spot placement
        * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
        * *Amazon EC2 User Guide* .
        */
@@ -7482,11 +7869,10 @@ public open class CfnLaunchTemplate(
        * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
        *
        *
-       * For more information, see [Attribute-based instance type selection for EC2
+       * For more information, see [Specify attributes for instance type selection for EC2 Fleet or
+       * Spot
        * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-       * , [Attribute-based instance type selection for Spot
-       * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-       * , and [Spot placement
+       * and [Spot placement
        * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
        * *Amazon EC2 User Guide* .
        */
@@ -7905,10 +8291,11 @@ public open class CfnLaunchTemplate(
       override fun elasticGpuSpecifications(): Any? = unwrap(this).getElasticGpuSpecifications()
 
       /**
-       * An elastic inference accelerator to associate with the instance.
+       * Amazon Elastic Inference is no longer available.
        *
-       * Elastic inference accelerators are a resource you can attach to your Amazon EC2 instances
-       * to accelerate your Deep Learning (DL) inference workloads.
+       * An elastic inference accelerator to associate with the instance. Elastic inference
+       * accelerators are a resource you can attach to your Amazon EC2 instances to accelerate your
+       * Deep Learning (DL) inference workloads.
        *
        * You cannot specify accelerators from different generations in the same request.
        *
@@ -8033,11 +8420,10 @@ public open class CfnLaunchTemplate(
        * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
        *
        *
-       * For more information, see [Attribute-based instance type selection for EC2
+       * For more information, see [Specify attributes for instance type selection for EC2 Fleet or
+       * Spot
        * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-       * , [Attribute-based instance type selection for Spot
-       * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-       * , and [Spot placement
+       * and [Spot placement
        * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
        * *Amazon EC2 User Guide* .
        *
@@ -9733,13 +10119,16 @@ public open class CfnLaunchTemplate(
     /**
      * The type of network interface.
      *
-     * To create an Elastic Fabric Adapter (EFA), specify `efa` . For more information, see [Elastic
-     * Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the *Amazon EC2
-     * User Guide* .
+     * To create an Elastic Fabric Adapter (EFA), specify `efa` or `efa` . For more information, see
+     * [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the
+     * *Amazon EC2 User Guide* .
      *
      * If you are not creating an EFA, specify `interface` or omit this parameter.
      *
-     * Valid values: `interface` | `efa`
+     * If you specify `efa-only` , do not assign any IP addresses to the network interface. EFA-only
+     * network interfaces do not support IP addresses.
+     *
+     * Valid values: `interface` | `efa` | `efa-only`
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-interfacetype)
      */
@@ -9980,13 +10369,16 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param interfaceType The type of network interface.
-       * To create an Elastic Fabric Adapter (EFA), specify `efa` . For more information, see
-       * [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the
-       * *Amazon EC2 User Guide* .
+       * To create an Elastic Fabric Adapter (EFA), specify `efa` or `efa` . For more information,
+       * see [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in
+       * the *Amazon EC2 User Guide* .
        *
        * If you are not creating an EFA, specify `interface` or omit this parameter.
        *
-       * Valid values: `interface` | `efa`
+       * If you specify `efa-only` , do not assign any IP addresses to the network interface.
+       * EFA-only network interfaces do not support IP addresses.
+       *
+       * Valid values: `interface` | `efa` | `efa-only`
        */
       public fun interfaceType(interfaceType: String)
 
@@ -10281,13 +10673,16 @@ public open class CfnLaunchTemplate(
 
       /**
        * @param interfaceType The type of network interface.
-       * To create an Elastic Fabric Adapter (EFA), specify `efa` . For more information, see
-       * [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the
-       * *Amazon EC2 User Guide* .
+       * To create an Elastic Fabric Adapter (EFA), specify `efa` or `efa` . For more information,
+       * see [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in
+       * the *Amazon EC2 User Guide* .
        *
        * If you are not creating an EFA, specify `interface` or omit this parameter.
        *
-       * Valid values: `interface` | `efa`
+       * If you specify `efa-only` , do not assign any IP addresses to the network interface.
+       * EFA-only network interfaces do not support IP addresses.
+       *
+       * Valid values: `interface` | `efa` | `efa-only`
        */
       override fun interfaceType(interfaceType: String) {
         cdkBuilder.interfaceType(interfaceType)
@@ -10555,13 +10950,16 @@ public open class CfnLaunchTemplate(
       /**
        * The type of network interface.
        *
-       * To create an Elastic Fabric Adapter (EFA), specify `efa` . For more information, see
-       * [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in the
-       * *Amazon EC2 User Guide* .
+       * To create an Elastic Fabric Adapter (EFA), specify `efa` or `efa` . For more information,
+       * see [Elastic Fabric Adapter](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/efa.html) in
+       * the *Amazon EC2 User Guide* .
        *
        * If you are not creating an EFA, specify `interface` or omit this parameter.
        *
-       * Valid values: `interface` | `efa`
+       * If you specify `efa-only` , do not assign any IP addresses to the network interface.
+       * EFA-only network interfaces do not support IP addresses.
+       *
+       * Valid values: `interface` | `efa` | `efa-only`
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-networkinterface.html#cfn-ec2-launchtemplate-networkinterface-interfacetype)
        */
@@ -11370,6 +11768,95 @@ public open class CfnLaunchTemplate(
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ec2.CfnLaunchTemplate.PrivateIpAddProperty
+    }
+  }
+
+  /**
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ec2.*;
+   * ReferenceProperty referenceProperty = ReferenceProperty.builder()
+   * .instanceFamily("instanceFamily")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-reference.html)
+   */
+  public interface ReferenceProperty {
+    /**
+     * The instance family to refer.
+     *
+     * Ensure that you specify the correct family name. For example, C6i and C6g are valid values,
+     * but C6 is not.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-reference.html#cfn-ec2-launchtemplate-reference-instancefamily)
+     */
+    public fun instanceFamily(): String? = unwrap(this).getInstanceFamily()
+
+    /**
+     * A builder for [ReferenceProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param instanceFamily The instance family to refer.
+       * Ensure that you specify the correct family name. For example, C6i and C6g are valid values,
+       * but C6 is not.
+       */
+      public fun instanceFamily(instanceFamily: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ReferenceProperty.Builder =
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ReferenceProperty.builder()
+
+      /**
+       * @param instanceFamily The instance family to refer.
+       * Ensure that you specify the correct family name. For example, C6i and C6g are valid values,
+       * but C6 is not.
+       */
+      override fun instanceFamily(instanceFamily: String) {
+        cdkBuilder.instanceFamily(instanceFamily)
+      }
+
+      public fun build(): software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ReferenceProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ReferenceProperty,
+    ) : CdkObject(cdkObject),
+        ReferenceProperty {
+      /**
+       * The instance family to refer.
+       *
+       * Ensure that you specify the correct family name. For example, C6i and C6g are valid values,
+       * but C6 is not.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-launchtemplate-reference.html#cfn-ec2-launchtemplate-reference-instancefamily)
+       */
+      override fun instanceFamily(): String? = unwrap(this).getInstanceFamily()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): ReferenceProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ReferenceProperty):
+          ReferenceProperty = CdkObjectWrappers.wrap(cdkObject) as? ReferenceProperty ?:
+          Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: ReferenceProperty):
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ReferenceProperty = (wrapped as
+          CdkObject).cdkObject as
+          software.amazon.awscdk.services.ec2.CfnLaunchTemplate.ReferenceProperty
     }
   }
 

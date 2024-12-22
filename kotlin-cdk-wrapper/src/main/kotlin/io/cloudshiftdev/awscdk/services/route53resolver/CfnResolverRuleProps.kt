@@ -24,7 +24,6 @@ import kotlin.collections.List
  * CfnResolverRuleProps cfnResolverRuleProps = CfnResolverRuleProps.builder()
  * .ruleType("ruleType")
  * // the properties below are optional
- * .delegationRecord("delegationRecord")
  * .domainName("domainName")
  * .name("name")
  * .resolverEndpointId("resolverEndpointId")
@@ -37,6 +36,7 @@ import kotlin.collections.List
  * .ipv6("ipv6")
  * .port("port")
  * .protocol("protocol")
+ * .serverNameIndication("serverNameIndication")
  * .build()))
  * .build();
  * ```
@@ -44,13 +44,6 @@ import kotlin.collections.List
  * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html)
  */
 public interface CfnResolverRuleProps {
-  /**
-   * The name server domain for queries to be delegated to if a query matches the delegation record.
-   *
-   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-delegationrecord)
-   */
-  public fun delegationRecord(): String? = unwrap(this).getDelegationRecord()
-
   /**
    * DNS queries for this domain name are forwarded to the IP addresses that are specified in
    * `TargetIps` .
@@ -117,12 +110,6 @@ public interface CfnResolverRuleProps {
    */
   @CdkDslMarker
   public interface Builder {
-    /**
-     * @param delegationRecord The name server domain for queries to be delegated to if a query
-     * matches the delegation record.
-     */
-    public fun delegationRecord(delegationRecord: String)
-
     /**
      * @param domainName DNS queries for this domain name are forwarded to the IP addresses that are
      * specified in `TargetIps` .
@@ -194,14 +181,6 @@ public interface CfnResolverRuleProps {
     private val cdkBuilder:
         software.amazon.awscdk.services.route53resolver.CfnResolverRuleProps.Builder =
         software.amazon.awscdk.services.route53resolver.CfnResolverRuleProps.builder()
-
-    /**
-     * @param delegationRecord The name server domain for queries to be delegated to if a query
-     * matches the delegation record.
-     */
-    override fun delegationRecord(delegationRecord: String) {
-      cdkBuilder.delegationRecord(delegationRecord)
-    }
 
     /**
      * @param domainName DNS queries for this domain name are forwarded to the IP addresses that are
@@ -291,14 +270,6 @@ public interface CfnResolverRuleProps {
     cdkObject: software.amazon.awscdk.services.route53resolver.CfnResolverRuleProps,
   ) : CdkObject(cdkObject),
       CfnResolverRuleProps {
-    /**
-     * The name server domain for queries to be delegated to if a query matches the delegation
-     * record.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-route53resolver-resolverrule.html#cfn-route53resolver-resolverrule-delegationrecord)
-     */
-    override fun delegationRecord(): String? = unwrap(this).getDelegationRecord()
-
     /**
      * DNS queries for this domain name are forwarded to the IP addresses that are specified in
      * `TargetIps` .

@@ -200,7 +200,7 @@ public open class PipelineProject(
     /**
      * Build environment to use for the build.
      *
-     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_1_0
+     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_7_0
      *
      * @param environment Build environment to use for the build. 
      */
@@ -209,7 +209,7 @@ public open class PipelineProject(
     /**
      * Build environment to use for the build.
      *
-     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_1_0
+     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_7_0
      *
      * @param environment Build environment to use for the build. 
      */
@@ -592,7 +592,7 @@ public open class PipelineProject(
     /**
      * Build environment to use for the build.
      *
-     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_1_0
+     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_7_0
      *
      * @param environment Build environment to use for the build. 
      */
@@ -603,7 +603,7 @@ public open class PipelineProject(
     /**
      * Build environment to use for the build.
      *
-     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_1_0
+     * Default: BuildEnvironment.LinuxBuildImage.STANDARD_7_0
      *
      * @param environment Build environment to use for the build. 
      */

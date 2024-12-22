@@ -27,13 +27,13 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Object providerDetails;
  * CfnUserPoolIdentityProvider cfnUserPoolIdentityProvider =
  * CfnUserPoolIdentityProvider.Builder.create(this, "MyCfnUserPoolIdentityProvider")
+ * .providerDetails(providerDetails)
  * .providerName("providerName")
  * .providerType("providerType")
  * .userPoolId("userPoolId")
  * // the properties below are optional
  * .attributeMapping(attributeMapping)
  * .idpIdentifiers(List.of("idpIdentifiers"))
- * .providerDetails(providerDetails)
  * .build();
  * ```
  *
@@ -58,11 +58,6 @@ public open class CfnUserPoolIdentityProvider(
     props: CfnUserPoolIdentityProviderProps.Builder.() -> Unit,
   ) : this(scope, id, CfnUserPoolIdentityProviderProps(props)
   )
-
-  /**
-   * The resource ID.
-   */
-  public open fun attrId(): String = unwrap(this).getAttrId()
 
   /**
    * A mapping of IdP attributes to standard and custom user pool attributes.
@@ -105,7 +100,7 @@ public open class CfnUserPoolIdentityProvider(
   /**
    * The scopes, URLs, and identifiers for your external identity provider.
    */
-  public open fun providerDetails(): Any? = unwrap(this).getProviderDetails()
+  public open fun providerDetails(): Any = unwrap(this).getProviderDetails()
 
   /**
    * The scopes, URLs, and identifiers for your external identity provider.

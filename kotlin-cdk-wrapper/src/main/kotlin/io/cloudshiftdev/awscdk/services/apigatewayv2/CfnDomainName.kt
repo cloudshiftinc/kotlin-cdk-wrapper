@@ -189,7 +189,7 @@ public open class CfnDomainName(
     /**
      * The custom domain name for your API in Amazon API Gateway.
      *
-     * Uppercase letters are not supported.
+     * Uppercase letters and the underscore ( `_` ) character are not supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname)
      * @param domainName The custom domain name for your API in Amazon API Gateway. 
@@ -269,7 +269,7 @@ public open class CfnDomainName(
     /**
      * The custom domain name for your API in Amazon API Gateway.
      *
-     * Uppercase letters are not supported.
+     * Uppercase letters and the underscore ( `_` ) character are not supported.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-apigatewayv2-domainname.html#cfn-apigatewayv2-domainname-domainname)
      * @param domainName The custom domain name for your API in Amazon API Gateway. 

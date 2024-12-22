@@ -110,6 +110,18 @@ import kotlin.jvm.JvmName
  * .database("database")
  * .host("host")
  * .warehouse("warehouse")
+ * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .build())
  * .sparkParameters(SparkParametersProperty.builder()
  * .host("host")
@@ -125,6 +137,17 @@ import kotlin.jvm.JvmName
  * .host("host")
  * .port(123)
  * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .productType("productType")
  * .build())
  * .teradataParameters(TeradataParametersProperty.builder()
@@ -229,6 +252,18 @@ import kotlin.jvm.JvmName
  * .database("database")
  * .host("host")
  * .warehouse("warehouse")
+ * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .build())
  * .sparkParameters(SparkParametersProperty.builder()
  * .host("host")
@@ -244,6 +279,17 @@ import kotlin.jvm.JvmName
  * .host("host")
  * .port(123)
  * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .productType("productType")
  * .build())
  * .teradataParameters(TeradataParametersProperty.builder()
@@ -345,6 +391,18 @@ import kotlin.jvm.JvmName
  * .database("database")
  * .host("host")
  * .warehouse("warehouse")
+ * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .build())
  * .sparkParameters(SparkParametersProperty.builder()
  * .host("host")
@@ -360,6 +418,17 @@ import kotlin.jvm.JvmName
  * .host("host")
  * .port(123)
  * // the properties below are optional
+ * .authenticationType("authenticationType")
+ * .databaseAccessControlRole("databaseAccessControlRole")
+ * .oAuthParameters(OAuthParametersProperty.builder()
+ * .tokenProviderUrl("tokenProviderUrl")
+ * // the properties below are optional
+ * .identityProviderResourceUri("identityProviderResourceUri")
+ * .identityProviderVpcConnectionProperties(VpcConnectionPropertiesProperty.builder()
+ * .vpcConnectionArn("vpcConnectionArn")
+ * .build())
+ * .oAuthScope("oAuthScope")
+ * .build())
  * .productType("productType")
  * .build())
  * .teradataParameters(TeradataParametersProperty.builder()
@@ -377,6 +446,7 @@ import kotlin.jvm.JvmName
  * .message("message")
  * .type("type")
  * .build())
+ * .folderArns(List.of("folderArns"))
  * .permissions(List.of(ResourcePermissionProperty.builder()
  * .actions(List.of("actions"))
  * .principal("principal")
@@ -452,6 +522,11 @@ public interface CfnDataSourceProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-errorinfo)
    */
   public fun errorInfo(): Any? = unwrap(this).getErrorInfo()
+
+  /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-folderarns)
+   */
+  public fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
 
   /**
    * A display name for the data source.
@@ -616,6 +691,16 @@ public interface CfnDataSourceProps {
     @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
     @JvmName("940209a500ffcaecdb951c48cf1f2043c693a9937c26643df99def8eae972df8")
     public fun errorInfo(errorInfo: CfnDataSource.DataSourceErrorInfoProperty.Builder.() -> Unit)
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    public fun folderArns(folderArns: List<String>)
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    public fun folderArns(vararg folderArns: String)
 
     /**
      * @param name A display name for the data source. 
@@ -842,6 +927,18 @@ public interface CfnDataSourceProps {
         Unit = errorInfo(CfnDataSource.DataSourceErrorInfoProperty(errorInfo))
 
     /**
+     * @param folderArns the value to be set.
+     */
+    override fun folderArns(folderArns: List<String>) {
+      cdkBuilder.folderArns(folderArns)
+    }
+
+    /**
+     * @param folderArns the value to be set.
+     */
+    override fun folderArns(vararg folderArns: String): Unit = folderArns(folderArns.toList())
+
+    /**
      * @param name A display name for the data source. 
      */
     override fun name(name: String) {
@@ -1007,6 +1104,11 @@ public interface CfnDataSourceProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-errorinfo)
      */
     override fun errorInfo(): Any? = unwrap(this).getErrorInfo()
+
+    /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-quicksight-datasource.html#cfn-quicksight-datasource-folderarns)
+     */
+    override fun folderArns(): List<String> = unwrap(this).getFolderArns() ?: emptyList()
 
     /**
      * A display name for the data source.

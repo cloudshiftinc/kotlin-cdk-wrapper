@@ -41,6 +41,13 @@ public interface AuthFlow {
   public fun custom(): Boolean? = unwrap(this).getCustom()
 
   /**
+   * Enable Choice-based authentication.
+   *
+   * Default: false
+   */
+  public fun user(): Boolean? = unwrap(this).getUser()
+
+  /**
    * Enable auth using username &amp; password.
    *
    * Default: false
@@ -70,6 +77,11 @@ public interface AuthFlow {
     public fun custom(custom: Boolean)
 
     /**
+     * @param user Enable Choice-based authentication.
+     */
+    public fun user(user: Boolean)
+
+    /**
      * @param userPassword Enable auth using username &amp; password.
      */
     public fun userPassword(userPassword: Boolean)
@@ -96,6 +108,13 @@ public interface AuthFlow {
      */
     override fun custom(custom: Boolean) {
       cdkBuilder.custom(custom)
+    }
+
+    /**
+     * @param user Enable Choice-based authentication.
+     */
+    override fun user(user: Boolean) {
+      cdkBuilder.user(user)
     }
 
     /**
@@ -132,6 +151,13 @@ public interface AuthFlow {
      * Default: false
      */
     override fun custom(): Boolean? = unwrap(this).getCustom()
+
+    /**
+     * Enable Choice-based authentication.
+     *
+     * Default: false
+     */
+    override fun user(): Boolean? = unwrap(this).getUser()
 
     /**
      * Enable auth using username &amp; password.

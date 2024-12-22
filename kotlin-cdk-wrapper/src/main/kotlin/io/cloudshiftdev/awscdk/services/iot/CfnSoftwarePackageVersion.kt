@@ -108,19 +108,19 @@ public open class CfnSoftwarePackageVersion(
   public open fun attrStatus(): String = unwrap(this).getAttrStatus()
 
   /**
-   *
+   * Metadata that can be used to define a package version’s configuration.
    */
   public open fun attributes(): Any? = unwrap(this).getAttributes()
 
   /**
-   *
+   * Metadata that can be used to define a package version’s configuration.
    */
   public open fun attributes(`value`: IResolvable) {
     unwrap(this).setAttributes(`value`.let(IResolvable.Companion::unwrap))
   }
 
   /**
-   *
+   * Metadata that can be used to define a package version’s configuration.
    */
   public open fun attributes(`value`: Map<String, String>) {
     unwrap(this).setAttributes(`value`)
@@ -133,12 +133,12 @@ public open class CfnSoftwarePackageVersion(
       unwrap(this).getCdkTagManager().let(TagManager::wrap)
 
   /**
-   *
+   * A summary of the package version being created.
    */
   public open fun description(): String? = unwrap(this).getDescription()
 
   /**
-   *
+   * A summary of the package version being created.
    */
   public open fun description(`value`: String) {
     unwrap(this).setDescription(`value`)
@@ -154,41 +154,41 @@ public open class CfnSoftwarePackageVersion(
   }
 
   /**
-   *
+   * The name of the associated software package.
    */
   public open fun packageName(): String = unwrap(this).getPackageName()
 
   /**
-   *
+   * The name of the associated software package.
    */
   public open fun packageName(`value`: String) {
     unwrap(this).setPackageName(`value`)
   }
 
   /**
-   * An array of key-value pairs to apply to this resource.
+   * Metadata that can be used to manage the package version.
    */
   public open fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
-   * An array of key-value pairs to apply to this resource.
+   * Metadata that can be used to manage the package version.
    */
   public open fun tags(`value`: List<CfnTag>) {
     unwrap(this).setTags(`value`.map(CfnTag.Companion::unwrap))
   }
 
   /**
-   * An array of key-value pairs to apply to this resource.
+   * Metadata that can be used to manage the package version.
    */
   public open fun tags(vararg `value`: CfnTag): Unit = tags(`value`.toList())
 
   /**
-   *
+   * The name of the new package version.
    */
   public open fun versionName(): String? = unwrap(this).getVersionName()
 
   /**
-   *
+   * The name of the new package version.
    */
   public open fun versionName(`value`: String) {
     unwrap(this).setVersionName(`value`)
@@ -200,48 +200,70 @@ public open class CfnSoftwarePackageVersion(
   @CdkDslMarker
   public interface Builder {
     /**
+     * Metadata that can be used to define a package version’s configuration.
+     *
+     * For example, the S3 file location, configuration options that are being sent to the device or
+     * fleet.
+     *
+     * The combined size of all the attributes on a package version is limited to 3KB.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-attributes)
-     * @param attributes 
+     * @param attributes Metadata that can be used to define a package version’s configuration. 
      */
     public fun attributes(attributes: IResolvable)
 
     /**
+     * Metadata that can be used to define a package version’s configuration.
+     *
+     * For example, the S3 file location, configuration options that are being sent to the device or
+     * fleet.
+     *
+     * The combined size of all the attributes on a package version is limited to 3KB.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-attributes)
-     * @param attributes 
+     * @param attributes Metadata that can be used to define a package version’s configuration. 
      */
     public fun attributes(attributes: Map<String, String>)
 
     /**
+     * A summary of the package version being created.
+     *
+     * This can be used to outline the package's contents or purpose.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-description)
-     * @param description 
+     * @param description A summary of the package version being created. 
      */
     public fun description(description: String)
 
     /**
+     * The name of the associated software package.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-packagename)
-     * @param packageName 
+     * @param packageName The name of the associated software package. 
      */
     public fun packageName(packageName: String)
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * Metadata that can be used to manage the package version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
+     * @param tags Metadata that can be used to manage the package version. 
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * Metadata that can be used to manage the package version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
+     * @param tags Metadata that can be used to manage the package version. 
      */
     public fun tags(vararg tags: CfnTag)
 
     /**
+     * The name of the new package version.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-versionname)
-     * @param versionName 
+     * @param versionName The name of the new package version. 
      */
     public fun versionName(versionName: String)
   }
@@ -254,58 +276,80 @@ public open class CfnSoftwarePackageVersion(
         software.amazon.awscdk.services.iot.CfnSoftwarePackageVersion.Builder.create(scope, id)
 
     /**
+     * Metadata that can be used to define a package version’s configuration.
+     *
+     * For example, the S3 file location, configuration options that are being sent to the device or
+     * fleet.
+     *
+     * The combined size of all the attributes on a package version is limited to 3KB.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-attributes)
-     * @param attributes 
+     * @param attributes Metadata that can be used to define a package version’s configuration. 
      */
     override fun attributes(attributes: IResolvable) {
       cdkBuilder.attributes(attributes.let(IResolvable.Companion::unwrap))
     }
 
     /**
+     * Metadata that can be used to define a package version’s configuration.
+     *
+     * For example, the S3 file location, configuration options that are being sent to the device or
+     * fleet.
+     *
+     * The combined size of all the attributes on a package version is limited to 3KB.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-attributes)
-     * @param attributes 
+     * @param attributes Metadata that can be used to define a package version’s configuration. 
      */
     override fun attributes(attributes: Map<String, String>) {
       cdkBuilder.attributes(attributes)
     }
 
     /**
+     * A summary of the package version being created.
+     *
+     * This can be used to outline the package's contents or purpose.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-description)
-     * @param description 
+     * @param description A summary of the package version being created. 
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
     }
 
     /**
+     * The name of the associated software package.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-packagename)
-     * @param packageName 
+     * @param packageName The name of the associated software package. 
      */
     override fun packageName(packageName: String) {
       cdkBuilder.packageName(packageName)
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * Metadata that can be used to manage the package version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
+     * @param tags Metadata that can be used to manage the package version. 
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * An array of key-value pairs to apply to this resource.
+     * Metadata that can be used to manage the package version.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-tags)
-     * @param tags An array of key-value pairs to apply to this resource. 
+     * @param tags Metadata that can be used to manage the package version. 
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     /**
+     * The name of the new package version.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-iot-softwarepackageversion.html#cfn-iot-softwarepackageversion-versionname)
-     * @param versionName 
+     * @param versionName The name of the new package version. 
      */
     override fun versionName(versionName: String) {
       cdkBuilder.versionName(versionName)

@@ -4,6 +4,7 @@ package io.cloudshiftdev.awscdk.services.cognito
 
 import io.cloudshiftdev.awscdk.Resource
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
+import kotlin.Deprecated
 import kotlin.String
 import kotlin.Unit
 import kotlin.jvm.JvmName
@@ -78,9 +79,20 @@ public open class UserPoolDomain(
       baseUrl(BaseUrlOptions(options))
 
   /**
+   * (deprecated) The domain name of the CloudFront distribution associated with the user pool
+   * domain.
+   *
+   * This method creates a custom resource internally to get the CloudFront domain name.
+   *
+   * @deprecated use `cloudFrontEndpoint` method instead.
+   */
+  @Deprecated(message = "deprecated in CDK")
+  public open fun cloudFrontDomainName(): String = unwrap(this).getCloudFrontDomainName()
+
+  /**
    * The domain name of the CloudFront distribution associated with the user pool domain.
    */
-  public open fun cloudFrontDomainName(): String = unwrap(this).getCloudFrontDomainName()
+  public open fun cloudFrontEndpoint(): String = unwrap(this).getCloudFrontEndpoint()
 
   /**
    * The domain that was specified to be created.

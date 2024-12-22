@@ -6497,7 +6497,11 @@ public open class CfnFlow(
   }
 
   /**
-   * SAP Source connector page size.
+   * Sets the page size for each *concurrent process* that transfers OData records from your SAP
+   * instance.
+   *
+   * A concurrent process is query that retrieves a batch of records as part of a flow run. Amazon
+   * AppFlow can run multiple concurrent processes in parallel to transfer data faster.
    *
    * Example:
    *
@@ -6515,6 +6519,12 @@ public open class CfnFlow(
    */
   public interface SAPODataPaginationConfigProperty {
     /**
+     * The maximum number of records that Amazon AppFlow receives in each page of the response from
+     * your SAP application.
+     *
+     * For transfers of OData records, the maximum page size is 3,000. For transfers of data that
+     * comes from an ODP provider, the maximum page size is 10,000.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html#cfn-appflow-flow-sapodatapaginationconfig-maxpagesize)
      */
     public fun maxPageSize(): Number
@@ -6525,7 +6535,10 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxPageSize the value to be set. 
+       * @param maxPageSize The maximum number of records that Amazon AppFlow receives in each page
+       * of the response from your SAP application. 
+       * For transfers of OData records, the maximum page size is 3,000. For transfers of data that
+       * comes from an ODP provider, the maximum page size is 10,000.
        */
       public fun maxPageSize(maxPageSize: Number)
     }
@@ -6536,7 +6549,10 @@ public open class CfnFlow(
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataPaginationConfigProperty.builder()
 
       /**
-       * @param maxPageSize the value to be set. 
+       * @param maxPageSize The maximum number of records that Amazon AppFlow receives in each page
+       * of the response from your SAP application. 
+       * For transfers of OData records, the maximum page size is 3,000. For transfers of data that
+       * comes from an ODP provider, the maximum page size is 10,000.
        */
       override fun maxPageSize(maxPageSize: Number) {
         cdkBuilder.maxPageSize(maxPageSize)
@@ -6552,6 +6568,12 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         SAPODataPaginationConfigProperty {
       /**
+       * The maximum number of records that Amazon AppFlow receives in each page of the response
+       * from your SAP application.
+       *
+       * For transfers of OData records, the maximum page size is 3,000. For transfers of data that
+       * comes from an ODP provider, the maximum page size is 10,000.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatapaginationconfig.html#cfn-appflow-flow-sapodatapaginationconfig-maxpagesize)
        */
       override fun maxPageSize(): Number = unwrap(this).getMaxPageSize()
@@ -6576,7 +6598,10 @@ public open class CfnFlow(
   }
 
   /**
-   * SAP Source connector parallelism factor.
+   * Sets the number of *concurrent processes* that transfer OData records from your SAP instance.
+   *
+   * A concurrent process is query that retrieves a batch of records as part of a flow run. Amazon
+   * AppFlow can run multiple concurrent processes in parallel to transfer data faster.
    *
    * Example:
    *
@@ -6594,6 +6619,9 @@ public open class CfnFlow(
    */
   public interface SAPODataParallelismConfigProperty {
     /**
+     * The maximum number of processes that Amazon AppFlow runs at the same time when it retrieves
+     * your data from your SAP application.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html#cfn-appflow-flow-sapodataparallelismconfig-maxparallelism)
      */
     public fun maxParallelism(): Number
@@ -6604,7 +6632,8 @@ public open class CfnFlow(
     @CdkDslMarker
     public interface Builder {
       /**
-       * @param maxParallelism the value to be set. 
+       * @param maxParallelism The maximum number of processes that Amazon AppFlow runs at the same
+       * time when it retrieves your data from your SAP application. 
        */
       public fun maxParallelism(maxParallelism: Number)
     }
@@ -6616,7 +6645,8 @@ public open class CfnFlow(
           software.amazon.awscdk.services.appflow.CfnFlow.SAPODataParallelismConfigProperty.builder()
 
       /**
-       * @param maxParallelism the value to be set. 
+       * @param maxParallelism The maximum number of processes that Amazon AppFlow runs at the same
+       * time when it retrieves your data from your SAP application. 
        */
       override fun maxParallelism(maxParallelism: Number) {
         cdkBuilder.maxParallelism(maxParallelism)
@@ -6632,6 +6662,9 @@ public open class CfnFlow(
     ) : CdkObject(cdkObject),
         SAPODataParallelismConfigProperty {
       /**
+       * The maximum number of processes that Amazon AppFlow runs at the same time when it retrieves
+       * your data from your SAP application.
+       *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodataparallelismconfig.html#cfn-appflow-flow-sapodataparallelismconfig-maxparallelism)
        */
       override fun maxParallelism(): Number = unwrap(this).getMaxParallelism()
@@ -6689,14 +6722,15 @@ public open class CfnFlow(
     public fun objectPath(): String
 
     /**
-     * SAP Source connector page size.
+     * Sets the page size for each concurrent process that transfers OData records from your SAP
+     * instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-paginationconfig)
      */
     public fun paginationConfig(): Any? = unwrap(this).getPaginationConfig()
 
     /**
-     * SAP Source connector parallelism factor.
+     * Sets the number of concurrent processes that transfers OData records from your SAP instance.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-parallelismconfig)
      */
@@ -6713,17 +6747,20 @@ public open class CfnFlow(
       public fun objectPath(objectPath: String)
 
       /**
-       * @param paginationConfig SAP Source connector page size.
+       * @param paginationConfig Sets the page size for each concurrent process that transfers OData
+       * records from your SAP instance.
        */
       public fun paginationConfig(paginationConfig: IResolvable)
 
       /**
-       * @param paginationConfig SAP Source connector page size.
+       * @param paginationConfig Sets the page size for each concurrent process that transfers OData
+       * records from your SAP instance.
        */
       public fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty)
 
       /**
-       * @param paginationConfig SAP Source connector page size.
+       * @param paginationConfig Sets the page size for each concurrent process that transfers OData
+       * records from your SAP instance.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7195c68fb720e8cea66422e83f2b9dfdfd911194562c6ea948f3df6e046ba92")
@@ -6731,17 +6768,20 @@ public open class CfnFlow(
           fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty.Builder.() -> Unit)
 
       /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
+       * @param parallelismConfig Sets the number of concurrent processes that transfers OData
+       * records from your SAP instance.
        */
       public fun parallelismConfig(parallelismConfig: IResolvable)
 
       /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
+       * @param parallelismConfig Sets the number of concurrent processes that transfers OData
+       * records from your SAP instance.
        */
       public fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty)
 
       /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
+       * @param parallelismConfig Sets the number of concurrent processes that transfers OData
+       * records from your SAP instance.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7f95371b951a28de06e5a099899d0ae58f7cd8fba9b9bbf1bd458d803c371c14")
@@ -6762,21 +6802,24 @@ public open class CfnFlow(
       }
 
       /**
-       * @param paginationConfig SAP Source connector page size.
+       * @param paginationConfig Sets the page size for each concurrent process that transfers OData
+       * records from your SAP instance.
        */
       override fun paginationConfig(paginationConfig: IResolvable) {
         cdkBuilder.paginationConfig(paginationConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param paginationConfig SAP Source connector page size.
+       * @param paginationConfig Sets the page size for each concurrent process that transfers OData
+       * records from your SAP instance.
        */
       override fun paginationConfig(paginationConfig: SAPODataPaginationConfigProperty) {
         cdkBuilder.paginationConfig(paginationConfig.let(SAPODataPaginationConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param paginationConfig SAP Source connector page size.
+       * @param paginationConfig Sets the page size for each concurrent process that transfers OData
+       * records from your SAP instance.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("f7195c68fb720e8cea66422e83f2b9dfdfd911194562c6ea948f3df6e046ba92")
@@ -6785,21 +6828,24 @@ public open class CfnFlow(
           Unit = paginationConfig(SAPODataPaginationConfigProperty(paginationConfig))
 
       /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
+       * @param parallelismConfig Sets the number of concurrent processes that transfers OData
+       * records from your SAP instance.
        */
       override fun parallelismConfig(parallelismConfig: IResolvable) {
         cdkBuilder.parallelismConfig(parallelismConfig.let(IResolvable.Companion::unwrap))
       }
 
       /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
+       * @param parallelismConfig Sets the number of concurrent processes that transfers OData
+       * records from your SAP instance.
        */
       override fun parallelismConfig(parallelismConfig: SAPODataParallelismConfigProperty) {
         cdkBuilder.parallelismConfig(parallelismConfig.let(SAPODataParallelismConfigProperty.Companion::unwrap))
       }
 
       /**
-       * @param parallelismConfig SAP Source connector parallelism factor.
+       * @param parallelismConfig Sets the number of concurrent processes that transfers OData
+       * records from your SAP instance.
        */
       @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
       @JvmName("7f95371b951a28de06e5a099899d0ae58f7cd8fba9b9bbf1bd458d803c371c14")
@@ -6824,14 +6870,16 @@ public open class CfnFlow(
       override fun objectPath(): String = unwrap(this).getObjectPath()
 
       /**
-       * SAP Source connector page size.
+       * Sets the page size for each concurrent process that transfers OData records from your SAP
+       * instance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-paginationconfig)
        */
       override fun paginationConfig(): Any? = unwrap(this).getPaginationConfig()
 
       /**
-       * SAP Source connector parallelism factor.
+       * Sets the number of concurrent processes that transfers OData records from your SAP
+       * instance.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-appflow-flow-sapodatasourceproperties.html#cfn-appflow-flow-sapodatasourceproperties-parallelismconfig)
        */

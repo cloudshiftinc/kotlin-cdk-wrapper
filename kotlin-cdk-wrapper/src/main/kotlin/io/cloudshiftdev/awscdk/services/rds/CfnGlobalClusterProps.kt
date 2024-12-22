@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.rds
 
+import io.cloudshiftdev.awscdk.CfnTag
 import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
@@ -10,6 +11,8 @@ import kotlin.Any
 import kotlin.Boolean
 import kotlin.String
 import kotlin.Unit
+import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnGlobalCluster`.
@@ -26,8 +29,15 @@ import kotlin.Unit
  * .engineLifecycleSupport("engineLifecycleSupport")
  * .engineVersion("engineVersion")
  * .globalClusterIdentifier("globalClusterIdentifier")
+ * .globalEndpoint(GlobalEndpointProperty.builder()
+ * .address("address")
+ * .build())
  * .sourceDbClusterIdentifier("sourceDbClusterIdentifier")
  * .storageEncrypted(false)
+ * .tags(List.of(CfnTag.builder()
+ * .key("key")
+ * .value("value")
+ * .build()))
  * .build();
  * ```
  *
@@ -107,6 +117,15 @@ public interface CfnGlobalClusterProps {
   public fun globalClusterIdentifier(): String? = unwrap(this).getGlobalClusterIdentifier()
 
   /**
+   * The writer endpoint for the new global database cluster.
+   *
+   * This endpoint always points to the writer DB instance in the current primary cluster.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalendpoint)
+   */
+  public fun globalEndpoint(): Any? = unwrap(this).getGlobalEndpoint()
+
+  /**
    * The Amazon Resource Name (ARN) to use as the primary cluster of the global database.
    *
    * If you provide a value for this parameter, don't specify values for the following settings
@@ -132,6 +151,19 @@ public interface CfnGlobalClusterProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-storageencrypted)
    */
   public fun storageEncrypted(): Any? = unwrap(this).getStorageEncrypted()
+
+  /**
+   * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+   *
+   * For more information, see [Tagging Amazon RDS
+   * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+   * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+   * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in the
+   * *Amazon Aurora User Guide* .
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-tags)
+   */
+  public fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
 
   /**
    * A builder for [CfnGlobalClusterProps]
@@ -204,6 +236,27 @@ public interface CfnGlobalClusterProps {
     public fun globalClusterIdentifier(globalClusterIdentifier: String)
 
     /**
+     * @param globalEndpoint The writer endpoint for the new global database cluster.
+     * This endpoint always points to the writer DB instance in the current primary cluster.
+     */
+    public fun globalEndpoint(globalEndpoint: IResolvable)
+
+    /**
+     * @param globalEndpoint The writer endpoint for the new global database cluster.
+     * This endpoint always points to the writer DB instance in the current primary cluster.
+     */
+    public fun globalEndpoint(globalEndpoint: CfnGlobalCluster.GlobalEndpointProperty)
+
+    /**
+     * @param globalEndpoint The writer endpoint for the new global database cluster.
+     * This endpoint always points to the writer DB instance in the current primary cluster.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e8bed818e64c78311a2895bab0181d9d8278e1588ec61cb9fb2a42b997b8db24")
+    public
+        fun globalEndpoint(globalEndpoint: CfnGlobalCluster.GlobalEndpointProperty.Builder.() -> Unit)
+
+    /**
      * @param sourceDbClusterIdentifier The Amazon Resource Name (ARN) to use as the primary cluster
      * of the global database.
      * If you provide a value for this parameter, don't specify values for the following settings
@@ -235,6 +288,26 @@ public interface CfnGlobalClusterProps {
      * uses the setting from the source DB cluster.
      */
     public fun storageEncrypted(storageEncrypted: IResolvable)
+
+    /**
+     * @param tags Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+     * For more information, see [Tagging Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+     * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in
+     * the *Amazon Aurora User Guide* .
+     */
+    public fun tags(tags: List<CfnTag>)
+
+    /**
+     * @param tags Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+     * For more information, see [Tagging Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+     * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in
+     * the *Amazon Aurora User Guide* .
+     */
+    public fun tags(vararg tags: CfnTag)
   }
 
   private class BuilderImpl : Builder {
@@ -319,6 +392,32 @@ public interface CfnGlobalClusterProps {
     }
 
     /**
+     * @param globalEndpoint The writer endpoint for the new global database cluster.
+     * This endpoint always points to the writer DB instance in the current primary cluster.
+     */
+    override fun globalEndpoint(globalEndpoint: IResolvable) {
+      cdkBuilder.globalEndpoint(globalEndpoint.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param globalEndpoint The writer endpoint for the new global database cluster.
+     * This endpoint always points to the writer DB instance in the current primary cluster.
+     */
+    override fun globalEndpoint(globalEndpoint: CfnGlobalCluster.GlobalEndpointProperty) {
+      cdkBuilder.globalEndpoint(globalEndpoint.let(CfnGlobalCluster.GlobalEndpointProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param globalEndpoint The writer endpoint for the new global database cluster.
+     * This endpoint always points to the writer DB instance in the current primary cluster.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("e8bed818e64c78311a2895bab0181d9d8278e1588ec61cb9fb2a42b997b8db24")
+    override
+        fun globalEndpoint(globalEndpoint: CfnGlobalCluster.GlobalEndpointProperty.Builder.() -> Unit):
+        Unit = globalEndpoint(CfnGlobalCluster.GlobalEndpointProperty(globalEndpoint))
+
+    /**
      * @param sourceDbClusterIdentifier The Amazon Resource Name (ARN) to use as the primary cluster
      * of the global database.
      * If you provide a value for this parameter, don't specify values for the following settings
@@ -356,6 +455,28 @@ public interface CfnGlobalClusterProps {
     override fun storageEncrypted(storageEncrypted: IResolvable) {
       cdkBuilder.storageEncrypted(storageEncrypted.let(IResolvable.Companion::unwrap))
     }
+
+    /**
+     * @param tags Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+     * For more information, see [Tagging Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+     * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in
+     * the *Amazon Aurora User Guide* .
+     */
+    override fun tags(tags: List<CfnTag>) {
+      cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
+    }
+
+    /**
+     * @param tags Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+     * For more information, see [Tagging Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+     * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in
+     * the *Amazon Aurora User Guide* .
+     */
+    override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
     public fun build(): software.amazon.awscdk.services.rds.CfnGlobalClusterProps =
         cdkBuilder.build()
@@ -438,6 +559,15 @@ public interface CfnGlobalClusterProps {
     override fun globalClusterIdentifier(): String? = unwrap(this).getGlobalClusterIdentifier()
 
     /**
+     * The writer endpoint for the new global database cluster.
+     *
+     * This endpoint always points to the writer DB instance in the current primary cluster.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-globalendpoint)
+     */
+    override fun globalEndpoint(): Any? = unwrap(this).getGlobalEndpoint()
+
+    /**
      * The Amazon Resource Name (ARN) to use as the primary cluster of the global database.
      *
      * If you provide a value for this parameter, don't specify values for the following settings
@@ -463,6 +593,19 @@ public interface CfnGlobalClusterProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-storageencrypted)
      */
     override fun storageEncrypted(): Any? = unwrap(this).getStorageEncrypted()
+
+    /**
+     * Metadata assigned to an Amazon RDS resource consisting of a key-value pair.
+     *
+     * For more information, see [Tagging Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Tagging.html) in the
+     * *Amazon RDS User Guide* or [Tagging Amazon Aurora and Amazon RDS
+     * resources](https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/USER_Tagging.html) in
+     * the *Amazon Aurora User Guide* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-rds-globalcluster.html#cfn-rds-globalcluster-tags)
+     */
+    override fun tags(): List<CfnTag> = unwrap(this).getTags()?.map(CfnTag::wrap) ?: emptyList()
   }
 
   public companion object {

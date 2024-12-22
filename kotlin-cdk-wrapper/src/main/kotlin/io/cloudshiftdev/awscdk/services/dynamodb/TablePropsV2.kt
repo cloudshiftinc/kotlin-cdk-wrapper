@@ -129,6 +129,14 @@ public interface TablePropsV2 : TableOptionsV2 {
   public fun timeToLiveAttribute(): String? = unwrap(this).getTimeToLiveAttribute()
 
   /**
+   * The warm throughput configuration for the table.
+   *
+   * Default: - no warm throughput is configured
+   */
+  public fun warmThroughput(): WarmThroughput? =
+      unwrap(this).getWarmThroughput()?.let(WarmThroughput::wrap)
+
+  /**
    * A builder for [TablePropsV2]
    */
   @CdkDslMarker
@@ -261,12 +269,12 @@ public interface TablePropsV2 : TableOptionsV2 {
     public fun tableName(tableName: String)
 
     /**
-     * @param tags Tags to be applied to the table or replica table.
+     * @param tags Tags to be applied to the primary table (default replica table).
      */
     public fun tags(tags: List<CfnTag>)
 
     /**
-     * @param tags Tags to be applied to the table or replica table.
+     * @param tags Tags to be applied to the primary table (default replica table).
      */
     public fun tags(vararg tags: CfnTag)
 
@@ -274,6 +282,18 @@ public interface TablePropsV2 : TableOptionsV2 {
      * @param timeToLiveAttribute The name of the TTL attribute.
      */
     public fun timeToLiveAttribute(timeToLiveAttribute: String)
+
+    /**
+     * @param warmThroughput The warm throughput configuration for the table.
+     */
+    public fun warmThroughput(warmThroughput: WarmThroughput)
+
+    /**
+     * @param warmThroughput The warm throughput configuration for the table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d1032de76eaa9b5e0b2975fa6711434131c4cd1779a381c0a448e06a41f700fc")
+    public fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit)
   }
 
   private class BuilderImpl : Builder {
@@ -444,14 +464,14 @@ public interface TablePropsV2 : TableOptionsV2 {
     }
 
     /**
-     * @param tags Tags to be applied to the table or replica table.
+     * @param tags Tags to be applied to the primary table (default replica table).
      */
     override fun tags(tags: List<CfnTag>) {
       cdkBuilder.tags(tags.map(CfnTag.Companion::unwrap))
     }
 
     /**
-     * @param tags Tags to be applied to the table or replica table.
+     * @param tags Tags to be applied to the primary table (default replica table).
      */
     override fun tags(vararg tags: CfnTag): Unit = tags(tags.toList())
 
@@ -461,6 +481,21 @@ public interface TablePropsV2 : TableOptionsV2 {
     override fun timeToLiveAttribute(timeToLiveAttribute: String) {
       cdkBuilder.timeToLiveAttribute(timeToLiveAttribute)
     }
+
+    /**
+     * @param warmThroughput The warm throughput configuration for the table.
+     */
+    override fun warmThroughput(warmThroughput: WarmThroughput) {
+      cdkBuilder.warmThroughput(warmThroughput.let(WarmThroughput.Companion::unwrap))
+    }
+
+    /**
+     * @param warmThroughput The warm throughput configuration for the table.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("d1032de76eaa9b5e0b2975fa6711434131c4cd1779a381c0a448e06a41f700fc")
+    override fun warmThroughput(warmThroughput: WarmThroughput.Builder.() -> Unit): Unit =
+        warmThroughput(WarmThroughput(warmThroughput))
 
     public fun build(): software.amazon.awscdk.services.dynamodb.TablePropsV2 = cdkBuilder.build()
   }
@@ -601,7 +636,7 @@ public interface TablePropsV2 : TableOptionsV2 {
     override fun tableName(): String? = unwrap(this).getTableName()
 
     /**
-     * Tags to be applied to the table or replica table.
+     * Tags to be applied to the primary table (default replica table).
      *
      * Default: - no tags
      */
@@ -613,6 +648,14 @@ public interface TablePropsV2 : TableOptionsV2 {
      * Default: - TTL is disabled
      */
     override fun timeToLiveAttribute(): String? = unwrap(this).getTimeToLiveAttribute()
+
+    /**
+     * The warm throughput configuration for the table.
+     *
+     * Default: - no warm throughput is configured
+     */
+    override fun warmThroughput(): WarmThroughput? =
+        unwrap(this).getWarmThroughput()?.let(WarmThroughput::wrap)
   }
 
   public companion object {

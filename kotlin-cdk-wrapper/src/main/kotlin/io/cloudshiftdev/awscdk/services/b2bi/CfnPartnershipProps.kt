@@ -3,12 +3,15 @@
 package io.cloudshiftdev.awscdk.services.b2bi
 
 import io.cloudshiftdev.awscdk.CfnTag
+import io.cloudshiftdev.awscdk.IResolvable
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObject
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
+import kotlin.Any
 import kotlin.String
 import kotlin.Unit
 import kotlin.collections.List
+import kotlin.jvm.JvmName
 
 /**
  * Properties for defining a `CfnPartnership`.
@@ -20,11 +23,39 @@ import kotlin.collections.List
  * // The values are placeholders you should change.
  * import io.cloudshiftdev.awscdk.services.b2bi.*;
  * CfnPartnershipProps cfnPartnershipProps = CfnPartnershipProps.builder()
+ * .capabilities(List.of("capabilities"))
  * .email("email")
  * .name("name")
  * .profileId("profileId")
  * // the properties below are optional
- * .capabilities(List.of("capabilities"))
+ * .capabilityOptions(CapabilityOptionsProperty.builder()
+ * .outboundEdi(OutboundEdiOptionsProperty.builder()
+ * .x12(X12EnvelopeProperty.builder()
+ * .common(X12OutboundEdiHeadersProperty.builder()
+ * .delimiters(X12DelimitersProperty.builder()
+ * .componentSeparator("componentSeparator")
+ * .dataElementSeparator("dataElementSeparator")
+ * .segmentTerminator("segmentTerminator")
+ * .build())
+ * .functionalGroupHeaders(X12FunctionalGroupHeadersProperty.builder()
+ * .applicationReceiverCode("applicationReceiverCode")
+ * .applicationSenderCode("applicationSenderCode")
+ * .responsibleAgencyCode("responsibleAgencyCode")
+ * .build())
+ * .interchangeControlHeaders(X12InterchangeControlHeadersProperty.builder()
+ * .acknowledgmentRequestedCode("acknowledgmentRequestedCode")
+ * .receiverId("receiverId")
+ * .receiverIdQualifier("receiverIdQualifier")
+ * .repetitionSeparator("repetitionSeparator")
+ * .senderId("senderId")
+ * .senderIdQualifier("senderIdQualifier")
+ * .usageIndicatorCode("usageIndicatorCode")
+ * .build())
+ * .validateEdi(false)
+ * .build())
+ * .build())
+ * .build())
+ * .build())
  * .phone("phone")
  * .tags(List.of(CfnTag.builder()
  * .key("key")
@@ -41,7 +72,14 @@ public interface CfnPartnershipProps {
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-capabilities)
    */
-  public fun capabilities(): List<String> = unwrap(this).getCapabilities() ?: emptyList()
+  public fun capabilities(): List<String>
+
+  /**
+   * Contains the details for an Outbound EDI capability.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-capabilityoptions)
+   */
+  public fun capabilityOptions(): Any? = unwrap(this).getCapabilityOptions()
 
   /**
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-email)
@@ -82,14 +120,32 @@ public interface CfnPartnershipProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param capabilities Returns one or more capabilities associated with this partnership.
+     * @param capabilities Returns one or more capabilities associated with this partnership. 
      */
     public fun capabilities(capabilities: List<String>)
 
     /**
-     * @param capabilities Returns one or more capabilities associated with this partnership.
+     * @param capabilities Returns one or more capabilities associated with this partnership. 
      */
     public fun capabilities(vararg capabilities: String)
+
+    /**
+     * @param capabilityOptions Contains the details for an Outbound EDI capability.
+     */
+    public fun capabilityOptions(capabilityOptions: IResolvable)
+
+    /**
+     * @param capabilityOptions Contains the details for an Outbound EDI capability.
+     */
+    public fun capabilityOptions(capabilityOptions: CfnPartnership.CapabilityOptionsProperty)
+
+    /**
+     * @param capabilityOptions Contains the details for an Outbound EDI capability.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c9b17f8b70d4aa4a0edd8590169926280b5f51f8d01fef35bdb7100666e4a30d")
+    public
+        fun capabilityOptions(capabilityOptions: CfnPartnership.CapabilityOptionsProperty.Builder.() -> Unit)
 
     /**
      * @param email the value to be set. 
@@ -130,17 +186,40 @@ public interface CfnPartnershipProps {
         software.amazon.awscdk.services.b2bi.CfnPartnershipProps.builder()
 
     /**
-     * @param capabilities Returns one or more capabilities associated with this partnership.
+     * @param capabilities Returns one or more capabilities associated with this partnership. 
      */
     override fun capabilities(capabilities: List<String>) {
       cdkBuilder.capabilities(capabilities)
     }
 
     /**
-     * @param capabilities Returns one or more capabilities associated with this partnership.
+     * @param capabilities Returns one or more capabilities associated with this partnership. 
      */
     override fun capabilities(vararg capabilities: String): Unit =
         capabilities(capabilities.toList())
+
+    /**
+     * @param capabilityOptions Contains the details for an Outbound EDI capability.
+     */
+    override fun capabilityOptions(capabilityOptions: IResolvable) {
+      cdkBuilder.capabilityOptions(capabilityOptions.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param capabilityOptions Contains the details for an Outbound EDI capability.
+     */
+    override fun capabilityOptions(capabilityOptions: CfnPartnership.CapabilityOptionsProperty) {
+      cdkBuilder.capabilityOptions(capabilityOptions.let(CfnPartnership.CapabilityOptionsProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param capabilityOptions Contains the details for an Outbound EDI capability.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("c9b17f8b70d4aa4a0edd8590169926280b5f51f8d01fef35bdb7100666e4a30d")
+    override
+        fun capabilityOptions(capabilityOptions: CfnPartnership.CapabilityOptionsProperty.Builder.() -> Unit):
+        Unit = capabilityOptions(CfnPartnership.CapabilityOptionsProperty(capabilityOptions))
 
     /**
      * @param email the value to be set. 
@@ -198,7 +277,14 @@ public interface CfnPartnershipProps {
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-capabilities)
      */
-    override fun capabilities(): List<String> = unwrap(this).getCapabilities() ?: emptyList()
+    override fun capabilities(): List<String> = unwrap(this).getCapabilities()
+
+    /**
+     * Contains the details for an Outbound EDI capability.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-capabilityoptions)
+     */
+    override fun capabilityOptions(): Any? = unwrap(this).getCapabilityOptions()
 
     /**
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-b2bi-partnership.html#cfn-b2bi-partnership-email)

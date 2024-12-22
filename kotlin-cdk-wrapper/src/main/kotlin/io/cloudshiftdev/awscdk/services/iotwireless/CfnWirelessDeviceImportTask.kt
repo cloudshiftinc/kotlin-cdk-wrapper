@@ -407,7 +407,7 @@ public open class CfnWirelessDeviceImportTask(
         emptyList()
 
     /**
-     * The IAM role that allows AWS IoT Wireless to access the CSV file in the S3 bucket.
+     * The IAM role that allows  to access the CSV file in the S3 bucket.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdeviceimporttask-sidewalk.html#cfn-iotwireless-wirelessdeviceimporttask-sidewalk-role)
      */
@@ -442,8 +442,7 @@ public open class CfnWirelessDeviceImportTask(
       public fun deviceCreationFileList(vararg deviceCreationFileList: String)
 
       /**
-       * @param role The IAM role that allows AWS IoT Wireless to access the CSV file in the S3
-       * bucket.
+       * @param role The IAM role that allows  to access the CSV file in the S3 bucket.
        */
       public fun role(role: String)
 
@@ -482,8 +481,7 @@ public open class CfnWirelessDeviceImportTask(
           deviceCreationFileList(deviceCreationFileList.toList())
 
       /**
-       * @param role The IAM role that allows AWS IoT Wireless to access the CSV file in the S3
-       * bucket.
+       * @param role The IAM role that allows  to access the CSV file in the S3 bucket.
        */
       override fun role(role: String) {
         cdkBuilder.role(role)
@@ -522,7 +520,7 @@ public open class CfnWirelessDeviceImportTask(
           ?: emptyList()
 
       /**
-       * The IAM role that allows AWS IoT Wireless to access the CSV file in the S3 bucket.
+       * The IAM role that allows  to access the CSV file in the S3 bucket.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-iotwireless-wirelessdeviceimporttask-sidewalk.html#cfn-iotwireless-wirelessdeviceimporttask-sidewalk-role)
        */

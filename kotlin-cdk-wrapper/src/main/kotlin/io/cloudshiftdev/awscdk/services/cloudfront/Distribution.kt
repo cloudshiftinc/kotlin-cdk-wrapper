@@ -108,6 +108,17 @@ public open class Distribution(
   ): Unit = addBehavior(pathPattern, origin, AddBehaviorOptions(behaviorOptions))
 
   /**
+   * Attach WAF WebACL to this CloudFront distribution.
+   *
+   * WebACL must be in the us-east-1 region
+   *
+   * @param webAclId The WAF WebACL to associate with this distribution. 
+   */
+  public open fun attachWebAclId(webAclId: String) {
+    unwrap(this).attachWebAclId(webAclId)
+  }
+
+  /**
    * The domain name of the Distribution, such as d111111abcdef8.cloudfront.net.
    */
   public override fun distributionDomainName(): String = unwrap(this).getDistributionDomainName()

@@ -275,12 +275,12 @@ public open class CfnByteMatchSet(
   }
 
   /**
-   * This is *AWS WAF Classic* documentation.
+   * AWS WAF Classic support will end on September 30, 2025.
    *
-   * For more information, see [AWS WAF
+   *
+   * This is *AWS WAF Classic* documentation. For more information, see [AWS WAF
    * Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the
    * developer guide.
-   *
    *
    * *For the latest version of AWS WAF* , use the AWS WAF V2 API and see the [AWS WAF Developer
    * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) . With the latest
@@ -1053,12 +1053,12 @@ public open class CfnByteMatchSet(
   }
 
   /**
-   * This is *AWS WAF Classic* documentation.
+   * AWS WAF Classic support will end on September 30, 2025.
    *
-   * For more information, see [AWS WAF
+   *
+   * This is *AWS WAF Classic* documentation. For more information, see [AWS WAF
    * Classic](https://docs.aws.amazon.com/waf/latest/developerguide/classic-waf-chapter.html) in the
    * developer guide.
-   *
    *
    * *For the latest version of AWS WAF* , use the AWS WAF V2 API and see the [AWS WAF Developer
    * Guide](https://docs.aws.amazon.com/waf/latest/developerguide/waf-chapter.html) . With the latest

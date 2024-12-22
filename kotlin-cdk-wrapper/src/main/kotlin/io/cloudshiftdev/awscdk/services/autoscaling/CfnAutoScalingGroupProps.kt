@@ -29,8 +29,23 @@ import kotlin.jvm.JvmName
  * .minSize("minSize")
  * // the properties below are optional
  * .autoScalingGroupName("autoScalingGroupName")
+ * .availabilityZoneDistribution(AvailabilityZoneDistributionProperty.builder()
+ * .capacityDistributionStrategy("capacityDistributionStrategy")
+ * .build())
+ * .availabilityZoneImpairmentPolicy(AvailabilityZoneImpairmentPolicyProperty.builder()
+ * .impairedZoneHealthCheckBehavior("impairedZoneHealthCheckBehavior")
+ * .zonalShiftEnabled(false)
+ * .build())
  * .availabilityZones(List.of("availabilityZones"))
  * .capacityRebalance(false)
+ * .capacityReservationSpecification(CapacityReservationSpecificationProperty.builder()
+ * .capacityReservationPreference("capacityReservationPreference")
+ * // the properties below are optional
+ * .capacityReservationTarget(CapacityReservationTargetProperty.builder()
+ * .capacityReservationIds(List.of("capacityReservationIds"))
+ * .capacityReservationResourceGroupArns(List.of("capacityReservationResourceGroupArns"))
+ * .build())
+ * .build())
  * .context("context")
  * .cooldown("cooldown")
  * .defaultInstanceWarmup(123)
@@ -104,6 +119,13 @@ import kotlin.jvm.JvmName
  * .max(123)
  * .min(123)
  * .build())
+ * .baselinePerformanceFactors(BaselinePerformanceFactorsRequestProperty.builder()
+ * .cpu(CpuPerformanceFactorRequestProperty.builder()
+ * .references(List.of(PerformanceFactorReferenceRequestProperty.builder()
+ * .instanceFamily("instanceFamily")
+ * .build()))
+ * .build())
+ * .build())
  * .burstablePerformance("burstablePerformance")
  * .cpuManufacturers(List.of("cpuManufacturers"))
  * .excludedInstanceTypes(List.of("excludedInstanceTypes"))
@@ -164,6 +186,7 @@ import kotlin.jvm.JvmName
  * .build()))
  * .placementGroup("placementGroup")
  * .serviceLinkedRoleArn("serviceLinkedRoleArn")
+ * .skipZonalShiftValidation(false)
  * .tags(List.of(TagPropertyProperty.builder()
  * .key("key")
  * .propagateAtLaunch(false)
@@ -171,6 +194,10 @@ import kotlin.jvm.JvmName
  * .build()))
  * .targetGroupArns(List.of("targetGroupArns"))
  * .terminationPolicies(List.of("terminationPolicies"))
+ * .trafficSources(List.of(TrafficSourceIdentifierProperty.builder()
+ * .identifier("identifier")
+ * .type("type")
+ * .build()))
  * .vpcZoneIdentifier(List.of("vpcZoneIdentifier"))
  * .build();
  * ```
@@ -191,6 +218,21 @@ public interface CfnAutoScalingGroupProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-autoscalinggroupname)
    */
   public fun autoScalingGroupName(): String? = unwrap(this).getAutoScalingGroupName()
+
+  /**
+   * The instance capacity distribution across Availability Zones.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution)
+   */
+  public fun availabilityZoneDistribution(): Any? = unwrap(this).getAvailabilityZoneDistribution()
+
+  /**
+   * The Availability Zone impairment policy.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy)
+   */
+  public fun availabilityZoneImpairmentPolicy(): Any? =
+      unwrap(this).getAvailabilityZoneImpairmentPolicy()
 
   /**
    * A list of Availability Zones where instances in the Auto Scaling group can be created.
@@ -216,6 +258,14 @@ public interface CfnAutoScalingGroupProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityrebalance)
    */
   public fun capacityRebalance(): Any? = unwrap(this).getCapacityRebalance()
+
+  /**
+   * The capacity reservation specification.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification)
+   */
+  public fun capacityReservationSpecification(): Any? =
+      unwrap(this).getCapacityReservationSpecification()
 
   /**
    * Reserved.
@@ -531,6 +581,11 @@ public interface CfnAutoScalingGroupProps {
   public fun serviceLinkedRoleArn(): String? = unwrap(this).getServiceLinkedRoleArn()
 
   /**
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-skipzonalshiftvalidation)
+   */
+  public fun skipZonalShiftValidation(): Any? = unwrap(this).getSkipZonalShiftValidation()
+
+  /**
    * One or more tags.
    *
    * You can tag your Auto Scaling group and propagate the tags to the Amazon EC2 instances it
@@ -579,6 +634,13 @@ public interface CfnAutoScalingGroupProps {
       emptyList()
 
   /**
+   * The traffic sources associated with this Auto Scaling group.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-trafficsources)
+   */
+  public fun trafficSources(): Any? = unwrap(this).getTrafficSources()
+
+  /**
    * A list of subnet IDs for a virtual private cloud (VPC) where instances in the Auto Scaling
    * group can be created.
    *
@@ -622,6 +684,47 @@ public interface CfnAutoScalingGroupProps {
     public fun autoScalingGroupName(autoScalingGroupName: String)
 
     /**
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones.
+     */
+    public fun availabilityZoneDistribution(availabilityZoneDistribution: IResolvable)
+
+    /**
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones.
+     */
+    public
+        fun availabilityZoneDistribution(availabilityZoneDistribution: CfnAutoScalingGroup.AvailabilityZoneDistributionProperty)
+
+    /**
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("34b5ce7af48ba106a23c7b3b0ac8c04d7a0b296c3609389ddb0f7b5170c56eb3")
+    public
+        fun availabilityZoneDistribution(availabilityZoneDistribution: CfnAutoScalingGroup.AvailabilityZoneDistributionProperty.Builder.() -> Unit)
+
+    /**
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy.
+     */
+    public fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: IResolvable)
+
+    /**
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy.
+     */
+    public
+        fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty)
+
+    /**
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("af487dac85c374c2336462cbb670f20023ec4187111bbc0e35789bac82463a1b")
+    public
+        fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty.Builder.() -> Unit)
+
+    /**
      * @param availabilityZones A list of Availability Zones where instances in the Auto Scaling
      * group can be created.
      * Used for launching into the default VPC subnet in each Availability Zone when not using the
@@ -662,6 +765,25 @@ public interface CfnAutoScalingGroupProps {
      * in the in the *Amazon EC2 Auto Scaling User Guide* .
      */
     public fun capacityRebalance(capacityRebalance: IResolvable)
+
+    /**
+     * @param capacityReservationSpecification The capacity reservation specification.
+     */
+    public fun capacityReservationSpecification(capacityReservationSpecification: IResolvable)
+
+    /**
+     * @param capacityReservationSpecification The capacity reservation specification.
+     */
+    public
+        fun capacityReservationSpecification(capacityReservationSpecification: CfnAutoScalingGroup.CapacityReservationSpecificationProperty)
+
+    /**
+     * @param capacityReservationSpecification The capacity reservation specification.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eb3a4310353c6bc2ec8cc0183f5ce46cbd05299a6b6a268a056f5b70b8b4d305")
+    public
+        fun capacityReservationSpecification(capacityReservationSpecification: CfnAutoScalingGroup.CapacityReservationSpecificationProperty.Builder.() -> Unit)
 
     /**
      * @param context Reserved.
@@ -1089,6 +1211,16 @@ public interface CfnAutoScalingGroupProps {
     public fun serviceLinkedRoleArn(serviceLinkedRoleArn: String)
 
     /**
+     * @param skipZonalShiftValidation the value to be set.
+     */
+    public fun skipZonalShiftValidation(skipZonalShiftValidation: Boolean)
+
+    /**
+     * @param skipZonalShiftValidation the value to be set.
+     */
+    public fun skipZonalShiftValidation(skipZonalShiftValidation: IResolvable)
+
+    /**
      * @param tags One or more tags.
      * You can tag your Auto Scaling group and propagate the tags to the Amazon EC2 instances it
      * launches. Tags are not propagated to Amazon EBS volumes. To add tags to Amazon EBS volumes,
@@ -1165,6 +1297,21 @@ public interface CfnAutoScalingGroupProps {
     public fun terminationPolicies(vararg terminationPolicies: String)
 
     /**
+     * @param trafficSources The traffic sources associated with this Auto Scaling group.
+     */
+    public fun trafficSources(trafficSources: IResolvable)
+
+    /**
+     * @param trafficSources The traffic sources associated with this Auto Scaling group.
+     */
+    public fun trafficSources(trafficSources: List<Any>)
+
+    /**
+     * @param trafficSources The traffic sources associated with this Auto Scaling group.
+     */
+    public fun trafficSources(vararg trafficSources: Any)
+
+    /**
      * @param vpcZoneIdentifier A list of subnet IDs for a virtual private cloud (VPC) where
      * instances in the Auto Scaling group can be created.
      * If this resource specifies public subnets and is also in a VPC that is defined in the same
@@ -1232,6 +1379,59 @@ public interface CfnAutoScalingGroupProps {
     }
 
     /**
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones.
+     */
+    override fun availabilityZoneDistribution(availabilityZoneDistribution: IResolvable) {
+      cdkBuilder.availabilityZoneDistribution(availabilityZoneDistribution.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones.
+     */
+    override
+        fun availabilityZoneDistribution(availabilityZoneDistribution: CfnAutoScalingGroup.AvailabilityZoneDistributionProperty) {
+      cdkBuilder.availabilityZoneDistribution(availabilityZoneDistribution.let(CfnAutoScalingGroup.AvailabilityZoneDistributionProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param availabilityZoneDistribution The instance capacity distribution across Availability
+     * Zones.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("34b5ce7af48ba106a23c7b3b0ac8c04d7a0b296c3609389ddb0f7b5170c56eb3")
+    override
+        fun availabilityZoneDistribution(availabilityZoneDistribution: CfnAutoScalingGroup.AvailabilityZoneDistributionProperty.Builder.() -> Unit):
+        Unit =
+        availabilityZoneDistribution(CfnAutoScalingGroup.AvailabilityZoneDistributionProperty(availabilityZoneDistribution))
+
+    /**
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy.
+     */
+    override fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: IResolvable) {
+      cdkBuilder.availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy.
+     */
+    override
+        fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty) {
+      cdkBuilder.availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy.let(CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param availabilityZoneImpairmentPolicy The Availability Zone impairment policy.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("af487dac85c374c2336462cbb670f20023ec4187111bbc0e35789bac82463a1b")
+    override
+        fun availabilityZoneImpairmentPolicy(availabilityZoneImpairmentPolicy: CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty.Builder.() -> Unit):
+        Unit =
+        availabilityZoneImpairmentPolicy(CfnAutoScalingGroup.AvailabilityZoneImpairmentPolicyProperty(availabilityZoneImpairmentPolicy))
+
+    /**
      * @param availabilityZones A list of Availability Zones where instances in the Auto Scaling
      * group can be created.
      * Used for launching into the default VPC subnet in each Availability Zone when not using the
@@ -1279,6 +1479,31 @@ public interface CfnAutoScalingGroupProps {
     override fun capacityRebalance(capacityRebalance: IResolvable) {
       cdkBuilder.capacityRebalance(capacityRebalance.let(IResolvable.Companion::unwrap))
     }
+
+    /**
+     * @param capacityReservationSpecification The capacity reservation specification.
+     */
+    override fun capacityReservationSpecification(capacityReservationSpecification: IResolvable) {
+      cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param capacityReservationSpecification The capacity reservation specification.
+     */
+    override
+        fun capacityReservationSpecification(capacityReservationSpecification: CfnAutoScalingGroup.CapacityReservationSpecificationProperty) {
+      cdkBuilder.capacityReservationSpecification(capacityReservationSpecification.let(CfnAutoScalingGroup.CapacityReservationSpecificationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param capacityReservationSpecification The capacity reservation specification.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("eb3a4310353c6bc2ec8cc0183f5ce46cbd05299a6b6a268a056f5b70b8b4d305")
+    override
+        fun capacityReservationSpecification(capacityReservationSpecification: CfnAutoScalingGroup.CapacityReservationSpecificationProperty.Builder.() -> Unit):
+        Unit =
+        capacityReservationSpecification(CfnAutoScalingGroup.CapacityReservationSpecificationProperty(capacityReservationSpecification))
 
     /**
      * @param context Reserved.
@@ -1780,6 +2005,20 @@ public interface CfnAutoScalingGroupProps {
     }
 
     /**
+     * @param skipZonalShiftValidation the value to be set.
+     */
+    override fun skipZonalShiftValidation(skipZonalShiftValidation: Boolean) {
+      cdkBuilder.skipZonalShiftValidation(skipZonalShiftValidation)
+    }
+
+    /**
+     * @param skipZonalShiftValidation the value to be set.
+     */
+    override fun skipZonalShiftValidation(skipZonalShiftValidation: IResolvable) {
+      cdkBuilder.skipZonalShiftValidation(skipZonalShiftValidation.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
      * @param tags One or more tags.
      * You can tag your Auto Scaling group and propagate the tags to the Amazon EC2 instances it
      * launches. Tags are not propagated to Amazon EBS volumes. To add tags to Amazon EBS volumes,
@@ -1865,6 +2104,26 @@ public interface CfnAutoScalingGroupProps {
         terminationPolicies(terminationPolicies.toList())
 
     /**
+     * @param trafficSources The traffic sources associated with this Auto Scaling group.
+     */
+    override fun trafficSources(trafficSources: IResolvable) {
+      cdkBuilder.trafficSources(trafficSources.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param trafficSources The traffic sources associated with this Auto Scaling group.
+     */
+    override fun trafficSources(trafficSources: List<Any>) {
+      cdkBuilder.trafficSources(trafficSources.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * @param trafficSources The traffic sources associated with this Auto Scaling group.
+     */
+    override fun trafficSources(vararg trafficSources: Any): Unit =
+        trafficSources(trafficSources.toList())
+
+    /**
      * @param vpcZoneIdentifier A list of subnet IDs for a virtual private cloud (VPC) where
      * instances in the Auto Scaling group can be created.
      * If this resource specifies public subnets and is also in a VPC that is defined in the same
@@ -1938,6 +2197,22 @@ public interface CfnAutoScalingGroupProps {
     override fun autoScalingGroupName(): String? = unwrap(this).getAutoScalingGroupName()
 
     /**
+     * The instance capacity distribution across Availability Zones.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzonedistribution)
+     */
+    override fun availabilityZoneDistribution(): Any? =
+        unwrap(this).getAvailabilityZoneDistribution()
+
+    /**
+     * The Availability Zone impairment policy.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-availabilityzoneimpairmentpolicy)
+     */
+    override fun availabilityZoneImpairmentPolicy(): Any? =
+        unwrap(this).getAvailabilityZoneImpairmentPolicy()
+
+    /**
      * A list of Availability Zones where instances in the Auto Scaling group can be created.
      *
      * Used for launching into the default VPC subnet in each Availability Zone when not using the
@@ -1963,6 +2238,14 @@ public interface CfnAutoScalingGroupProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityrebalance)
      */
     override fun capacityRebalance(): Any? = unwrap(this).getCapacityRebalance()
+
+    /**
+     * The capacity reservation specification.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-capacityreservationspecification)
+     */
+    override fun capacityReservationSpecification(): Any? =
+        unwrap(this).getCapacityReservationSpecification()
 
     /**
      * Reserved.
@@ -2279,6 +2562,11 @@ public interface CfnAutoScalingGroupProps {
     override fun serviceLinkedRoleArn(): String? = unwrap(this).getServiceLinkedRoleArn()
 
     /**
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-skipzonalshiftvalidation)
+     */
+    override fun skipZonalShiftValidation(): Any? = unwrap(this).getSkipZonalShiftValidation()
+
+    /**
      * One or more tags.
      *
      * You can tag your Auto Scaling group and propagate the tags to the Amazon EC2 instances it
@@ -2325,6 +2613,13 @@ public interface CfnAutoScalingGroupProps {
      */
     override fun terminationPolicies(): List<String> = unwrap(this).getTerminationPolicies() ?:
         emptyList()
+
+    /**
+     * The traffic sources associated with this Auto Scaling group.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-autoscaling-autoscalinggroup.html#cfn-autoscaling-autoscalinggroup-trafficsources)
+     */
+    override fun trafficSources(): Any? = unwrap(this).getTrafficSources()
 
     /**
      * A list of subnet IDs for a virtual private cloud (VPC) where instances in the Auto Scaling

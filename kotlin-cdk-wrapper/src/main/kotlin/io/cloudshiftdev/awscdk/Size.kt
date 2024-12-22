@@ -36,7 +36,7 @@ import kotlin.jvm.JvmName
  * .processor(lambdaProcessor)
  * .build();
  * DeliveryStream.Builder.create(this, "Delivery Stream")
- * .destinations(List.of(s3Destination))
+ * .destination(s3Destination)
  * .build();
  * ```
  */

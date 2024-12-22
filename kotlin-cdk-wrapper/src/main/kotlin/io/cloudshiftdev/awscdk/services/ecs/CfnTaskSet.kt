@@ -50,6 +50,11 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * .service("service")
  * .taskDefinition("taskDefinition")
  * // the properties below are optional
+ * .capacityProviderStrategy(List.of(CapacityProviderStrategyItemProperty.builder()
+ * .base(123)
+ * .capacityProvider("capacityProvider")
+ * .weight(123)
+ * .build()))
  * .externalId("externalId")
  * .launchType("launchType")
  * .loadBalancers(List.of(LoadBalancerProperty.builder()
@@ -110,6 +115,31 @@ public open class CfnTaskSet(
    * The ID of the task set.
    */
   public open fun attrId(): String = unwrap(this).getAttrId()
+
+  /**
+   * The capacity provider strategy that are associated with the task set.
+   */
+  public open fun capacityProviderStrategy(): Any? = unwrap(this).getCapacityProviderStrategy()
+
+  /**
+   * The capacity provider strategy that are associated with the task set.
+   */
+  public open fun capacityProviderStrategy(`value`: IResolvable) {
+    unwrap(this).setCapacityProviderStrategy(`value`.let(IResolvable.Companion::unwrap))
+  }
+
+  /**
+   * The capacity provider strategy that are associated with the task set.
+   */
+  public open fun capacityProviderStrategy(`value`: List<Any>) {
+    unwrap(this).setCapacityProviderStrategy(`value`.map{CdkObjectWrappers.unwrap(it)})
+  }
+
+  /**
+   * The capacity provider strategy that are associated with the task set.
+   */
+  public open fun capacityProviderStrategy(vararg `value`: Any): Unit =
+      capacityProviderStrategy(`value`.toList())
 
   /**
    * Tag Manager which manages the tags for this resource.
@@ -328,6 +358,33 @@ public open class CfnTaskSet(
    */
   @CdkDslMarker
   public interface Builder {
+    /**
+     * The capacity provider strategy that are associated with the task set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-capacityproviderstrategy)
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set. 
+     */
+    public fun capacityProviderStrategy(capacityProviderStrategy: IResolvable)
+
+    /**
+     * The capacity provider strategy that are associated with the task set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-capacityproviderstrategy)
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set. 
+     */
+    public fun capacityProviderStrategy(capacityProviderStrategy: List<Any>)
+
+    /**
+     * The capacity provider strategy that are associated with the task set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-capacityproviderstrategy)
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set. 
+     */
+    public fun capacityProviderStrategy(vararg capacityProviderStrategy: Any)
+
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to
      * create the task set in.
@@ -574,6 +631,38 @@ public open class CfnTaskSet(
   ) : Builder {
     private val cdkBuilder: software.amazon.awscdk.services.ecs.CfnTaskSet.Builder =
         software.amazon.awscdk.services.ecs.CfnTaskSet.Builder.create(scope, id)
+
+    /**
+     * The capacity provider strategy that are associated with the task set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-capacityproviderstrategy)
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set. 
+     */
+    override fun capacityProviderStrategy(capacityProviderStrategy: IResolvable) {
+      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * The capacity provider strategy that are associated with the task set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-capacityproviderstrategy)
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set. 
+     */
+    override fun capacityProviderStrategy(capacityProviderStrategy: List<Any>) {
+      cdkBuilder.capacityProviderStrategy(capacityProviderStrategy.map{CdkObjectWrappers.unwrap(it)})
+    }
+
+    /**
+     * The capacity provider strategy that are associated with the task set.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-ecs-taskset.html#cfn-ecs-taskset-capacityproviderstrategy)
+     * @param capacityProviderStrategy The capacity provider strategy that are associated with the
+     * task set. 
+     */
+    override fun capacityProviderStrategy(vararg capacityProviderStrategy: Any): Unit =
+        capacityProviderStrategy(capacityProviderStrategy.toList())
 
     /**
      * The short name or full Amazon Resource Name (ARN) of the cluster that hosts the service to
@@ -896,7 +985,7 @@ public open class CfnTaskSet(
     /**
      * Whether the task's elastic network interface receives a public IP address.
      *
-     * The default value is `DISABLED` .
+     * The default value is `ENABLED` .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-assignpublicip)
      */
@@ -937,7 +1026,7 @@ public open class CfnTaskSet(
       /**
        * @param assignPublicIp Whether the task's elastic network interface receives a public IP
        * address.
-       * The default value is `DISABLED` .
+       * The default value is `ENABLED` .
        */
       public fun assignPublicIp(assignPublicIp: String)
 
@@ -988,7 +1077,7 @@ public open class CfnTaskSet(
       /**
        * @param assignPublicIp Whether the task's elastic network interface receives a public IP
        * address.
-       * The default value is `DISABLED` .
+       * The default value is `ENABLED` .
        */
       override fun assignPublicIp(assignPublicIp: String) {
         cdkBuilder.assignPublicIp(assignPublicIp)
@@ -1048,7 +1137,7 @@ public open class CfnTaskSet(
       /**
        * Whether the task's elastic network interface receives a public IP address.
        *
-       * The default value is `DISABLED` .
+       * The default value is `ENABLED` .
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-awsvpcconfiguration.html#cfn-ecs-taskset-awsvpcconfiguration-assignpublicip)
        */
@@ -1097,6 +1186,253 @@ public open class CfnTaskSet(
           software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty = (wrapped as
           CdkObject).cdkObject as
           software.amazon.awscdk.services.ecs.CfnTaskSet.AwsVpcConfigurationProperty
+    }
+  }
+
+  /**
+   * The details of a capacity provider strategy.
+   *
+   * A capacity provider strategy can be set when using the
+   * [RunTask](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RunTask.html) or
+   * [CreateCluster](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateCluster.html)
+   * APIs or as the default capacity provider strategy for a cluster with the `CreateCluster` API.
+   *
+   * Only capacity providers that are already associated with a cluster and have an `ACTIVE` or
+   * `UPDATING` status can be used in a capacity provider strategy. The
+   * [PutClusterCapacityProviders](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_PutClusterCapacityProviders.html)
+   * API is used to associate a capacity provider with a cluster.
+   *
+   * If specifying a capacity provider that uses an Auto Scaling group, the capacity provider must
+   * already be created. New Auto Scaling group capacity providers can be created with the
+   * [CreateClusterCapacityProvider](https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateClusterCapacityProvider.html)
+   * API operation.
+   *
+   * To use a AWS Fargate capacity provider, specify either the `FARGATE` or `FARGATE_SPOT` capacity
+   * providers. The AWS Fargate capacity providers are available to all accounts and only need to be
+   * associated with a cluster to be used in a capacity provider strategy.
+   *
+   * With `FARGATE_SPOT` , you can run interruption tolerant tasks at a rate that's discounted
+   * compared to the `FARGATE` price. `FARGATE_SPOT` runs tasks on spare compute capacity. When AWS
+   * needs the capacity back, your tasks are interrupted with a two-minute warning. `FARGATE_SPOT`
+   * supports Linux tasks with the X86_64 architecture on platform version 1.3.0 or later.
+   * `FARGATE_SPOT` supports Linux tasks with the ARM64 architecture on platform version 1.4.0 or
+   * later.
+   *
+   * A capacity provider strategy may contain a maximum of 6 capacity providers.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.ecs.*;
+   * CapacityProviderStrategyItemProperty capacityProviderStrategyItemProperty =
+   * CapacityProviderStrategyItemProperty.builder()
+   * .base(123)
+   * .capacityProvider("capacityProvider")
+   * .weight(123)
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-capacityproviderstrategyitem.html)
+   */
+  public interface CapacityProviderStrategyItemProperty {
+    /**
+     * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
+     * provider.
+     *
+     * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+     * value is specified, the default value of `0` is used.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-capacityproviderstrategyitem.html#cfn-ecs-taskset-capacityproviderstrategyitem-base)
+     */
+    public fun base(): Number? = unwrap(this).getBase()
+
+    /**
+     * The short name of the capacity provider.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-capacityproviderstrategyitem.html#cfn-ecs-taskset-capacityproviderstrategyitem-capacityprovider)
+     */
+    public fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
+
+    /**
+     * The *weight* value designates the relative percentage of the total number of tasks launched
+     * that should use the specified capacity provider.
+     *
+     * The `weight` value is taken into consideration after the `base` value, if defined, is
+     * satisfied.
+     *
+     * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+     * providers are specified within a capacity provider strategy, at least one of the capacity
+     * providers must have a weight value greater than zero and any capacity providers with a weight of
+     * `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy that
+     * all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity provider
+     * strategy will fail.
+     *
+     * An example scenario for using weights is defining a strategy that contains two capacity
+     * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+     * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+     * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every one
+     * task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-capacityproviderstrategyitem.html#cfn-ecs-taskset-capacityproviderstrategyitem-weight)
+     */
+    public fun weight(): Number? = unwrap(this).getWeight()
+
+    /**
+     * A builder for [CapacityProviderStrategyItemProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param base The *base* value designates how many tasks, at a minimum, to run on the
+       * specified capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+       * value is specified, the default value of `0` is used.
+       */
+      public fun base(base: Number)
+
+      /**
+       * @param capacityProvider The short name of the capacity provider.
+       */
+      public fun capacityProvider(capacityProvider: String)
+
+      /**
+       * @param weight The *weight* value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The `weight` value is taken into consideration after the `base` value, if defined, is
+       * satisfied.
+       *
+       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+       * providers are specified within a capacity provider strategy, at least one of the capacity
+       * providers must have a weight value greater than zero and any capacity providers with a weight
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
+       *
+       * An example scenario for using weights is defining a strategy that contains two capacity
+       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       */
+      public fun weight(weight: Number)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.ecs.CfnTaskSet.CapacityProviderStrategyItemProperty.Builder
+          =
+          software.amazon.awscdk.services.ecs.CfnTaskSet.CapacityProviderStrategyItemProperty.builder()
+
+      /**
+       * @param base The *base* value designates how many tasks, at a minimum, to run on the
+       * specified capacity provider.
+       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+       * value is specified, the default value of `0` is used.
+       */
+      override fun base(base: Number) {
+        cdkBuilder.base(base)
+      }
+
+      /**
+       * @param capacityProvider The short name of the capacity provider.
+       */
+      override fun capacityProvider(capacityProvider: String) {
+        cdkBuilder.capacityProvider(capacityProvider)
+      }
+
+      /**
+       * @param weight The *weight* value designates the relative percentage of the total number of
+       * tasks launched that should use the specified capacity provider.
+       * The `weight` value is taken into consideration after the `base` value, if defined, is
+       * satisfied.
+       *
+       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+       * providers are specified within a capacity provider strategy, at least one of the capacity
+       * providers must have a weight value greater than zero and any capacity providers with a weight
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
+       *
+       * An example scenario for using weights is defining a strategy that contains two capacity
+       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       */
+      override fun weight(weight: Number) {
+        cdkBuilder.weight(weight)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.ecs.CfnTaskSet.CapacityProviderStrategyItemProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.CapacityProviderStrategyItemProperty,
+    ) : CdkObject(cdkObject),
+        CapacityProviderStrategyItemProperty {
+      /**
+       * The *base* value designates how many tasks, at a minimum, to run on the specified capacity
+       * provider.
+       *
+       * Only one capacity provider in a capacity provider strategy can have a *base* defined. If no
+       * value is specified, the default value of `0` is used.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-capacityproviderstrategyitem.html#cfn-ecs-taskset-capacityproviderstrategyitem-base)
+       */
+      override fun base(): Number? = unwrap(this).getBase()
+
+      /**
+       * The short name of the capacity provider.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-capacityproviderstrategyitem.html#cfn-ecs-taskset-capacityproviderstrategyitem-capacityprovider)
+       */
+      override fun capacityProvider(): String? = unwrap(this).getCapacityProvider()
+
+      /**
+       * The *weight* value designates the relative percentage of the total number of tasks launched
+       * that should use the specified capacity provider.
+       *
+       * The `weight` value is taken into consideration after the `base` value, if defined, is
+       * satisfied.
+       *
+       * If no `weight` value is specified, the default value of `0` is used. When multiple capacity
+       * providers are specified within a capacity provider strategy, at least one of the capacity
+       * providers must have a weight value greater than zero and any capacity providers with a weight
+       * of `0` can't be used to place tasks. If you specify multiple capacity providers in a strategy
+       * that all have a weight of `0` , any `RunTask` or `CreateService` actions using the capacity
+       * provider strategy will fail.
+       *
+       * An example scenario for using weights is defining a strategy that contains two capacity
+       * providers and both have a weight of `1` , then when the `base` is satisfied, the tasks will be
+       * split evenly across the two capacity providers. Using that same logic, if you specify a weight
+       * of `1` for *capacityProviderA* and a weight of `4` for *capacityProviderB* , then for every
+       * one task that's run using *capacityProviderA* , four tasks would use *capacityProviderB* .
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ecs-taskset-capacityproviderstrategyitem.html#cfn-ecs-taskset-capacityproviderstrategyitem-weight)
+       */
+      override fun weight(): Number? = unwrap(this).getWeight()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}):
+          CapacityProviderStrategyItemProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.ecs.CfnTaskSet.CapacityProviderStrategyItemProperty):
+          CapacityProviderStrategyItemProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          CapacityProviderStrategyItemProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: CapacityProviderStrategyItemProperty):
+          software.amazon.awscdk.services.ecs.CfnTaskSet.CapacityProviderStrategyItemProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.ecs.CfnTaskSet.CapacityProviderStrategyItemProperty
     }
   }
 

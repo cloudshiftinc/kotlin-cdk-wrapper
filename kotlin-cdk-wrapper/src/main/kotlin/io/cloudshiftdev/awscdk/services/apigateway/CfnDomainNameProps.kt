@@ -46,8 +46,8 @@ import kotlin.jvm.JvmName
  */
 public interface CfnDomainNameProps {
   /**
-   * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint for
-   * this domain name.
+   * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint or
+   * private endpoint for this domain name.
    *
    * AWS Certificate Manager is the only supported source.
    *
@@ -125,7 +125,7 @@ public interface CfnDomainNameProps {
   public interface Builder {
     /**
      * @param certificateArn The reference to an AWS -managed certificate that will be used by
-     * edge-optimized endpoint for this domain name.
+     * edge-optimized endpoint or private endpoint for this domain name.
      * AWS Certificate Manager is the only supported source.
      */
     public fun certificateArn(certificateArn: String)
@@ -227,7 +227,7 @@ public interface CfnDomainNameProps {
 
     /**
      * @param certificateArn The reference to an AWS -managed certificate that will be used by
-     * edge-optimized endpoint for this domain name.
+     * edge-optimized endpoint or private endpoint for this domain name.
      * AWS Certificate Manager is the only supported source.
      */
     override fun certificateArn(certificateArn: String) {
@@ -355,8 +355,8 @@ public interface CfnDomainNameProps {
   ) : CdkObject(cdkObject),
       CfnDomainNameProps {
     /**
-     * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint for
-     * this domain name.
+     * The reference to an AWS -managed certificate that will be used by edge-optimized endpoint or
+     * private endpoint for this domain name.
      *
      * AWS Certificate Manager is the only supported source.
      *

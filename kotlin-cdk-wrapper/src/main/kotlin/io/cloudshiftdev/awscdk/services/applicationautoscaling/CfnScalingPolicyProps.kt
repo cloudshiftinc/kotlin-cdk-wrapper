@@ -24,6 +24,92 @@ import kotlin.jvm.JvmName
  * .policyName("policyName")
  * .policyType("policyType")
  * // the properties below are optional
+ * .predictiveScalingPolicyConfiguration(PredictiveScalingPolicyConfigurationProperty.builder()
+ * .metricSpecifications(List.of(PredictiveScalingMetricSpecificationProperty.builder()
+ * .targetValue(123)
+ * // the properties below are optional
+ * .customizedCapacityMetricSpecification(PredictiveScalingCustomizedCapacityMetricProperty.builder()
+ * .metricDataQueries(List.of(PredictiveScalingMetricDataQueryProperty.builder()
+ * .expression("expression")
+ * .id("id")
+ * .label("label")
+ * .metricStat(PredictiveScalingMetricStatProperty.builder()
+ * .metric(PredictiveScalingMetricProperty.builder()
+ * .dimensions(List.of(PredictiveScalingMetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build())
+ * .stat("stat")
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .customizedLoadMetricSpecification(PredictiveScalingCustomizedLoadMetricProperty.builder()
+ * .metricDataQueries(List.of(PredictiveScalingMetricDataQueryProperty.builder()
+ * .expression("expression")
+ * .id("id")
+ * .label("label")
+ * .metricStat(PredictiveScalingMetricStatProperty.builder()
+ * .metric(PredictiveScalingMetricProperty.builder()
+ * .dimensions(List.of(PredictiveScalingMetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build())
+ * .stat("stat")
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .customizedScalingMetricSpecification(PredictiveScalingCustomizedScalingMetricProperty.builder()
+ * .metricDataQueries(List.of(PredictiveScalingMetricDataQueryProperty.builder()
+ * .expression("expression")
+ * .id("id")
+ * .label("label")
+ * .metricStat(PredictiveScalingMetricStatProperty.builder()
+ * .metric(PredictiveScalingMetricProperty.builder()
+ * .dimensions(List.of(PredictiveScalingMetricDimensionProperty.builder()
+ * .name("name")
+ * .value("value")
+ * .build()))
+ * .metricName("metricName")
+ * .namespace("namespace")
+ * .build())
+ * .stat("stat")
+ * .unit("unit")
+ * .build())
+ * .returnData(false)
+ * .build()))
+ * .build())
+ * .predefinedLoadMetricSpecification(PredictiveScalingPredefinedLoadMetricProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .predefinedMetricPairSpecification(PredictiveScalingPredefinedMetricPairProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .predefinedScalingMetricSpecification(PredictiveScalingPredefinedScalingMetricProperty.builder()
+ * .predefinedMetricType("predefinedMetricType")
+ * // the properties below are optional
+ * .resourceLabel("resourceLabel")
+ * .build())
+ * .build()))
+ * // the properties below are optional
+ * .maxCapacityBreachBehavior("maxCapacityBreachBehavior")
+ * .maxCapacityBuffer(123)
+ * .mode("mode")
+ * .schedulingBufferTime(123)
+ * .build())
  * .resourceId("resourceId")
  * .scalableDimension("scalableDimension")
  * .scalingTargetId("scalingTargetId")
@@ -112,6 +198,14 @@ public interface CfnScalingPolicyProps {
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policytype)
    */
   public fun policyType(): String
+
+  /**
+   * The predictive scaling policy configuration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-predictivescalingpolicyconfiguration)
+   */
+  public fun predictiveScalingPolicyConfiguration(): Any? =
+      unwrap(this).getPredictiveScalingPolicyConfiguration()
 
   /**
    * The identifier of the resource associated with the scaling policy.
@@ -279,6 +373,26 @@ public interface CfnScalingPolicyProps {
      * Amazon MSK, Amazon ElastiCache, or Neptune.
      */
     public fun policyType(policyType: String)
+
+    /**
+     * @param predictiveScalingPolicyConfiguration The predictive scaling policy configuration.
+     */
+    public
+        fun predictiveScalingPolicyConfiguration(predictiveScalingPolicyConfiguration: IResolvable)
+
+    /**
+     * @param predictiveScalingPolicyConfiguration The predictive scaling policy configuration.
+     */
+    public
+        fun predictiveScalingPolicyConfiguration(predictiveScalingPolicyConfiguration: CfnScalingPolicy.PredictiveScalingPolicyConfigurationProperty)
+
+    /**
+     * @param predictiveScalingPolicyConfiguration The predictive scaling policy configuration.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("dce1718f8f7f3b9756fb453b7fbb3152af93e5579c209f001784e01c37dcd5a0")
+    public
+        fun predictiveScalingPolicyConfiguration(predictiveScalingPolicyConfiguration: CfnScalingPolicy.PredictiveScalingPolicyConfigurationProperty.Builder.() -> Unit)
 
     /**
      * @param resourceId The identifier of the resource associated with the scaling policy.
@@ -467,6 +581,32 @@ public interface CfnScalingPolicyProps {
     override fun policyType(policyType: String) {
       cdkBuilder.policyType(policyType)
     }
+
+    /**
+     * @param predictiveScalingPolicyConfiguration The predictive scaling policy configuration.
+     */
+    override
+        fun predictiveScalingPolicyConfiguration(predictiveScalingPolicyConfiguration: IResolvable) {
+      cdkBuilder.predictiveScalingPolicyConfiguration(predictiveScalingPolicyConfiguration.let(IResolvable.Companion::unwrap))
+    }
+
+    /**
+     * @param predictiveScalingPolicyConfiguration The predictive scaling policy configuration.
+     */
+    override
+        fun predictiveScalingPolicyConfiguration(predictiveScalingPolicyConfiguration: CfnScalingPolicy.PredictiveScalingPolicyConfigurationProperty) {
+      cdkBuilder.predictiveScalingPolicyConfiguration(predictiveScalingPolicyConfiguration.let(CfnScalingPolicy.PredictiveScalingPolicyConfigurationProperty.Companion::unwrap))
+    }
+
+    /**
+     * @param predictiveScalingPolicyConfiguration The predictive scaling policy configuration.
+     */
+    @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+    @JvmName("dce1718f8f7f3b9756fb453b7fbb3152af93e5579c209f001784e01c37dcd5a0")
+    override
+        fun predictiveScalingPolicyConfiguration(predictiveScalingPolicyConfiguration: CfnScalingPolicy.PredictiveScalingPolicyConfigurationProperty.Builder.() -> Unit):
+        Unit =
+        predictiveScalingPolicyConfiguration(CfnScalingPolicy.PredictiveScalingPolicyConfigurationProperty(predictiveScalingPolicyConfiguration))
 
     /**
      * @param resourceId The identifier of the resource associated with the scaling policy.
@@ -679,6 +819,14 @@ public interface CfnScalingPolicyProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-policytype)
      */
     override fun policyType(): String = unwrap(this).getPolicyType()
+
+    /**
+     * The predictive scaling policy configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-applicationautoscaling-scalingpolicy.html#cfn-applicationautoscaling-scalingpolicy-predictivescalingpolicyconfiguration)
+     */
+    override fun predictiveScalingPolicyConfiguration(): Any? =
+        unwrap(this).getPredictiveScalingPolicyConfiguration()
 
     /**
      * The identifier of the resource associated with the scaling policy.

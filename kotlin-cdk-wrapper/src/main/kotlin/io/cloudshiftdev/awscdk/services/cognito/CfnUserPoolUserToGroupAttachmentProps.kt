@@ -43,6 +43,8 @@ public interface CfnUserPoolUserToGroupAttachmentProps {
   public fun userPoolId(): String
 
   /**
+   * The user's username.
+   *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username)
    */
   public fun username(): String
@@ -63,7 +65,7 @@ public interface CfnUserPoolUserToGroupAttachmentProps {
     public fun userPoolId(userPoolId: String)
 
     /**
-     * @param username the value to be set. 
+     * @param username The user's username. 
      */
     public fun username(username: String)
   }
@@ -88,7 +90,7 @@ public interface CfnUserPoolUserToGroupAttachmentProps {
     }
 
     /**
-     * @param username the value to be set. 
+     * @param username The user's username. 
      */
     override fun username(username: String) {
       cdkBuilder.username(username)
@@ -118,6 +120,8 @@ public interface CfnUserPoolUserToGroupAttachmentProps {
     override fun userPoolId(): String = unwrap(this).getUserPoolId()
 
     /**
+     * The user's username.
+     *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cognito-userpoolusertogroupattachment.html#cfn-cognito-userpoolusertogroupattachment-username)
      */
     override fun username(): String = unwrap(this).getUsername()

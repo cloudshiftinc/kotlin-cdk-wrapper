@@ -2,6 +2,7 @@
 
 package io.cloudshiftdev.awscdk.services.elasticloadbalancingv2
 
+import io.cloudshiftdev.awscdk.Duration
 import io.cloudshiftdev.awscdk.common.CdkDslMarker
 import io.cloudshiftdev.awscdk.common.CdkObjectWrappers
 import kotlin.Number
@@ -18,27 +19,17 @@ import software.constructs.Construct as SoftwareConstructsConstruct
  * Example:
  *
  * ```
- * Vpc vpc;
- * AutoScalingGroup asg;
- * ISecurityGroup sg1;
- * ISecurityGroup sg2;
- * // Create the load balancer in a VPC. 'internetFacing' is 'false'
- * // by default, which creates an internal load balancer.
- * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "LB")
- * .vpc(vpc)
- * .internetFacing(true)
- * .securityGroups(List.of(sg1))
+ * import io.cloudshiftdev.awscdk.aws_apigatewayv2_integrations.HttpNlbIntegration;
+ * Vpc vpc = new Vpc(this, "VPC");
+ * NetworkLoadBalancer lb = NetworkLoadBalancer.Builder.create(this, "lb").vpc(vpc).build();
+ * NetworkListener listener = lb.addListener("listener",
+ * BaseNetworkListenerProps.builder().port(80).build());
+ * listener.addTargets("target", AddNetworkTargetsProps.builder()
+ * .port(80)
+ * .build());
+ * HttpApi httpEndpoint = HttpApi.Builder.create(this, "HttpProxyPrivateApi")
+ * .defaultIntegration(new HttpNlbIntegration("DefaultIntegration", listener))
  * .build();
- * lb.addSecurityGroup(sg2);
- * // Add a listener on a particular port.
- * NetworkListener listener = lb.addListener("Listener", BaseNetworkListenerProps.builder()
- * .port(443)
- * .build());
- * // Add targets on a particular port.
- * listener.addTargets("AppFleet", AddNetworkTargetsProps.builder()
- * .port(443)
- * .targets(List.of(asg))
- * .build());
  * ```
  */
 public open class NetworkListener(
@@ -284,6 +275,15 @@ public open class NetworkListener(
      * @param sslPolicy SSL Policy. 
      */
     public fun sslPolicy(sslPolicy: SslPolicy)
+
+    /**
+     * The load balancer TCP idle timeout.
+     *
+     * Default: Duration.seconds(350)
+     *
+     * @param tcpIdleTimeout The load balancer TCP idle timeout. 
+     */
+    public fun tcpIdleTimeout(tcpIdleTimeout: Duration)
   }
 
   private class BuilderImpl(
@@ -426,6 +426,17 @@ public open class NetworkListener(
      */
     override fun sslPolicy(sslPolicy: SslPolicy) {
       cdkBuilder.sslPolicy(sslPolicy.let(SslPolicy.Companion::unwrap))
+    }
+
+    /**
+     * The load balancer TCP idle timeout.
+     *
+     * Default: Duration.seconds(350)
+     *
+     * @param tcpIdleTimeout The load balancer TCP idle timeout. 
+     */
+    override fun tcpIdleTimeout(tcpIdleTimeout: Duration) {
+      cdkBuilder.tcpIdleTimeout(tcpIdleTimeout.let(Duration.Companion::unwrap))
     }
 
     public fun build(): software.amazon.awscdk.services.elasticloadbalancingv2.NetworkListener =

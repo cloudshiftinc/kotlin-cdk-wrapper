@@ -25,6 +25,7 @@ import kotlin.jvm.JvmName
  * CfnIntegrationProps cfnIntegrationProps = CfnIntegrationProps.builder()
  * .domainName("domainName")
  * // the properties below are optional
+ * .eventTriggerNames(List.of("eventTriggerNames"))
  * .flowDefinition(FlowDefinitionProperty.builder()
  * .flowName("flowName")
  * .kmsArn("kmsArn")
@@ -118,6 +119,13 @@ public interface CfnIntegrationProps {
   public fun domainName(): String
 
   /**
+   * A list of unique names for active event triggers associated with the integration.
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-eventtriggernames)
+   */
+  public fun eventTriggerNames(): List<String> = unwrap(this).getEventTriggerNames() ?: emptyList()
+
+  /**
    * The configuration that controls how Customer Profiles retrieves data from the source.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-flowdefinition)
@@ -161,6 +169,18 @@ public interface CfnIntegrationProps {
      * @param domainName The unique name of the domain. 
      */
     public fun domainName(domainName: String)
+
+    /**
+     * @param eventTriggerNames A list of unique names for active event triggers associated with the
+     * integration.
+     */
+    public fun eventTriggerNames(eventTriggerNames: List<String>)
+
+    /**
+     * @param eventTriggerNames A list of unique names for active event triggers associated with the
+     * integration.
+     */
+    public fun eventTriggerNames(vararg eventTriggerNames: String)
 
     /**
      * @param flowDefinition The configuration that controls how Customer Profiles retrieves data
@@ -230,6 +250,21 @@ public interface CfnIntegrationProps {
     override fun domainName(domainName: String) {
       cdkBuilder.domainName(domainName)
     }
+
+    /**
+     * @param eventTriggerNames A list of unique names for active event triggers associated with the
+     * integration.
+     */
+    override fun eventTriggerNames(eventTriggerNames: List<String>) {
+      cdkBuilder.eventTriggerNames(eventTriggerNames)
+    }
+
+    /**
+     * @param eventTriggerNames A list of unique names for active event triggers associated with the
+     * integration.
+     */
+    override fun eventTriggerNames(vararg eventTriggerNames: String): Unit =
+        eventTriggerNames(eventTriggerNames.toList())
 
     /**
      * @param flowDefinition The configuration that controls how Customer Profiles retrieves data
@@ -317,6 +352,14 @@ public interface CfnIntegrationProps {
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-domainname)
      */
     override fun domainName(): String = unwrap(this).getDomainName()
+
+    /**
+     * A list of unique names for active event triggers associated with the integration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-customerprofiles-integration.html#cfn-customerprofiles-integration-eventtriggernames)
+     */
+    override fun eventTriggerNames(): List<String> = unwrap(this).getEventTriggerNames() ?:
+        emptyList()
 
     /**
      * The configuration that controls how Customer Profiles retrieves data from the source.

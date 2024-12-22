@@ -167,8 +167,14 @@ public open class CfnEventInvokeConfig(
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig)
      * @param destinationConfig A destination for events after they have been sent to a function for
@@ -182,8 +188,14 @@ public open class CfnEventInvokeConfig(
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig)
      * @param destinationConfig A destination for events after they have been sent to a function for
@@ -197,8 +209,14 @@ public open class CfnEventInvokeConfig(
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig)
      * @param destinationConfig A destination for events after they have been sent to a function for
@@ -266,8 +284,14 @@ public open class CfnEventInvokeConfig(
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig)
      * @param destinationConfig A destination for events after they have been sent to a function for
@@ -283,8 +307,14 @@ public open class CfnEventInvokeConfig(
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig)
      * @param destinationConfig A destination for events after they have been sent to a function for
@@ -300,8 +330,14 @@ public open class CfnEventInvokeConfig(
      * **Destinations** - *Function* - The Amazon Resource Name (ARN) of a Lambda function.
      *
      * * *Queue* - The ARN of a standard SQS queue.
+     * * *Bucket* - The ARN of an Amazon S3 bucket.
      * * *Topic* - The ARN of a standard SNS topic.
      * * *Event Bus* - The ARN of an Amazon EventBridge event bus.
+     *
+     *
+     * S3 buckets are supported only for on-failure destinations. To retain records of successful
+     * invocations, use another destination type.
+     *
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-lambda-eventinvokeconfig.html#cfn-lambda-eventinvokeconfig-destinationconfig)
      * @param destinationConfig A destination for events after they have been sent to a function for
@@ -577,16 +613,14 @@ public open class CfnEventInvokeConfig(
     /**
      * The Amazon Resource Name (ARN) of the destination resource.
      *
-     * To retain records of [asynchronous
+     * To retain records of unsuccessful [asynchronous
      * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-     * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-     * EventBridge event bus as the destination.
+     * , you can configure an Amazon SNS topic, Amazon SQS queue, Amazon S3 bucket, Lambda function, or
+     * Amazon EventBridge event bus as the destination.
      *
-     * To retain records of failed invocations from [Kinesis and DynamoDB event
-     * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-     * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-     *
-     * To retain records of failed invocations from [self-managed
+     * To retain records of failed invocations from
+     * [Kinesis](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html) ,
+     * [DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html) , [self-managed
      * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
      * or [Amazon
      * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
@@ -604,16 +638,14 @@ public open class CfnEventInvokeConfig(
     public interface Builder {
       /**
        * @param destination The Amazon Resource Name (ARN) of the destination resource. 
-       * To retain records of [asynchronous
+       * To retain records of unsuccessful [asynchronous
        * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-       * EventBridge event bus as the destination.
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, Amazon S3 bucket, Lambda function,
+       * or Amazon EventBridge event bus as the destination.
        *
-       * To retain records of failed invocations from [Kinesis and DynamoDB event
-       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-       *
-       * To retain records of failed invocations from [self-managed
+       * To retain records of failed invocations from
+       * [Kinesis](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html) ,
+       * [DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html) , [self-managed
        * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
        * or [Amazon
        * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
@@ -630,16 +662,14 @@ public open class CfnEventInvokeConfig(
 
       /**
        * @param destination The Amazon Resource Name (ARN) of the destination resource. 
-       * To retain records of [asynchronous
+       * To retain records of unsuccessful [asynchronous
        * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-       * EventBridge event bus as the destination.
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, Amazon S3 bucket, Lambda function,
+       * or Amazon EventBridge event bus as the destination.
        *
-       * To retain records of failed invocations from [Kinesis and DynamoDB event
-       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-       *
-       * To retain records of failed invocations from [self-managed
+       * To retain records of failed invocations from
+       * [Kinesis](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html) ,
+       * [DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html) , [self-managed
        * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
        * or [Amazon
        * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
@@ -662,16 +692,14 @@ public open class CfnEventInvokeConfig(
       /**
        * The Amazon Resource Name (ARN) of the destination resource.
        *
-       * To retain records of [asynchronous
+       * To retain records of unsuccessful [asynchronous
        * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
-       * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon
-       * EventBridge event bus as the destination.
+       * , you can configure an Amazon SNS topic, Amazon SQS queue, Amazon S3 bucket, Lambda function,
+       * or Amazon EventBridge event bus as the destination.
        *
-       * To retain records of failed invocations from [Kinesis and DynamoDB event
-       * sources](https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventsourcemapping.html#event-source-mapping-destinations)
-       * , you can configure an Amazon SNS topic or Amazon SQS queue as the destination.
-       *
-       * To retain records of failed invocations from [self-managed
+       * To retain records of failed invocations from
+       * [Kinesis](https://docs.aws.amazon.com/lambda/latest/dg/with-kinesis.html) ,
+       * [DynamoDB](https://docs.aws.amazon.com/lambda/latest/dg/with-ddb.html) , [self-managed
        * Kafka](https://docs.aws.amazon.com/lambda/latest/dg/with-kafka.html#services-smaa-onfailure-destination)
        * or [Amazon
        * MSK](https://docs.aws.amazon.com/lambda/latest/dg/with-msk.html#services-msk-onfailure-destination)
@@ -703,6 +731,11 @@ public open class CfnEventInvokeConfig(
 
   /**
    * A destination for events that were processed successfully.
+   *
+   * To retain records of successful [asynchronous
+   * invocations](https://docs.aws.amazon.com/lambda/latest/dg/invocation-async.html#invocation-async-destinations)
+   * , you can configure an Amazon SNS topic, Amazon SQS queue, Lambda function, or Amazon EventBridge
+   * event bus as the destination.
    *
    * Example:
    *

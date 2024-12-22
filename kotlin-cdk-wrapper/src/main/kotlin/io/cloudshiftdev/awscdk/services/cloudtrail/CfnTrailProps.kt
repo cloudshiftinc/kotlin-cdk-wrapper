@@ -76,12 +76,17 @@ public interface CfnTrailProps {
   /**
    * Specifies the settings for advanced event selectors.
    *
+   * You can use advanced event selectors to log management events, data events for all resource
+   * types, and network activity events.
+   *
    * You can add advanced event selectors, and conditions for your advanced event selectors, up to a
    * maximum of 500 values for all conditions and selectors on a trail. You can use either
    * `AdvancedEventSelectors` or `EventSelectors` , but not both. If you apply `AdvancedEventSelectors`
    * to a trail, any existing `EventSelectors` are overwritten. For more information about advanced
    * event selectors, see [Logging data
    * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+   * and [Logging network activity
+   * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
    * in the *AWS CloudTrail User Guide* .
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-advancedeventselectors)
@@ -303,36 +308,51 @@ public interface CfnTrailProps {
   public interface Builder {
     /**
      * @param advancedEventSelectors Specifies the settings for advanced event selectors.
+     * You can use advanced event selectors to log management events, data events for all resource
+     * types, and network activity events.
+     *
      * You can add advanced event selectors, and conditions for your advanced event selectors, up to
      * a maximum of 500 values for all conditions and selectors on a trail. You can use either
      * `AdvancedEventSelectors` or `EventSelectors` , but not both. If you apply
      * `AdvancedEventSelectors` to a trail, any existing `EventSelectors` are overwritten. For more
      * information about advanced event selectors, see [Logging data
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+     * and [Logging network activity
+     * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
      * in the *AWS CloudTrail User Guide* .
      */
     public fun advancedEventSelectors(advancedEventSelectors: IResolvable)
 
     /**
      * @param advancedEventSelectors Specifies the settings for advanced event selectors.
+     * You can use advanced event selectors to log management events, data events for all resource
+     * types, and network activity events.
+     *
      * You can add advanced event selectors, and conditions for your advanced event selectors, up to
      * a maximum of 500 values for all conditions and selectors on a trail. You can use either
      * `AdvancedEventSelectors` or `EventSelectors` , but not both. If you apply
      * `AdvancedEventSelectors` to a trail, any existing `EventSelectors` are overwritten. For more
      * information about advanced event selectors, see [Logging data
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+     * and [Logging network activity
+     * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
      * in the *AWS CloudTrail User Guide* .
      */
     public fun advancedEventSelectors(advancedEventSelectors: List<Any>)
 
     /**
      * @param advancedEventSelectors Specifies the settings for advanced event selectors.
+     * You can use advanced event selectors to log management events, data events for all resource
+     * types, and network activity events.
+     *
      * You can add advanced event selectors, and conditions for your advanced event selectors, up to
      * a maximum of 500 values for all conditions and selectors on a trail. You can use either
      * `AdvancedEventSelectors` or `EventSelectors` , but not both. If you apply
      * `AdvancedEventSelectors` to a trail, any existing `EventSelectors` are overwritten. For more
      * information about advanced event selectors, see [Logging data
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+     * and [Logging network activity
+     * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
      * in the *AWS CloudTrail User Guide* .
      */
     public fun advancedEventSelectors(vararg advancedEventSelectors: Any)
@@ -629,12 +649,17 @@ public interface CfnTrailProps {
 
     /**
      * @param advancedEventSelectors Specifies the settings for advanced event selectors.
+     * You can use advanced event selectors to log management events, data events for all resource
+     * types, and network activity events.
+     *
      * You can add advanced event selectors, and conditions for your advanced event selectors, up to
      * a maximum of 500 values for all conditions and selectors on a trail. You can use either
      * `AdvancedEventSelectors` or `EventSelectors` , but not both. If you apply
      * `AdvancedEventSelectors` to a trail, any existing `EventSelectors` are overwritten. For more
      * information about advanced event selectors, see [Logging data
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+     * and [Logging network activity
+     * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
      * in the *AWS CloudTrail User Guide* .
      */
     override fun advancedEventSelectors(advancedEventSelectors: IResolvable) {
@@ -643,12 +668,17 @@ public interface CfnTrailProps {
 
     /**
      * @param advancedEventSelectors Specifies the settings for advanced event selectors.
+     * You can use advanced event selectors to log management events, data events for all resource
+     * types, and network activity events.
+     *
      * You can add advanced event selectors, and conditions for your advanced event selectors, up to
      * a maximum of 500 values for all conditions and selectors on a trail. You can use either
      * `AdvancedEventSelectors` or `EventSelectors` , but not both. If you apply
      * `AdvancedEventSelectors` to a trail, any existing `EventSelectors` are overwritten. For more
      * information about advanced event selectors, see [Logging data
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+     * and [Logging network activity
+     * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
      * in the *AWS CloudTrail User Guide* .
      */
     override fun advancedEventSelectors(advancedEventSelectors: List<Any>) {
@@ -657,12 +687,17 @@ public interface CfnTrailProps {
 
     /**
      * @param advancedEventSelectors Specifies the settings for advanced event selectors.
+     * You can use advanced event selectors to log management events, data events for all resource
+     * types, and network activity events.
+     *
      * You can add advanced event selectors, and conditions for your advanced event selectors, up to
      * a maximum of 500 values for all conditions and selectors on a trail. You can use either
      * `AdvancedEventSelectors` or `EventSelectors` , but not both. If you apply
      * `AdvancedEventSelectors` to a trail, any existing `EventSelectors` are overwritten. For more
      * information about advanced event selectors, see [Logging data
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+     * and [Logging network activity
+     * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
      * in the *AWS CloudTrail User Guide* .
      */
     override fun advancedEventSelectors(vararg advancedEventSelectors: Any): Unit =
@@ -1010,12 +1045,17 @@ public interface CfnTrailProps {
     /**
      * Specifies the settings for advanced event selectors.
      *
+     * You can use advanced event selectors to log management events, data events for all resource
+     * types, and network activity events.
+     *
      * You can add advanced event selectors, and conditions for your advanced event selectors, up to
      * a maximum of 500 values for all conditions and selectors on a trail. You can use either
      * `AdvancedEventSelectors` or `EventSelectors` , but not both. If you apply
      * `AdvancedEventSelectors` to a trail, any existing `EventSelectors` are overwritten. For more
      * information about advanced event selectors, see [Logging data
      * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html)
+     * and [Logging network activity
+     * events](https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-network-events-with-cloudtrail.html)
      * in the *AWS CloudTrail User Guide* .
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-cloudtrail-trail.html#cfn-cloudtrail-trail-advancedeventselectors)

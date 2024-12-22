@@ -35,7 +35,7 @@ import kotlin.collections.List
  */
 public interface CfnUserGroupProps {
   /**
-   * The current supported value is redis.
+   * The current supported values are valkey and redis.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-engine)
    */
@@ -70,7 +70,7 @@ public interface CfnUserGroupProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param engine The current supported value is redis. 
+     * @param engine The current supported values are valkey and redis. 
      */
     public fun engine(engine: String)
 
@@ -107,7 +107,7 @@ public interface CfnUserGroupProps {
         software.amazon.awscdk.services.elasticache.CfnUserGroupProps.builder()
 
     /**
-     * @param engine The current supported value is redis. 
+     * @param engine The current supported values are valkey and redis. 
      */
     override fun engine(engine: String) {
       cdkBuilder.engine(engine)
@@ -155,7 +155,7 @@ public interface CfnUserGroupProps {
   ) : CdkObject(cdkObject),
       CfnUserGroupProps {
     /**
-     * The current supported value is redis.
+     * The current supported values are valkey and redis.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-elasticache-usergroup.html#cfn-elasticache-usergroup-engine)
      */

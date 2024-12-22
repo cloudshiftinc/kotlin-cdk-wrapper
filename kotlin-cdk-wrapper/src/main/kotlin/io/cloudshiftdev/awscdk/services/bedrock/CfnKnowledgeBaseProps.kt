@@ -82,7 +82,7 @@ import kotlin.jvm.JvmName
  */
 public interface CfnKnowledgeBaseProps {
   /**
-   * The description of the knowledge base.
+   * The description of the knowledge base associated with the inline agent.
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-description)
    */
@@ -136,7 +136,7 @@ public interface CfnKnowledgeBaseProps {
   @CdkDslMarker
   public interface Builder {
     /**
-     * @param description The description of the knowledge base.
+     * @param description The description of the knowledge base associated with the inline agent.
      */
     public fun description(description: String)
 
@@ -211,7 +211,7 @@ public interface CfnKnowledgeBaseProps {
         software.amazon.awscdk.services.bedrock.CfnKnowledgeBaseProps.builder()
 
     /**
-     * @param description The description of the knowledge base.
+     * @param description The description of the knowledge base associated with the inline agent.
      */
     override fun description(description: String) {
       cdkBuilder.description(description)
@@ -309,7 +309,7 @@ public interface CfnKnowledgeBaseProps {
   ) : CdkObject(cdkObject),
       CfnKnowledgeBaseProps {
     /**
-     * The description of the knowledge base.
+     * The description of the knowledge base associated with the inline agent.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-resource-bedrock-knowledgebase.html#cfn-bedrock-knowledgebase-description)
      */

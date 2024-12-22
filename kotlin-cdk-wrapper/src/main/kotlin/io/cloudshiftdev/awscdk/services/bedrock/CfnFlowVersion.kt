@@ -66,7 +66,7 @@ public open class CfnFlowVersion(
   public open fun attrCreatedAt(): String = unwrap(this).getAttrCreatedAt()
 
   /**
-   * A KMS key ARN.
+   * The Amazon Resource Name (ARN) of the KMS key that the flow version is encrypted with.
    */
   public open fun attrCustomerEncryptionKeyArn(): String =
       unwrap(this).getAttrCustomerEncryptionKeyArn()
@@ -1231,6 +1231,10 @@ public open class CfnFlowVersion(
    * .knowledgeBase(KnowledgeBaseFlowNodeConfigurationProperty.builder()
    * .knowledgeBaseId("knowledgeBaseId")
    * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
+   * .build())
    * .modelId("modelId")
    * .build())
    * .lambdaFunction(LambdaFunctionFlowNodeConfigurationProperty.builder()
@@ -1261,7 +1265,6 @@ public open class CfnFlowVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build())
    * .build())
@@ -1269,6 +1272,11 @@ public open class CfnFlowVersion(
    * .resource(PromptFlowNodeResourceConfigurationProperty.builder()
    * .promptArn("promptArn")
    * .build())
+   * .build())
+   * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
    * .build())
    * .build())
    * .retrieval(RetrievalFlowNodeConfigurationProperty.builder()
@@ -1472,6 +1480,10 @@ public open class CfnFlowVersion(
    * .knowledgeBase(KnowledgeBaseFlowNodeConfigurationProperty.builder()
    * .knowledgeBaseId("knowledgeBaseId")
    * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
+   * .build())
    * .modelId("modelId")
    * .build())
    * .lambdaFunction(LambdaFunctionFlowNodeConfigurationProperty.builder()
@@ -1502,7 +1514,6 @@ public open class CfnFlowVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build())
    * .build())
@@ -1510,6 +1521,11 @@ public open class CfnFlowVersion(
    * .resource(PromptFlowNodeResourceConfigurationProperty.builder()
    * .promptArn("promptArn")
    * .build())
+   * .build())
+   * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
    * .build())
    * .build())
    * .retrieval(RetrievalFlowNodeConfigurationProperty.builder()
@@ -2545,6 +2561,10 @@ public open class CfnFlowVersion(
    * .knowledgeBase(KnowledgeBaseFlowNodeConfigurationProperty.builder()
    * .knowledgeBaseId("knowledgeBaseId")
    * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
+   * .build())
    * .modelId("modelId")
    * .build())
    * .lambdaFunction(LambdaFunctionFlowNodeConfigurationProperty.builder()
@@ -2575,7 +2595,6 @@ public open class CfnFlowVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build())
    * .build())
@@ -2583,6 +2602,11 @@ public open class CfnFlowVersion(
    * .resource(PromptFlowNodeResourceConfigurationProperty.builder()
    * .promptArn("promptArn")
    * .build())
+   * .build())
+   * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
    * .build())
    * .build())
    * .retrieval(RetrievalFlowNodeConfigurationProperty.builder()
@@ -2877,6 +2901,119 @@ public open class CfnFlowVersion(
   }
 
   /**
+   * Configuration information for a guardrail that you use with the
+   * [Converse](https://docs.aws.amazon.com/bedrock/latest/APIReference/API_runtime_Converse.html)
+   * operation.
+   *
+   * Example:
+   *
+   * ```
+   * // The code below shows an example of how to instantiate this type.
+   * // The values are placeholders you should change.
+   * import io.cloudshiftdev.awscdk.services.bedrock.*;
+   * GuardrailConfigurationProperty guardrailConfigurationProperty =
+   * GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
+   * .build();
+   * ```
+   *
+   * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-guardrailconfiguration.html)
+   */
+  public interface GuardrailConfigurationProperty {
+    /**
+     * The identifier for the guardrail.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-guardrailconfiguration.html#cfn-bedrock-flowversion-guardrailconfiguration-guardrailidentifier)
+     */
+    public fun guardrailIdentifier(): String? = unwrap(this).getGuardrailIdentifier()
+
+    /**
+     * The version of the guardrail.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-guardrailconfiguration.html#cfn-bedrock-flowversion-guardrailconfiguration-guardrailversion)
+     */
+    public fun guardrailVersion(): String? = unwrap(this).getGuardrailVersion()
+
+    /**
+     * A builder for [GuardrailConfigurationProperty]
+     */
+    @CdkDslMarker
+    public interface Builder {
+      /**
+       * @param guardrailIdentifier The identifier for the guardrail.
+       */
+      public fun guardrailIdentifier(guardrailIdentifier: String)
+
+      /**
+       * @param guardrailVersion The version of the guardrail.
+       */
+      public fun guardrailVersion(guardrailVersion: String)
+    }
+
+    private class BuilderImpl : Builder {
+      private val cdkBuilder:
+          software.amazon.awscdk.services.bedrock.CfnFlowVersion.GuardrailConfigurationProperty.Builder
+          =
+          software.amazon.awscdk.services.bedrock.CfnFlowVersion.GuardrailConfigurationProperty.builder()
+
+      /**
+       * @param guardrailIdentifier The identifier for the guardrail.
+       */
+      override fun guardrailIdentifier(guardrailIdentifier: String) {
+        cdkBuilder.guardrailIdentifier(guardrailIdentifier)
+      }
+
+      /**
+       * @param guardrailVersion The version of the guardrail.
+       */
+      override fun guardrailVersion(guardrailVersion: String) {
+        cdkBuilder.guardrailVersion(guardrailVersion)
+      }
+
+      public fun build():
+          software.amazon.awscdk.services.bedrock.CfnFlowVersion.GuardrailConfigurationProperty =
+          cdkBuilder.build()
+    }
+
+    private class Wrapper(
+      cdkObject: software.amazon.awscdk.services.bedrock.CfnFlowVersion.GuardrailConfigurationProperty,
+    ) : CdkObject(cdkObject),
+        GuardrailConfigurationProperty {
+      /**
+       * The identifier for the guardrail.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-guardrailconfiguration.html#cfn-bedrock-flowversion-guardrailconfiguration-guardrailidentifier)
+       */
+      override fun guardrailIdentifier(): String? = unwrap(this).getGuardrailIdentifier()
+
+      /**
+       * The version of the guardrail.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-guardrailconfiguration.html#cfn-bedrock-flowversion-guardrailconfiguration-guardrailversion)
+       */
+      override fun guardrailVersion(): String? = unwrap(this).getGuardrailVersion()
+    }
+
+    public companion object {
+      public operator fun invoke(block: Builder.() -> Unit = {}): GuardrailConfigurationProperty {
+        val builderImpl = BuilderImpl()
+        return Wrapper(builderImpl.apply(block).build())
+      }
+
+      internal
+          fun wrap(cdkObject: software.amazon.awscdk.services.bedrock.CfnFlowVersion.GuardrailConfigurationProperty):
+          GuardrailConfigurationProperty = CdkObjectWrappers.wrap(cdkObject) as?
+          GuardrailConfigurationProperty ?: Wrapper(cdkObject)
+
+      internal fun unwrap(wrapped: GuardrailConfigurationProperty):
+          software.amazon.awscdk.services.bedrock.CfnFlowVersion.GuardrailConfigurationProperty =
+          (wrapped as CdkObject).cdkObject as
+          software.amazon.awscdk.services.bedrock.CfnFlowVersion.GuardrailConfigurationProperty
+    }
+  }
+
+  /**
    * Contains configurations for a knowledge base node in a flow.
    *
    * This node takes a query as the input and returns, as the output, the retrieved responses
@@ -2895,6 +3032,10 @@ public open class CfnFlowVersion(
    * KnowledgeBaseFlowNodeConfigurationProperty.builder()
    * .knowledgeBaseId("knowledgeBaseId")
    * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
+   * .build())
    * .modelId("modelId")
    * .build();
    * ```
@@ -2903,6 +3044,14 @@ public open class CfnFlowVersion(
    */
   public interface KnowledgeBaseFlowNodeConfigurationProperty {
     /**
+     * Contains configurations for a guardrail to apply during query and response generation for the
+     * knowledge base in this configuration.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flowversion-knowledgebaseflownodeconfiguration-guardrailconfiguration)
+     */
+    public fun guardrailConfiguration(): Any? = unwrap(this).getGuardrailConfiguration()
+
+    /**
      * The unique identifier of the knowledge base to query.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flowversion-knowledgebaseflownodeconfiguration-knowledgebaseid)
@@ -2910,9 +3059,10 @@ public open class CfnFlowVersion(
     public fun knowledgeBaseId(): String
 
     /**
-     * The unique identifier of the model to use to generate a response from the query results.
-     *
-     * Omit this field if you want to return the retrieved results as an array.
+     * The unique identifier of the model or [inference
+     * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) to
+     * use to generate a response from the query results. Omit this field if you want to return the
+     * retrieved results as an array.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flowversion-knowledgebaseflownodeconfiguration-modelid)
      */
@@ -2924,14 +3074,36 @@ public open class CfnFlowVersion(
     @CdkDslMarker
     public interface Builder {
       /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply during query
+       * and response generation for the knowledge base in this configuration.
+       */
+      public fun guardrailConfiguration(guardrailConfiguration: IResolvable)
+
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply during query
+       * and response generation for the knowledge base in this configuration.
+       */
+      public fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty)
+
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply during query
+       * and response generation for the knowledge base in this configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("adbb4d13fa9b96f58165bd246c315a87737710fab54429817a982c88160c4a2b")
+      public
+          fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty.Builder.() -> Unit)
+
+      /**
        * @param knowledgeBaseId The unique identifier of the knowledge base to query. 
        */
       public fun knowledgeBaseId(knowledgeBaseId: String)
 
       /**
-       * @param modelId The unique identifier of the model to use to generate a response from the
-       * query results.
-       * Omit this field if you want to return the retrieved results as an array.
+       * @param modelId The unique identifier of the model or [inference
+       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) to
+       * use to generate a response from the query results. Omit this field if you want to return the
+       * retrieved results as an array.
        */
       public fun modelId(modelId: String)
     }
@@ -2943,6 +3115,32 @@ public open class CfnFlowVersion(
           software.amazon.awscdk.services.bedrock.CfnFlowVersion.KnowledgeBaseFlowNodeConfigurationProperty.builder()
 
       /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply during query
+       * and response generation for the knowledge base in this configuration.
+       */
+      override fun guardrailConfiguration(guardrailConfiguration: IResolvable) {
+        cdkBuilder.guardrailConfiguration(guardrailConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply during query
+       * and response generation for the knowledge base in this configuration.
+       */
+      override fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty) {
+        cdkBuilder.guardrailConfiguration(guardrailConfiguration.let(GuardrailConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply during query
+       * and response generation for the knowledge base in this configuration.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("adbb4d13fa9b96f58165bd246c315a87737710fab54429817a982c88160c4a2b")
+      override
+          fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty.Builder.() -> Unit):
+          Unit = guardrailConfiguration(GuardrailConfigurationProperty(guardrailConfiguration))
+
+      /**
        * @param knowledgeBaseId The unique identifier of the knowledge base to query. 
        */
       override fun knowledgeBaseId(knowledgeBaseId: String) {
@@ -2950,9 +3148,10 @@ public open class CfnFlowVersion(
       }
 
       /**
-       * @param modelId The unique identifier of the model to use to generate a response from the
-       * query results.
-       * Omit this field if you want to return the retrieved results as an array.
+       * @param modelId The unique identifier of the model or [inference
+       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) to
+       * use to generate a response from the query results. Omit this field if you want to return the
+       * retrieved results as an array.
        */
       override fun modelId(modelId: String) {
         cdkBuilder.modelId(modelId)
@@ -2968,6 +3167,14 @@ public open class CfnFlowVersion(
     ) : CdkObject(cdkObject),
         KnowledgeBaseFlowNodeConfigurationProperty {
       /**
+       * Contains configurations for a guardrail to apply during query and response generation for
+       * the knowledge base in this configuration.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flowversion-knowledgebaseflownodeconfiguration-guardrailconfiguration)
+       */
+      override fun guardrailConfiguration(): Any? = unwrap(this).getGuardrailConfiguration()
+
+      /**
        * The unique identifier of the knowledge base to query.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flowversion-knowledgebaseflownodeconfiguration-knowledgebaseid)
@@ -2975,9 +3182,10 @@ public open class CfnFlowVersion(
       override fun knowledgeBaseId(): String = unwrap(this).getKnowledgeBaseId()
 
       /**
-       * The unique identifier of the model to use to generate a response from the query results.
-       *
-       * Omit this field if you want to return the retrieved results as an array.
+       * The unique identifier of the model or [inference
+       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) to
+       * use to generate a response from the query results. Omit this field if you want to return the
+       * retrieved results as an array.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-knowledgebaseflownodeconfiguration.html#cfn-bedrock-flowversion-knowledgebaseflownodeconfiguration-modelid)
        */
@@ -3245,7 +3453,6 @@ public open class CfnFlowVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build())
    * .build())
@@ -3254,12 +3461,25 @@ public open class CfnFlowVersion(
    * .promptArn("promptArn")
    * .build())
    * .build())
+   * // the properties below are optional
+   * .guardrailConfiguration(GuardrailConfigurationProperty.builder()
+   * .guardrailIdentifier("guardrailIdentifier")
+   * .guardrailVersion("guardrailVersion")
+   * .build())
    * .build();
    * ```
    *
    * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-promptflownodeconfiguration.html)
    */
   public interface PromptFlowNodeConfigurationProperty {
+    /**
+     * Contains configurations for a guardrail to apply to the prompt in this node and the response
+     * generated from it.
+     *
+     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-promptflownodeconfiguration.html#cfn-bedrock-flowversion-promptflownodeconfiguration-guardrailconfiguration)
+     */
+    public fun guardrailConfiguration(): Any? = unwrap(this).getGuardrailConfiguration()
+
     /**
      * Specifies whether the prompt is from Prompt management or defined inline.
      *
@@ -3272,6 +3492,27 @@ public open class CfnFlowVersion(
      */
     @CdkDslMarker
     public interface Builder {
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply to the
+       * prompt in this node and the response generated from it.
+       */
+      public fun guardrailConfiguration(guardrailConfiguration: IResolvable)
+
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply to the
+       * prompt in this node and the response generated from it.
+       */
+      public fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty)
+
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply to the
+       * prompt in this node and the response generated from it.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("33f0cc1f82891e865ab36736bcbf25101cc9ae2b70a311fc334c9f8e04adbab0")
+      public
+          fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty.Builder.() -> Unit)
+
       /**
        * @param sourceConfiguration Specifies whether the prompt is from Prompt management or
        * defined inline. 
@@ -3299,6 +3540,32 @@ public open class CfnFlowVersion(
           software.amazon.awscdk.services.bedrock.CfnFlowVersion.PromptFlowNodeConfigurationProperty.Builder
           =
           software.amazon.awscdk.services.bedrock.CfnFlowVersion.PromptFlowNodeConfigurationProperty.builder()
+
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply to the
+       * prompt in this node and the response generated from it.
+       */
+      override fun guardrailConfiguration(guardrailConfiguration: IResolvable) {
+        cdkBuilder.guardrailConfiguration(guardrailConfiguration.let(IResolvable.Companion::unwrap))
+      }
+
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply to the
+       * prompt in this node and the response generated from it.
+       */
+      override fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty) {
+        cdkBuilder.guardrailConfiguration(guardrailConfiguration.let(GuardrailConfigurationProperty.Companion::unwrap))
+      }
+
+      /**
+       * @param guardrailConfiguration Contains configurations for a guardrail to apply to the
+       * prompt in this node and the response generated from it.
+       */
+      @kotlin.Suppress("INAPPLICABLE_JVM_NAME")
+      @JvmName("33f0cc1f82891e865ab36736bcbf25101cc9ae2b70a311fc334c9f8e04adbab0")
+      override
+          fun guardrailConfiguration(guardrailConfiguration: GuardrailConfigurationProperty.Builder.() -> Unit):
+          Unit = guardrailConfiguration(GuardrailConfigurationProperty(guardrailConfiguration))
 
       /**
        * @param sourceConfiguration Specifies whether the prompt is from Prompt management or
@@ -3336,6 +3603,14 @@ public open class CfnFlowVersion(
       cdkObject: software.amazon.awscdk.services.bedrock.CfnFlowVersion.PromptFlowNodeConfigurationProperty,
     ) : CdkObject(cdkObject),
         PromptFlowNodeConfigurationProperty {
+      /**
+       * Contains configurations for a guardrail to apply to the prompt in this node and the
+       * response generated from it.
+       *
+       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-promptflownodeconfiguration.html#cfn-bedrock-flowversion-promptflownodeconfiguration-guardrailconfiguration)
+       */
+      override fun guardrailConfiguration(): Any? = unwrap(this).getGuardrailConfiguration()
+
       /**
        * Specifies whether the prompt is from Prompt management or defined inline.
        *
@@ -3391,7 +3666,6 @@ public open class CfnFlowVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build())
    * .build())
@@ -3409,7 +3683,9 @@ public open class CfnFlowVersion(
     public fun inferenceConfiguration(): Any? = unwrap(this).getInferenceConfiguration()
 
     /**
-     * The unique identifier of the model to run inference with.
+     * The unique identifier of the model or [inference
+     * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) to
+     * run inference with.
      *
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-promptflownodeinlineconfiguration.html#cfn-bedrock-flowversion-promptflownodeinlineconfiguration-modelid)
      */
@@ -3454,7 +3730,9 @@ public open class CfnFlowVersion(
           fun inferenceConfiguration(inferenceConfiguration: PromptInferenceConfigurationProperty.Builder.() -> Unit)
 
       /**
-       * @param modelId The unique identifier of the model to run inference with. 
+       * @param modelId The unique identifier of the model or [inference
+       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) to
+       * run inference with. 
        */
       public fun modelId(modelId: String)
 
@@ -3517,7 +3795,9 @@ public open class CfnFlowVersion(
           inferenceConfiguration(PromptInferenceConfigurationProperty(inferenceConfiguration))
 
       /**
-       * @param modelId The unique identifier of the model to run inference with. 
+       * @param modelId The unique identifier of the model or [inference
+       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) to
+       * run inference with. 
        */
       override fun modelId(modelId: String) {
         cdkBuilder.modelId(modelId)
@@ -3574,7 +3854,9 @@ public open class CfnFlowVersion(
       override fun inferenceConfiguration(): Any? = unwrap(this).getInferenceConfiguration()
 
       /**
-       * The unique identifier of the model to run inference with.
+       * The unique identifier of the model or [inference
+       * profile](https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference.html) to
+       * run inference with.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-promptflownodeinlineconfiguration.html#cfn-bedrock-flowversion-promptflownodeinlineconfiguration-modelid)
        */
@@ -3729,7 +4011,6 @@ public open class CfnFlowVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build())
    * .build())
@@ -3906,7 +4187,6 @@ public open class CfnFlowVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build())
    * .build();
@@ -4109,7 +4389,6 @@ public open class CfnFlowVersion(
    * .maxTokens(123)
    * .stopSequences(List.of("stopSequences"))
    * .temperature(123)
-   * .topK(123)
    * .topP(123)
    * .build();
    * ```
@@ -4140,14 +4419,6 @@ public open class CfnFlowVersion(
      * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-promptmodelinferenceconfiguration.html#cfn-bedrock-flowversion-promptmodelinferenceconfiguration-temperature)
      */
     public fun temperature(): Number? = unwrap(this).getTemperature()
-
-    /**
-     * The number of most-likely candidates that the model considers for the next token during
-     * generation.
-     *
-     * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-promptmodelinferenceconfiguration.html#cfn-bedrock-flowversion-promptmodelinferenceconfiguration-topk)
-     */
-    public fun topK(): Number? = unwrap(this).getTopK()
 
     /**
      * The percentage of most-likely candidates that the model considers for the next token.
@@ -4184,12 +4455,6 @@ public open class CfnFlowVersion(
        * outputs.
        */
       public fun temperature(temperature: Number)
-
-      /**
-       * @param topK The number of most-likely candidates that the model considers for the next
-       * token during generation.
-       */
-      public fun topK(topK: Number)
 
       /**
        * @param topP The percentage of most-likely candidates that the model considers for the next
@@ -4236,14 +4501,6 @@ public open class CfnFlowVersion(
       }
 
       /**
-       * @param topK The number of most-likely candidates that the model considers for the next
-       * token during generation.
-       */
-      override fun topK(topK: Number) {
-        cdkBuilder.topK(topK)
-      }
-
-      /**
        * @param topP The percentage of most-likely candidates that the model considers for the next
        * token.
        */
@@ -4285,14 +4542,6 @@ public open class CfnFlowVersion(
       override fun temperature(): Number? = unwrap(this).getTemperature()
 
       /**
-       * The number of most-likely candidates that the model considers for the next token during
-       * generation.
-       *
-       * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-promptmodelinferenceconfiguration.html#cfn-bedrock-flowversion-promptmodelinferenceconfiguration-topk)
-       */
-      override fun topK(): Number? = unwrap(this).getTopK()
-
-      /**
        * The percentage of most-likely candidates that the model considers for the next token.
        *
        * [Documentation](http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-bedrock-flowversion-promptmodelinferenceconfiguration.html#cfn-bedrock-flowversion-promptmodelinferenceconfiguration-topp)
@@ -4322,8 +4571,8 @@ public open class CfnFlowVersion(
   /**
    * Contains the message for a prompt.
    *
-   * For more information, see [Prompt management in Amazon
-   * Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html) .
+   * For more information, see [Construct and store reusable prompts with Prompt management in
+   * Amazon Bedrock](https://docs.aws.amazon.com/bedrock/latest/userguide/prompt-management.html) .
    *
    * Example:
    *

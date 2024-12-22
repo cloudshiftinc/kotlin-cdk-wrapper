@@ -38,6 +38,7 @@ import kotlin.jvm.JvmName
  * .custom(Map.of(
  * "customKey", providerAttribute))
  * .email(providerAttribute)
+ * .emailVerified(providerAttribute)
  * .familyName(providerAttribute)
  * .fullname(providerAttribute)
  * .gender(providerAttribute)

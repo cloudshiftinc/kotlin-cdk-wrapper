@@ -2900,11 +2900,9 @@ public open class CfnSpotFleet(
    * AWS CloudFormation resource, you can't specify `InstanceRequirements` .
    *
    *
-   * For more information, see [Attribute-based instance type selection for EC2
+   * For more information, see [Specify attributes for instance type selection for EC2 Fleet or Spot
    * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html)
-   * , [Attribute-based instance type selection for Spot
-   * Fleet](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html)
-   * , and [Spot placement
+   * and [Spot placement
    * score](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html) in the
    * *Amazon EC2 User Guide* .
    *
@@ -3037,7 +3035,6 @@ public open class CfnSpotFleet(
      *
      * * To include instance types with GPU hardware, specify `gpu` .
      * * To include instance types with FPGA hardware, specify `fpga` .
-     * * To include instance types with inference hardware, specify `inference` .
      *
      * Default: Any accelerator type
      *
@@ -3118,6 +3115,7 @@ public open class CfnSpotFleet(
      * * For instance types with Intel CPUs, specify `intel` .
      * * For instance types with AMD CPUs, specify `amd` .
      * * For instance types with AWS CPUs, specify `amazon-web-services` .
+     * * For instance types with Apple CPUs, specify `apple` .
      *
      *
      * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched with
@@ -3499,7 +3497,6 @@ public open class CfnSpotFleet(
        * @param acceleratorTypes The accelerator types that must be on the instance type.
        * * To include instance types with GPU hardware, specify `gpu` .
        * * To include instance types with FPGA hardware, specify `fpga` .
-       * * To include instance types with inference hardware, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -3509,7 +3506,6 @@ public open class CfnSpotFleet(
        * @param acceleratorTypes The accelerator types that must be on the instance type.
        * * To include instance types with GPU hardware, specify `gpu` .
        * * To include instance types with FPGA hardware, specify `fpga` .
-       * * To include instance types with inference hardware, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -3623,6 +3619,7 @@ public open class CfnSpotFleet(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
@@ -3639,6 +3636,7 @@ public open class CfnSpotFleet(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
@@ -4147,7 +4145,6 @@ public open class CfnSpotFleet(
        * @param acceleratorTypes The accelerator types that must be on the instance type.
        * * To include instance types with GPU hardware, specify `gpu` .
        * * To include instance types with FPGA hardware, specify `fpga` .
-       * * To include instance types with inference hardware, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4159,7 +4156,6 @@ public open class CfnSpotFleet(
        * @param acceleratorTypes The accelerator types that must be on the instance type.
        * * To include instance types with GPU hardware, specify `gpu` .
        * * To include instance types with FPGA hardware, specify `fpga` .
-       * * To include instance types with inference hardware, specify `inference` .
        *
        * Default: Any accelerator type
        */
@@ -4287,6 +4283,7 @@ public open class CfnSpotFleet(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
@@ -4305,6 +4302,7 @@ public open class CfnSpotFleet(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
@@ -4793,7 +4791,6 @@ public open class CfnSpotFleet(
        *
        * * To include instance types with GPU hardware, specify `gpu` .
        * * To include instance types with FPGA hardware, specify `fpga` .
-       * * To include instance types with inference hardware, specify `inference` .
        *
        * Default: Any accelerator type
        *
@@ -4876,6 +4873,7 @@ public open class CfnSpotFleet(
        * * For instance types with Intel CPUs, specify `intel` .
        * * For instance types with AMD CPUs, specify `amd` .
        * * For instance types with AWS CPUs, specify `amazon-web-services` .
+       * * For instance types with Apple CPUs, specify `apple` .
        *
        *
        * Don't confuse the CPU manufacturer with the CPU architecture. Instances will be launched
