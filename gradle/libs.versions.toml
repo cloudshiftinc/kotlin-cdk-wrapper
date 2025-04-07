@@ -7,7 +7,7 @@ kotlin = "2.0.21"
 [plugins]
 kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 nexusPublish = { id = "io.github.gradle-nexus.publish-plugin", version = "2.0.0" }
-ktfmt = { id = "com.ncorti.ktfmt.gradle", version = "0.21.0" }
+ktfmt = { id = "com.ncorti.ktfmt.gradle", version = "0.22.0" }
 
 [libraries]
 
@@ -16,7 +16,7 @@ ktfmt = { id = "com.ncorti.ktfmt.gradle", version = "0.21.0" }
 #
 
 # JUnit
-junit-bom = { module = "org.junit:junit-bom", version = "5.11.4" }
+junit-bom = { module = "org.junit:junit-bom", version = "5.12.1" }
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api" }
 junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
@@ -35,22 +35,22 @@ kotest-extensions-spring = { module = "io.kotest.extensions:kotest-extensions-sp
 #
 #
 
-asm-bom = { module = "org.ow2.asm:asm-bom", version = "9.7.1" }
+asm-bom = { module = "org.ow2.asm:asm-bom", version = "9.8" }
 asm-core = { module = "org.ow2.asm:asm" }
 asm-tree = { module = "org.ow2.asm:asm-tree" }
 asm-util = { module = "org.ow2.asm:asm-util" }
 
 caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.2.0" }
-aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.22.1" }
+aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.23" }
 
-guava = { module = "com.google.guava:guava", version = "33.4.0-jre" }
-awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.177.0" }
+guava = { module = "com.google.guava:guava", version = "33.4.6-jre" }
+awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.188.0" }
 awscdk-constructs = { module = "software.constructs:constructs", version = "10.4.2" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.18.1" }
-javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.26.3" }
+javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.26.4" }
 
-jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version = "2.18.2" }
+jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version = "2.18.3" }
 jackson-core = { module = "com.fasterxml.jackson.core:jackson-core" }
 jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind" }
-jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.18.2" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.18.3" }
 
