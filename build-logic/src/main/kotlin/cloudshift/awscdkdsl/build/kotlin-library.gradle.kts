@@ -21,6 +21,7 @@ ktfmt {
     kotlinLangStyle()
 }
 
+// TODO: remove w/ Gradle 9
 tasks.withType<AbstractArchiveTask>().configureEach {
     isPreserveFileTimestamps = false
     isReproducibleFileOrder = true
@@ -30,6 +31,7 @@ tasks.withType<AbstractArchiveTask>().configureEach {
 val libs = the<LibrariesForLibs>()
 
 java {
+    withJavadocJar()
     withSourcesJar()
     consistentResolution { useCompileClasspathVersions() }
 }
