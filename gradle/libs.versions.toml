@@ -16,7 +16,7 @@ ktfmt = { id = "com.ncorti.ktfmt.gradle", version = "0.23.0" }
 #
 
 # JUnit
-junit-bom = { module = "org.junit:junit-bom", version = "5.13.1" }
+junit-bom = { module = "org.junit:junit-bom", version = "5.13.4" }
 junit-jupiter-api = { module = "org.junit.jupiter:junit-jupiter-api" }
 junit-jupiter-params = { module = "org.junit.jupiter:junit-jupiter-params" }
 junit-jupiter-engine = { module = "org.junit.jupiter:junit-jupiter-engine" }
@@ -40,17 +40,17 @@ asm-core = { module = "org.ow2.asm:asm" }
 asm-tree = { module = "org.ow2.asm:asm-tree" }
 asm-util = { module = "org.ow2.asm:asm-util" }
 
-caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.2.1" }
+caffeine = { module = "com.github.ben-manes.caffeine:caffeine", version = "3.2.2" }
 aspectj-tools = { module = "org.aspectj:aspectjtools", version = "1.9.24" }
 
 guava = { module = "com.google.guava:guava", version = "33.4.8-jre" }
 awscdk = { module = "software.amazon.awscdk:aws-cdk-lib", version = "2.208.0" }
 awscdk-constructs = { module = "software.constructs:constructs", version = "10.4.2" }
 squareup-kotlinpoet = { module = "com.squareup:kotlinpoet", version = "1.18.1" }
-javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.26.4" }
+javaparser-core = { module = "com.github.javaparser:javaparser-core", version = "3.27.0" }
 
-jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version = "2.19.0" }
+jackson-bom = { module = "com.fasterxml.jackson:jackson-bom", version = "2.19.2" }
 jackson-core = { module = "com.fasterxml.jackson.core:jackson-core" }
 jackson-databind = { module = "com.fasterxml.jackson.core:jackson-databind" }
-jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.19.0" }
+jackson-module-kotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin", version = "2.19.2" }
 
