@@ -8,8 +8,8 @@ env:
   GRADLE_BUILD_ACTION_CACHE_DEBUG_ENABLED: 'false'
   ORG_GRADLE_PROJECT_signingInMemoryKey: '${{ secrets.SIGNING_KEY }}'
   ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: '${{ secrets.SIGNING_PASSWORD }}'
-  ORG_GRADLE_PROJECT_sonatypeUsername: '${{ secrets.SONATYPEUSERNAME }}'
-  ORG_GRADLE_PROJECT_sonatypePassword: '${{ secrets.SONATYPEPASSWORD }}'
+  ORG_GRADLE_PROJECT_mavenCentralUsername: '${{ secrets.SONATYPEUSERNAME }}'
+  ORG_GRADLE_PROJECT_mavenCentralPassword: '${{ secrets.SONATYPEPASSWORD }}'
 jobs:
   build:
     runs-on:
