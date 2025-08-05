@@ -12,6 +12,7 @@ dependencies {
     // for convention plugins
     implementation(plugin(libs.plugins.kotlin.jvm))
     implementation(plugin(libs.plugins.ktfmt))
+    implementation(plugin(libs.plugins.vanniktech.maven.publish))
 
     // for generating Kotlin DSL
     implementation(libs.guava)

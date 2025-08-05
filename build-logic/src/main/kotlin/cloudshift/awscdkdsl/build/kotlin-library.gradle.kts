@@ -1,5 +1,10 @@
 package cloudshift.awscdkdsl.build
 
+import gradle.kotlin.dsl.accessors._d492ae88e889474f08a94dcb2edd10b1.implementation
+import gradle.kotlin.dsl.accessors._d492ae88e889474f08a94dcb2edd10b1.java
+import gradle.kotlin.dsl.accessors._d492ae88e889474f08a94dcb2edd10b1.ktfmt
+import gradle.kotlin.dsl.accessors._d492ae88e889474f08a94dcb2edd10b1.testImplementation
+import gradle.kotlin.dsl.accessors._d492ae88e889474f08a94dcb2edd10b1.testRuntimeOnly
 import org.gradle.accessors.dm.LibrariesForLibs
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
@@ -25,7 +30,6 @@ tasks.withType<AbstractArchiveTask>().configureEach {
 val libs = the<LibrariesForLibs>()
 
 java {
-    withJavadocJar()
     withSourcesJar()
     consistentResolution { useCompileClasspathVersions() }
 }

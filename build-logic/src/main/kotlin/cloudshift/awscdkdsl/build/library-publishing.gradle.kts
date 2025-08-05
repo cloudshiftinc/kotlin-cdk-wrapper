@@ -1,11 +1,46 @@
 package cloudshift.awscdkdsl.build
 
+import com.vanniktech.maven.publish.JavadocJar
+import com.vanniktech.maven.publish.KotlinJvm
+import gradle.kotlin.dsl.accessors._94cffe4e74c4f6a3b1c88c3e0c336ef5.mavenPublishing
+
 plugins {
-    `maven-publish`
-    signing
+    id("com.vanniktech.maven.publish")
 }
 
-publishing {
+mavenPublishing {
+    publishToMavenCentral()
+    signAllPublications()
+
+    pom {
+        name = "awscdk-dsl-kotlin"
+        description = "Kotlin DSL for AWS CDK"
+        inceptionYear = "2023"
+        url = "https://github.com/cloudshiftinc/awscdk-dsl-kotlin"
+        licenses {
+            license {
+                name = "Apache License, Version 2.0"
+                url = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+                distribution = "https://www.apache.org/licenses/LICENSE-2.0.txt"
+            }
+        }
+        developers {
+            developer {
+                id = "cloudshiftchris"
+                name = "Chris Lee"
+                email = "chris@cloudshiftconsulting.com"
+            }
+        }
+        scm {
+            connection = "scm:git:git://github.com/cloudshiftinc/awscdk-dsl-kotlin.git"
+            developerConnection =
+                "scm:git:https://github.com/cloudshiftinc/awscdk-dsl-kotlin.git"
+            url = "https://github.com/cloudshiftinc/awscdk-dsl-kotlin"
+        }
+    }
+}
+
+/*publishing {
     publications {
         create<MavenPublication>("mavenJava") {
             from(components["java"])
@@ -47,7 +82,7 @@ signing {
     val signingPassword: String? by project
     useInMemoryPgpKeys(signingKey, signingPassword)
     sign(publishing.publications["mavenJava"])
-}
+}*/
 
 val publishingPredicate = provider {
     val ci = System.getenv("CI") == "true" && System.getenv("GITHUB_REF") == "refs/heads/main"
@@ -61,6 +96,4 @@ tasks.withType<PublishToMavenRepository>().configureEach {
     onlyIf("Publishing only allowed on CI") { publishingPredicate.get() }
 }
 
-tasks.named("publishToSonatype") {
-    onlyIf("Publishing only allowed on CI") { publishingPredicate.get() }
-}
+

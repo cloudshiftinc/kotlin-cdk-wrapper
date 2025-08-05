@@ -3,17 +3,6 @@ import cloudshift.awscdkdsl.build.dsl.GenerateDslTask
 plugins {
     java
     id("cloudshift.awscdkdsl.build.base")
-    alias(libs.plugins.nexusPublish)
-}
-
-nexusPublishing {
-    this.repositories {
-        sonatype { // only for users registered in Sonatype after 24 Feb 2021
-            nexusUrl = uri("https://s01.oss.sonatype.org/service/local/")
-            snapshotRepositoryUrl =
-                uri("https://s01.oss.sonatype.org/content/repositories/snapshots/")
-        }
-    }
 }
 
 val awscdk: Configuration by configurations.creating
