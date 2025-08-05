@@ -31,8 +31,6 @@ tasks.withType<AbstractArchiveTask>().configureEach {
 val libs = the<LibrariesForLibs>()
 
 java {
-    withJavadocJar()
-    withSourcesJar()
     consistentResolution { useCompileClasspathVersions() }
 }
 
